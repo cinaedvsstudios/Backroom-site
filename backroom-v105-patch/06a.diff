@@ -1,0 +1,15 @@
+         title.textContent = 'RESULTS';
+             }
+@@ -3477,7 +3624,7 @@ function applyFilters() {
+     renderDynamicFilters(scopeVenues);
+ 
+     if(query && totalResults === 0) {
+-        renderSearchNoResults(query, savedScope, searchUsesFuzzyMatching);
++        renderSearchNoResults(query, resultsScope, searchUsesFuzzyMatching);
+     } else if (totalResults === 0) {
+         resultsContainer.innerHTML = '<p style="text-align:center; color:var(--label-grey); margin-top:20px; width:100%; grid-column:1 / -1;">No matching listings found.</p>';
+     } else {
+@@ -4743,7 +4890,7 @@ function clearLocation() {
+     updateLocationDraftStatus('');
+     announceLocationChange({ scope: 'all', city: '', country: '', postcode: '' });
+ 
