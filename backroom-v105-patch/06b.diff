@@ -1,0 +1,21 @@
+-    if (window.location.hash === '#results') handleRouting();
++    if (isResultsRouteHash()) handleRouting();
+ }
+ 
+ function loadSavedLocation() {
+diff --git a/calendar.js b/calendar.js
+index fcdd0fd..ca6f172 100644
+--- a/calendar.js
++++ b/calendar.js
+@@ -1,4 +1,4 @@
+-// Backroom Events calendar v1.00 — location pill, date, vibe filters and event-card image rules.
++// Backroom Events calendar v1.02 — location pill, date, vibe filters and event-card image rules.
+ (function () {
+     'use strict';
+ 
+@@ -302,14 +302,40 @@
+             : venueFallbackImage(venue || {}, previousFallback);
+     }
+ 
++    // Mirrors the app location aliases so Events accepts the same GPS/native/
++    // English city spellings as Results and Venues. This comparison key never changes
