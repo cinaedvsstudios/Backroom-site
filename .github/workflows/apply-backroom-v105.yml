@@ -1,10 +1,10 @@
 name: Apply Backroom v1.05 location updates
 
 on:
-  push:
+  pull_request:
     branches: [main]
     paths:
-      - .github/workflows/apply-backroom-v105.yml
+      - backroom-v105-trigger.txt
 
 permissions:
   contents: write
@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
           persist-credentials: true
 
@@ -33,5 +34,3 @@ jobs:
           git add app.js calendar.js index.html style.css
           git commit -m "Apply v1.04 shared location links and v1.05 German aliases"
           git push origin HEAD:main
-
-# Trigger the update run after the staged patch is complete.
