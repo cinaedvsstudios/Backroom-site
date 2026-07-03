@@ -1,0 +1,43 @@
+r('hashchange', handleRouting);
+ function getCurrentListHashForVenueReturn() {
+     const hash = window.location.hash || '#results';
+     const listRoutes = ['#results', '#venues', '#featured', '#favorites', '#myshortlists', '#myevents', '#mytravel', '#discounts', '#about', '#cruising-guide'];
++    if (hash.startsWith('#results?')) return hash;
+     if (listRoutes.includes(hash)) return hash;
+     if (hash.startsWith('#shortlist=')) return '#myshortlists';
+     return '#results';
+@@ -2111,7 +2233,20 @@ function handleRouting() {
+             showToast('Venue not available or under review');
+             window.location.hash = '#results'; 
+         }
+-    } else if (hash === '#results') {
++    } else if (isResultsRouteHash(hash)) {
++        const sharedResultsRoute = hash.startsWith('#results?');
++
++        // A shared link opens as a clean city/country list, even in a browser which
++        // already has an old text query or active filter selection.
++        if (sharedResultsRoute && window.__backroomLastSharedResultsRoute !== hash) {
++            searchUsesFuzzyMatching = false;
++            searchResultTypeFilter = 'All';
++            activeFilters = [];
++            if (searchInput) searchInput.value = '';
++            updateSearchClearButton();
++        }
++
++        window.__backroomLastSharedResultsRoute = sharedResultsRoute ? hash : '';
+         recordUserInteraction();
+         applyFilters();
+     } else if (hash === '#venues') {
+@@ -3396,9 +3531,9 @@ function renderMixedSearchResults(venueResults, eventResults) {
+ 
+ function applyFilters() {
+     const query = String(searchInput?.value || '').trim();
+-    const savedScope = getSavedSearchScope();
+-    const scopeVenues = getSearchScopeVenues();
+-    const scopeEvents = getSearchScopeEvents();
++    const resultsScope = getResultsSearchScope();
++    const scopeVenues = getSearchScopeVenues(resultsScope);
++    const scopeEvents = getSearchScopeEvents(new Date(), resultsScope);
+     selectedCardId = null;
+ 
+  
