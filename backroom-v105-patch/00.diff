@@ -8,3 +8,52 @@ index 8d6e904..9e25b68 100644
 -const APP_DATE = "23 June 2026";
 +const APP_VERSION = "v1.12";
 +const APP_DATE = "25 June 2026";
+ 
+ let systemInfo = {}, designTheme = {}, venues = [], events = [];
+ let activeFilters = []; // v0.66 Multi-select Array
+@@ -742,15 +742,57 @@ function getCityTokens(venue) {
+ 
+ // Saved locations must match city fields directly, rather than relying on the loose text search.
+ // This also accepts normal German/English spellings for the cities currently supported by Backroom.
++// German-city lookup for location comparisons only. It lets GPS/native spellings,
++// English spellings and common ue/oe/ae spellings resolve to the same city key.
++// Keep display labels and saved values untouched; this is intentionally a low-risk matcher.
+ const CITY_NAME_ALIASES = {
+-    munchen: 'munich',
+-    muenchen: 'munich',
+-    munich: 'munich',
++    // English / German exonyms
+     koln: 'cologne',
+     koeln: 'cologne',
+     cologne: 'cologne',
++    munchen: 'munich',
++    muenchen: 'munich',
++    munich: 'munich',
++    nurnberg: 'nuremberg',
++    nuernberg: 'nuremberg',
++    nuremberg: 'nuremberg',
++    hannover: 'hanover',
++    hanover: 'hanover',
++
++    // Umlaut and common keyboard spellings used by GPS, maps and manual entry.
++    dusseldorf: 'dusseldorf',
++    duesseldorf: 'dusseldorf',
++    monchengladbach: 'monchengladbach',
++    moenchengladbach: 'monchengladbach',
++    munster: 'munster',
++    muenster: 'munster',
++    osnabruck: 'osnabruck',
++    osnabrueck: 'osnabruck',
++    saarbrucken: 'saarbrucken',
++    saarbruecken: 'saarbrucken',
++    lubeck: 'lubeck',
++    luebeck: 'lubeck',
++    gottingen: 'gottingen',
++    goettingen: 'gottingen',
++    wurzburg: 'wurzburg',
++    wuerzburg: 'wurzburg',
++    tubingen: 'tubingen',
++    tuebingen: 'tubingen',
++    furth: 'furth',
++    fuerth: 'furth',
++    schwaebischhall: 'sch
