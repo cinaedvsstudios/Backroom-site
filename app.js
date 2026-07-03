@@ -1,6 +1,6 @@
 // --- Application State ---
-const APP_VERSION = "v1.10";
-const APP_DATE = "23 June 2026";
+const APP_VERSION = "v1.12";
+const APP_DATE = "25 June 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
 let activeFilters = []; // v0.66 Multi-select Array
@@ -742,15 +742,57 @@ function getCityTokens(venue) {
 
 // Saved locations must match city fields directly, rather than relying on the loose text search.
 // This also accepts normal German/English spellings for the cities currently supported by Backroom.
+// German-city lookup for location comparisons only. It lets GPS/native spellings,
+// English spellings and common ue/oe/ae spellings resolve to the same city key.
+// Keep display labels and saved values untouched; this is intentionally a low-risk matcher.
 const CITY_NAME_ALIASES = {
-    munchen: 'munich',
-    muenchen: 'munich',
-    munich: 'munich',
+    // English / German exonyms
     koln: 'cologne',
     koeln: 'cologne',
     cologne: 'cologne',
+    munchen: 'munich',
+    muenchen: 'munich',
+    munich: 'munich',
+    nurnberg: 'nuremberg',
+    nuernberg: 'nuremberg',
+    nuremberg: 'nuremberg',
+    hannover: 'hanover',
+    hanover: 'hanover',
+
+    // Umlaut and common keyboard spellings used by GPS, maps and manual entry.
+    dusseldorf: 'dusseldorf',
+    duesseldorf: 'dusseldorf',
+    monchengladbach: 'monchengladbach',
+    moenchengladbach: 'monchengladbach',
+    munster: 'munster',
+    muenster: 'munster',
+    osnabruck: 'osnabruck',
+    osnabrueck: 'osnabruck',
+    saarbrucken: 'saarbrucken',
+    saarbruecken: 'saarbrucken',
+    lubeck: 'lubeck',
+    luebeck: 'lubeck',
+    gottingen: 'gottingen',
+    goettingen: 'gottingen',
+    wurzburg: 'wurzburg',
+    wuerzburg: 'wurzburg',
+    tubingen: 'tubingen',
+    tuebingen: 'tubingen',
+    furth: 'furth',
+    fuerth: 'furth',
+    schwaebischhall: 'schwaebischhall',
+    schwabischhall: 'schwabischhall',
+    badenbaden: 'badenbaden',
+
+    // Common German formatting variants.
     frankfurtammain: 'frankfurt',
-    frankfurt: 'frankfurt'
+    frankfurtmain: 'frankfurt',
+    frankfurt: 'frankfurt',
+    freiburgimbreisgau: 'freiburg',
+    freiburg: 'freiburg',
+    hallesaale: 'hallesale',
+    hallesaale: 'hallesale',
+    hallesale: 'hallesale'
 };
 
 function normalizeLocationName(value) {
@@ -1018,8 +1060,34 @@ function announceLocationChange(location) {
 }
 
 function openLocationModal() {
-    loadSavedLocation();
-    updateLocationActionLabel();
+    const sharedScope = getSharedResultsRouteScope();
+
+    if (sharedScope) {
+        const locationInput = getLocationInput();
+        const postcodeInput = document.getElementById('loc-postcode');
+        const map = document.getElementById('loc-map');
+        const mapPlaceholder = document.getElementById('map-preview-placeholder');
+        const display = document.getElementById('current-location-display');
+
+        if (locationInput) {
+            locationInput.value = getLocationDisplayText(sharedScope);
+            locationInput.dataset.lat = '';
+            locationInput.dataset.lon = '';
+            clearMapResolvedLocation(locationInput);
+        }
+        if (postcodeInput) postcodeInput.value = '';
+        if (map) map.style.display = 'none';
+        mapPlaceholder?.classList.remove('hidden');
+
+        updateLocationActionLabel(locationInput?.value || '');
+        if (display) {
+            display.textContent = `Viewing shared results in ${sharedScope.label}. Save to use this location on this device.`;
+        }
+    } else {
+        loadSavedLocation();
+        updateLocationActionLabel();
+    }
+
     locModal?.classList.remove('hidden');
 
     // Leaflet needs a size refresh when a previously hidden map is shown again.
@@ -1089,6 +1157,60 @@ function getSavedLocationScope(location = getSavedLocation()) {
     return { scope: 'all', city: '', country: '', label: '' };
 }
 
+// Shared location links are route-only. They deliberately do not write to br_location,
+// so opening somebody else's Results link never replaces the recipient's own location.
+function isResultsRouteHash(hash = window.location.hash || '') {
+    return hash === '#results' || hash.startsWith('#results?');
+}
+
+function getSharedResultsRouteScope(hash = window.location.hash || '') {
+    if (!String(hash || '').startsWith('#results?')) return null;
+
+    const params = new URLSearchParams(String(hash).slice('#results?'.length));
+    const city = String(params.get('city') || '').trim();
+    const country = String(params.get('country') || '').trim();
+
+    // City links always include their country, avoiding accidental ambiguity.
+    if (city && !country) return null;
+    if (!city && !country) return null;
+
+    const source = city ? `${city}, ${country}` : country;
+    const resolved = resolveLocationInput(source);
+
+    if (!resolved.valid || resolved.scope === 'all') return null;
+    return {
+        scope: resolved.scope,
+        city: resolved.city,
+        country: resolved.country,
+        label: resolved.label,
+        shared: true
+    };
+}
+
+function getResultsSearchScope() {
+    return getSharedResultsRouteScope() || getSavedLocationScope();
+}
+
+function getResultsShareUrl(scope = getResultsSearchScope()) {
+    if (!scope || scope.scope === 'all') return '';
+
+    const params = new URLSearchParams();
+    if (scope.scope === 'city') params.set('city', scope.city);
+    if (scope.country) params.set('country', scope.country);
+
+    return `${window.location.origin}${window.location.pathname}#results?${params.toString()}`;
+}
+
+function shareResultsForCurrentLocation(scope = getResultsSearchScope()) {
+    const url = getResultsShareUrl(scope);
+    if (!url) {
+        showToast('Set a city or country before sharing results.');
+        return;
+    }
+
+    shareURL(url, `Backroom Results: ${scope.label}`);
+}
+
 function venueMatchesSavedLocation(venue, savedScope = getSavedLocationScope()) {
     if (savedScope.scope === 'country') {
         return venueMatchesCountry(venue, savedScope.country);
@@ -1148,21 +1270,20 @@ function getPublicVenues(source = venues) {
     });
 }
 
-// Search Results follows the saved city or country scope. All Cities remains unfiltered.
+// Search Results follows a shared city/country link when present; otherwise it follows
+// the recipient's saved city or country. All Cities remains unfiltered.
 function getSavedSearchScope() {
     return getSavedLocationScope();
 }
 
-function getSearchScopeVenues() {
-    const savedScope = getSavedSearchScope();
+function getSearchScopeVenues(scope = getResultsSearchScope()) {
     const publicVenues = getPublicVenues();
-    return savedScope.scope === 'all'
+    return scope.scope === 'all'
         ? publicVenues
-        : publicVenues.filter(venue => venueMatchesSavedLocation(venue, savedScope));
+        : publicVenues.filter(venue => venueMatchesSavedLocation(venue, scope));
 }
 
-function getSearchScopeEvents(now = new Date()) {
-    const savedScope = getSavedSearchScope();
+function getSearchScopeEvents(now = new Date(), scope = getResultsSearchScope()) {
     const publicVenueById = new Map(getPublicVenues().map(venue => [venue.Venue_ID, venue]));
 
     return (events || [])
@@ -1176,7 +1297,7 @@ function getSearchScopeEvents(now = new Date()) {
 
             // Events can still be useful where a venue was removed, held or is incomplete.
             // Their own City/Country fields are the location fallback.
-            if (!venueMatchesSavedLocation(locationRecord, savedScope)) return null;
+            if (!venueMatchesSavedLocation(locationRecord, scope)) return null;
 
             const occurrence = getEventDisplayOccurrence(event, now);
             if (!occurrence || occurrence.Is_Past) return null;
@@ -1853,6 +1974,7 @@ window.addEventListener('hashchange', handleRouting);
 function getCurrentListHashForVenueReturn() {
     const hash = window.location.hash || '#results';
     const listRoutes = ['#results', '#venues', '#featured', '#favorites', '#myshortlists', '#myevents', '#mytravel', '#discounts', '#about', '#cruising-guide'];
+    if (hash.startsWith('#results?')) return hash;
     if (listRoutes.includes(hash)) return hash;
     if (hash.startsWith('#shortlist=')) return '#myshortlists';
     return '#results';
@@ -2111,7 +2233,20 @@ function handleRouting() {
             showToast('Venue not available or under review');
             window.location.hash = '#results'; 
         }
-    } else if (hash === '#results') {
+    } else if (isResultsRouteHash(hash)) {
+        const sharedResultsRoute = hash.startsWith('#results?');
+
+        // A shared link opens as a clean city/country list, even in a browser which
+        // already has an old text query or active filter selection.
+        if (sharedResultsRoute && window.__backroomLastSharedResultsRoute !== hash) {
+            searchUsesFuzzyMatching = false;
+            searchResultTypeFilter = 'All';
+            activeFilters = [];
+            if (searchInput) searchInput.value = '';
+            updateSearchClearButton();
+        }
+
+        window.__backroomLastSharedResultsRoute = sharedResultsRoute ? hash : '';
         recordUserInteraction();
         applyFilters();
     } else if (hash === '#venues') {
@@ -3396,9 +3531,9 @@ function renderMixedSearchResults(venueResults, eventResults) {
 
 function applyFilters() {
     const query = String(searchInput?.value || '').trim();
-    const savedScope = getSavedSearchScope();
-    const scopeVenues = getSearchScopeVenues();
-    const scopeEvents = getSearchScopeEvents();
+    const resultsScope = getResultsSearchScope();
+    const scopeVenues = getSearchScopeVenues(resultsScope);
+    const scopeEvents = getSearchScopeEvents(new Date(), resultsScope);
     selectedCardId = null;
 
     let filteredVenues = [...scopeVenues];
@@ -3441,9 +3576,9 @@ function applyFilters() {
 
         const title = document.getElementById('context-title');
         const desc = document.getElementById('context-desc');
-        const locationText = savedScope.scope === 'all'
+        const locationText = resultsScope.scope === 'all'
             ? 'across all cities'
-            : `in ${savedScope.label}`;
+            : `in ${resultsScope.label}`;
         const resultTypeText = searchResultTypeFilter === 'All'
             ? 'results'
             : `${searchResultTypeFilter.toLowerCase()} result${totalResults === 1 ? '' : 's'}`;
@@ -3451,17 +3586,29 @@ function applyFilters() {
         if (title) {
             title.replaceChildren();
 
-            if (savedScope.scope !== 'all') {
+            if (resultsScope.scope !== 'all') {
                 title.appendChild(document.createTextNode('RESULTS IN '));
 
                 const locationPill = document.createElement('button');
                 locationPill.type = 'button';
                 locationPill.className = 'location-city-pill pill-btn';
-                locationPill.textContent = savedScope.label;
+                locationPill.textContent = resultsScope.label;
                 locationPill.title = 'Change location';
-                locationPill.setAttribute('aria-label', `Change location from ${savedScope.label}`);
+                locationPill.setAttribute('aria-label', `Change location from ${resultsScope.label}`);
                 locationPill.addEventListener('click', openLocationModal);
                 title.appendChild(locationPill);
+
+                const shareButton = document.createElement('button');
+                shareButton.type = 'button';
+                shareButton.className = 'results-location-share-btn icon-btn';
+                shareButton.textContent = BR_ICONS.share;
+                shareButton.title = `Share results in ${resultsScope.label}`;
+                shareButton.setAttribute('aria-label', `Share results in ${resultsScope.label}`);
+                shareButton.addEventListener('click', event => {
+                    event.stopPropagation();
+                    shareResultsForCurrentLocation(resultsScope);
+                });
+                title.appendChild(shareButton);
             } else {
                 title.textContent = 'RESULTS';
             }
@@ -3477,7 +3624,7 @@ function applyFilters() {
     renderDynamicFilters(scopeVenues);
 
     if(query && totalResults === 0) {
-        renderSearchNoResults(query, savedScope, searchUsesFuzzyMatching);
+        renderSearchNoResults(query, resultsScope, searchUsesFuzzyMatching);
     } else if (totalResults === 0) {
         resultsContainer.innerHTML = '<p style="text-align:center; color:var(--label-grey); margin-top:20px; width:100%; grid-column:1 / -1;">No matching listings found.</p>';
     } else {
@@ -4743,7 +4890,7 @@ function clearLocation() {
     updateLocationDraftStatus('');
     announceLocationChange({ scope: 'all', city: '', country: '', postcode: '' });
 
-    if (window.location.hash === '#results') handleRouting();
+    if (isResultsRouteHash()) handleRouting();
 }
 
 function loadSavedLocation() {

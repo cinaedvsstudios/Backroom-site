@@ -1,9 +1,0 @@
-TextNode('RESULTS IN '));
- 
-                 const locationPill = document.createElement('button');
-                 locationPill.type = 'button';
-                 locationPill.className = 'location-city-pill pill-btn';
--                locationPill.textContent = savedScope.label;
-+                locationPill.textContent = resultsScope.label;
-                 locationPill.title = 'Change location';
--                locationPill.setAttribute('ari

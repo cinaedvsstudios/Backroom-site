@@ -1,4 +1,4 @@
-// Backroom Events calendar v1.00 — location pill, date, vibe filters and event-card image rules.
+// Backroom Events calendar v1.02 — location pill, date, vibe filters and event-card image rules.
 (function () {
     'use strict';
 
@@ -302,14 +302,40 @@
             : venueFallbackImage(venue || {}, previousFallback);
     }
 
+    // Mirrors the app location aliases so Events accepts the same GPS/native/
+    // English city spellings as Results and Venues. This comparison key never changes
+    // the city label stored in data or shown to the user.
+    const CITY_NAME_ALIASES = {
+        koln: 'cologne', koeln: 'cologne', cologne: 'cologne',
+        munchen: 'munich', muenchen: 'munich', munich: 'munich',
+        nurnberg: 'nuremberg', nuernberg: 'nuremberg', nuremberg: 'nuremberg',
+        hannover: 'hanover', hanover: 'hanover',
+        dusseldorf: 'dusseldorf', duesseldorf: 'dusseldorf',
+        monchengladbach: 'monchengladbach', moenchengladbach: 'monchengladbach',
+        munster: 'munster', muenster: 'munster',
+        osnabruck: 'osnabruck', osnabrueck: 'osnabruck',
+        saarbrucken: 'saarbrucken', saarbruecken: 'saarbrucken',
+        lubeck: 'lubeck', luebeck: 'lubeck',
+        gottingen: 'gottingen', goettingen: 'gottingen',
+        wurzburg: 'wurzburg', wuerzburg: 'wurzburg',
+        tubingen: 'tubingen', tuebingen: 'tubingen',
+        furth: 'furth', fuerth: 'furth',
+        schwaebischhall: 'schwabischhall', schwabischhall: 'schwabischhall',
+        badenbaden: 'badenbaden',
+        frankfurtammain: 'frankfurt', frankfurtmain: 'frankfurt', frankfurt: 'frankfurt',
+        freiburgimbreisgau: 'freiburg', freiburg: 'freiburg',
+        hallesaale: 'hallesale', hallesale: 'hallesale'
+    };
+
     function normalizeLocation(value) {
-        return String(value || '')
+        const normalized = String(value || '')
             .trim()
             .toLowerCase()
             .replace(/ß/g, 'ss')
             .normalize('NFD')
             .replace(/[\u0300-\u036f]/g, '')
             .replace(/[^a-z0-9]+/g, '');
+        return CITY_NAME_ALIASES[normalized] || normalized;
     }
 
     function uniqueLocationValues(values) {

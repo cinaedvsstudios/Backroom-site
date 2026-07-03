@@ -1,8 +1,0 @@
-a-label', `Change location from ${savedScope.label}`);
-+                locationPill.setAttribute('aria-label', `Change location from ${resultsScope.label}`);
-                 locationPill.addEventListener('click', openLocationModal);
-                 title.appendChild(locationPill);
-+
-+                const shareButton = document.createElement('button');
-+                shareButton.type = 'button';
-+                shareButton.className = 'resu

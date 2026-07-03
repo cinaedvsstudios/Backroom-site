@@ -1,4 +1,4 @@
-/* Backroom public stylesheet v1.03 */
+/* Backroom public stylesheet v1.05 */
 :root {
     --bg-color: #000000;
     --primary-blue: #2CA8D4;
@@ -987,6 +987,28 @@ td.hidden-col * { display: none !important; }
     outline: none;
 }
 
+.results-location-share-btn {
+    display: inline-flex;
+    width: 1.95em;
+    height: 1.95em;
+    margin-left: 0.3em;
+    padding: 0;
+    border: 1px solid var(--bright-red-orange);
+    border-radius: 999px;
+    background: var(--dark-red);
+    color: #fff;
+    font-size: 0.82em;
+    line-height: 1;
+    vertical-align: 0.12em;
+}
+.results-location-share-btn:hover,
+.results-location-share-btn:focus-visible {
+    background: var(--bright-red-orange);
+    border-color: var(--bright-red-orange);
+    color: #fff;
+    outline: none;
+}
+
 #location-modal .location-modal-content {
     max-width: 430px;
     border-color: var(--primary-blue);
@@ -1140,6 +1162,10 @@ td.hidden-col * { display: none !important; }
         display: inline-block;
         margin-top: 4px;
         margin-left: 0;
+    }
+    .results-location-share-btn {
+        margin-top: 4px;
+        margin-left: 0.35em;
     }
 }
 
