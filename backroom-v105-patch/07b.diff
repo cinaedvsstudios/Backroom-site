@@ -1,0 +1,20 @@
++        schwaebischhall: 'schwabischhall', schwabischhall: 'schwabischhall',
++        badenbaden: 'badenbaden',
++        frankfurtammain: 'frankfurt', frankfurtmain: 'frankfurt', frankfurt: 'frankfurt',
++        freiburgimbreisgau: 'freiburg', freiburg: 'freiburg',
++        hallesaale: 'hallesale', hallesale: 'hallesale'
++    };
++
+     function normalizeLocation(value) {
+-        return String(value || '')
++        const normalized = String(value || '')
+             .trim()
+             .toLowerCase()
+             .replace(/ß/g, 'ss')
+             .normalize('NFD')
+             .replace(/[\u0300-\u036f]/g, '')
+             .replace(/[^a-z0-9]+/g, '');
++        return CITY_NAME_ALIASES[normalized] || normalized;
+     }
+ 
+     function uniqueLocationValues(values) {
