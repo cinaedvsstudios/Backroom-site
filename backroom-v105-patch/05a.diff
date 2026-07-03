@@ -1,0 +1,20 @@
+   let filteredVenues = [...scopeVenues];
+@@ -3441,9 +3576,9 @@ function applyFilters() {
+ 
+         const title = document.getElementById('context-title');
+         const desc = document.getElementById('context-desc');
+-        const locationText = savedScope.scope === 'all'
++        const locationText = resultsScope.scope === 'all'
+             ? 'across all cities'
+-            : `in ${savedScope.label}`;
++            : `in ${resultsScope.label}`;
+         const resultTypeText = searchResultTypeFilter === 'All'
+             ? 'results'
+             : `${searchResultTypeFilter.toLowerCase()} result${totalResults === 1 ? '' : 's'}`;
+@@ -3451,17 +3586,29 @@ function applyFilters() {
+         if (title) {
+             title.replaceChildren();
+ 
+-            if (savedScope.scope !== 'all') {
++            if (resultsScope.scope !== 'all') {
+                 title.appendChild(document.create
