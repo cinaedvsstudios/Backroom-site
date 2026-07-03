@@ -26,6 +26,8 @@ jobs:
         run: |
           set -u
           LC_ALL=C cat backroom-v105-patch/*.diff > /tmp/backroom-v105.patch
+          sed -i "s/schhwabischhall/schwaebischhall/" /tmp/backroom-v105.patch
+          printf '\n' >> /tmp/backroom-v105.patch
           sha256sum /tmp/backroom-v105.patch > /tmp/backroom-v105-sha256.txt
           git apply --check --verbose /tmp/backroom-v105.patch > /tmp/backroom-v105-check.log 2>&1
 
