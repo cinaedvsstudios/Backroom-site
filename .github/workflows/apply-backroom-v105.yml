@@ -33,3 +33,5 @@ jobs:
           git add app.js calendar.js index.html style.css
           git commit -m "Apply v1.04 shared location links and v1.05 German aliases"
           git push origin HEAD:main
+
+# Trigger the update run after the staged patch is complete.
