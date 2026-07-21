@@ -169,6 +169,16 @@ document.write('<script src="admin-enhancements-core.js?v=1.09"><\/script>');
             });
         }
 
+        const table = document.getElementById('admin-table-container');
+        ['input', 'change'].forEach((eventName) => {
+            table?.addEventListener(eventName, (event) => {
+                if (event.target.closest('input, textarea, select, [contenteditable="true"]')) {
+                    if (currentMode === 'venues') getVenueMap(true);
+                    scheduleCoverageUpdate(120);
+                }
+            });
+        });
+
         ['nav-venues', 'nav-events'].forEach((id) => {
             document.getElementById(id)?.addEventListener('click', () => scheduleCoverageUpdate(100));
         });
