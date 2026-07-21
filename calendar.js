@@ -1,4 +1,4 @@
-// Backroom Events calendar v1.07 — shareable day routes, location pill, filters and event-card rules.
+// Backroom Events calendar v1.08 — shareable day routes, location pill, filters and event-card rules.
 (function () {
     'use strict';
 
