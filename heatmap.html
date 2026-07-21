@@ -1,1 +1,48 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Backroom Heat Map</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Barlow+Condensed:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="heatmap-v110.css?v=1.10"></head><body><header class="top"><img class="logo" src="Emoji/heatmap.png" alt=""><div class="title"><h1>Backroom Heat Map</h1><small>Explore the concentration of venues and events</small></div><a class="back" href="./#heatmap">Back to Backroom</a></header><section class="controls"><div class="field"><label>Map mode</label><select id="mode"><option value="cities">City totals</option><option value="venues">Venues</option><option value="events">Events</option><option value="cruising">Cruising areas</option></select></div><div class="field"><label>Category / vibe</label><select id="category"><option value="all">All records</option><option>Bar</option><option>Party</option><option>Sauna</option><option>Cruising</option><option>Darkroom</option><option>Men Only</option><option>Fetish</option><option>Pride</option><option>Shop</option><option>Cinema</option></select></div><div class="field" id="range-field"><label>Event dates</label><select id="range"><option value="today">Today</option><option value="week" selected>Next 7 days</option><option value="weekend">This weekend</option><option value="month">Next 30 days</option><option value="all">All future events</option></select></div><div class="field"><label>Display</label><select id="display"><option value="heat">Rainbow heat</option><option value="bubbles">Count bubbles</option></select></div><div class="field"><label>City markers</label><select id="pins"><option value="dot">Red centre dots</option><option value="ring">Centre rings</option><option value="pin">Classic pins</option><option value="count">Count markers</option><option value="none">No markers</option></select></div><div class="field"><label>Intensity</label><select id="scale"><option value="relative">Relative to results</option><option value="fixed">Fixed comparison scale</option></select></div></section><main class="work"><div id="map"></div><aside class="panel"><h2 id="heading">City totals</h2><div class="sub" id="sub">Loading live records…</div><div class="stats"><div><strong id="records">—</strong><span>Records</span></div><div><strong id="points">—</strong><span>Map points</span></div><div><strong id="cities">—</strong><span>Cities</span></div></div><div class="legend"><div class="bar"></div><div class="labels"><span>Outer / lower purple</span><span>Centre / highest red</span></div></div><div class="list" id="list"></div></aside><div class="note" id="note">The map counts every matching record and uses city-centre coordinates to fill gaps.</div><div class="loading" id="loading"><span id="loading-text">LOADING BACKROOM DATA</span></div></main><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script><script src="heatmap-data-v110.js?v=1.10"></script><script src="heatmap-ui-v110.js?v=1.10"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Backroom Heat Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Barlow+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="heatmap-v110.css?v=1.10.1">
+</head>
+<body>
+  <header class="top">
+    <img class="logo" src="Emoji/heatmap.png" alt="">
+    <div class="title"><h1>Backroom Heat Map</h1><small>Explore the concentration of venues and events</small></div>
+    <a class="back" href="./#heatmap">Back to Backroom</a>
+  </header>
+
+  <section class="controls">
+    <div class="field"><label for="mode">Map mode</label><select id="mode"><option value="cities">City totals</option><option value="venues">Venues</option><option value="events">Events</option><option value="cruising">Cruising areas</option></select></div>
+    <div class="field"><label for="category">Category / vibe</label><select id="category"><option value="all">All records</option><option>Bar</option><option>Party</option><option>Sauna</option><option>Cruising</option><option>Darkroom</option><option>Men Only</option><option>Fetish</option><option>Pride</option><option>Shop</option><option>Cinema</option></select></div>
+    <div class="field" id="range-field"><label for="range">Event dates</label><select id="range"><option value="today">Today</option><option value="week" selected>Next 7 days</option><option value="weekend">This weekend</option><option value="month">Next 30 days</option><option value="all">All future events</option></select></div>
+    <div class="field"><label for="display">Display</label><select id="display"><option value="heat">Rainbow heat</option><option value="bubbles">Count bubbles</option></select></div>
+    <div class="field"><label for="pins">City markers</label><select id="pins"><option value="dot">Red centre dots</option><option value="ring">Centre rings</option><option value="pin">Classic pins</option><option value="count">Count markers</option><option value="none">No markers</option></select></div>
+    <div class="field"><label for="scale">Intensity</label><select id="scale"><option value="relative">Relative to results</option><option value="fixed">Fixed comparison scale</option></select></div>
+  </section>
+
+  <main class="work">
+    <div id="map"></div>
+    <aside class="panel">
+      <h2 id="heading">City totals</h2>
+      <div class="sub" id="sub">Loading live records…</div>
+      <div class="stats"><div><strong id="records">—</strong><span>Records</span></div><div><strong id="points">—</strong><span>Map points</span></div><div><strong id="cities">—</strong><span>Cities</span></div></div>
+      <div class="legend"><div class="bar"></div><div class="labels"><span>Outer / lower purple</span><span>Centre / highest red</span></div></div>
+      <div class="list" id="list"></div>
+    </aside>
+    <div class="note" id="note">The map counts every matching record and uses local city-centre fallbacks where venue coordinates are missing.</div>
+    <div class="loading" id="loading"><div class="loading-card"><div id="loading-text">LOADING BACKROOM DATA</div><button id="loading-retry" class="hidden" type="button">Retry</button></div></div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+  <script src="heatmap-city-coordinates-v110.js?v=1.10.1"></script>
+  <script src="heatmap-data-v110.js?v=1.10.1"></script>
+  <script src="heatmap-ui-v110.js?v=1.10.1"></script>
+</body>
+</html>
