@@ -1,0 +1,40 @@
+name: Fix Backroom v1.09 admin stylesheet cache
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - backroom-v109-style-trigger.txt
+
+permissions:
+  contents: write
+
+jobs:
+  fix-admin-style-reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Correct and verify admin stylesheet reference
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F 'style.css?v=1.08' admin.html
+          sed -i 's/style\.css?v=1\.08/style.css?v=1.09/' admin.html
+          grep -F 'style.css?v=1.09' admin.html
+          ! grep -F 'style.css?v=1.08' admin.html
+
+      - name: Commit correction to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm .github/workflows/fix-admin-style-v109.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add admin.html
+          git commit -m "Fix v1.09 admin stylesheet cache reference"
+          git push origin HEAD:main
