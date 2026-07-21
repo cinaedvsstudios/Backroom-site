@@ -62,7 +62,7 @@ jobs:
           enhancement_path.write_text(enhancement.rstrip() + '\n\n' + module + '\n', encoding='utf-8')
           PY
 
-      - name: Validate scripts and features
+      - name: Check JavaScript syntax
         shell: bash
         run: |
           set -euo pipefail
@@ -70,61 +70,57 @@ jobs:
           node --check calendar.js
           node --check admin.js
           node --check admin-enhancements.js
+
+      - name: Check version consistency
+        shell: bash
+        run: |
+          set -euo pipefail
           python - <<'PY'
           from pathlib import Path
-
-          files = {
-              name: Path(name).read_text(encoding='utf-8')
-              for name in [
-                  'app.js', 'calendar.js', 'style.css', 'calendar.css',
-                  'index.html', 'admin.html', 'admin.js', 'admin-enhancements.js'
-              ]
-          }
-
-          for name, text in files.items():
-              assert 'v1.08' not in text, f'{name}: stale v1.08 remains'
-              assert 'v1.09' in text, f'{name}: v1.09 missing'
-
-          required_admin = [
-              'const actualIndex = draftData.indexOf(row);',
-              'data-draft-index="${editIndex}"'
-          ]
-          required_enhancements = [
-              'admin-country-filter',
-              'admin-city-filter',
-              'btn-delete-records',
-              'delete-mode-armed',
-              'delete-record-selected',
-              'You are going to delete ${count} record',
-              'Remember to save or download the JSON again after this.',
-              'draftData = draftData.filter((record, index) => !selectedSet.has(index));',
-              'refreshVenueLocationMap',
-              'dataset.draftIndex'
-          ]
-          required_html = [
-              '<title>Backroom Admin Dashboard - v1.09</title>',
-              '>v1.09</span>',
-              'style.css?v=1.09',
-              'admin.js?v=1.09',
-              'admin-enhancements.js?v=1.09'
-          ]
-          required_index = [
-              '<title>Backroom - v1.09</title>',
-              'style.css?v=1.09',
-              'calendar.css?v=1.09',
-              'app.js?v=1.09',
-              'calendar.js?v=1.09'
-          ]
-
-          for needle in required_admin:
-              assert needle in files['admin.js'], needle
-          for needle in required_enhancements:
-              assert needle in files['admin-enhancements.js'], needle
-          for needle in required_html:
-              assert needle in files['admin.html'], needle
-          for needle in required_index:
-              assert needle in files['index.html'], needle
+          names = ['app.js','calendar.js','style.css','calendar.css','index.html','admin.html','admin.js','admin-enhancements.js']
+          for name in names:
+              text = Path(name).read_text(encoding='utf-8')
+              if 'v1.08' in text:
+                  raise AssertionError(f'{name}: stale v1.08 remains')
+              if 'v1.09' not in text:
+                  raise AssertionError(f'{name}: v1.09 missing')
           PY
+
+      - name: Check admin row identity changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F 'const actualIndex = draftData.indexOf(row);' admin.js
+          grep -F 'data-draft-index="${editIndex}"' admin.js
+
+      - name: Check admin location and delete features
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F 'admin-country-filter' admin-enhancements.js
+          grep -F 'admin-city-filter' admin-enhancements.js
+          grep -F 'btn-delete-records' admin-enhancements.js
+          grep -F 'delete-mode-armed' admin-enhancements.js
+          grep -F 'delete-record-selected' admin-enhancements.js
+          grep -F 'You are going to delete ${count} record' admin-enhancements.js
+          grep -F 'Remember to save or download the JSON again after this.' admin-enhancements.js
+          grep -F 'draftData = draftData.filter((record, index) => !selectedSet.has(index));' admin-enhancements.js
+          grep -F 'refreshVenueLocationMap' admin-enhancements.js
+          grep -F 'dataset.draftIndex' admin-enhancements.js
+
+      - name: Check v1.09 page references
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F '<title>Backroom Admin Dashboard - v1.09</title>' admin.html
+          grep -F '>v1.09</span>' admin.html
+          grep -F 'style.css?v=1.09' admin.html
+          grep -F 'admin.js?v=1.09' admin.html
+          grep -F 'admin-enhancements.js?v=1.09' admin.html
+          grep -F '<title>Backroom - v1.09</title>' index.html
+          grep -F 'calendar.css?v=1.09' index.html
+          grep -F 'app.js?v=1.09' index.html
+          grep -F 'calendar.js?v=1.09' index.html
 
       - name: Commit verified update to main
         shell: bash
