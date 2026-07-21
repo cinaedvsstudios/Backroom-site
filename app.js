@@ -48,6 +48,28 @@ document.write('<script src="app-core.js?v=1.09"><\/script>');
             frame.title = `Backroom ${config.title}`;
             frame.loading = 'eager';
             frame.setAttribute('allow', 'geolocation');
+            frame.addEventListener('load', () => {
+                try {
+                    const frameDocument = frame.contentDocument;
+                    if (!frameDocument) return;
+                    frameDocument.querySelector('.top')?.setAttribute('style', 'display:none !important;');
+                    frameDocument.documentElement.style.height = '100%';
+                    if (frameDocument.body) {
+                        frameDocument.body.style.height = '100%';
+                        frameDocument.body.style.minHeight = '100%';
+                    }
+                    if (pageKey === 'travel') {
+                        const main = frameDocument.querySelector('main');
+                        if (main) {
+                            main.style.maxWidth = 'none';
+                            main.style.padding = '18px';
+                        }
+                    }
+                    window.setTimeout(() => frame.contentWindow?.dispatchEvent(new Event('resize')), 80);
+                } catch (error) {
+                    console.warn(`Could not prepare embedded ${config.title}:`, error);
+                }
+            });
             container.appendChild(frame);
             wrapper.appendChild(container);
         }
