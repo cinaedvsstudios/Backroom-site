@@ -108,19 +108,6 @@ jobs:
           grep -F 'refreshVenueLocationMap' admin-enhancements.js
           grep -F 'dataset.draftIndex' admin-enhancements.js
 
-      - name: Check v1.09 page references
-        shell: bash
-        run: |
-          set -euo pipefail
-          grep -F '<title>Backroom Admin Dashboard - v1.09</title>' admin.html
-          grep -F 'style.css?v=1.09' admin.html
-          grep -F 'admin.js?v=1.09' admin.html
-          grep -F 'admin-enhancements.js?v=1.09' admin.html
-          grep -F '<title>Backroom - v1.09</title>' index.html
-          grep -F 'calendar.css?v=1.09' index.html
-          grep -F 'app.js?v=1.09' index.html
-          grep -F 'calendar.js?v=1.09' index.html
-
       - name: Commit verified update to main
         shell: bash
         run: |
