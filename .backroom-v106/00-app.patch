@@ -1,0 +1,191 @@
+--- a/app.js
++++ b/app.js
+@@ -1,6 +1,6 @@
+ // --- Application State ---
+-const APP_VERSION = "v1.12";
+-const APP_DATE = "25 June 2026";
++const APP_VERSION = "v1.13";
++const APP_DATE = "21 July 2026";
+ 
+ let systemInfo = {}, designTheme = {}, venues = [], events = [];
+ let activeFilters = []; // v0.66 Multi-select Array
+@@ -1157,58 +1157,95 @@
+     return { scope: 'all', city: '', country: '', label: '' };
+ }
+ 
+-// Shared location links are route-only. They deliberately do not write to br_location,
+-// so opening somebody else's Results link never replaces the recipient's own location.
++// Shared Results links are route-only. They deliberately do not write to br_location,
++// so opening somebody else's city, query or filter view never replaces saved profile state.
+ function isResultsRouteHash(hash = window.location.hash || '') {
+     return hash === '#results' || hash.startsWith('#results?');
+ }
+ 
+-function getSharedResultsRouteScope(hash = window.location.hash || '') {
++function getSharedResultsRouteState(hash = window.location.hash || '') {
+     if (!String(hash || '').startsWith('#results?')) return null;
+ 
+     const params = new URLSearchParams(String(hash).slice('#results?'.length));
+     const city = String(params.get('city') || '').trim();
+     const country = String(params.get('country') || '').trim();
++    const query = String(params.get('q') || '').trim().slice(0, 160);
++    const rawType = normalizeLocationName(params.get('type'));
++    const type = ['venue', 'venues'].includes(rawType)
++        ? 'Venue'
++        : ['event', 'events'].includes(rawType)
++            ? 'Event'
++            : 'All';
++    const tags = [...new Set(String(params.get('tags') || '')
++        .split(',')
++        .map(tag => tag.trim())
++        .filter(tag => MASTER_VIBE_TAGS.includes(tag)))];
++    const fuzzy = params.get('fuzzy') === '1';
+ 
+-    // City links always include their country, avoiding accidental ambiguity.
+-    if (city && !country) return null;
+-    if (!city && !country) return null;
++    let scope = { scope: 'all', city: '', country: '', label: '' };
++    if (country || city) {
++        // A city without its country is intentionally treated as All Cities rather than
++        // guessing between duplicate city names.
++        const source = city && country ? `${city}, ${country}` : (!city ? country : '');
++        const resolved = source ? resolveLocationInput(source) : null;
++        if (resolved?.valid && resolved.scope !== 'all') {
++            scope = {
++                scope: resolved.scope,
++                city: resolved.city,
++                country: resolved.country,
++                label: resolved.label
++            };
++        }
++    }
+ 
+-    const source = city ? `${city}, ${country}` : country;
+-    const resolved = resolveLocationInput(source);
++    const hasSharedState = Boolean(city || country || query || type !== 'All' || tags.length || fuzzy);
++    if (!hasSharedState) return null;
+ 
+-    if (!resolved.valid || resolved.scope === 'all') return null;
+-    return {
+-        scope: resolved.scope,
+-        city: resolved.city,
+-        country: resolved.country,
+-        label: resolved.label,
+-        shared: true
+-    };
++    return { scope, query, type, tags, fuzzy, shared: true };
++}
++
++function getSharedResultsRouteScope(hash = window.location.hash || '') {
++    const routeState = getSharedResultsRouteState(hash);
++    return routeState?.scope?.scope && routeState.scope.scope !== 'all'
++        ? routeState.scope
++        : null;
+ }
+ 
+ function getResultsSearchScope() {
+-    return getSharedResultsRouteScope() || getSavedLocationScope();
++    return getSharedResultsRouteState()?.scope || getSavedLocationScope();
+ }
+ 
+ function getResultsShareUrl(scope = getResultsSearchScope()) {
+-    if (!scope || scope.scope === 'all') return '';
+-
+     const params = new URLSearchParams();
+-    if (scope.scope === 'city') params.set('city', scope.city);
+-    if (scope.country) params.set('country', scope.country);
++    const query = String(searchInput?.value || '').trim();
+ 
+-    return `${window.location.origin}${window.location.pathname}#results?${params.toString()}`;
++    if (scope?.scope === 'city') params.set('city', scope.city);
++    if (scope?.country) params.set('country', scope.country);
++    if (query) params.set('q', query);
++    if (searchResultTypeFilter !== 'All') params.set('type', searchResultTypeFilter.toLowerCase());
++    if (activeFilters.length) params.set('tags', activeFilters.join(','));
++    if (query && searchUsesFuzzyMatching) params.set('fuzzy', '1');
++
++    const encoded = params.toString();
++    return encoded
++        ? `${window.location.origin}${window.location.pathname}#results?${encoded}`
++        : '';
+ }
+ 
+-function shareResultsForCurrentLocation(scope = getResultsSearchScope()) {
++function shareResultsForCurrentView(scope = getResultsSearchScope()) {
+     const url = getResultsShareUrl(scope);
+     if (!url) {
+-        showToast('Set a city or country before sharing results.');
++        showToast('Add a location, search or filter before sharing results.');
+         return;
+     }
+ 
+-    shareURL(url, `Backroom Results: ${scope.label}`);
++    const query = String(searchInput?.value || '').trim();
++    const subject = query
++        ? `Backroom Results: ${query}`
++        : scope?.label
++            ? `Backroom Results: ${scope.label}`
++            : 'Backroom Results';
++    shareURL(url, subject);
+ }
+ 
+ function venueMatchesSavedLocation(venue, savedScope = getSavedLocationScope()) {
+@@ -2235,20 +2272,24 @@
+         }
+     } else if (isResultsRouteHash(hash)) {
+         const sharedResultsRoute = hash.startsWith('#results?');
++        const sharedResultsState = getSharedResultsRouteState(hash);
+ 
+-        // A shared link opens as a clean city/country list, even in a browser which
+-        // already has an old text query or active filter selection.
++        // A shared link replaces only the temporary Results controls. It never changes
++        // the recipient's saved location, favourites, events or profile.
+         if (sharedResultsRoute && window.__backroomLastSharedResultsRoute !== hash) {
+-            searchUsesFuzzyMatching = false;
+-            searchResultTypeFilter = 'All';
+-            activeFilters = [];
+-            if (searchInput) searchInput.value = '';
++            searchUsesFuzzyMatching = Boolean(sharedResultsState?.fuzzy);
++            searchResultTypeFilter = sharedResultsState?.type || 'All';
++            activeFilters = [...(sharedResultsState?.tags || [])];
++            if (searchInput) searchInput.value = sharedResultsState?.query || '';
+             updateSearchClearButton();
+         }
+ 
+         window.__backroomLastSharedResultsRoute = sharedResultsRoute ? hash : '';
+         recordUserInteraction();
+         applyFilters();
++    } else if (hash === '#calendar' || hash.startsWith('#calendar?')) {
++        recordUserInteraction();
++        window.openCalendarScreen?.();
+     } else if (hash === '#venues') {
+         recordUserInteraction();
+         renderSavedLocationVenuesView();
+@@ -3597,20 +3638,22 @@
+                 locationPill.setAttribute('aria-label', `Change location from ${resultsScope.label}`);
+                 locationPill.addEventListener('click', openLocationModal);
+                 title.appendChild(locationPill);
++            } else {
++                title.appendChild(document.createTextNode('RESULTS'));
++            }
+ 
++            if (getResultsShareUrl(resultsScope)) {
+                 const shareButton = document.createElement('button');
+                 shareButton.type = 'button';
+                 shareButton.className = 'results-location-share-btn icon-btn';
+                 shareButton.textContent = BR_ICONS.share;
+-                shareButton.title = `Share results in ${resultsScope.label}`;
+-                shareButton.setAttribute('aria-label', `Share results in ${resultsScope.label}`);
++                shareButton.title = 'Share these results';
++                shareButton.setAttribute('aria-label', 'Share these results');
+                 shareButton.addEventListener('click', event => {
+                     event.stopPropagation();
+-                    shareResultsForCurrentLocation(resultsScope);
++                    shareResultsForCurrentView(resultsScope);
+                 });
+                 title.appendChild(shareButton);
+-            } else {
+-                title.textContent = 'RESULTS';
+             }
+         }
+         if(desc) {
