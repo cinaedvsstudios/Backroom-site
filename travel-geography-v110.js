@@ -23,8 +23,13 @@
   function setBadge(card, text, className) {
     const badge = card.querySelector('.badge');
     if (!badge) return;
-    badge.className = `badge ${className}`;
-    badge.textContent = text;
+    const wantedClass = `badge ${className}`;
+    if (badge.className !== wantedClass) badge.className = wantedClass;
+    if (badge.textContent !== text) badge.textContent = text;
+  }
+
+  function setText(element, text) {
+    if (element && element.textContent !== text) element.textContent = text;
   }
 
   function addWarningNote(card) {
@@ -47,9 +52,11 @@
     );
     if (!flightFirst) return;
 
+    const cards = [...routes.querySelectorAll('.route')];
+    if (cards.length && cards.every(card => card.dataset.flightFirstApplied === 'true')) return;
+
     applying = true;
     try {
-      const cards = [...routes.querySelectorAll('.route')];
       let flightCard = null;
 
       cards.forEach(card => {
@@ -57,12 +64,13 @@
         const subtitle = card.querySelector('.mode small');
         const isFlight = mode.includes('flight');
         const isOverview = mode.includes('overview');
+        card.dataset.flightFirstApplied = 'true';
 
         if (isFlight) {
           flightCard = card;
           card.classList.remove('caution');
           card.classList.add('preferred', 'recommended');
-          if (subtitle) subtitle.textContent = 'Preferred practical option';
+          setText(subtitle, 'Preferred practical option');
           setBadge(card, 'Best practical option', 'good');
           return;
         }
@@ -70,7 +78,7 @@
         card.classList.remove('preferred', 'recommended');
         if (!isOverview) {
           card.classList.add('caution');
-          if (subtitle) subtitle.textContent = 'Flight strongly advised';
+          setText(subtitle, 'Flight strongly advised');
           setBadge(card, 'Flight strongly advised', 'danger');
           addWarningNote(card);
         }
