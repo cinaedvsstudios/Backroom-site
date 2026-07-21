@@ -1,1 +1,228 @@
-(()=>{"use strict";const e=window.BRHeat={},t=e.clean=e=>String(e??"").trim().replace(/\s+/g," "),n=e.norm=e=>t(e).normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLowerCase(),a=e=>{const t=parseFloat(String(e??"").replace(",","."));return Number.isFinite(t)?t:null},r={koln:"cologne",koeln:"cologne",munchen:"munich",wien:"vienna",praha:"prague",bruxelles:"brussels",brussel:"brussels",milano:"milan",roma:"rome",firenze:"florence",lisboa:"lisbon",sevilla:"seville",goteborg:"gothenburg",kobenhavn:"copenhagen","playa del ingles":"maspalomas","san bartolome de tirajana":"maspalomas"},i={uk:"united kingdom","great britain":"united kingdom",england:"united kingdom",scotland:"united kingdom","northern ireland":"united kingdom",usa:"united states",us:"united states","czech republic":"czechia","the netherlands":"netherlands"},l=e=>r[n(e)]||n(e),o=e=>i[n(e)]||n(e),s=e=>(Array.isArray(e)?e:t(e).split(/[;,|]+/)).map(t).filter(Boolean),u=e=>{const t=a(e?.Latitude??e?.Event_Latitude??e?.Venue_Latitude),n=a(e?.Longitude??e?.Event_Longitude??e?.Venue_Longitude);return null===t||null===n?null:{lat:t,lng:n}},c=e=>{const n=t(e).match(/^(\d{4})-(\d{2})-(\d{2})/);return n?new Date(+n[1],+n[2]-1,+n[3]):null},y=e=>((e=new Date(e)).setHours(0,0,0,0),e),d=e=>!["hold","flag","closed","removed","inactive","cancelled"].includes(n(e?.Status)),g=e=>s(e?.City)[0]||"",m=e=>t(e?.Country),f=(e,t)=>`${l(e)}|${o(t)}`;function v(n){const a=e.state.byId.get(t(n.Venue_ID))||null;return{event:n,venue:a,city:s(n.City||n.Event_City||n.Venue_City||a?.City)[0]||"",country:t(n.Country||n.Event_Country||n.Venue_Country||a?.Country),location:u(n)||u(a)}}function p(e,t){return n([e?.Category,e?.Event_Category,e?.Vibe_Tags,e?.Event_Name,e?.Event_Description,e?.Name,t?.Category,t?.Vibe_Tags].join(" "))}function h(e,t,a){if("all"===(a=n(a)))return!0;const r=p(e,t);return"party"===a?/party|club|dancefloor/.test(r):"fetish"===a?/fetish|gear|leather|rubber|pup|puppy/.test(r):"cruising"===a?/cruis|darkroom/.test(r)||!0===e?.Feature_Cruise_Focused||!0===t?.Feature_Cruise_Focused:r.includes(a)}function D(e){return"cruising area"===n(e?.Category)||/cruis/.test(p(e))||!0===e?.Feature_Cruise_Focused}function _(n,r,i,s,u){const c=new Map;return n.forEach(e=>{const n=t(r(e)),a=t(i(e));if(!n)return;const l=f(n,a);c.has(l)||c.set(l,{name:n,city:n,country:a,count:0,lat:0,lng:0,n:0,items:[]});const o=c.get(l),u=s(e);o.count++,o.items.push(e),u&&(o.lat+=u.lat,o.lng+=u.lng,o.n++)}),[...c.values()].map(t=>{const n=u.get(f(t.city,t.country)),r=t.n?{lat:t.lat/t.n,lng:t.lng/t.n}:n?.n?{lat:n.lat/n.n,lng:n.lng/n.n}:function(t,n){let r=e.state.cityDb.filter(e=>l(e.name||e.city||e.city_ascii)===l(t));const i=o(n),s=r.find(e=>o(e.countryName||e.country||e.country_name)===i);s&&(r=[s]);const u=r[0],c=a(u?.latitude??u?.lat),y=a(u?.longitude??u?.lng);return null===c||null===y?null:{lat:c,lng:y}}(t.city,t.country);return r?{...t,lat:r.lat,lng:r.lng,kind:"city"}:null}).filter(Boolean)}e.state={venues:[],events:[],byId:new Map,cityDb:[]},e.escape=e=>String(e??"").replace(/[&<>"']/g,e=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[e])),e.build=({mode:a,category:r,range:i})=>{const l=function(){const t=new Map,n=(e,n,a)=>{if(!e||!a)return;const r=f(e,n);t.has(r)||t.set(r,{lat:0,lng:0,n:0});const i=t.get(r);i.lat+=a.lat,i.lng+=a.lng,i.n++};return e.state.venues.filter(d).forEach(e=>n(g(e),m(e),u(e))),e.state.events.filter(d).map(v).forEach(e=>n(e.city,e.country,e.location)),t}();let o=[],s=[];if("venues"===a)o=e.state.venues.filter(d).filter(e=>h(e,null,r)),s=o.map(e=>{const n=u(e);return n?{name:t(e.Name)||"Unnamed venue",city:g(e),country:m(e),count:1,...n,kind:"venue"}:null}).filter(Boolean);else if("cruising"===a)o=e.state.venues.filter(d).filter(D).filter(e=>h(e,null,r)),s=o.map(e=>{const n=u(e);return n?{name:t(e.Name)||"Cruising area",city:g(e),country:m(e),count:1,...n,kind:"cruising"}:null}).filter(Boolean);else if("events"===a){const[a,l]=function(e){const t=y(new Date),n=new Date(t);if("today"===e)return[t,t];if("week"===e)n.setDate(n.getDate()+6);else{if("weekend"===e){n.setDate(n.getDate()+(6-n.getDay()+7)%7);const e=new Date(n);return e.setDate(n.getDate()-1),[e,n]}"month"===e?n.setDate(n.getDate()+29):n.setFullYear(n.getFullYear()+10)}return[t,n]}(i);o=e.state.events.filter(d).map(v).filter(e=>function(e,t,a){const r=c(e.Event_Date);if(r&&r>=t&&r<=a)return!0;const i=n(e.Recurrence_Type),l=c(e.Recurrence_Until);if(!i.includes("week")||!r||r>a||l&&l<t)return!1;const o=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"].findIndex(t=>n(e.Recurrence_Day).includes(t));if(o<0)return!1;const s=new Date(t);return s.setDate(s.getDate()+(o-s.getDay()+7)%7),s<=a&&s>=y(r)&&(!l||s<=l)}(e.event,a,l)&&h(e.event,e.venue,r)),s=o.map(e=>e.location?{name:t(e.event.Event_Name)||"Event",city:e.city,country:e.country,count:1,...e.location,kind:"event"}:null).filter(Boolean)}else o=[...e.state.venues.filter(d).filter(e=>h(e,null,r)).map(e=>({city:g(e),country:m(e),location:u(e)})),...e.state.events.filter(d).map(v).filter(e=>h(e.event,e.venue,r)).map(e=>({city:e.city,country:e.country,location:e.location}))],s=_(o,e=>e.city,e=>e.country,e=>e.location,l);return{mode:a,records:o,points:s,cityGroups:_(s,e=>e.city||e.name,e=>e.country,e=>({lat:e.lat,lng:e.lng}),l)}},e.load=async()=>{const n=Date.now(),[a,r,i]=await Promise.all([fetch(`listings.json?v=${n}`),fetch(`events.json?v=${n}`),fetch("https://cdn.jsdelivr.net/npm/example-cities@0.0.0/cities.json").catch(()=>null)]);if(!a.ok||!r.ok)throw Error("Could not load Backroom data.");const[l,o,s]=await Promise.all([a.json(),r.json(),i&&i.ok?i.json():[]]);e.state.venues=Array.isArray(l)?l:[],e.state.events=Array.isArray(o)?o:[],e.state.cityDb=Array.isArray(s)?s:[],e.state.byId=new Map(e.state.venues.map(e=>[t(e.Venue_ID),e]).filter(([e])=>e))}})();
+(() => {
+  'use strict';
+
+  const H = window.BRHeat = {};
+  const clean = H.clean = value => String(value ?? '').trim().replace(/\s+/g, ' ');
+  const norm = H.norm = value => clean(value).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const toNumber = value => {
+    const number = Number.parseFloat(String(value ?? '').replace(',', '.'));
+    return Number.isFinite(number) ? number : null;
+  };
+
+  const CITY_ALIASES = {
+    koln: 'cologne', koeln: 'cologne', munchen: 'munich', wien: 'vienna',
+    praha: 'prague', bruxelles: 'brussels', brussel: 'brussels', milano: 'milan',
+    roma: 'rome', firenze: 'florence', lisboa: 'lisbon', sevilla: 'seville',
+    goteborg: 'gothenburg', kobenhavn: 'copenhagen', 'playa del ingles': 'maspalomas',
+    'maspalomas / playa del ingles': 'maspalomas', 'maspalomas playa del ingles': 'maspalomas',
+    'san bartolome de tirajana': 'maspalomas'
+  };
+  const COUNTRY_ALIASES = {
+    uk: 'united kingdom', 'great britain': 'united kingdom', england: 'united kingdom',
+    scotland: 'united kingdom', 'northern ireland': 'united kingdom', usa: 'united states',
+    us: 'united states', 'czech republic': 'czechia', 'the netherlands': 'netherlands'
+  };
+
+  const cityKey = value => CITY_ALIASES[norm(value)] || norm(value);
+  const countryKey = value => COUNTRY_ALIASES[norm(value)] || norm(value);
+  const locationKey = (city, country) => `${cityKey(city)}|${countryKey(country)}`;
+  const splitCities = value => (Array.isArray(value) ? value : clean(value).split(/[;,|]+/)).map(clean).filter(Boolean);
+  const firstCity = row => splitCities(row?.City)[0] || '';
+  const rowCountry = row => clean(row?.Country);
+  const coords = row => {
+    const lat = toNumber(row?.Latitude ?? row?.Event_Latitude ?? row?.Venue_Latitude);
+    const lng = toNumber(row?.Longitude ?? row?.Event_Longitude ?? row?.Venue_Longitude);
+    return lat === null || lng === null ? null : { lat, lng };
+  };
+  const parseDate = value => {
+    const match = clean(value).match(/^(\d{4})-(\d{2})-(\d{2})/);
+    return match ? new Date(+match[1], +match[2] - 1, +match[3]) : null;
+  };
+  const startOfDay = value => {
+    const date = new Date(value);
+    date.setHours(0, 0, 0, 0);
+    return date;
+  };
+  const isLive = row => !['hold','flag','closed','removed','inactive','cancelled'].includes(norm(row?.Status));
+
+  H.state = { venues: [], events: [], byId: new Map(), fallbackByLocation: new Map(), fallbackByCity: new Map() };
+  H.escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[character]));
+
+  function eventLocation(event) {
+    const venue = H.state.byId.get(clean(event?.Venue_ID)) || null;
+    return {
+      event,
+      venue,
+      city: splitCities(event?.City || event?.Event_City || event?.Venue_City || venue?.City)[0] || '',
+      country: clean(event?.Country || event?.Event_Country || event?.Venue_Country || venue?.Country),
+      location: coords(event) || coords(venue)
+    };
+  }
+
+  function searchText(row, linkedVenue = null) {
+    return norm([row?.Category,row?.Event_Category,row?.Vibe_Tags,row?.Event_Name,row?.Event_Description,row?.Name,linkedVenue?.Category,linkedVenue?.Vibe_Tags].join(' '));
+  }
+
+  function categoryMatches(row, linkedVenue, category) {
+    const wanted = norm(category);
+    if (!wanted || wanted === 'all') return true;
+    const text = searchText(row, linkedVenue);
+    if (wanted === 'party') return /party|club|dancefloor/.test(text);
+    if (wanted === 'fetish') return /fetish|gear|leather|rubber|pup|puppy/.test(text);
+    if (wanted === 'cruising') return /cruis/.test(text) || row?.Feature_Cruise_Focused === true || linkedVenue?.Feature_Cruise_Focused === true;
+    return text.includes(wanted);
+  }
+
+  function isCruisingArea(venue) {
+    const category = norm(venue?.Category);
+    return category === 'cruising area' || category === 'public cruising area';
+  }
+
+  function getDateRange(rangeName) {
+    const from = startOfDay(new Date());
+    const to = new Date(from);
+    if (rangeName === 'today') return [from, to];
+    if (rangeName === 'week') to.setDate(to.getDate() + 6);
+    else if (rangeName === 'weekend') {
+      to.setDate(to.getDate() + ((6 - to.getDay() + 7) % 7));
+      const friday = new Date(to);
+      friday.setDate(to.getDate() - 1);
+      return [friday, to];
+    } else if (rangeName === 'month') to.setDate(to.getDate() + 29);
+    else to.setFullYear(to.getFullYear() + 10);
+    return [from, to];
+  }
+
+  function eventOccursInRange(event, from, to) {
+    const eventDate = parseDate(event?.Event_Date);
+    if (eventDate && eventDate >= from && eventDate <= to) return true;
+    const recurrence = norm(event?.Recurrence_Type);
+    const until = parseDate(event?.Recurrence_Until);
+    if (!recurrence.includes('week') || !eventDate || eventDate > to || (until && until < from)) return false;
+    const dayIndex = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'].findIndex(day => norm(event?.Recurrence_Day).includes(day));
+    if (dayIndex < 0) return false;
+    const next = new Date(from);
+    next.setDate(next.getDate() + ((dayIndex - next.getDay() + 7) % 7));
+    return next <= to && next >= startOfDay(eventDate) && (!until || next <= until);
+  }
+
+  function buildFallbackMaps() {
+    H.state.fallbackByLocation.clear();
+    H.state.fallbackByCity.clear();
+    (window.BRHeatCityCoordinates || []).forEach(entry => {
+      const point = { lat: Number(entry.lat), lng: Number(entry.lng) };
+      if (!Number.isFinite(point.lat) || !Number.isFinite(point.lng)) return;
+      H.state.fallbackByLocation.set(locationKey(entry.city, entry.country), point);
+      const key = cityKey(entry.city);
+      if (!H.state.fallbackByCity.has(key)) H.state.fallbackByCity.set(key, point);
+    });
+  }
+
+  function buildObservedCentroids() {
+    const centroids = new Map();
+    const add = (city, country, point) => {
+      if (!city || !point) return;
+      const key = locationKey(city, country);
+      if (!centroids.has(key)) centroids.set(key, { lat: 0, lng: 0, count: 0 });
+      const item = centroids.get(key);
+      item.lat += point.lat;
+      item.lng += point.lng;
+      item.count += 1;
+    };
+    H.state.venues.filter(isLive).forEach(venue => add(firstCity(venue), rowCountry(venue), coords(venue)));
+    H.state.events.filter(isLive).map(eventLocation).forEach(item => add(item.city, item.country, item.location));
+    return centroids;
+  }
+
+  function resolveCityCenter(city, country, observed) {
+    const key = locationKey(city, country);
+    const known = observed.get(key);
+    if (known?.count) return { lat: known.lat / known.count, lng: known.lng / known.count, source: 'record-centroid' };
+    const exact = H.state.fallbackByLocation.get(key);
+    if (exact) return { ...exact, source: 'local-city-centre' };
+    const loose = H.state.fallbackByCity.get(cityKey(city));
+    return loose ? { ...loose, source: 'local-city-centre' } : null;
+  }
+
+  function makeRecordPoint(record, name, city, country, exactLocation, kind, observed) {
+    const location = exactLocation || resolveCityCenter(city, country, observed);
+    if (!location || !city) return null;
+    return { name: clean(name) || city, city, country, count: 1, lat: location.lat, lng: location.lng, kind, approximate: !exactLocation, source: exactLocation ? 'record' : location.source, record };
+  }
+
+  function aggregate(records, getCity, getCountry, getLocation, observed) {
+    const groups = new Map();
+    records.forEach(record => {
+      const city = clean(getCity(record));
+      const country = clean(getCountry(record));
+      if (!city) return;
+      const key = locationKey(city, country);
+      if (!groups.has(key)) groups.set(key, { name: city, city, country, count: 0, lat: 0, lng: 0, located: 0, items: [] });
+      const group = groups.get(key);
+      group.count += 1;
+      group.items.push(record);
+      const point = getLocation(record);
+      if (point) { group.lat += point.lat; group.lng += point.lng; group.located += 1; }
+    });
+
+    return [...groups.values()].map(group => {
+      const location = group.located ? { lat: group.lat / group.located, lng: group.lng / group.located, source: 'record-centroid' } : resolveCityCenter(group.city, group.country, observed);
+      if (!location) return null;
+      return { ...group, lat: location.lat, lng: location.lng, kind: 'city', approximate: !group.located, source: location.source };
+    }).filter(Boolean);
+  }
+
+  H.build = ({ mode, category, range }) => {
+    const observed = buildObservedCentroids();
+    let records = [];
+    let points = [];
+    let cityGroups = [];
+
+    if (mode === 'venues' || mode === 'cruising') {
+      records = H.state.venues.filter(isLive).filter(venue => mode !== 'cruising' || isCruisingArea(venue)).filter(venue => categoryMatches(venue, null, category));
+      points = records.map(venue => makeRecordPoint(venue, venue?.Name || (mode === 'cruising' ? 'Cruising area' : 'Venue'), firstCity(venue), rowCountry(venue), coords(venue), mode === 'cruising' ? 'cruising' : 'venue', observed)).filter(Boolean);
+      cityGroups = aggregate(records, firstCity, rowCountry, coords, observed);
+    } else if (mode === 'events') {
+      const [from, to] = getDateRange(range);
+      records = H.state.events.filter(isLive).map(eventLocation).filter(item => eventOccursInRange(item.event, from, to)).filter(item => categoryMatches(item.event, item.venue, category));
+      points = records.map(item => makeRecordPoint(item.event, item.event?.Event_Name || 'Event', item.city, item.country, item.location, 'event', observed)).filter(Boolean);
+      cityGroups = aggregate(records, item => item.city, item => item.country, item => item.location, observed);
+    } else {
+      const venueRows = H.state.venues.filter(isLive).filter(venue => categoryMatches(venue, null, category)).map(venue => ({ city: firstCity(venue), country: rowCountry(venue), location: coords(venue), record: venue }));
+      const eventRows = H.state.events.filter(isLive).map(eventLocation).filter(item => categoryMatches(item.event, item.venue, category)).map(item => ({ city: item.city, country: item.country, location: item.location, record: item.event }));
+      records = [...venueRows, ...eventRows];
+      cityGroups = aggregate(records, item => item.city, item => item.country, item => item.location, observed);
+      points = cityGroups;
+    }
+
+    return {
+      mode, records, points, cityGroups,
+      exactCount: points.filter(point => !point.approximate).length,
+      fallbackCount: points.filter(point => point.approximate).length
+    };
+  };
+
+  async function fetchJSON(url, timeoutMs = 12000) {
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const response = await fetch(url, { signal: controller.signal, cache: 'no-store' });
+      if (!response.ok) throw new Error(`${url.split('?')[0]} returned HTTP ${response.status}`);
+      return await response.json();
+    } catch (error) {
+      if (error?.name === 'AbortError') throw new Error(`${url.split('?')[0]} took too long to load`);
+      throw error;
+    } finally {
+      window.clearTimeout(timeout);
+    }
+  }
+
+  H.load = async () => {
+    buildFallbackMaps();
+    const stamp = Date.now();
+    const [venues, events] = await Promise.all([fetchJSON(`listings.json?v=${stamp}`), fetchJSON(`events.json?v=${stamp}`)]);
+    H.state.venues = Array.isArray(venues) ? venues : [];
+    H.state.events = Array.isArray(events) ? events : [];
+    H.state.byId = new Map(H.state.venues.map(venue => [clean(venue?.Venue_ID), venue]).filter(([id]) => id));
+  };
+})();
