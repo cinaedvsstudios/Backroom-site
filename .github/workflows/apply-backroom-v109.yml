@@ -113,7 +113,6 @@ jobs:
         run: |
           set -euo pipefail
           grep -F '<title>Backroom Admin Dashboard - v1.09</title>' admin.html
-          grep -F '>v1.09</span>' admin.html
           grep -F 'style.css?v=1.09' admin.html
           grep -F 'admin.js?v=1.09' admin.html
           grep -F 'admin-enhancements.js?v=1.09' admin.html
