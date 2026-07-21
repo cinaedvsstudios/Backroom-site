@@ -1,4 +1,4 @@
-/* Backroom public stylesheet v1.05 */
+/* Backroom public stylesheet v1.06 */
 :root {
     --bg-color: #000000;
     --primary-blue: #2CA8D4;
@@ -1003,6 +1003,34 @@ td.hidden-col * { display: none !important; }
 }
 .results-location-share-btn:hover,
 .results-location-share-btn:focus-visible {
+    background: var(--bright-red-orange);
+    border-color: var(--bright-red-orange);
+    color: #fff;
+    outline: none;
+}
+
+.calendar-panel-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+.calendar-panel-heading h2 { margin: 0; }
+.calendar-share-day-btn {
+    display: inline-flex;
+    width: 2.15rem;
+    height: 2.15rem;
+    flex: 0 0 2.15rem;
+    padding: 0;
+    border: 1px solid var(--bright-red-orange);
+    border-radius: 999px;
+    background: var(--dark-red);
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1;
+}
+.calendar-share-day-btn:hover,
+.calendar-share-day-btn:focus-visible {
     background: var(--bright-red-orange);
     border-color: var(--bright-red-orange);
     color: #fff;

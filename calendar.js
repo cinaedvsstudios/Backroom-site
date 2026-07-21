@@ -1,4 +1,4 @@
-// Backroom Events calendar v1.02 — location pill, date, vibe filters and event-card image rules.
+// Backroom Events calendar v1.03 — shareable day routes, location pill, filters and event-card rules.
 (function () {
     'use strict';
 
@@ -422,6 +422,12 @@
     }
 
     function syncLocationFromSharedLocation() {
+        const routeState = readCalendarRouteState();
+        if (routeState) {
+            state.location = routeState.location;
+            return;
+        }
+
         const shared = readSharedLocation();
 
         if (shared.scope === 'city') {
@@ -457,6 +463,78 @@
         }
         if (location?.scope === 'country') return String(location.country || '').trim();
         return '';
+    }
+
+    function isCalendarRouteHash(hash = window.location.hash || '') {
+        return hash === '#calendar' || String(hash).startsWith('#calendar?');
+    }
+
+    function readCalendarRouteState(hash = window.location.hash || '') {
+        if (!String(hash || '').startsWith('#calendar?')) return null;
+
+        const params = new URLSearchParams(String(hash).slice('#calendar?'.length));
+        const city = String(params.get('city') || '').trim();
+        const country = String(params.get('country') || '').trim();
+        const requestedDate = parseDate(params.get('date')) || startOfToday();
+        const rawTag = String(params.get('tag') || '').trim();
+        const vibeFilter = EVENT_VIBE_TAGS.find(tag => normalizeLocation(tag) === normalizeLocation(rawTag)) || '';
+        let location = { scope: 'all', city: '', country: '' };
+
+        if (city && country) {
+            const match = cityOptionRecords().find(option => (
+                normalizeLocation(option.city) === normalizeLocation(city)
+                && normalizeLocation(option.country) === normalizeLocation(country)
+            ));
+            if (match) location = { scope: 'city', city: match.city, country: match.country };
+        } else if (!city && country) {
+            const displayCountry = findDisplayLocation(country, countryOptions());
+            if (displayCountry) location = { scope: 'country', city: '', country: displayCountry };
+        }
+
+        return {
+            location,
+            selectedDate: dateKey(requestedDate),
+            vibeFilter,
+            shared: true
+        };
+    }
+
+    function applyCalendarRouteState() {
+        const routeState = readCalendarRouteState();
+        if (!routeState) return false;
+
+        state.location = routeState.location;
+        state.dateFilter = 'all';
+        state.vibeFilter = routeState.vibeFilter;
+        state.selectedDate = routeState.selectedDate;
+        const selected = parseDate(routeState.selectedDate) || startOfToday();
+        state.month = new Date(selected.getFullYear(), selected.getMonth(), 1);
+        return true;
+    }
+
+    function getCalendarShareUrl() {
+        const params = new URLSearchParams();
+        const location = state.location || { scope: 'all', city: '', country: '' };
+
+        if (location.scope === 'city') params.set('city', location.city);
+        if (location.country) params.set('country', location.country);
+        params.set('date', state.selectedDate);
+        if (state.vibeFilter) params.set('tag', state.vibeFilter);
+
+        return `${window.location.origin}${window.location.pathname}#calendar?${params.toString()}`;
+    }
+
+    function shareSelectedCalendarDay() {
+        const url = getCalendarShareUrl();
+        const locationLabel = getLocationLabel();
+        const subject = `Backroom Events: ${selectedLabel()}${locationLabel ? ` — ${locationLabel}` : ''}`;
+
+        if (typeof window.shareURL === 'function') {
+            window.shareURL(url, subject);
+            return;
+        }
+
+        navigator.clipboard?.writeText(url);
     }
 
     function setSharedLocationFromSelection(value) {
@@ -750,9 +828,13 @@
         const isWindowFilter = state.dateFilter !== 'all';
         const items = eventsForActiveDateFilter();
         const label = activePanelLabel();
+        const shareButton = !isWindowFilter
+            ? `<button type="button" id="calendar-share-day" class="calendar-share-day-btn icon-btn" title="Share events on ${escapeHTML(label)}" aria-label="Share events on ${escapeHTML(label)}">📣</button>`
+            : '';
+        const heading = `<div class="calendar-panel-heading"><h2 class="display-font">${label}</h2>${shareButton}</div>`;
         previousGenericEventFallback = '';
-        if (!items.length) return `<section class="calendar-event-panel"><h2 class="display-font">${label}</h2><div class="calendar-empty">No listed events match these filters yet.</div></section>`;
-        return `<section class="calendar-event-panel"><h2 class="display-font">${label}</h2><p class="calendar-day-count">${items.length} event${items.length === 1 ? '' : 's'} listed</p>${items.map(event => renderEventCard(event, isWindowFilter)).join('')}</section>`;
+        if (!items.length) return `<section class="calendar-event-panel">${heading}<div class="calendar-empty">No listed events match these filters yet.</div></section>`;
+        return `<section class="calendar-event-panel">${heading}<p class="calendar-day-count">${items.length} event${items.length === 1 ? '' : 's'} listed</p>${items.map(event => renderEventCard(event, isWindowFilter)).join('')}</section>`;
     }
 
     function render() {
@@ -797,6 +879,7 @@
             // Fallback for an older app.js: reuse the normal top-bar location control.
             document.getElementById('btn-location')?.click();
         });
+        document.getElementById('calendar-share-day')?.addEventListener('click', shareSelectedCalendarDay);
         document.querySelectorAll('[data-calendar-filter]').forEach(button => button.addEventListener('click', () => activateFilter(button.dataset.calendarFilter)));
         document.querySelectorAll('[data-calendar-date]').forEach(button => button.addEventListener('click', () => {
             state.dateFilter = 'all';
@@ -854,7 +937,7 @@
 
     window.closeCalendarScreen = close;
     window.openCalendarScreen = async function () {
-        if (window.location.hash !== '#calendar') history.pushState(null, '', '#calendar');
+        if (!isCalendarRouteHash()) history.pushState(null, '', '#calendar');
         hideStandardPanels();
         const container = ensureContainer();
         container.classList.remove('hidden');
@@ -862,6 +945,7 @@
         if (!state.loaded) await loadData();
         if (state.loaded) {
             syncLocationFromSharedLocation();
+            applyCalendarRouteState();
             render();
         }
     };
@@ -869,10 +953,10 @@
     window.addEventListener('backroom:location-changed', () => {
         if (!state.loaded) return;
         syncLocationFromSharedLocation();
-        if (window.location.hash === '#calendar') render();
+        if (isCalendarRouteHash()) render();
     });
 
     window.addEventListener('hashchange', () => {
-        if (window.location.hash !== '#calendar') close(false);
+        if (!isCalendarRouteHash()) close(false);
     });
 }());
