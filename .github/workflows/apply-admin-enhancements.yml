@@ -1,0 +1,52 @@
+name: Apply admin enhancements
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - admin-enhancements.js
+      - .github/workflows/apply-admin-enhancements.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch-admin-page:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Load enhancement script from admin page
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('admin.html')
+          text = path.read_text(encoding='utf-8')
+          marker = '    <script src="admin.js?v=0.62"></script>'
+          enhancement = '    <script src="admin-enhancements.js?v=0.65"></script>'
+
+          if enhancement not in text:
+              if marker not in text:
+                  raise SystemExit('Could not find the admin.js script marker in admin.html')
+              text = text.replace(marker, marker + '\n' + enhancement, 1)
+
+          text = text.replace('Backroom Admin Dashboard - v0.64', 'Backroom Admin Dashboard - v0.65')
+          text = text.replace('BR ADMIN <span style="font-size: 0.9rem; color: var(--label-grey); margin-left: 5px;">v0.64</span>', 'BR ADMIN <span style="font-size: 0.9rem; color: var(--label-grey); margin-left: 5px;">v0.65</span>')
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit admin page update
+        shell: bash
+        run: |
+          if git diff --quiet -- admin.html; then
+            echo "admin.html already includes the enhancement script."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add admin.html
+          git commit -m "Load admin v0.65 enhancements"
+          git push
