@@ -1,4 +1,4 @@
-// Backroom Admin core v1.08
+// Backroom Admin core v1.09
 let liveData = [];
 let draftData = [];
 let currentMode = 'venues'; // 'venues', 'events', 'editor', 'avatars'
@@ -474,13 +474,13 @@ function generateTableHTML(dataObj, isMainTable) {
     dataObj.forEach((row, rowIndex) => {
         const idField = getAdminIdField();
         const id = row[idField] || rowIndex;
-        const actualIndex = draftData.findIndex(d => d[idField] === id);
+        const actualIndex = draftData.indexOf(row);
         const editIndex = actualIndex >= 0 ? actualIndex : rowIndex;
 
         let isNew = false;
         if(liveData.length > 0) isNew = !liveData.some(l => l[idField] === id);
 
-        html += `<tr data-id="${id}" class="${isNew ? 'new-entry-row' : ''}" onmousedown="selectAdminRecord(this.dataset.id)">`;
+        html += `<tr data-id="${id}" data-draft-index="${editIndex}" class="${isNew ? 'new-entry-row' : ''}" onmousedown="selectAdminRecord(this.dataset.id)">`;
 
         const needsReview = (!row.Share_URL || String(row.Share_URL).toLowerCase() === 'false' || String(row.Share_URL) === 'PENDING' || String(row.Status || '') === 'Draft');
         html += `<td style="text-align:center;">
