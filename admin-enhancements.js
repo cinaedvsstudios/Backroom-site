@@ -13,6 +13,11 @@ document.write('<script src="admin-enhancements-core.js?v=1.09"><\/script>');
     const cleanValue = (value) => String(value ?? '').trim().replace(/\s+/g, ' ');
     const countKey = (value) => cleanValue(value).toLocaleLowerCase('en');
 
+    function splitCities(value) {
+        const values = Array.isArray(value) ? value : String(value ?? '').split(/[;,|]+/);
+        return values.map(cleanValue).filter(Boolean);
+    }
+
     function readStoredVenueDraft() {
         try {
             const parsed = JSON.parse(localStorage.getItem('br_admin_venues_draft') || '[]');
@@ -27,7 +32,7 @@ document.write('<script src="admin-enhancements-core.js?v=1.09"><\/script>');
             const id = cleanValue(row?.Venue_ID);
             if (!id) return;
             map.set(id, {
-                city: cleanValue(row?.City),
+                cities: splitCities(row?.City),
                 country: cleanValue(row?.Country)
             });
         });
@@ -60,17 +65,16 @@ document.write('<script src="admin-enhancements-core.js?v=1.09"><\/script>');
 
     function getDirectLocation(row) {
         return {
-            city: cleanValue(row?.City || row?.Event_City || row?.Venue_City || row?.Location_City),
+            cities: splitCities(row?.City || row?.Event_City || row?.Venue_City || row?.Location_City),
             country: cleanValue(row?.Country || row?.Event_Country || row?.Venue_Country || row?.Location_Country)
         };
     }
 
     function resolveEventLocation(row, venueMap) {
         const direct = getDirectLocation(row);
-        if (direct.city && direct.country) return direct;
-        const linked = venueMap.get(cleanValue(row?.Venue_ID)) || {};
+        const linked = venueMap.get(cleanValue(row?.Venue_ID)) || { cities: [], country: '' };
         return {
-            city: direct.city || cleanValue(linked.city),
+            cities: direct.cities.length ? direct.cities : linked.cities,
             country: direct.country || cleanValue(linked.country)
         };
     }
@@ -111,25 +115,29 @@ document.write('<script src="admin-enhancements-core.js?v=1.09"><\/script>');
         const line = ensureCoverageLine();
         if (!line || (currentMode !== 'venues' && currentMode !== 'events')) return;
 
+        const modeAtStart = currentMode;
         const rows = Array.isArray(draftData) ? draftData : [];
         const cities = new Set();
         const countries = new Set();
-        const venueMap = currentMode === 'events' ? await getVenueMap() : new Map();
+        const venueMap = modeAtStart === 'events' ? await getVenueMap() : new Map();
+        if (currentMode !== modeAtStart) return;
 
         rows.forEach((row) => {
-            const location = currentMode === 'events'
+            const location = modeAtStart === 'events'
                 ? resolveEventLocation(row, venueMap)
                 : getDirectLocation(row);
-            const city = countKey(location.city);
+            location.cities.forEach((city) => {
+                const key = countKey(city);
+                if (key) cities.add(key);
+            });
             const country = countKey(location.country);
-            if (city) cities.add(city);
             if (country) countries.add(country);
         });
 
         const cityLabel = cities.size === 1 ? 'city' : 'cities';
         const countryLabel = countries.size === 1 ? 'country' : 'countries';
         line.textContent = `${cities.size} ${cityLabel} · ${countries.size} ${countryLabel}`;
-        line.title = `Unique locations represented by the ${rows.length} working ${currentMode === 'venues' ? 'venue' : 'event'} records currently loaded.`;
+        line.title = `Unique locations represented by the ${rows.length} working ${modeAtStart === 'venues' ? 'venue' : 'event'} records currently loaded.`;
     }
 
     function scheduleCoverageUpdate(delay = 30) {

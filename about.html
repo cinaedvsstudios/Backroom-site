@@ -40,9 +40,14 @@ h1{color:var(--cyan);text-transform:uppercase;letter-spacing:.06em;margin-top:0}
     const cleanValue = (value) => String(value ?? '').trim().replace(/\s+/g, ' ');
     const countKey = (value) => cleanValue(value).toLocaleLowerCase('en');
 
+    function splitCities(value) {
+        const values = Array.isArray(value) ? value : String(value ?? '').split(/[;,|]+/);
+        return values.map(cleanValue).filter(Boolean);
+    }
+
     function directLocation(row) {
         return {
-            city: cleanValue(row?.City || row?.Event_City || row?.Venue_City || row?.Location_City),
+            cities: splitCities(row?.City || row?.Event_City || row?.Venue_City || row?.Location_City),
             country: cleanValue(row?.Country || row?.Event_Country || row?.Venue_Country || row?.Location_Country)
         };
     }
@@ -72,18 +77,18 @@ h1{color:var(--cyan);text-transform:uppercase;letter-spacing:.06em;margin-top:0}
                 const location = directLocation(row);
                 const venueId = cleanValue(row?.Venue_ID);
                 if (venueId) venueMap.set(venueId, location);
-                const city = countKey(location.city);
+                location.cities.forEach((city) => cities.add(countKey(city)));
                 const country = countKey(location.country);
-                if (city) cities.add(city);
                 if (country) countries.add(country);
             });
 
             (Array.isArray(events) ? events : []).forEach((row) => {
                 const direct = directLocation(row);
-                const linked = venueMap.get(cleanValue(row?.Venue_ID)) || {};
-                const city = countKey(direct.city || linked.city);
-                const country = countKey(direct.country || linked.country);
-                if (city) cities.add(city);
+                const linked = venueMap.get(cleanValue(row?.Venue_ID)) || { cities: [], country: '' };
+                const eventCities = direct.cities.length ? direct.cities : linked.cities;
+                const eventCountry = direct.country || linked.country;
+                eventCities.forEach((city) => cities.add(countKey(city)));
+                const country = countKey(eventCountry);
                 if (country) countries.add(country);
             });
 
