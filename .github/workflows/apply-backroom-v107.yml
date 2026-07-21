@@ -19,14 +19,36 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      - name: Apply exact version patches
+      - name: Apply exact version replacements
         shell: bash
         run: |
           set -euo pipefail
-          for patch in .backroom-v107/*.patch; do
-            git apply --check "$patch"
-            git apply "$patch"
-          done
+          python - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+              'app.js': [('const APP_VERSION = "v1.13";', 'const APP_VERSION = "v1.07";')],
+              'calendar.js': [('calendar v1.03', 'calendar v1.07')],
+              'style.css': [('stylesheet v1.06', 'stylesheet v1.07')],
+              'calendar.css': [('calendar — v0.86', 'calendar — v1.07')],
+              'index.html': [
+                  ('<title>Backroom - v1.06</title>', '<title>Backroom - v1.07</title>'),
+                  ('style.css?v=1.06', 'style.css?v=1.07'),
+                  ('calendar.css?v=0.90', 'calendar.css?v=1.07'),
+                  ('app.js?v=1.13', 'app.js?v=1.07'),
+                  ('calendar.js?v=1.03', 'calendar.js?v=1.07'),
+              ],
+          }
+
+          for name, changes in replacements.items():
+              path = Path(name)
+              text = path.read_text(encoding='utf-8')
+              for old, new in changes:
+                  count = text.count(old)
+                  assert count == 1, f'{name}: expected one occurrence of {old!r}, found {count}'
+                  text = text.replace(old, new)
+              path.write_text(text, encoding='utf-8')
+          PY
 
       - name: Validate unified public version
         shell: bash
