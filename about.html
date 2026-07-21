@@ -5,9 +5,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Backroom | Backroom</title>
 <style>
-:root{--black:#000;--cyan:#2CA8D4;--white:#fff;--panel:#1F2535;--mid:#313748;--text:#969CAE;}
-*{box-sizing:border-box}body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55;padding:32px;}
+:root{--black:#000;--cyan:#2CA8D4;--white:#fff;--panel:#1F2535;--mid:#313748;--text:#969CAE;--near:#0B0F19;}
+*{box-sizing:border-box}body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.6;padding:32px;}
 main{max-width:900px;margin:0 auto;background:var(--panel);border:1px solid var(--mid);border-radius:18px;padding:32px;box-shadow:0 0 24px rgba(44,168,212,.18);}
-h1{color:var(--cyan);text-transform:uppercase;letter-spacing:.06em;margin-top:0}a{color:var(--cyan)}p{font-size:1.05rem}.muted{color:var(--text)}
+h1{color:var(--cyan);text-transform:uppercase;letter-spacing:.06em;margin-top:0}a{color:var(--cyan);font-weight:700}p{font-size:1.05rem}.muted{color:var(--text)}
+.coverage{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0;padding:16px 18px;background:var(--near);border:1px solid var(--cyan);border-radius:12px;}
+.coverage-stat{min-width:150px;flex:1;text-align:center}.coverage-number{display:block;color:var(--cyan);font-size:2rem;font-weight:700;line-height:1.1}.coverage-label{display:block;color:var(--text);font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+@media (max-width:600px){body{padding:16px}main{padding:22px}.coverage-stat{text-align:left}}
 </style>
-</head><body><main><h1>About Backroom</h1><p>Backroom is a practical local guide for queer venues, nightlife, events, cruising spaces, and travel planning.</p><p class="muted">This page is intentionally simple for now and can be expanded in the page editor.</p><p style="margin-top:32px; color:#969CAE; font-size:0.95rem;">If you are viewing this page outside of the Backroom site <a href="https://cinaedvsstudios.github.io/Backroom-site/" style="color:#2CA8D4; font-weight:700;">click here to open the Backroom site.</a></p></main></body></html>
+</head>
+<body>
+<main>
+<h1>About Backroom</h1>
+
+<p><strong>Backroom focuses primarily on gay male and men-only nightlife and events across Europe, while also including a broader range of gay and queer venues.</strong></p>
+
+<div class="coverage" id="coverage-summary" aria-live="polite">
+    <div class="coverage-stat"><span class="coverage-number" id="country-count">—</span><span class="coverage-label">Countries</span></div>
+    <div class="coverage-stat"><span class="coverage-number" id="city-count">—</span><span class="coverage-label">Cities</span></div>
+</div>
+
+<p>The directory currently covers <strong id="country-count-inline">— countries</strong> and <strong id="city-count-inline">— cities</strong>, calculated automatically from our live venue and event records.</p>
+
+<p>Information is gathered through actual in-person visits, as well as from multiple public sources. Wherever possible, details are cross-checked against at least two independent sources. Listings are reviewed regularly, with no listing left unchecked for longer than six months, to help ensure the information remains current.</p>
+
+<p>Please <a href="contact.html">contact us</a> if you would like to add a venue or event, request that something be removed, or report information that needs to be corrected or updated.</p>
+
+<p class="muted" style="margin-top:32px;font-size:.95rem;">If you are viewing this page outside of the Backroom site, <a href="https://cinaedvsstudios.github.io/Backroom-site/">open the Backroom site here.</a></p>
+</main>
+<script>
+(() => {
+    'use strict';
+
+    const cleanValue = (value) => String(value ?? '').trim().replace(/\s+/g, ' ');
+    const countKey = (value) => cleanValue(value).toLocaleLowerCase('en');
+
+    function directLocation(row) {
+        return {
+            city: cleanValue(row?.City || row?.Event_City || row?.Venue_City || row?.Location_City),
+            country: cleanValue(row?.Country || row?.Event_Country || row?.Venue_Country || row?.Location_Country)
+        };
+    }
+
+    function setCounts(countryCount, cityCount) {
+        document.getElementById('country-count').textContent = countryCount;
+        document.getElementById('city-count').textContent = cityCount;
+        document.getElementById('country-count-inline').textContent = `${countryCount} ${countryCount === 1 ? 'country' : 'countries'}`;
+        document.getElementById('city-count-inline').textContent = `${cityCount} ${cityCount === 1 ? 'city' : 'cities'}`;
+    }
+
+    async function loadCoverage() {
+        try {
+            const stamp = Date.now();
+            const [venueResponse, eventResponse] = await Promise.all([
+                fetch(`listings.json?v=${stamp}`),
+                fetch(`events.json?v=${stamp}`)
+            ]);
+            if (!venueResponse.ok || !eventResponse.ok) throw new Error('Coverage data unavailable');
+
+            const [venues, events] = await Promise.all([venueResponse.json(), eventResponse.json()]);
+            const venueMap = new Map();
+            const cities = new Set();
+            const countries = new Set();
+
+            (Array.isArray(venues) ? venues : []).forEach((row) => {
+                const location = directLocation(row);
+                const venueId = cleanValue(row?.Venue_ID);
+                if (venueId) venueMap.set(venueId, location);
+                const city = countKey(location.city);
+                const country = countKey(location.country);
+                if (city) cities.add(city);
+                if (country) countries.add(country);
+            });
+
+            (Array.isArray(events) ? events : []).forEach((row) => {
+                const direct = directLocation(row);
+                const linked = venueMap.get(cleanValue(row?.Venue_ID)) || {};
+                const city = countKey(direct.city || linked.city);
+                const country = countKey(direct.country || linked.country);
+                if (city) cities.add(city);
+                if (country) countries.add(country);
+            });
+
+            setCounts(countries.size, cities.size);
+        } catch (error) {
+            const summary = document.getElementById('coverage-summary');
+            if (summary) summary.innerHTML = '<span class="muted">Live coverage figures are temporarily unavailable.</span>';
+            document.getElementById('country-count-inline').textContent = 'our current countries';
+            document.getElementById('city-count-inline').textContent = 'our current cities';
+        }
+    }
+
+    loadCoverage();
+})();
+</script>
+</body>
+</html>
