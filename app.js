@@ -1,155 +1,148 @@
-/* Backroom public app v1.10 loader and dynamic About page. */
+/* Backroom public app loader plus live About totals and prototype navigation. */
 document.write('<script src="app-core.js?v=1.09"><\/script>');
 
 (() => {
     'use strict';
 
-    let aboutCoveragePromise = null;
+    const clean = value => String(value ?? '').trim().replace(/\s+/g, ' ');
+    const key = value => clean(value).toLocaleLowerCase('en');
+    const splitCities = value => (Array.isArray(value) ? value : String(value ?? '').split(/[;,|]+/)).map(clean).filter(Boolean);
+    let coveragePromise = null;
 
-    const cleanValue = (value) => String(value ?? '').trim().replace(/\s+/g, ' ');
-    const countKey = (value) => cleanValue(value).toLocaleLowerCase('en');
+    function addSidebarLink(afterTitle, title, href, image, fallback) {
+        const menu = document.querySelector('#sidebar .sidebar-menu');
+        if (!menu || menu.querySelector(`[data-extra-page="${title}"]`)) return;
+        const after = Array.from(menu.querySelectorAll('.sidebar-item')).find(item => clean(item.getAttribute('title')) === afterTitle);
+        if (!after) return;
 
-    function splitCities(value) {
-        const values = Array.isArray(value) ? value : String(value ?? '').split(/[;,|]+/);
-        return values.map(cleanValue).filter(Boolean);
-    }
-
-    function directLocation(row) {
-        return {
-            cities: splitCities(row?.City || row?.Event_City || row?.Venue_City || row?.Location_City),
-            country: cleanValue(row?.Country || row?.Event_Country || row?.Venue_Country || row?.Location_Country)
-        };
-    }
-
-    function installAboutStyles() {
-        if (document.getElementById('backroom-about-dynamic-style')) return;
-        const style = document.createElement('style');
-        style.id = 'backroom-about-dynamic-style';
-        style.textContent = `
-            #about-container .about-live-intro { font-size:1.12rem; line-height:1.6; color:#fff; }
-            #about-container .about-live-copy { font-size:1.02rem; line-height:1.65; color:var(--text-light); }
-            #about-container .about-coverage-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:22px 0; }
-            #about-container .about-coverage-stat { background:var(--near-black); border:1px solid var(--primary-blue); border-radius:var(--radius-card); padding:18px; text-align:center; }
-            #about-container .about-coverage-number { display:block; color:var(--primary-blue); font-family:'Antonio',sans-serif; font-size:2.3rem; font-weight:700; line-height:1; }
-            #about-container .about-coverage-label { display:block; color:var(--text-light); font-family:'Barlow Condensed',sans-serif; font-weight:700; letter-spacing:.06em; margin-top:7px; text-transform:uppercase; }
-            #about-container .about-contact-link { color:var(--primary-blue); font-weight:700; cursor:pointer; text-decoration:underline; }
-            @media (max-width:600px) { #about-container .about-coverage-grid { grid-template-columns:1fr; } }
-        `;
-        document.head.appendChild(style);
-    }
-
-    function renderAboutPage() {
-        const container = document.getElementById('about-container');
-        if (!container) return;
-        installAboutStyles();
-
-        container.innerHTML = `
-            <h2 class="display-font" style="color:var(--primary-blue); margin-bottom:15px;">ABOUT BACKROOM</h2>
-            <p class="body-font about-live-intro"><strong>Backroom focuses primarily on gay male and men-only nightlife and events across Europe, while also including a broader range of gay and queer venues.</strong></p>
-
-            <div class="about-coverage-grid" id="about-coverage-summary" aria-live="polite">
-                <div class="about-coverage-stat"><span class="about-coverage-number" id="about-country-count">—</span><span class="about-coverage-label">Countries</span></div>
-                <div class="about-coverage-stat"><span class="about-coverage-number" id="about-city-count">—</span><span class="about-coverage-label">Cities</span></div>
-            </div>
-
-            <p class="body-font about-live-copy">The directory currently covers <strong id="about-country-count-inline">— countries</strong> and <strong id="about-city-count-inline">— cities</strong>, calculated automatically from our live venue and event records.</p>
-
-            <p class="body-font about-live-copy">Information is gathered through actual in-person visits, as well as from multiple public sources. Wherever possible, details are cross-checked against at least two independent sources. Listings are reviewed regularly, with no listing left unchecked for longer than six months, to help ensure the information remains current.</p>
-
-            <p class="body-font about-live-copy">Please <a href="#" class="about-contact-link" id="about-contact-link">contact us</a> if you would like to add a venue or event, request that something be removed, or report information that needs to be corrected or updated.</p>
-        `;
-
-        document.getElementById('about-contact-link')?.addEventListener('click', (event) => {
-            event.preventDefault();
-            if (typeof window.flagListing === 'function') {
-                window.flagListing('N/A', 'General Message', 'General Support');
-            } else {
-                window.location.href = 'contact.html';
+        const item = document.createElement('div');
+        item.className = 'sidebar-item tooltip';
+        item.title = title;
+        item.dataset.extraPage = title;
+        item.tabIndex = 0;
+        item.setAttribute('role', 'link');
+        item.innerHTML = `<span class="icon"><img src="${image}" alt="" style="width:25px;height:25px;object-fit:contain;vertical-align:middle;"></span><span class="sidebar-text display-font">${title}</span>`;
+        const icon = item.querySelector('img');
+        icon.addEventListener('error', () => {
+            const replacement = document.createElement('span');
+            replacement.textContent = fallback;
+            replacement.style.fontSize = '22px';
+            icon.replaceWith(replacement);
+        }, { once: true });
+        const open = () => { window.location.href = href; };
+        item.addEventListener('click', open);
+        item.addEventListener('keydown', event => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                open();
             }
         });
+        after.insertAdjacentElement('afterend', item);
     }
 
-    function setAboutCounts(countryCount, cityCount) {
-        const countryNumber = document.getElementById('about-country-count');
-        const cityNumber = document.getElementById('about-city-count');
-        const countryInline = document.getElementById('about-country-count-inline');
-        const cityInline = document.getElementById('about-city-count-inline');
-        if (countryNumber) countryNumber.textContent = countryCount;
-        if (cityNumber) cityNumber.textContent = cityCount;
-        if (countryInline) countryInline.textContent = `${countryCount} ${countryCount === 1 ? 'country' : 'countries'}`;
-        if (cityInline) cityInline.textContent = `${cityCount} ${cityCount === 1 ? 'city' : 'cities'}`;
+    function installExtraNavigation() {
+        addSidebarLink('Featured', 'Heat Map', 'heatmap.html', 'Emoji/heatmap.png', '🌈');
+        addSidebarLink('Cruising Guide', 'Travel Prototype', 'travel.html', 'train.webp', '🚄');
     }
 
-    async function calculateAboutCoverage() {
-        const stamp = Date.now();
-        const [venueResponse, eventResponse] = await Promise.all([
-            fetch(`listings.json?v=${stamp}`),
-            fetch(`events.json?v=${stamp}`)
-        ]);
-        if (!venueResponse.ok || !eventResponse.ok) throw new Error('Coverage data unavailable');
-
-        const [venueRows, eventRows] = await Promise.all([venueResponse.json(), eventResponse.json()]);
+    function countCoverage(venueRows, eventRows) {
         const venueMap = new Map();
         const cities = new Set();
         const countries = new Set();
 
-        (Array.isArray(venueRows) ? venueRows : []).forEach((row) => {
-            const location = directLocation(row);
-            const venueId = cleanValue(row?.Venue_ID);
-            if (venueId) venueMap.set(venueId, location);
-            location.cities.forEach((city) => cities.add(countKey(city)));
-            const country = countKey(location.country);
-            if (country) countries.add(country);
+        (Array.isArray(venueRows) ? venueRows : []).forEach(row => {
+            const location = {
+                cities: splitCities(row?.City),
+                country: clean(row?.Country)
+            };
+            const id = clean(row?.Venue_ID);
+            if (id) venueMap.set(id, location);
+            location.cities.forEach(city => cities.add(key(city)));
+            if (location.country) countries.add(key(location.country));
         });
 
-        (Array.isArray(eventRows) ? eventRows : []).forEach((row) => {
-            const direct = directLocation(row);
-            const linked = venueMap.get(cleanValue(row?.Venue_ID)) || { cities: [], country: '' };
-            const eventCities = direct.cities.length ? direct.cities : linked.cities;
-            const eventCountry = direct.country || linked.country;
-            eventCities.forEach((city) => cities.add(countKey(city)));
-            const country = countKey(eventCountry);
-            if (country) countries.add(country);
+        (Array.isArray(eventRows) ? eventRows : []).forEach(row => {
+            const linked = venueMap.get(clean(row?.Venue_ID)) || { cities: [], country: '' };
+            const eventCities = splitCities(row?.City || row?.Event_City || row?.Venue_City || row?.Location_City);
+            const eventCountry = clean(row?.Country || row?.Event_Country || row?.Venue_Country || row?.Location_Country);
+            (eventCities.length ? eventCities : linked.cities).forEach(city => cities.add(key(city)));
+            const country = eventCountry || linked.country;
+            if (country) countries.add(key(country));
         });
 
-        return { countries: countries.size, cities: cities.size };
+        return { cities: cities.size, countries: countries.size };
     }
 
-    async function loadAboutCoverage(force = false) {
-        if (force) aboutCoveragePromise = null;
-        if (!aboutCoveragePromise) aboutCoveragePromise = calculateAboutCoverage();
+    async function getCoverage() {
+        if (coveragePromise) return coveragePromise;
+        coveragePromise = (async () => {
+            try {
+                if (typeof venues !== 'undefined' && typeof events !== 'undefined' && Array.isArray(venues) && Array.isArray(events) && venues.length) {
+                    return countCoverage(venues, events);
+                }
+            } catch (_) {}
+
+            const stamp = Date.now();
+            const [venueResponse, eventResponse] = await Promise.all([
+                fetch(`listings.json?v=${stamp}`),
+                fetch(`events.json?v=${stamp}`)
+            ]);
+            if (!venueResponse.ok || !eventResponse.ok) throw new Error('Coverage files unavailable');
+            return countCoverage(await venueResponse.json(), await eventResponse.json());
+        })().catch(error => {
+            coveragePromise = null;
+            throw error;
+        });
+        return coveragePromise;
+    }
+
+    function setText(id, value) {
+        const element = document.getElementById(id);
+        if (element) element.textContent = value;
+    }
+
+    async function hydrateAboutCounts() {
+        const container = document.getElementById('about-container');
+        if (!container) return;
+        const hasCountTargets = container.querySelector('#country-count, #about-country-count, #city-count, #about-city-count');
+        if (!hasCountTargets) return;
+
         try {
-            const counts = await aboutCoveragePromise;
-            setAboutCounts(counts.countries, counts.cities);
-        } catch {
-            aboutCoveragePromise = null;
-            const summary = document.getElementById('about-coverage-summary');
-            if (summary) summary.innerHTML = '<span class="body-font" style="color:var(--text-light);">Live coverage figures are temporarily unavailable.</span>';
-            const countryInline = document.getElementById('about-country-count-inline');
-            const cityInline = document.getElementById('about-city-count-inline');
-            if (countryInline) countryInline.textContent = 'our current countries';
-            if (cityInline) cityInline.textContent = 'our current cities';
+            const counts = await getCoverage();
+            const countryText = `${counts.countries} ${counts.countries === 1 ? 'country' : 'countries'}`;
+            const cityText = `${counts.cities} ${counts.cities === 1 ? 'city' : 'cities'}`;
+            setText('country-count', counts.countries);
+            setText('city-count', counts.cities);
+            setText('country-count-inline', countryText);
+            setText('city-count-inline', cityText);
+            setText('about-country-count', counts.countries);
+            setText('about-city-count', counts.cities);
+            setText('about-country-count-inline', countryText);
+            setText('about-city-count-inline', cityText);
+        } catch (error) {
+            console.warn('Could not calculate About coverage totals:', error);
         }
     }
 
-    function refreshAboutRoute() {
-        renderAboutPage();
-        loadAboutCoverage();
-    }
-
-    function installDynamicAboutPage() {
-        refreshAboutRoute();
+    function installAboutRepair() {
+        const container = document.getElementById('about-container');
+        if (container) {
+            new MutationObserver(() => hydrateAboutCounts()).observe(container, { childList: true, subtree: true });
+        }
+        hydrateAboutCounts();
         window.addEventListener('hashchange', () => {
             if (window.location.hash === '#about') {
-                window.setTimeout(refreshAboutRoute, 0);
-                window.setTimeout(refreshAboutRoute, 120);
+                [0, 150, 700].forEach(delay => window.setTimeout(hydrateAboutCounts, delay));
             }
         });
     }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', installDynamicAboutPage);
-    } else {
-        installDynamicAboutPage();
+    function install() {
+        installExtraNavigation();
+        installAboutRepair();
+        window.setTimeout(installExtraNavigation, 500);
     }
+
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', install);
+    else install();
 })();
