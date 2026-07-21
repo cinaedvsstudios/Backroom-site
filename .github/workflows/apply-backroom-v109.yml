@@ -99,7 +99,7 @@ jobs:
               'Remember to save or download the JSON again after this.',
               'draftData = draftData.filter((record, index) => !selectedSet.has(index));',
               'refreshVenueLocationMap',
-              'data-draft-index'
+              'dataset.draftIndex'
           ]
           required_html = [
               '<title>Backroom Admin Dashboard - v1.09</title>',
