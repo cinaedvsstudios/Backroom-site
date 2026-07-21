@@ -1,0 +1,138 @@
+name: Apply Backroom v1.09 admin location and delete tools
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - backroom-v109-trigger.txt
+
+permissions:
+  contents: write
+
+jobs:
+  apply-verified-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Apply v1.09 admin update
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          version_files = [
+              'app.js', 'calendar.js', 'style.css', 'calendar.css',
+              'index.html', 'admin.html', 'admin.js', 'admin-enhancements.js'
+          ]
+
+          for name in version_files:
+              path = Path(name)
+              text = path.read_text(encoding='utf-8')
+              if 'v1.08' not in text:
+                  raise AssertionError(f'{name}: expected v1.08 baseline')
+              path.write_text(text.replace('v1.08', 'v1.09'), encoding='utf-8')
+
+          admin_path = Path('admin.js')
+          admin = admin_path.read_text(encoding='utf-8')
+          old_index = "        const actualIndex = draftData.findIndex(d => d[idField] === id);\n        const editIndex = actualIndex >= 0 ? actualIndex : rowIndex;"
+          new_index = "        const actualIndex = draftData.indexOf(row);\n        const editIndex = actualIndex >= 0 ? actualIndex : rowIndex;"
+          if old_index not in admin:
+              raise AssertionError('admin.js: row index anchor not found')
+          admin = admin.replace(old_index, new_index, 1)
+
+          old_row = "        html += `<tr data-id=\"${id}\" class=\"${isNew ? 'new-entry-row' : ''}\" onmousedown=\"selectAdminRecord(this.dataset.id)\">`;"
+          new_row = "        html += `<tr data-id=\"${id}\" data-draft-index=\"${editIndex}\" class=\"${isNew ? 'new-entry-row' : ''}\" onmousedown=\"selectAdminRecord(this.dataset.id)\">`;"
+          if old_row not in admin:
+              raise AssertionError('admin.js: table row anchor not found')
+          admin = admin.replace(old_row, new_row, 1)
+          admin_path.write_text(admin, encoding='utf-8')
+
+          enhancement_path = Path('admin-enhancements.js')
+          enhancement = enhancement_path.read_text(encoding='utf-8')
+          module = Path('.backroom-v109/admin-location-delete.js').read_text(encoding='utf-8').strip()
+          marker = 'Backroom Admin v1.09 location filters and safe bulk delete'
+          if marker in enhancement:
+              raise AssertionError('admin-enhancements.js: v1.09 module already present')
+          enhancement_path.write_text(enhancement.rstrip() + '\n\n' + module + '\n', encoding='utf-8')
+          PY
+
+      - name: Validate scripts and features
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check app.js
+          node --check calendar.js
+          node --check admin.js
+          node --check admin-enhancements.js
+          python - <<'PY'
+          from pathlib import Path
+
+          files = {
+              name: Path(name).read_text(encoding='utf-8')
+              for name in [
+                  'app.js', 'calendar.js', 'style.css', 'calendar.css',
+                  'index.html', 'admin.html', 'admin.js', 'admin-enhancements.js'
+              ]
+          }
+
+          for name, text in files.items():
+              assert 'v1.08' not in text, f'{name}: stale v1.08 remains'
+              assert 'v1.09' in text, f'{name}: v1.09 missing'
+
+          required_admin = [
+              'const actualIndex = draftData.indexOf(row);',
+              'data-draft-index="${editIndex}"'
+          ]
+          required_enhancements = [
+              'admin-country-filter',
+              'admin-city-filter',
+              'btn-delete-records',
+              'delete-mode-armed',
+              'delete-record-selected',
+              'You are going to delete ${count} record',
+              'Remember to save or download the JSON again after this.',
+              'draftData = draftData.filter((record, index) => !selectedSet.has(index));',
+              'refreshVenueLocationMap',
+              'data-draft-index'
+          ]
+          required_html = [
+              '<title>Backroom Admin Dashboard - v1.09</title>',
+              '>v1.09</span>',
+              'style.css?v=1.09',
+              'admin.js?v=1.09',
+              'admin-enhancements.js?v=1.09'
+          ]
+          required_index = [
+              '<title>Backroom - v1.09</title>',
+              'style.css?v=1.09',
+              'calendar.css?v=1.09',
+              'app.js?v=1.09',
+              'calendar.js?v=1.09'
+          ]
+
+          for needle in required_admin:
+              assert needle in files['admin.js'], needle
+          for needle in required_enhancements:
+              assert needle in files['admin-enhancements.js'], needle
+          for needle in required_html:
+              assert needle in files['admin.html'], needle
+          for needle in required_index:
+              assert needle in files['index.html'], needle
+          PY
+
+      - name: Commit verified update to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm -r .backroom-v109 .github/workflows/apply-backroom-v109.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app.js calendar.js style.css calendar.css index.html admin.html admin.js admin-enhancements.js
+          git commit -m "Add admin country city filters and safe bulk delete"
+          git push origin HEAD:main
