@@ -1,0 +1,149 @@
+name: Apply Backroom v1.08 admin record dashboard
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - backroom-v108-trigger.txt
+
+permissions:
+  contents: write
+
+jobs:
+  apply-verified-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Apply admin dashboard and unified version
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          def read(path):
+              return Path(path).read_text(encoding='utf-8')
+
+          def write(path, text):
+              Path(path).write_text(text, encoding='utf-8')
+
+          def replace_once(path, old, new):
+              text = read(path)
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'{path}: expected exactly one occurrence of {old!r}, found {count}')
+              write(path, text.replace(old, new, 1))
+
+          payload = read('.backroom-v108/admin-dashboard.js')
+          enhancements = read('admin-enhancements.js')
+          marker = '/* Backroom Admin v1.08 record dashboard */'
+          if marker in enhancements:
+              raise SystemExit('admin-enhancements.js already contains the v1.08 dashboard marker')
+          if not enhancements.startswith('/* Backroom Admin v0.65 enhancements'):
+              raise SystemExit('admin-enhancements.js version header changed unexpectedly')
+          enhancements = enhancements.replace('/* Backroom Admin v0.65 enhancements', '/* Backroom Admin v1.08 enhancements', 1)
+          enhancements = enhancements.rstrip() + payload + '\n'
+          write('admin-enhancements.js', enhancements)
+
+          admin_js = read('admin.js')
+          if admin_js.startswith('// Backroom Admin core v'):
+              raise SystemExit('admin.js already has an unexpected version header')
+          write('admin.js', '// Backroom Admin core v1.08\n' + admin_js)
+
+          replacements = {
+              'admin.html': [
+                  ('<title>Backroom Admin Dashboard - v0.65</title>', '<title>Backroom Admin Dashboard - v1.08</title>'),
+                  ('style.css?v=0.64', 'style.css?v=1.08'),
+                  ('>v0.65</span>', '>v1.08</span>'),
+                  ('admin.js?v=0.62', 'admin.js?v=1.08'),
+                  ('admin-enhancements.js?v=0.65', 'admin-enhancements.js?v=1.08'),
+              ],
+              'app.js': [
+                  ('const APP_VERSION = "v1.07";', 'const APP_VERSION = "v1.08";'),
+              ],
+              'calendar.js': [
+                  ('calendar v1.07', 'calendar v1.08'),
+              ],
+              'style.css': [
+                  ('stylesheet v1.07', 'stylesheet v1.08'),
+              ],
+              'calendar.css': [
+                  ('calendar — v1.07', 'calendar — v1.08'),
+              ],
+              'index.html': [
+                  ('<title>Backroom - v1.07</title>', '<title>Backroom - v1.08</title>'),
+                  ('style.css?v=1.07', 'style.css?v=1.08'),
+                  ('calendar.css?v=1.07', 'calendar.css?v=1.08'),
+                  ('app.js?v=1.07', 'app.js?v=1.08'),
+                  ('calendar.js?v=1.07', 'calendar.js?v=1.08'),
+              ],
+          }
+
+          for path, pairs in replacements.items():
+              for old, new in pairs:
+                  replace_once(path, old, new)
+          PY
+
+      - name: Validate JavaScript and required features
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check app.js
+          node --check calendar.js
+          node --check admin.js
+          node --check admin-enhancements.js
+          python - <<'PY'
+          from pathlib import Path
+
+          files = {name: Path(name).read_text(encoding='utf-8') for name in [
+              'index.html', 'app.js', 'calendar.js', 'style.css', 'calendar.css',
+              'admin.html', 'admin.js', 'admin-enhancements.js'
+          ]}
+
+          required = {
+              'index.html': ['Backroom - v1.08', 'style.css?v=1.08', 'calendar.css?v=1.08', 'app.js?v=1.08', 'calendar.js?v=1.08'],
+              'app.js': ['const APP_VERSION = "v1.08";'],
+              'calendar.js': ['calendar v1.08'],
+              'style.css': ['stylesheet v1.08'],
+              'calendar.css': ['calendar — v1.08'],
+              'admin.html': ['Backroom Admin Dashboard - v1.08', '>v1.08</span>', 'style.css?v=1.08', 'admin.js?v=1.08', 'admin-enhancements.js?v=1.08'],
+              'admin.js': ['// Backroom Admin core v1.08'],
+              'admin-enhancements.js': [
+                  'Backroom Admin v1.08 enhancements',
+                  'Backroom Admin v1.08 record dashboard',
+                  'admin-row-number-cell',
+                  'summary-record-count',
+                  'admin-global-search',
+                  'btn-clear-all-filters',
+                  'admin-sort-button',
+                  'duplicate ID',
+                  'new ·',
+                  'edited ·',
+                  'removed'
+              ],
+          }
+
+          for path, needles in required.items():
+              for needle in needles:
+                  if needle not in files[path]:
+                      raise SystemExit(f'{path}: missing {needle!r}')
+
+          if files['admin-enhancements.js'].count('Backroom Admin v1.08 record dashboard') != 1:
+              raise SystemExit('admin dashboard marker must occur exactly once')
+          PY
+
+      - name: Commit verified update to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm -r .backroom-v108 .github/workflows/apply-backroom-v108.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html app.js calendar.js style.css calendar.css admin.html admin.js admin-enhancements.js
+          git commit -m "Add admin record counts, search, sorting and data warnings"
+          git push origin HEAD:main
