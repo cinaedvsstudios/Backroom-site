@@ -19,19 +19,15 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      - name: Apply calendar update and version bump
+      - name: Replace calendar month cells
         shell: bash
         run: |
-          set -euo pipefail
           python - <<'PY'
           from pathlib import Path
-
-          calendar_path = Path('calendar.js')
-          calendar = calendar_path.read_text(encoding='utf-8')
-
-          month_start = calendar.index('    function monthCells() {')
-          month_end = calendar.index('\n    function ensureSelectedDate()', month_start)
-          month_block = """    function monthCells() {
+          import re
+          path = Path('calendar.js')
+          text = path.read_text(encoding='utf-8')
+          replacement = """    function monthCells() {
               const first = new Date(state.month.getFullYear(), state.month.getMonth(), 1);
               const startOffset = (first.getDay() + 6) % 7;
               const gridStart = new Date(first);
@@ -43,39 +39,62 @@ jobs:
                   return date;
               });
           }
-          """
-          calendar = calendar[:month_start] + month_block + calendar[month_end + 1:]
 
-          grid_start = calendar.index('        const days = monthCells().map(date => {')
-          grid_end = calendar.index('        return `<div class="calendar-grid">', grid_start)
-          grid_block = """        const days = monthCells().map(date => {
+          function ensureSelectedDate"""
+          text, count = re.subn(r"    function monthCells\(\) \{.*?\n    \}\n\n    function ensureSelectedDate", lambda _: replacement, text, count=1, flags=re.S)
+          assert count == 1, 'monthCells replacement failed'
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Replace calendar day rendering
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          path = Path('calendar.js')
+          text = path.read_text(encoding='utf-8')
+          replacement = """        const days = monthCells().map(date => {
               const key = dateKey(date);
               const count = eventsOnDate(key).length;
               const outsideMonth = date.getMonth() !== state.month.getMonth() || date.getFullYear() !== state.month.getFullYear();
               return `<button type="button" class="calendar-day${outsideMonth ? ' outside-month' : ''}${key === state.selectedDate ? ' selected' : ''}${key === today ? ' today' : ''}${count ? ' has-events' : ''}" data-calendar-date="${key}"><span class="calendar-number">${date.getDate()}</span><span class="calendar-indicators">${count ? `<span class="calendar-dot"></span>${count > 1 ? `<span class="calendar-count">${count}</span>` : ''}` : ''}</span></button>`;
-          }).join('');
-          """
-          calendar = calendar[:grid_start] + grid_block + calendar[grid_end:]
+          }).join('');"""
+          text, count = re.subn(r"        const days = monthCells\(\)\.map\(date => \{.*?        \}\)\.join\(''\);", lambda _: replacement, text, count=1, flags=re.S)
+          assert count == 1, 'renderGrid day replacement failed'
+          path.write_text(text, encoding='utf-8')
+          PY
 
-          click_start = calendar.index("        document.querySelectorAll('[data-calendar-date]')")
-          click_end = calendar.index("        document.querySelectorAll('[data-calendar-save]')", click_start)
-          click_block = """        document.querySelectorAll('[data-calendar-date]').forEach(button => button.addEventListener('click', () => {
+      - name: Replace adjacent date click behaviour
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          path = Path('calendar.js')
+          text = path.read_text(encoding='utf-8')
+          replacement = """        document.querySelectorAll('[data-calendar-date]').forEach(button => button.addEventListener('click', () => {
               state.dateFilter = 'all';
               const selected = parseDate(button.dataset.calendarDate);
               if (!selected) return;
               state.selectedDate = dateKey(selected);
               state.month = new Date(selected.getFullYear(), selected.getMonth(), 1);
               render();
-          }));
-          """
-          calendar = calendar[:click_start] + click_block + calendar[click_end:]
-          calendar_path.write_text(calendar, encoding='utf-8')
+          }));"""
+          text, count = re.subn(r"        document\.querySelectorAll\('\[data-calendar-date\]'\).*?        \}\)\);", lambda _: replacement, text, count=1, flags=re.S)
+          assert count == 1, 'calendar date click replacement failed'
+          path.write_text(text, encoding='utf-8')
+          PY
 
-          css_path = Path('calendar.css')
-          css = css_path.read_text(encoding='utf-8')
-          css_start = css.index('.calendar-day.blank {')
-          css_end = css.index('.calendar-indicators {', css_start)
-          css_block = """.calendar-day.blank { background: transparent; cursor: default; }
+      - name: Add adjacent month styling
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          path = Path('calendar.css')
+          text = path.read_text(encoding='utf-8')
+          replacement = """.calendar-day.blank { background: transparent; cursor: default; }
           .calendar-day.outside-month {
               background: #151a26;
               color: #778195;
@@ -89,18 +108,22 @@ jobs:
           .calendar-day.selected { background: var(--primary-blue); border-color: var(--primary-blue); font-weight: bold; }
           .calendar-day.outside-month.selected { color: #fff; }
           """
-          css = css[:css_start] + css_block + css[css_end:]
-          css_path.write_text(css, encoding='utf-8')
+          pattern = r"\.calendar-day\.blank \{.*?\.calendar-day\.selected \{[^\n]+\}\n"
+          text, count = re.subn(pattern, lambda _: replacement, text, count=1, flags=re.S)
+          assert count == 1, 'calendar adjacent style replacement failed'
+          path.write_text(text, encoding='utf-8')
+          PY
 
-          files = [
-              'app.js', 'calendar.js', 'style.css', 'calendar.css',
-              'index.html', 'admin.html', 'admin.js', 'admin-enhancements.js'
-          ]
+      - name: Bump all release references
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          files = ['app.js','calendar.js','style.css','calendar.css','index.html','admin.html','admin.js','admin-enhancements.js']
           for name in files:
               path = Path(name)
               text = path.read_text(encoding='utf-8')
-              if 'v1.09' not in text:
-                  raise AssertionError(f'{name}: expected v1.09 baseline')
+              assert 'v1.09' in text, f'{name}: expected v1.09 baseline'
               path.write_text(text.replace('v1.09', 'v1.10'), encoding='utf-8')
           PY
 
@@ -116,7 +139,6 @@ jobs:
           grep -F "outsideMonth ? ' outside-month'" calendar.js
           grep -F 'state.month = new Date(selected.getFullYear(), selected.getMonth(), 1);' calendar.js
           grep -F '.calendar-day.outside-month {' calendar.css
-          grep -F '.calendar-day.outside-month:hover' calendar.css
           python - <<'PY'
           from pathlib import Path
           files = ['app.js','calendar.js','style.css','calendar.css','index.html','admin.html','admin.js','admin-enhancements.js']
