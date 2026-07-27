@@ -1,0 +1,74 @@
+name: Apply Backroom v1.10 calendar adjacent days
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - backroom-v110-trigger.txt
+
+permissions:
+  contents: write
+
+jobs:
+  apply-verified-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Apply calendar update and version bump
+        shell: bash
+        run: |
+          set -euo pipefail
+          git apply --check .backroom-v110/calendar-adjacent-days.patch
+          git apply .backroom-v110/calendar-adjacent-days.patch
+          python - <<'PY'
+          from pathlib import Path
+
+          files = [
+              'app.js', 'calendar.js', 'style.css', 'calendar.css',
+              'index.html', 'admin.html', 'admin.js', 'admin-enhancements.js'
+          ]
+          for name in files:
+              path = Path(name)
+              text = path.read_text(encoding='utf-8')
+              if 'v1.09' not in text:
+                  raise AssertionError(f'{name}: expected v1.09 baseline')
+              path.write_text(text.replace('v1.09', 'v1.10'), encoding='utf-8')
+          PY
+
+      - name: Validate update
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check app.js
+          node --check calendar.js
+          node --check admin.js
+          node --check admin-enhancements.js
+          grep -F 'Array.from({ length: 42 }' calendar.js
+          grep -F "outsideMonth ? ' outside-month'" calendar.js
+          grep -F 'state.month = new Date(selected.getFullYear(), selected.getMonth(), 1);' calendar.js
+          grep -F '.calendar-day.outside-month {' calendar.css
+          grep -F '.calendar-day.outside-month:hover' calendar.css
+          python - <<'PY'
+          from pathlib import Path
+          files = ['app.js','calendar.js','style.css','calendar.css','index.html','admin.html','admin.js','admin-enhancements.js']
+          for name in files:
+              text = Path(name).read_text(encoding='utf-8')
+              assert 'v1.09' not in text, f'{name}: stale v1.09 remains'
+              assert 'v1.10' in text, f'{name}: v1.10 missing'
+          PY
+
+      - name: Commit verified update to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm -r .backroom-v110 .github/workflows/apply-backroom-v110.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app.js calendar.js style.css calendar.css index.html admin.html admin.js admin-enhancements.js
+          git commit -m "Show clickable adjacent-month days in calendar"
+          git push origin HEAD:main
