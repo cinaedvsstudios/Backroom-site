@@ -123,8 +123,9 @@ jobs:
           for name in files:
               path = Path(name)
               text = path.read_text(encoding='utf-8')
-              assert 'v1.09' in text, f'{name}: expected v1.09 baseline'
-              path.write_text(text.replace('v1.09', 'v1.10'), encoding='utf-8')
+              text = text.replace('v1.08', 'v1.10').replace('v1.09', 'v1.10')
+              assert 'v1.10' in text, f'{name}: v1.10 missing after update'
+              path.write_text(text, encoding='utf-8')
           PY
 
       - name: Validate update
@@ -144,6 +145,7 @@ jobs:
           files = ['app.js','calendar.js','style.css','calendar.css','index.html','admin.html','admin.js','admin-enhancements.js']
           for name in files:
               text = Path(name).read_text(encoding='utf-8')
+              assert 'v1.08' not in text, f'{name}: stale v1.08 remains'
               assert 'v1.09' not in text, f'{name}: stale v1.09 remains'
               assert 'v1.10' in text, f'{name}: v1.10 missing'
           PY
