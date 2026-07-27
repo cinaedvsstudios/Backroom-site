@@ -23,10 +23,95 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git apply --check .backroom-v110/calendar-adjacent-days.patch
-          git apply .backroom-v110/calendar-adjacent-days.patch
           python - <<'PY'
           from pathlib import Path
+
+          calendar_path = Path('calendar.js')
+          calendar = calendar_path.read_text(encoding='utf-8')
+
+          replacements = [
+              (
+          """    function monthCells() {
+                  const first = new Date(state.month.getFullYear(), state.month.getMonth(), 1);
+                  const startOffset = (first.getDay() + 6) % 7;
+                  const days = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 0).getDate();
+                  const cells = Array(startOffset).fill(null);
+                  for (let day = 1; day <= days; day += 1) cells.push(new Date(state.month.getFullYear(), state.month.getMonth(), day));
+                  while (cells.length % 7) cells.push(null);
+                  return cells;
+              }""",
+          """    function monthCells() {
+                  const first = new Date(state.month.getFullYear(), state.month.getMonth(), 1);
+                  const startOffset = (first.getDay() + 6) % 7;
+                  const gridStart = new Date(first);
+                  gridStart.setDate(first.getDate() - startOffset);
+
+                  return Array.from({ length: 42 }, (_, index) => {
+                      const date = new Date(gridStart);
+                      date.setDate(gridStart.getDate() + index);
+                      return date;
+                  });
+              }"""
+              ),
+              (
+          """        const days = monthCells().map(date => {
+                      if (!date) return '<div class=\"calendar-day blank\" aria-hidden=\"true\"></div>';
+                      const key = dateKey(date);
+                      const count = eventsOnDate(key).length;
+                      return `<button type=\"button\" class=\"calendar-day${key === state.selectedDate ? ' selected' : ''}${key === today ? ' today' : ''}${count ? ' has-events' : ''}\" data-calendar-date=\"${key}\"><span class=\"calendar-number\">${date.getDate()}</span><span class=\"calendar-indicators\">${count ? `<span class=\"calendar-dot\"></span>${count > 1 ? `<span class=\"calendar-count\">${count}</span>` : ''}` : ''}</span></button>`;
+                  }).join('');""",
+          """        const days = monthCells().map(date => {
+                      const key = dateKey(date);
+                      const count = eventsOnDate(key).length;
+                      const outsideMonth = date.getMonth() !== state.month.getMonth() || date.getFullYear() !== state.month.getFullYear();
+                      return `<button type=\"button\" class=\"calendar-day${outsideMonth ? ' outside-month' : ''}${key === state.selectedDate ? ' selected' : ''}${key === today ? ' today' : ''}${count ? ' has-events' : ''}\" data-calendar-date=\"${key}\"><span class=\"calendar-number\">${date.getDate()}</span><span class=\"calendar-indicators\">${count ? `<span class=\"calendar-dot\"></span>${count > 1 ? `<span class=\"calendar-count\">${count}</span>` : ''}` : ''}</span></button>`;
+                  }).join('');"""
+              ),
+              (
+          """        document.querySelectorAll('[data-calendar-date]').forEach(button => button.addEventListener('click', () => {
+                      state.dateFilter = 'all';
+                      state.selectedDate = button.dataset.calendarDate;
+                      render();
+                  }));""",
+          """        document.querySelectorAll('[data-calendar-date]').forEach(button => button.addEventListener('click', () => {
+                      state.dateFilter = 'all';
+                      const selected = parseDate(button.dataset.calendarDate);
+                      if (!selected) return;
+                      state.selectedDate = dateKey(selected);
+                      state.month = new Date(selected.getFullYear(), selected.getMonth(), 1);
+                      render();
+                  }));"""
+              )
+          ]
+
+          for old, new in replacements:
+              if old not in calendar:
+                  raise AssertionError('calendar.js expected anchor not found')
+              calendar = calendar.replace(old, new, 1)
+          calendar_path.write_text(calendar, encoding='utf-8')
+
+          css_path = Path('calendar.css')
+          css = css_path.read_text(encoding='utf-8')
+          old_css = """.calendar-day.blank { background: transparent; cursor: default; }
+          .calendar-day:hover:not(.blank) { border-color: var(--primary-blue); }
+          .calendar-day.today { border-color: var(--bright-red-orange); }
+          .calendar-day.selected { background: var(--primary-blue); border-color: var(--primary-blue); font-weight: bold; }"""
+          new_css = """.calendar-day.blank { background: transparent; cursor: default; }
+          .calendar-day.outside-month {
+              background: #151a26;
+              color: #778195;
+              border-color: rgba(44, 168, 212, .12);
+          }
+          .calendar-day.outside-month .calendar-dot,
+          .calendar-day.outside-month .calendar-count { opacity: .72; }
+          .calendar-day:hover:not(.blank) { border-color: var(--primary-blue); }
+          .calendar-day.outside-month:hover { background: #1b2434; color: #d7deea; }
+          .calendar-day.today { border-color: var(--bright-red-orange); }
+          .calendar-day.selected { background: var(--primary-blue); border-color: var(--primary-blue); font-weight: bold; }
+          .calendar-day.outside-month.selected { color: #fff; }"""
+          if old_css not in css:
+              raise AssertionError('calendar.css expected anchor not found')
+          css_path.write_text(css.replace(old_css, new_css, 1), encoding='utf-8')
 
           files = [
               'app.js', 'calendar.js', 'style.css', 'calendar.css',
