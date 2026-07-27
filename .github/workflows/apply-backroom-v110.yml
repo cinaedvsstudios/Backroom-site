@@ -1,7 +1,7 @@
 name: Apply Backroom v1.10 calendar adjacent days
 
 on:
-  push:
+  pull_request:
     branches: [main]
     paths:
       - backroom-v110-trigger.txt
