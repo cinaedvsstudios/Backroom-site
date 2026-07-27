@@ -1,4 +1,4 @@
-// Backroom Admin core v1.09
+// Backroom Admin core v1.10
 let liveData = [];
 let draftData = [];
 let currentMode = 'venues'; // 'venues', 'events', 'editor', 'avatars'

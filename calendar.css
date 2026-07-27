@@ -1,4 +1,4 @@
-/* Backroom Events calendar — v1.09 */
+/* Backroom Events calendar — v1.10 */
 #calendar-container {
     padding: 0 20px 20px;
 }
@@ -238,9 +238,18 @@
 }
 
 .calendar-day.blank { background: transparent; cursor: default; }
+.calendar-day.outside-month {
+    background: #151a26;
+    color: #778195;
+    border-color: rgba(44, 168, 212, .12);
+}
+.calendar-day.outside-month .calendar-dot,
+.calendar-day.outside-month .calendar-count { opacity: .72; }
 .calendar-day:hover:not(.blank) { border-color: var(--primary-blue); }
+.calendar-day.outside-month:hover { background: #1b2434; color: #d7deea; }
 .calendar-day.today { border-color: var(--bright-red-orange); }
 .calendar-day.selected { background: var(--primary-blue); border-color: var(--primary-blue); font-weight: bold; }
+.calendar-day.outside-month.selected { color: #fff; }
 .calendar-indicators { height: 8px; display: flex; align-items: center; gap: 3px; }
 .calendar-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--bright-red-orange); }
 .calendar-count { font-size: .65rem; color: var(--bright-red-orange); font-weight: bold; }

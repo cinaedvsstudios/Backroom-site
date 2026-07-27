@@ -1,4 +1,4 @@
-// Backroom Events calendar v1.09 — shareable day routes, location pill, filters and event-card rules.
+// Backroom Events calendar v1.10 — shareable day routes, location pill, filters and event-card rules.
 (function () {
     'use strict';
 
@@ -739,16 +739,19 @@
     }
 
     function monthCells() {
-        const first = new Date(state.month.getFullYear(), state.month.getMonth(), 1);
-        const startOffset = (first.getDay() + 6) % 7;
-        const days = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 0).getDate();
-        const cells = Array(startOffset).fill(null);
-        for (let day = 1; day <= days; day += 1) cells.push(new Date(state.month.getFullYear(), state.month.getMonth(), day));
-        while (cells.length % 7) cells.push(null);
-        return cells;
-    }
+    const first = new Date(state.month.getFullYear(), state.month.getMonth(), 1);
+    const startOffset = (first.getDay() + 6) % 7;
+    const gridStart = new Date(first);
+    gridStart.setDate(first.getDate() - startOffset);
 
-    function ensureSelectedDate() {
+    return Array.from({ length: 42 }, (_, index) => {
+        const date = new Date(gridStart);
+        date.setDate(gridStart.getDate() + index);
+        return date;
+    });
+}
+
+function ensureSelectedDate() {
         if (state.dateFilter === 'today' || state.dateFilter === 'week') {
             const today = startOfToday();
             state.month = new Date(today.getFullYear(), today.getMonth(), 1);
@@ -795,11 +798,11 @@
         const today = dateKey(new Date());
         const weekdays = ['M', 'T', 'W', 'T', 'F', 'S', 'S'].map(day => `<div class="calendar-weekday">${day}</div>`).join('');
         const days = monthCells().map(date => {
-            if (!date) return '<div class="calendar-day blank" aria-hidden="true"></div>';
-            const key = dateKey(date);
-            const count = eventsOnDate(key).length;
-            return `<button type="button" class="calendar-day${key === state.selectedDate ? ' selected' : ''}${key === today ? ' today' : ''}${count ? ' has-events' : ''}" data-calendar-date="${key}"><span class="calendar-number">${date.getDate()}</span><span class="calendar-indicators">${count ? `<span class="calendar-dot"></span>${count > 1 ? `<span class="calendar-count">${count}</span>` : ''}` : ''}</span></button>`;
-        }).join('');
+    const key = dateKey(date);
+    const count = eventsOnDate(key).length;
+    const outsideMonth = date.getMonth() !== state.month.getMonth() || date.getFullYear() !== state.month.getFullYear();
+    return `<button type="button" class="calendar-day${outsideMonth ? ' outside-month' : ''}${key === state.selectedDate ? ' selected' : ''}${key === today ? ' today' : ''}${count ? ' has-events' : ''}" data-calendar-date="${key}"><span class="calendar-number">${date.getDate()}</span><span class="calendar-indicators">${count ? `<span class="calendar-dot"></span>${count > 1 ? `<span class="calendar-count">${count}</span>` : ''}` : ''}</span></button>`;
+}).join('');
         return `<div class="calendar-grid">${weekdays}${days}</div>`;
     }
 
@@ -882,10 +885,13 @@
         document.getElementById('calendar-share-day')?.addEventListener('click', shareSelectedCalendarDay);
         document.querySelectorAll('[data-calendar-filter]').forEach(button => button.addEventListener('click', () => activateFilter(button.dataset.calendarFilter)));
         document.querySelectorAll('[data-calendar-date]').forEach(button => button.addEventListener('click', () => {
-            state.dateFilter = 'all';
-            state.selectedDate = button.dataset.calendarDate;
-            render();
-        }));
+    state.dateFilter = 'all';
+    const selected = parseDate(button.dataset.calendarDate);
+    if (!selected) return;
+    state.selectedDate = dateKey(selected);
+    state.month = new Date(selected.getFullYear(), selected.getMonth(), 1);
+    render();
+}));
         document.querySelectorAll('[data-calendar-save]').forEach(button => button.addEventListener('click', () => {
             window.toggleEventFavorite?.(button.dataset.calendarSave, button, false);
             render();
