@@ -16,67 +16,68 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Update homepage metadata
-        shell: python
+        shell: bash
         run: |
+          python - <<'PY'
           from pathlib import Path
 
-          path = Path("index.html")
-          text = path.read_text(encoding="utf-8")
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+          start_marker = '    <title>Backroom - v1.10</title>'
+          next_marker = '    <link rel="preconnect" href="https://fonts.googleapis.com">'
 
-          old = '''    <title>Backroom - v1.10</title>
-    
-    <meta name="description" content="Backroom - The comprehensive local guide to gay venues, cruise clubs, and events.">
-    <meta name="keywords" content="gay guide, cruising, gay clubs, darkroom, fetish, gay events, queer venues">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Backroom - Local Guide">
-    <meta property="og:description" content="The comprehensive local guide to gay venues, cruise clubs, and events.">
-'''
+          if start_marker not in text:
+              raise SystemExit('Expected current Backroom title was not found; index.html was not changed.')
+          if next_marker not in text:
+              raise SystemExit('Expected font preconnect marker was not found; index.html was not changed.')
 
-          new = '''    <title>Backroom | Gay Nightlife, Cruising & Events Guide</title>
-
-    <meta name="description" content="Backroom is a gay nightlife guide for finding gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe.">
-    <meta name="keywords" content="gay nightlife guide, gay bars, gay clubs, gay saunas, cruising venues, darkrooms, fetish venues, gay events, Europe gay travel">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="application-name" content="Backroom">
-    <meta name="author" content="Cinaedvs Studios">
-    <meta name="theme-color" content="#000000">
-
-    <link rel="canonical" href="https://cinaedvsstudios.github.io/Backroom-site/">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
-
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Backroom">
-    <meta property="og:title" content="Backroom | Gay Nightlife, Cruising & Events Guide">
-    <meta property="og:description" content="Find gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe with Backroom.">
-    <meta property="og:url" content="https://cinaedvsstudios.github.io/Backroom-site/">
-    <meta property="og:image" content="https://cinaedvsstudios.github.io/Backroom-site/backdoorlogo.png">
-    <meta property="og:image:alt" content="Backroom gay nightlife guide">
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Backroom | Gay Nightlife, Cruising & Events Guide">
-    <meta name="twitter:description" content="Find gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe with Backroom.">
-    <meta name="twitter:image" content="https://cinaedvsstudios.github.io/Backroom-site/backdoorlogo.png">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Backroom",
-      "alternateName": "Backroom Gay Nightlife Guide",
-      "url": "https://cinaedvsstudios.github.io/Backroom-site/",
-      "description": "A gay nightlife guide for finding gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe.",
-      "inLanguage": "en",
-      "sameAs": [
-        "https://www.instagram.com/the.backroom.guide/"
-      ]
-    }
-    </script>
-'''
-
-          if old not in text:
-              raise SystemExit("Expected existing SEO block was not found; index.html was not changed.")
-
-          path.write_text(text.replace(old, new, 1), encoding="utf-8")
+          new_lines = [
+              '    <title>Backroom | Gay Nightlife, Cruising & Events Guide</title>',
+              '',
+              '    <meta name="description" content="Backroom is a gay nightlife guide for finding gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe.">',
+              '    <meta name="keywords" content="gay nightlife guide, gay bars, gay clubs, gay saunas, cruising venues, darkrooms, fetish venues, gay events, Europe gay travel">',
+              '    <meta name="robots" content="index, follow, max-image-preview:large">',
+              '    <meta name="application-name" content="Backroom">',
+              '    <meta name="author" content="Cinaedvs Studios">',
+              '    <meta name="theme-color" content="#000000">',
+              '',
+              '    <link rel="canonical" href="https://cinaedvsstudios.github.io/Backroom-site/">',
+              '    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">',
+              '',
+              '    <meta property="og:type" content="website">',
+              '    <meta property="og:site_name" content="Backroom">',
+              '    <meta property="og:title" content="Backroom | Gay Nightlife, Cruising & Events Guide">',
+              '    <meta property="og:description" content="Find gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe with Backroom.">',
+              '    <meta property="og:url" content="https://cinaedvsstudios.github.io/Backroom-site/">',
+              '    <meta property="og:image" content="https://cinaedvsstudios.github.io/Backroom-site/backdoorlogo.png">',
+              '    <meta property="og:image:alt" content="Backroom gay nightlife guide">',
+              '',
+              '    <meta name="twitter:card" content="summary">',
+              '    <meta name="twitter:title" content="Backroom | Gay Nightlife, Cruising & Events Guide">',
+              '    <meta name="twitter:description" content="Find gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe with Backroom.">',
+              '    <meta name="twitter:image" content="https://cinaedvsstudios.github.io/Backroom-site/backdoorlogo.png">',
+              '',
+              '    <script type="application/ld+json">',
+              '    {',
+              '      "@context": "https://schema.org",',
+              '      "@type": "WebSite",',
+              '      "name": "Backroom",',
+              '      "alternateName": "Backroom Gay Nightlife Guide",',
+              '      "url": "https://cinaedvsstudios.github.io/Backroom-site/",',
+              '      "description": "A gay nightlife guide for finding gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe.",',
+              '      "inLanguage": "en",',
+              '      "sameAs": [',
+              '        "https://www.instagram.com/the.backroom.guide/"',
+              '      ]',
+              '    }',
+              '    </script>',
+              ''
+          ]
+          new_block = '\n'.join(new_lines) + '\n'
+          start = text.index(start_marker)
+          end = text.index(next_marker)
+          path.write_text(text[:start] + new_block + text[end:], encoding='utf-8')
+          PY
 
       - name: Commit SEO metadata
         shell: bash
