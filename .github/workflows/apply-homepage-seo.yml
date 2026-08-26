@@ -12,26 +12,34 @@ jobs:
   apply-seo:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - name: Patch index metadata through GitHub API
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const path = 'index.html';
+            const response = await github.rest.repos.getContent({ owner, repo, path, ref: 'main' });
+            const file = response.data;
+            if (Array.isArray(file) || !file.content || !file.sha) {
+              core.setFailed('Could not read index.html as a file.');
+              return;
+            }
 
-      - name: Update homepage metadata
-        shell: bash
-        run: |
-          python - <<'PY'
-          from pathlib import Path
+            const text = Buffer.from(file.content, 'base64').toString('utf8');
+            const startMarker = '    <title>Backroom - v1.10</title>';
+            const nextMarker = '    <link rel="preconnect" href="https://fonts.googleapis.com">';
 
-          path = Path('index.html')
-          text = path.read_text(encoding='utf-8')
-          start_marker = '    <title>Backroom - v1.10</title>'
-          next_marker = '    <link rel="preconnect" href="https://fonts.googleapis.com">'
+            if (!text.includes(startMarker)) {
+              core.info('SEO title is already updated or the file has changed; nothing to do.');
+              return;
+            }
+            if (!text.includes(nextMarker)) {
+              core.setFailed('Expected font preconnect marker was not found.');
+              return;
+            }
 
-          if start_marker not in text:
-              raise SystemExit('Expected current Backroom title was not found; index.html was not changed.')
-          if next_marker not in text:
-              raise SystemExit('Expected font preconnect marker was not found; index.html was not changed.')
-
-          new_lines = [
+            const newLines = [
               '    <title>Backroom | Gay Nightlife, Cruising & Events Guide</title>',
               '',
               '    <meta name="description" content="Backroom is a gay nightlife guide for finding gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe.">',
@@ -72,22 +80,18 @@ jobs:
               '    }',
               '    </script>',
               ''
-          ]
-          new_block = '\n'.join(new_lines) + '\n'
-          start = text.index(start_marker)
-          end = text.index(next_marker)
-          path.write_text(text[:start] + new_block + text[end:], encoding='utf-8')
-          PY
+            ];
 
-      - name: Commit SEO metadata
-        shell: bash
-        run: |
-          if git diff --quiet -- index.html; then
-            echo "No index.html change needed."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git commit -m "Improve Backroom homepage SEO metadata"
-          git push
+            const start = text.indexOf(startMarker);
+            const end = text.indexOf(nextMarker);
+            const updated = text.slice(0, start) + newLines.join('\n') + '\n' + text.slice(end);
+
+            await github.rest.repos.createOrUpdateFileContents({
+              owner,
+              repo,
+              path,
+              message: 'Improve Backroom homepage SEO metadata',
+              content: Buffer.from(updated, 'utf8').toString('base64'),
+              sha: file.sha,
+              branch: 'main'
+            });
