@@ -1,0 +1,120 @@
+name: Build Featured page
+
+on:
+  push:
+    paths:
+      - '.github/workflows/build-featured-page.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-featured:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build standalone Featured page
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          index_path = Path('index.html')
+          featured_path = Path('featured.html')
+          sitemap_path = Path('sitemap.xml')
+          about_path = Path('about.html')
+
+          page = index_path.read_text(encoding='utf-8')
+
+          replacements = {
+              '<title>Backroom | Gay Nightlife, Cruising & Events Guide</title>': '<title>Featured Gay Venues in Europe | Backroom</title>',
+              '<meta name="description" content="Backroom is a gay nightlife guide for finding gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe.">': '<meta name="description" content="Explore Backroom’s featured gay venues across Europe, including gay bars, clubs, saunas, cruising venues, darkrooms and fetish nightlife picks.">',
+              '<link rel="canonical" href="https://cinaedvsstudios.github.io/Backroom-site/">': '<link rel="canonical" href="https://cinaedvsstudios.github.io/Backroom-site/featured.html">',
+              '<meta property="og:title" content="Backroom | Gay Nightlife, Cruising & Events Guide">': '<meta property="og:title" content="Featured Gay Venues in Europe | Backroom">',
+              '<meta property="og:description" content="Find gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe with Backroom.">': '<meta property="og:description" content="Browse Backroom’s featured gay bars, clubs, saunas, cruising venues, darkrooms and fetish nightlife picks across Europe.">',
+              '<meta property="og:url" content="https://cinaedvsstudios.github.io/Backroom-site/">': '<meta property="og:url" content="https://cinaedvsstudios.github.io/Backroom-site/featured.html">',
+              '<meta name="twitter:title" content="Backroom | Gay Nightlife, Cruising & Events Guide">': '<meta name="twitter:title" content="Featured Gay Venues in Europe | Backroom">',
+              '<meta name="twitter:description" content="Find gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe with Backroom.">': '<meta name="twitter:description" content="Browse Backroom’s featured gay bars, clubs, saunas, cruising venues, darkrooms and fetish nightlife picks across Europe.">',
+          }
+
+          for old, new in replacements.items():
+              if old not in page:
+                  raise SystemExit(f'Missing expected Featured replacement target: {old[:80]}')
+              page = page.replace(old, new, 1)
+
+          collection_json = '''    <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Featured Gay Venues in Europe | Backroom",
+            "url": "https://cinaedvsstudios.github.io/Backroom-site/featured.html",
+            "description": "Backroom's featured gay nightlife venues across Europe, including gay bars, clubs, saunas, cruising venues, darkrooms and fetish venues.",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "Backroom",
+              "url": "https://cinaedvsstudios.github.io/Backroom-site/"
+            },
+            "inLanguage": "en"
+          }
+          </script>'''
+
+          page, count = re.subn(
+              r'    <script type="application/ld\+json">.*?</script>',
+              collection_json,
+              page,
+              count=1,
+              flags=re.S,
+          )
+          if count != 1:
+              raise SystemExit('Could not replace homepage JSON-LD in Featured page')
+
+          intro_old = '<p class="body-font">Page content under construction.</p>'
+          intro_new = '<p class="body-font">Below are some of our favourite venues that we know you will love, visit if you are nearby or plan a trip soon!</p>'
+          marker = 'id="featured-container"'
+          marker_pos = page.find(marker)
+          if marker_pos == -1:
+              raise SystemExit('Featured container not found')
+          intro_pos = page.find(intro_old, marker_pos)
+          if intro_pos == -1:
+              raise SystemExit('Featured placeholder text not found')
+          page = page[:intro_pos] + intro_new + page[intro_pos + len(intro_old):]
+
+          bootstrap = '''    <script>
+          // Standalone SEO entry point: use the normal Backroom app and open the live Featured route.
+          if (!window.location.hash) {
+              window.history.replaceState(null, '', window.location.pathname + '#featured');
+          }
+          </script>
+          '''
+          if '</head>' not in page:
+              raise SystemExit('Head closing tag not found')
+          page = page.replace('</head>', bootstrap + '</head>', 1)
+
+          featured_path.write_text(page, encoding='utf-8')
+
+          sitemap = sitemap_path.read_text(encoding='utf-8')
+          featured_url = 'https://cinaedvsstudios.github.io/Backroom-site/featured.html'
+          if featured_url not in sitemap:
+              block = '''  <url>
+              <loc>https://cinaedvsstudios.github.io/Backroom-site/featured.html</loc>
+              <lastmod>2026-08-31</lastmod>
+            </url>
+          '''
+              sitemap = sitemap.replace('</urlset>', block + '</urlset>')
+              sitemap_path.write_text(sitemap, encoding='utf-8')
+
+          about = about_path.read_text(encoding='utf-8')
+          about = about.replace('href="./#featured">Featured</a>', 'href="featured.html">Featured</a>')
+          about_path.write_text(about, encoding='utf-8')
+          PY
+
+      - name: Commit generated Featured page
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add featured.html sitemap.xml about.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Add standalone Featured page"
+            git push
+          fi
