@@ -1,15 +1,14 @@
-// Backroom event detail routes and modal layer v1.12
+// Backroom event detail routes and modal layer v1.13
 (function () {
   'use strict';
 
   if (window.__backroomEventDetailLoaded) return;
   window.__backroomEventDetailLoaded = true;
 
-  const EVENT_DETAIL_VERSION = 'v1.12';
+  const EVENT_DETAIL_VERSION = 'v1.13';
   const DEFAULT_RETURN_HASH = '#calendar';
   const BACKROOM_ICON_URL = 'https://raw.githubusercontent.com/cinaedvsstudios/Backroom-site/refs/heads/main/backdoorlogo.png';
   let eventReturnHash = DEFAULT_RETURN_HASH;
-  let currentEventId = '';
   let originalHandleRouting = null;
 
   const clean = value => String(value ?? '').trim().replace(/\s+/g, ' ');
@@ -40,7 +39,9 @@
   function formatDescription(value) {
     const text = String(value || '').trim();
     if (!text) return '';
-    if (typeof formatAboutText === 'function') return formatAboutText(text);
+    try {
+      if (typeof formatAboutText === 'function') return formatAboutText(text);
+    } catch (_) {}
     return text
       .replace(/\r\n?/g, '\n')
       .split(/\n{2,}/)
@@ -82,7 +83,7 @@
     try {
       if (typeof getEventTags === 'function') return getEventTags(event, venue);
     } catch (_) {}
-    return splitTags(event?.Vibe_Tags);
+    return [...new Set([...splitTags(event?.Vibe_Tags), ...splitTags(venue?.Vibe_Tags)])];
   }
 
   function venueTags(venue) {
@@ -101,24 +102,39 @@
     return list.map(tag => `<span class="tag-pill" style="${extraStyle}">${escapeHTML(tag)}</span>`).join('');
   }
 
-  function getEventDate(event) {
-    try {
-      if (typeof getEventDisplayDate === 'function') return getEventDisplayDate(event);
-    } catch (_) {}
+  function rawEventDate(event) {
     return clean(event?.Display_Date || event?.Event_Date || event?.Date);
+  }
+
+  function parseEventDate(event) {
+    const raw = rawEventDate(event);
+    const match = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!match) return null;
+    const parsed = new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]), 12, 0, 0);
+    if (Number.isNaN(parsed.getTime())) return null;
+    return parsed;
+  }
+
+  function getEventDate(event) {
+    const parsed = parseEventDate(event);
+    if (!parsed) return rawEventDate(event);
+    return parsed.toLocaleDateString('en-GB', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    }).replace(',', '').toUpperCase();
+  }
+
+  function getEventWeekday(event) {
+    const parsed = parseEventDate(event);
+    if (!parsed) return '';
+    return parsed.toLocaleDateString('en-GB', { weekday: 'long' }).toUpperCase();
   }
 
   function getEventTime(event) {
     const start = clean(event?.Event_Start_Time || event?.Start_Time || event?.Start);
     const end = clean(event?.Event_End_Time || event?.End_Time || event?.End);
     return [start, end].filter(Boolean).join(start && end ? ' – ' : '');
-  }
-
-  function getEventMeta(event) {
-    try {
-      if (typeof getEventDisplayMeta === 'function') return getEventDisplayMeta(event);
-    } catch (_) {}
-    return [getEventDate(event), getEventTime(event)].filter(Boolean).join(' · ');
   }
 
   function getEventImage(event, venue) {
@@ -172,8 +188,15 @@
     return `<div class="event-detail-info-row ${extraClass}"><span>${escapeHTML(label)}</span><strong>${linkifyText(text)}</strong></div>`;
   }
 
+  function firstUrl(value) {
+    const text = clean(value);
+    if (!text) return '';
+    const match = text.match(/https?:\/\/[^\s|,]+/i);
+    return match ? match[0] : text.split('|')[0].trim();
+  }
+
   function buttonLink(label, url, className = 'secondary-btn') {
-    const href = clean(url);
+    const href = firstUrl(url);
     if (!href) return '';
     return `<a class="btn ${className} pill-btn event-detail-link-btn" href="${escapeHTML(href)}" target="_blank" rel="noopener noreferrer">${label}</a>`;
   }
@@ -188,14 +211,8 @@
     const appleUrl = clean(venue.Apple_Maps_URL);
     const googleUrl = clean(venue.Google_Maps_URL);
 
-    if (isIOS && appleUrl) {
-      window.open(appleUrl, '_blank');
-      return;
-    }
-    if (!isIOS && googleUrl) {
-      window.open(googleUrl, '_blank');
-      return;
-    }
+    if (isIOS && appleUrl) return window.open(appleUrl, '_blank');
+    if (!isIOS && googleUrl) return window.open(googleUrl, '_blank');
 
     const query = clean(venue.Native_Map_Query || venue.Address || venue.Name);
     if (!query) return;
@@ -219,8 +236,8 @@
             <button id="event-modal-shortlist" class="icon-btn tooltip" type="button" title="Add Event to Shortlist"><img src="shortlist.png" alt="" aria-hidden="true"></button>
             <button id="event-modal-share" class="icon-btn tooltip" type="button" title="Share Event">📣</button>
             <button id="event-modal-report" class="icon-btn tooltip" type="button" title="Report Event"><img src="report.png" alt="" aria-hidden="true"></button>
+            <button id="close-event-modal" class="icon-btn tooltip event-modal-close-btn" type="button" title="Close">❌</button>
           </div>
-          <button id="close-event-modal" class="btn-close" type="button">❌</button>
         </div>
         <div class="modal-body body-font">
           <div id="event-modal-dynamic-layout"></div>
@@ -286,6 +303,7 @@
     const tags = eventTags(event, venue);
     const status = clean(event.Status || 'Live');
     const recurrence = clean(event.Recurrence_Label || event.Recurrence_Type || event.Recurrence_Day);
+    const weekday = getEventWeekday(event);
     const location = [venue?.Name || event.Venue_Name || event.Venue, venue?.City || event.City, venue?.Country || event.Country]
       .filter(Boolean)
       .join(' · ');
@@ -304,6 +322,8 @@
             <div class="event-detail-status ${eventStatusClass(event)}">${escapeHTML(status)}</div>
             <h3 class="display-font">${escapeHTML(event.Event_Name || 'Event')}</h3>
             ${location ? `<p class="event-detail-location">${escapeHTML(location)}</p>` : ''}
+            ${tags.length ? `<div class="feature-chips event-detail-tags">${renderPills(tags, 'font-size:0.76rem; padding:4px 9px;')}</div>` : ''}
+            ${weekday ? `<div class="event-detail-weekday">${escapeHTML(weekday)}</div>` : ''}
             <div class="event-detail-info-grid">
               ${infoRow('Date', getEventDate(event))}
               ${infoRow('Time', getEventTime(event))}
@@ -314,9 +334,8 @@
             </div>
             <div class="event-detail-action-row">
               ${buttonLink('🎟️ Tickets / Info', ticketUrl, 'primary-btn')}
-              ${buttonLink('Source', sourceUrls)}
+              ${buttonLink('Website', sourceUrls)}
             </div>
-            ${tags.length ? `<div class="feature-chips event-detail-tags">${renderPills(tags, 'font-size:0.76rem; padding:4px 9px;')}</div>` : ''}
             ${lastUpdated ? `<p class="event-detail-updated">⌛ Last updated: ${escapeHTML(lastUpdated)}</p>` : ''}
           </div>
         </section>
@@ -329,9 +348,7 @@
     const button = document.getElementById('event-modal-save');
     if (!button) return;
     let saved = false;
-    try {
-      saved = Array.isArray(userEvents) && userEvents.includes(event.Event_ID);
-    } catch (_) {}
+    try { saved = Array.isArray(userEvents) && userEvents.includes(event.Event_ID); } catch (_) {}
     button.className = `icon-btn tooltip fav-btn ${saved ? 'active-star' : ''}`;
     button.title = saved ? 'Remove from My Events' : 'Save Event';
     button.textContent = '💖';
@@ -341,9 +358,7 @@
     const button = document.getElementById('event-modal-shortlist');
     if (!button) return;
     let inAny = false;
-    try {
-      inAny = typeof hasItemInAnyShortlist === 'function' && hasItemInAnyShortlist('event', event.Event_ID);
-    } catch (_) {}
+    try { inAny = typeof hasItemInAnyShortlist === 'function' && hasItemInAnyShortlist('event', event.Event_ID); } catch (_) {}
     button.className = `icon-btn tooltip fav-btn ${inAny ? 'active-star' : ''}`;
     button.title = inAny ? 'Add Event to another Shortlist' : 'Add Event to Shortlist';
     button.innerHTML = '<img src="shortlist.png" alt="" aria-hidden="true">';
@@ -371,9 +386,7 @@
     };
 
     const reportButton = document.getElementById('event-modal-report');
-    if (reportButton) reportButton.onclick = () => {
-      window.flagListing?.(event.Event_ID, event.Event_Name || 'Event', 'Event Report');
-    };
+    if (reportButton) reportButton.onclick = () => window.flagListing?.(event.Event_ID, event.Event_Name || 'Event', 'Event Report');
 
     document.getElementById('event-open-full-venue')?.addEventListener('click', () => {
       if (!venue?.Venue_ID) return;
@@ -401,7 +414,6 @@
     const body = document.getElementById('event-modal-dynamic-layout');
     if (!body) return false;
 
-    currentEventId = clean(event.Event_ID);
     eventReturnHash = options.returnHash || eventReturnHash || DEFAULT_RETURN_HASH;
 
     document.querySelectorAll('.modal').forEach(other => {
@@ -538,7 +550,8 @@
             const fixed = String(message ?? '')
               .replace(/Backroom\s+v1\.09/g, `Backroom ${EVENT_DETAIL_VERSION}`)
               .replace(/Backroom\s+v1\.10/g, `Backroom ${EVENT_DETAIL_VERSION}`)
-              .replace(/Backroom\s+v1\.11/g, `Backroom ${EVENT_DETAIL_VERSION}`);
+              .replace(/Backroom\s+v1\.11/g, `Backroom ${EVENT_DETAIL_VERSION}`)
+              .replace(/Backroom\s+v1\.12/g, `Backroom ${EVENT_DETAIL_VERSION}`);
             return original.call(this, fixed, ...rest);
           };
           wrapped.__backroomVersionWrapped = true;
@@ -594,9 +607,7 @@
     if (!id) return;
     eventReturnHash = options.returnHash || getCurrentEventReturnHash();
     const target = `#event=${encodeURIComponent(id)}`;
-    if (window.location.hash !== target) {
-      history.pushState({ backroomEvent: id }, '', target);
-    }
+    if (window.location.hash !== target) history.pushState({ backroomEvent: id }, '', target);
     openEventFromRoute();
   };
 
