@@ -1,0 +1,50 @@
+name: Link standalone About page
+
+on:
+  push:
+    paths:
+      - '.github/workflows/link-standalone-about.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-about-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Point About controls to standalone page
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          old_sidebar = '''<div class="sidebar-item tooltip" title="About" onclick="window.location.hash='#about';"><span class="icon">ℹ️</span><span class="sidebar-text display-font">About</span></div>'''
+          new_sidebar = '''<a href="about.html" class="sidebar-item tooltip" title="About" style="text-decoration:none;"><span class="icon">ℹ️</span><span class="sidebar-text display-font">About</span></a>'''
+
+          old_settings = '''<button class="btn secondary-btn pill-btn" onclick="document.getElementById('settings-modal').classList.add('hidden'); window.location.hash='#about';">ℹ️ Open About Page</button>'''
+          new_settings = '''<a class="btn secondary-btn pill-btn" href="about.html" style="text-align:center; text-decoration:none;">ℹ️ Open About Page</a>'''
+
+          if old_sidebar not in text:
+              raise SystemExit('Expected sidebar About control not found; refusing unsafe edit.')
+          if old_settings not in text:
+              raise SystemExit('Expected settings About control not found; refusing unsafe edit.')
+
+          text = text.replace(old_sidebar, new_sidebar, 1)
+          text = text.replace(old_settings, new_settings, 1)
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Link app About controls to standalone page"
+          git push
