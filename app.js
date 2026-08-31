@@ -1,4 +1,4 @@
-const BACKROOM_VERSION = 'v1.11';
+const BACKROOM_VERSION = 'v1.12';
 const BACKROOM_EMBEDDED_HASHES = new Set(['#heatmap', '#travel']);
 const BACKROOM_INITIAL_EMBEDDED_HASH = BACKROOM_EMBEDDED_HASHES.has(window.location.hash) ? window.location.hash : '';
 
@@ -6,9 +6,9 @@ if (BACKROOM_INITIAL_EMBEDDED_HASH) {
   history.replaceState(history.state, '', `${window.location.pathname}${window.location.search}`);
 }
 
-document.write('<link rel="stylesheet" href="event-detail.css?v=1.11">');
+document.write('<link rel="stylesheet" href="event-detail.css?v=1.12">');
 document.write('<script src="app-core.js?v=1.10"><\/script>');
-document.write('<script src="event-detail.js?v=1.11"><\/script>');
+document.write('<script src="event-detail.js?v=1.12"><\/script>');
 
 (() => {
   'use strict';
