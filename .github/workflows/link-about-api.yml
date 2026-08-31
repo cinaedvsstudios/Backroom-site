@@ -1,0 +1,72 @@
+name: Link About page via API
+
+on:
+  push:
+    paths:
+      - '.github/workflows/link-about-api.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update About links through GitHub API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import base64, json, os, urllib.request
+
+          token = os.environ['GH_TOKEN']
+          repo = os.environ['REPO']
+          api = f'https://api.github.com/repos/{repo}/contents/index.html'
+          headers = {
+              'Authorization': f'Bearer {token}',
+              'Accept': 'application/vnd.github+json',
+              'X-GitHub-Api-Version': '2022-11-28',
+              'User-Agent': 'backroom-about-link-update'
+          }
+
+          req = urllib.request.Request(api, headers=headers)
+          with urllib.request.urlopen(req) as response:
+              data = json.load(response)
+
+          text = base64.b64decode(data['content']).decode('utf-8')
+
+          old_sidebar = '''<div class="sidebar-item tooltip" title="About" onclick="window.location.hash='#about';"><span class="icon">ℹ️</span><span class="sidebar-text display-font">About</span></div>'''
+          new_sidebar = '''<a href="about.html" class="sidebar-item tooltip" title="About" style="text-decoration:none;"><span class="icon">ℹ️</span><span class="sidebar-text display-font">About</span></a>'''
+
+          old_settings = '''<button class="btn secondary-btn pill-btn" onclick="document.getElementById('settings-modal').classList.add('hidden'); window.location.hash='#about';">ℹ️ Open About Page</button>'''
+          new_settings = '''<a class="btn secondary-btn pill-btn" href="about.html" style="text-align:center; text-decoration:none;">ℹ️ Open About Page</a>'''
+
+          changed = False
+          if old_sidebar in text:
+              text = text.replace(old_sidebar, new_sidebar, 1)
+              changed = True
+          elif new_sidebar not in text:
+              raise SystemExit('Expected sidebar About control not found.')
+
+          if old_settings in text:
+              text = text.replace(old_settings, new_settings, 1)
+              changed = True
+          elif new_settings not in text:
+              raise SystemExit('Expected settings About control not found.')
+
+          if not changed:
+              print('About links already updated.')
+              raise SystemExit(0)
+
+          payload = json.dumps({
+              'message': 'Link app About controls to standalone page',
+              'content': base64.b64encode(text.encode('utf-8')).decode('ascii'),
+              'sha': data['sha']
+          }).encode('utf-8')
+
+          put = urllib.request.Request(api, data=payload, headers={**headers, 'Content-Type': 'application/json'}, method='PUT')
+          with urllib.request.urlopen(put) as response:
+              result = json.load(response)
+              print(result['commit']['sha'])
+          PY
