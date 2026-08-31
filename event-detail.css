@@ -30,14 +30,20 @@
   flex-wrap: nowrap !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 10px !important;
+  gap: 8px !important;
   flex: 0 0 auto !important;
   width: auto !important;
   min-width: max-content !important;
+  margin-right: 0 !important;
+  padding: 6px 10px !important;
+  border-radius: 999px !important;
+  background: var(--panel-dark, #1F2535) !important;
+  border: 1px solid var(--panel-mid, #313748) !important;
 }
 
 .event-modal-actions .icon-btn,
 #close-event-modal {
+  position: static !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -47,6 +53,14 @@
   height: 34px !important;
   line-height: 1 !important;
   padding: 0 !important;
+  border-radius: 50% !important;
+  font-size: 1.22rem !important;
+  background: rgba(255,255,255,0.04) !important;
+}
+
+.event-modal-actions .icon-btn:hover,
+#close-event-modal:hover {
+  background: rgba(44, 168, 212, 0.18) !important;
 }
 
 .event-modal-actions img {
@@ -159,12 +173,27 @@
   border-color: var(--dark-red, #871300);
 }
 
-.event-detail-info-grid {
+.event-detail-tags {
+  order: 3;
+  margin: 0 0 10px;
+}
+
+.event-detail-weekday {
   order: 4;
+  color: var(--bright-red-orange, #D55036);
+  font-family: 'Antonio', sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 2px 0 8px;
+}
+
+.event-detail-info-grid {
+  order: 5;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
-  margin: 12px 0;
+  margin: 0 0 12px;
 }
 
 .event-detail-info-row {
@@ -198,7 +227,7 @@
 }
 
 .event-detail-action-row {
-  order: 5;
+  order: 6;
 }
 
 .event-detail-link-btn {
@@ -207,18 +236,12 @@
   text-decoration: none;
 }
 
-.event-detail-tags,
 .event-venue-tags {
   margin-top: 10px;
 }
 
-.event-detail-tags {
-  order: 3;
-  margin: 0 0 2px;
-}
-
 .event-detail-updated {
-  order: 6;
+  order: 7;
 }
 
 .event-detail-description {
@@ -303,8 +326,8 @@
   }
 
   .event-modal-actions {
-    gap: 7px !important;
-    padding: 5px 8px !important;
+    gap: 6px !important;
+    padding: 5px 7px !important;
     margin-right: 0 !important;
   }
 
@@ -313,6 +336,7 @@
     width: 30px !important;
     min-width: 30px !important;
     height: 30px !important;
+    font-size: 1.05rem !important;
   }
 
   .event-detail-top,
