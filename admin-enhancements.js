@@ -1,5 +1,6 @@
-/* Backroom Admin v1.10 enhancements loader and live coverage statistics. */
+/* Backroom Admin v1.11 enhancements loader and live coverage statistics. */
 document.write('<script src="admin-enhancements-core.js?v=1.09"><\/script>');
+document.write('<script src="admin-location-json.js?v=1.11"><\/script>');
 
 (() => {
     'use strict';
