@@ -284,7 +284,6 @@ document.write('<script src="app-core.js?v=1.10"><\/script>');
   }
 
   function installVersion() {
-    document.title = `Backroom - ${BACKROOM_VERSION}`;
     const update = () => {
       const element = document.getElementById('sidebar-version-display');
       if (element && element.textContent !== BACKROOM_VERSION) element.textContent = BACKROOM_VERSION;
