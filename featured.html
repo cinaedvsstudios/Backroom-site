@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Featured Gay Venues in Europe | Backroom</title>
+
+    <meta name="description" content="Explore Backroom’s featured gay venues across Europe, including gay bars, clubs, saunas, cruising venues, darkrooms and fetish nightlife picks.">
+    <meta name="keywords" content="gay nightlife guide, gay bars, gay clubs, gay saunas, cruising venues, darkrooms, fetish venues, gay events, Europe gay travel">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="application-name" content="Backroom">
+    <meta name="author" content="Cinaedvs Studios">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="canonical" href="https://cinaedvsstudios.github.io/Backroom-site/featured.html">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Backroom">
+    <meta property="og:title" content="Featured Gay Venues in Europe | Backroom">
+    <meta property="og:description" content="Browse Backroom’s featured gay bars, clubs, saunas, cruising venues, darkrooms and fetish nightlife picks across Europe.">
+    <meta property="og:url" content="https://cinaedvsstudios.github.io/Backroom-site/featured.html">
+    <meta property="og:image" content="https://cinaedvsstudios.github.io/Backroom-site/backdoorlogo.png">
+    <meta property="og:image:alt" content="Backroom gay nightlife guide">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Featured Gay Venues in Europe | Backroom">
+    <meta name="twitter:description" content="Browse Backroom’s featured gay bars, clubs, saunas, cruising venues, darkrooms and fetish nightlife picks across Europe.">
+    <meta name="twitter:image" content="https://cinaedvsstudios.github.io/Backroom-site/backdoorlogo.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Featured Gay Venues in Europe | Backroom",
+  "url": "https://cinaedvsstudios.github.io/Backroom-site/featured.html",
+  "description": "Backroom's featured gay nightlife venues across Europe, including gay bars, clubs, saunas, cruising venues, darkrooms and fetish venues.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Backroom",
+    "url": "https://cinaedvsstudios.github.io/Backroom-site/"
+  },
+  "inLanguage": "en"
+}
+</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Barlow+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="style.css?v=1.10">
+    <link rel="stylesheet" href="calendar.css?v=1.10">
+    <script>
+// Standalone SEO entry point: use the normal Backroom app and open the live Featured route.
+if (!window.location.hash) {
+    window.history.replaceState(null, '', window.location.pathname + '#featured');
+}
+</script>
+</head>
+<body>
+
+    <div id="toast-container" class="toast-container hidden"></div>
+
+    <div id="profile-wipe-toast" class="modal hidden" style="z-index: 3000;">
+        <div class="toast show" style="position:relative; transform:none; bottom:auto; left:auto; margin: auto; max-width: 450px; display:flex; flex-direction:column; gap:15px; padding: 25px; border-radius: 12px;">
+            <h3 class="display-font" style="font-size:1.8rem; margin:0; color:#fff;">NEW PROFILE</h3>
+            <p class="body-font" style="font-size:1.1rem; margin:0; color:#fff;">
+                You are creating a new profile. This will not erase your previous profile data. How would you like to start?
+            </p>
+            <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
+                <button id="btn-wipe-all" class="btn pill-btn secondary-btn" style="font-weight:bold;">Make a new blank profile</button>
+                <button id="btn-wipe-profile-only" class="btn primary-btn pill-btn" style="border:1px solid #fff;">Make a copy of this profile</button>
+                <button onclick="document.getElementById('profile-wipe-toast').classList.add('hidden')" class="btn pill-btn" style="background:transparent; border:1px solid rgba(255,255,255,0.5); color:#fff;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="delete-profile-modal" class="modal hidden" style="z-index: 3500;">
+        <div class="modal-content small-modal" style="background: var(--panel-dark); border: 2px solid var(--bright-red-orange);">
+            <div class="modal-header"><h2 class="display-font" style="color:var(--bright-red-orange);">WARNING</h2></div>
+            <div class="modal-body body-font">
+                <p style="margin-bottom:15px; color:#fff;">Are you sure you want to delete this profile? You will lose all saved venues and events associated with it.</p>
+                <div style="display:flex; flex-direction:column; gap:10px;">
+                    <button id="btn-confirm-delete-profile" class="btn pill-btn" style="background: var(--dark-red); color: #fff; font-weight: bold;">Yes, Delete Profile</button>
+                    <button id="btn-cancel-delete-profile" class="btn secondary-btn pill-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="age-gate" class="fullscreen-overlay">
+        <div class="age-gate-content">
+            <div class="age-gate-logo-area" style="margin-bottom: 25px;">
+                <img src="https://raw.githubusercontent.com/cinaedvsstudios/Backroom-site/refs/heads/main/backdoorlogo.png" alt="Backroom Logo" style="height: 75px; vertical-align: middle; margin-right: 10px;">
+                <img src="backdoortitle.png" alt="Backroom Title" style="height: 65px; vertical-align: middle;" onerror="this.style.display='none';">
+            </div>
+            <h1 id="ag-title" class="display-font">18+ ENTRY</h1>
+            <p id="ag-text" class="body-font disclaimer-white">Loading...</p>
+            <p id="ag-disclaimer" class="body-font disclaimer">Loading...</p>
+            <div class="ag-controls">
+                <button id="btn-enter" class="btn primary-btn pill-btn display-font">I AM 18+ - ENTER</button>
+                <div class="translation-placeholder body-font" id="btn-ag-lang" style="cursor:pointer; display:flex; align-items:center; justify-content:center; gap:5px;">
+                    <img src="translate.png" style="width:16px;"> Translate [Placeholder]
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="error-panel" class="fullscreen-overlay hidden">
+        <div class="age-gate-content">
+            <h1 class="display-font" style="color: var(--bright-red-orange);">SYSTEM ERROR</h1>
+            <p id="error-text" class="body-font disclaimer-white">Failed to load core system files due to local browser restrictions (CORS).</p>
+            <div id="bypass-container" style="margin-top: 15px;"></div>
+        </div>
+    </div>
+
+    <div id="app-shell" class="hidden">
+        <header id="top-bar">
+            <div class="top-bar-left">
+                <div class="top-bar-logo-area">
+                    <img src="https://raw.githubusercontent.com/cinaedvsstudios/Backroom-site/refs/heads/main/backdoorlogo.png" alt="Backroom Logo" class="brand-image" style="cursor:pointer;" onclick="window.open('https://www.instagram.com/the.backroom.guide/', '_blank'); event.stopPropagation();" title="Visit our Instagram">
+                    <img src="backdoortitle.png" alt="Backroom Title" class="brand-title-image" style="cursor:pointer;" onclick="window.location.hash='';" onerror="this.style.display='none';">
+                </div>
+            </div>
+
+            <div class="top-bar-center">
+                <div class="search-wrapper">
+                    <input type="text" id="search-input" class="body-font pill-input" placeholder="search name or description" autocomplete="off" autocorrect="off">
+                    <button id="search-clear" class="search-clear hidden" type="button" aria-label="Clear search">✕</button>
+                </div>
+                <div class="nav-buttons-wrapper">
+                    <button id="btn-location" class="top-btn pill-btn tooltip" title="Set Location"><img src="location.png" style="width:16px; vertical-align:middle;"> <span class="btn-text"> Location</span></button>
+                    <button id="btn-favorites" class="top-btn pill-btn tooltip" title="My Favourites"><span class="btn-icon">⚜️</span><span class="btn-text"> Favourites</span></button>
+                    <button id="btn-top-my-events" class="top-btn pill-btn tooltip" title="My Events" onclick="window.location.hash='#myevents';"><span class="btn-icon">💖</span><span class="btn-text"> My Events</span></button>
+                    <button id="btn-shortlists-menu" class="top-btn pill-btn tooltip" title="My Shortlists"><img src="shortlist.png" style="width:16px; vertical-align:middle;"> <span class="btn-text"> Shortlists</span></button>
+                </div>
+            </div>
+
+            <div class="top-bar-right">
+                <button id="btn-profile-menu" class="top-btn pill-btn profile-btn-wrap tooltip" title="My Profile">
+                    <div id="top-profile-container" class="avatar-crop-container"><img id="top-profile-avatar" src=""></div>
+                    <span id="top-profile-name" style="font-weight:bold;">👤</span>
+                </button>
+                <button id="btn-language" class="top-btn icon-only pill-btn tooltip" title="Language"><img src="translate.png" style="width:20px;"></button>
+                <button id="btn-settings" class="top-btn icon-only pill-btn tooltip" title="Settings">⚙️</button>
+            </div>
+        </header>
+
+        <div id="workspace">
+            <div id="sidebar-hit-area"></div>
+            <aside id="sidebar">
+                <div class="sidebar-menu">
+                    <div class="sidebar-item tooltip" title="Home" onclick="window.location.hash='';"><span class="icon">🏠</span><span class="sidebar-text display-font">Home</span></div>
+                    <div class="sidebar-item tooltip" id="btn-sidebar-search-results" title="Search Results" onclick="window.location.hash='#results';"><span class="icon">🔍</span><span class="sidebar-text display-font">Search Results</span></div>
+                    <div class="sidebar-item tooltip" id="btn-sidebar-venues" title="Venues in saved city" onclick="window.location.hash='#venues';"><span class="icon">🏢</span><span class="sidebar-text display-font">Venues</span></div>
+                    <div class="sidebar-item tooltip" id="btn-sidebar-events" title="Events" onclick="window.openCalendarScreen();"><span class="icon">📅</span><span class="sidebar-text display-font">Events</span></div>
+                    <div class="sidebar-item tooltip" title="Featured" onclick="window.location.hash='#featured';"><span class="icon">🏛️</span><span class="sidebar-text display-font">Featured</span></div>
+                    <div class="sidebar-item tooltip" title="Cruising Guide" onclick="window.location.hash='#cruising-guide';"><span class="icon">🔥</span><span class="sidebar-text display-font">Cruising Guide</span></div>
+                    <a href="about.html" class="sidebar-item tooltip" title="About" style="text-decoration:none;"><span class="icon">ℹ️</span><span class="sidebar-text display-font">About</span></a>
+                    <div class="sidebar-item tooltip" title="Contact" onclick="window.flagListing('N/A', 'General Message', 'General Support')"><span class="icon">✉️</span><span class="sidebar-text display-font">Contact</span></div>
+                </div>
+                <div class="sidebar-footer body-font"><span id="sidebar-version-display"></span></div>
+            </aside>
+
+            <main id="main-content"><div class="content-wrapper">
+                <div id="welcome-screen" class="hidden"><div class="welcome-card"><div class="welcome-avatar-container"><img id="welcome-avatar" src="placeholder_venue.jpg" style="width:150px; height:225px; object-fit:cover; border-radius:8px;"></div><div class="welcome-content-container"><h2 class="display-font" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 10px;">WELCOME <span id="welcome-name">GUEST</span>!</h2><div class="features-list" style="margin-top:0;"><h3>HOW BACKROOM WORKS</h3><ul><li>📍 <strong>Location:</strong> Set a city or country once. It stays active across Search Results, Venues and Events.</li><li>🔎 <strong>Search Results:</strong> Type a venue or party name to search both venues and event names.</li><li>🏛️ <strong>Venues:</strong> Browse every venue in your selected city.</li><li>📅 <strong>Events:</strong> Browse what is on by date, city, or vibe tags.</li><li>💖 <strong>My Events:</strong> Save events you plan to attend.</li><li>⚜️ <strong>Favourites:</strong> Keep your own go-to venues.</li><li>📑 <strong>Shortlists:</strong> Build a shareable mix of venues and events, then send it to someone else to plan a night out.</li></ul></div></div></div></div>
+                <div id="context-header" class="hidden" style="padding: 0 20px 15px;"><h2 id="context-title" class="display-font" style="color: var(--primary-blue); font-size: 2rem;"></h2><p id="context-desc" class="body-font" style="color: var(--text-light); margin-bottom: 15px;"></p><div style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;"><button id="btn-back-to-results" class="btn primary-btn pill-btn" style="width: auto; padding: 6px 14px; font-size: 1rem;">← Back to Results</button><div id="shortlist-view-filters" class="shortlist-view-filters hidden"></div><div id="event-city-filters" class="hidden" style="display:flex; gap:8px; overflow-x:auto;"></div><button id="btn-new-shortlist-view" class="btn secondary-btn pill-btn hidden" style="width: auto; padding: 6px 14px; font-size: 1rem;">+ New Shortlist</button></div></div>
+                <div id="discounts-container" class="hidden" style="background:var(--panel-dark); border-radius:var(--radius-card); padding:25px; border:1px solid var(--panel-mid);"><h2 class="display-font" style="color:var(--primary-blue); margin-bottom:15px;">TRAVEL DISCOUNTS</h2><p class="body-font">Exclusive travel codes and discounts will appear here.</p></div>
+                <div id="cruising-guide-container" class="hidden" style="background:var(--panel-dark); border-radius:var(--radius-card); padding:25px; border:1px solid var(--panel-mid);"><h2 class="display-font" style="color:var(--primary-blue); margin-bottom:15px;">CRUISING GUIDE 🔥</h2><p class="body-font">Loading content...</p></div>
+                <div id="about-container" class="hidden" style="background:var(--panel-dark); border-radius:var(--radius-card); padding:25px; border:1px solid var(--panel-mid);"><h2 class="display-font" style="color:var(--primary-blue); margin-bottom:15px;">ABOUT BACKROOM</h2><div class="body-font" style="line-height:1.6;"><p><strong>Backroom is a gay nightlife and cruising guide focused primarily on gay male and men-only nightlife across Europe, while also including a broader range of gay and queer venues and events.</strong></p><p style="margin-top:14px;">Find gay bars, gay clubs, saunas, cruising areas, cruise bars, darkrooms, fetish and gear venues, parties, Pride events and other nightlife, with practical information to help plan where to go and what is on.</p><p style="margin-top:14px;">Backroom covers major gay nightlife destinations including Berlin, Hamburg, Cologne, London, Paris, Amsterdam, Brussels, Prague, Vienna, Madrid, Barcelona and Lisbon, alongside many other cities across Europe.</p><p style="margin-top:14px;">The directory currently covers <strong id="about-country-count-inline">our current countries</strong> and <strong id="about-city-count-inline">our current cities</strong>, calculated automatically from the live venue and event records.</p><p style="margin-top:14px; color:var(--text-light);">Information is gathered through in-person visits and multiple public sources. Wherever possible, details are cross-checked and listings are reviewed regularly to keep the guide useful and current.</p></div></div>
+                <div id="featured-container" class="hidden" style="background:var(--panel-dark); border-radius:var(--radius-card); padding:25px; border:1px solid var(--panel-mid);"><h2 class="display-font" style="color:var(--primary-blue); margin-bottom:15px;">FEATURED VENUES 🏛️</h2><p class="body-font">Below are some of our favourite venues that we know you will love, visit if you are nearby or plan a trip soon!</p></div>
+                <div class="filter-chips-container" id="main-filters"><div class="filter-chips" id="filter-chips"></div></div>
+                <section id="results-container"></section>
+            </div></main>
+        </div>
+    </div>
+
+    <div id="venue-modal" class="modal hidden"><div class="modal-content venue-modal-style"><div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;"><h2 id="modal-title" class="display-font" style="margin: 0; flex-grow: 1;">VENUE NAME</h2><div class="modal-actions-group" style="display: flex; gap: 10px; align-items: center; background: var(--panel-dark); border: 1px solid var(--panel-mid); padding: 5px 15px; border-radius: 50px; margin-right: 20px;"><button id="modal-star" class="icon-btn tooltip" title="Toggle Favorite" style="font-size: 1.8rem;">⚜️</button><button id="modal-shortlist" class="icon-btn tooltip" title="Add to Shortlist"><img src="shortlist.png" style="width:24px;"></button><button id="modal-share" class="icon-btn tooltip" title="Share" style="font-size: 1.5rem;">📣</button><button id="modal-report" class="icon-btn tooltip" title="Report" style="display:flex; align-items:center; justify-content:center;"><img src="report.png" style="width:24px; height:24px; object-fit:contain;"></button></div><button id="close-modal" class="btn-close" style="position: relative; top: auto; right: auto;">❌</button></div><div class="modal-body body-font"><div id="modal-dynamic-layout"></div></div></div></div>
+    <div id="community-rating-modal" class="modal hidden" style="z-index: 3200;">
+        <div class="modal-content small-modal community-rating-modal-content">
+            <button type="button" class="btn-close close-modal-btn" onclick="window.closeCommunityRatingModal()">❌</button>
+            <div class="modal-header"><h2 class="display-font">🌈 RATED BY THE GAYS</h2></div>
+            <div id="community-rating-content" class="modal-body body-font"></div>
+        </div>
+    </div>
+
+    <div id="location-modal" class="modal hidden">
+        <div class="modal-content small-modal location-modal-content">
+            <button class="btn-close close-modal-btn">❌</button>
+            <div class="modal-header"><h2 class="display-font">SET LOCATION</h2></div>
+            <div class="modal-body body-font location-modal-body">
+                <p class="meta-text location-modal-intro">Set a city or country to browse its venues and events. Leave Location blank to browse <strong>ALL CITIES</strong>.</p>
+                <button id="btn-gps" class="btn primary-btn pill-btn location-gps-button"><img src="location.png" alt="" style="width:18px; vertical-align:middle; margin-right:8px;">Use My GPS Location</button>
+                <hr class="divider location-modal-divider">
+                <div class="location-city-search-row">
+                    <input type="text" id="loc-location" class="form-input pill-input" placeholder="Location — e.g. Paris, France" autocomplete="off" autocorrect="off" data-lat="" data-lon="">
+                    <button class="btn secondary-btn pill-btn" id="btn-search-map" type="button" title="Show on map" aria-label="Show location on map">🔍</button>
+                </div>
+                <input type="text" id="loc-postcode" class="form-input pill-input location-postcode-input" placeholder="Postcode (optional)" maxlength="8">
+                <div id="map-preview-placeholder" class="map-preview location-map-preview"><img src="location.png" alt="" style="width:28px; opacity:0.6; margin-bottom:4px;"><span>Map preview</span><small>Use Search or GPS to load it.</small></div>
+                <div id="loc-map" class="location-map" style="display:none;"></div>
+                <div class="location-action-row">
+                    <button id="btn-save-location" type="button" class="btn primary-btn pill-btn" onclick="window.saveBackroomLocation()">Show Results in All Cities</button>
+                    <button id="btn-clear-location" type="button" class="btn pill-btn location-clear-button" onclick="window.clearBackroomLocation()">Clear</button>
+                </div>
+                <p id="current-location-display" class="meta-text location-current-display"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile-modal" class="modal hidden"><div class="modal-content large-modal" style="max-width: 900px;"><button class="btn-close close-modal-btn">❌</button><div class="modal-header"><h2 class="display-font">MY PROFILE</h2></div><div class="modal-body body-font"><div id="profile-mobile-tabs" class="mobile-only" style="display:none; justify-content:center; align-items:center; background:var(--panel-dark); padding:10px; border-radius:var(--radius-pill); margin-bottom:20px; border:1px solid var(--panel-mid);"><div id="ptab-1" onclick="switchProfileTab(1)" style="font-size:1.8rem; cursor:pointer; padding:5px; border-radius:50%; transition:all 0.2s; text-align:center;">🤗 <span style="font-size: 0.8rem; display:block; color:var(--primary-blue); font-weight:bold; white-space:nowrap;">1: Your Profile</span></div><div id="parr-1" style="color:var(--primary-blue); font-weight:bold; padding:0 5px; font-family:'Antonio', sans-serif; font-size:1.2rem;">&gt;&gt;&gt;</div><div id="ptab-2" onclick="switchProfileTab(2)" style="font-size:1.8rem; cursor:pointer; padding:5px; border-radius:50%; transition:all 0.2s; text-align:center;">🤔 <span style="font-size: 0.8rem; display:block; color:var(--primary-blue); font-weight:bold; white-space:nowrap;">2: Choose Avatar</span></div><div id="parr-2" style="color:var(--primary-blue); font-weight:bold; padding:0 5px; font-family:'Antonio', sans-serif; font-size:1.2rem;">&gt;&gt;&gt;</div><div id="ptab-3" onclick="switchProfileTab(3)" style="font-size:1.8rem; cursor:pointer; padding:5px; border-radius:50%; transition:all 0.2s; text-align:center;">😎 <span style="font-size: 0.8rem; display:block; color:var(--primary-blue); font-weight:bold; white-space:nowrap;">3: Functions</span></div></div><div class="profile-desktop-wrapper"><div id="profile-mob-view-1" class="profile-view-section"><h2 class="mobile-only display-font" style="color:var(--primary-blue); text-align:center;">YOUR PROFILE</h2><hr class="mobile-only divider" style="border-color:var(--bright-red-orange); background:var(--bright-red-orange);"><div style="background: var(--panel-dark); padding: 25px; border-radius: var(--radius-card); border: 1px solid var(--panel-mid);"><div id="preview-img-wrapper" class="hidden" style="width: 100%; display: flex; justify-content: center;"><img id="profile-avatar-preview" src="" style="border-radius: 12px; object-fit: contain; object-position: center center; border: 3px solid var(--primary-blue); margin-bottom: 10px; box-shadow: 0 0 15px rgba(44, 168, 212, 0.4);"></div><div style="width: 100%;"><label class="meta-text" style="font-size: 0.9rem; margin-bottom: 5px; display: block; text-align: center;">Profile Name</label><div class="profile-name-row"><input type="text" id="profile-name" class="form-input pill-input" placeholder="Enter your name" style="color:var(--primary-blue); font-weight:bold; text-align: center; margin:0;"><button id="btn-save-profile-inline" type="button" class="icon-btn profile-name-save" title="Save profile name">💾</button></div></div><div style="width: 100%;"><select id="profile-switcher" class="form-input pill-input" style="text-align: center; font-size: 1rem;"><option value="">Switch Profile...</option></select></div><div id="profile-stats-container-mob-first" class="mobile-only" style="margin-top:15px;"></div></div></div><div id="profile-mob-view-2" class="profile-view-section mobile-hidden-tab"><h2 class="mobile-only display-font" style="color:var(--primary-blue); text-align:center;">CHOOSE AVATAR</h2><hr class="mobile-only divider" style="border-color:var(--bright-red-orange); background:var(--bright-red-orange);"><div style="background-color: #000; border-radius: var(--radius-card); min-height: 300px; padding: 10px; border: 1px solid var(--panel-mid);"><div class="avatar-grid" id="avatar-grid" style="height: 100%;"></div></div></div><hr class="desktop-only-hr" style="grid-column: 1 / -1; width: 100%; border: 0; height: 2px; background: var(--bright-red-orange); margin: 10px 0;"><div id="profile-mob-view-3" class="profile-view-section mobile-hidden-tab"><h2 class="mobile-only display-font" style="color:var(--primary-blue); text-align:center;">FUNCTIONS</h2><hr class="mobile-only divider" style="border-color:var(--bright-red-orange); background:var(--bright-red-orange);"><table style="width:100%; border-collapse:collapse;" class="desktop-only-table profile-desktop-bottom-table"><tr><td class="profile-desktop-info-cell" style="width:66.6%; vertical-align:top; padding-right:14px;"><div class="profile-desktop-info-row"><div id="view-3-stats"><div id="profile-stats-container"></div></div><div style="background: var(--panel-dark); padding: 25px; border-radius: var(--radius-card); border: 1px solid var(--panel-mid); font-size: 0.95rem; color: var(--text-light); line-height: 1.5;" class="desktop-only-text profile-desktop-hi-panel"><h4 class="display-font" style="color:var(--primary-blue); margin-bottom:10px; font-size:1.2rem;" id="profile-privacy-greeting">Hi Guest,</h4><p>In this screen you can edit your profile. All your favorites, shortlists, and location settings are strictly saved locally on your current browser.</p><p style="margin-top: 10px;">No accounts are required and your data never leaves your device. Be sure to export your data if you clear your browser cache.</p></div></div></td><td class="profile-desktop-actions-cell" style="width:33.4%; vertical-align:top; padding-left:14px;"><h4 class="display-font desktop-only-text" style="color:var(--primary-blue); margin-bottom:10px; font-size:1.2rem;">FUNCTIONS</h4><div id="view-3-buttons" class="profile-btn-stack" style="background: var(--panel-dark); padding: 25px; border-radius: var(--radius-card); border: 1px solid var(--panel-mid); display:flex; flex-direction:column; gap:10px;"><button id="btn-save-profile" class="btn primary-btn pill-btn">Save changes</button><button id="btn-new-profile" class="btn secondary-btn pill-btn">Create New Profile</button><label for="import-profile-file" class="btn secondary-btn pill-btn" style="text-align: center; cursor: pointer; border:1px solid var(--label-grey); display:block;">📥 Import Profile</label><input type="file" id="import-profile-file" class="hidden" accept=".json"><button id="btn-profile-download-data" class="btn secondary-btn pill-btn btn-export-trigger">💾 Download My Data</button><button id="btn-delete-profile" class="btn pill-btn" style="background: var(--dark-red); color: #fff;">Delete Profile</button></div></td></tr></table><div class="mobile-only" style="flex-direction:column; gap:15px;"><div class="profile-btn-stack" style="background: var(--panel-dark); padding: 25px; border-radius: var(--radius-card); border: 1px solid var(--panel-mid); display:flex; flex-direction:column; gap:10px;"><button id="btn-save-profile-mob" class="btn primary-btn pill-btn" onclick="document.getElementById('btn-save-profile').click()">Save changes</button><button id="btn-new-profile-mob" class="btn secondary-btn pill-btn" onclick="document.getElementById('btn-new-profile').click()">Create New Profile</button><label for="import-profile-file-mob" class="btn secondary-btn pill-btn" style="text-align: center; cursor: pointer; border:1px solid var(--label-grey); display:block;">📥 Import Profile</label><input type="file" id="import-profile-file-mob" class="hidden" accept=".json" onchange="document.getElementById('import-profile-file').files = this.files; document.getElementById('import-profile-file').dispatchEvent(new Event('change'))"><button id="btn-profile-download-data-mob" class="btn secondary-btn pill-btn btn-export-trigger" onclick="document.getElementById('btn-profile-download-data').click()">💾 Download My Data</button><button id="btn-delete-profile-mob" class="btn pill-btn" style="background: var(--dark-red); color: #fff;" onclick="document.getElementById('btn-delete-profile').click()">Delete Profile</button></div><div id="profile-stats-container-mob"></div></div></div></div></div></div></div>
+
+    <div id="settings-modal" class="modal hidden"><div class="modal-content small-modal"><button class="btn-close close-modal-btn">❌</button><div class="modal-header"><h2 class="display-font">SETTINGS</h2></div><div class="modal-body body-font settings-sections"><h3 class="settings-heading">Quick Edit</h3><div class="settings-button-grid"><button class="btn secondary-btn pill-btn" onclick="document.getElementById('settings-modal').classList.add('hidden'); window.location.hash='#mytravel';">🚄 Edit Travel</button><button class="btn secondary-btn pill-btn" onclick="document.getElementById('settings-modal').classList.add('hidden'); window.location.hash='#favorites';">⚜️ Edit Favourites</button><button class="btn secondary-btn pill-btn" onclick="document.getElementById('settings-modal').classList.add('hidden'); document.getElementById('btn-profile-menu').click();">👤 Edit Profile</button><button class="btn secondary-btn pill-btn" onclick="document.getElementById('settings-modal').classList.add('hidden'); window.location.hash='#myshortlists';">📑 Edit Shortlists</button></div><hr class="settings-red-divider"><h3 class="settings-heading">About / Contact</h3><a class="btn secondary-btn pill-btn" href="about.html" style="text-align:center; text-decoration:none;">ℹ️ Open About Page</a><button class="btn secondary-btn pill-btn" onclick="window.flagListing('N/A', 'General Message', 'General Support')">✉️ Email Support</button><button class="btn secondary-btn pill-btn" onclick="window.open('https://www.instagram.com/the.backroom.guide/', '_blank')"><img src="Emoji/instagram_url.png" onerror="this.src='https://i.postimg.cc/Ls6MW6B3/free-instagram-icon-svg-download-png-7574395-1.png'" style="height:20px; vertical-align:middle; margin-right:8px;"> Follow us on Instagram</button><hr class="settings-red-divider"><h3 class="settings-heading">Help, Privacy & Backup</h3><p class="meta-text" style="margin-bottom: 12px; font-size: 0.95rem;">All your favorites, shortlists, events, travel pins and profile settings are stored locally in this browser only. Export your data if you want a backup or want to move it to another browser.</p><button class="btn primary-btn pill-btn btn-export-trigger">💾 Export My Data</button><label for="import-data-file" class="btn secondary-btn pill-btn" style="display:block; text-align:center; cursor:pointer;">📂 Import Data</label><input type="file" id="import-data-file" class="hidden" accept=".json"><div id="import-preview-info" class="meta-text hidden" style="margin-bottom:10px; background:var(--panel-dark); padding:10px; border-radius:var(--radius-card); font-size:0.9rem;"></div><hr class="settings-red-divider"><button id="btn-reset-age" class="btn secondary-btn pill-btn">Reset 18+ Age Gate</button><button id="btn-clear-data" class="btn pill-btn" style="background-color: var(--dark-red); color: #fff;">Delete All Local Data</button></div></div></div>
+
+    <div id="add-to-shortlist-modal" class="modal hidden"><div class="modal-content small-modal"><button class="btn-close close-modal-btn">❌</button><div class="modal-header"><h2 class="display-font">ADD TO SHORTLIST</h2></div><div class="modal-body body-font"><p id="add-shortlist-target-name" class="meta-text" style="margin-bottom:15px; font-weight:bold;"></p><div id="add-shortlist-options" style="display:flex; flex-direction:column; gap:10px; margin-bottom:15px;"></div><hr class="divider"><input type="text" id="add-new-shortlist-name" class="form-input pill-input" placeholder="Create new shortlist..."><button id="btn-add-create-shortlist" class="btn primary-btn pill-btn">Create & Add</button></div></div></div>
+
+    <div id="formsubmit-modal" class="modal hidden"><div class="modal-content small-modal"><button class="btn-close close-modal-btn">❌</button><div class="modal-header"><h2 class="display-font">CONTACT / REPORT</h2></div><div class="modal-body body-font"><form action="https://formsubmit.cloud/f/ae0e141d-ad94-47fe-ac46-55702c6534a6/" method="POST" id="fs-form" style="display: flex; flex-direction: column; gap: 10px;"><input type="hidden" name="ID" id="fs-id" value=""><input type="hidden" name="Reported_Listing" id="fs-name" value=""><input type="hidden" name="Type" id="fs-type" value=""><input type="hidden" name="URL" id="fs-url" value=""><input type="hidden" name="_gotcha" style="display:none !important"><input type="hidden" name="_subject" value="Backroom Site Submission"><input type="hidden" name="_next" value="https://cinaedvsstudios.github.io/Backroom-site/thanks.html"><input type="hidden" name="return_url" value="https://cinaedvsstudios.github.io/Backroom-site/"><p class="meta-text" style="margin-bottom: 10px;">Send a message to the team. After pressing Send Message, continue in the FormSubmit tab to complete verification.</p><input type="text" name="name" class="form-input pill-input" placeholder="Name" style="width: 100%; box-sizing: border-box;"><input type="email" name="email" class="form-input pill-input" placeholder="Email (optional)" style="width: 100%; box-sizing: border-box;"><textarea name="message" class="form-input" placeholder="Type your message here" required style="width: 100%; min-height: 100px; border-radius: 12px; padding: 10px; box-sizing: border-box; background: var(--panel-mid); color: #fff; border: 1px solid var(--panel-standard);"></textarea><button type="submit" class="btn primary-btn pill-btn" style="margin-top: 10px;">Send Message</button></form></div></div></div>
+
+    <div id="formsubmit-flow-modal" class="modal hidden"><div class="modal-content large-modal" style="max-width: 920px; height: 82vh;"><div class="modal-header" style="display:flex; justify-content:space-between; align-items:center; gap:10px;"><h2 class="display-font">FORM VERIFICATION</h2><button id="btn-formsubmit-flow-close" type="button" class="btn-close">❌</button></div><div class="modal-body body-font" style="height: calc(82vh - 90px); display:flex; flex-direction:column; gap:10px;"><p class="meta-text" style="font-size:1rem;">Complete the FormSubmit verification below if it appears. If this box stays blank or refuses to load, use the new-tab button.</p><iframe name="formsubmit-frame" id="formsubmit-frame" title="FormSubmit verification window" style="flex:1; width:100%; border:1px solid var(--panel-mid); border-radius:12px; background:#fff;"></iframe><button id="btn-formsubmit-newtab" type="button" class="btn secondary-btn pill-btn">Open FormSubmit in new tab</button></div></div></div>
+
+    <div id="profile-unsaved-modal" class="modal hidden" style="z-index: 3600;"><div class="modal-content small-modal" style="background: var(--panel-dark); border: 2px solid var(--primary-blue);"><div class="modal-header"><h2 class="display-font">SAVE AVATAR CHANGES?</h2></div><div class="modal-body body-font"><p style="margin-bottom:15px; color:#fff;">Save avatar changes?</p><div style="display:flex; flex-direction:column; gap:10px;"><button id="btn-save-profile-unsaved" type="button" class="btn primary-btn pill-btn">Save changes</button><button id="btn-discard-profile-unsaved" type="button" class="btn secondary-btn pill-btn">Discard changes</button></div></div></div></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="app.js?v=1.10"></script>
+    <script src="calendar.js?v=1.10"></script>
+</body>
+</html>
