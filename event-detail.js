@@ -1,12 +1,13 @@
-// Backroom event detail routes and modal layer v1.11
+// Backroom event detail routes and modal layer v1.12
 (function () {
   'use strict';
 
   if (window.__backroomEventDetailLoaded) return;
   window.__backroomEventDetailLoaded = true;
 
-  const EVENT_DETAIL_VERSION = 'v1.11';
+  const EVENT_DETAIL_VERSION = 'v1.12';
   const DEFAULT_RETURN_HASH = '#calendar';
+  const BACKROOM_ICON_URL = 'https://raw.githubusercontent.com/cinaedvsstudios/Backroom-site/refs/heads/main/backdoorlogo.png';
   let eventReturnHash = DEFAULT_RETURN_HASH;
   let currentEventId = '';
   let originalHandleRouting = null;
@@ -517,6 +518,7 @@
       if (!button) return;
       event.preventDefault();
       event.stopPropagation();
+      event.stopImmediatePropagation();
       const id = clean(button.dataset.backroomOpenEvent);
       if (!id) return;
       window.openBackroomEvent(id, { returnHash: getCurrentEventReturnHash() });
@@ -535,7 +537,8 @@
           const wrapped = function (message, ...rest) {
             const fixed = String(message ?? '')
               .replace(/Backroom\s+v1\.09/g, `Backroom ${EVENT_DETAIL_VERSION}`)
-              .replace(/Backroom\s+v1\.10/g, `Backroom ${EVENT_DETAIL_VERSION}`);
+              .replace(/Backroom\s+v1\.10/g, `Backroom ${EVENT_DETAIL_VERSION}`)
+              .replace(/Backroom\s+v1\.11/g, `Backroom ${EVENT_DETAIL_VERSION}`);
             return original.call(this, fixed, ...rest);
           };
           wrapped.__backroomVersionWrapped = true;
@@ -558,30 +561,59 @@
     }).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
   }
 
+  function installFavicon() {
+    const ensureLink = (rel, href) => {
+      let link = document.head.querySelector(`link[rel="${rel}"]`);
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = rel;
+        document.head.appendChild(link);
+      }
+      link.href = href;
+      link.type = 'image/png';
+    };
+
+    ensureLink('icon', BACKROOM_ICON_URL);
+    ensureLink('shortcut icon', BACKROOM_ICON_URL);
+    ensureLink('apple-touch-icon', BACKROOM_ICON_URL);
+  }
+
+  function installEventHashCapture() {
+    window.addEventListener('hashchange', event => {
+      if (isEventHash()) {
+        event.stopImmediatePropagation();
+        openEventFromRoute();
+      } else {
+        document.getElementById('event-modal')?.classList.add('hidden');
+      }
+    }, true);
+  }
+
   window.openBackroomEvent = function openBackroomEvent(eventId, options = {}) {
     const id = clean(eventId);
     if (!id) return;
     eventReturnHash = options.returnHash || getCurrentEventReturnHash();
     const target = `#event=${encodeURIComponent(id)}`;
-    if (window.location.hash === target) openEventFromRoute();
-    else window.location.hash = target;
+    if (window.location.hash !== target) {
+      history.pushState({ backroomEvent: id }, '', target);
+    }
+    openEventFromRoute();
   };
 
   window.closeBackroomEvent = closeEventModalToPreviousView;
+  window.backroomOpenEventModal = openEventModal;
 
   installLegacyEventQueryRoute();
   patchRouting();
+  installEventHashCapture();
   installCalendarOpenButtons();
   installVersionRepair();
-
-  window.addEventListener('hashchange', () => {
-    if (isEventHash()) window.setTimeout(openEventFromRoute, 0);
-    else document.getElementById('event-modal')?.classList.add('hidden');
-  });
+  installFavicon();
 
   document.addEventListener('DOMContentLoaded', () => {
     ensureEventModal();
     decorateCalendarEventCards();
+    installFavicon();
     if (isEventHash()) window.setTimeout(openEventFromRoute, 0);
   });
 })();
