@@ -1,0 +1,44 @@
+name: Add About SEO copy
+
+on:
+  push:
+    paths:
+      - '.github/workflows/add-about-seo-copy.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-about:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update About screen copy
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          old = '''<div id="about-container" class="hidden" style="background:var(--panel-dark); border-radius:var(--radius-card); padding:25px; border:1px solid var(--panel-mid);"><h2 class="display-font" style="color:var(--primary-blue); margin-bottom:15px;">ABOUT BACKROOM</h2><p class="body-font">Page content under construction.</p></div>'''
+
+          new = '''<div id="about-container" class="hidden" style="background:var(--panel-dark); border-radius:var(--radius-card); padding:25px; border:1px solid var(--panel-mid);"><h2 class="display-font" style="color:var(--primary-blue); margin-bottom:15px;">ABOUT BACKROOM</h2><div class="body-font" style="line-height:1.6;"><p><strong>Backroom is a gay nightlife and cruising guide focused primarily on gay male and men-only nightlife across Europe, while also including a broader range of gay and queer venues and events.</strong></p><p style="margin-top:14px;">Find gay bars, gay clubs, saunas, cruising areas, cruise bars, darkrooms, fetish and gear venues, parties, Pride events and other nightlife, with practical information to help plan where to go and what is on.</p><p style="margin-top:14px;">Backroom covers major gay nightlife destinations including Berlin, Hamburg, Cologne, London, Paris, Amsterdam, Brussels, Prague, Vienna, Madrid, Barcelona and Lisbon, alongside many other cities across Europe.</p><p style="margin-top:14px;">The directory currently covers <strong id="about-country-count-inline">our current countries</strong> and <strong id="about-city-count-inline">our current cities</strong>, calculated automatically from the live venue and event records.</p><p style="margin-top:14px; color:var(--text-light);">Information is gathered through in-person visits and multiple public sources. Wherever possible, details are cross-checked and listings are reviewed regularly to keep the guide useful and current.</p></div></div>'''
+
+          if old not in text:
+              raise SystemExit('Expected About placeholder not found; refusing to make an unsafe edit.')
+
+          path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          PY
+
+      - name: Commit update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Add descriptive copy to About screen"
+          git push
