@@ -1,4 +1,4 @@
-const BACKROOM_VERSION = 'v1.14';
+const BACKROOM_VERSION = 'v1.15';
 const BACKROOM_EMBEDDED_HASHES = new Set(['#heatmap', '#travel']);
 const BACKROOM_INITIAL_EMBEDDED_HASH = BACKROOM_EMBEDDED_HASHES.has(window.location.hash) ? window.location.hash : '';
 
@@ -11,10 +11,54 @@ document.write('<script src="app-core.js?v=1.10"><\/script>');
 document.write('<script src="event-detail.js?v=1.14"><\/script>');
 
 (() => {
+  const normaliseCountryAliasText = value => String(value || '')
+    .trim()
+    .toLowerCase()
+    .replace(/ß/g, 'ss')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '');
+
+  const countryAliases = {
+    deutschland: 'germany',
+    bundesrepublikdeutschland: 'germany',
+    germany: 'germany',
+
+    czechia: 'czechia',
+    czechrepublic: 'czechia',
+    cesko: 'czechia',
+    ceskarepublika: 'czechia',
+
+    poland: 'poland',
+    polska: 'poland',
+    republicofpoland: 'poland',
+    rzeczpospolitapolska: 'poland',
+
+    switzerland: 'switzerland',
+    swissconfederation: 'switzerland',
+    suisse: 'switzerland',
+    confederationsuisse: 'switzerland',
+    schweiz: 'switzerland',
+    schweizerischeeidgenossenschaft: 'switzerland'
+  };
+
+  const existingNormalizeLocationName = window.normalizeLocationName;
+  const normalizeCountryAlias = value => {
+    const normalized = typeof existingNormalizeLocationName === 'function'
+      ? existingNormalizeLocationName(value)
+      : normaliseCountryAliasText(value);
+    return countryAliases[normalized] || normalized;
+  };
+
+  window.normalizeCountryName = normalizeCountryAlias;
+})();
+
+(() => {
   'use strict';
 
   const clean = value => String(value ?? '').trim().replace(/\s+/g, ' ');
   const key = value => clean(value).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('en');
+  const countryKey = value => typeof window.normalizeCountryName === 'function' ? window.normalizeCountryName(value) : key(value);
   const splitCities = value => (Array.isArray(value) ? value : String(value ?? '').split(/[;,|]+/)).map(clean).filter(Boolean);
   const embeddedPages = {
     heatmap: { src: 'heatmap.html?embed=1&v=1.10.1', title: 'Heat Map' },
@@ -218,7 +262,7 @@ document.write('<script src="event-detail.js?v=1.14"><\/script>');
       const id = clean(row?.Venue_ID);
       if (id) venueMap.set(id, location);
       location.cities.forEach(city => cities.add(key(city)));
-      if (location.country) countries.add(key(location.country));
+      if (location.country) countries.add(countryKey(location.country));
     });
 
     (Array.isArray(eventRows) ? eventRows : []).forEach(row => {
@@ -227,7 +271,7 @@ document.write('<script src="event-detail.js?v=1.14"><\/script>');
       const eventCountry = clean(row?.Country || row?.Event_Country || row?.Venue_Country || row?.Location_Country);
       (eventCities.length ? eventCities : linked.cities).forEach(city => cities.add(key(city)));
       const country = eventCountry || linked.country;
-      if (country) countries.add(key(country));
+      if (country) countries.add(countryKey(country));
     });
 
     return { cities: cities.size, countries: countries.size };
