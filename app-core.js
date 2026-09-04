@@ -1,6 +1,6 @@
 // --- Application State ---
-const APP_VERSION = "v1.09";
-const APP_DATE = "21 July 2026";
+const APP_VERSION = "v1.10";
+const APP_DATE = "04 September 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
 let activeFilters = []; // v0.66 Multi-select Array
@@ -810,8 +810,33 @@ function normalizeCityName(value) {
     return CITY_NAME_ALIASES[normalized] || normalized;
 }
 
+const COUNTRY_NAME_ALIASES = Object.freeze({
+    germany: 'germany',
+    deutschland: 'germany',
+    bundesrepublikdeutschland: 'germany',
+
+    czechia: 'czechia',
+    czechrepublic: 'czechia',
+    theczechrepublic: 'czechia',
+    cesko: 'czechia',
+    ceskarepublika: 'czechia',
+
+    poland: 'poland',
+    polska: 'poland',
+    republicofpoland: 'poland',
+    rzeczpospolitapolska: 'poland',
+
+    switzerland: 'switzerland',
+    swissconfederation: 'switzerland',
+    suisse: 'switzerland',
+    confederationsuisse: 'switzerland',
+    schweiz: 'switzerland',
+    schweizerischeeidgenossenschaft: 'switzerland'
+});
+
 function normalizeCountryName(value) {
-    return normalizeLocationName(value);
+    const normalized = normalizeLocationName(value);
+    return COUNTRY_NAME_ALIASES[normalized] || normalized;
 }
 
 function getSavedLocation() {
