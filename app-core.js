@@ -5022,3 +5022,212 @@ window.openSearchResults = function() {
 };
 
 document.addEventListener('DOMContentLoaded', initApp);
+
+// Browse Locations: an isolated, post-load addition. Existing startup and matching stay unchanged.
+(() => {
+    const broadPlaces = new Set([
+        'europe', 'eu', 'europeanunion', 'global', 'world', 'worldwide', 'international',
+        'multiplecountries', 'multicountry', 'variouscountries', 'allcountries',
+        'multiplecities', 'multicity', 'variouscities', 'allcities',
+        'asia', 'africa', 'northamerica', 'southamerica', 'latinamerica', 'centralamerica',
+        'oceania', 'australasia', 'middleeast', 'caribbean', 'scandinavia', 'baltics',
+        'balkans', 'dach', 'unknown', 'unspecified', 'various', 'multiple', 'other',
+        'online', 'virtual', 'tba', 'tbc', 'na', 'none'
+    ]);
+    const compoundCountries = new Set([
+        'bosniaandherzegovina', 'bosniaherzegovina', 'antiguaandbarbuda', 'antiguabarbuda',
+        'trinidadandtobago', 'trinidadtobago', 'saintkittsandnevis', 'stkittsandnevis',
+        'saintvincentandthegrenadines', 'saotomeandprincipe'
+    ]);
+    const clean = value => String(value || '').trim();
+    const isSpecificPlace = value => {
+        const text = clean(value);
+        return text && !broadPlaces.has(normalizeLocationName(text))
+            && !/\b(europe|global|worldwide|international|multiple|various|several|countries)\b/i.test(text);
+    };
+    const isCountry = value => {
+        const text = clean(value);
+        return isSpecificPlace(text) && !/[;,|/+\r\n]/.test(text)
+            && (!/\s(?:and|&)\s/i.test(text) || compoundCountries.has(normalizeCountryName(text)));
+    };
+
+    function getBrowseCountries() {
+        const countries = new Map();
+        const venueCountriesByCity = new Map();
+        const add = (city, country) => {
+            city = clean(city);
+            country = clean(country);
+            if (!isSpecificPlace(city) || !isCountry(country)) return;
+            const cityKey = normalizeCityName(city);
+            const countryKey = normalizeCountryName(country);
+            if (!cityKey || !countryKey) return;
+            let group = countries.get(countryKey);
+            if (!group) {
+                group = { country, cities: new Map() };
+                countries.set(countryKey, group);
+            }
+            if (!group.cities.has(cityKey)) group.cities.set(cityKey, { city, country: group.country });
+        };
+
+        // Venue-backed pairs take precedence over event spellings, such as Czech Republic/Czechia.
+        getPublicVenues().forEach(venue => {
+            if (!isCountry(venue?.Country)) return;
+            getCityTokens(venue).forEach(city => {
+                if (!isSpecificPlace(city)) return;
+                const cityKey = normalizeCityName(city);
+                const trusted = venueCountriesByCity.get(cityKey) || new Set();
+                trusted.add(normalizeCountryName(venue.Country));
+                venueCountriesByCity.set(cityKey, trusted);
+                add(city, venue.Country);
+            });
+        });
+        (events || []).filter(isSearchableEvent).forEach(event => {
+            if (!isCountry(event?.Country)) return;
+            getCityTokens(event).forEach(city => {
+                // A broad or conflicting event cannot invent a country for a known venue city.
+                if (!venueCountriesByCity.has(normalizeCityName(city))) add(city, event.Country);
+            });
+        });
+        return [...countries.values()]
+            .sort((a, b) => a.country.localeCompare(b.country, 'en'))
+            .map(group => ({
+                country: group.country,
+                cities: [...group.cities.values()].sort((a, b) => a.city.localeCompare(b.city, 'en'))
+            }));
+    }
+
+    function getBrowseResultCount(scope, now) {
+        // Count through the existing Results engine, including its venue-country priority,
+        // event dates and visibility rules. Do not remap broad-region events into extra matches.
+        let scopeVenues = getSearchScopeVenues(scope);
+        let scopeEvents = getSearchScopeEvents(now, scope);
+        if (activeFilters.length) {
+            scopeVenues = scopeVenues.filter(venue => {
+                const tags = getVenueTags(venue);
+                return activeFilters.every(tag => tags.includes(tag));
+            });
+            scopeEvents = scopeEvents.filter(({ event, venue }) => eventMatchesActiveTags(event, venue));
+        }
+        // saveLocation clears the typed search, but preserves these existing Results filters.
+        return (searchResultTypeFilter === 'Event' ? 0 : scopeVenues.length)
+            + (searchResultTypeFilter === 'Venue' ? 0 : scopeEvents.length);
+    }
+
+    function installBrowseLocations() {
+        const input = getLocationInput();
+        const row = input?.closest('.location-city-search-row');
+        if (!row || document.getElementById('btn-browse-locations')) return;
+
+        const browseButton = document.createElement('button');
+        browseButton.id = 'btn-browse-locations';
+        browseButton.type = 'button';
+        browseButton.className = 'btn secondary-btn pill-btn';
+        browseButton.textContent = 'Browse';
+        browseButton.setAttribute('aria-haspopup', 'dialog');
+        browseButton.setAttribute('aria-controls', 'browse-locations-modal');
+        Object.assign(browseButton.style, { width: 'auto', flex: '0 0 auto', padding: '0 12px' });
+        Object.assign(input.style, { minWidth: '0', flex: '1 1 0' });
+        row.appendChild(browseButton);
+
+        const modal = document.createElement('div');
+        modal.id = 'browse-locations-modal';
+        modal.className = 'modal hidden';
+        modal.setAttribute('role', 'dialog');
+        modal.setAttribute('aria-modal', 'true');
+        modal.setAttribute('aria-labelledby', 'browse-locations-title');
+        const content = document.createElement('div');
+        content.className = 'modal-content';
+        content.style.maxWidth = '600px';
+        const header = document.createElement('div');
+        header.className = 'modal-header';
+        const title = document.createElement('h2');
+        title.id = 'browse-locations-title';
+        title.className = 'display-font';
+        title.textContent = 'Browse Locations';
+        title.style.paddingRight = '35px';
+        const closeButton = document.createElement('button');
+        closeButton.type = 'button';
+        closeButton.className = 'btn-close';
+        closeButton.textContent = '❌';
+        closeButton.setAttribute('aria-label', 'Close Browse Locations');
+        const body = document.createElement('div');
+        body.className = 'modal-body body-font';
+        header.append(title, closeButton);
+        content.append(header, body);
+        modal.appendChild(content);
+        document.body.appendChild(modal);
+
+        const close = () => {
+            modal.classList.add('hidden');
+            browseButton.focus();
+        };
+        const select = location => {
+            input.value = location.city ? `${location.city}, ${location.country}` : location.country;
+            modal.classList.add('hidden');
+            saveLocation();
+        };
+        const resultButton = (label, scope, now) => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'btn secondary-btn pill-btn';
+            const count = getBrowseResultCount(scope, now);
+            button.textContent = `${label} · ${count} result${count === 1 ? '' : 's'}`;
+            button.dataset.browseCountry = scope.country;
+            button.dataset.browseCity = scope.city;
+            button.dataset.resultCount = String(count);
+            button.setAttribute('aria-label', scope.city ? `${scope.city}, ${scope.country}: ${count} results` : `All of ${scope.country}: ${count} results`);
+            Object.assign(button.style, { textAlign: 'left', marginBottom: '8px', whiteSpace: 'normal' });
+            button.addEventListener('click', () => select(scope));
+            return button;
+        };
+        browseButton.addEventListener('click', () => {
+            const now = new Date();
+            const fragment = document.createDocumentFragment();
+            const groups = getBrowseCountries();
+            groups.forEach(group => {
+                const details = document.createElement('details');
+                details.dataset.browseCountry = group.country;
+                details.style.marginBottom = '12px';
+                const summary = document.createElement('summary');
+                summary.textContent = `${group.country} · ${group.cities.length} ${group.cities.length === 1 ? 'city' : 'cities'}`;
+                Object.assign(summary.style, { cursor: 'pointer', padding: '12px 0', fontWeight: 'bold', color: 'var(--primary-blue)' });
+                const choices = document.createElement('div');
+                // Populate counts only when this country is expanded.
+                details.addEventListener('toggle', () => {
+                    if (!details.open || choices.childElementCount) return;
+                    choices.appendChild(resultButton(`All of ${group.country}`, { scope: 'country', city: '', country: group.country }, now));
+                    group.cities.forEach(location => choices.appendChild(resultButton(location.city, { scope: 'city', ...location }, now)));
+                });
+                details.append(summary, choices);
+                fragment.appendChild(details);
+            });
+            if (!groups.length) {
+                const empty = document.createElement('p');
+                empty.textContent = 'No locations available yet.';
+                fragment.appendChild(empty);
+            }
+            body.replaceChildren(fragment);
+            body.scrollTop = 0;
+            modal.classList.remove('hidden');
+            closeButton.focus();
+        });
+        closeButton.addEventListener('click', close);
+        modal.addEventListener('click', event => { if (event.target === modal) close(); });
+        modal.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                event.stopPropagation();
+                close();
+            } else if (event.key === 'Tab') {
+                const focusable = [...modal.querySelectorAll('button, summary')].filter(el => el.getClientRects().length);
+                const first = focusable[0];
+                const last = focusable.at(-1);
+                if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+                else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+            }
+        });
+    }
+
+    if (document.readyState === 'complete') installBrowseLocations();
+    else window.addEventListener('load', installBrowseLocations, { once: true });
+})();

@@ -1,0 +1,84 @@
+BACKROOM — BROWSE LOCATIONS: TEST REPORT
+Completed: 2026-09-05 02:44 Berlin time
+Result: PASS — all nine requested browser smoke checks.
+Environment: real Chrome browser, supervised local preview of the uploaded site.
+The live GitHub repository and main branch were not modified or deployed.
+
+BASELINE BROWSER TEST (before changing app-core.js)
+PASS: homepage loaded and displayed the 18+ gate.
+PASS: clicking "I AM 18+ - ENTER" opened the app's Welcome screen.
+PASS: existing Location modal opened.
+PASS: manually entering Prague, Czechia and using the existing Show Results button
+      displayed "30 results found in Prague, Czechia".
+
+CHANGED-SITE BROWSER TEST
+A fresh age-gate test was prepared using the app's existing Settings > Reset 18+
+Age Gate control, then opening the local homepage in a new browser tab.
+1. PASS — homepage loads.
+2. PASS — 18+ age gate appears.
+3. PASS — clicking Enter opens the Welcome/app screen.
+4. PASS — Location modal opens.
+5. PASS — dynamically added Browse button appears beside the existing input/search.
+6. PASS — Browse opens its dynamically created dialog.
+7. PASS — all 45 country-group labels inspected in the rendered DOM; none is Europe
+          or another broad-region label.
+8. PASS — expanding Czechia shows "Prague · 30 results". Clicking that row sets
+          loc-location to "Prague, Czechia", closes Browse, navigates to #results,
+          and displays "30 results found in Prague, Czechia" after hash routing.
+9. PASS — final browser console inspection found zero site JavaScript errors and
+          no startup-breaking errors.
+
+PRAGUE EXPECTED / OBSERVED
+Baseline Results, unfiltered: 30.
+Browse Prague, Czechia row: 30.
+Results after selecting Browse Prague, Czechia: 30.
+Composition: 21 public venues and 9 upcoming event results for the supplied data.
+Event-only filter: Browse showed 9 and selecting it displayed 9 event results.
+Switching back to All restored 30. Counts can change as events expire or data changes.
+
+REQUIRED CITY MAPPINGS — VERIFIED BY EXPANDING COUNTRIES IN THE BROWSER
+Berlin -> Germany: row displayed 274 results.
+Amsterdam -> Netherlands: row displayed 48 results.
+Paris -> France: row displayed 54 results.
+Athens -> Greece: row displayed 17 results.
+Tbilisi -> Georgia: row displayed 2 results.
+Prague -> Czechia: row displayed 30 results.
+These are actual observed row counts for the uploaded data on the test date.
+
+ADDITIONAL BROWSER CHECKS
+PASS — choosing "All of Georgia" saved the country scope and opened its 2 Results.
+PASS — Escape closed Browse and returned keyboard focus to the Browse button.
+PASS — closing and reopening Browse continued to work.
+PASS — expanded-country/city-row layout inspected in a browser screenshot.
+PASS — the rendered external script source list remained:
+  https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+  app.js?v=1.10
+  app-core.js?v=1.10
+  event-detail.js?v=1.14
+  calendar.js?v=1.10
+No test-client or helper script was injected into the page.
+
+SUPPLEMENTARY CHECKS (these do not substitute for the browser test)
+PASS — node --check app-core.js.
+PASS — byte comparison of all 55 original ZIP members: app-core.js is the only
+       changed file, and its entire original contents remain an exact prefix.
+PASS — source-level fixture tests of the actual Browse functions: all six required
+       mappings; venue-country precedence for Prague; 13 broad/multiple-country
+       labels; unknown floating cities; reliable event-only country fallback;
+       held events excluded; legitimate compound country names retained.
+The real data produced 114 city/country entries in 45 source-country groups.
+
+OBSERVED WARNINGS / TEST LIMITS
+The same "Using default theme." warning appeared before and after the change:
+design_theme.json is absent from the supplied ZIP. Some media/avatar assets are
+also absent. No data, theme, image or avatar files were added or replaced.
+The browser extension emitted its own metadata errors in both runs; these were
+identified by their chrome-extension origin, separately from site JavaScript.
+Testing covered desktop Chrome and the specified flows. No mobile-device, GPS,
+map-provider, external-service or live-deployment test is claimed.
+
+PACKAGE CONTENTS (exactly these three files)
+app-core.js
+diff-summary.txt
+test-report.txt
+No app.js, index.html, CSS, JSON, extra/helper JS or test infrastructure is packaged.

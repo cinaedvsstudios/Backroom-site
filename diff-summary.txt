@@ -1,0 +1,321 @@
+BACKROOM — BROWSE LOCATIONS: DIFF SUMMARY
+Prepared: 2026-09-05 02:44 Berlin time
+Source: user-uploaded backroomsite.zip, tested as a local copy.
+GitHub/main: no branch, commit, pull request, deployment or remote write made.
+
+EXACT EXISTING SITE FILE CHANGED
+app-core.js
+
+CHANGE BOUNDARY
+The complete original app-core.js is preserved byte-for-byte as the prefix of the
+modified file. Only a separate 210-line Browse Locations block is appended.
+Original line endings are preserved. No existing functions were edited or wrapped.
+
+PURPOSE AND BEHAVIOUR
+- Dynamically add Browse beside the existing Location input and map-search button.
+- Dynamically create a modal using the site's existing button and modal classes.
+- Expand countries to choose a city or all results in that country.
+- Read the already loaded venue/event arrays; do not fetch replacement data.
+- Prefer public-venue city/country pairs over conflicting event country spellings.
+- Use reliable non-broad events for cities without a venue country source.
+- Exclude broad labels and multi-country labels from country rows. Ignore cities
+  that have no reliable country source; no Europe country group is created.
+- Count through the existing Results functions and honour retained type/tag filters.
+  The typed query is excluded because the existing saveLocation clears it.
+- Selecting Prague sets loc-location to "Prague, Czechia", closes Browse and calls
+  the unchanged saveLocation(). Country selection saves the existing country scope.
+- Preserve existing matching behaviour: no additional broad-region event matches
+  are invented. Prague, Czechia matches the Results page's 30 results on test date.
+- Close button, Escape, backdrop dismissal and keyboard focus handling are local
+  to the new modal.
+
+EXPLICITLY PRESERVED
+app.js; index.html; style.css; calendar.js; event-detail.js; listings.json;
+events.json; every existing script tag; document.write(); all loader and version
+references; age-gate, loading and error-panel logic; all original matching functions,
+including venueMatchesSavedLocation(), resolveLocationInput(), saveLocation(),
+getSearchScopeVenues() and getSearchScopeEvents().
+
+ALL 54 UNCHANGED ORIGINAL FILES (byte comparison with uploaded ZIP)
+- LICENSE.txt
+- LICENSE_CINAEDVS_STUDIOS.pdf
+- README.txt
+- README_FIRST.txt
+- about.html
+- admin-enhancements-core.js
+- admin-enhancements.js
+- admin-event-venue-audit.js
+- admin-location-json.js
+- admin-performance.js
+- admin-record-preview-enhancements.js
+- admin-record-preview.html
+- admin.html
+- admin.js
+- app.js
+- avatar_list.json
+- backroom-enhancements.js
+- calendar.css
+- calendar.js
+- contact.html
+- cruising-guide.html
+- discounts.html
+- event-detail.css
+- event-detail.js
+- events - Copy.json
+- events TEMPLATE.json
+- events.json
+- featured.html
+- google6adea18b78d46d5a.html
+- heatmap-city-coordinates-v110.js
+- heatmap-data-v110.js
+- heatmap-source-status-v110.js
+- heatmap-sources-v110.js
+- heatmap-ui-v110.js
+- heatmap-v110.css
+- heatmap.html
+- index.html
+- listings - Copy.json
+- listings.json
+- ratings-admin.html
+- release_manifest.json
+- sitemap.xml
+- style.css
+- system_info.json
+- template.html
+- thanks.html
+- travel-extra-coordinates-v110.js
+- travel-geography-v110.js
+- travel-providers-v110.js
+- travel-v110.css
+- travel-v110.js
+- travel.html
+- v061_scraping_prompt_notes.txt
+- venue TEMPLATE.json
+
+TEST-ONLY INFRASTRUCTURE (NOT IN THE DELIVERED ZIP)
+package.json, package-lock.json, vite.config.mjs and node_modules/ were created only
+in the local test copy. The custom static server serves the original HTML and
+scripts without transforms or injected scripts. These files are not a site update.
+
+FILE HASHES (SHA-256)
+Original app-core.js: a0429d89b04ba213d0c04a1aaeafe9da863f3a6a48dcb4072f8f89b41ac6c0a7
+Changed app-core.js:  1da2383b04ce53100f3bffc9d0ea445da05ac207e46d07bfd04a76158d1f378e
+Original source ZIP: a6d9a32226569fc6d690220725d69438da102e5707c445bf7a2882ba5148cf16
+
+EXACT TEXT DIFF
+--- uploaded/app-core.js
++++ changed/app-core.js
+@@ -5021,4 +5021,213 @@
+     if(window.location.hash === '#results') handleRouting();
+ };
+ 
+-document.addEventListener('DOMContentLoaded', initApp);+document.addEventListener('DOMContentLoaded', initApp);
++
++// Browse Locations: an isolated, post-load addition. Existing startup and matching stay unchanged.
++(() => {
++    const broadPlaces = new Set([
++        'europe', 'eu', 'europeanunion', 'global', 'world', 'worldwide', 'international',
++        'multiplecountries', 'multicountry', 'variouscountries', 'allcountries',
++        'multiplecities', 'multicity', 'variouscities', 'allcities',
++        'asia', 'africa', 'northamerica', 'southamerica', 'latinamerica', 'centralamerica',
++        'oceania', 'australasia', 'middleeast', 'caribbean', 'scandinavia', 'baltics',
++        'balkans', 'dach', 'unknown', 'unspecified', 'various', 'multiple', 'other',
++        'online', 'virtual', 'tba', 'tbc', 'na', 'none'
++    ]);
++    const compoundCountries = new Set([
++        'bosniaandherzegovina', 'bosniaherzegovina', 'antiguaandbarbuda', 'antiguabarbuda',
++        'trinidadandtobago', 'trinidadtobago', 'saintkittsandnevis', 'stkittsandnevis',
++        'saintvincentandthegrenadines', 'saotomeandprincipe'
++    ]);
++    const clean = value => String(value || '').trim();
++    const isSpecificPlace = value => {
++        const text = clean(value);
++        return text && !broadPlaces.has(normalizeLocationName(text))
++            && !/\b(europe|global|worldwide|international|multiple|various|several|countries)\b/i.test(text);
++    };
++    const isCountry = value => {
++        const text = clean(value);
++        return isSpecificPlace(text) && !/[;,|/+\r\n]/.test(text)
++            && (!/\s(?:and|&)\s/i.test(text) || compoundCountries.has(normalizeCountryName(text)));
++    };
++
++    function getBrowseCountries() {
++        const countries = new Map();
++        const venueCountriesByCity = new Map();
++        const add = (city, country) => {
++            city = clean(city);
++            country = clean(country);
++            if (!isSpecificPlace(city) || !isCountry(country)) return;
++            const cityKey = normalizeCityName(city);
++            const countryKey = normalizeCountryName(country);
++            if (!cityKey || !countryKey) return;
++            let group = countries.get(countryKey);
++            if (!group) {
++                group = { country, cities: new Map() };
++                countries.set(countryKey, group);
++            }
++            if (!group.cities.has(cityKey)) group.cities.set(cityKey, { city, country: group.country });
++        };
++
++        // Venue-backed pairs take precedence over event spellings, such as Czech Republic/Czechia.
++        getPublicVenues().forEach(venue => {
++            if (!isCountry(venue?.Country)) return;
++            getCityTokens(venue).forEach(city => {
++                if (!isSpecificPlace(city)) return;
++                const cityKey = normalizeCityName(city);
++                const trusted = venueCountriesByCity.get(cityKey) || new Set();
++                trusted.add(normalizeCountryName(venue.Country));
++                venueCountriesByCity.set(cityKey, trusted);
++                add(city, venue.Country);
++            });
++        });
++        (events || []).filter(isSearchableEvent).forEach(event => {
++            if (!isCountry(event?.Country)) return;
++            getCityTokens(event).forEach(city => {
++                // A broad or conflicting event cannot invent a country for a known venue city.
++                if (!venueCountriesByCity.has(normalizeCityName(city))) add(city, event.Country);
++            });
++        });
++        return [...countries.values()]
++            .sort((a, b) => a.country.localeCompare(b.country, 'en'))
++            .map(group => ({
++                country: group.country,
++                cities: [...group.cities.values()].sort((a, b) => a.city.localeCompare(b.city, 'en'))
++            }));
++    }
++
++    function getBrowseResultCount(scope, now) {
++        // Count through the existing Results engine, including its venue-country priority,
++        // event dates and visibility rules. Do not remap broad-region events into extra matches.
++        let scopeVenues = getSearchScopeVenues(scope);
++        let scopeEvents = getSearchScopeEvents(now, scope);
++        if (activeFilters.length) {
++            scopeVenues = scopeVenues.filter(venue => {
++                const tags = getVenueTags(venue);
++                return activeFilters.every(tag => tags.includes(tag));
++            });
++            scopeEvents = scopeEvents.filter(({ event, venue }) => eventMatchesActiveTags(event, venue));
++        }
++        // saveLocation clears the typed search, but preserves these existing Results filters.
++        return (searchResultTypeFilter === 'Event' ? 0 : scopeVenues.length)
++            + (searchResultTypeFilter === 'Venue' ? 0 : scopeEvents.length);
++    }
++
++    function installBrowseLocations() {
++        const input = getLocationInput();
++        const row = input?.closest('.location-city-search-row');
++        if (!row || document.getElementById('btn-browse-locations')) return;
++
++        const browseButton = document.createElement('button');
++        browseButton.id = 'btn-browse-locations';
++        browseButton.type = 'button';
++        browseButton.className = 'btn secondary-btn pill-btn';
++        browseButton.textContent = 'Browse';
++        browseButton.setAttribute('aria-haspopup', 'dialog');
++        browseButton.setAttribute('aria-controls', 'browse-locations-modal');
++        Object.assign(browseButton.style, { width: 'auto', flex: '0 0 auto', padding: '0 12px' });
++        Object.assign(input.style, { minWidth: '0', flex: '1 1 0' });
++        row.appendChild(browseButton);
++
++        const modal = document.createElement('div');
++        modal.id = 'browse-locations-modal';
++        modal.className = 'modal hidden';
++        modal.setAttribute('role', 'dialog');
++        modal.setAttribute('aria-modal', 'true');
++        modal.setAttribute('aria-labelledby', 'browse-locations-title');
++        const content = document.createElement('div');
++        content.className = 'modal-content';
++        content.style.maxWidth = '600px';
++        const header = document.createElement('div');
++        header.className = 'modal-header';
++        const title = document.createElement('h2');
++        title.id = 'browse-locations-title';
++        title.className = 'display-font';
++        title.textContent = 'Browse Locations';
++        title.style.paddingRight = '35px';
++        const closeButton = document.createElement('button');
++        closeButton.type = 'button';
++        closeButton.className = 'btn-close';
++        closeButton.textContent = '❌';
++        closeButton.setAttribute('aria-label', 'Close Browse Locations');
++        const body = document.createElement('div');
++        body.className = 'modal-body body-font';
++        header.append(title, closeButton);
++        content.append(header, body);
++        modal.appendChild(content);
++        document.body.appendChild(modal);
++
++        const close = () => {
++            modal.classList.add('hidden');
++            browseButton.focus();
++        };
++        const select = location => {
++            input.value = location.city ? `${location.city}, ${location.country}` : location.country;
++            modal.classList.add('hidden');
++            saveLocation();
++        };
++        const resultButton = (label, scope, now) => {
++            const button = document.createElement('button');
++            button.type = 'button';
++            button.className = 'btn secondary-btn pill-btn';
++            const count = getBrowseResultCount(scope, now);
++            button.textContent = `${label} · ${count} result${count === 1 ? '' : 's'}`;
++            button.dataset.browseCountry = scope.country;
++            button.dataset.browseCity = scope.city;
++            button.dataset.resultCount = String(count);
++            button.setAttribute('aria-label', scope.city ? `${scope.city}, ${scope.country}: ${count} results` : `All of ${scope.country}: ${count} results`);
++            Object.assign(button.style, { textAlign: 'left', marginBottom: '8px', whiteSpace: 'normal' });
++            button.addEventListener('click', () => select(scope));
++            return button;
++        };
++        browseButton.addEventListener('click', () => {
++            const now = new Date();
++            const fragment = document.createDocumentFragment();
++            const groups = getBrowseCountries();
++            groups.forEach(group => {
++                const details = document.createElement('details');
++                details.dataset.browseCountry = group.country;
++                details.style.marginBottom = '12px';
++                const summary = document.createElement('summary');
++                summary.textContent = `${group.country} · ${group.cities.length} ${group.cities.length === 1 ? 'city' : 'cities'}`;
++                Object.assign(summary.style, { cursor: 'pointer', padding: '12px 0', fontWeight: 'bold', color: 'var(--primary-blue)' });
++                const choices = document.createElement('div');
++                // Populate counts only when this country is expanded.
++                details.addEventListener('toggle', () => {
++                    if (!details.open || choices.childElementCount) return;
++                    choices.appendChild(resultButton(`All of ${group.country}`, { scope: 'country', city: '', country: group.country }, now));
++                    group.cities.forEach(location => choices.appendChild(resultButton(location.city, { scope: 'city', ...location }, now)));
++                });
++                details.append(summary, choices);
++                fragment.appendChild(details);
++            });
++            if (!groups.length) {
++                const empty = document.createElement('p');
++                empty.textContent = 'No locations available yet.';
++                fragment.appendChild(empty);
++            }
++            body.replaceChildren(fragment);
++            body.scrollTop = 0;
++            modal.classList.remove('hidden');
++            closeButton.focus();
++        });
++        closeButton.addEventListener('click', close);
++        modal.addEventListener('click', event => { if (event.target === modal) close(); });
++        modal.addEventListener('keydown', event => {
++            if (event.key === 'Escape') {
++                event.preventDefault();
++                event.stopPropagation();
++                close();
++            } else if (event.key === 'Tab') {
++                const focusable = [...modal.querySelectorAll('button, summary')].filter(el => el.getClientRects().length);
++                const first = focusable[0];
++                const last = focusable.at(-1);
++                if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
++                else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
++            }
++        });
++    }
++
++    if (document.readyState === 'complete') installBrowseLocations();
++    else window.addEventListener('load', installBrowseLocations, { once: true });
++})();
