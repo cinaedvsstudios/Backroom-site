@@ -277,6 +277,7 @@
             return;
         }
 
+        const mode = pending.mode;
         try {
             draftData = after;
             selectedAdminRecordId = '';
@@ -284,16 +285,21 @@
             activeTableFilters = {};
             currentReviewFilter = 'all';
             saveDraftsToLocal();
-            renderFilters();
-            renderTable();
-            updateViewRecordButton();
-            closeDialog();
-            message(count + ' ' + pending.mode + ' removed from the working list. Export JSON to save the new file.');
         } catch (error) {
             draftData = before;
             console.error('Remove JSON failed:', error);
             message('Could not save removals locally. Nothing was written to the master file.');
+            return;
         }
+        closeDialog();
+        try {
+            renderFilters();
+            renderTable();
+            updateViewRecordButton();
+        } catch (error) {
+            console.warn('Working data saved but Admin display needs refreshing:', error);
+        }
+        message(count + ' ' + mode + ' removed from the working list. Export JSON to save the new file.');
     }
 
     async function handleFile(file) {
