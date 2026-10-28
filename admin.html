@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backroom Admin Dashboard - v0.16</title>
+    <title>Backroom Admin Dashboard - v0.17</title>
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Barlow+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=1.10">
     <style>
@@ -211,7 +211,8 @@
                 </div>
 
                 <div style="display:flex; gap:10px; margin-bottom: 15px; flex-wrap:wrap;">
-                    <button id="btn-fetch-live" class="btn primary-btn pill-btn" style="width:auto;">☁️ Load Live / Clear Changes</button>
+                    <button id="btn-fetch-live" class="btn primary-btn pill-btn" style="width:auto;">☁️ Load / Clear</button>
+                    <button id="btn-fetch-live-all" class="btn secondary-btn pill-btn" style="width:auto;" title="Discard both working drafts and reload listings.json and events.json">⟳ Load / Clear All</button>
                     
                     <label class="btn secondary-btn pill-btn" style="width:auto; cursor:pointer;" title="Opens in Preview Window first">
                         🔄 Merge JSON
@@ -359,7 +360,7 @@
         </main>
     </div>
 
-    <script src="admin.js?v=1.10"></script>
-    <script src="admin-enhancements.js?v=0.16"></script>
+    <script src="admin.js?v=0.17"></script>
+    <script src="admin-enhancements.js?v=0.17"></script>
 </body>
 </html>
