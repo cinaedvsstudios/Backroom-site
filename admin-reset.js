@@ -87,12 +87,16 @@
             writeDraftsAtomically(modes, newDrafts);
 
             // Release the previous import and preview DOM only after the reload succeeded.
-            window.__backroomAdminClearMerge?.();
-            if (typeof tempMergeData !== 'undefined') tempMergeData = [];
+            const mergeSource = window.__backroomAdminMergeSourceMode?.();
+            if (scope === 'all' || !mergeSource || mergeSource === selectedMode) {
+                window.__backroomAdminClearMerge?.(scope === 'all' ? 'all' : selectedMode);
+                if (typeof tempMergeData !== 'undefined') tempMergeData = [];
+            }
             window.__backroomAdminV109?.cancelDeleteMode?.(false);
             window.__backroomAdminResetDashboard?.();
             if (modes.includes('events')) window.__backroomAdminResetEventCleanup?.();
 
+            window.__backroomAdminResetGeneration = (window.__backroomAdminResetGeneration || 0) + 1;
             modes.forEach(mode => { window.__backroomAdminLiveByMode[mode] = fetched[mode]; });
             liveData = window.__backroomAdminLiveByMode[selectedMode];
             draftData = newDrafts[selectedMode];
