@@ -16,8 +16,8 @@
         : JSON.parse(JSON.stringify(rows));
 
     function hasCurrentEdits() {
-        if (!Array.isArray(draftData) || !draftData.length) return false;
-        if (!Array.isArray(liveData) || !liveData.length) return true;
+        if (!Array.isArray(draftData) || !Array.isArray(liveData)) return false;
+        if (!liveData.length && !draftData.length) return false;
         return JSON.stringify(draftData) !== JSON.stringify(liveData);
     }
 
@@ -78,6 +78,9 @@
             // Fetch before clearing anything. Failed network responses must never erase drafts.
             const fetched = {};
             const rows = await Promise.all(modes.map(mode => fetchMode(mode)));
+            if (currentMode !== selectedMode) {
+                throw new Error('You switched tabs during the reload. No changes were discarded; click again in the desired tab.');
+            }
             modes.forEach((mode, i) => { fetched[mode] = rows[i]; });
             const newDrafts = {};
             modes.forEach(mode => { newDrafts[mode] = cloneRecords(fetched[mode]); });
@@ -88,6 +91,7 @@
             if (typeof tempMergeData !== 'undefined') tempMergeData = [];
             window.__backroomAdminV109?.cancelDeleteMode?.(false);
             window.__backroomAdminResetDashboard?.();
+            if (modes.includes('events')) window.__backroomAdminResetEventCleanup?.();
 
             modes.forEach(mode => { window.__backroomAdminLiveByMode[mode] = fetched[mode]; });
             liveData = window.__backroomAdminLiveByMode[selectedMode];
@@ -100,7 +104,8 @@
             if (search) search.value = '';
 
             lastSavedDate = new Date().toLocaleString();
-            localStorage.setItem('br_admin_timestamp', lastSavedDate);
+            try { localStorage.setItem('br_admin_timestamp', lastSavedDate); }
+            catch (error) { console.warn('Could not store display timestamp:', error); }
             const timestamp = document.getElementById('summary-timestamp');
             if (timestamp) timestamp.textContent = 'Showing Data From: ' + lastSavedDate;
 
