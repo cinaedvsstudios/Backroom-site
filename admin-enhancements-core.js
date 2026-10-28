@@ -406,6 +406,11 @@
     }
 
     window.__backroomAdminClearMerge = closeMergePreview;
+    window.__backroomAdminResetEventCleanup = function() {
+        state.cleanupActive = false;
+        state.cleanupCutoff = null;
+        renderCleanupBar();
+    };
 
     function handleMergeFile(file) {
         if (!file) return;
@@ -734,6 +739,8 @@
         const input = document.getElementById('admin-global-search');
         if (input) input.value = '';
     }
+
+    window.__backroomAdminResetDashboard = resetDashboardViewState;
 
     function clearAllFilters() {
         activeTableFilters = {};
