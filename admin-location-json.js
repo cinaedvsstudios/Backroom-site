@@ -12,7 +12,8 @@
         eventById: new Map(),
         loadPromise: null,
         timer: 0,
-        observer: null
+        observer: null,
+        generation: 0
     };
 
     const clean = (value) => String(value ?? '').trim().replace(/\s+/g, ' ');
@@ -91,12 +92,14 @@
     }
 
     async function loadAuthoritativeJson(force = false) {
-        if (state.loadPromise && !force) return state.loadPromise;
+        if (state.loadPromise) return state.loadPromise;
+        const generation = state.generation;
 
         state.loadPromise = Promise.allSettled([
             fetchJson('listings.json'),
             fetchJson('events.json')
         ]).then((results) => {
+            if (generation !== state.generation) return;
             const venueResult = results[0];
             const eventResult = results[1];
             const failures = [];
@@ -343,15 +346,21 @@
             document.getElementById(id)?.addEventListener('click', () => {
                 state.country = '';
                 state.city = '';
-                setTimeout(() => {
-                    refreshControls();
-                    loadAuthoritativeJson(true);
-                }, 0);
+                refreshControls();
+                scheduleApply(60);
             });
         });
 
-        document.getElementById('btn-fetch-live')?.addEventListener('click', () => {
-            setTimeout(() => loadAuthoritativeJson(true), 150);
+        window.addEventListener('backroom-admin-live-reset', (event) => {
+            const changes = event.detail?.data || {};
+            state.generation++;
+            if (Array.isArray(changes.venues)) state.venues = changes.venues;
+            if (Array.isArray(changes.events)) state.events = changes.events;
+            state.country = '';
+            state.city = '';
+            rebuildIndexes();
+            refreshControls();
+            scheduleApply(80);
         });
 
         window.__backroomAdminJsonLocations = {
