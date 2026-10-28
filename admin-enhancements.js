@@ -4,7 +4,7 @@ document.write('<script src="admin-enhancements-core.js?v=0.17"><\/script>');
 document.write('<script src="admin-location-json.js?v=0.17"><\/script>');
 document.write('<script src="admin-reset.js?v=0.17"><\/script>');
 document.write('<script src="admin-event-venue-audit.js?v=1.00"><\/script>');
-document.write('<script src="admin-remove-json.js?v=0.16"><\/script>');
+document.write('<script src="admin-remove-json.js?v=0.17"><\/script>');
 
 (() => {
     'use strict';
