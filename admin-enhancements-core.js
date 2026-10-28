@@ -15,7 +15,12 @@
         mergeStatus: '',
         mergeColumnFilters: {},
         mergeMode: false,
-        jsonHandles: { venues: null, events: null }
+        jsonHandles: { venues: null, events: null },
+        mergeSourceMode: null,
+        mergePage: 0,
+        mergeIdCounts: new Map(),
+        mergeSignatures: new Map(),
+        draftById: new Map()
     };
 
     const deepClone = (value) => JSON.parse(JSON.stringify(value));
@@ -192,17 +197,33 @@
         });
     }
 
+    function rebuildMergeIndexes() {
+        const field = state.mergeSourceMode === 'venues' ? 'Venue_ID' : 'Event_ID';
+        state.mergeIdCounts = new Map();
+        state.mergeSignatures = new Map();
+        state.draftById = new Map();
+        draftData.forEach((row) => {
+            const id = String(row?.[field] ?? '').trim();
+            if (id) state.draftById.set(id, row);
+        });
+        state.mergeRows.forEach((entry) => {
+            const id = String(entry.row?.[field] ?? '').trim();
+            if (!id) return;
+            state.mergeIdCounts.set(id, (state.mergeIdCounts.get(id) || 0) + 1);
+            if (!state.mergeSignatures.has(id)) state.mergeSignatures.set(id, new Set());
+            state.mergeSignatures.get(id).add(JSON.stringify(entry.row));
+        });
+    }
+
     function calculateMergeStatus(entry) {
         if (!entry.included) return 'Excluded';
-        const idField = currentMode === 'venues' ? 'Venue_ID' : 'Event_ID';
-        const id = String(entry.row?.[idField] ?? '').trim();
+        const field = state.mergeSourceMode === 'venues' ? 'Venue_ID' : 'Event_ID';
+        const id = String(entry.row?.[field] ?? '').trim();
         if (!id) return 'Invalid';
-        const sameId = state.mergeRows.filter((item) => String(item.row?.[idField] ?? '').trim() === id);
-        if (sameId.length > 1) {
-            const signatures = new Set(sameId.map((item) => JSON.stringify(item.row)));
-            return signatures.size > 1 ? 'Conflict' : 'Duplicate';
+        if ((state.mergeIdCounts.get(id) || 0) > 1) {
+            return state.mergeSignatures.get(id)?.size > 1 ? 'Conflict' : 'Duplicate';
         }
-        const existing = draftData.find((item) => String(item?.[idField] ?? '') === id);
+        const existing = state.draftById.get(id);
         if (!existing) return 'New';
         const merged = { ...existing, ...entry.row };
         return JSON.stringify(existing) === JSON.stringify(merged) ? 'Unchanged' : 'Updating';
@@ -226,7 +247,7 @@
             const status = calculateMergeStatus(entry);
             counts[status] = (counts[status] || 0) + 1;
         });
-        counts.WillMerge = state.mergeRows.filter((entry) => entry.included && !['Invalid', 'Duplicate', 'Conflict'].includes(calculateMergeStatus(entry))).length;
+        counts.WillMerge = state.mergeRows.reduce((n, entry) => n + Number(entry.included && !['Invalid', 'Duplicate', 'Conflict'].includes(calculateMergeStatus(entry))), 0);
         return counts;
     }
 
@@ -248,8 +269,13 @@
         const applyButton = document.getElementById('btn-apply-merge');
         if (!controls || !tableContainer || !applyButton) return;
 
+        rebuildMergeIndexes();
         const visible = getVisibleMergeEntries();
         const counts = getMergeCounts();
+        const pageSize = 75;
+        const pageCount = Math.max(1, Math.ceil(visible.length / pageSize));
+        state.mergePage = Math.min(state.mergePage, pageCount - 1);
+        const displayed = visible.slice(state.mergePage * pageSize, (state.mergePage + 1) * pageSize);
         controls.classList.remove('hidden');
         controls.innerHTML = `
             <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
@@ -261,13 +287,18 @@
                 <button id="merge-clear-filters" class="btn secondary-btn pill-btn" style="width:auto;">Clear Filters</button>
             </div>
             <div id="merge-count-summary" style="display:flex;gap:12px;flex-wrap:wrap;color:var(--text-light);font-size:.9rem;">
-                <strong>Uploaded: ${counts.Uploaded}</strong><span>New: ${counts.New}</span><span>Updates: ${counts.Updating}</span><span>Unchanged: ${counts.Unchanged}</span><span>Invalid: ${counts.Invalid}</span><span>Duplicate: ${counts.Duplicate}</span><span>Conflict: ${counts.Conflict}</span><span>Excluded: ${counts.Excluded}</span><strong style="color:var(--primary-blue);">Will merge: ${counts.WillMerge}</strong><span>Showing: ${visible.length}</span>
+                <strong>Uploaded: ${counts.Uploaded}</strong><span>New: ${counts.New}</span><span>Updates: ${counts.Updating}</span><span>Unchanged: ${counts.Unchanged}</span><span>Invalid: ${counts.Invalid}</span><span>Duplicate: ${counts.Duplicate}</span><span>Conflict: ${counts.Conflict}</span><span>Excluded: ${counts.Excluded}</span><strong style="color:var(--primary-blue);">Will merge: ${counts.WillMerge}</strong><span>Matching filters: ${visible.length}</span>
             </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap;">
                 <button id="merge-exclude-filtered" class="btn pill-btn" style="width:auto;background:var(--dark-red);color:#fff;">Exclude All ${visible.length} Filtered</button>
                 <button id="merge-restore-filtered" class="btn secondary-btn pill-btn" style="width:auto;">Restore Filtered</button>
                 <button id="merge-restore-all" class="btn secondary-btn pill-btn" style="width:auto;">Restore All Excluded</button>
                 <button id="merge-cancel" class="btn secondary-btn pill-btn" style="width:auto;margin-left:auto;">Cancel Merge</button>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                <button id="merge-page-prev" class="btn secondary-btn pill-btn" style="width:auto;" ${state.mergePage === 0 ? 'disabled' : ''}>◀ Previous</button>
+                <span>Page ${state.mergePage + 1} of ${pageCount} · Showing ${displayed.length} of ${visible.length} filtered records</span>
+                <button id="merge-page-next" class="btn secondary-btn pill-btn" style="width:auto;" ${state.mergePage >= pageCount - 1 ? 'disabled' : ''}>Next ▶</button>
             </div>`;
 
         let html = '<table><thead id="preview-thead"><tr><th style="min-width:90px;">Include</th><th style="min-width:100px;">Result</th>';
@@ -275,7 +306,7 @@
             html += `<th><div>${escapeHtml(column)}</div><input class="filter-header-input merge-column-filter" data-column="${escapeHtml(column)}" placeholder="Filter…" value="${escapeHtml(state.mergeColumnFilters[column] || '')}"></th>`;
         });
         html += '</tr></thead><tbody>';
-        visible.forEach((entry) => {
+        displayed.forEach((entry) => {
             const status = calculateMergeStatus(entry);
             html += `<tr data-merge-index="${entry.index}" style="${entry.included ? '' : 'opacity:.48;'}">
                 <td style="text-align:center;"><input type="checkbox" class="merge-include-toggle" data-index="${entry.index}" ${entry.included ? 'checked' : ''}></td>
@@ -341,6 +372,14 @@
             state.mergeRows.forEach((entry) => { entry.included = true; });
             renderMergePreview();
         });
+        document.getElementById('merge-page-prev')?.addEventListener('click', () => {
+            state.mergePage = Math.max(0, state.mergePage - 1);
+            renderMergePreview();
+        });
+        document.getElementById('merge-page-next')?.addEventListener('click', () => {
+            state.mergePage = Math.min(pageCount - 1, state.mergePage + 1);
+            renderMergePreview();
+        });
         document.getElementById('merge-cancel')?.addEventListener('click', closeMergePreview);
     }
 
@@ -351,9 +390,22 @@
         state.mergeSearch = '';
         state.mergeStatus = '';
         state.mergeColumnFilters = {};
-        document.getElementById('merge-preview-controls')?.classList.add('hidden');
+        state.mergeSourceMode = null;
+        state.mergePage = 0;
+        state.mergeIdCounts.clear();
+        state.mergeSignatures.clear();
+        state.draftById.clear();
+        tempMergeData = [];
+        const controls = document.getElementById('merge-preview-controls');
+        if (controls) {
+            controls.classList.add('hidden');
+            controls.replaceChildren();
+        }
+        document.getElementById('preview-table-container')?.replaceChildren();
         document.getElementById('preview-import-modal')?.classList.add('hidden');
     }
+
+    window.__backroomAdminClearMerge = closeMergePreview;
 
     function handleMergeFile(file) {
         if (!file) return;
@@ -363,12 +415,14 @@
                 const parsed = JSON.parse(event.target.result);
                 if (!Array.isArray(parsed)) throw new Error('File is not an array');
                 state.mergeMode = true;
-                state.mergeRows = parsed.map((row, index) => ({ row: deepClone(row), index, included: true }));
+                state.mergeRows = parsed.map((row, index) => ({ row, index, included: true }));
+                state.mergeSourceMode = currentMode;
+                state.mergePage = 0;
                 state.mergeColumns = Array.from(new Set(parsed.flatMap((row) => Object.keys(row || {}))));
                 state.mergeSearch = '';
                 state.mergeStatus = '';
                 state.mergeColumnFilters = {};
-                tempMergeData = parsed;
+                tempMergeData = [];
                 document.getElementById('preview-modal-title').innerText = '👁️ REVIEW & MERGE IMPORT';
                 document.getElementById('preview-import-modal').classList.remove('hidden');
                 renderMergePreview();
@@ -394,27 +448,32 @@
         const newApply = oldApply.cloneNode(true);
         oldApply.replaceWith(newApply);
         newApply.addEventListener('click', () => {
+            rebuildMergeIndexes();
             const valid = state.mergeRows.filter((entry) => entry.included && !['Invalid', 'Duplicate', 'Conflict'].includes(calculateMergeStatus(entry)));
             const idField = currentMode === 'venues' ? 'Venue_ID' : 'Event_ID';
             let updated = 0;
             let added = 0;
+            const indexById = new Map(draftData.map((row, index) => [String(row?.[idField] ?? ''), index]));
             valid.forEach((entry) => {
-                const index = draftData.findIndex((row) => String(row?.[idField] ?? '') === String(entry.row?.[idField] ?? ''));
-                if (index >= 0) {
+                const id = String(entry.row?.[idField] ?? '');
+                const index = indexById.get(id);
+                if (index !== undefined) {
                     draftData[index] = { ...draftData[index], ...entry.row };
                     updated += 1;
                 } else {
+                    indexById.set(id, draftData.length);
                     draftData.push(entry.row);
                     added += 1;
                 }
             });
             saveDraftsToLocal();
-            renderTable();
             closeMergePreview();
+            renderTable();
             showToast(`Merge applied: ${updated} updated, ${added} new.`);
         });
 
         ensureMergeControls();
+        document.querySelector('#preview-import-header span[onclick]')?.addEventListener('click', closeMergePreview);
     }
 
     function fallbackDownload(content, filename, mimeType) {
