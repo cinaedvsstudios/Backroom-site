@@ -405,7 +405,11 @@
         document.getElementById('preview-import-modal')?.classList.add('hidden');
     }
 
-    window.__backroomAdminClearMerge = closeMergePreview;
+    window.__backroomAdminMergeSourceMode = () => state.mergeSourceMode;
+    window.__backroomAdminClearMerge = (target = 'all') => {
+        if (target !== 'all' && state.mergeSourceMode && state.mergeSourceMode !== target) return;
+        closeMergePreview();
+    };
     window.__backroomAdminResetEventCleanup = function() {
         state.cleanupActive = false;
         state.cleanupCutoff = null;
