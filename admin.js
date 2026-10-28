@@ -240,7 +240,8 @@ function loadDraftsFromLocal() {
     const draft = localStorage.getItem(draftKey);
     if(draft) draftData = JSON.parse(draft);
     else draftData = [];
-    
+    const cachedLive = window.__backroomAdminLiveByMode?.[currentMode];
+    liveData = Array.isArray(cachedLive) ? cachedLive : [];
     fetchLiveSilently();
     const timeDisplay = document.getElementById('summary-timestamp');
     if(timeDisplay) timeDisplay.innerText = `Showing Data From: ${lastSavedDate}`;
@@ -263,11 +264,10 @@ function saveDraftsToLocal() {
 async function fetchLiveSilently() {
     const mode = currentMode;
     if (mode !== 'venues' && mode !== 'events') return;
+    const generation = window.__backroomAdminResetGeneration || 0;
     const cached = window.__backroomAdminLiveByMode?.[mode];
     if (Array.isArray(cached)) {
         liveData = cached;
-        updateMismatchCount();
-        renderTable();
         return;
     }
     try {
@@ -275,7 +275,7 @@ async function fetchLiveSilently() {
         const res = await fetch(url + '?v=' + Date.now(), { cache: 'no-store' });
         if (!res.ok) return;
         const parsed = await res.json();
-        if (!Array.isArray(parsed) || currentMode !== mode) return;
+        if (!Array.isArray(parsed) || currentMode !== mode || (window.__backroomAdminResetGeneration || 0) !== generation) return;
         if (window.__backroomAdminLiveByMode) window.__backroomAdminLiveByMode[mode] = parsed;
         liveData = parsed;
         updateMismatchCount();
