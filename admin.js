@@ -261,13 +261,26 @@ function saveDraftsToLocal() {
 }
 
 async function fetchLiveSilently() {
-    try {
-        const url = currentMode === 'venues' ? 'listings.json' : 'events.json';
-        const res = await fetch(url + '?v=' + new Date().getTime());
-        if(res.ok) liveData = await res.json();
+    const mode = currentMode;
+    if (mode !== 'venues' && mode !== 'events') return;
+    const cached = window.__backroomAdminLiveByMode?.[mode];
+    if (Array.isArray(cached)) {
+        liveData = cached;
         updateMismatchCount();
-        renderTable(); 
-    } catch(e) {}
+        renderTable();
+        return;
+    }
+    try {
+        const url = mode === 'venues' ? 'listings.json' : 'events.json';
+        const res = await fetch(url + '?v=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) return;
+        const parsed = await res.json();
+        if (!Array.isArray(parsed) || currentMode !== mode) return;
+        if (window.__backroomAdminLiveByMode) window.__backroomAdminLiveByMode[mode] = parsed;
+        liveData = parsed;
+        updateMismatchCount();
+        renderTable();
+    } catch (e) { console.warn('Could not load live JSON for ' + mode, e); }
 }
 
 function generateReviewLists() {
@@ -1191,17 +1204,8 @@ document.addEventListener('DOMContentLoaded', () => {
         clipboard.addEventListener('input', (e) => localStorage.setItem('br_admin_clipboard', e.target.value));
     }
 
-    document.getElementById('btn-fetch-live')?.addEventListener('click', async () => {
-        try {
-            const url = currentMode === 'venues' ? 'listings.json' : 'events.json';
-            const res = await fetch(url + '?v=' + new Date().getTime());
-            if(!res.ok) throw new Error("Could not find file.");
-            liveData = await res.json();
-            draftData = JSON.parse(JSON.stringify(liveData)); 
-            saveDraftsToLocal();
-            renderTable();
-            showToast(`Live data loaded / Changes cleared!`);
-        } catch(err) { showToast("Fetch failed."); }
+    document.getElementById('btn-fetch-live')?.addEventListener('click', () => {
+        window.backroomAdminReset?.('current');
     });
 
     document.getElementById('file-upload-replace')?.addEventListener('change', (e) => {
