@@ -74,6 +74,7 @@
         const previousText = currentButton?.textContent;
         if (currentButton) currentButton.textContent = 'Loading…';
 
+        let committed = false;
         try {
             // Fetch before clearing anything. Failed network responses must never erase drafts.
             const fetched = {};
@@ -85,6 +86,7 @@
             const newDrafts = {};
             modes.forEach(mode => { newDrafts[mode] = cloneRecords(fetched[mode]); });
             writeDraftsAtomically(modes, newDrafts);
+            committed = true;
 
             // Release the previous import and preview DOM only after the reload succeeded.
             const mergeSource = window.__backroomAdminMergeSourceMode?.();
@@ -125,7 +127,9 @@
                 : (selectedMode === 'venues' ? 'Venues' : 'Events') + ' refreshed. The other tab was preserved.');
         } catch (error) {
             console.error('Backroom Admin live reload failed:', error);
-            notice('Live reload failed. Your previous drafts were preserved. ' + (error.message || ''));
+            notice(committed
+                ? 'Live data was saved locally, but the Admin display could not refresh. Reload the Admin page. ' + (error.message || '')
+                : 'Live reload failed. Your previous drafts were preserved. ' + (error.message || ''));
         } finally {
             busy = false;
             if (currentButton) {
