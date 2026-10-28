@@ -336,6 +336,10 @@
         }
     }
 
+    window.addEventListener('backroom-admin-live-reset', (event) => {
+        if (pending && event.detail?.modes?.includes(pending.mode)) closeDialog();
+    });
+
     function install() {
         const inputMerge = document.getElementById('file-upload-merge');
         const labelMerge = inputMerge?.closest('label');
