@@ -13,7 +13,8 @@
         loadPromise: null,
         timer: 0,
         observer: null,
-        generation: 0
+        generation: 0,
+        modeRevisions: { venues: 0, events: 0 }
     };
 
     const clean = (value) => String(value ?? '').trim().replace(/\s+/g, ' ');
@@ -93,22 +94,24 @@
 
     async function loadAuthoritativeJson(force = false) {
         if (state.loadPromise) return state.loadPromise;
-        const generation = state.generation;
+        const revisions = { ...state.modeRevisions };
 
         state.loadPromise = Promise.allSettled([
             fetchJson('listings.json'),
             fetchJson('events.json')
         ]).then((results) => {
-            if (generation !== state.generation) return;
             const venueResult = results[0];
             const eventResult = results[1];
             const failures = [];
 
-            if (venueResult.status === 'fulfilled') state.venues = venueResult.value;
-            else failures.push(venueResult.reason?.message || 'listings.json failed');
-
-            if (eventResult.status === 'fulfilled') state.events = eventResult.value;
-            else failures.push(eventResult.reason?.message || 'events.json failed');
+            if (revisions.venues === state.modeRevisions.venues) {
+                if (venueResult.status === 'fulfilled') state.venues = venueResult.value;
+                else failures.push(venueResult.reason?.message || 'listings.json failed');
+            }
+            if (revisions.events === state.modeRevisions.events) {
+                if (eventResult.status === 'fulfilled') state.events = eventResult.value;
+                else failures.push(eventResult.reason?.message || 'events.json failed');
+            }
 
             rebuildIndexes();
             refreshControls();
@@ -354,8 +357,14 @@
         window.addEventListener('backroom-admin-live-reset', (event) => {
             const changes = event.detail?.data || {};
             state.generation++;
-            if (Array.isArray(changes.venues)) state.venues = changes.venues;
-            if (Array.isArray(changes.events)) state.events = changes.events;
+            if (Array.isArray(changes.venues)) {
+                state.modeRevisions.venues++;
+                state.venues = changes.venues;
+            }
+            if (Array.isArray(changes.events)) {
+                state.modeRevisions.events++;
+                state.events = changes.events;
+            }
             state.country = '';
             state.city = '';
             rebuildIndexes();
