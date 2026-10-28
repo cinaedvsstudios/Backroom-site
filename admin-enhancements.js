@@ -1,7 +1,8 @@
-/* Backroom Admin v0.16 enhancements loader and live coverage statistics. */
-document.write('<script src="admin-performance.js?v=0.16"><\/script>');
-document.write('<script src="admin-enhancements-core.js?v=1.09"><\/script>');
-document.write('<script src="admin-location-json.js?v=1.11"><\/script>');
+/* Backroom Admin v0.17 enhancements loader and live coverage statistics. */
+document.write('<script src="admin-performance.js?v=0.17"><\/script>');
+document.write('<script src="admin-enhancements-core.js?v=0.17"><\/script>');
+document.write('<script src="admin-location-json.js?v=0.17"><\/script>');
+document.write('<script src="admin-reset.js?v=0.17"><\/script>');
 document.write('<script src="admin-event-venue-audit.js?v=1.00"><\/script>');
 document.write('<script src="admin-remove-json.js?v=0.16"><\/script>');
 
@@ -52,11 +53,16 @@ document.write('<script src="admin-remove-json.js?v=0.16"><\/script>');
 
         coverageState.venueMapPromise = (async () => {
             const map = new Map();
-            try {
-                const response = await fetch(`listings.json?v=${Date.now()}`);
-                if (response.ok) addVenuesToMap(map, await response.json());
-            } catch {
-                // Local drafts below still provide useful coverage when offline.
+            const cached = window.__backroomAdminLiveByMode?.venues || window.__backroomAdminJsonLocations?.state?.venues;
+            if (Array.isArray(cached) && cached.length) {
+                addVenuesToMap(map, cached);
+            } else {
+                try {
+                    const response = await fetch(`listings.json?v=${Date.now()}`, { cache: 'no-store' });
+                    if (response.ok) addVenuesToMap(map, await response.json());
+                } catch {
+                    // Local drafts below still provide useful coverage when offline.
+                }
             }
             addVenuesToMap(map, readStoredVenueDraft());
             coverageState.venueMap = map;
@@ -186,9 +192,13 @@ document.write('<script src="admin-remove-json.js?v=0.16"><\/script>');
         ['nav-venues', 'nav-events'].forEach((id) => {
             document.getElementById(id)?.addEventListener('click', () => scheduleCoverageUpdate(100));
         });
-        document.getElementById('btn-fetch-live')?.addEventListener('click', () => {
-            getVenueMap(true);
-            scheduleCoverageUpdate(350);
+        window.addEventListener('backroom-admin-live-reset', (event) => {
+            if (event.detail?.modes?.includes('venues')) {
+                coverageState.venueMap = new Map();
+                addVenuesToMap(coverageState.venueMap, event.detail?.data?.venues || []);
+                coverageState.venueMapPromise = null;
+            }
+            scheduleCoverageUpdate(100);
         });
         ['file-upload-replace', 'file-upload-merge'].forEach((id) => {
             document.getElementById(id)?.addEventListener('change', () => {
