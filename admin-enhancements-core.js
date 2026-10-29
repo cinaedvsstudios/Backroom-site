@@ -1284,12 +1284,14 @@
             locationDeleteState.city = '';
         }
 
-        countrySelect.innerHTML = '<option value="">Country</option>'
+        const countryHtml = '<option value="">Country</option>'
             + countries.map((country) => `<option value="${escapeHTMLV109(country)}">${escapeHTMLV109(country)}</option>`).join('');
+        if (countrySelect.innerHTML !== countryHtml) countrySelect.innerHTML = countryHtml;
         countrySelect.value = locationDeleteState.country;
 
-        citySelect.innerHTML = '<option value="">City</option>'
+        const cityHtml = '<option value="">City</option>'
             + cities.map((city) => `<option value="${escapeHTMLV109(city)}">${escapeHTMLV109(city)}</option>`).join('');
+        if (citySelect.innerHTML !== cityHtml) citySelect.innerHTML = cityHtml;
         citySelect.value = locationDeleteState.city;
         citySelect.disabled = !cities.length;
     }
