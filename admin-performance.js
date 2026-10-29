@@ -1,4 +1,4 @@
-/* Backroom Admin performance layer v0.18
+/* Backroom Admin performance layer v0.19
    - Caps rendered table rows by default to reduce browser lag on large JSON files.
    - Keeps all draft data loaded; exports and saves still use the full dataset.
    - Optimises mismatch checks and edited-cell lookup with Venue_ID/Event_ID maps.
@@ -9,7 +9,7 @@
     if (window.__backroomAdminPerformanceInstalled) return;
     window.__backroomAdminPerformanceInstalled = true;
 
-    const VERSION = 'v0.18';
+    const VERSION = 'v0.19';
     const DEFAULT_ROW_CAP = 250;
     const STORAGE_KEY = 'br_admin_table_row_cap';
 
@@ -85,6 +85,8 @@
 
     function installVersionBadge() {
         document.title = `Backroom Admin Dashboard - ${VERSION}`;
+        const sidebarVersion = document.getElementById('admin-sidebar-version');
+        if (sidebarVersion) sidebarVersion.textContent = VERSION;
         const summary = document.getElementById('data-summary-bar');
         if (!summary || document.getElementById('admin-version-badge')) return;
         const badge = document.createElement('div');
