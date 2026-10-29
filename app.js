@@ -7,7 +7,7 @@ if (BACKROOM_INITIAL_EMBEDDED_HASH) {
 }
 
 document.write('<link rel="stylesheet" href="event-detail.css?v=1.14">');
-document.write('<script src="app-core.js?v=1.10"><\/script>');
+document.write('<script src="app-core.js?v=1.11"><\/script>');
 document.write('<script src="event-detail.js?v=1.14"><\/script>');
 
 (() => {
