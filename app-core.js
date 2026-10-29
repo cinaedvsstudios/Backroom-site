@@ -4700,7 +4700,7 @@ function openVenueModal(venue) {
     
     ratingsTableHtml += `</div>`;
 
-    const venueEvents = getVenueEventOccurrences(venue.Venue_ID, { includePast: true, activeOnly: false, now: new Date() });
+    const venueEvents = getVenueEventOccurrences(venue.Venue_ID, { includePast: false, activeOnly: false, now: new Date() });
     let eventsHtml = '';
     if(venueEvents.length > 0) {
         eventsHtml = `
