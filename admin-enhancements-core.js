@@ -1,5 +1,5 @@
-/* Backroom Admin v1.09 enhancements
-   - Event cleanup for events older than 30 days
+/* Backroom Admin enhancements
+   - Event cleanup for dates before today
    - Filterable/excludable merge preview
    - File System Access API save/save-as support
 */
@@ -50,7 +50,6 @@
     function getCutoffDate() {
         const cutoff = new Date();
         cutoff.setHours(0, 0, 0, 0);
-        cutoff.setDate(cutoff.getDate() - 30);
         return cutoff;
     }
 
@@ -61,15 +60,28 @@
     }
 
     function getOldEventInfo() {
-        const cutoff = state.cleanupCutoff || getCutoffDate();
+        const cutoff = getCutoffDate();
         const old = [];
         const invalid = [];
+        const ongoingRecurring = [];
         (Array.isArray(draftData) ? draftData : []).forEach((row) => {
+            const weekly = String(row?.Recurrence_Type ?? '').trim().toLowerCase() === 'weekly';
+            if (weekly) {
+                // Weekly events can have a start date years in the past yet still be active.
+                // Remove only when an explicit Recurrence_Until is before today.
+                const until = localDateOnly(row?.Recurrence_Until);
+                if (!until || until >= cutoff) {
+                    ongoingRecurring.push(row);
+                    return;
+                }
+                old.push(row);
+                return;
+            }
             const date = localDateOnly(row?.Event_Date);
             if (!date) invalid.push(row);
             else if (date < cutoff) old.push(row);
         });
-        return { cutoff, old, invalid };
+        return { cutoff, old, invalid, ongoingRecurring };
     }
 
     function ensureCleanupBar() {
@@ -184,11 +196,39 @@
                 showToast('Remove Old is available in the Events editor.');
                 return;
             }
-            state.cleanupCutoff = getCutoffDate();
-            state.cleanupActive = true;
+            const { cutoff, old, invalid, ongoingRecurring } = getOldEventInfo();
+            if (!old.length) {
+                showToast(`No events dated before ${formatDate(cutoff)} are eligible for removal.`);
+                return;
+            }
+            const parts = [
+                `Remove ${old.length} past event${old.length === 1 ? '' : 's'} dated before ${formatDate(cutoff)}?`,
+                'Events scheduled for today are kept.',
+                ongoingRecurring.length ? `${ongoingRecurring.length} ongoing/undated weekly recurring event${ongoingRecurring.length === 1 ? '' : 's'} will be preserved.` : '',
+                invalid.length ? `${invalid.length} record${invalid.length === 1 ? '' : 's'} with missing or invalid Event_Date will be preserved.` : '',
+                'This removes events from the current Admin working list only. Save the updated events.json and publish it to update the website.'
+            ].filter(Boolean);
+            if (!window.confirm(parts.join('\n\n'))) return;
+
+            // Remove matching row objects, not IDs: missing/duplicate IDs must not remove unrelated records.
+            const selectedRows = new Set(old);
+            const previousRows = draftData;
+            draftData = draftData.filter((row) => !selectedRows.has(row));
+            try {
+                saveDraftsToLocal();
+            } catch (error) {
+                draftData = previousRows;
+                console.error('Failed to save event cleanup draft:', error);
+                showToast('Could not save the cleanup draft. No events were removed from the saved working list.');
+                return;
+            }
+            state.cleanupActive = false;
+            state.cleanupCutoff = null;
             activeTableFilters = {};
             renderFilters();
+            renderCleanupBar();
             renderTable();
+            showToast(`${old.length} past event${old.length === 1 ? '' : 's'} removed from the working list. Save and publish events.json to update the site.`);
         });
 
         document.getElementById('nav-venues')?.addEventListener('click', () => {
