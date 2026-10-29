@@ -823,9 +823,12 @@
         const clearButton = document.getElementById('btn-clear-all-filters');
 
         if (count) {
-            if (reviewLabel) count.textContent = `Showing ${shown} ${reviewLabel} record${shown === 1 ? '' : 's'} of ${total}`;
-            else if (hasFilter || shown !== total) count.textContent = `Showing ${shown} of ${total} records`;
-            else count.textContent = `${total} record${total === 1 ? '' : 's'}`;
+            const next = reviewLabel
+                ? `Showing ${shown} ${reviewLabel} record${shown === 1 ? '' : 's'} of ${total}`
+                : (hasFilter || shown !== total)
+                    ? `Showing ${shown} of ${total} records`
+                    : `${total} record${total === 1 ? '' : 's'}`;
+            if (count.textContent !== next) count.textContent = next;
         }
 
         const details = [];
@@ -1333,9 +1336,12 @@
         const hasFilters = Boolean(locationDeleteState.country || locationDeleteState.city || globalSearch || columnFilterCount || special || sortDescription);
 
         if (count) {
-            if (special) count.textContent = `Showing ${shown} ${special} record${shown === 1 ? '' : 's'} of ${total}`;
-            else if (hasFilters || shown !== total) count.textContent = `Showing ${shown} of ${total} records`;
-            else count.textContent = `${total} record${total === 1 ? '' : 's'}`;
+            const next = special
+                ? `Showing ${shown} ${special} record${shown === 1 ? '' : 's'} of ${total}`
+                : (hasFilters || shown !== total)
+                    ? `Showing ${shown} of ${total} records`
+                    : `${total} record${total === 1 ? '' : 's'}`;
+            if (count.textContent !== next) count.textContent = next;
         }
 
         const details = [];
@@ -1352,12 +1358,8 @@
         let visible = 0;
         rows.forEach((row) => {
             const cell = row.querySelector('.admin-row-number-cell');
-            if (row.style.display === 'none') {
-                if (cell) cell.textContent = '';
-            } else {
-                visible += 1;
-                if (cell) cell.textContent = String(visible);
-            }
+            const next = row.style.display === 'none' ? '' : String(++visible);
+            if (cell && cell.textContent !== next) cell.textContent = next;
         });
     }
 
@@ -1373,13 +1375,17 @@
         refreshLocationControls();
         const rows = Array.from(document.querySelectorAll('#admin-tbody tr[data-id]'));
         const query = String(document.getElementById('admin-global-search')?.value || '').trim().toLowerCase();
+        const hasLocationFilter = Boolean(locationDeleteState.country || locationDeleteState.city);
 
         rows.forEach((row) => {
-            const record = recordForRow(row);
-            const searchable = Array.from(row.cells).slice(2).map((cell) => cell.innerText).join(' ').toLowerCase();
+            const searchable = query
+                ? Array.from(row.cells).slice(2).map((cell) => cell.textContent).join(' ').toLowerCase()
+                : '';
             const searchMatch = !query || searchable.includes(query);
-            const locationMatch = record ? matchesLocation(record) : true;
-            row.style.display = searchMatch && locationMatch ? '' : 'none';
+            const record = hasLocationFilter ? recordForRow(row) : null;
+            const locationMatch = !hasLocationFilter || (record ? matchesLocation(record) : true);
+            const nextDisplay = searchMatch && locationMatch ? '' : 'none';
+            if (row.style.display !== nextDisplay) row.style.display = nextDisplay;
         });
 
         updateVisibleNumbers(rows);
