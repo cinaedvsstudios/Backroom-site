@@ -1817,6 +1817,17 @@ function formatAboutText(text) {
 }
 
 function buildSocialBar(venue) {
+    const otherUrl = String(venue?.Other_URL ?? '').trim();
+    const isXOrTwitterUrl = (() => {
+        try {
+            const parsed = new URL(otherUrl);
+            if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') return false;
+            const host = parsed.hostname.toLowerCase();
+            return ['x.com', 'twitter.com'].some(domain => host === domain || host.endsWith('.' + domain));
+        } catch {
+            return false;
+        }
+    })();
     let html = '<div class="social-bar" style="display:flex; gap:16px; margin-top:10px; align-items:center;">';
     const buildIcon = (url, iconName, platformName) => {
         const hasUrl = url && url.trim() !== '';
@@ -1829,8 +1840,8 @@ function buildSocialBar(venue) {
     html += buildIcon(venue.Instagram_URL, 'instagram_url.png', 'Instagram');
     html += buildIcon(venue.Facebook_URL, 'facebook_url.png', 'Facebook');
     html += buildIcon(venue.Website_URL, 'website_url.png', 'Website');
-    html += buildIcon(venue.Emoji_Override, 'xicon.png', 'X (Twitter)'); 
-    html += buildIcon(venue.Other_URL, 'link.png', 'Link');
+    html += buildIcon(isXOrTwitterUrl ? otherUrl : '', 'xicon.png', 'X (Twitter)');
+    html += buildIcon(isXOrTwitterUrl ? '' : otherUrl, 'link.png', 'Link');
     html += '</div>';
     return html;
 }
