@@ -227,12 +227,14 @@
             state.city = '';
         }
 
-        countrySelect.innerHTML = '<option value="">Country</option>'
+        const countryHtml = '<option value="">Country</option>'
             + countries.map((country) => `<option value="${escapeHtml(country)}">${escapeHtml(country)}</option>`).join('');
+        if (countrySelect.innerHTML !== countryHtml) countrySelect.innerHTML = countryHtml;
         countrySelect.value = state.country;
 
-        citySelect.innerHTML = '<option value="">City</option>'
+        const cityHtml = '<option value="">City</option>'
             + cities.map((city) => `<option value="${escapeHtml(city)}">${escapeHtml(city)}</option>`).join('');
+        if (citySelect.innerHTML !== cityHtml) citySelect.innerHTML = cityHtml;
         citySelect.value = state.city;
         citySelect.disabled = !cities.length;
 
@@ -288,27 +290,28 @@
     }
 
     function applyFilter() {
-        refreshControls();
         const rows = Array.from(document.querySelectorAll('#admin-tbody tr[data-id]'));
         const query = clean(document.getElementById('admin-global-search')?.value).toLocaleLowerCase('en');
+        const hasLocationFilter = Boolean(state.country || state.city);
 
         rows.forEach((row) => {
-            const record = getAuthoritativeRecordForRow(row);
-            const searchable = Array.from(row.cells).slice(2).map((cell) => cell.innerText).join(' ').toLocaleLowerCase('en');
+            // Avoid reading innerText (which can force layout) when search is empty.
+            const searchable = query
+                ? Array.from(row.cells).slice(2).map((cell) => cell.textContent).join(' ').toLocaleLowerCase('en')
+                : '';
             const searchMatch = !query || searchable.includes(query);
-            const locationMatch = record ? matchesSelectedLocation(record) : true;
-            row.style.display = searchMatch && locationMatch ? '' : 'none';
+            const record = hasLocationFilter ? getAuthoritativeRecordForRow(row) : null;
+            const locationMatch = !hasLocationFilter || (record ? matchesSelectedLocation(record) : true);
+            const nextDisplay = searchMatch && locationMatch ? '' : 'none';
+            if (row.style.display !== nextDisplay) row.style.display = nextDisplay;
         });
 
         let visible = 0;
         rows.forEach((row) => {
             const numberCell = row.querySelector('.admin-row-number-cell');
-            if (row.style.display === 'none') {
-                if (numberCell) numberCell.textContent = '';
-            } else {
-                visible += 1;
-                if (numberCell) numberCell.textContent = String(visible);
-            }
+            const nextNumber = row.style.display === 'none' ? '' : String(++visible);
+            // MutationObserver observes child changes; don't generate them unnecessarily.
+            if (numberCell && numberCell.textContent !== nextNumber) numberCell.textContent = nextNumber;
         });
 
         updateSummary(rows);
@@ -332,8 +335,9 @@
     function installObserver() {
         const table = document.getElementById('admin-table-container');
         if (!table || state.observer) return;
+        // Only observe full table replacement, not changes made by our own row-number updates.
         state.observer = new MutationObserver(() => scheduleApply(95));
-        state.observer.observe(table, { childList: true, subtree: true });
+        state.observer.observe(table, { childList: true });
     }
 
     function install() {
