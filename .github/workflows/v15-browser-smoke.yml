@@ -29,8 +29,12 @@ jobs:
             page.on('requestfailed', req => console.log('REQUEST_FAIL:',req.url(),req.failure()?.errorText));
             await page.route(/https:\/\/(unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com)\//, route => route.abort());
             console.log('Browser started, loading locally with third-party resources blocked');
-            await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded',timeout:30000});
-            console.log('DOM loaded.');
+            await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'commit',timeout:15000});
+            console.log('Navigation committed.');
+            await page.waitForTimeout(4000);
+            console.log('DOM readiness:',await page.evaluate(()=>document.readyState));
+            console.log('Startup scripts:',await page.evaluate(()=>({core:typeof window.openBackroomLocationModal,calendar:typeof window.openCalendarScreen})));
+            console.log('Age button:',await page.locator('#btn-enter').count());
             await page.locator('#btn-enter').waitFor({state:'visible',timeout:30000});
             await page.locator('#btn-enter').click();
             await page.locator('#age-gate').waitFor({state:'hidden',timeout:15000});
