@@ -1,4 +1,4 @@
-const BACKROOM_VERSION = 'v1.5.3';
+const BACKROOM_VERSION = 'v1.5.4';
 const BACKROOM_EMBEDDED_HASHES = new Set(['#heatmap', '#travel']);
 const BACKROOM_INITIAL_EMBEDDED_HASH = BACKROOM_EMBEDDED_HASHES.has(window.location.hash) ? window.location.hash : '';
 
@@ -160,6 +160,7 @@ if (BACKROOM_INITIAL_EMBEDDED_HASH) {
   function installExtraNavigation() {
 
     addSidebarLink('Cruising Guide', 'Travel', 'travel', 'train.webp', '🚄');
+    addSidebarLink('Travel', 'Heat Map', 'heatmap', 'Emoji/heatmap.png', '🗺️');
   }
 
   function installEmbeddedRouting() {
