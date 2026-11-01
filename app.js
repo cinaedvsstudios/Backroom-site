@@ -1,4 +1,4 @@
-const BACKROOM_VERSION = 'v1.14';
+const BACKROOM_VERSION = 'v1.5';
 const BACKROOM_EMBEDDED_HASHES = new Set(['#heatmap', '#travel']);
 const BACKROOM_INITIAL_EMBEDDED_HASH = BACKROOM_EMBEDDED_HASHES.has(window.location.hash) ? window.location.hash : '';
 
@@ -6,9 +6,7 @@ if (BACKROOM_INITIAL_EMBEDDED_HASH) {
   history.replaceState(history.state, '', `${window.location.pathname}${window.location.search}`);
 }
 
-document.write('<link rel="stylesheet" href="event-detail.css?v=1.14">');
-document.write('<script src="app-core.js?v=1.12"><\/script>');
-document.write('<script src="event-detail.js?v=1.14"><\/script>');
+// Core scripts are loaded explicitly in index.html to avoid document.write startup failures.
 
 (() => {
   'use strict';
@@ -160,7 +158,7 @@ document.write('<script src="event-detail.js?v=1.14"><\/script>');
   }
 
   function installExtraNavigation() {
-    addSidebarLink('Featured', 'Heat Map', 'heatmap', 'Emoji/heatmap.png', '🌈');
+
     addSidebarLink('Cruising Guide', 'Travel', 'travel', 'train.webp', '🚄');
   }
 

@@ -5,7 +5,7 @@
   if (window.__backroomEventDetailLoaded) return;
   window.__backroomEventDetailLoaded = true;
 
-  const EVENT_DETAIL_VERSION = 'v1.14';
+  const EVENT_DETAIL_VERSION = 'v1.5';
   const DEFAULT_RETURN_HASH = '#calendar';
   const BACKROOM_ICON_URL = 'https://raw.githubusercontent.com/cinaedvsstudios/Backroom-site/refs/heads/main/backdoorlogo.png';
   let eventReturnHash = DEFAULT_RETURN_HASH;
@@ -566,17 +566,10 @@
       } catch (_) {}
     };
 
-    const updateDisplay = () => {
-      const element = document.getElementById('sidebar-version-display');
-      if (element && element.textContent !== EVENT_DETAIL_VERSION) element.textContent = EVENT_DETAIL_VERSION;
-    };
-
+    // The top-level app.js is the single owner of the visible version label.
+    // Never observe and rewrite that label here: it causes a mutation loop
+    // whenever a release changes BACKROOM_VERSION independently.
     patchToast();
-    updateDisplay();
-    new MutationObserver(() => {
-      patchToast();
-      updateDisplay();
-    }).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
   }
 
   function installFavicon() {
