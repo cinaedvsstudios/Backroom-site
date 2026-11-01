@@ -1,5 +1,5 @@
 {
-  "version": "v1.5.2",
+  "version": "v1.5.3",
   "date": "2026-11-01",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
@@ -17,7 +17,9 @@
     "release_manifest.json",
     "event-detail.js",
     "dress-codes.html",
-    "about.html"
+    "about.html",
+    "dress-codes-data.json",
+    "dress-codes-v153.js"
   ],
   "changes": [
     "Multi-select dates with aggregated events, festival grouping and dark-green expandable cards",
@@ -29,13 +31,18 @@
     "Emergency age-gate fix: remove conflicting event-detail version MutationObserver, use direct script loading and independent age-gate handler",
     "Add Festivals sidebar and festival-only calendar using shared event calendar with green date markers, location selector and keyword search",
     "Replace About sidebar with Dress Codes / Kink searchable glossary; keep About link in Settings",
-    "Refresh About page to describe Festivals, Travel, Featured, Cruising and information sources"
+    "Refresh About page to describe Festivals, Travel, Featured, Cruising and information sources",
+    "Expand illustrated Dress Codes/Kink to 186 terms in six colored categories including 51 historical/extended hanky entries",
+    "Compact internal scrolling guide with category buttons, keyword search and avatar zoom",
+    "Rewrite home Welcome instructions for v1.5.3 features and make home avatar/gear icon open Settings"
   ],
   "validation": {
     "javascript_syntax": "checked before publication",
     "production_smoke_test": "GitHub Actions Chrome smoke on staged build passed 2026-11-01 with external CDNs blocked: age entry, venue cards, cruising directory, events calendar, no uncaught browser errors",
     "root_cause": "app.js v1.5 and event-detail.js v1.14 continuously rewrote the same version label, producing an infinite MutationObserver loop",
     "festival_dresscode_browser_smoke": "passed in headless Chromium: age-gate, v1.5.2 startup, festivals-only view, green festival dates, SNAX search, no-match query, ordinary Events, 39 searchable glossary terms, About in Settings, zero uncaught JavaScript errors",
-    "smoke_workflow": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41346356770"
+    "smoke_workflow": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41346356770",
+    "v153_smoke_test": "passed GitHub Actions Chrome browser smoke: age gate, home avatar settings, 186 glossary entries, hanky filtering 51 swatches, avatar lightbox, consent filter, contained scrolling and existing Events, no uncaught JS errors",
+    "v153_test_url": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41348995632"
   }
 }
