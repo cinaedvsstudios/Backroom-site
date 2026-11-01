@@ -1,0 +1,49 @@
+name: Backroom v1.5 Browser Smoke
+on:
+  push:
+    branches: [v15-browser-check]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser automation
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Test startup, age gate, navigation, data
+        run: |
+          python3 -m http.server 8765 >/tmp/backroom-server.log 2>&1 &
+          node <<'NODE'
+          const {chromium} = require('playwright');
+          (async () => {
+            const browser = await chromium.launch({headless:true,args:['--no-sandbox']});
+            const page = await browser.newPage();
+            const errors=[];
+            page.on('pageerror',e => errors.push(e.message));
+            page.on('console',m => {if(m.type()==='error') console.log('CONSOLE_ERROR:',m.text());});
+            await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded',timeout:90000});
+            await page.locator('#btn-enter').waitFor({state:'visible',timeout:30000});
+            await page.locator('#btn-enter').click();
+            await page.locator('#age-gate').waitFor({state:'hidden',timeout:15000});
+            await page.locator('#app-shell').waitFor({state:'visible',timeout:15000});
+            await page.waitForFunction(() => typeof window.openBackroomLocationModal === 'function' && typeof window.openCalendarScreen === 'function',{timeout:25000});
+            console.log('PASS: age gate, core application and calendar loaded');
+            await page.evaluate(()=>{window.location.hash='#venues'});
+            await page.waitForTimeout(4500);
+            console.log('Venues cards:',await page.locator('#results-container .card').count());
+            await page.evaluate(()=>{window.location.hash='#cruising-guide'});
+            await page.locator('.v15-cruising-results').waitFor({state:'attached',timeout:20000});
+            console.log('PASS: cruising directory renders');
+            await page.evaluate(()=>{window.location.hash='#calendar'});
+            await page.locator('.calendar-day').first().waitFor({state:'visible',timeout:25000});
+            console.log('PASS: events calendar renders');
+            if (errors.length) throw new Error('Browser errors: '+JSON.stringify(errors));
+            console.log('PASS: No uncaught browser errors');
+            await browser.close();
+          })().catch(e=>{console.error('FAIL:',e);process.exit(1)});
+          NODE
