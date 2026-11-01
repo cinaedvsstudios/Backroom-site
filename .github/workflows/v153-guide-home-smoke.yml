@@ -38,7 +38,16 @@ jobs:
             console.log('PASS home emoji/avatar opens Settings');
             await page.locator('#settings-modal .close-modal-btn').click();
             await page.evaluate(()=>{window.location.hash='#dress-codes'});
-            await page.locator('#br-guide-results .br-guide-term').first().waitFor({state:'visible',timeout:20000});
+            await page.waitForTimeout(1800);
+            console.log('DIAGNOSTIC:',await page.evaluate(()=>({
+               hash:location.hash,
+               guide:typeof window.BackroomGuide,
+               outer:document.getElementById('dress-codes-container')?.outerHTML.slice(0,850),
+               results:document.getElementById('br-guide-results')?.innerHTML.slice(0,500)
+            })));
+            console.log('DATA FETCH:',await page.evaluate(async()=>{const r=await fetch('dress-codes-data.json?v=diag');return [r.status,(await r.text()).slice(0,100)]}));
+            console.log('PAGE ERRORS:',errors);
+            await page.locator('#br-guide-results .br-guide-term').first().waitFor({state:'visible',timeout:7000});
             const initial=await page.locator('#br-guide-results .br-guide-term').count();
             if(initial<170)throw Error('Missing glossary entries '+initial);
             console.log('PASS glossary total '+initial);
