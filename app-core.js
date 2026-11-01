@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.2";
+const APP_VERSION = "v1.5.4";
 const APP_DATE = "1 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -1307,6 +1307,76 @@ function getPublicVenues(source = venues) {
     });
 }
 
+
+/* v1.5.4 — Shared inline city/country search for Venues and Cruising. */
+function createInlineLocationControl(scope = getSavedSearchScope()) {
+    const wrap=document.createElement('span');
+    wrap.className='backroom-inline-location';
+    const cityButton=document.createElement('button');
+    cityButton.type='button';
+    cityButton.className='location-city-pill pill-btn backroom-inline-location-name';
+    cityButton.textContent=scope.scope==='all'?'ALL CITIES':scope.label;
+    cityButton.title='Search city or country';
+    cityButton.setAttribute('aria-label','Search for a city or country');
+    const input=document.createElement('input');
+    input.type='search';
+    input.className='form-input pill-input backroom-inline-location-search hidden';
+    input.placeholder='Search city or country…';
+    input.setAttribute('aria-label','Search city or country');
+    input.autocomplete='off';
+    const options=document.createElement('datalist');
+    const optionId='inline-locations-'+Math.random().toString(36).slice(2,10);
+    options.id=optionId;
+    input.setAttribute('list',optionId);
+    const directory=getLocationDirectory();
+    const names=new Set(['All Cities']);
+    for (const country of directory.countries.values()) names.add(country);
+    for (const entries of directory.cities.values()) {
+        for (const entry of entries) names.add([entry.city,entry.country].filter(Boolean).join(', '));
+    }
+    [...names].sort((a,b)=>a.localeCompare(b)).forEach(name=>{
+        const option=document.createElement('option');option.value=name;options.appendChild(option);
+    });
+    const pin=document.createElement('button');
+    pin.type='button';pin.className='backroom-inline-location-pin';pin.textContent='📍';
+    pin.title='Open full location picker';
+    pin.setAttribute('aria-label','Open full location picker');
+    pin.addEventListener('click',openLocationModal);
+    const showSearch=()=>{
+        cityButton.classList.add('hidden');
+        input.classList.remove('hidden');
+        input.value=scope.scope==='all'?'':scope.label;
+        input.focus();input.select();
+    };
+    const apply=()=>{
+        const typed=String(input.value||'').trim();
+        if(!typed && scope.scope!=='all'){
+            input.classList.add('hidden');cityButton.classList.remove('hidden');return;
+        }
+        const choice=typed.toLowerCase()==='all cities'?'':typed;
+        const resolved=resolveLocationInput(choice);
+        if(!resolved.valid){
+            input.setCustomValidity(resolved.message||'Choose a city or country from the directory');
+            input.reportValidity();
+            return;
+        }
+        input.setCustomValidity('');
+        const locationInput=getLocationInput();
+        if(!locationInput)return;
+        locationInput.value=choice;
+        saveLocation();
+    };
+    cityButton.addEventListener('click',showSearch);
+    input.addEventListener('input',()=>input.setCustomValidity(''));
+    input.addEventListener('change',apply);
+    input.addEventListener('keydown',event=>{
+        if(event.key==='Enter'){event.preventDefault();apply();}
+        if(event.key==='Escape'){event.preventDefault();input.classList.add('hidden');cityButton.classList.remove('hidden');cityButton.focus();}
+    });
+    wrap.append(cityButton,input,options,pin);
+    return wrap;
+}
+
 // Search Results follows a shared city/country link when present; otherwise it follows
 // the recipient's saved city or country. All Cities remains unfiltered.
 function getSavedSearchScope() {
@@ -2422,53 +2492,45 @@ async function renderDressCodesGuide() {
     await renderStaticPageView('dress-codes');
     if (window.location.hash !== '#dress-codes') return;
     const container=document.getElementById('dress-codes-container');
-    const input=container?.querySelector('#kink-search');
-    if (!input) return;
-    const entries=[...container.querySelectorAll('[data-guide-term]')];
-    const sections=[...container.querySelectorAll('[data-guide-section]')];
-    const counter=container.querySelector('#kink-search-count');
-    const empty=container.querySelector('#kink-no-results');
-    input.addEventListener('input', () => {
-        const q=String(input.value||'').trim().toLocaleLowerCase();
-        let matching=0;
-        entries.forEach(entry=>{
-            const show=entry.getAttribute('data-guide-term')?.includes(q);
-            entry.hidden=!show;
-            if(show)matching++;
-        });
-        sections.forEach(section => {
-            section.hidden=![...section.querySelectorAll('[data-guide-term]')].some(entry=>!entry.hidden);
-        });
-        if(empty)empty.hidden=matching>0;
-        if(counter)counter.textContent=q?matching+' matching terms':'';
-    });
+    container?.classList.add('br-guide');
+    window.BackroomGuide?.mount(container);
 }
 
 /* v1.5: Cruising Guide is a filtered venue browser, not a duplicate venue database. */
+let savedCruisingSearchText='';
+let cruisingGuideWasExpanded=false;
 async function renderCruisingDirectory() {
+    const current=document.getElementById('cruising-guide-container');
+    if(current) {
+        savedCruisingSearchText=current.querySelector('#v15-cruising-search')?.value ?? savedCruisingSearchText;
+        cruisingGuideWasExpanded=current.querySelector('.v15-cruising-guide')?.open ?? cruisingGuideWasExpanded;
+    }
     await renderStaticPageView('cruising-guide');
-    if (window.location.hash !== '#cruising-guide') return;
-    const container = document.getElementById('cruising-guide-container');
-    if (!container) return;
-    const guide = container.innerHTML;
-    const scope = getSavedSearchScope();
-    const locationLabel = scope.scope === 'all' ? 'All Cities' : scope.label;
-    container.innerHTML = '<h2 class="display-font v15-cruising-title">🔥 CRUISING AREAS</h2>'
-      + '<details class="v15-cruising-guide"><summary>CRUISING GUIDE, CONSENT & SAFETY</summary><div class="v15-cruising-guide-copy">'+guide+'</div></details>'
-      + '<div class="v15-cruising-controls"><input id="v15-cruising-search" class="form-input pill-input" placeholder="Search public cruising areas, cities and countries…" aria-label="Search public cruising areas">'
-      + '<button class="btn secondary-btn pill-btn" id="v15-cruising-location">📍 '+escapeHTML(locationLabel)+'</button></div>'
-      + '<p id="v15-cruising-count" class="body-font"></p><div id="v15-cruising-results" class="v15-cruising-results"></div>';
-    const draw = () => {
-      const search = String(document.getElementById('v15-cruising-search')?.value || '').trim().toLowerCase();
-      const candidates = getPublicVenues().filter(venue => isCruisingAreaVenue(venue))
-        .filter(venue => scope.scope === 'all' || venueMatchesSavedLocation(venue,scope))
-        .filter(venue => !search || [venue.Name,venue.City,venue.Country,venue.Description,venue.Address].some(field => String(field||'').toLowerCase().includes(search)));
-      const count = document.getElementById('v15-cruising-count');
-      if (count) count.textContent = candidates.length+' public cruising area'+(candidates.length === 1 ? '' : 's')+' listed';
-      renderListings(sortSavedLocationVenues(candidates),false,document.getElementById('v15-cruising-results'));
+    if(window.location.hash!=='#cruising-guide')return;
+    const container=document.getElementById('cruising-guide-container');
+    if(!container)return;
+    const guide=container.innerHTML;
+    const scope=getSavedSearchScope();
+    container.innerHTML='<div class="v154-cruising-heading"><h2 class="display-font v15-cruising-title">🔥 CRUISING AREAS</h2><span class="v154-cruising-heading-location"></span></div>'
+      +'<details class="v15-cruising-guide"><summary>CRUISING GUIDE, CONSENT & SAFETY</summary><div class="v15-cruising-guide-copy">'+guide+'</div></details>'
+      +'<div class="v15-cruising-controls"><input id="v15-cruising-search" class="form-input pill-input" placeholder="Search public cruising areas, cities and countries…" aria-label="Search public cruising areas"></div>'
+      +'<p id="v15-cruising-count" class="body-font"></p><div id="v15-cruising-results" class="v15-cruising-results"></div>';
+    container.querySelector('.v154-cruising-heading-location')?.appendChild(createInlineLocationControl(scope));
+    const details=container.querySelector('.v15-cruising-guide');
+    if(details)details.open=cruisingGuideWasExpanded;
+    const searchInput=container.querySelector('#v15-cruising-search');
+    if(searchInput)searchInput.value=savedCruisingSearchText;
+    const draw=()=>{
+        const search=String(searchInput?.value||'').trim().toLowerCase();
+        savedCruisingSearchText=searchInput?.value||'';
+        const candidates=getPublicVenues().filter(venue=>isCruisingAreaVenue(venue))
+            .filter(venue=>scope.scope==='all'||venueMatchesSavedLocation(venue,scope))
+            .filter(venue=>!search||[venue.Name,venue.City,venue.Country,venue.Description,venue.Address].some(field=>String(field||'').toLowerCase().includes(search)));
+        const count=container.querySelector('#v15-cruising-count');
+        if(count)count.textContent=candidates.length+' public cruising area'+(candidates.length===1?'':'s')+' listed';
+        renderListings(sortSavedLocationVenues(candidates),false,container.querySelector('#v15-cruising-results'));
     };
-    container.querySelector('#v15-cruising-search')?.addEventListener('input', draw);
-    container.querySelector('#v15-cruising-location')?.addEventListener('click',openLocationModal);
+    searchInput?.addEventListener('input',draw);
     draw();
 }
 window.addEventListener('backroom:location-changed', () => {
@@ -3007,6 +3069,9 @@ function setupEventListeners() {
     addEvt('btn-location', 'click', openLocationModal);
     
     addEvt('btn-settings', 'click', () => settingsModal?.classList.remove('hidden'));
+    addEvt('welcome-avatar-settings', 'click', () => {
+        settingsModal?.classList.remove('hidden');
+    });
     addEvt('btn-profile-menu', 'click', openProfileMenu);
     const previewShortcut = document.getElementById('preview-img-wrapper');
     if(previewShortcut && !previewShortcut.dataset.avatarShortcutBound) {
@@ -3041,7 +3106,7 @@ function setupEventListeners() {
     addEvt('btn-tutorial-skip', 'click', endTutorial);
     addEvt('btn-profile-tutorial', 'click', () => startTutorial('profile'));
 
-    addEvt('btn-language', 'click', () => showToast("Coming soon!")); 
+    addEvt('btn-contact', 'click', () => window.flagListing('N/A', 'General Message', 'General Support')); 
     addEvt('btn-back-to-results', 'click', () => {
         const btn = document.getElementById('btn-back-to-results');
         const target = btn?.dataset.backTarget || 'results';
@@ -3843,15 +3908,7 @@ function renderSavedLocationVenuesView() {
 
     if (title) {
         title.replaceChildren(document.createTextNode('VENUES IN '));
-
-        const locationPill = document.createElement('button');
-        locationPill.type = 'button';
-        locationPill.className = 'location-city-pill pill-btn';
-        locationPill.textContent = displayLocation;
-        locationPill.title = 'Change location';
-        locationPill.setAttribute('aria-label', `Change location from ${displayLocation.toLowerCase()}`);
-        locationPill.addEventListener('click', openLocationModal);
-        title.appendChild(locationPill);
+        title.appendChild(createInlineLocationControl(savedScope));
     }
 
     if (desc) {
@@ -5009,8 +5066,7 @@ function saveLocation() {
     // v1.5: location changes never navigate away or discard the active search.
     updateSearchClearButton();
     locModal?.classList.add('hidden');
-    if (window.location.hash === '#cruising-guide') renderCruisingDirectory();
-    else if (!window.location.hash.startsWith('#calendar')) handleRouting();
+    if (window.location.hash !== '#cruising-guide' && !window.location.hash.startsWith('#calendar')) handleRouting();
 }
 
 function clearLocation() {
@@ -5036,8 +5092,7 @@ function clearLocation() {
     updateLocationDraftStatus('');
     announceLocationChange({ scope: 'all', city: '', country: '', postcode: '' });
 
-    if (window.location.hash === '#cruising-guide') renderCruisingDirectory();
-    else if (!window.location.hash.startsWith('#calendar')) handleRouting();
+    if (window.location.hash !== '#cruising-guide' && !window.location.hash.startsWith('#calendar')) handleRouting();
 }
 
 function loadSavedLocation() {
