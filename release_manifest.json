@@ -1,5 +1,5 @@
 {
-  "version": "v1.5.3",
+  "version": "v1.5.4",
   "date": "2026-11-01",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
@@ -19,7 +19,8 @@
     "dress-codes.html",
     "about.html",
     "dress-codes-data.json",
-    "dress-codes-v153.js"
+    "dress-codes-v153.js",
+    "heatmap.html"
   ],
   "changes": [
     "Multi-select dates with aggregated events, festival grouping and dark-green expandable cards",
@@ -34,7 +35,10 @@
     "Refresh About page to describe Festivals, Travel, Featured, Cruising and information sources",
     "Expand illustrated Dress Codes/Kink to 186 terms in six colored categories including 51 historical/extended hanky entries",
     "Compact internal scrolling guide with category buttons, keyword search and avatar zoom",
-    "Rewrite home Welcome instructions for v1.5.3 features and make home avatar/gear icon open Settings"
+    "Rewrite home Welcome instructions for v1.5.3 features and make home avatar/gear icon open Settings",
+    "Welcome panel compact internally scrolling feature instructions and 20% larger avatar with large cog beneath feet",
+    "Shared inline city/country search for Venues and Cruising, with separate full-map location picker beside titles",
+    "Restore Heat Map sidebar navigation from existing embedded heatmap.html; preserve existing venue database"
   ],
   "validation": {
     "javascript_syntax": "checked before publication",
@@ -43,6 +47,7 @@
     "festival_dresscode_browser_smoke": "passed in headless Chromium: age-gate, v1.5.2 startup, festivals-only view, green festival dates, SNAX search, no-match query, ordinary Events, 39 searchable glossary terms, About in Settings, zero uncaught JavaScript errors",
     "smoke_workflow": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41346356770",
     "v153_smoke_test": "passed GitHub Actions Chrome browser smoke: age gate, home avatar settings, 186 glossary entries, hanky filtering 51 swatches, avatar lightbox, consent filter, contained scrolling and existing Events, no uncaught JS errors",
-    "v153_test_url": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41348995632"
+    "v153_test_url": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41348995632",
+    "v154_browser_test": "pending"
   }
 }

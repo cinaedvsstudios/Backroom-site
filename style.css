@@ -1961,3 +1961,44 @@ td.hidden-col * { display: none !important; }
 /* Standalone glossary URL also uses an internal content scroller. */
 body:has(> .br-guide){height:100dvh;overflow:hidden;padding:14px;box-sizing:border-box}
 body:has(> .br-guide) > .br-guide{height:100%;max-width:1180px}
+
+
+/* Backroom v1.5.4: home guide and unified inline-location controls. */
+#welcome-screen .welcome-card{align-items:flex-start;gap:22px}
+#welcome-screen .welcome-content-container{min-width:0}
+#welcome-screen .welcome-avatar-container{padding-bottom:31px;display:flex;justify-content:center;flex:0 0 190px}
+#welcome-avatar-settings{position:relative;padding:3px;display:inline-flex;justify-content:center;align-items:center;overflow:visible!important}
+#welcome-avatar-settings #welcome-avatar{width:180px!important;height:270px!important;object-fit:contain!important;position:relative;z-index:2}
+#welcome-avatar-settings .welcome-avatar-settings-icon{position:absolute;left:50%;right:auto;bottom:-30px;transform:translateX(-50%);width:57px;height:57px;border:2px solid #46c0e1;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 12px rgba(44,168,212,.42);background:#141e2e;font-size:30px;z-index:1}
+#welcome-avatar-settings:hover .welcome-avatar-settings-icon,#welcome-avatar-settings:focus-visible .welcome-avatar-settings-icon{background:#1e536a;box-shadow:0 0 18px rgba(44,168,212,.72)}
+#welcome-screen .welcome-features-scroll{max-height:min(48vh,435px);overflow-y:auto;overscroll-behavior:contain;scrollbar-color:#4295b4 #101625;scrollbar-width:thin;min-height:220px;padding:16px 18px}
+#welcome-screen .welcome-features-scroll h3{margin-bottom:12px}
+#welcome-screen .welcome-features-scroll ul{gap:10px}
+#welcome-screen .welcome-features-scroll li{line-height:1.4}
+.backroom-inline-location{display:inline-flex;align-items:center;vertical-align:middle;gap:7px;max-width:100%;margin-left:7px;position:relative}
+.backroom-inline-location-name{margin:0!important;max-width:270px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.backroom-inline-location-search{margin:0!important;height:34px!important;min-width:160px;width:min(260px,38vw);background:#0a111b!important;border:1px solid var(--primary-blue)!important;color:#fff!important;font:400 .95rem 'Barlow Condensed',Arial,sans-serif;letter-spacing:0;text-transform:none}
+.backroom-inline-location-pin{border:1px solid var(--primary-blue);background:#112336;display:inline-flex;align-items:center;justify-content:center;flex:0 0 36px;width:36px;height:36px;border-radius:50%;color:#fff;font:normal 17px Arial,sans-serif;cursor:pointer}
+.backroom-inline-location-pin:hover,.backroom-inline-location-pin:focus-visible{background:#215978;border-color:#7cdef7}
+#context-title .backroom-inline-location{font-size:.65em}
+#context-title .backroom-inline-location-pin{font-size:16px}
+.v154-cruising-heading{display:flex;align-items:center;flex-wrap:wrap;gap:11px 18px;margin:0 0 18px}
+.v154-cruising-heading .v15-cruising-title{margin:0}
+.v154-cruising-heading .backroom-inline-location{margin-left:0}
+.v154-cruising-heading .backroom-inline-location-name{border-color:#d55036;color:#ffc1b3;background:#3c1019;font-size:1.08rem}
+.v154-cruising-heading .backroom-inline-location-pin{border-color:#d55036;background:#45151c}
+.v154-cruising-heading .backroom-inline-location-search{border-color:#d55036!important}
+#cruising-guide-container .v15-cruising-controls{margin-top:16px;margin-bottom:11px}
+@media(max-width:800px){
+ #welcome-screen .welcome-card{gap:15px}
+ #welcome-screen .welcome-avatar-container{flex-basis:190px}
+ #welcome-screen .welcome-features-scroll{max-height:min(48vh,400px)}
+ #context-title .backroom-inline-location{display:inline-flex;max-width:100%;margin-left:0;flex-wrap:wrap}
+}
+@media(max-width:600px){
+ #welcome-screen .welcome-card{flex-direction:column;align-items:center}
+ #welcome-screen .welcome-avatar-container{padding-bottom:31px}
+ #welcome-screen .welcome-content-container{width:100%}
+ #welcome-screen .welcome-features-scroll{max-height:min(47vh,385px)}
+ .backroom-inline-location-search{width:min(200px,55vw)}
+}

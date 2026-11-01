@@ -1,0 +1,94 @@
+name: Backroom v1.5.4 Browser Smoke
+on:
+  push:
+    branches: [v154-location-home-heatmap-test]
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Test age gate, venue/cruising locations, home, contact and Heat Map
+        run: |
+          python3 -m http.server 8765 >/tmp/backroom-server.log 2>&1 &
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+            const page=await browser.newPage({viewport:{width:1400,height:850}});
+            const errors=[];
+            page.on('pageerror',e=>errors.push(e.message));
+            await page.route(/https:\/\/(unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com)\//,r=>r.abort());
+            await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded',timeout:35000});
+            await page.locator('#btn-enter').click();
+            await page.locator('#age-gate').waitFor({state:'hidden',timeout:15000});
+            await page.locator('#app-shell').waitFor({state:'visible',timeout:15000});
+            await page.waitForTimeout(800);
+            const version=await page.locator('#sidebar-version-display').textContent();
+            if(!version.includes('v1.5.4'))throw Error('Version mismatch '+version);
+            const avatar=await page.locator('#welcome-avatar').evaluate(el=>({width:el.getBoundingClientRect().width,height:el.getBoundingClientRect().height}));
+            if(avatar.width<175||avatar.height<260)throw Error('Avatar size not increased: '+JSON.stringify(avatar));
+            const features=await page.locator('.welcome-features-scroll').evaluate(el=>({client:el.clientHeight,scroll:el.scrollHeight,overflow:getComputedStyle(el).overflowY}));
+            if(features.overflow!=='auto'||features.scroll<=features.client)throw Error('Home features not scrollable: '+JSON.stringify(features));
+            const cog=await page.locator('.welcome-avatar-settings-icon').evaluate(el=>el.getBoundingClientRect().width);
+            if(cog<50)throw Error('Cog not enlarged');
+            await page.locator('#welcome-avatar-settings').click();
+            await page.locator('#settings-modal').waitFor({state:'visible'});
+            await page.locator('#settings-modal .close-modal-btn').click();
+            console.log('PASS age gate, larger avatar/cog, scrollable home features, Settings');
+            if(await page.locator('#sidebar .sidebar-item[title="Contact"]').count())throw Error('Contact still in sidebar');
+            if(await page.locator('#btn-language').count())throw Error('Translate icon not removed');
+            await page.locator('#btn-contact').click();
+            await page.locator('#formsubmit-modal').waitFor({state:'visible'});
+            const formType=await page.locator('#fs-type').inputValue();
+            if(formType!=='General Support')throw Error('Contact form type incorrect '+formType);
+            await page.locator('#formsubmit-modal .close-modal-btn').first().click();
+            console.log('PASS top email contact and sidebar removal');
+            await page.evaluate(()=>{location.hash='#venues'});
+            await page.locator('#context-title .backroom-inline-location-name').waitFor({state:'visible',timeout:18000});
+            await page.locator('#context-title .backroom-inline-location-name').click();
+            const venueInput=page.locator('#context-title .backroom-inline-location-search');
+            await venueInput.waitFor({state:'visible'});
+            await venueInput.fill('Berlin');
+            await venueInput.press('Enter');
+            await page.waitForTimeout(700);
+            if(!page.url().includes('#venues'))throw Error('Venue location selection changed page');
+            await page.locator('#context-title .backroom-inline-location-name').waitFor({state:'visible'});
+            const venueLabel=await page.locator('#context-title .backroom-inline-location-name').textContent();
+            if(!venueLabel.toLowerCase().includes('berlin'))throw Error('Venue selection failed: '+venueLabel);
+            await page.locator('#context-title .backroom-inline-location-pin').click();
+            await page.locator('#location-modal').waitFor({state:'visible'});
+            await page.locator('#location-modal .close-modal-btn').first().click();
+            console.log('PASS venue inline location and separate full picker');
+            await page.evaluate(()=>{location.hash='#cruising-guide'});
+            await page.locator('.v154-cruising-heading .backroom-inline-location-name').waitFor({state:'visible',timeout:18000});
+            await page.locator('#v15-cruising-search').fill('park');
+            const initialSearch=await page.locator('#v15-cruising-search').inputValue();
+            await page.locator('.v154-cruising-heading .backroom-inline-location-name').click();
+            const cruisingInput=page.locator('.v154-cruising-heading .backroom-inline-location-search');
+            await cruisingInput.fill('All Cities'); await cruisingInput.press('Enter');
+            await page.waitForTimeout(900);
+            if(!page.url().includes('#cruising-guide'))throw Error('Cruising location changed page');
+            const preserved=await page.locator('#v15-cruising-search').inputValue();
+            if(preserved!==initialSearch)throw Error('Cruising text search reset');
+            await page.locator('.v154-cruising-heading .backroom-inline-location-pin').click();
+            await page.locator('#location-modal').waitFor({state:'visible'});
+            await page.locator('#location-modal .close-modal-btn').first().click();
+            console.log('PASS cruising inline location, separate picker and search retention');
+            await page.locator('#sidebar [data-embedded-page="heatmap"]').waitFor({state:'attached',timeout:10000});
+            await page.locator('#sidebar [data-embedded-page="heatmap"]').click();
+            await page.locator('#embedded-heatmap-container iframe').waitFor({state:'visible',timeout:12000});
+            if(!page.url().includes('#heatmap'))throw Error('Heat Map hash missing');
+            console.log('PASS Heat Map navigation restored');
+            const critical=errors.filter(e=>!e.includes('L is not defined'));
+            if(critical.length)throw Error('Uncaught application errors: '+JSON.stringify(critical));
+            console.log('PASS smoke complete, no uncaught application errors');
+            await browser.close();
+          })().catch(e=>{console.error('FAIL',e);process.exit(1)});
+          NODE
