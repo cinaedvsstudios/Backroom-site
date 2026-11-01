@@ -1,31 +1,21 @@
 {
-  "version": "v1.5",
-  "date": "2026-11-01",
-  "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
+  "version": "v1.00",
+  "date": "2026-06-22",
+  "rollback_baseline": "Uploaded app.js and calendar.js before country location scope change",
   "files_changed": [
-    "index.html",
     "app.js",
-    "app-core.js",
-    "calendar.js",
-    "style.css",
-    "calendar.css",
-    "backroom-v15.js",
-    "festivals.json",
-    "picks.json",
-    "neon_backroom_featured_badge.png",
-    "system_info.json",
-    "release_manifest.json"
+    "calendar.js"
   ],
   "changes": [
-    "Multi-select dates with aggregated events, festival grouping and dark-green expandable cards",
-    "Festival save choices and My Events grouped display",
-    "Inline Events location selector, persistent navigation location and full-picker button",
-    "Public cruising directory with collapsible advice and dark-red cards",
-    "Permanent featured venue badges and weekly featured event badges",
-    "Retire Featured navigation page and introduce picks.json and festivals.json"
+    "Dynamic country-only location scope using existing Country fields",
+    "Country names accepted in the Country field and inferred from the City field when unambiguous",
+    "Search Results, Venues, and Events share country/city scope",
+    "Events calendar selector supports countries and updates its heading"
   ],
   "validation": {
-    "javascript_syntax": "checked before publication",
-    "production_smoke_test": "pending after publication"
+    "app_js_syntax": "passed",
+    "calendar_js_syntax": "passed",
+    "country_scope_behavior": "passed in isolated JavaScript tests",
+    "city_country_scope_behavior": "passed in isolated JavaScript tests"
   }
 }

@@ -2324,9 +2324,10 @@ function handleRouting() {
         renderStaticPageView('about');
     } else if (hash === '#cruising-guide') {
         recordUserInteraction();
-        renderCruisingDirectory();
+        renderStaticPageView('cruising-guide');
     } else if (hash === '#featured') {
-        window.location.hash = '#venues';
+        recordUserInteraction();
+        renderFeaturedView();
     } else if (hash.startsWith('#shortlist=')) {
         recordUserInteraction();
         const name = decodeURIComponent(hash.replace('#shortlist=', ''));
@@ -2409,43 +2410,6 @@ async function renderStaticPageView(page) {
         container.innerHTML = `<h2 class="display-font" style="color:var(--primary-blue);">Content not available</h2><p class="body-font">This page could not be loaded.</p>`;
     }
 }
-
-
-/* v1.5: Cruising Guide is a filtered venue browser, not a duplicate venue database. */
-async function renderCruisingDirectory() {
-    await renderStaticPageView('cruising-guide');
-    if (window.location.hash !== '#cruising-guide') return;
-    const container = document.getElementById('cruising-guide-container');
-    if (!container) return;
-    const guide = container.innerHTML;
-    const scope = getSavedSearchScope();
-    const locationLabel = scope.scope === 'all' ? 'All Cities' : scope.label;
-    container.innerHTML = '<h2 class="display-font v15-cruising-title">🔥 CRUISING AREAS</h2>'
-      + '<details class="v15-cruising-guide"><summary>CRUISING GUIDE, CONSENT & SAFETY</summary><div class="v15-cruising-guide-copy">'+guide+'</div></details>'
-      + '<div class="v15-cruising-controls"><input id="v15-cruising-search" class="form-input pill-input" placeholder="Search public cruising areas, cities and countries…" aria-label="Search public cruising areas">'
-      + '<button class="btn secondary-btn pill-btn" id="v15-cruising-location">📍 '+escapeHTML(locationLabel)+'</button></div>'
-      + '<p id="v15-cruising-count" class="body-font"></p><div id="v15-cruising-results" class="v15-cruising-results"></div>';
-    const draw = () => {
-      const search = String(document.getElementById('v15-cruising-search')?.value || '').trim().toLowerCase();
-      const candidates = getPublicVenues().filter(venue => isCruisingAreaVenue(venue))
-        .filter(venue => scope.scope === 'all' || venueMatchesSavedLocation(venue,scope))
-        .filter(venue => !search || [venue.Name,venue.City,venue.Country,venue.Description,venue.Address].some(field => String(field||'').toLowerCase().includes(search)));
-      const count = document.getElementById('v15-cruising-count');
-      if (count) count.textContent = candidates.length+' public cruising area'+(candidates.length === 1 ? '' : 's')+' listed';
-      renderListings(sortSavedLocationVenues(candidates),false,document.getElementById('v15-cruising-results'));
-    };
-    container.querySelector('#v15-cruising-search')?.addEventListener('input', draw);
-    container.querySelector('#v15-cruising-location')?.addEventListener('click',openLocationModal);
-    draw();
-}
-window.addEventListener('backroom:location-changed', () => {
-    if (window.location.hash === '#cruising-guide') renderCruisingDirectory();
-});
-document.addEventListener('backroom:v15-ready', () => {
-    const hash = window.location.hash;
-    if (hash === '#cruising-guide') renderCruisingDirectory();
-    else if (hash === '#venues' || hash === '#results' || hash === '#myevents') handleRouting();
-});
 
 function renderBlankPageView(page) {
     renderStaticPageView(page);
@@ -3558,7 +3522,6 @@ function renderSearchEventResults(items, targetContainer) {
         const card = document.createElement('article');
         card.className = `card search-result-event-card${isMenOnlyEvent(event, venue) ? ' card--men-only-event' : ''}`;
         card.innerHTML = `
-            ${window.BackroomV15?.badge('event',event.Event_ID,event.Display_Date || event.Event_Date) || ''}
             <div class="card-image-wrapper">
                 <img class="venue-image centered-image" src="${image}" onerror="this.onerror=null; this.src='${imageFallback}'" title="${eventName}">
             </div>
@@ -3914,15 +3877,6 @@ function toggleFavorite(id, btnElement) {
 
 window.toggleEventFavorite = function(eventId, btnElement, isRemovalView = false) {
     const index = userEvents.indexOf(eventId);
-    if (index === -1 && !window.BackroomV15?.savingBulk && window.BackroomV15?.festivalsForEvent(eventId).length) {
-        window.BackroomV15.promptSave(eventId, ids => {
-            window.BackroomV15.savingBulk = true;
-            try { [...new Set(ids)].filter(id => !userEvents.includes(id) && events.some(e => e.Event_ID === id)).forEach(id => window.toggleEventFavorite(id,null,false)); }
-            finally { window.BackroomV15.savingBulk = false; }
-            window.BackroomV15.notifySaved();
-        });
-        return;
-    }
     if(index > -1) {
         if(isRemovalView && !confirm("Remove this event from your list?")) return;
         userEvents.splice(index, 1);
@@ -3935,7 +3889,6 @@ window.toggleEventFavorite = function(eventId, btnElement, isRemovalView = false
     }
     saveCurrentToBundle();
     if(window.location.hash === '#myevents') renderMyEventsView();
-    window.BackroomV15?.notifySaved();
 }
 
 function renderFavoritesView() {
@@ -4021,7 +3974,6 @@ function renderMyEventsView() {
         return;
     }
 
-    const v15FestivalGroups = new Map();
     myEvts.sort(compareEventOccurrences).forEach(event => {
         const venue = (venues || []).find(item => item.Venue_ID === event.Venue_ID) || null;
         const venueName = venue ? venue.Name : 'Unknown Venue';
@@ -4030,7 +3982,6 @@ function renderMyEventsView() {
         const card = document.createElement('article');
         card.className = `card my-event-card${isMenOnlyEvent(event, venue) ? ' card--men-only-event' : ''}`;
         card.innerHTML = `
-            ${window.BackroomV15?.badge('event',event.Event_ID,event.Display_Date || event.Event_Date) || ''}
             <div class="my-event-card-inner">
                 ${buildEventDateBadge(event, 'my-event-date')}
                 <div class="my-event-content">
@@ -4058,21 +4009,7 @@ function renderMyEventsView() {
                 window.location.hash = `#venue=${venue.Venue_ID}`;
             }
         });
-        const festival = window.BackroomV15?.festivalForEvent(event.Event_ID);
-        if (festival && resultsContainer) {
-            let group = v15FestivalGroups.get(festival.Festival_ID);
-            if (!group) {
-                group = document.createElement('details');
-                group.className = 'v15-my-events-festival';
-                group.open = true;
-                const summary = document.createElement('summary');
-                summary.textContent = '🌿 ' + festival.Festival_Name + ' · Saved events';
-                group.appendChild(summary);
-                resultsContainer.appendChild(group);
-                v15FestivalGroups.set(festival.Festival_ID,group);
-            }
-            group.appendChild(card);
-        } else resultsContainer?.appendChild(card);
+        resultsContainer?.appendChild(card);
     });
 }
 
@@ -4586,7 +4523,6 @@ function renderListings(data, isContextView = false, targetContainer = resultsCo
         const badgeClass = getCardStatusClass(venue);
 
         card.innerHTML = `
-            ${window.BackroomV15?.badge('venue',venue.Venue_ID) || ''}
             <div class="card-image-wrapper">
                 <img class="venue-image centered-image" src="${baseImageSrc}" onerror="this.onerror=null; this.src='${fallbackImage}'" data-fallback-image="${fallbackImage}" data-id="${venue.Venue_ID}" data-index="1" title="Tap to see next photo">
             </div>
@@ -4973,11 +4909,16 @@ function saveLocation() {
     announceLocationChange(loc);
     showToast(`Location set to ${getLocationDisplayText(loc) || 'All Cities'}.`);
 
-    // v1.5: location changes never navigate away or discard the active search.
+    // Location scope and free-text search are intentionally separate. Saving a scope
+    // starts a clean location-based result view rather than a double-filtered search.
+    if (searchInput) searchInput.value = '';
     updateSearchClearButton();
+
     locModal?.classList.add('hidden');
-    if (window.location.hash === '#cruising-guide') renderCruisingDirectory();
-    else if (!window.location.hash.startsWith('#calendar')) handleRouting();
+
+    // Location sets the shared scope for Results, Venues and Events.
+    if (window.location.hash === '#results') handleRouting();
+    else window.location.hash = '#results';
 }
 
 function clearLocation() {
@@ -5003,8 +4944,7 @@ function clearLocation() {
     updateLocationDraftStatus('');
     announceLocationChange({ scope: 'all', city: '', country: '', postcode: '' });
 
-    if (window.location.hash === '#cruising-guide') renderCruisingDirectory();
-    else if (!window.location.hash.startsWith('#calendar')) handleRouting();
+    if (isResultsRouteHash()) handleRouting();
 }
 
 function loadSavedLocation() {

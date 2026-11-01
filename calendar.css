@@ -361,29 +361,3 @@
     .calendar-event-name { font-size: 1.16rem; }
     .calendar-tag { font-size: .69rem; padding: 4px 8px; }
 }
-
-/* v1.5 multi-select dates, inline city search and green festival cards. */
-.v15-calendar-location{display:flex;align-items:center;gap:8px;width:min(100%,340px);margin:5px 0 0}
-.v15-calendar-location #calendar-location-pill{min-width:96px;max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.v15-calendar-location #v15-calendar-location-input{flex:1 1 190px;min-width:0;margin:0;height:38px}
-.v15-location-pin{border:1px solid var(--primary-blue);background:#132434;color:white;padding:7px 9px;border-radius:50%;cursor:pointer;flex:0 0 auto}
-.v15-location-pin:hover{background:#21516b}
-.calendar-event-card{position:relative}
-.v15-festival-card{background:#153d2c;border:2px solid #429e69;border-radius:9px;margin:12px 0 16px;color:#fff;overflow:hidden}
-.v15-festival-card summary{list-style:none;cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:16px 17px}
-.v15-festival-card summary::-webkit-details-marker{display:none}
-.v15-festival-card summary strong{font:700 1.8rem 'Antonio',sans-serif;letter-spacing:.04em;color:#fff}
-.v15-festival-card summary>span:not(.v15-festival-kicker):not(.v15-festival-expand){color:#c8e3d3}
-.v15-festival-card summary p{font-size:.96rem;line-height:1.4;color:#d7e4dd;margin:3px 0}
-.v15-festival-kicker{color:#8df0ab;font-size:.81rem;font-weight:700;letter-spacing:.09em}
-.v15-festival-expand{color:#8df0ab;font-size:.92rem;font-weight:700}
-.v15-festival-body{background:#0f2b20;border-top:1px solid #41966b;padding:16px}
-.v15-festival-body>p{margin:0 0 12px;white-space:pre-line;color:#f2fbf3}
-.v15-festival-url{display:inline-block;margin:0 0 14px;color:#9cefbe;text-decoration:underline}
-.v15-festival-event{border-left:3px solid #316c49;margin:12px 0;padding-left:9px}
-.v15-festival-event-matched{border-color:#9cefbe}
-.v15-festival-event .calendar-event-card{margin:0;background:#1d3529}
-.v15-festival-event .calendar-event-card .calendar-event-body{color:#fff}
-.calendar-day.selected{background:#009dcb!important;border-color:#62d5fa!important;color:#fff!important;box-shadow:0 0 0 1px rgba(0,194,255,.4)}
-.calendar-title-block>p{display:none}
-@media(max-width:760px){.v15-calendar-location{width:100%}.v15-festival-card summary strong{font-size:1.5rem}.v15-festival-body{padding:10px}}
