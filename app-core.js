@@ -4030,6 +4030,7 @@ function renderMyEventsView() {
         const card = document.createElement('article');
         card.className = `card my-event-card${isMenOnlyEvent(event, venue) ? ' card--men-only-event' : ''}`;
         card.innerHTML = `
+            ${window.BackroomV15?.badge('event',event.Event_ID,event.Display_Date || event.Event_Date) || ''}
             <div class="my-event-card-inner">
                 ${buildEventDateBadge(event, 'my-event-date')}
                 <div class="my-event-content">

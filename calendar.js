@@ -422,8 +422,8 @@
         }
     }
 
-    function syncLocationFromSharedLocation() {
-        const routeState = readCalendarRouteState();
+    function syncLocationFromSharedLocation(ignoreSharedRoute = false) {
+        const routeState = ignoreSharedRoute ? null : readCalendarRouteState();
         if (routeState) {
             state.location = routeState.location;
             return;
@@ -1026,7 +1026,8 @@ function ensureSelectedDate() {
     document.addEventListener('backroom:v15-ready', () => { if(isCalendarRouteHash() && state.loaded)render(); });
     window.addEventListener('backroom:location-changed', () => {
         if (!state.loaded) return;
-        syncLocationFromSharedLocation();
+        if (readCalendarRouteState()) history.replaceState(history.state, '', '#calendar');
+        syncLocationFromSharedLocation(true);
         if (isCalendarRouteHash()) render();
     });
 
