@@ -26,7 +26,11 @@ jobs:
             const errors=[];
             page.on('pageerror',e => errors.push(e.message));
             page.on('console',m => {if(m.type()==='error') console.log('CONSOLE_ERROR:',m.text());});
-            await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded',timeout:90000});
+            page.on('requestfailed', req => console.log('REQUEST_FAIL:',req.url(),req.failure()?.errorText));
+            await page.route(/https:\/\/(unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com)\//, route => route.abort());
+            console.log('Browser started, loading locally with third-party resources blocked');
+            await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded',timeout:30000});
+            console.log('DOM loaded.');
             await page.locator('#btn-enter').waitFor({state:'visible',timeout:30000});
             await page.locator('#btn-enter').click();
             await page.locator('#age-gate').waitFor({state:'hidden',timeout:15000});
