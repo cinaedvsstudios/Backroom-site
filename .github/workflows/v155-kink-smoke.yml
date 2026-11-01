@@ -1,0 +1,101 @@
+name: Backroom v1.5.5 Kink Guide Browser Smoke
+on:
+  push:
+    branches: [v155-kink-guide-test]
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Verify age gate, new terms and images
+        run: |
+          python3 -m http.server 8765 >/tmp/backroom-server.log 2>&1 &
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+            const page=await browser.newPage({viewport:{width:1380,height:850}});
+            const errors=[];
+            page.on('pageerror',e=>errors.push(e.message));
+            await page.route(/https:\/\/(unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com)\//,r=>r.abort());
+            await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded',timeout:35000});
+            await page.locator('#btn-enter').click();
+            await page.locator('#age-gate').waitFor({state:'hidden',timeout:15000});
+            await page.locator('#app-shell').waitFor({state:'visible',timeout:15000});
+            const version=await page.locator('#sidebar-version-display').textContent();
+            if(!version.includes('v1.5.5'))throw Error('Wrong version '+version);
+            console.log('PASS age gate');
+            await page.evaluate(()=>{location.hash='#dress-codes'});
+            await page.locator('#br-guide-results .br-guide-term').first().waitFor({state:'visible',timeout:25000});
+            const count=await page.locator('#br-guide-results .br-guide-term').count();
+            if(count!==204)throw Error('Wrong glossary total '+count);
+            if(await page.locator('#br-guide-tabs button').count()!==8)throw Error('Missing new tab');
+            console.log('PASS 204 terms and Apps & Profile Terms tab');
+            const entries=[
+              ['dress','Underwear','Profile_images/twunk02.png'],
+              ['dress','Jockstrap','kinkthumb/jockstrap.png'],
+              ['dress','Naked / Nude','kinkthumb/nude.png'],
+              ['dress','Neoprene','kinkthumb/wetsuit.png'],
+              ['dress','Uniform','kinkthumb/swat.png'],
+              ['dress','Military Gear','kinkthumb/uniform.png'],
+              ['kink','Chastity / Caged / Locked','kinkthumb/cage.png'],
+              ['kink','Furry / Fursona','kinkthumb/furry.png'],
+              ['spaces','Public cruising area','kinkthumb/publictoilet.png'],
+              ['spaces','Glory Hole','kinkthumb/gloryhole.png'],
+              ['spaces','Darkroom','kinkthumb/darkroom.png']
+            ];
+            for(const [category,term,expected] of entries){
+              await page.locator('[data-guide-filter="'+category+'"]').click();
+              const card=page.locator('.br-guide-term').filter({has:page.locator('h3',{hasText:term})}).first();
+              await card.waitFor({state:'visible'});
+              const img=card.locator('img').first();
+              await img.waitFor({state:'visible'});
+              const actual=await img.getAttribute('src');
+              if(actual!==expected)throw Error(term+' expected '+expected+' but got '+actual);
+              const ok=await img.evaluate(async el=>{
+                if(!el.complete)await new Promise(done=>{el.addEventListener('load',done,{once:true});el.addEventListener('error',done,{once:true});});
+                return el.naturalWidth>0;
+              });
+              if(!ok)throw Error('Image not loaded for '+term);
+            }
+            for(const term of ['Lingerie','Drag']){
+              await page.locator('[data-guide-filter="dress"]').click();
+              const card=page.locator('.br-guide-term').filter({has:page.locator('h3',{hasText:term})}).first();
+              await card.waitFor({state:'visible'});
+              if(await card.locator('img').count())throw Error(term+' should have no image');
+            }
+            console.log('PASS requested illustrations');
+            await page.locator('[data-guide-filter="guys"]').click();
+            for(const term of ['Bear','Otter','Daddy','Silver Fox','Seal','Wolf','Mature']){
+              await page.locator('.br-guide-term h3',{hasText:term}).first().waitFor({state:'visible'});
+            }
+            if(await page.getByText('Bear / Mature / Young Crowd',{exact:true}).count())throw Error('Combined label remains');
+            const seal=page.locator('.br-guide-term').filter({has:page.locator('h3',{hasText:'Seal'})}).first();
+            await seal.locator('[data-guide-preview]').click();
+            await page.locator('#br-guide-zoom').waitFor({state:'visible'});
+            if(!(await page.locator('#br-guide-zoom-image').getAttribute('src')).includes('seal01.png'))throw Error('Zoom image incorrect');
+            await page.locator('#br-guide-zoom-close').click();
+            console.log('PASS individual types and zoom');
+            await page.locator('[data-guide-filter="apps"]').click();
+            if(await page.locator('.br-guide-term').count()!==22)throw Error('Wrong app glossary count');
+            for(const term of ['Hosting / Accom','Visiting / Travel','Looking','Now / Right Now','H&H','P&P','BBC','BWC','NPNC','Discreet','POZ','MTF','FTM']){
+              if(!await page.locator('.br-guide-term h3').filter({hasText:term}).count())throw Error('Missing app term '+term);
+            }
+            await page.locator('#br-guide-search').fill('NPNC');
+            if(await page.locator('.br-guide-term').count()!==1)throw Error('Search not filtering');
+            console.log('PASS app terms and search');
+            await page.goto('http://127.0.0.1:8765/dress-codes.html',{waitUntil:'domcontentloaded'});
+            await page.locator('[data-guide-filter="apps"]').waitFor({state:'visible'});
+            if(errors.length)throw Error('Browser errors: '+JSON.stringify(errors));
+            console.log('PASS standalone glossary and JS errors');
+            await browser.close();
+          })().catch(e=>{console.error('FAIL:',e);process.exit(1)});
+          NODE
