@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.2";
+const APP_VERSION = "v1.5.3";
 const APP_DATE = "1 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -2422,26 +2422,7 @@ async function renderDressCodesGuide() {
     await renderStaticPageView('dress-codes');
     if (window.location.hash !== '#dress-codes') return;
     const container=document.getElementById('dress-codes-container');
-    const input=container?.querySelector('#kink-search');
-    if (!input) return;
-    const entries=[...container.querySelectorAll('[data-guide-term]')];
-    const sections=[...container.querySelectorAll('[data-guide-section]')];
-    const counter=container.querySelector('#kink-search-count');
-    const empty=container.querySelector('#kink-no-results');
-    input.addEventListener('input', () => {
-        const q=String(input.value||'').trim().toLocaleLowerCase();
-        let matching=0;
-        entries.forEach(entry=>{
-            const show=entry.getAttribute('data-guide-term')?.includes(q);
-            entry.hidden=!show;
-            if(show)matching++;
-        });
-        sections.forEach(section => {
-            section.hidden=![...section.querySelectorAll('[data-guide-term]')].some(entry=>!entry.hidden);
-        });
-        if(empty)empty.hidden=matching>0;
-        if(counter)counter.textContent=q?matching+' matching terms':'';
-    });
+    window.BackroomGuide?.mount(container);
 }
 
 /* v1.5: Cruising Guide is a filtered venue browser, not a duplicate venue database. */
@@ -3007,6 +2988,9 @@ function setupEventListeners() {
     addEvt('btn-location', 'click', openLocationModal);
     
     addEvt('btn-settings', 'click', () => settingsModal?.classList.remove('hidden'));
+    addEvt('welcome-avatar-settings', 'click', () => {
+        settingsModal?.classList.remove('hidden');
+    });
     addEvt('btn-profile-menu', 'click', openProfileMenu);
     const previewShortcut = document.getElementById('preview-img-wrapper');
     if(previewShortcut && !previewShortcut.dataset.avatarShortcutBound) {

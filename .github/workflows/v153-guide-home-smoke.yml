@@ -1,0 +1,79 @@
+name: Backroom v1.5.3 Browser Smoke
+on:
+  push:
+    branches: [v153-guide-home-test]
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Exercise startup, glossary, settings and home
+        run: |
+          python3 -m http.server 8765 >/tmp/backroom-server.log 2>&1 &
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+            const page=await browser.newPage({viewport:{width:1380,height:850}});
+            const errors=[];page.on('pageerror',e=>errors.push(e.message));
+            await page.route(/https:\/\/(unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com)\//,r=>r.abort());
+            await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded',timeout:35000});
+            await page.locator('#btn-enter').click();
+            await page.locator('#age-gate').waitFor({state:'hidden',timeout:15000});
+            await page.locator('#app-shell').waitFor({state:'visible',timeout:15000});
+            await page.waitForTimeout(900);
+            const version=await page.locator('#sidebar-version-display').textContent();
+            if(!version.includes('v1.5.3'))throw Error('Incorrect version: '+version);
+            console.log('PASS startup and age gate:',version);
+            await page.locator('#welcome-avatar-settings').click();
+            await page.locator('#settings-modal').waitFor({state:'visible',timeout:10000});
+            console.log('PASS home emoji/avatar opens Settings');
+            await page.locator('#settings-modal .close-modal-btn').click();
+            await page.evaluate(()=>{window.location.hash='#dress-codes'});
+            await page.locator('#br-guide-results .br-guide-term').first().waitFor({state:'visible',timeout:20000});
+            const initial=await page.locator('#br-guide-results .br-guide-term').count();
+            if(initial<170)throw Error('Missing glossary entries '+initial);
+            console.log('PASS glossary total '+initial);
+            const tabs=await page.locator('#br-guide-tabs button').count();
+            if(tabs!==7)throw Error('Expected seven category buttons; got '+tabs);
+            await page.locator('[data-guide-filter="hanky"]').click();
+            const swatches=await page.locator('#br-guide-results .br-guide-swatch').count();
+            if(swatches!==51)throw Error('Expected 51 hanky swatches, got '+swatches);
+            console.log('PASS hanky filter + swatches');
+            await page.locator('[data-guide-filter="guys"]').click();
+            const thumb=page.locator('#br-guide-results [data-guide-preview]').first();
+            await thumb.click();
+            await page.locator('#br-guide-zoom').waitFor({state:'visible'});
+            await page.locator('#br-guide-zoom-close').click();
+            await page.locator('#br-guide-zoom').waitFor({state:'hidden'});
+            console.log('PASS avatar thumbnail lightbox');
+            await page.locator('#br-guide-search').fill('twink');
+            const visible=await page.locator('#br-guide-results .br-guide-term').count();
+            if(visible<1||visible>=25)throw Error('Search failed: '+visible);
+            await page.locator('[data-guide-filter="consent"]').click();
+            await page.locator('#br-guide-clear').click();
+            const consent=await page.locator('#br-guide-results .br-guide-term').count();
+            if(consent!==12)throw Error('Consent button failed '+consent);
+            const dimensions=await page.evaluate(()=>{
+              const wrapper=document.getElementById('dress-codes-container');
+              const scrolling=document.getElementById('br-guide-scroll');
+              return {outsideHeight:wrapper.clientHeight,innerHeight:scrolling.clientHeight,scrollHeight:scrolling.scrollHeight,windowHeight:innerHeight};
+            });
+            if(dimensions.outsideHeight>dimensions.windowHeight)throw Error('Guide layout overflow: '+JSON.stringify(dimensions));
+            console.log('PASS filtered consent section and internal-scroller layout');
+            await page.evaluate(()=>{window.location.hash='#calendar'});
+            await page.locator('.calendar-page:not(.calendar-page--festivals)').waitFor({state:'visible'});
+            console.log('PASS standard Events');
+            if(errors.length)throw Error('Uncaught browser errors: '+JSON.stringify(errors));
+            console.log('PASS no uncaught JS errors');
+            await browser.close();
+          })().catch(e=>{console.error('FAIL',e);process.exit(1)});
+          NODE

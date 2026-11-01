@@ -1905,3 +1905,59 @@ td.hidden-col * { display: none !important; }
 .kink-guide-return{margin-top:20px;text-align:center;color:#aeb5cd}
 .kink-guide a{color:#5dc9ee;text-decoration:underline}
 @media(max-width:600px){#dress-codes-container{padding:14px!important}.kink-guide-header{padding:17px}.kink-guide-grid{grid-template-columns:1fr}.kink-guide-etiquette{padding:16px}}
+
+
+/* Backroom v1.5.3: compact glossary app with internal scrolling and per-category accents */
+#dress-codes-container{height:calc(100dvh - 120px);min-height:480px;display:flex;flex-direction:column;overflow:hidden;padding:14px!important;}
+#dress-codes-container.hidden{display:none!important}
+.br-guide{height:100%;min-height:0;display:flex;flex-direction:column;color:#fff;max-width:1220px;width:100%;margin:auto;font-family:'Barlow Condensed',Arial,sans-serif}
+.br-guide [hidden]{display:none!important}
+.br-guide-top{flex:0 0 auto;min-width:0}
+.br-guide-header{padding:9px 14px 6px;background:linear-gradient(110deg,#182133,#1b1221);border-left:4px solid #b77bd7;border-radius:8px}
+.br-guide-header h1{font:700 clamp(1.5rem,2.8vw,2rem)/1.13 'Antonio',sans-serif;color:#ecd1ff;margin:0 0 5px;letter-spacing:.05em}
+.br-guide-header p{font-size:1.06rem;line-height:1.38;margin:0;color:#d2d6e0}
+.br-guide-search-row{display:flex;align-items:center;gap:10px;min-width:0;margin:10px 0}
+.br-guide-search-row label{white-space:nowrap;font:700 1.04rem 'Antonio',sans-serif;color:#fff;letter-spacing:.04em}
+.br-guide-search-row input{flex:1;min-width:0;margin:0!important;height:36px!important;background:#0b101d!important;border:1px solid #596078!important;color:#fff!important}
+.br-guide-clear{background:#293249;border:1px solid #566075;color:white;font-size:21px;width:32px;height:32px;border-radius:50%;cursor:pointer}
+.br-guide-tabs{display:flex;gap:7px;overflow-x:auto;white-space:nowrap;padding:2px 0 11px;scrollbar-width:thin;scrollbar-color:#5c6790 transparent}
+.br-guide-tab{--cat:#ddd;flex:0 0 auto;color:var(--cat);border:1px solid var(--cat);background:#101522;border-radius:20px;font:700 .95rem 'Barlow Condensed',sans-serif;padding:8px 12px;cursor:pointer;transition:background .1s,color .1s}
+.br-guide-tab:hover{background:#222a3a}
+.br-guide-tab.is-active{background:var(--cat);color:#121722}
+.br-guide-tab span{opacity:.85;font-size:.8rem;margin-left:4px}
+.br-guide-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:#5b677e #0d111e;border:1px solid #41475a;border-radius:10px;background:#0f1520;padding:15px 16px 20px;outline-offset:-2px}
+.br-guide-summary{color:#c2cad9;font-size:.94rem;margin-bottom:9px}
+.br-guide-section{--cat:#888;margin:0 0 19px}
+.br-guide-section h2{display:flex;align-items:baseline;gap:10px;font:700 1.38rem 'Antonio',sans-serif;color:var(--cat);margin:0 0 9px;border-bottom:1px solid color-mix(in srgb,var(--cat),transparent 63%);padding-bottom:8px}
+.br-guide-section h2 small{font:700 .85rem 'Barlow Condensed',sans-serif;color:#aeb6c8}
+.br-guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:11px}
+.br-guide-term{min-height:108px;background:#1c2535;border:1px solid #353f56;border-left:4px solid var(--cat);border-radius:8px;padding:13px;display:flex;gap:10px;align-items:stretch}
+.br-guide-term-info{flex:1;min-width:0}
+.br-guide-term h3{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font:700 1.2rem/1.2 'Antonio',sans-serif;color:#fff;margin:0 0 7px}
+.br-guide-term p{font-size:1.01rem;line-height:1.4;color:#d5d9e3;margin:0}
+.br-guide-term .br-guide-thumb{flex:0 0 63px;align-self:center;display:flex;align-items:center;justify-content:center;cursor:zoom-in;min-height:80px;max-height:116px;padding:3px;background:#0b1221;border:1px solid color-mix(in srgb,var(--cat),#192132 40%);border-radius:7px}
+.br-guide-thumb img{height:100px;max-width:60px;width:auto;object-fit:contain}
+.br-guide-thumb:hover{box-shadow:0 0 9px color-mix(in srgb,var(--cat),transparent 50%)}
+.br-guide-swatch{width:28px;height:22px;display:inline-block;border:1px solid #8793a9;border-radius:4px;flex:0 0 auto}
+.br-guide-core,.br-guide-extended{display:inline-block;color:#aabbce;font-size:.81rem;text-transform:uppercase;letter-spacing:.03em;margin-bottom:7px}
+.br-guide-core{color:#c2e3c2}
+.br-guide-hanky-explainer{border:1px solid #746c38;border-radius:8px;background:#2b271a;padding:12px 15px;color:#f0e7c5;font-size:1rem;line-height:1.5;margin-bottom:10px}
+.br-guide-sources{margin:16px 0 8px;color:#acbbce;border-top:1px solid #354356;padding-top:15px}
+.br-guide-sources summary{cursor:pointer;font-size:1.08rem}
+#br-guide-sources-list{display:flex;gap:8px 18px;flex-wrap:wrap;padding-top:10px}
+#br-guide-sources-list a{color:#70c8ea;text-decoration:underline;font-size:.93rem}
+.br-guide-empty{margin:25px auto;text-align:center;color:#afbacd}
+.br-guide-zoom{position:fixed;inset:0;z-index:9500;background:rgba(0,0,0,.87);display:flex;align-items:center;justify-content:center;padding:20px}
+.br-guide-zoom-inner{position:relative;padding:18px 25px;background:#1c2434;border:1px solid #677187;border-radius:12px;max-height:90vh;text-align:center}
+.br-guide-zoom-inner img{height:min(58vh,440px);max-width:min(80vw,380px);width:auto;object-fit:contain}
+.br-guide-zoom-inner p{margin:4px 0;color:#e6e9f2;font-size:1.1rem}
+.br-guide-zoom-close{position:absolute;right:6px;top:4px;border:none;background:none;color:#fff;cursor:pointer;font-size:28px}
+#welcome-avatar-settings{position:relative;display:block;border:2px solid transparent;background:none;padding:3px;border-radius:10px;cursor:pointer}
+#welcome-avatar-settings:hover,#welcome-avatar-settings:focus-visible{border-color:var(--primary-blue)}
+#welcome-avatar-settings .welcome-avatar-settings-icon{position:absolute;right:2px;bottom:2px;background:#181f2f;border:1px solid #5caad0;border-radius:50%;width:31px;height:31px;display:flex;align-items:center;justify-content:center;font-size:18px}
+@media(max-width:800px){#dress-codes-container{height:calc(100dvh - 103px);padding:8px!important}.br-guide-header p{font-size:.97rem}.br-guide-scroll{padding:11px}.br-guide-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr))}}
+@media(max-width:480px){.br-guide-search-row{gap:5px}.br-guide-search-row label{display:none}.br-guide-term{padding:11px}.br-guide-grid{grid-template-columns:1fr}.br-guide-tab{padding:7px 10px}}
+
+/* Standalone glossary URL also uses an internal content scroller. */
+body:has(> .br-guide){height:100dvh;overflow:hidden;padding:14px;box-sizing:border-box}
+body:has(> .br-guide) > .br-guide{height:100%;max-width:1180px}
