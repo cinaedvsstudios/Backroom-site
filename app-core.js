@@ -2422,6 +2422,7 @@ async function renderDressCodesGuide() {
     await renderStaticPageView('dress-codes');
     if (window.location.hash !== '#dress-codes') return;
     const container=document.getElementById('dress-codes-container');
+    container?.classList.add('br-guide');
     window.BackroomGuide?.mount(container);
 }
 

@@ -9,7 +9,7 @@
     return response.json();
   }).catch(error=>{pending=null;throw error;}));
   function mount(root) {
-    if(!root || root.dataset.brGuideBound==='true')return;
+    if(!root)return;
     const input=root.querySelector('#br-guide-search');
     const tabs=root.querySelector('#br-guide-tabs');
     const results=root.querySelector('#br-guide-results');
@@ -17,8 +17,8 @@
     const summary=root.querySelector('#br-guide-summary');
     const clear=root.querySelector('#br-guide-clear');
     const zoom=root.querySelector('#br-guide-zoom');
-    if(!input||!tabs||!results||!scroll)return;
-    root.dataset.brGuideBound='true';
+    if(!input||!tabs||!results||!scroll || results.dataset.brGuideBound === 'true')return;
+    results.dataset.brGuideBound='true';
     const state={active:'all',query:'',data:null};
     const images = new Set();
     function closeZoom() { if(zoom) { zoom.hidden=true;const im=zoom.querySelector('img');if(im)im.src=''; } }
