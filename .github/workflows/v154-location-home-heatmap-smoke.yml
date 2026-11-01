@@ -55,8 +55,9 @@ jobs:
             await page.locator('#context-title .backroom-inline-location-name').click();
             const venueInput=page.locator('#context-title .backroom-inline-location-search');
             await venueInput.waitFor({state:'visible'});
-            await venueInput.fill('Berlin');
+            await venueInput.fill('Berlin, Germany');
             await venueInput.press('Enter');
+            console.log('VENUE INPUT STATUS',await page.evaluate(()=>({location:localStorage.getItem('br_location'),message:document.querySelector('#context-title .backroom-inline-location-search')?.validationMessage,hash:location.hash})));
             await page.waitForTimeout(700);
             if(!page.url().includes('#venues'))throw Error('Venue location selection changed page');
             await page.locator('#context-title .backroom-inline-location-name').waitFor({state:'visible'});
