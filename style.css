@@ -1852,3 +1852,29 @@ td.hidden-col * { display: none !important; }
         white-space: normal;
     }
 }
+
+/* Backroom v1.5 — public cruising directory, Featured asset, festival-save UI. */
+.v15-cruising-title{color:var(--bright-red-orange);margin:0 0 16px}
+#cruising-guide-container{max-width:1200px;margin:0 auto;background:#210d12!important;border-color:#8d251b!important}
+.v15-cruising-guide{margin-bottom:20px;background:#3b1019;border:1px solid var(--bright-red-orange);border-radius:10px;overflow:hidden}
+.v15-cruising-guide summary{cursor:pointer;padding:15px 18px;font:700 1.35rem 'Antonio',sans-serif;letter-spacing:.05em;color:#fff}
+.v15-cruising-guide-copy{padding:12px 18px 20px;background:#200f14;line-height:1.5;color:#fff}
+.v15-cruising-guide-copy h1,.v15-cruising-guide-copy h2{color:#ff8e7a}
+.v15-cruising-controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:12px 0}
+.v15-cruising-controls input{flex:1 1 260px;min-width:0;margin:0!important}
+.v15-cruising-controls button{flex:0 0 auto}
+.v15-cruising-results{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:18px;margin-top:14px}
+.v15-cruising-results .card{background:var(--dark-red)}
+.v15-cruising-results .card .card-inner-content{background:linear-gradient(180deg,#4a1118,var(--dark-red))}
+.card,.calendar-event-card,.my-event-card{position:relative}
+.backroom-featured-sticker{position:absolute;top:5px;right:5px;z-index:5;width:clamp(78px,27%,118px);height:auto;object-fit:contain;pointer-events:none;filter:drop-shadow(0 2px 4px rgba(0,0,0,.7))}
+.v15-save-overlay{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.8);padding:16px}
+.v15-save-dialog{position:relative;display:flex;flex-direction:column;gap:14px;max-width:460px;width:100%;background:var(--panel-dark);padding:26px;border:1px solid var(--primary-blue);border-radius:14px;box-shadow:0 0 35px #000}
+.v15-save-dialog h2{color:var(--primary-blue);margin:0;font-size:1.75rem}
+.v15-save-dialog p{margin:0;color:#eee}
+.v15-save-dialog button.btn{min-height:44px;white-space:normal}
+.v15-dismiss{position:absolute;right:12px;top:7px;color:white;background:none;border:0;font-size:28px;cursor:pointer}
+.v15-my-events-festival{grid-column:1/-1;background:#153c2c;border:1px solid #41966b;border-radius:10px;padding:12px;margin-bottom:12px}
+.v15-my-events-festival summary{cursor:pointer;color:#dcffe4;font:700 1.4rem 'Antonio',sans-serif;letter-spacing:.03em;padding:6px}
+.v15-my-events-festival .my-event-card{margin:10px 0}
+@media(max-width:640px){#cruising-guide-container{padding:14px!important}.v15-cruising-results{grid-template-columns:1fr}.v15-save-dialog{padding:20px}}

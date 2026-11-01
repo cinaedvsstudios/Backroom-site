@@ -45,6 +45,7 @@
     const state = {
         month: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
         selectedDate: dateKey(new Date()),
+        selectedDates: new Set([dateKey(new Date())]),
         location: { scope: 'all', city: '', country: '' },
         dateFilter: 'all',
         vibeFilter: '',
@@ -494,6 +495,7 @@
         return {
             location,
             selectedDate: dateKey(requestedDate),
+            selectedDates: String(params.get('dates')||'').split(',').filter(v=>parseDate(v)).length ? String(params.get('dates')).split(',').filter(v=>parseDate(v)) : [dateKey(requestedDate)],
             vibeFilter,
             shared: true
         };
@@ -507,6 +509,7 @@
         state.dateFilter = 'all';
         state.vibeFilter = routeState.vibeFilter;
         state.selectedDate = routeState.selectedDate;
+        state.selectedDates = new Set((routeState.selectedDates || [routeState.selectedDate]).filter(v=>parseDate(v)));
         const selected = parseDate(routeState.selectedDate) || startOfToday();
         state.month = new Date(selected.getFullYear(), selected.getMonth(), 1);
         return true;
@@ -519,6 +522,7 @@
         if (location.scope === 'city') params.set('city', location.city);
         if (location.country) params.set('country', location.country);
         params.set('date', state.selectedDate);
+        if(state.selectedDates.size>1)params.set('dates',[...state.selectedDates].sort().join(','));
         if (state.vibeFilter) params.set('tag', state.vibeFilter);
 
         return `${window.location.origin}${window.location.pathname}#calendar?${params.toString()}`;
@@ -686,7 +690,27 @@
     }
 
     function eventsForActiveDateFilter() {
-        if (state.dateFilter === 'all') return eventsOnDate(state.selectedDate);
+        if (state.dateFilter === 'all') {
+            const dates = [...state.selectedDates].sort();
+            if (!dates.length) {
+                // All future one-off events, plus the next 12 weeks of recurring occurrences.
+                const today=dateKey(startOfToday());
+                const future=state.events.filter(e=>isPublic(e)&&!isWeekly(e)&&String(e.Event_Date||'')>=today)
+                  .map(e=>({...e,Display_Date:e.Event_Date,Is_Recurring:false,Recurrence_Label:''}));
+                const start=startOfToday();
+                for(let i=0;i<84;i++){
+                    const day=new Date(start);day.setDate(start.getDate()+i);
+                    const key=dateKey(day);
+                    for(const recurring of state.events){
+                        if(!isWeekly(recurring)||!isPublic(recurring))continue;
+                        const occurrence=occurrenceForDate(recurring,day);
+                        if(occurrence)future.push(occurrence);
+                    }
+                }
+                return future.sort(sortEvents);
+            }
+            return dates.flatMap(eventsOnDate).sort(sortEvents);
+        }
 
         const start = startOfToday();
         const end = state.dateFilter === 'today' ? start : endOfThisWeek();
@@ -752,25 +776,24 @@
 }
 
 function ensureSelectedDate() {
-        if (state.dateFilter === 'today' || state.dateFilter === 'week') {
-            const today = startOfToday();
-            state.month = new Date(today.getFullYear(), today.getMonth(), 1);
-            state.selectedDate = dateKey(today);
-            return;
+        if(state.dateFilter === 'today'||state.dateFilter === 'week') {
+            const today=startOfToday();
+            state.month=new Date(today.getFullYear(),today.getMonth(),1);
+            state.selectedDate=dateKey(today);
         }
-
-        const selected = parseDate(state.selectedDate);
-        if (!selected || selected.getMonth() !== state.month.getMonth() || selected.getFullYear() !== state.month.getFullYear()) {
-            const firstEvent = eventsForMonth().sort(sortEvents)[0];
-            state.selectedDate = firstEvent?.Display_Date || dateKey(new Date(state.month.getFullYear(), state.month.getMonth(), 1));
-        }
+        if(!state.selectedDates) state.selectedDates=new Set([state.selectedDate]);
     }
 
     function renderLocationPill() {
         const label = getLocationLabel() || 'All Cities';
-        return `<button type="button" id="calendar-location-pill" class="calendar-location-pill pill-btn" aria-label="Change shared location">${escapeHTML(label)}</button>`;
+        const cities = cityOptionRecords().map(item => item.city+', '+item.country);
+        const countries = countryOptions();
+        const values=[...new Set([...countries,...cities])].sort((a,b)=>a.localeCompare(b));
+        return '<div class="v15-calendar-location"><button type="button" id="calendar-location-pill" class="calendar-location-pill pill-btn" aria-label="Search city or country">'+escapeHTML(label)+'</button>'
+          +'<input id="v15-calendar-location-input" class="form-input pill-input hidden" list="v15-location-options" placeholder="Search city or country…" aria-label="Search location">'
+          +'<datalist id="v15-location-options">'+values.map(v=>'<option value="'+escapeHTML(v)+'"></option>').join('')+'</datalist>'
+          +'<button type="button" id="v15-calendar-map-pin" class="v15-location-pin" title="Open full location window" aria-label="Open location window">📍</button></div>';
     }
-
 
     function filterChip(label, value, extraClass = '') {
         const isAll = value === 'all';
@@ -801,7 +824,7 @@ function ensureSelectedDate() {
     const key = dateKey(date);
     const count = eventsOnDate(key).length;
     const outsideMonth = date.getMonth() !== state.month.getMonth() || date.getFullYear() !== state.month.getFullYear();
-    return `<button type="button" class="calendar-day${outsideMonth ? ' outside-month' : ''}${key === state.selectedDate ? ' selected' : ''}${key === today ? ' today' : ''}${count ? ' has-events' : ''}" data-calendar-date="${key}"><span class="calendar-number">${date.getDate()}</span><span class="calendar-indicators">${count ? `<span class="calendar-dot"></span>${count > 1 ? `<span class="calendar-count">${count}</span>` : ''}` : ''}</span></button>`;
+    return `<button type="button" class="calendar-day${outsideMonth ? ' outside-month' : ''}${state.selectedDates.has(key) ? ' selected' : ''}${key === today ? ' today' : ''}${count ? ' has-events' : ''}" data-calendar-date="${key}"><span class="calendar-number">${date.getDate()}</span><span class="calendar-indicators">${count ? `<span class="calendar-dot"></span>${count > 1 ? `<span class="calendar-count">${count}</span>` : ''}` : ''}</span></button>`;
 }).join('');
         return `<div class="calendar-grid">${weekdays}${days}</div>`;
     }
@@ -824,26 +847,51 @@ function ensureSelectedDate() {
         const dateText = includeDate && event.Display_Date
             ? new Date(`${event.Display_Date}T12:00:00`).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }).toUpperCase()
             : '';
-        return `<article class="calendar-event-card${isMenOnlyEvent(event, venue) ? ' calendar-event-card--men-only' : ''}"><div class="calendar-event-layout"><div class="calendar-event-media"><img class="calendar-venue-thumb" src="${escapeHTML(image)}" alt="${escapeHTML(venueName)}" onerror="this.onerror=null;this.src='${escapeHTML(imageFallback)}';"><button type="button" class="btn primary-btn pill-btn calendar-action ${saved ? 'calendar-saved' : ''}" data-calendar-save="${escapeHTML(event.Event_ID)}">${saved ? '💖 Saved' : '💖 Save Event'}</button><button type="button" class="btn secondary-btn pill-btn calendar-action" data-calendar-shortlist="${escapeHTML(event.Event_ID)}">📑 Shortlist</button>${venue ? `<button type="button" class="btn secondary-btn pill-btn calendar-action" data-calendar-venue="${escapeHTML(venue.Venue_ID)}">Open Venue</button>` : ''}</div><div class="calendar-event-body"><div class="calendar-event-top"><div><h3 class="calendar-event-name display-font">${escapeHTML(event.Event_Name || 'Event')}</h3><p class="calendar-event-meta">${escapeHTML(venueName)}${location ? ` · ${escapeHTML(location)}` : ''}</p>${dateText ? `<p class="calendar-event-date">${escapeHTML(dateText)}</p>` : ''}${times ? `<p class="calendar-event-time">${escapeHTML(times)}</p>` : ''}${event.Is_Recurring ? `<p class="calendar-event-recurrence">${escapeHTML(event.Recurrence_Label)}</p>` : ''}</div>${event.Dresscode_Info ? `<div class="calendar-event-dresscode">${escapeHTML(event.Dresscode_Info)}</div>` : ''}</div>${event.Event_Description ? `<div class="calendar-event-description">${formatEventDescription(event.Event_Description)}</div>` : ''}${renderEventTags(event)}</div></div></article>`;
+        return `<article class="calendar-event-card${isMenOnlyEvent(event, venue) ? ' calendar-event-card--men-only' : ''}">${window.BackroomV15?.badge('event',event.Event_ID,event.Display_Date || event.Event_Date) || ''}<div class="calendar-event-layout"><div class="calendar-event-media"><img class="calendar-venue-thumb" src="${escapeHTML(image)}" alt="${escapeHTML(venueName)}" onerror="this.onerror=null;this.src='${escapeHTML(imageFallback)}';"><button type="button" class="btn primary-btn pill-btn calendar-action ${saved ? 'calendar-saved' : ''}" data-calendar-save="${escapeHTML(event.Event_ID)}">${saved ? '💖 Saved' : '💖 Save Event'}</button><button type="button" class="btn secondary-btn pill-btn calendar-action" data-calendar-shortlist="${escapeHTML(event.Event_ID)}">📑 Shortlist</button>${venue ? `<button type="button" class="btn secondary-btn pill-btn calendar-action" data-calendar-venue="${escapeHTML(venue.Venue_ID)}">Open Venue</button>` : ''}</div><div class="calendar-event-body"><div class="calendar-event-top"><div><h3 class="calendar-event-name display-font">${escapeHTML(event.Event_Name || 'Event')}</h3><p class="calendar-event-meta">${escapeHTML(venueName)}${location ? ` · ${escapeHTML(location)}` : ''}</p>${dateText ? `<p class="calendar-event-date">${escapeHTML(dateText)}</p>` : ''}${times ? `<p class="calendar-event-time">${escapeHTML(times)}</p>` : ''}${event.Is_Recurring ? `<p class="calendar-event-recurrence">${escapeHTML(event.Recurrence_Label)}</p>` : ''}</div>${event.Dresscode_Info ? `<div class="calendar-event-dresscode">${escapeHTML(event.Dresscode_Info)}</div>` : ''}</div>${event.Event_Description ? `<div class="calendar-event-description">${formatEventDescription(event.Event_Description)}</div>` : ''}${renderEventTags(event)}</div></div></article>`;
     }
 
+
     function renderPanel() {
-        const isWindowFilter = state.dateFilter !== 'all';
-        const items = eventsForActiveDateFilter();
-        const label = activePanelLabel();
-        const shareButton = !isWindowFilter
-            ? `<button type="button" id="calendar-share-day" class="calendar-share-day-btn icon-btn" title="Share events on ${escapeHTML(label)}" aria-label="Share events on ${escapeHTML(label)}">📣</button>`
-            : '';
-        const heading = `<div class="calendar-panel-heading"><h2 class="display-font">${label}</h2>${shareButton}</div>`;
-        previousGenericEventFallback = '';
-        if (!items.length) return `<section class="calendar-event-panel">${heading}<div class="calendar-empty">No listed events match these filters yet.</div></section>`;
-        return `<section class="calendar-event-panel">${heading}<p class="calendar-day-count">${items.length} event${items.length === 1 ? '' : 's'} listed</p>${items.map(event => renderEventCard(event, isWindowFilter)).join('')}</section>`;
+        const items=eventsForActiveDateFilter();
+        const selected=[...state.selectedDates].sort();
+        const label=state.dateFilter === 'today' ? 'TODAY' : state.dateFilter === 'week' ? 'THIS WEEK'
+          : !selected.length ? 'UPCOMING EVENTS' : selected.length===1 ? selectedLabel() : selected.length+' DATES SELECTED';
+        const shareButton=state.dateFilter==='all' && selected.length===1
+          ? '<button type="button" id="calendar-share-day" class="calendar-share-day-btn icon-btn" title="Share selected day">📣</button>' : '';
+        const heading='<div class="calendar-panel-heading"><h2 class="display-font">'+escapeHTML(label)+'</h2>'+shareButton+'</div>';
+        previousGenericEventFallback='';
+        if(!items.length) return '<section class="calendar-event-panel">'+heading+'<div class="calendar-empty">No listed events match these filters yet.</div></section>';
+        const displayed=new Set(), nodes=[];
+        for(const event of items){
+            const matched=window.BackroomV15?.festivalForEvent(event.Event_ID);
+            if(matched && !displayed.has(matched.Festival_ID)){
+                displayed.add(matched.Festival_ID);
+                const all=(matched.Event_IDs||[]).map(id=>state.events.find(e=>e.Event_ID===id))
+                    .filter(e=>e && isPublic(e)).sort((a,b)=>String(a.Event_Date).localeCompare(String(b.Event_Date)));
+                if(!all.length) continue;
+                const dates=all.map(e=>e.Event_Date).filter(Boolean).sort();
+                const city=cityFor(all[0]);
+                const range=dates.length?(dates[0]===dates[dates.length-1]?dates[0]:dates[0]+' – '+dates[dates.length-1]):'Dates TBC';
+                const description=String(matched.Festival_Description||'');
+                const url=String(matched.Festival_URL||'').trim();
+                const website=/^https?:\/\//i.test(url)?'<a class="v15-festival-url" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(url)+'">Official festival website ↗</a>':'';
+                const full=all.map(e=>{
+                    const occurrence={...e,Display_Date:e.Event_Date,Is_Recurring:false};
+                    const matching=items.some(item=>item.Event_ID===e.Event_ID);
+                    return '<div class="v15-festival-event '+(matching?'v15-festival-event-matched':'')+'">'+renderEventCard(occurrence,true)+'</div>';
+                }).join('');
+                nodes.push('<details class="v15-festival-card"><summary><span class="v15-festival-kicker">FESTIVAL · '+all.length+' EVENTS</span><strong>'+escapeHTML(matched.Festival_Name)+'</strong><span>'+escapeHTML([city,range].filter(Boolean).join(' · '))+'</span><p>'+escapeHTML(description.slice(0,155))+(description.length>155?'…':'')+'</p><span class="v15-festival-expand">View programme ▾</span></summary><div class="v15-festival-body"><p>'+escapeHTML(description)+'</p>'+website+full+'</div></details>');
+            } else if(!matched) {
+                nodes.push(renderEventCard(event,state.dateFilter!=='all'||selected.length!==1));
+            }
+        }
+        return '<section class="calendar-event-panel">'+heading+'<p class="calendar-day-count">'+items.length+' event occurrences · '+nodes.length+' listings</p>'+nodes.join('')+'</section>';
     }
 
     function render() {
         const container = ensureContainer();
         ensureSelectedDate();
-        container.innerHTML = `<div class="calendar-page"><div class="calendar-title-row"><div class="calendar-title-block"><h1 class="display-font">📅 EVENTS IN</h1>${renderLocationPill()}<p>Choose a date to see what is on.</p></div>${renderFilterStrip()}</div><div class="calendar-layout"><section class="calendar-selector"><div class="calendar-month-row"><button type="button" class="calendar-month-button" id="calendar-prev-month" aria-label="Previous month">‹</button><h2 class="display-font">${monthLabel()}</h2><button type="button" class="calendar-month-button" id="calendar-next-month" aria-label="Next month">›</button></div>${renderGrid()}<p class="calendar-key"><span class="calendar-dot"></span> Events listed on this date</p></section>${renderPanel()}</div></div>`;
+        container.innerHTML = `<div class="calendar-page"><div class="calendar-title-row"><div class="calendar-title-block"><h1 class="display-font">📅 EVENTS IN</h1>${renderLocationPill()}</div>${renderFilterStrip()}</div><div class="calendar-layout"><section class="calendar-selector"><div class="calendar-month-row"><button type="button" class="calendar-month-button" id="calendar-prev-month" aria-label="Previous month">‹</button><h2 class="display-font">${monthLabel()}</h2><button type="button" class="calendar-month-button" id="calendar-next-month" aria-label="Next month">›</button></div>${renderGrid()}<p class="calendar-key"><span class="calendar-dot"></span> Events listed on this date</p></section>${renderPanel()}</div></div>`;
         bindControls();
     }
 
@@ -874,13 +922,28 @@ function ensureSelectedDate() {
             render();
         });
         document.getElementById('calendar-location-pill')?.addEventListener('click', () => {
-            if (typeof window.openBackroomLocationModal === 'function') {
-                window.openBackroomLocationModal();
-                return;
-            }
-
-            // Fallback for an older app.js: reuse the normal top-bar location control.
-            document.getElementById('btn-location')?.click();
+            document.getElementById('calendar-location-pill')?.classList.add('hidden');
+            const input=document.getElementById('v15-calendar-location-input');
+            input?.classList.remove('hidden');input?.focus();
+        });
+        const inlineInput=document.getElementById('v15-calendar-location-input');
+        const applyInlineLocation=()=>{
+            const value=String(inlineInput?.value||'').trim();
+            if(!value) {setSharedLocationFromSelection('all');render();return;}
+            const location=cityOptionRecords().find(o=>normalizeLocation(o.city+', '+o.country)===normalizeLocation(value))
+              || cityOptionRecords().find(o=>normalizeLocation(o.city)===normalizeLocation(value));
+            const country=countryOptions().find(o=>normalizeLocation(o)===normalizeLocation(value));
+            if(location) setSharedLocationFromSelection('city::'+encodeURIComponent(location.city)+'::'+encodeURIComponent(location.country));
+            else if(country) setSharedLocationFromSelection('country::'+country);
+            else { inlineInput?.setCustomValidity('Select a listed city or country');inlineInput?.reportValidity();return; }
+            render();
+        };
+        inlineInput?.addEventListener('input',()=>inlineInput.setCustomValidity(''));
+        inlineInput?.addEventListener('change',applyInlineLocation);
+        inlineInput?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();applyInlineLocation();}});
+        document.getElementById('v15-calendar-map-pin')?.addEventListener('click',()=>{
+            if(typeof window.openBackroomLocationModal==='function')window.openBackroomLocationModal();
+            else document.getElementById('btn-location')?.click();
         });
         document.getElementById('calendar-share-day')?.addEventListener('click', shareSelectedCalendarDay);
         document.querySelectorAll('[data-calendar-filter]').forEach(button => button.addEventListener('click', () => activateFilter(button.dataset.calendarFilter)));
@@ -888,7 +951,9 @@ function ensureSelectedDate() {
     state.dateFilter = 'all';
     const selected = parseDate(button.dataset.calendarDate);
     if (!selected) return;
-    state.selectedDate = dateKey(selected);
+    const key=dateKey(selected);
+    if(state.selectedDates.has(key))state.selectedDates.delete(key);else state.selectedDates.add(key);
+    state.selectedDate=[...state.selectedDates].sort()[0] || key;
     state.month = new Date(selected.getFullYear(), selected.getMonth(), 1);
     render();
 }));
@@ -916,6 +981,7 @@ function ensureSelectedDate() {
             if (!eventResponse.ok || !venueResponse.ok) throw new Error('Event data unavailable');
             state.events = await eventResponse.json();
             state.venues = await venueResponse.json();
+            await window.BackroomV15?.ready;
             syncLocationFromSharedLocation();
             state.loaded = true;
         } catch (error) {
@@ -956,6 +1022,8 @@ function ensureSelectedDate() {
         }
     };
 
+    document.addEventListener('backroom:v15-saved', () => { if(isCalendarRouteHash() && state.loaded)render(); });
+    document.addEventListener('backroom:v15-ready', () => { if(isCalendarRouteHash() && state.loaded)render(); });
     window.addEventListener('backroom:location-changed', () => {
         if (!state.loaded) return;
         syncLocationFromSharedLocation();
