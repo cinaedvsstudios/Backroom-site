@@ -1878,3 +1878,30 @@ td.hidden-col * { display: none !important; }
 .v15-my-events-festival summary{cursor:pointer;color:#dcffe4;font:700 1.4rem 'Antonio',sans-serif;letter-spacing:.03em;padding:6px}
 .v15-my-events-festival .my-event-card{margin:10px 0}
 @media(max-width:640px){#cruising-guide-container{padding:14px!important}.v15-cruising-results{grid-template-columns:1fr}.v15-save-dialog{padding:20px}}
+
+
+/* Backroom editorial glossary: searchable definitions of nightlife language. */
+#dress-codes-container{max-width:1170px;margin:0 auto;}
+.kink-guide{color:#f4f4f6;max-width:1120px;margin:0 auto;font-family:'Barlow Condensed',Arial,sans-serif;}
+.kink-guide [hidden]{display:none!important}
+.kink-guide-header{background:linear-gradient(135deg,#20273b,#180c18);padding:22px 25px;border:1px solid #4d3754;border-radius:12px;}
+.kink-guide-eyebrow{color:#d0aacb;text-transform:uppercase;letter-spacing:.15em;font-size:.82rem;font-weight:700;}
+.kink-guide h1,.kink-guide h2,.kink-guide h3{font-family:'Antonio',sans-serif;text-transform:uppercase;letter-spacing:.05em}
+.kink-guide h1{margin:0 0 16px;color:#f0b4db;font-size:clamp(1.7rem,4vw,2.65rem)}
+.kink-guide-header p{font-size:1.1rem;line-height:1.55;margin:7px 0}
+.kink-guide h2{color:#f0b4db;margin:0 0 13px;font-size:1.55rem}
+.kink-guide h3{color:#fff;margin:0 0 6px;font-size:1.23rem}
+.kink-guide-term p{color:#c6c8d2;font-size:1.03rem;line-height:1.5;margin:0}
+.kink-guide-search{margin:18px 0 25px;padding:16px 20px;border:1px solid #4d3754;border-radius:12px;background:#171923}
+.kink-guide-search label{display:block;color:#efb4dc;font:700 1.15rem 'Antonio',sans-serif;text-transform:uppercase;margin-bottom:9px}
+.kink-guide-search input{width:100%;color:#fff;background:#070a14;border:1px solid #6f506f;margin:0!important}
+#kink-search-count{color:#c9a7c6;margin:8px 0 0}
+.kink-guide-section{margin:26px 0}
+.kink-guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:13px}
+.kink-guide-term{border:1px solid #3f4456;border-left:4px solid #bb75a7;border-radius:9px;background:#1d2231;padding:16px 17px}
+.kink-guide-etiquette{border:1px solid #649e7b;border-radius:12px;background:#12271c;padding:20px 24px;margin-top:30px}
+.kink-guide-etiquette h2{color:#8be4a8}
+.kink-guide-etiquette p{margin:10px 0;line-height:1.6}
+.kink-guide-return{margin-top:20px;text-align:center;color:#aeb5cd}
+.kink-guide a{color:#5dc9ee;text-decoration:underline}
+@media(max-width:600px){#dress-codes-container{padding:14px!important}.kink-guide-header{padding:17px}.kink-guide-grid{grid-template-columns:1fr}.kink-guide-etiquette{padding:16px}}

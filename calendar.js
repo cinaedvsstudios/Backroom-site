@@ -46,6 +46,9 @@
         month: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
         selectedDate: dateKey(new Date()),
         selectedDates: new Set([dateKey(new Date())]),
+        eventsSelectedDates: new Set([dateKey(new Date())]),
+        mode: 'events',
+        festivalSearch: '',
         location: { scope: 'all', city: '', country: '' },
         dateFilter: 'all',
         vibeFilter: '',
@@ -466,8 +469,12 @@
         return '';
     }
 
+    function isFestivalsRouteHash(hash = window.location.hash || '') {
+        return hash === '#festivals';
+    }
+
     function isCalendarRouteHash(hash = window.location.hash || '') {
-        return hash === '#calendar' || String(hash).startsWith('#calendar?');
+        return hash === '#calendar' || String(hash).startsWith('#calendar?') || isFestivalsRouteHash(hash);
     }
 
     function readCalendarRouteState(hash = window.location.hash || '') {
@@ -822,7 +829,7 @@ function ensureSelectedDate() {
         const weekdays = ['M', 'T', 'W', 'T', 'F', 'S', 'S'].map(day => `<div class="calendar-weekday">${day}</div>`).join('');
         const days = monthCells().map(date => {
     const key = dateKey(date);
-    const count = eventsOnDate(key).length;
+    const count = state.mode === 'festivals' ? festivalsOnDate(date).length : eventsOnDate(key).length;
     const outsideMonth = date.getMonth() !== state.month.getMonth() || date.getFullYear() !== state.month.getFullYear();
     return `<button type="button" class="calendar-day${outsideMonth ? ' outside-month' : ''}${state.selectedDates.has(key) ? ' selected' : ''}${key === today ? ' today' : ''}${count ? ' has-events' : ''}" data-calendar-date="${key}"><span class="calendar-number">${date.getDate()}</span><span class="calendar-indicators">${count ? `<span class="calendar-dot"></span>${count > 1 ? `<span class="calendar-count">${count}</span>` : ''}` : ''}</span></button>`;
 }).join('');
@@ -851,7 +858,109 @@ function ensureSelectedDate() {
     }
 
 
+
+    function linkedFestivalEvents(festival) {
+        const ids = new Set(Array.isArray(festival?.Event_IDs) ? festival.Event_IDs : []);
+        return state.events.filter(event => ids.has(event.Event_ID) && isPublic(event));
+    }
+
+    function matchesFestivalSearch(festival, linked) {
+        const q = String(state.festivalSearch || '').trim().toLocaleLowerCase();
+        if (!q) return true;
+        const fields = [festival.Festival_Name, festival.Festival_Description];
+        linked.forEach(event => {
+            const venue = venueFor(event);
+            fields.push(event.Event_Name,event.Event_Description,event.City,event.Country,
+                venue?.Name,venue?.City,venue?.Country);
+        });
+        return fields.some(field => String(field || '').toLocaleLowerCase().includes(q));
+    }
+
+    function matchingFestivalEntries() {
+        const festivals = window.BackroomV15?.festivals || [];
+        const selected = [...state.selectedDates].sort();
+        const today = dateKey(startOfToday());
+        const now = startOfToday();
+        const results = [];
+        for (const festival of festivals) {
+            const linked = linkedFestivalEvents(festival);
+            if (!linked.length || !matchesFestivalSearch(festival,linked)) continue;
+            const matching = linked.filter(event => eventMatchesSharedLocation(event));
+            if (!matching.length) continue;
+            const occurrences = [];
+            if (selected.length) {
+                for (const date of selected) {
+                    for (const event of matching) {
+                        const found = occurrenceForDate(event, parseDate(date));
+                        if (found) occurrences.push(found);
+                    }
+                }
+            } else {
+                for (const event of matching) {
+                    const original = parseDate(event.Event_Date);
+                    if (!original) continue;
+                    if (!isWeekly(event) && event.Event_Date >= today) {
+                        occurrences.push({...event, Display_Date:event.Event_Date});
+                    } else if (isWeekly(event)) {
+                        for (let day=0;day<84;day++) {
+                            const target=new Date(now);target.setDate(now.getDate()+day);
+                            const found=occurrenceForDate(event,target);
+                            if (found) {occurrences.push(found);break;}
+                        }
+                    }
+                }
+            }
+            if (occurrences.length) results.push({
+                festival, occurrences,
+                sortKey:occurrences.map(e=>e.Display_Date).sort()[0] || '9999-12-31'
+            });
+        }
+        return results.sort((a,b)=>a.sortKey.localeCompare(b.sortKey) ||
+          String(a.festival.Festival_Name).localeCompare(String(b.festival.Festival_Name)));
+    }
+
+    function festivalsOnDate(date) {
+        const key = dateKey(date);
+        return (window.BackroomV15?.festivals || []).filter(festival => {
+            const linked = linkedFestivalEvents(festival);
+            if (!linked.length || !matchesFestivalSearch(festival,linked)) return false;
+            return linked.some(event => eventMatchesSharedLocation(event) && occurrenceForDate(event,date));
+        });
+    }
+
+    function renderFestivalCard(festival, matchingOccurrences = []) {
+        const all = linkedFestivalEvents(festival).sort((a,b) =>
+          String(a.Event_Date||'').localeCompare(String(b.Event_Date||'')) ||
+          String(a.Event_Start_Time||'').localeCompare(String(b.Event_Start_Time||'')));
+        if (!all.length) return '';
+        const dates=all.map(e=>e.Event_Date).filter(Boolean).sort();
+        const city=cityFor(all[0]);
+        const range=dates.length?(dates[0]===dates[dates.length-1]?dates[0]:dates[0]+' – '+dates[dates.length-1]):'Dates TBC';
+        const description=String(festival.Festival_Description||'');
+        const url=String(festival.Festival_URL||'').trim();
+        const website=/^https?:\/\//i.test(url)?'<a class="v15-festival-url" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(url)+'">Official festival website ↗</a>':'';
+        const matchedIds = new Set(matchingOccurrences.map(item=>item.Event_ID));
+        const full=all.map(e=>{
+            const occurrence={...e,Display_Date:e.Event_Date,Is_Recurring:false};
+            return '<div class="v15-festival-event '+(matchedIds.has(e.Event_ID)?'v15-festival-event-matched':'')+'">'+renderEventCard(occurrence,true)+'</div>';
+        }).join('');
+        return '<details class="v15-festival-card"><summary><span class="v15-festival-kicker">FESTIVAL · '+all.length+' EVENTS</span><strong>'+escapeHTML(festival.Festival_Name)+'</strong><span>'+escapeHTML([city,range].filter(Boolean).join(' · '))+'</span><p>'+escapeHTML(description.slice(0,155))+(description.length>155?'…':'')+'</p><span class="v15-festival-expand">View programme ▾</span></summary><div class="v15-festival-body"><p>'+escapeHTML(description)+'</p>'+website+full+'</div></details>';
+    }
+
+    function renderFestivalPanel() {
+        const entries=matchingFestivalEntries();
+        const selected=[...state.selectedDates].sort();
+        const label=!selected.length ? 'UPCOMING FESTIVALS' : selected.length===1 ? selectedLabel() : selected.length+' DATES SELECTED';
+        const heading='<div class="calendar-panel-heading"><h2 class="display-font">'+escapeHTML(label)+'</h2></div>';
+        previousGenericEventFallback='';
+        const count='<p class="calendar-day-count">'+entries.length+' festival'+(entries.length===1?'':'s')+' found</p>';
+        const cards=entries.map(({festival,occurrences})=>renderFestivalCard(festival,occurrences)).join('');
+        const empty='<div class="calendar-empty">'+(state.festivalSearch.trim()?'No festivals match that search and those dates or locations.':'No upcoming festivals match these dates or locations.')+'</div>';
+        return '<section class="calendar-event-panel">'+heading+count+(cards||empty)+'</section>';
+    }
+
     function renderPanel() {
+        if (state.mode === 'festivals') return renderFestivalPanel();
         const items=eventsForActiveDateFilter();
         const selected=[...state.selectedDates].sort();
         const label=state.dateFilter === 'today' ? 'TODAY' : state.dateFilter === 'week' ? 'THIS WEEK'
@@ -866,21 +975,7 @@ function ensureSelectedDate() {
             const matched=window.BackroomV15?.festivalForEvent(event.Event_ID);
             if(matched && !displayed.has(matched.Festival_ID)){
                 displayed.add(matched.Festival_ID);
-                const all=(matched.Event_IDs||[]).map(id=>state.events.find(e=>e.Event_ID===id))
-                    .filter(e=>e && isPublic(e)).sort((a,b)=>String(a.Event_Date).localeCompare(String(b.Event_Date)));
-                if(!all.length) continue;
-                const dates=all.map(e=>e.Event_Date).filter(Boolean).sort();
-                const city=cityFor(all[0]);
-                const range=dates.length?(dates[0]===dates[dates.length-1]?dates[0]:dates[0]+' – '+dates[dates.length-1]):'Dates TBC';
-                const description=String(matched.Festival_Description||'');
-                const url=String(matched.Festival_URL||'').trim();
-                const website=/^https?:\/\//i.test(url)?'<a class="v15-festival-url" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(url)+'">Official festival website ↗</a>':'';
-                const full=all.map(e=>{
-                    const occurrence={...e,Display_Date:e.Event_Date,Is_Recurring:false};
-                    const matching=items.some(item=>item.Event_ID===e.Event_ID);
-                    return '<div class="v15-festival-event '+(matching?'v15-festival-event-matched':'')+'">'+renderEventCard(occurrence,true)+'</div>';
-                }).join('');
-                nodes.push('<details class="v15-festival-card"><summary><span class="v15-festival-kicker">FESTIVAL · '+all.length+' EVENTS</span><strong>'+escapeHTML(matched.Festival_Name)+'</strong><span>'+escapeHTML([city,range].filter(Boolean).join(' · '))+'</span><p>'+escapeHTML(description.slice(0,155))+(description.length>155?'…':'')+'</p><span class="v15-festival-expand">View programme ▾</span></summary><div class="v15-festival-body"><p>'+escapeHTML(description)+'</p>'+website+full+'</div></details>');
+                nodes.push(renderFestivalCard(matched,items));
             } else if(!matched) {
                 nodes.push(renderEventCard(event,state.dateFilter!=='all'||selected.length!==1));
             }
@@ -891,7 +986,10 @@ function ensureSelectedDate() {
     function render() {
         const container = ensureContainer();
         ensureSelectedDate();
-        container.innerHTML = `<div class="calendar-page"><div class="calendar-title-row"><div class="calendar-title-block"><h1 class="display-font">📅 EVENTS IN</h1>${renderLocationPill()}</div>${renderFilterStrip()}</div><div class="calendar-layout"><section class="calendar-selector"><div class="calendar-month-row"><button type="button" class="calendar-month-button" id="calendar-prev-month" aria-label="Previous month">‹</button><h2 class="display-font">${monthLabel()}</h2><button type="button" class="calendar-month-button" id="calendar-next-month" aria-label="Next month">›</button></div>${renderGrid()}<p class="calendar-key"><span class="calendar-dot"></span> Events listed on this date</p></section>${renderPanel()}</div></div>`;
+        const festivalsMode = state.mode === 'festivals';
+        const heading = festivalsMode ? '<div class="v15-festivals-heading"><h1 class="display-font">🎪 FESTIVALS IN</h1>'+renderLocationPill()+'</div>' : '<h1 class="display-font">📅 EVENTS IN</h1>'+renderLocationPill();
+        const right = festivalsMode ? '<div class="v15-festival-search"><label for="v15-festival-search-input">SEARCH FESTIVALS</label><input id="v15-festival-search-input" class="form-input pill-input" type="search" placeholder="Search festival names, descriptions, events or cities…" value="'+escapeHTML(state.festivalSearch)+'" autocomplete="off"></div>' : renderFilterStrip();
+        container.innerHTML = `<div class="calendar-page ${festivalsMode?'calendar-page--festivals':''}"><div class="calendar-title-row"><div class="calendar-title-block">${heading}</div>${right}</div><div class="calendar-layout"><section class="calendar-selector"><div class="calendar-month-row"><button type="button" class="calendar-month-button" id="calendar-prev-month" aria-label="Previous month">‹</button><h2 class="display-font">${monthLabel()}</h2><button type="button" class="calendar-month-button" id="calendar-next-month" aria-label="Next month">›</button></div>${renderGrid()}<p class="calendar-key"><span class="calendar-dot"></span> ${festivalsMode?'Festivals with events on this date':'Events listed on this date'}</p></section>${renderPanel()}</div></div>`;
         bindControls();
     }
 
@@ -909,6 +1007,15 @@ function ensureSelectedDate() {
     }
 
     function bindControls() {
+        document.getElementById('v15-festival-search-input')?.addEventListener('input', event => {
+            const input=event.currentTarget;
+            const start=input.selectionStart,end=input.selectionEnd;
+            state.festivalSearch=input.value;
+            render();
+            const replacement=document.getElementById('v15-festival-search-input');
+            replacement?.focus();
+            try{replacement?.setSelectionRange(start,end)}catch(_){}
+        });
         document.getElementById('calendar-prev-month')?.addEventListener('click', () => {
             state.dateFilter = 'all';
             state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1);
@@ -1008,8 +1115,21 @@ function ensureSelectedDate() {
     }
 
     window.closeCalendarScreen = close;
-    window.openCalendarScreen = async function () {
-        if (!isCalendarRouteHash()) history.pushState(null, '', '#calendar');
+    window.openCalendarScreen = async function (requestedMode) {
+        const targetMode = requestedMode === 'festivals' || isFestivalsRouteHash() ? 'festivals' : 'events';
+        if (state.mode !== targetMode) {
+            if (targetMode === 'festivals') {
+                state.eventsSelectedDates = new Set(state.selectedDates);
+                state.selectedDates = new Set();
+            } else {
+                state.selectedDates = new Set(state.eventsSelectedDates.size ? state.eventsSelectedDates : [dateKey(new Date())]);
+                state.selectedDate = [...state.selectedDates].sort()[0] || dateKey(new Date());
+            }
+            state.mode=targetMode;
+            state.dateFilter='all';
+            state.vibeFilter='';
+        }
+        if (!isCalendarRouteHash()) history.pushState(null, '', targetMode === 'festivals' ? '#festivals' : '#calendar');
         hideStandardPanels();
         const container = ensureContainer();
         container.classList.remove('hidden');
@@ -1020,6 +1140,11 @@ function ensureSelectedDate() {
             applyCalendarRouteState();
             render();
         }
+    };
+
+    window.openFestivalScreen = function () {
+        if (!isFestivalsRouteHash()) window.location.hash='#festivals';
+        return window.openCalendarScreen('festivals');
     };
 
     document.addEventListener('backroom:v15-saved', () => { if(isCalendarRouteHash() && state.loaded)render(); });

@@ -1,0 +1,71 @@
+name: Backroom Festivals and Guide Browser Smoke
+on:
+  push:
+    branches: [v15-festivals-education]
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Exercise site startup and new pages
+        run: |
+          python3 -m http.server 8765 >/tmp/backroom-server.log 2>&1 &
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch({headless:true,args:['--no-sandbox']});
+            const page = await browser.newPage();
+            const pageErrors=[];
+            page.on('pageerror',error=>pageErrors.push(error.message));
+            await page.route(/https:\/\/(unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com)\//,route=>route.abort());
+            await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded',timeout:35000});
+            await page.locator('#btn-enter').click();
+            await page.locator('#app-shell').waitFor({state:'visible',timeout:15000});
+            await page.locator('#age-gate').waitFor({state:'hidden',timeout:15000});
+            await page.waitForFunction(()=>typeof window.openFestivalScreen==='function'&&typeof window.openCalendarScreen==='function',null,{timeout:10000});
+            await page.waitForTimeout(1800);
+            const version = await page.locator('#sidebar-version-display').textContent();
+            if(!version.includes('v1.5.2'))throw new Error('Version mismatch: '+version);
+            console.log('PASS: age gate and app startup; version',version);
+            await page.locator('#btn-sidebar-festivals').click();
+            await page.locator('.calendar-page--festivals #v15-festival-search-input').waitFor({state:'visible',timeout:20000});
+            const tags=await page.locator('.calendar-page--festivals .calendar-filter-shell').count();
+            if(tags)throw new Error('Event vibe tags leaked onto Festivals');
+            console.log('PASS: festival-only calendar and search visible');
+            const festivalDots=await page.locator('.calendar-page--festivals .calendar-day.has-events').count();
+            console.log('Festival dates with listings:',festivalDots);
+            await page.locator('#v15-festival-search-input').fill('SNAX');
+            await page.waitForTimeout(1000);
+            const matchCount=await page.locator('.calendar-page--festivals .v15-festival-card').count();
+            if(matchCount<1)throw new Error('SNAX festival not found');
+            await page.locator('#v15-festival-search-input').fill('no-matching-festival-zz');
+            await page.waitForTimeout(300);
+            if(await page.locator('.calendar-page--festivals .v15-festival-card').count())throw new Error('Festival search failed to filter');
+            console.log('PASS: festival keyword search');
+            await page.evaluate(()=>{location.hash='#calendar'});
+            await page.locator('.calendar-page:not(.calendar-page--festivals) .calendar-filter-shell').waitFor({state:'visible',timeout:20000});
+            console.log('PASS: ordinary Events calendar preserved');
+            await page.evaluate(()=>{location.hash='#dress-codes'});
+            await page.locator('#dress-codes-container #kink-search').waitFor({state:'visible',timeout:20000});
+            const total=await page.locator('#dress-codes-container [data-guide-term]').count();
+            if(total<30)throw new Error('Missing glossary entries: '+total);
+            await page.locator('#dress-codes-container #kink-search').fill('jockstrap');
+            const shown=await page.locator('#dress-codes-container [data-guide-term]:visible').count();
+            if(shown<1 || shown>=total)throw new Error('Glossary search incorrect: '+shown+'/'+total);
+            console.log('PASS: '+total+' glossary definitions and working search');
+            if(await page.locator('#sidebar .sidebar-item[title="About"]').count())throw new Error('About still in sidebar');
+            if(!await page.locator('#settings-modal a[href="about.html"]').count())throw new Error('Missing About link in Settings');
+            console.log('PASS: About moved to Settings');
+            if(pageErrors.length)throw new Error('Uncaught errors: '+JSON.stringify(pageErrors));
+            console.log('PASS: No uncaught JavaScript errors');
+            await browser.close();
+          })().catch(e=>{console.error('FAIL',e);process.exit(1)});
+          NODE

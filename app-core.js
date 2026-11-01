@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5";
+const APP_VERSION = "v1.5.2";
 const APP_DATE = "1 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -2021,7 +2021,7 @@ window.addEventListener('hashchange', handleRouting);
 
 function getCurrentListHashForVenueReturn() {
     const hash = window.location.hash || '#results';
-    const listRoutes = ['#results', '#venues', '#featured', '#favorites', '#myshortlists', '#myevents', '#mytravel', '#discounts', '#about', '#cruising-guide'];
+    const listRoutes = ['#results', '#venues', '#featured', '#festivals', '#dress-codes', '#favorites', '#myshortlists', '#myevents', '#mytravel', '#discounts', '#about', '#cruising-guide'];
     if (hash.startsWith('#results?')) return hash;
     if (listRoutes.includes(hash)) return hash;
     if (hash.startsWith('#shortlist=')) return '#myshortlists';
@@ -2253,7 +2253,7 @@ function handleRouting() {
     document.getElementById('shortlist-view-filters')?.classList.add('hidden');
     document.getElementById('btn-new-shortlist-view')?.classList.add('hidden');
     document.getElementById('main-filters')?.classList.remove('hidden');
-    ['discounts', 'about', 'featured', 'cruising-guide'].forEach(page => document.getElementById(`${page}-container`)?.classList.add('hidden'));
+    ['discounts', 'about', 'featured', 'cruising-guide', 'dress-codes'].forEach(page => document.getElementById(`${page}-container`)?.classList.add('hidden'));
 
     welcomeScreen?.classList.add('hidden');
     document.getElementById('profile-wipe-toast')?.classList.add('hidden');
@@ -2301,6 +2301,9 @@ function handleRouting() {
     } else if (hash === '#calendar' || hash.startsWith('#calendar?')) {
         recordUserInteraction();
         window.openCalendarScreen?.();
+    } else if (hash === '#festivals') {
+        recordUserInteraction();
+        window.openFestivalScreen?.();
     } else if (hash === '#venues') {
         recordUserInteraction();
         renderSavedLocationVenuesView();
@@ -2322,6 +2325,9 @@ function handleRouting() {
     } else if (hash === '#about') {
         recordUserInteraction();
         renderStaticPageView('about');
+    } else if (hash === '#dress-codes') {
+        recordUserInteraction();
+        renderDressCodesGuide();
     } else if (hash === '#cruising-guide') {
         recordUserInteraction();
         renderCruisingDirectory();
@@ -2391,7 +2397,7 @@ function renderSingleShortlist(name) {
 async function renderStaticPageView(page) {
     document.getElementById('main-filters')?.classList.add('hidden');
     if(resultsContainer) resultsContainer.innerHTML = '';
-    ['discounts', 'about', 'featured', 'cruising-guide'].forEach(p => {
+    ['discounts', 'about', 'featured', 'cruising-guide', 'dress-codes'].forEach(p => {
         if(p !== page) document.getElementById(`${p}-container`)?.classList.add('hidden');
     });
     const container = document.getElementById(`${page}-container`);
@@ -2410,6 +2416,33 @@ async function renderStaticPageView(page) {
     }
 }
 
+
+
+async function renderDressCodesGuide() {
+    await renderStaticPageView('dress-codes');
+    if (window.location.hash !== '#dress-codes') return;
+    const container=document.getElementById('dress-codes-container');
+    const input=container?.querySelector('#kink-search');
+    if (!input) return;
+    const entries=[...container.querySelectorAll('[data-guide-term]')];
+    const sections=[...container.querySelectorAll('[data-guide-section]')];
+    const counter=container.querySelector('#kink-search-count');
+    const empty=container.querySelector('#kink-no-results');
+    input.addEventListener('input', () => {
+        const q=String(input.value||'').trim().toLocaleLowerCase();
+        let matching=0;
+        entries.forEach(entry=>{
+            const show=entry.getAttribute('data-guide-term')?.includes(q);
+            entry.hidden=!show;
+            if(show)matching++;
+        });
+        sections.forEach(section => {
+            section.hidden=![...section.querySelectorAll('[data-guide-term]')].some(entry=>!entry.hidden);
+        });
+        if(empty)empty.hidden=matching>0;
+        if(counter)counter.textContent=q?matching+' matching terms':'';
+    });
+}
 
 /* v1.5: Cruising Guide is a filtered venue browser, not a duplicate venue database. */
 async function renderCruisingDirectory() {
