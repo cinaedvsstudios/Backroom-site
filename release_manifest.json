@@ -1,6 +1,6 @@
 {
-  "version": "v1.5.4",
-  "date": "2026-11-01",
+  "version": "v1.5.5",
+  "date": "2026-11-02",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
     "index.html",
@@ -39,7 +39,11 @@
     "Welcome panel compact internally scrolling feature instructions and 20% larger avatar with large cog beneath feet",
     "Shared inline city/country search for Venues and Cruising, with separate full-map location picker beside titles",
     "Restore Heat Map sidebar navigation from existing embedded heatmap.html; preserve existing venue database",
-    "Replace top Translate button with Contact email button; retire sidebar Contact, reuse existing Contact / Report modal"
+    "Replace top Translate button with Contact email button; retire sidebar Contact, reuse existing Contact / Report modal",
+    "Correct Dress Codes/Kink images from Profile_images and kinkthumb, remove mismatched illustrations",
+    "Split the combined crowd-type entry, add Seal and Mature as separate Types of Guys",
+    "Add an Apps & Profile Terms category with 22 entries, including H&H, P&P, BBC, BWC, NPNC, Poz, MTF and FTM",
+    "Rename Chastity / Caged / Locked and provide its cage illustration"
   ],
   "validation": {
     "javascript_syntax": "checked before publication",
@@ -50,6 +54,8 @@
     "v153_smoke_test": "passed GitHub Actions Chrome browser smoke: age gate, home avatar settings, 186 glossary entries, hanky filtering 51 swatches, avatar lightbox, consent filter, contained scrolling and existing Events, no uncaught JS errors",
     "v153_test_url": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41348995632",
     "v154_browser_test": "Passed headless Chrome: age gate, home scroller and enlarged avatar/cog, home Settings, email contact form, no sidebar Contact, venues inline Berlin Germany selection, location modal, cruising inline location retaining search, Heat Map embedded sidebar navigation, no uncaught application errors",
-    "v154_test_url": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41351994815"
+    "v154_test_url": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41351994815",
+    "v155_guide_browser_test": "Passed in headless Chromium: age gate, 204 glossary entries, eight category buttons, eleven new images loaded, no pictures on Lingerie/Drag, individual guys, zoom, 22 app terms, NPNC search, standalone glossary, no uncaught JS errors.",
+    "v155_smoke_workflow": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41362077360"
   }
 }

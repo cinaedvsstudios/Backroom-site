@@ -1,10 +1,17 @@
-/* Backroom v1.5.3 - searchable, illustrated glossary */
+/* Backroom v1.5.5 - searchable, illustrated glossary */
 (function () {
   'use strict';
-  const IMAGE_DIR='Profile_images/';
+  // Resolve either the profile avatars or the specialist kink images.
+  const imageURL=file=>{
+    const parts=String(file||'').split('/');
+    const dir=parts.length===2?parts[0]:'Profile_images';
+    const name=parts.length===2?parts[1]:parts[0];
+    if(!['Profile_images','kinkthumb'].includes(dir)||!/^[a-zA-Z0-9_().-]+\.png$/i.test(name))return '';
+    return dir+'/'+encodeURIComponent(name);
+  };
   const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
   let pending=null;
-  const fetchData=()=>pending||(pending=fetch('dress-codes-data.json?v=1.5.3',{cache:'no-store'}).then(response=>{
+  const fetchData=()=>pending||(pending=fetch('dress-codes-data.json?v=1.5.5',{cache:'no-store'}).then(response=>{
     if(!response.ok)throw new Error('Guide data unavailable ('+response.status+')');
     return response.json();
   }).catch(error=>{pending=null;throw error;}));
@@ -25,7 +32,7 @@
     function openZoom(file,label) {
       if(!zoom||!images.has(file))return;
       const im=zoom.querySelector('#br-guide-zoom-image');
-      im.src=IMAGE_DIR+encodeURIComponent(file);
+      im.src=imageURL(file);
       im.alt=label;
       zoom.querySelector('#br-guide-zoom-caption').textContent=label;
       zoom.hidden=false;
@@ -48,7 +55,7 @@
       tabs.innerHTML=tabMarkup('all','All','#dee7f3',total)+state.data.categories.map(category=>tabMarkup(category.id,category.label,category.accent,category.items.length)).join('');
     }
     function renderItem(item,category){
-      const image=item.image&&images.has(item.image)?'<button class="br-guide-thumb" data-guide-preview="'+esc(item.image)+'" data-guide-label="'+esc(item.term)+'" type="button" title="Enlarge '+esc(item.term)+' example"><img loading="lazy" src="'+IMAGE_DIR+encodeURIComponent(item.image)+'" alt="Illustrated '+esc(item.term)+' example" onerror="this.parentElement.hidden=true"></button>':'';
+      const image=item.image&&images.has(item.image)?'<button class="br-guide-thumb" data-guide-preview="'+esc(item.image)+'" data-guide-label="'+esc(item.term)+'" type="button" title="Enlarge '+esc(item.term)+' example"><img loading="lazy" src="'+imageURL(item.image)+'" alt="Illustrated '+esc(item.term)+' example" onerror="this.parentElement.hidden=true"></button>':'';
       const swatch=item.swatch?'<span class="br-guide-swatch" style="background:'+esc(item.swatch)+'" aria-hidden="true"></span>':'';
       const extended=item.kind==='extended'?'<span class="br-guide-extended">Extended / varies</span>':item.kind==='core'?'<span class="br-guide-core">Historical core</span>':'';
       return '<article class="br-guide-term" style="--cat:'+esc(category.accent)+'">'+
