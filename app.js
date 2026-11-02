@@ -1,4 +1,4 @@
-const BACKROOM_VERSION = 'v1.5.5';
+const BACKROOM_VERSION = 'v1.5.6';
 const BACKROOM_EMBEDDED_HASHES = new Set(['#heatmap', '#travel']);
 const BACKROOM_INITIAL_EMBEDDED_HASH = BACKROOM_EMBEDDED_HASHES.has(window.location.hash) ? window.location.hash : '';
 

@@ -1,0 +1,79 @@
+name: Backroom v1.5.6 Terminology Guide Browser Smoke
+on:
+  push:
+    branches: [v156-terminology-test]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Verify home, age gate, glossary categories and thumbnails
+        run: |
+          python3 -m http.server 8765 >/tmp/backroom-server.log 2>&1 &
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+            const page=await browser.newPage({viewport:{width:1390,height:850}});
+            const errors=[];page.on('pageerror',e=>errors.push(e.message));
+            await page.route(/https:\/\/(unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com)\//,r=>r.abort());
+            await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded',timeout:40000});
+            await page.locator('#btn-enter').click();
+            await page.locator('#age-gate').waitFor({state:'hidden',timeout:12000});
+            await page.locator('#app-shell').waitFor({state:'visible',timeout:12000});
+            const version=await page.locator('#sidebar-version-display').textContent();
+            if(!version.includes('v1.5.6'))throw Error('Version not bumped: '+version);
+            const label=page.locator('.sidebar-item[title="Terminology & Dress Codes"]');
+            await label.waitFor({state:'attached'});
+            if(!await label.getByText('Terminology & Dress Codes').count())throw Error('Sidebar missing new title');
+            console.log('PASS age gate, version, renamed sidebar');
+            await page.evaluate(()=>location.hash='#dress-codes');
+            await page.locator('#br-guide-results .br-guide-term').first().waitFor({state:'visible',timeout:25000});
+            if(!await page.locator('.br-guide h1').filter({hasText:'TERMINOLOGY & DRESS CODES'}).count())throw Error('Heading not renamed');
+            let count=await page.locator('.br-guide-term').count();
+            if(count!==203)throw Error('Expected 203 entries, got '+count);
+            console.log('PASS renamed glossary heading, all 203 entries');
+            const wanted=[
+              ['dress','Chaps','kinkthumb/chaps.png'],
+              ['dress','Leatherboy / Leather Daddy','Profile_images/leather05.png'],
+              ['spaces','Fetish party','kinkthumb/fetish.png'],
+              ['spaces','Cabin / Booth','kinkthumb/cabin.png'],
+              ['spaces','Sex club / Cruise bar','kinkthumb/cruise.png'],
+              ['spaces','Sling','kinkthumb/sling.png'],
+              ['kink','Foot Fetish','kinkthumb/feet.png'],
+              ['kink','Gooning','kinkthumb/goon.png'],
+              ['kink','Pits / Armpit Fetish','kinkthumb/pits.png']
+            ];
+            for(const [group,term,path] of wanted){
+              await page.locator('[data-guide-filter="'+group+'"]').click();
+              const card=page.locator('.br-guide-term').filter({has:page.locator('h3',{hasText:term})}).first();
+              await card.waitFor({state:'visible'});
+              const img=card.locator('img');
+              await img.waitFor({state:'visible'});
+              const src=await img.getAttribute('src');
+              if(src!==path)throw Error('Image for '+term+' is '+src+' not '+path);
+              if(!await img.evaluate(el=>el.complete&&el.naturalWidth>0))throw Error('Broken thumbnail '+term);
+            }
+            console.log('PASS nine corrected/additional thumbnails load');
+            await page.locator('[data-guide-filter="all"]').click();
+            for(const term of ['Young Adult Crowd','Cuckquean']){
+              if(await page.locator('.br-guide-term h3').filter({hasText:term}).count())throw Error('Removed term still present: '+term);
+            }
+            const sidebar=await label.textContent();
+            if(!sidebar.includes('Terminology'))throw Error('Sidebar text incorrect');
+            if(errors.length)throw Error('Uncaught JS errors: '+JSON.stringify(errors));
+            console.log('PASS removed entries and no uncaught JavaScript errors');
+            await page.goto('http://127.0.0.1:8765/dress-codes.html',{waitUntil:'domcontentloaded'});
+            await page.locator('[data-guide-filter="apps"]').waitFor({state:'visible',timeout:15000});
+            await page.locator('.br-guide h1').filter({hasText:'TERMINOLOGY & DRESS CODES'}).waitFor({state:'visible'});
+            console.log('PASS direct glossary URL');
+            await browser.close();
+          })().catch(error=>{console.error('FAIL:',error);process.exit(1)});
+          NODE
