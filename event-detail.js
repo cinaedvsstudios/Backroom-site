@@ -5,7 +5,7 @@
   if (window.__backroomEventDetailLoaded) return;
   window.__backroomEventDetailLoaded = true;
 
-  const EVENT_DETAIL_VERSION = 'v1.5.5';
+  const EVENT_DETAIL_VERSION = 'v1.5.6';
   const DEFAULT_RETURN_HASH = '#calendar';
   const BACKROOM_ICON_URL = 'https://raw.githubusercontent.com/cinaedvsstudios/Backroom-site/refs/heads/main/backdoorlogo.png';
   let eventReturnHash = DEFAULT_RETURN_HASH;
