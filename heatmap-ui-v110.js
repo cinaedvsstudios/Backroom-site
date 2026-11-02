@@ -19,9 +19,13 @@
   const gradient = { .06:'#6d00ff', .20:'#2934ff', .36:'#00bfff', .52:'#00e87b', .68:'#eaff00', .84:'#ff9b00', 1:'#ff0000' };
   let loaded = false;
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  // CARTO raster tiles began requiring an API key in September 2026.
+  // Use the standard OpenStreetMap raster tiles with a dark visual filter instead.
+  // See https://operations.osmfoundation.org/policies/tiles/ for fair-use requirements.
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; OpenStreetMap &copy; CARTO'
+    className: 'br-heatmap-dark-tile',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>'
   }).addTo(map);
 
   function markerIcon(type, count) {
