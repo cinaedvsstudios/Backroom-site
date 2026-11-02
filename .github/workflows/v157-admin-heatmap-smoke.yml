@@ -70,10 +70,19 @@ jobs:
             if(!mapSource.includes('tile.openstreetmap.org/{z}/{x}/{y}.png')||mapSource.includes('basemaps.cartocdn.com/dark_all'))throw Error('Wrong heatmap tile provider');
             await front.goto('http://127.0.0.1:8765/heatmap.html?embed=1',{waitUntil:'domcontentloaded',timeout:25000});
             if(!await front.locator('#map').count())throw Error('Heat Map container missing');
-            await front.waitForTimeout(3500);
-            const scripts=await front.evaluate(()=>({leaflet:!!window.L,heat:!!window.BRHeat,provider:document.querySelector('.br-heatmap-dark-tile')?.src||'',error:document.getElementById('loading-text')?.textContent||''}));
-            if(scripts.leaflet && scripts.heat && scripts.provider && !scripts.provider.includes('tile.openstreetmap.org'))throw Error('Heatmap rendered wrong provider');
-            console.log('PASS Heat Map uses keyless raster tiles:',JSON.stringify(scripts));
+            const mapErrors=[];front.on('pageerror',e=>mapErrors.push(e.message));
+            await front.waitForFunction(()=>!!document.querySelector('#map .leaflet-tile')||document.getElementById('loading-text')?.textContent?.includes('Could not load'),null,{timeout:25000});
+            const scripts=await front.evaluate(()=>({
+              leaflet:!!window.L,heat:!!window.BRHeat,
+              provider:document.querySelector('#map .leaflet-tile')?.src||'',
+              tileClass:document.querySelector('#map .leaflet-tile')?.className||'',
+              error:document.getElementById('loading-text')?.textContent||'',
+              tiles:document.querySelectorAll('#map .leaflet-tile').length
+            }));
+            if(!scripts.provider.includes('tile.openstreetmap.org'))throw Error('Tile provider not active: '+JSON.stringify(scripts));
+            if(!scripts.tileClass.includes('br-heatmap-dark-tile'))throw Error('Missing dark tile styling class');
+            if(mapErrors.length)throw Error('Heat map runtime error: '+JSON.stringify(mapErrors));
+            console.log('PASS Heat Map renders keyless dark tiles:',JSON.stringify(scripts));
             await browser.close();
           })().catch(e=>{console.error('FAIL',e);process.exit(1)});
           NODE
