@@ -181,6 +181,7 @@
                 <hr class="divider">
                 
                 <div class="sidebar-item" id="nav-editor"><span class="icon">🚄</span> <span class="sidebar-text">Page Editor</span></div>
+                <div class="sidebar-item" id="nav-terminology"><span class="icon">⛓️</span> <span class="sidebar-text">Edit Terminology Page</span></div>
                 <div class="sidebar-item" id="nav-avatars"><span class="icon">👤</span> <span class="sidebar-text">Profile Avatars</span></div>
                 <div class="sidebar-item" id="nav-voting-admin" title="Voting Admin"><span class="icon">🗳️</span> <span class="sidebar-text">Voting Admin</span></div>
                 
@@ -297,6 +298,19 @@
                 </div>
             </div>
 
+            <section id="view-terminology" class="hidden" style="display:none; flex-direction:column; flex-grow:1; min-height:0;">
+              <div class="term-admin-heading">
+                <div><h2 class="display-font">⛓️ EDIT TERMINOLOGY & DRESS CODES</h2>
+                <p>Edit titles and descriptions directly on the glossary cards. Image filenames in the editor refer to <code>kinkthumb/</code>. Changes are saved only in this browser until you copy a prompt.</p></div>
+                <div class="term-admin-actions">
+                  <button type="button" id="term-admin-reload" class="btn secondary-btn pill-btn">↺ Reset Draft</button>
+                  <button type="button" id="term-admin-copy" class="btn primary-btn pill-btn">📋 Copy Prompt for Changes</button>
+                </div>
+              </div>
+              <div id="term-admin-message" aria-live="polite" class="term-admin-message"></div>
+              <div id="term-admin-editor" class="term-admin-editor"></div>
+            </section>
+
             <div id="view-avatars" class="hidden" style="display:none; flex-direction:column; flex-grow:1;">
                 <div class="summary-bar" style="margin-bottom:0;">
                     <strong class="display-font" style="font-size:1.2rem; color:var(--primary-blue);">PROFILE AVATAR MANAGER</strong>
@@ -360,7 +374,9 @@
         </main>
     </div>
 
+    <link rel="stylesheet" href="admin-terminology.css?v=1.5.7">
     <script src="admin.js?v=0.17"></script>
+    <script src="admin-terminology.js?v=1.5.7"></script>
     <script src="admin-enhancements.js?v=0.19"></script>
 </body>
 </html>

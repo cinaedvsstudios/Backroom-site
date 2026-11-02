@@ -1,0 +1,79 @@
+name: Backroom v1.5.7 Admin Glossary and Heat Map Smoke
+on:
+  push:
+    branches: [v157-admin-heatmap-test]
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Browser test
+        run: |
+          python3 -m http.server 8765 >/tmp/backroom-server.log 2>&1 &
+          node <<'NODE'
+          const {chromium}=require('playwright');
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+            const context=await browser.newContext({viewport:{width:1490,height:910},permissions:['clipboard-read','clipboard-write']});
+            await context.addInitScript(()=>localStorage.setItem('br_admin_logged_in','true'));
+            const page=await context.newPage();const errors=[];
+            page.on('pageerror',e=>errors.push(e.message));
+            await page.route(/https:\/\/(fonts\.googleapis\.com|fonts\.gstatic\.com)\//,route=>route.abort());
+            await page.goto('http://127.0.0.1:8765/admin.html',{waitUntil:'domcontentloaded',timeout:40000});
+            await page.locator('#admin-shell').waitFor({state:'visible',timeout:12000});
+            await page.locator('#nav-terminology').click();
+            await page.locator('#term-admin-results .term-editor-card').first().waitFor({state:'visible',timeout:25000});
+            const n=await page.locator('#term-admin-results .term-editor-card').count();
+            if(n<200)throw Error('Expected full glossary, found '+n);
+            if(await page.locator('#term-admin-tabs button').count()!==8)throw Error('Expected 7 categories + All');
+            console.log('PASS admin terminology sidebar, card rendering and category buttons:',n);
+            await page.locator('#term-admin-tabs [data-cat="dress"]').click();
+            const underwear=page.locator('.term-editor-card').filter({has:page.locator('.term-editor-name[value="Underwear"]')}).first();
+            await underwear.waitFor({state:'visible'});
+            await underwear.locator('[data-field="description"]').fill('Underwear events generally require a themed outfit. Test edit 157.');
+            await underwear.locator('[data-field="imageFile"]').fill('cage.png');
+            const preview=underwear.locator('.term-editor-image img');
+            if(await preview.getAttribute('src')!=='kinkthumb/cage.png')throw Error('kinkthumb preview path is wrong');
+            await preview.waitFor({state:'visible'});
+            if(!await preview.evaluate(img=>img.complete&&img.naturalWidth>0))throw Error('Image preview failed');
+            console.log('PASS edit-over-card and kinkthumb image filename');
+            await page.locator('#term-admin-copy').click();
+            await page.waitForTimeout(150);
+            const prompt=await page.evaluate(()=>navigator.clipboard.readText());
+            if(!prompt.includes('kinkthumb/cage.png')||!prompt.includes('Test edit 157')||!prompt.includes('dress-codes-data.json'))throw Error('Copied change request incomplete');
+            if(prompt.includes('"action": "remove"'))throw Error('Unexpected remove action');
+            console.log('PASS change-only prompt copied to clipboard');
+            const data=await page.evaluate(async()=>{const r=await fetch('dress-codes-data.json');const j=await r.json();return j.categories.find(c=>c.id==='dress').items.find(x=>x.term==='Underwear').description;});
+            if(data.includes('Test edit 157'))throw Error('Editor changed live JSON');
+            console.log('PASS database unchanged by browser edits');
+            await page.locator('#nav-avatars').click();
+            await page.locator('#nav-terminology').click();
+            const recovered=await page.locator('.term-editor-card').filter({has:page.locator('.term-editor-name[value="Underwear"]')}).first().locator('[data-field="description"]').inputValue();
+            if(!recovered.includes('Test edit 157'))throw Error('Draft vanished after view change');
+            console.log('PASS unsent edits persist across admin views');
+            if(errors.length)throw Error('Admin JS errors: '+JSON.stringify(errors));
+            const front=await context.newPage();
+            await front.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded',timeout:25000});
+            await front.locator('#btn-enter').click();
+            await front.locator('#age-gate').waitFor({state:'hidden',timeout:15000});
+            const version=await front.locator('#sidebar-version-display').textContent();
+            if(!version.includes('v1.5.7'))throw Error('Frontend version mismatch: '+version);
+            console.log('PASS site startup and age gate');
+            const mapSource=await front.evaluate(async()=>{const r=await fetch('heatmap-ui-v110.js');return r.text()});
+            if(!mapSource.includes('tile.openstreetmap.org/{z}/{x}/{y}.png')||mapSource.includes('basemaps.cartocdn.com/dark_all'))throw Error('Wrong heatmap tile provider');
+            await front.goto('http://127.0.0.1:8765/heatmap.html?embed=1',{waitUntil:'domcontentloaded',timeout:25000});
+            if(!await front.locator('#map').count())throw Error('Heat Map container missing');
+            await front.waitForTimeout(3500);
+            const scripts=await front.evaluate(()=>({leaflet:!!window.L,heat:!!window.BRHeat,provider:document.querySelector('.br-heatmap-dark-tile')?.src||'',error:document.getElementById('loading-text')?.textContent||''}));
+            if(scripts.leaflet && scripts.heat && scripts.provider && !scripts.provider.includes('tile.openstreetmap.org'))throw Error('Heatmap rendered wrong provider');
+            console.log('PASS Heat Map uses keyless raster tiles:',JSON.stringify(scripts));
+            await browser.close();
+          })().catch(e=>{console.error('FAIL',e);process.exit(1)});
+          NODE

@@ -1,0 +1,59 @@
+
+/* Backroom admin: Terminology & Dress Codes visual change-request editor */
+#view-terminology{min-height:0;overflow:hidden;gap:10px}
+.term-admin-heading{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--panel-dark);border:1px solid var(--panel-mid);border-radius:10px;padding:15px 18px}
+.term-admin-heading h2{font-size:1.55rem;color:#dcbbeb;margin:0 0 5px}
+.term-admin-heading p{font:400 .98rem/1.4 'Barlow Condensed',Arial,sans-serif;color:#bdc8da;margin:0;max-width:760px}
+.term-admin-heading code{color:#77dce8}
+.term-admin-actions{display:flex;gap:8px;flex-wrap:wrap}
+.term-admin-actions .btn{width:auto;padding:10px 16px;white-space:nowrap}
+.term-admin-message{color:#b6c8d4;font:400 .99rem 'Barlow Condensed',Arial,sans-serif;min-height:20px}
+.term-admin-editor{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;overflow:hidden;background:#182132;border:1px solid #3f4861;border-radius:11px;padding:13px}
+.term-editor-top{flex:0 0 auto;min-height:0}
+.term-editor-intro{border-left:4px solid #bc8bcf;border-radius:7px;background:linear-gradient(105deg,#20243a,#1c1226);padding:11px 14px;margin-bottom:9px}
+.term-editor-intro h3{font:700 1.9rem 'Antonio',sans-serif;color:#f2d6ff;margin:0 0 3px}
+.term-editor-intro p{margin:0;color:#d2cfe0;font:400 1.04rem/1.35 'Barlow Condensed',Arial,sans-serif}
+.term-editor-search{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.term-editor-search label{white-space:nowrap;color:#eacaf6;font:700 1rem 'Antonio',sans-serif}
+.term-editor-search input{flex:1;margin:0!important;width:100%;min-width:0;background:#0c1021!important;color:#fff;border:1px solid #67627c;border-radius:20px;padding:9px 12px}
+.term-editor-tabs{display:flex;gap:7px;flex-wrap:nowrap;overflow-x:auto;padding:1px 0 10px;scrollbar-width:thin}
+.term-editor-tab{--cat:#bbb;flex-shrink:0;white-space:nowrap;border:1px solid var(--cat);border-radius:19px;background:#101725;color:var(--cat);font:700 .95rem 'Barlow Condensed',Arial,sans-serif;padding:8px 12px;cursor:pointer}
+.term-editor-tab[aria-pressed="true"]{background:var(--cat);color:#131a25}
+.term-editor-tab span{opacity:.8;margin-left:4px}
+.term-editor-results{flex:1 1 auto;min-height:0;overflow:auto;overscroll-behavior:contain;padding:13px 15px;border:1px solid #333e55;border-radius:9px;background:#0e1421;scrollbar-color:#627696 #121926}
+.term-editor-section{margin-bottom:22px;--cat:#aaa}
+.term-editor-section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--cat);padding-bottom:8px;margin-bottom:11px}
+.term-editor-section h4{color:var(--cat);font:700 1.45rem 'Antonio',sans-serif;margin:0}
+.term-editor-add{color:var(--cat);border:1px solid var(--cat);background:#141b29;border-radius:17px;font:700 .9rem 'Barlow Condensed',Arial,sans-serif;padding:6px 12px;cursor:pointer}
+.term-editor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,315px),1fr));gap:11px}
+.term-editor-card{--cat:#ab88d1;background:#1f283b;border:1px solid #404a60;border-left:4px solid var(--cat);border-radius:8px;padding:12px;min-width:0}
+.term-editor-card.is-changed{box-shadow:inset 0 0 0 1px #f7d88c}
+.term-editor-body{display:flex;gap:10px;align-items:flex-start}
+.term-editor-fields{flex:1;min-width:0}
+.term-editor-name{border:1px dashed transparent;border-radius:4px;background:transparent;color:#fff;width:100%;font:700 1.23rem 'Antonio',sans-serif;padding:3px 4px;outline-offset:2px}
+.term-editor-name:hover,.term-editor-name:focus{border-color:var(--cat);background:#0b1423}
+.term-editor-description{background:transparent;border:1px dashed transparent;border-radius:4px;color:#d3d8e5;font:400 1rem/1.38 'Barlow Condensed',Arial,sans-serif;resize:vertical;min-height:90px;width:100%;padding:5px 4px}
+.term-editor-description:hover,.term-editor-description:focus{border-color:var(--cat);background:#0b1423}
+.term-editor-image{flex:0 0 67px;min-width:0;display:flex;align-items:center;justify-content:center;min-height:102px;background:#0e1726;border:1px solid #4c5266;border-radius:7px;cursor:zoom-in}
+.term-editor-image img{max-width:63px;max-height:100px;object-fit:contain}
+.term-editor-image[hidden]{display:none}
+.term-editor-image.is-unavailable{font-size:.75rem;color:#ef9d9d}
+.term-editor-path{border-top:1px solid #394456;margin-top:8px;padding-top:7px}
+.term-editor-path label{display:block;color:#a6c8d9;font:700 .83rem 'Antonio',sans-serif;letter-spacing:.03em;margin-bottom:4px}
+.term-editor-path-entry{display:flex;gap:0;align-items:center;min-width:0}
+.term-editor-path-entry span{color:#7edce2;background:#0b1424;border:1px solid #4a586e;border-right:0;border-radius:6px 0 0 6px;font:400 .9rem 'Barlow Condensed',Arial,sans-serif;padding:8px}
+.term-editor-path-entry input{width:100%;min-width:0;background:#0b1424;border:1px solid #4a586e;border-radius:0 6px 6px 0;color:#fff;padding:8px;font:400 .93rem 'Barlow Condensed',Arial,sans-serif}
+.term-editor-current{font:400 .83rem/1.35 'Barlow Condensed',Arial,sans-serif;color:#9faabd;margin:5px 0}
+.term-editor-footer{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px}
+.term-editor-delete{background:none;border:none;color:#eaa4a6;text-decoration:underline;cursor:pointer;font:400 .88rem 'Barlow Condensed',Arial,sans-serif;padding:3px}
+.term-editor-remove-image{display:flex;gap:5px;align-items:center;font:400 .83rem 'Barlow Condensed',Arial,sans-serif;color:#adbacb}
+.term-editor-remove-image input{accent-color:#ce7ca6}
+.term-editor-pill{font:700 .75rem 'Barlow Condensed',Arial,sans-serif;color:#fbe3a4}
+.term-editor-empty{padding:30px;color:#b3bccf;text-align:center}
+.term-admin-preview{position:fixed;inset:0;background:rgba(0,0,0,.87);z-index:9998;display:flex;align-items:center;justify-content:center;padding:18px}
+.term-admin-preview[hidden]{display:none}
+.term-admin-preview-inner{position:relative;background:#1e2837;border:1px solid #7c7895;border-radius:12px;padding:22px;max-height:85vh;text-align:center}
+.term-admin-preview-inner img{height:min(58vh,420px);max-width:70vw;object-fit:contain}
+.term-admin-preview-inner button{position:absolute;right:4px;top:4px;font-size:25px;background:transparent;border:0;color:#fff;cursor:pointer}
+.term-admin-preview-inner p{color:#eee;margin:8px 0 0}
+@media(max-width:780px){.term-admin-heading{padding:10px}.term-admin-editor{padding:8px}.term-editor-grid{grid-template-columns:1fr}.term-editor-results{padding:9px}}

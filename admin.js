@@ -201,7 +201,8 @@ window.switchView = function(view) {
     const views = {
         'tables': document.getElementById('view-tables'),
         'editor': document.getElementById('view-editor'),
-        'avatars': document.getElementById('view-avatars')
+        'avatars': document.getElementById('view-avatars'),
+        'terminology': document.getElementById('view-terminology')
     };
 
     Object.keys(views).forEach(k => {
@@ -217,6 +218,10 @@ window.switchView = function(view) {
         document.getElementById('btn-formatting-guide')?.classList.add('hidden');
         loadEditorPage();
         saveEditorState(); 
+    } else if (view === 'terminology') {
+        views['terminology'].style.display = 'flex';
+        views['terminology'].classList.remove('hidden');
+        window.BackroomTerminologyAdmin?.open();
     } else if (view === 'avatars') {
         views['avatars'].style.display = 'flex';
         views['avatars'].classList.remove('hidden');
@@ -1140,6 +1145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('nav-venues')?.addEventListener('click', () => switchView('venues'));
     document.getElementById('nav-events')?.addEventListener('click', () => switchView('events'));
     document.getElementById('nav-editor')?.addEventListener('click', () => switchView('editor'));
+    document.getElementById('nav-terminology')?.addEventListener('click', () => switchView('terminology'));
     document.getElementById('nav-avatars')?.addEventListener('click', () => switchView('avatars'));
     document.getElementById('nav-voting-admin')?.addEventListener('click', () => {
         window.location.href = 'ratings-admin.html';
