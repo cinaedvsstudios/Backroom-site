@@ -138,7 +138,7 @@ async function open(){
  if(state.busy)return;
  state.busy=true;display('Loading glossary…');
  try{
-  const response=await fetch('dress-codes-data.json?v=1.5.7',{cache:'no-store'});
+  const response=await fetch('dress-codes-data.json?v=1.5.8',{cache:'no-store'});
   if(!response.ok)throw Error('HTTP '+response.status);
   state.base=await response.json();if(!Array.isArray(state.base.categories))throw Error('Invalid glossary data');
   state.hash=checksum(state.base);

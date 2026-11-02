@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.7";
+const APP_VERSION = "v1.5.8";
 const APP_DATE = "1 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -2494,6 +2494,14 @@ async function renderDressCodesGuide() {
     const container=document.getElementById('dress-codes-container');
     container?.classList.add('br-guide');
     window.BackroomGuide?.mount(container);
+    try {
+        if(sessionStorage.getItem('br_glossary_feedback_pending')==='1' && typeof window.flagListing==='function') {
+            sessionStorage.removeItem('br_glossary_feedback_pending');
+            window.flagListing('N/A','Terminology & Dress Codes Feedback','General Support');
+            const msg=document.querySelector('#formsubmit-modal textarea[name="message"]');
+            if(msg) msg.value='Terminology & Dress Codes feedback:' + String.fromCharCode(10);
+        }
+    } catch(error) { console.warn('Glossary feedback redirect could not be completed',error); }
 }
 
 /* v1.5: Cruising Guide is a filtered venue browser, not a duplicate venue database. */
