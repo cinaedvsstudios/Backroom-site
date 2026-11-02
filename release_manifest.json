@@ -1,5 +1,5 @@
 {
-  "version": "v1.5.7",
+  "version": "v1.5.8",
   "date": "2026-11-02",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
@@ -54,7 +54,9 @@
     "Corrected Chaps, Leatherboy/Leather Daddy, Fetish party, Cabin/Booth, Sex club/Cruise bar, Foot Fetish, Gooning and Pits illustrations",
     "Added Sling to Spaces & Nightlife with kinkthumb/sling.png; removed Young Adult Crowd and the female-specific Cuckquean entry; retained terms relevant to gay male nightlife",
     "Add admin sidebar Terminology & Dress Codes visual editing mode with field editing, kinkthumb image filename entry, local draft, and Copy Prompt for Changes",
-    "Fix Heat Map background tiles by replacing CARTO's now-keyed dark raster service with keyless OpenStreetMap tiles and a dark CSS filter"
+    "Fix Heat Map background tiles by replacing CARTO's now-keyed dark raster service with keyless OpenStreetMap tiles and a dark CSS filter",
+    "Correct ten terminology images: Cub, Drag Queen, Chub, Twunk, Clean-cut, Masc, Wolf, Mature, Vers/Versatile and Drag; cub.png and dq.png still need to be uploaded",
+    "Add clickable glossary feedback link that opens the Contact modal, with standalone glossary redirect support"
   ],
   "validation": {
     "javascript_syntax": "checked before publication",
@@ -71,6 +73,7 @@
     "v156_browser_smoke": "Passed Chrome test: age gate; v1.5.6 version; renamed sidebar and glossary heading; all 203 entries; all 9 corrected/additional thumbnails loaded; removed terms absent; direct guide URL; no uncaught JavaScript errors.",
     "v156_test_url": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41365047871",
     "v157_smoke_test": "Passed Chromium: admin editor loads all 203 entries, category tabs, edit cards and kinkthumb images, clipboard prompt, no live database mutation, draft persists across views, age gate, and Heat Map tiles rendered from keyless OpenStreetMap with dark CSS filter",
-    "v157_test_url": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41367462603"
+    "v157_test_url": "https://github.com/cinaedvsstudios/Backroom-site/actions/runs/41367462603",
+    "v158_glossary_smoke": "pending"
   }
 }

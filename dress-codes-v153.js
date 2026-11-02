@@ -1,4 +1,4 @@
-/* Backroom v1.5.6 - searchable, illustrated glossary */
+/* Backroom v1.5.8 - searchable, illustrated glossary */
 (function () {
   'use strict';
   // Resolve either the profile avatars or the specialist kink images.
@@ -11,7 +11,7 @@
   };
   const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
   let pending=null;
-  const fetchData=()=>pending||(pending=fetch('dress-codes-data.json?v=1.5.6',{cache:'no-store'}).then(response=>{
+  const fetchData=()=>pending||(pending=fetch('dress-codes-data.json?v=1.5.8',{cache:'no-store'}).then(response=>{
     if(!response.ok)throw new Error('Guide data unavailable ('+response.status+')');
     return response.json();
   }).catch(error=>{pending=null;throw error;}));
@@ -84,6 +84,24 @@
     });
     input.addEventListener('input',()=>{state.query=input.value;renderResults(true);});
     clear?.addEventListener('click',()=>{input.value='';state.query='';input.focus();renderResults(true);});
+
+    // Reuse the site's existing Contact/Report modal. The standalone glossary
+    // forwards the request to the full site where that modal is available.
+    root.querySelector('#br-guide-contact')?.addEventListener('click',()=>{
+      if(typeof window.flagListing==='function'){
+        window.flagListing('N/A','Terminology & Dress Codes Feedback','General Support');
+        const msg=document.querySelector('#formsubmit-modal textarea[name="message"]');
+        if(msg && (!msg.value.trim() || msg.value.trim()==='Type your message here')){
+          msg.value='Terminology & Dress Codes feedback:\n';
+          msg.focus();
+          msg.setSelectionRange(msg.value.length,msg.value.length);
+        }
+      }else{
+        try{sessionStorage.setItem('br_glossary_feedback_pending','1');}catch(_){}
+        window.location.assign('index.html#dress-codes');
+      }
+    });
+
     fetchData().then(data=>{
       if(!data||!Array.isArray(data.categories))throw new Error('Invalid glossary data');
       state.data=data;

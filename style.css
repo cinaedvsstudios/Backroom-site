@@ -2002,3 +2002,27 @@ body:has(> .br-guide) > .br-guide{height:100%;max-width:1180px}
  #welcome-screen .welcome-features-scroll{max-height:min(47vh,385px)}
  .backroom-inline-location-search{width:min(200px,55vw)}
 }
+
+
+/* v1.5.8 terminology glossary feedback link */
+.br-guide-feedback{
+  margin:16px 0 5px;
+  padding:14px 15px;
+  border:1px solid #72538b;
+  border-radius:9px;
+  background:linear-gradient(100deg,#242036,#141b29);
+  color:#e5dfee;
+  font:400 1.05rem/1.5 'Barlow Condensed',Arial,sans-serif;
+}
+.br-guide-contact{
+  display:inline;
+  padding:0;
+  border:0;
+  border-bottom:1px solid currentColor;
+  background:transparent;
+  color:#78dafa;
+  font:700 1.05rem/1.5 'Barlow Condensed',Arial,sans-serif;
+  cursor:pointer;
+  text-decoration:none;
+}
+.br-guide-contact:hover,.br-guide-contact:focus-visible{color:#fff;outline-offset:3px}

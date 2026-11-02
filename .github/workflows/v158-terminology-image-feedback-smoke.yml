@@ -1,0 +1,87 @@
+name: Backroom v1.5.8 Terminology Image and Contact Smoke
+on:
+  push:
+    branches: [v158-glossary-feedback-test]
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Browser test glossary image mapping and Contact popup
+        run: |
+          python3 -m http.server 8765 >/tmp/backroom-server.log 2>&1 &
+          node <<'NODE'
+          const { chromium }=require('playwright');
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+            const page=await browser.newPage({viewport:{width:1450,height:850}});
+            const jsErrors=[];page.on('pageerror',e=>jsErrors.push(e.message));
+            await page.route(/https:\/\/(unpkg\.com|fonts\.googleapis\.com|fonts\.gstatic\.com)\//,r=>r.abort());
+            await page.goto('http://127.0.0.1:8765/index.html',{waitUntil:'domcontentloaded',timeout:35000});
+            await page.locator('#btn-enter').click();
+            await page.locator('#age-gate').waitFor({state:'hidden',timeout:15000});
+            await page.locator('#app-shell').waitFor({state:'visible',timeout:15000});
+            const version=await page.locator('#sidebar-version-display').textContent();
+            if(!version.includes('v1.5.8'))throw Error('Version mismatch '+version);
+            console.log('PASS age gate and v1.5.8 startup');
+            await page.evaluate(()=>{location.hash='#dress-codes'});
+            await page.locator('.br-guide-term').first().waitFor({state:'visible',timeout:22000});
+            if(await page.locator('.br-guide-term').count()!==203)throw Error('Expected 203 glossary terms');
+            const mappings=[
+              ['guys','Cub','kinkthumb/cub.png'],
+              ['guys','Drag Queen','kinkthumb/dq.png'],
+              ['guys','Chub','Profile_images/seal04.png'],
+              ['guys','Twunk','Profile_images/muscle04.png'],
+              ['guys','Clean-cut','Profile_images/boyscout01.png'],
+              ['guys','Masc','Profile_images/wolf01.png'],
+              ['guys','Wolf','Profile_images/wolf03.png'],
+              ['guys','Mature','Profile_images/daddy01.png'],
+              ['guys','Vers / Versatile','Profile_images/muscle01.png'],
+              ['dress','Drag','kinkthumb/dq.png']
+            ];
+            for(const [category,term,expected] of mappings) {
+              await page.locator('[data-guide-filter="'+category+'"]').click();
+              const card=page.locator('.br-guide-term').filter({has:page.locator('h3',{hasText:term})}).first();
+              await card.waitFor({state:'visible'});
+              const img=card.locator('img');
+              if(await img.getAttribute('src')!==expected)throw Error('Wrong '+term+' image: '+await img.getAttribute('src'));
+              if(!['kinkthumb/cub.png','kinkthumb/dq.png'].includes(expected)){
+                const loaded=await img.evaluate(async el=>{
+                  if(!el.complete)await new Promise(done=>{el.addEventListener('load',done,{once:true});el.addEventListener('error',done,{once:true});});
+                  return el.naturalWidth>0;
+                });
+                if(!loaded)throw Error('Broken '+term+' image');
+              }
+            }
+            console.log('PASS ten requested image references; seven existing images load');
+            await page.locator('[data-guide-filter="all"]').click();
+            const feedback=page.locator('#br-guide-contact');
+            await feedback.scrollIntoViewIfNeeded();
+            await feedback.waitFor({state:'visible'});
+            await feedback.click();
+            await page.locator('#formsubmit-modal').waitFor({state:'visible'});
+            const type=await page.locator('#fs-type').inputValue();
+            const subject=await page.locator('#fs-name').inputValue();
+            const text=await page.locator('#formsubmit-modal textarea[name="message"]').inputValue();
+            if(type!=='General Support'||!subject.includes('Terminology')||!text.includes('Terminology & Dress Codes feedback'))throw Error('Incorrect contact form details '+JSON.stringify({type,subject,text}));
+            console.log('PASS glossary feedback opens Contact popup with terminology subject');
+            if(jsErrors.length)throw Error('JS errors '+JSON.stringify(jsErrors));
+            const standalone=await browser.newPage({viewport:{width:1450,height:850}});
+            await standalone.goto('http://127.0.0.1:8765/dress-codes.html',{waitUntil:'domcontentloaded',timeout:30000});
+            await standalone.locator('.br-guide-term').first().waitFor({state:'visible',timeout:12000});
+            await standalone.locator('#br-guide-contact').scrollIntoViewIfNeeded();
+            await standalone.locator('#br-guide-contact').click();
+            await standalone.waitForURL('**/index.html#dress-codes',{timeout:8000});
+            await standalone.locator('#btn-enter').click();
+            await standalone.locator('#formsubmit-modal').waitFor({state:'visible',timeout:14000});
+            console.log('PASS standalone glossary feedback redirects to Contact popup');
+            await browser.close();
+          })().catch(error=>{console.error('FAIL',error);process.exit(1)});
+          NODE
