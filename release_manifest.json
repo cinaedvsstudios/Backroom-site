@@ -1,5 +1,5 @@
 {
-  "version": "v1.5.8",
+  "version": "v1.5.9",
   "date": "2026-11-02",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
@@ -26,7 +26,18 @@
     "admin-terminology.js",
     "admin-terminology.css",
     "heatmap-ui-v110.js",
-    "heatmap-v110.css"
+    "heatmap-v110.css",
+    "sitemap.xml",
+    "robots.txt",
+    "cruising-guide.html",
+    "featured.html",
+    "contact.html",
+    "admin-record-preview.html",
+    "ratings-admin.html",
+    "discounts.html",
+    "template.html",
+    "travel.html",
+    "thanks.html"
   ],
   "changes": [
     "Multi-select dates with aggregated events, festival grouping and dark-green expandable cards",
@@ -56,7 +67,10 @@
     "Add admin sidebar Terminology & Dress Codes visual editing mode with field editing, kinkthumb image filename entry, local draft, and Copy Prompt for Changes",
     "Fix Heat Map background tiles by replacing CARTO's now-keyed dark raster service with keyless OpenStreetMap tiles and a dark CSS filter",
     "Correct ten terminology images: Cub, Drag Queen, Chub, Twunk, Clean-cut, Masc, Wolf, Mature, Vers/Versatile and Drag; cub.png and dq.png have been uploaded",
-    "Add clickable glossary feedback link that opens the Contact modal, with standalone glossary redirect support"
+    "Add clickable glossary feedback link that opens the Contact modal, with standalone glossary redirect support",
+    "Speed initial loading by fetching independent JSON concurrently and revalidating cached data instead of timestamped URLs",
+    "Refresh indexable sitemap, add robots.txt, and keep retired Featured and utility/admin/prototype pages out of search results",
+    "Improve accessibility: enable pinch zoom, add a skip link and keyboard-operable sidebar, visible focus and clearer control labels"
   ],
   "validation": {
     "javascript_syntax": "checked before publication",

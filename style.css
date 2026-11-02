@@ -2026,3 +2026,9 @@ body:has(> .br-guide) > .br-guide{height:100%;max-width:1180px}
   text-decoration:none;
 }
 .br-guide-contact:hover,.br-guide-contact:focus-visible{color:#fff;outline-offset:3px}
+
+/* v1.5.9: keyboard focus, bypass link and inclusive mobile scaling */
+.br-skip-link{position:fixed;left:12px;top:-100px;z-index:10000;background:#0B0F19;color:#fff;border:2px solid #2CA8D4;border-radius:6px;padding:11px 16px;font:700 1rem 'Barlow Condensed',Arial,sans-serif;text-decoration:none}
+.br-skip-link:focus{top:12px}
+#app-shell :is(a,button,input,textarea,select,[role="button"],[role="link"]):focus-visible{outline:3px solid #2CA8D4;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){#app-shell .sidebar-item,#app-shell .btn{transition:none!important}}

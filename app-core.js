@@ -1,6 +1,6 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.8";
-const APP_DATE = "1 November 2026";
+const APP_VERSION = "v1.5.9";
+const APP_DATE = "2 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
 let activeFilters = []; // v0.66 Multi-select Array
@@ -1990,26 +1990,35 @@ async function initApp() {
     if(verDisplay) verDisplay.innerHTML = `${APP_VERSION}<br>${APP_DATE}`;
     
     try {
+        // Revalidate cached data rather than generating a unique URL each time.
+        // Independent resources load concurrently, and updated JSON is still fetched.
         const fetchJson = async (url) => {
-            const cacheBuster = '?v=' + new Date().getTime();
-            const res = await fetch(url + cacheBuster);
+            const res = await fetch(url, { cache: 'no-cache' });
             if (!res.ok) throw new Error(`HTTP ${res.status} on ${url}`);
             return res.json();
         };
-
-        try { systemInfo = await fetchJson('system_info.json'); } catch(e) { console.warn("Using default system info."); }
-        try { designTheme = await fetchJson('design_theme.json'); } catch(e) { console.warn("Using default theme."); }
-        try { events = await fetchJson('events.json'); } catch(e) { events = []; }
-        try { 
-            const avatarRes = await fetch('Profile_images/avatar_list.json?v=' + new Date().getTime());
-            if(avatarRes.ok) avatarData = await avatarRes.json();
-        } catch(e) { console.warn("Avatar JSON missing"); avatarData = []; }
-
-        try {
-            venues = await fetchJson('listings.json');
-        } catch (e) {
-            throw new Error(`Failed to load listings.json. Error: ${e.message}`);
+        const [systemResult, themeResult, eventsResult, avatarResult, venuesResult] = await Promise.allSettled([
+            fetchJson('system_info.json'),
+            fetchJson('design_theme.json'),
+            fetchJson('events.json'),
+            fetch('Profile_images/avatar_list.json', { cache: 'no-cache' }).then(res => {
+                if (!res.ok) throw new Error(`HTTP ${res.status} on avatar_list.json`);
+                return res.json();
+            }),
+            fetchJson('listings.json')
+        ]);
+        if (systemResult.status === 'fulfilled') systemInfo = systemResult.value;
+        else console.warn("Using default system info.", systemResult.reason);
+        if (themeResult.status === 'fulfilled') designTheme = themeResult.value;
+        else console.warn("Using default theme.", themeResult.reason);
+        if (eventsResult.status === 'fulfilled') events = eventsResult.value;
+        else { events = []; console.warn("Events unavailable.", eventsResult.reason); }
+        if (avatarResult.status === 'fulfilled') avatarData = avatarResult.value;
+        else { avatarData = []; console.warn("Avatar JSON missing.", avatarResult.reason); }
+        if (venuesResult.status !== 'fulfilled') {
+            throw new Error(`Failed to load listings.json. Error: ${venuesResult.reason?.message || venuesResult.reason}`);
         }
+        venues = venuesResult.value;
 
         updateProfileDisplay(); // Moved here so avatarData is loaded
         void loadCommunityVenueStats();
@@ -2475,7 +2484,7 @@ async function renderStaticPageView(page) {
     container.classList.remove('hidden');
     container.innerHTML = `<p class="body-font">Loading content...</p>`;
     try {
-        const res = await fetch(`${page}.html?v=${Date.now()}`);
+        const res = await fetch(`${page}.html`, { cache: 'no-cache' });
         if(!res.ok) throw new Error(`HTTP ${res.status}`);
         const html = await res.text();
         const doc = new DOMParser().parseFromString(html, 'text/html');
