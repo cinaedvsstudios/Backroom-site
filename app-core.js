@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.4";
+const APP_VERSION = "v1.5.7";
 const APP_DATE = "1 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
