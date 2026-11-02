@@ -80,7 +80,8 @@ jobs:
               tiles:document.querySelectorAll('#map .leaflet-tile').length
             }));
             if(!scripts.provider.includes('tile.openstreetmap.org'))throw Error('Tile provider not active: '+JSON.stringify(scripts));
-            if(!scripts.tileClass.includes('br-heatmap-dark-tile'))throw Error('Missing dark tile styling class');
+            const tileFilter=await front.evaluate(()=>getComputedStyle(document.querySelector('#map .leaflet-tile')).filter);
+            if(tileFilter==='none')throw Error('Missing dark tile filter on raster tiles');
             if(mapErrors.length)throw Error('Heat map runtime error: '+JSON.stringify(mapErrors));
             console.log('PASS Heat Map renders keyless dark tiles:',JSON.stringify(scripts));
             await browser.close();
