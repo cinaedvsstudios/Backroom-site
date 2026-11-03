@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.11";
+const APP_VERSION = "v1.5.12";
 const APP_DATE = "3 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -4926,13 +4926,16 @@ function openVenueModal(venue) {
             const safeEventName = String(ev.Event_Name || 'Event').replace(/'/g, "\'");
             eventsHtml += `
                 <article class="event-card ${isPast ? 'past' : ''}${isMenOnlyEvent(ev, venue) ? ' event-card--men-only' : ''}">
-                    <div class="event-date-badge" aria-label="${getEventDisplayDate(ev)}">
+                    <button type="button" class="event-date-badge event-date-open" data-open-venue-event="${escapeHTML(ev.Event_ID)}" data-return-venue-id="${escapeHTML(venue.Venue_ID)}" aria-label="Open ${escapeHTML(ev.Event_Name || 'event')} details for ${escapeHTML(getEventDisplayDate(ev))}" title="Open event details">
                         <span class="event-day">${badgeData.d}</span>
                         <span class="event-month">${badgeData.m}</span>
                         <span class="event-year">${badgeData.y}</span>
-                    </div>
+                    </button>
                     <div class="event-content">
-                        <h4 class="event-title">${formatEventTitleForDisplay(ev.Event_Name)} ${isPast ? '<small>(Past)</small>' : ''}</h4>
+                        <div class="event-title-row">
+                            <h4 class="event-title">${formatEventTitleForDisplay(ev.Event_Name)} ${isPast ? '<small>(Past)</small>' : ''}</h4>
+                            ${window.BackroomV15?.badge('event', ev.Event_ID, getEventDisplayDate(ev)) || ''}
+                        </div>
                         <p class="event-meta meta-text">${getEventDisplayMeta(ev)}</p>
                         <div class="event-action-row" aria-label="Event actions">
                             <button type="button" class="event-action-btn" onclick="event.stopPropagation(); shareURL('${window.location.origin}${window.location.pathname}?event=${ev.Event_ID}', '${safeEventName}')" title="Share ${safeEventName}">${BR_ICONS.share}</button>
@@ -5064,6 +5067,23 @@ function openVenueModal(venue) {
         };
     }
 
+    // A delegated listener keeps the date buttons working when venue cards are rebuilt.
+    if (venueModal && !venueModal.dataset.eventDatesBound) {
+        venueModal.dataset.eventDatesBound = 'true';
+        venueModal.addEventListener('click', clickEvent => {
+            const button = clickEvent.target.closest('button[data-open-venue-event]');
+            if (!button || !venueModal.contains(button)) return;
+            clickEvent.preventDefault();
+            clickEvent.stopPropagation();
+            if (typeof window.openBackroomEvent === 'function') {
+                window.openBackroomEvent(button.dataset.openVenueEvent, {
+                    returnHash: '#venue=' + encodeURIComponent(button.dataset.returnVenueId || '')
+                });
+            } else {
+                showToast('Event details are not available yet.');
+            }
+        });
+    }
     venueModal?.classList.remove('hidden');
 }
 

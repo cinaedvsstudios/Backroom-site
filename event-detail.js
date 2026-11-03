@@ -5,7 +5,7 @@
   if (window.__backroomEventDetailLoaded) return;
   window.__backroomEventDetailLoaded = true;
 
-  const EVENT_DETAIL_VERSION = 'v1.5.8';
+  const EVENT_DETAIL_VERSION = 'v1.5.12';
   const DEFAULT_RETURN_HASH = '#calendar';
   const BACKROOM_ICON_URL = 'https://raw.githubusercontent.com/cinaedvsstudios/Backroom-site/refs/heads/main/backdoorlogo.png';
   let eventReturnHash = DEFAULT_RETURN_HASH;
@@ -315,6 +315,7 @@
         <section class="event-detail-top">
           <div class="event-detail-image-wrap">
             <img class="event-detail-image" src="${escapeHTML(eventImage)}" onerror="this.onerror=null;this.src='${escapeHTML(fallback)}';" alt="${escapeHTML(event.Event_Name || 'Event')}">
+            ${window.BackroomV15?.badge('event', event.Event_ID, event.Display_Date || event.Event_Date) || ''}
           </div>
           <div class="event-detail-main-card">
             <div class="event-detail-status ${eventStatusClass(event)}">${escapeHTML(status)}</div>
@@ -400,6 +401,17 @@
 
     document.getElementById('event-venue-directions')?.addEventListener('click', () => openVenueDirections(venue));
   }
+
+  // Show the Featured badge even when picks.json finishes loading after the modal opens.
+  document.addEventListener('backroom:v15-ready', () => {
+    const modal = document.getElementById('event-modal');
+    if (!modal || modal.classList.contains('hidden')) return;
+    const event = findEvent(eventIdFromHash());
+    const imageWrap = modal.querySelector('.event-detail-image-wrap');
+    if (!event || !imageWrap || imageWrap.querySelector('.backroom-featured-sticker')) return;
+    const badge = window.BackroomV15?.badge('event', event.Event_ID, event.Display_Date || event.Event_Date);
+    if (badge) imageWrap.insertAdjacentHTML('beforeend', badge);
+  });
 
   function openEventModal(eventOrId, options = {}) {
     const event = findEvent(eventOrId);

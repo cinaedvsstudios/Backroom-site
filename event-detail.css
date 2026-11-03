@@ -382,3 +382,7 @@
     width: 100%;
   }
 }
+
+/* v1.5.12: Show the same Featured badge in the full event detail popup. */
+.event-detail-image-wrap{position:relative}
+.event-detail-image-wrap>.backroom-featured-sticker{position:absolute;top:10px;right:10px;width:clamp(82px,28%,132px);max-width:calc(100% - 20px);height:auto;z-index:2;pointer-events:none}

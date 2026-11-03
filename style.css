@@ -2041,3 +2041,12 @@ body:has(> .br-guide) > .br-guide{height:100%;max-width:1180px}
   #filter-chips{gap:8px}
   #filter-chips>.chip{padding-left:12px;padding-right:12px}
 }
+
+/* v1.5.12: Featured event badge inside venue's Upcoming Events cards. */
+.events-block .event-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;min-width:0;width:100%}
+.events-block .event-title-row>.event-title{min-width:0;flex:1 1 auto}
+.events-block .event-title-row>.backroom-featured-sticker{position:static;flex:0 0 auto;width:100px;max-width:32%;height:auto;margin:-3px 0 0 0;align-self:flex-start}
+.events-block button.event-date-open{cursor:pointer;font:inherit;appearance:none;color:inherit;transition:border-color .15s,box-shadow .15s,background .15s}
+.events-block button.event-date-open:hover{border-color:#77d7fa;box-shadow:0 0 0 2px rgba(44,168,212,.25);background:#1d3349}
+.events-block button.event-date-open:focus-visible{outline:3px solid #77d7fa;outline-offset:3px}
+@media(max-width:768px){.events-block .event-title-row>.backroom-featured-sticker{width:70px;max-width:36%}}
