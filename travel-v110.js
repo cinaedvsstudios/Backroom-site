@@ -548,6 +548,7 @@
     $('open-destination-events').onclick = () => openSite('events', to);
     renderRoutes();
     renderDirectory(from, to);
+    $('travel-placeholder').classList.add('hidden');
     ['summary','results','provider-directory'].forEach(id => $(id).classList.remove('hidden'));
     $('summary').scrollIntoView({ behavior:'smooth', block:'start' });
   }

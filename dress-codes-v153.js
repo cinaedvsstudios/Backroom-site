@@ -11,7 +11,7 @@
   };
   const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
   let pending=null;
-  const fetchData=()=>pending||(pending=fetch('dress-codes-data.json?v=1.5.8',{cache:'no-store'}).then(response=>{
+  const fetchData=()=>pending||(pending=fetch('dress-codes-data.json?v=1.5.10',{cache:'no-store'}).then(response=>{
     if(!response.ok)throw new Error('Guide data unavailable ('+response.status+')');
     return response.json();
   }).catch(error=>{pending=null;throw error;}));

@@ -1,6 +1,6 @@
 {
-  "version": "v1.5.9",
-  "date": "2026-11-02",
+  "version": "v1.5.10",
+  "date": "2026-11-03",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
     "index.html",
@@ -37,7 +37,9 @@
     "discounts.html",
     "template.html",
     "travel.html",
-    "thanks.html"
+    "thanks.html",
+    "travel-v110.js",
+    "travel-v110.css"
   ],
   "changes": [
     "Multi-select dates with aggregated events, festival grouping and dark-green expandable cards",
@@ -70,7 +72,10 @@
     "Add clickable glossary feedback link that opens the Contact modal, with standalone glossary redirect support",
     "Speed initial loading by fetching independent JSON concurrently and revalidating cached data instead of timestamped URLs",
     "Refresh indexable sitemap, add robots.txt, and keep retired Featured and utility/admin/prototype pages out of search results",
-    "Improve accessibility: enable pinch zoom, add a skip link and keyboard-operable sidebar, visible focus and clearer control labels"
+    "Improve accessibility: enable pinch zoom, add a skip link and keyboard-operable sidebar, visible focus and clearer control labels",
+    "Removed Muscle Bear from gay guys terminology; moved Vers / Versatile to Apps & Profile Terms",
+    "Added separate Top and Bottom app terms; assigned existing Profile_images illustrations for Top, Bottom, Side, BBC, BWC and FTM (same image as Trans Man)",
+    "Show root europe.jpg artwork on Travel screen until Find options successfully displays a journey"
   ],
   "validation": {
     "javascript_syntax": "checked before publication",

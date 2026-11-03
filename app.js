@@ -1,4 +1,4 @@
-const BACKROOM_VERSION = 'v1.5.9';
+const BACKROOM_VERSION = 'v1.5.10';
 const BACKROOM_EMBEDDED_HASHES = new Set(['#heatmap', '#travel']);
 const BACKROOM_INITIAL_EMBEDDED_HASH = BACKROOM_EMBEDDED_HASHES.has(window.location.hash) ? window.location.hash : '';
 
@@ -16,7 +16,7 @@ if (BACKROOM_INITIAL_EMBEDDED_HASH) {
   const splitCities = value => (Array.isArray(value) ? value : String(value ?? '').split(/[;,|]+/)).map(clean).filter(Boolean);
   const embeddedPages = {
     heatmap: { src: 'heatmap.html?embed=1&v=1.10.1', title: 'Heat Map' },
-    travel: { src: 'travel.html?embed=1&v=1.10.2', title: 'Travel' }
+    travel: { src: 'travel.html?embed=1&v=1.10.4', title: 'Travel' }
   };
 
   let coveragePromise = null;
