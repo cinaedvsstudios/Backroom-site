@@ -1,9 +1,10 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.10";
-const APP_DATE = "2 November 2026";
+const APP_VERSION = "v1.5.11";
+const APP_DATE = "3 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
 let activeFilters = []; // v0.66 Multi-select Array
+let featuredOnly = false; // Same editorial picks as the public Featured badge
 let selectedCardId = null;
 let venueReturnHash = '#results';
 let currentTargetVenue = null; 
@@ -1181,6 +1182,7 @@ function getSharedResultsRouteState(hash = window.location.hash || '') {
         .map(tag => tag.trim())
         .filter(tag => MASTER_VIBE_TAGS.includes(tag)))];
     const fuzzy = params.get('fuzzy') === '1';
+    const featured = params.get('featured') === '1';
 
     let scope = { scope: 'all', city: '', country: '', label: '' };
     if (country || city) {
@@ -1198,10 +1200,10 @@ function getSharedResultsRouteState(hash = window.location.hash || '') {
         }
     }
 
-    const hasSharedState = Boolean(city || country || query || type !== 'All' || tags.length || fuzzy);
+    const hasSharedState = Boolean(city || country || query || type !== 'All' || tags.length || fuzzy || featured);
     if (!hasSharedState) return null;
 
-    return { scope, query, type, tags, fuzzy, shared: true };
+    return { scope, query, type, tags, fuzzy, featured, shared: true };
 }
 
 function getSharedResultsRouteScope(hash = window.location.hash || '') {
@@ -1224,6 +1226,7 @@ function getResultsShareUrl(scope = getResultsSearchScope()) {
     if (query) params.set('q', query);
     if (searchResultTypeFilter !== 'All') params.set('type', searchResultTypeFilter.toLowerCase());
     if (activeFilters.length) params.set('tags', activeFilters.join(','));
+    if (featuredOnly) params.set('featured', '1');
     if (query && searchUsesFuzzyMatching) params.set('fuzzy', '1');
 
     const encoded = params.toString();
@@ -1273,6 +1276,16 @@ function renderTagPills(tags, extraStyle = '') {
     return (tags || []).map(tag => `<span class="chip pill-btn ${getTagColorClass(tag)}" title="${tag}" style="font-size:0.85rem; padding: 4px 10px; ${extraStyle}">${tag}</span>`).join('');
 }
 
+
+function isCurrentlyFeaturedVenue(venue) {
+    return Boolean(venue?.Venue_ID && window.BackroomV15?.isFeaturedVenue(venue.Venue_ID));
+}
+
+function isCurrentlyFeaturedEvent(event) {
+    return Boolean(event?.Event_ID && window.BackroomV15?.isFeaturedEvent(
+        event.Event_ID, event.Display_Date || event.Event_Date
+    ));
+}
 
 function normalizeFeaturedLevel(venue) {
     return String(venue?.Priority || '').trim();
@@ -2342,6 +2355,7 @@ function handleRouting() {
         if (searchInput) searchInput.value = '';
         updateSearchClearButton();
         activeFilters = [];
+        featuredOnly = false;
         selectedCardId = null;
         document.getElementById('main-filters')?.classList.add('hidden');
         if(resultsContainer) resultsContainer.innerHTML = '';
@@ -2370,6 +2384,7 @@ function handleRouting() {
             searchUsesFuzzyMatching = Boolean(sharedResultsState?.fuzzy);
             searchResultTypeFilter = sharedResultsState?.type || 'All';
             activeFilters = [...(sharedResultsState?.tags || [])];
+            featuredOnly = Boolean(sharedResultsState?.featured);
             if (searchInput) searchInput.value = sharedResultsState?.query || '';
             updateSearchClearButton();
         }
@@ -2808,6 +2823,7 @@ function startTutorial(type) {
     if (type === 'general') {
         window.location.hash = '#results'; // Clear views
         activeFilters = []; // Clear filters
+        featuredOnly = false;
         const searchInputEl = document.getElementById('search-input');
         if(searchInputEl) {
             searchInputEl.value = "Berlin";
@@ -3501,8 +3517,9 @@ function renderDynamicFilters(filteredData) {
     }
     activeFilters.forEach(t => availableTags.add(t));
 
-    const allActive = activeFilters.length === 0 && searchResultTypeFilter === 'All';
+    const allActive = activeFilters.length === 0 && searchResultTypeFilter === 'All' && !featuredOnly;
     let html = `<button class="chip pill-btn ${allActive ? 'active' : ''}" data-filter="All">All</button>`;
+    html += `<button type="button" class="chip pill-btn br-featured-filter ${featuredOnly ? 'active' : ''}" data-featured-filter="true" aria-pressed="${featuredOnly}" title="Show only Backroom Featured selections">★ Featured</button>`;
 
     if (isResultsScreen) {
         html += `<button class="chip pill-btn search-result-type-chip ${searchResultTypeFilter === 'Event' ? 'active' : ''}" data-search-result-type="Event">Event</button>`;
@@ -3530,6 +3547,13 @@ function renderDynamicFilters(filteredData) {
                 return;
             }
 
+            if (e.currentTarget.dataset.featuredFilter === 'true') {
+                featuredOnly = !featuredOnly;
+                if(window.location.hash === '#venues') renderSavedLocationVenuesView();
+                else applyFilters();
+                return;
+            }
+
             const resultType = e.currentTarget.getAttribute('data-search-result-type');
             if (resultType) {
                 searchResultTypeFilter = resultType;
@@ -3546,6 +3570,7 @@ function renderDynamicFilters(filteredData) {
 
             if(tag === 'All') {
                 activeFilters = [];
+                featuredOnly = false;
                 searchResultTypeFilter = 'All';
             } else {
                 const idx = activeFilters.indexOf(tag);
@@ -3751,6 +3776,11 @@ function applyFilters() {
         filteredEvents = filteredEvents.filter(({ event, venue }) => eventMatchesActiveTags(event, venue));
     }
 
+    if(featuredOnly) {
+        filteredVenues = filteredVenues.filter(isCurrentlyFeaturedVenue);
+        filteredEvents = filteredEvents.filter(({ event }) => isCurrentlyFeaturedEvent(event));
+    }
+
     if(query) {
         filteredVenues = filteredVenues.filter(venue => {
             const searchableText = getVenueSearchText(venue);
@@ -3914,13 +3944,14 @@ function renderSavedLocationVenuesView() {
     // Keep the filter bar available even when a tag produces zero matching cards.
     renderDynamicFilters(scopedVenues);
 
+    const taggedVenues = activeFilters.length > 0
+        ? scopedVenues.filter(venue => {
+            const tags = getVenueTags(venue);
+            return activeFilters.every(filterTag => tags.includes(filterTag));
+        })
+        : scopedVenues;
     const matchingVenues = sortSavedLocationVenues(
-        activeFilters.length > 0
-            ? scopedVenues.filter(venue => {
-                const tags = getVenueTags(venue);
-                return activeFilters.every(filterTag => tags.includes(filterTag));
-            })
-            : scopedVenues
+        featuredOnly ? taggedVenues.filter(isCurrentlyFeaturedVenue) : taggedVenues
     );
 
     if (title) {
@@ -3933,7 +3964,7 @@ function renderSavedLocationVenuesView() {
             ? 'across all cities'
             : `in ${savedScope.label}`;
 
-        if (activeFilters.length > 0) {
+        if (activeFilters.length > 0 || featuredOnly) {
             desc.textContent = matchingVenues.length === 1
                 ? `1 public venue listing matches these tags ${scopedPhrase}.`
                 : `${matchingVenues.length} public venue listings match these tags ${scopedPhrase}.`;
@@ -3950,11 +3981,11 @@ function renderSavedLocationVenuesView() {
 
     if (!matchingVenues.length) {
         renderSavedLocationEmptyState(
-            activeFilters.length > 0
-                ? 'NO VENUES MATCH THESE TAGS'
+            (activeFilters.length > 0 || featuredOnly)
+                ? 'NO VENUES MATCH THESE FILTERS'
                 : (isAllCities ? 'NO PUBLIC VENUES YET' : `NO PUBLIC VENUES YET FOR ${displayLocation.toUpperCase()}`),
-            activeFilters.length > 0
-                ? 'Choose another tag or select All to clear the venue filters.'
+            (activeFilters.length > 0 || featuredOnly)
+                ? 'Change the filters or select All to see all venues.'
                 : (isAllCities
                     ? 'More coming soon.'
                     : `More listings in ${savedScope.label} will appear here as they are added.`)
@@ -5284,6 +5315,10 @@ else void initApp();
                 return activeFilters.every(tag => tags.includes(tag));
             });
             scopeEvents = scopeEvents.filter(({ event, venue }) => eventMatchesActiveTags(event, venue));
+        }
+        if (featuredOnly) {
+            scopeVenues = scopeVenues.filter(isCurrentlyFeaturedVenue);
+            scopeEvents = scopeEvents.filter(({ event }) => isCurrentlyFeaturedEvent(event));
         }
         // saveLocation clears the typed search, but preserves these existing Results filters.
         return (searchResultTypeFilter === 'Event' ? 0 : scopeVenues.length)
