@@ -419,3 +419,8 @@
   .calendar-page--festivals .calendar-title-row .v15-festival-search{flex-wrap:wrap}
   .v15-festival-search label{width:100%}
 }
+
+/* v1.5.11: Featured fits into the existing two-row horizontally scrolling filter grid. */
+.calendar-filter-chip.pill-btn.event-filter-featured{min-height:26px;border-color:#e1b64b!important;color:#f7cf62!important;background:#211c13!important;font-weight:700}
+.calendar-filter-chip.pill-btn.event-filter-featured.active{border-color:#ffe398!important;background:#e3b955!important;color:#1b1404!important;box-shadow:0 0 9px rgba(227,185,85,.35)!important}
+.calendar-filter-chip.pill-btn.event-filter-featured:focus-visible{outline:2px solid #ffe398;outline-offset:2px}

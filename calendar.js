@@ -52,6 +52,7 @@
         location: { scope: 'all', city: '', country: '' },
         dateFilter: 'all',
         vibeFilter: '',
+        featuredOnly: false,
         events: [],
         venues: [],
         loading: false,
@@ -805,13 +806,15 @@ function ensureSelectedDate() {
     function filterChip(label, value, extraClass = '') {
         const isAll = value === 'all';
         const isDate = value === 'today' || value === 'week';
+        const isFeatured = value === 'featured';
         const isActive = isAll
-            ? !state.vibeFilter && state.dateFilter === 'all'
+            ? !state.vibeFilter && state.dateFilter === 'all' && !state.featuredOnly
             : isDate
                 ? state.dateFilter === value
-                : state.vibeFilter === value;
-        const className = isDate ? 'event-filter-green' : (isAll ? 'event-filter-all' : tagClass(value));
-        return `<button type="button" class="calendar-filter-chip pill-btn ${className} ${isActive ? 'active' : ''} ${extraClass}" data-calendar-filter="${escapeHTML(value)}">${escapeHTML(label)}</button>`;
+                : isFeatured ? state.featuredOnly : state.vibeFilter === value;
+        const className = isFeatured ? 'event-filter-featured'
+            : isDate ? 'event-filter-green' : (isAll ? 'event-filter-all' : tagClass(value));
+        return `<button type="button" class="calendar-filter-chip pill-btn ${className} ${isActive ? 'active' : ''} ${extraClass}" data-calendar-filter="${escapeHTML(value)}"${isFeatured ? ' aria-pressed="' + isActive + '" title="Show only Backroom Featured events"' : ''}>${escapeHTML(label)}</button>`;
     }
 
     function renderFilterStrip() {
@@ -819,6 +822,7 @@ function ensureSelectedDate() {
             filterChip('All', 'all'),
             filterChip('Today', 'today'),
             filterChip('This Week', 'week'),
+            filterChip('★ Featured', 'featured'),
             ...EVENT_VIBE_TAGS.map(tag => filterChip(tag, tag))
         ].join('');
         return `<div class="calendar-filter-shell" aria-label="Event filters"><div class="calendar-filter-scroll"><div class="calendar-filter-grid">${filters}</div></div></div>`;
@@ -961,7 +965,11 @@ function ensureSelectedDate() {
 
     function renderPanel() {
         if (state.mode === 'festivals') return renderFestivalPanel();
-        const items=eventsForActiveDateFilter();
+        const items=eventsForActiveDateFilter().filter(event =>
+            !state.featuredOnly || Boolean(window.BackroomV15?.isFeaturedEvent(
+                event.Event_ID, event.Display_Date || event.Event_Date
+            ))
+        );
         const selected=[...state.selectedDates].sort();
         const label=state.dateFilter === 'today' ? 'TODAY' : state.dateFilter === 'week' ? 'THIS WEEK'
           : !selected.length ? 'UPCOMING EVENTS' : selected.length===1 ? selectedLabel() : selected.length+' DATES SELECTED';
@@ -969,7 +977,7 @@ function ensureSelectedDate() {
           ? '<button type="button" id="calendar-share-day" class="calendar-share-day-btn icon-btn" title="Share selected day">📣</button>' : '';
         const heading='<div class="calendar-panel-heading"><h2 class="display-font">'+escapeHTML(label)+'</h2>'+shareButton+'</div>';
         previousGenericEventFallback='';
-        if(!items.length) return '<section class="calendar-event-panel">'+heading+'<div class="calendar-empty">No listed events match these filters yet.</div></section>';
+        if(!items.length) return '<section class="calendar-event-panel">'+heading+'<div class="calendar-empty">'+(state.featuredOnly ? 'No Featured events match this date and location. Choose another date or turn off Featured.' : 'No listed events match these filters yet.')+'</div></section>';
         const displayed=new Set(), nodes=[];
         for(const event of items){
             const matched=window.BackroomV15?.festivalForEvent(event.Event_ID);
@@ -997,6 +1005,9 @@ function ensureSelectedDate() {
         if (value === 'all') {
             state.dateFilter = 'all';
             state.vibeFilter = '';
+            state.featuredOnly = false;
+        } else if (value === 'featured') {
+            state.featuredOnly = !state.featuredOnly;
         } else if (value === 'today' || value === 'week') {
             state.dateFilter = state.dateFilter === value ? 'all' : value;
         } else {
@@ -1128,6 +1139,7 @@ function ensureSelectedDate() {
             state.mode=targetMode;
             state.dateFilter='all';
             state.vibeFilter='';
+            state.featuredOnly=false;
         }
         if (!isCalendarRouteHash()) history.pushState(null, '', targetMode === 'festivals' ? '#festivals' : '#calendar');
         hideStandardPanels();

@@ -2032,3 +2032,12 @@ body:has(> .br-guide) > .br-guide{height:100%;max-width:1180px}
 .br-skip-link:focus{top:12px}
 #app-shell :is(a,button,input,textarea,select,[role="button"],[role="link"]):focus-visible{outline:3px solid #2CA8D4;outline-offset:3px}
 @media (prefers-reduced-motion:reduce){#app-shell .sidebar-item,#app-shell .btn{transition:none!important}}
+
+/* v1.5.11: Featured is a normal-height venue filter, visible first on mobile. */
+#filter-chips .chip.br-featured-filter{color:#f7cf62!important;border-color:#e1b64b!important;background:#211c13;white-space:nowrap}
+#filter-chips .chip.br-featured-filter.active{background:#e3b955!important;border-color:#ffe398!important;color:#1b1404!important;font-weight:700}
+#filter-chips .chip.br-featured-filter:focus-visible{outline:2px solid #ffe398;outline-offset:3px}
+@media(min-width:769px){
+  #filter-chips{gap:8px}
+  #filter-chips>.chip{padding-left:12px;padding-right:12px}
+}
