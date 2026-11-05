@@ -45,124 +45,124 @@ Updated: 5 November 2026. Five venues per batch. Preserve all existing venue pho
 | 4 | Sauna Steam | Alicante | ALC-SAU-STEAM-01 | completed |
 | 4 | Sauna Nieuwezijds | Amsterdam | AMS-SAU-01 | completed |
 | 4 | Le 139 | Ans | LIE-SAU-02 | fallback-kept |
-| 5 | Sauna 't Herenhuis | Antwerp | BEL-ANT-SAU-01 | pending |
-| 5 | Alexander Sauna | Athens | ATH-SAU-01 | pending |
-| 5 | Flex Sauna | Athens | ATH-SAU-02 | pending |
-| 5 | Ira Baths | Athens | ATH-SAU-03 | pending |
-| 5 | El Cangrejo | Barcelona | BCN-BAR-05 | pending |
-| 6 | Sauna Bruc | Barcelona | BCN-SAU-01 | pending |
-| 6 | Sauna Casanova | Barcelona | BCN-SAU-02 | pending |
-| 6 | Sauna Condal | Barcelona | BCN-SAU-03 | pending |
-| 6 | Sauna Thermas | Barcelona | BCN-SAU-04 | pending |
-| 6 | Sauna Sunnyday | Basel | BSL-SAU-01 | pending |
-| 7 | RED Line Sauna | Belgrade | SER-BEL-SAU-01 | pending |
-| 7 | AHA-Berlin e.V. | Berlin | BER-AHA-01 | pending |
-| 7 | Böse Buben | Berlin | BER-BOE-01 | pending |
-| 7 | Sauna 65 | Bielefeld | BIE-SAU-01 | pending |
-| 7 | Sauna Ego | Bilbao | BIO-SAU-EGO-01 | pending |
-| 8 | Sauna Element | Bilbao | BIO-SAU-ELEMENT-01 | pending |
-| 8 | Yumbo Bar & Sauna | Birmingham | BHM-SAU-01 | pending |
-| 8 | Acqua Sauna Blackpool | Blackpool | BPL-SAU-01 | pending |
-| 8 | Cosmos Club Sauna | Bologna | BLQ-SAU-COSMOS-01 | pending |
-| 8 | Steam Sauna | Bologna | BLQ-SAU-STEAM-01 | pending |
-| 9 | Buster | Bordeaux | BOD-BAR-01 | pending |
-| 9 | Crunch Sauna | Bordeaux | BOD-SAU-01 | pending |
-| 9 | Sauna The Saint | Bordeaux | BOD-SAU-02 | pending |
-| 9 | Club Sauna Expert | Bratislava | SVK-BRA-SAU-EXPERT-01 | pending |
-| 9 | The Brighton Sauna | Brighton | BTN-SAU-01 | pending |
-| 10 | Sauna Las Palmas | Brno | BRN-SAU-LASPALMAS-01 | pending |
-| 10 | Macho Sauna | Brussels | BEL-BRU-SAU-01 | pending |
-| 10 | Sauna Oasis | Brussels | BEL-BRU-SAU-02 | pending |
-| 10 | Sauna Soho Bucharest | Bucharest | ROU-BUH-SAU-01 | pending |
-| 10 | Magnum Sauna | Budapest | BUD-SAU-01 | pending |
-| 11 | Szauna69 | Budapest | BUD-SAU-02 | pending |
-| 11 | Nero's Sauna Bury | Bury | BRY-SAU-01 | pending |
-| 11 | Clubsauna Outside | Chemnitz | CHE-SAU-01 | pending |
-| 11 | Sauna Soho Cluj | Cluj-Napoca | ROU-CLJ-SAU-SOHO-01 | pending |
-| 11 | Amigo Sauna | Copenhagen | CPH-SAU-01 | pending |
-| 12 | Body Bio | Copenhagen | CPH-CRU-02 | pending |
-| 12 | Paradise Dresden | Dresden | DRS-SAU-01 | pending |
-| 12 | Sauna Tibet | Eindhoven | EIN-SAU-01 | pending |
-| 12 | Pluto Sauna | Essen | ESS-SAU-01 | pending |
-| 12 | Florence Baths | Florence | FLR-SAU-BATHS-01 | pending |
-| 13 | Metropol Sauna | Frankfurt | FFM-SAU-03 | pending |
+| 5 | Sauna 't Herenhuis | Antwerp | BEL-ANT-SAU-01 | completed |
+| 5 | Alexander Sauna | Athens | ATH-SAU-01 | fallback-kept |
+| 5 | Flex Sauna | Athens | ATH-SAU-02 | fallback-kept |
+| 5 | Ira Baths | Athens | ATH-SAU-03 | completed |
+| 5 | El Cangrejo | Barcelona | BCN-BAR-05 | listing-review |
+| 6 | Sauna Bruc | Barcelona | BCN-SAU-01 | completed |
+| 6 | Sauna Casanova | Barcelona | BCN-SAU-02 | completed |
+| 6 | Sauna Condal | Barcelona | BCN-SAU-03 | completed |
+| 6 | Sauna Thermas | Barcelona | BCN-SAU-04 | completed |
+| 6 | Sauna Sunnyday | Basel | BSL-SAU-01 | completed |
+| 7 | RED Line Sauna | Belgrade | SER-BEL-SAU-01 | completed |
+| 7 | AHA-Berlin e.V. | Berlin | BER-AHA-01 | listing-review |
+| 7 | Böse Buben | Berlin | BER-BOE-01 | listing-review |
+| 7 | Sauna 65 | Bielefeld | BIE-SAU-01 | completed |
+| 7 | Sauna Ego | Bilbao | BIO-SAU-EGO-01 | completed |
+| 8 | Sauna Element | Bilbao | BIO-SAU-ELEMENT-01 | completed |
+| 8 | Yumbo Bar & Sauna | Birmingham | BHM-SAU-01 | completed |
+| 8 | Acqua Sauna Blackpool | Blackpool | BPL-SAU-01 | fallback-kept |
+| 8 | Cosmos Club Sauna | Bologna | BLQ-SAU-COSMOS-01 | fallback-kept |
+| 8 | Steam Sauna | Bologna | BLQ-SAU-STEAM-01 | completed |
+| 9 | Buster | Bordeaux | BOD-BAR-01 | listing-review |
+| 9 | Crunch Sauna | Bordeaux | BOD-SAU-01 | completed |
+| 9 | Sauna The Saint | Bordeaux | BOD-SAU-02 | completed |
+| 9 | Club Sauna Expert | Bratislava | SVK-BRA-SAU-EXPERT-01 | completed |
+| 9 | The Brighton Sauna | Brighton | BTN-SAU-01 | completed |
+| 10 | Sauna Las Palmas | Brno | BRN-SAU-LASPALMAS-01 | completed |
+| 10 | Macho Sauna | Brussels | BEL-BRU-SAU-01 | fallback-kept |
+| 10 | Sauna Oasis | Brussels | BEL-BRU-SAU-02 | completed |
+| 10 | Sauna Soho Bucharest | Bucharest | ROU-BUH-SAU-01 | fallback-kept |
+| 10 | Magnum Sauna | Budapest | BUD-SAU-01 | completed |
+| 11 | Szauna69 | Budapest | BUD-SAU-02 | completed |
+| 11 | Nero's Sauna Bury | Bury | BRY-SAU-01 | fallback-kept |
+| 11 | Clubsauna Outside | Chemnitz | CHE-SAU-01 | completed |
+| 11 | Sauna Soho Cluj | Cluj-Napoca | ROU-CLJ-SAU-SOHO-01 | fallback-kept |
+| 11 | Amigo Sauna | Copenhagen | CPH-SAU-01 | completed |
+| 12 | Body Bio | Copenhagen | CPH-CRU-02 | listing-review |
+| 12 | Paradise Dresden | Dresden | DRS-SAU-01 | completed |
+| 12 | Sauna Tibet | Eindhoven | EIN-SAU-01 | completed |
+| 12 | Pluto Sauna | Essen | ESS-SAU-01 | completed |
+| 12 | Florence Baths | Florence | FLR-SAU-BATHS-01 | fallback-kept |
+| 13 | Metropol Sauna | Frankfurt | FFM-SAU-03 | fallback-kept |
 | 3 | Sauna Amsterdam | Frankfurt | FFM-SAU-02 | completed |
-| 13 | RundO Saunaclub | Freiburg im Breisgau | FRE-SAU-01 | pending |
-| 13 | Spades4Gents | Ghent | GNT-SAU-01 | pending |
-| 13 | The Pipeworks Glasgow | Glasgow | GLA-SAU-01 | pending |
+| 13 | RundO Saunaclub | Freiburg im Breisgau | FRE-SAU-01 | completed |
+| 13 | Spades4Gents | Ghent | GNT-SAU-01 | completed |
+| 13 | The Pipeworks Glasgow | Glasgow | GLA-SAU-01 | completed |
 | 3 | Apollo Sauna | Hamburg | HAM-SAU-02 | completed |
-| 13 | Men's Heaven Sauna | Hamburg | HAM-SAU-03 | pending |
-| 14 | Vulkan Sauna | Hannover | HAN-SAU-01 | pending |
-| 14 | Keltainen Ruusu (Yellow Rose) | Helsinki | HEL-SHP-01 | pending |
-| 14 | Sauna Con Hombres | Helsinki | HEL-SAU-01 | pending |
-| 14 | US Video Mega Sex Store | Helsinki | HEL-CIN-01 | pending |
-| 14 | Aquarius Sauna | Istanbul | TUR-IST-SAU-AQUARIUS-01 | pending |
-| 15 | Aquarium Sauna | Karlsruhe | KAR-SAU-01 | pending |
-| 15 | Cruise Sauna Club Kassel | Kassel | KAS-SAU-01 | pending |
-| 15 | Blue Sauna Gay / Sauna Tropicana | Katowice | KTW-SAU-BLUE-01 | pending |
+| 13 | Men's Heaven Sauna | Hamburg | HAM-SAU-03 | listing-review |
+| 14 | Vulkan Sauna | Hannover | HAN-SAU-01 | completed |
+| 14 | Keltainen Ruusu (Yellow Rose) | Helsinki | HEL-SHP-01 | listing-review |
+| 14 | Sauna Con Hombres | Helsinki | HEL-SAU-01 | completed |
+| 14 | US Video Mega Sex Store | Helsinki | HEL-CIN-01 | listing-review |
+| 14 | Aquarius Sauna | Istanbul | TUR-IST-SAU-AQUARIUS-01 | completed |
+| 15 | Aquarium Sauna | Karlsruhe | KAR-SAU-01 | completed |
+| 15 | Cruise Sauna Club Kassel | Kassel | KAS-SAU-01 | completed |
+| 15 | Blue Sauna Gay / Sauna Tropicana | Katowice | KTW-SAU-BLUE-01 | completed |
 | — | Steam Complex (temporarily relocating) | Leeds | LDS-SAU-02 | listing-review |
-| 15 | The Pipeworks Leeds | Leeds | LDS-SAU-01 | pending |
-| 15 | Splash Spa Leicester | Leicester | LEI-SAU-02 | pending |
-| 16 | Stargayte Clubsauna | Leipzig | LEI-SAU-01 | pending |
-| 16 | Aquari'hom | Liège | LIE-SAU-01 | pending |
-| 16 | Sauna Les Bains | Lille | LIL-SAU-01 | pending |
-| 16 | Sauna Soho | Lille | LIL-SAU-02 | pending |
-| 16 | SaunApolo 56 | Lisbon | LIS-SAU-02 | pending |
-| 17 | Trombeta Bath | Lisbon | LIS-SAU-01 | pending |
-| 17 | District35 | Ljubljana | SVN-LJU-SAU-01 | pending |
-| 17 | Gymnasivm Sauna | Ljubljana | SVN-LJU-SAU-02 | pending |
-| 17 | Covent Garden Health Spa | London | LON-SAU-05 | pending |
-| 17 | Pleasuredrome | London | LON-SAU-02 | pending |
-| 18 | Sailors Sauna | London | LON-SAU-03 | pending |
-| 18 | Sweatbox Soho | London | LON-SAU-01 | pending |
-| 18 | The Locker Room Sauna | London | LON-SAU-04 | pending |
-| 18 | Atlantis Sauna & Wellness Resort | Ludwigshafen am Rhein | LUD-SAU-01 | pending |
-| 18 | DoubleSide | Lyon | LYO-SAU-01 | pending |
-| 19 | Oasis Club Sauna | Lyon | LYO-SAU-02 | pending |
-| 19 | S & B (Shower & Bar) | Madrid | MAD-CRU-04 | pending |
-| 19 | Sauna Beach | Madrid | MAD-SAU-01 | pending |
-| 19 | Sauna Center | Madrid | MAD-SAU-02 | pending |
-| 19 | Sauna Lavapiés | Madrid | MAD-SAU-03 | pending |
-| 20 | Sauna Octopus | Madrid | MAD-SAU-04 | pending |
-| 20 | Sauna Paraíso | Madrid | MAD-SAU-05 | pending |
-| 20 | Sauna Puerta de Toledo | Madrid | MAD-SAU-06 | pending |
-| 20 | Basement Complex Manchester | Manchester | MAN-SAU-02 | pending |
-| 20 | Galileo City Sauna | Mannheim | MAN-SAU-01 | pending |
-| 21 | ClubZeus Mansfield | Mansfield | MFD-SAU-01 | pending |
-| 21 | Les Thermes | Marseille | MRS-SAU-01 | pending |
-| 21 | Sauna Salvator | Marseille | MRS-SAU-02 | pending |
-| 21 | Maspalomas Pride by Freedom | Maspalomas | MAS-PRD-01 | pending |
-| 21 | Fenix Sauna | Milan | MIL-SAU-02 | pending |
-| 22 | Hot Dog Club Milano | Milan | MIL-CRU-03 | pending |
-| 22 | Metro Sauna Milano | Milan | MIL-SAU-01 | pending |
-| 22 | Royal Hammam | Milan | MIL-SAU-03 | pending |
-| 22 | TBlue Sauna | Milan | MIL-SAU-04 | pending |
-| 22 | Koncept Sauna | Montpellier | MPL-SAU-01 | pending |
-| 23 | One Sauna | Montpellier | MPL-SAU-02 | pending |
-| 23 | Schwabinger Men Sauna | Munich | MUC-SAU-02 | pending |
-| 23 | Die Insel Sauna | Münster | MUN-SAU-01 | pending |
-| 23 | Sauna Blu Angels | Naples | NAP-SAU-BLUANGELS-01 | pending |
-| 23 | Les Bains Douches | Nice | NIC-SAU-01 | pending |
-| 24 | Achilleus Men's Spa & Sauna | Nuremberg | NUE-SAU-ACH-01 | pending |
-| 24 | Metrò Padova Sauna Club | Padua | PAD-SAU-01 | pending |
-| 24 | Sauna Spartacus | Palma de Mallorca | PMI-SAU-01 | pending |
-| 24 | Euro Men's Club | Paris | PAR-SAU-01 | pending |
-| 24 | IDM Sauna | Paris | PAR-SAU-02 | pending |
-| 25 | Key West Sauna | Paris | PAR-SAU-03 | pending |
-| 25 | Le Riad | Paris | PAR-SAU-05 | pending |
-| 25 | Les Bains d'Odessa | Paris | PAR-SAU-04 | pending |
-| 25 | One Way | Paris | PAR-CRU-01 | pending |
-| 25 | Sun City | Paris | PAR-SAU-06 | pending |
-| 26 | Maspalomas Fetish Pride | Playa del Inglés | MAS-PAR-02 | pending |
-| 26 | Sauna Corpus | Playa del Inglés | MAS-SAU-01 | pending |
-| 26 | Sauna Enjoy | Playa del Inglés | MAS-SAU-02 | pending |
-| 26 | Sparkles Show Bar | Playa del Inglés | MAS-BAR-07 | pending |
-| 26 | Spartacus | Playa del Inglés | MAS-BAR-08 | pending |
-| 27 | Sauna Camões | Porto | OPO-SAU-CAMOES-01 | pending |
-| 27 | Sauna Thermas 205 | Porto | OPO-SAU-THERMAS205-01 | pending |
-| 27 | Amigo Sauna Club | Poznań | POZ-SAU-01 | pending |
-| 27 | HaH Club | Poznań | POZ-PAR-01 | pending |
-| 27 | Sauna Babylonia | Prague | PRG-SAU-01 | pending |
+| 15 | The Pipeworks Leeds | Leeds | LDS-SAU-01 | completed |
+| 15 | Splash Spa Leicester | Leicester | LEI-SAU-02 | fallback-kept |
+| 16 | Stargayte Clubsauna | Leipzig | LEI-SAU-01 | completed |
+| 16 | Aquari'hom | Liège | LIE-SAU-01 | completed |
+| 16 | Sauna Les Bains | Lille | LIL-SAU-01 | completed |
+| 16 | Sauna Soho | Lille | LIL-SAU-02 | completed |
+| 16 | SaunApolo 56 | Lisbon | LIS-SAU-02 | completed |
+| 17 | Trombeta Bath | Lisbon | LIS-SAU-01 | fallback-kept |
+| 17 | District35 | Ljubljana | SVN-LJU-SAU-01 | completed |
+| 17 | Gymnasivm Sauna | Ljubljana | SVN-LJU-SAU-02 | completed |
+| 17 | Covent Garden Health Spa | London | LON-SAU-05 | fallback-kept |
+| 17 | Pleasuredrome | London | LON-SAU-02 | completed |
+| 18 | Sailors Sauna | London | LON-SAU-03 | completed |
+| 18 | Sweatbox Soho | London | LON-SAU-01 | completed |
+| 18 | The Locker Room Sauna | London | LON-SAU-04 | fallback-kept |
+| 18 | Atlantis Sauna & Wellness Resort | Ludwigshafen am Rhein | LUD-SAU-01 | completed |
+| 18 | DoubleSide | Lyon | LYO-SAU-01 | fallback-kept |
+| 19 | Oasis Club Sauna | Lyon | LYO-SAU-02 | completed |
+| 19 | S & B (Shower & Bar) | Madrid | MAD-CRU-04 | listing-review |
+| 19 | Sauna Beach | Madrid | MAD-SAU-01 | completed |
+| 19 | Sauna Center | Madrid | MAD-SAU-02 | completed |
+| 19 | Sauna Lavapiés | Madrid | MAD-SAU-03 | fallback-kept |
+| 20 | Sauna Octopus | Madrid | MAD-SAU-04 | completed |
+| 20 | Sauna Paraíso | Madrid | MAD-SAU-05 | completed |
+| 20 | Sauna Puerta de Toledo | Madrid | MAD-SAU-06 | completed |
+| 20 | Basement Complex Manchester | Manchester | MAN-SAU-02 | completed |
+| 20 | Galileo City Sauna | Mannheim | MAN-SAU-01 | completed |
+| 21 | ClubZeus Mansfield | Mansfield | MFD-SAU-01 | fallback-kept |
+| 21 | Les Thermes | Marseille | MRS-SAU-01 | fallback-kept |
+| 21 | Sauna Salvator | Marseille | MRS-SAU-02 | fallback-kept |
+| 21 | Maspalomas Pride by Freedom | Maspalomas | MAS-PRD-01 | listing-review |
+| 21 | Fenix Sauna | Milan | MIL-SAU-02 | completed |
+| 22 | Hot Dog Club Milano | Milan | MIL-CRU-03 | listing-review |
+| 22 | Metro Sauna Milano | Milan | MIL-SAU-01 | completed |
+| 22 | Royal Hammam | Milan | MIL-SAU-03 | completed |
+| 22 | TBlue Sauna | Milan | MIL-SAU-04 | completed |
+| 22 | Koncept Sauna | Montpellier | MPL-SAU-01 | completed |
+| 23 | One Sauna | Montpellier | MPL-SAU-02 | fallback-kept |
+| 23 | Schwabinger Men Sauna | Munich | MUC-SAU-02 | completed |
+| 23 | Die Insel Sauna | Münster | MUN-SAU-01 | fallback-kept |
+| 23 | Sauna Blu Angels | Naples | NAP-SAU-BLUANGELS-01 | completed |
+| 23 | Les Bains Douches | Nice | NIC-SAU-01 | fallback-kept |
+| 24 | Achilleus Men's Spa & Sauna | Nuremberg | NUE-SAU-ACH-01 | completed |
+| 24 | Metrò Padova Sauna Club | Padua | PAD-SAU-01 | completed |
+| 24 | Sauna Spartacus | Palma de Mallorca | PMI-SAU-01 | completed |
+| 24 | Euro Men's Club | Paris | PAR-SAU-01 | completed |
+| 24 | IDM Sauna | Paris | PAR-SAU-02 | completed |
+| 25 | Key West Sauna | Paris | PAR-SAU-03 | fallback-kept |
+| 25 | Le Riad | Paris | PAR-SAU-05 | completed |
+| 25 | Les Bains d'Odessa | Paris | PAR-SAU-04 | completed |
+| 25 | One Way | Paris | PAR-CRU-01 | listing-review |
+| 25 | Sun City | Paris | PAR-SAU-06 | completed |
+| 26 | Maspalomas Fetish Pride | Playa del Inglés | MAS-PAR-02 | listing-review |
+| 26 | Sauna Corpus | Playa del Inglés | MAS-SAU-01 | completed |
+| 26 | Sauna Enjoy | Playa del Inglés | MAS-SAU-02 | completed |
+| 26 | Sparkles Show Bar | Playa del Inglés | MAS-BAR-07 | listing-review |
+| 26 | Spartacus | Playa del Inglés | MAS-BAR-08 | listing-review |
+| 27 | Sauna Camões | Porto | OPO-SAU-CAMOES-01 | fallback-kept |
+| 27 | Sauna Thermas 205 | Porto | OPO-SAU-THERMAS205-01 | fallback-kept |
+| 27 | Amigo Sauna Club | Poznań | POZ-SAU-01 | completed |
+| 27 | HaH Club | Poznań | POZ-PAR-01 | listing-review |
+| 27 | Sauna Babylonia | Prague | PRG-SAU-01 | listing-review |
 | 28 | Sauna Bonbon | Prague | PRG-SAU-BONBON-01 | pending |
 | 28 | Sauna David | Prague | PRG-SAU-02 | pending |
 | 28 | Up&Down Bar Prague | Prague | PRG-PAR-02 | pending |
