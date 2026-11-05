@@ -1,6 +1,6 @@
 // --- Application State ---
 const APP_VERSION = "v1.5.13";
-const APP_DATE = "3 November 2026";
+const APP_DATE = "5 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
 let activeFilters = []; // v0.66 Multi-select Array
