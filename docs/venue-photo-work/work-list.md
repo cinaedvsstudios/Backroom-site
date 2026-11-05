@@ -184,21 +184,21 @@ Updated: 5 November 2026. Five venues per batch. Preserve all existing venue pho
 | 31 | House of Q | Stockholm | STO-BAR-02 | listing-review |
 | 31 | Le Complex – Drak Sauna & L’Antracte | Strasbourg | SXB-SAU-01 | completed |
 | 31 | Oxydo Sauna | Strasbourg | SXB-SAU-02 | completed |
-| 32 | Sauna Equateur | Strasbourg | SXB-SAU-03 | pending |
-| 32 | Pour Lui Gay Sauna | Stuttgart | STR-SAU-02 | pending |
-| 32 | VIVA Sauna | Stuttgart | STR-SAU-01 | pending |
-| 32 | Sauna Club 69 | Tallinn | TLL-SAU-01 | pending |
-| 32 | Tallinn Bearty | Tallinn | TLL-PAR-01 | pending |
-| 33 | Horoom at Bassiani | Tbilisi | GEO-TBS-PAR-01 | pending |
-| 33 | Hamam Sauna Tel Aviv | Tel Aviv | ISR-TLV-SAU-03 | pending |
-| 33 | Sauna Club Tel Aviv | Tel Aviv | ISR-TLV-SAU-02 | pending |
-| 33 | Sauna Paradise | Tel Aviv | ISR-TLV-SAU-01 | pending |
-| 33 | AquaSplash Sauna | Thessaloniki | GRC-THS-SAU-01 | pending |
-| 34 | Apolo Sauna | Torremolinos | TOR-SAU-01 | pending |
-| 34 | 011 Sauna Club | Turin | TRN-SAU-011-01 | pending |
-| 34 | Garage Club Torino | Turin | TRN-SAU-GARAGE-01 | pending |
-| 34 | Picca | Valencia | VLC-CLB-02 | pending |
-| 34 | Sauna Olímpic | Valencia | VLC-SAU-01 | pending |
+| 32 | Sauna Equateur | Strasbourg | SXB-SAU-03 | completed |
+| 32 | Pour Lui Gay Sauna | Stuttgart | STR-SAU-02 | completed |
+| 32 | VIVA Sauna | Stuttgart | STR-SAU-01 | completed |
+| 32 | Sauna Club 69 | Tallinn | TLL-SAU-01 | fallback-kept |
+| 32 | Tallinn Bearty | Tallinn | TLL-PAR-01 | listing-review |
+| 33 | Horoom at Bassiani | Tbilisi | GEO-TBS-PAR-01 | listing-review |
+| 33 | Hamam Sauna Tel Aviv | Tel Aviv | ISR-TLV-SAU-03 | fallback-kept |
+| 33 | Sauna Club Tel Aviv | Tel Aviv | ISR-TLV-SAU-02 | listing-review |
+| 33 | Sauna Paradise | Tel Aviv | ISR-TLV-SAU-01 | completed |
+| 33 | AquaSplash Sauna | Thessaloniki | GRC-THS-SAU-01 | fallback-kept |
+| 34 | Apolo Sauna | Torremolinos | TOR-SAU-01 | fallback-kept |
+| 34 | 011 Sauna Club | Turin | TRN-SAU-011-01 | completed |
+| 34 | Garage Club Torino | Turin | TRN-SAU-GARAGE-01 | completed |
+| 34 | Picca | Valencia | VLC-CLB-02 | listing-review |
+| 34 | Sauna Olímpic | Valencia | VLC-SAU-01 | completed |
 | 35 | The Muse | Valencia | VLC-BAR-01 | pending |
 | 35 | Metrò Venezia Club | Venice (Mestre) | VEN-SAU-METRO-01 | pending |
 | 35 | Apollo City Sauna | Vienna | VIE-SAU-03 | pending |
