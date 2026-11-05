@@ -1,4 +1,4 @@
-// Backroom Events calendar v1.10 — shareable day routes, location pill, filters and event-card rules.
+// Backroom Events calendar v1.5.20 — Gran Canaria event filtering now shares the venue location aliases.
 (function () {
     'use strict';
 
@@ -343,6 +343,16 @@
         return CITY_NAME_ALIASES[normalized] || normalized;
     }
 
+    // The main directory is the single source of truth for city aliases,
+    // including every locality grouped into Maspalomas, Spain. Do not duplicate
+    // that locality list here: it had drifted out of sync with Events.
+    function calendarCityKey(city, country = '', record = null) {
+        if (typeof window.normalizeCityName === 'function') {
+            return window.normalizeCityName(city, country, record);
+        }
+        return normalizeLocation(city);
+    }
+
     function uniqueLocationValues(values) {
         const byKey = new Map();
         (values || []).forEach(value => {
@@ -364,9 +374,12 @@
         const addRecord = record => {
             const country = String(record?.Country || '').trim();
             String(record?.City || '').split(',').map(city => city.trim()).filter(Boolean).forEach(city => {
-                const key = `${normalizeLocation(city)}::${normalizeLocation(country)}`;
-                if (!key || records.has(key)) return;
-                records.set(key, { city, country });
+                const cityKey = calendarCityKey(city, country, record);
+                const countryKey = normalizeLocation(country);
+                const key = `${cityKey}::${countryKey}`;
+                if (!cityKey || !countryKey || records.has(key)) return;
+                const displayCity = countryKey === 'spain' && cityKey === 'maspalomas' ? 'Maspalomas' : city;
+                records.set(key, { city: displayCity, country });
             });
         };
 
@@ -436,14 +449,13 @@
         const shared = readSharedLocation();
 
         if (shared.scope === 'city') {
-            const city = findDisplayLocation(shared.city, cityOptions()) || shared.city;
-            let country = findDisplayLocation(shared.country, countryOptions()) || shared.country;
-
-            if (!country) {
-                const matches = cityOptionRecords().filter(option => normalizeLocation(option.city) === normalizeLocation(city));
-                if (matches.length === 1) country = matches[0].country;
-            }
-
+            const savedCityKey = calendarCityKey(shared.city, shared.country);
+            const match = cityOptionRecords().find(option =>
+                calendarCityKey(option.city, option.country) === savedCityKey
+                && (!shared.country || normalizeLocation(option.country) === normalizeLocation(shared.country))
+            );
+            const city = match?.city || shared.city;
+            const country = match?.country || findDisplayLocation(shared.country, countryOptions()) || shared.country;
             state.location = { scope: 'city', city, country };
             return;
         }
@@ -491,7 +503,7 @@
 
         if (city && country) {
             const match = cityOptionRecords().find(option => (
-                normalizeLocation(option.city) === normalizeLocation(city)
+                calendarCityKey(option.city, option.country) === calendarCityKey(city, country)
                 && normalizeLocation(option.country) === normalizeLocation(country)
             ));
             if (match) location = { scope: 'city', city: match.city, country: match.country };
@@ -627,9 +639,13 @@
         }
 
         if (location.scope === 'city') {
-            const cityMatches = cityTokensFor(event).some(city => normalizeLocation(city) === normalizeLocation(location.city));
+            const country = countryFor(event);
+            const venueOrEvent = venueFor(event) || event;
+            const cityMatches = cityTokensFor(event).some(city =>
+                calendarCityKey(city, country, venueOrEvent) === calendarCityKey(location.city, location.country)
+            );
             const countryMatches = !location.country
-                || normalizeLocation(countryFor(event)) === normalizeLocation(location.country);
+                || normalizeLocation(country) === normalizeLocation(location.country);
             return cityMatches && countryMatches;
         }
 
@@ -1048,8 +1064,13 @@ function ensureSelectedDate() {
         const applyInlineLocation=()=>{
             const value=String(inlineInput?.value||'').trim();
             if(!value) {setSharedLocationFromSelection('all');render();return;}
-            const location=cityOptionRecords().find(o=>normalizeLocation(o.city+', '+o.country)===normalizeLocation(value))
-              || cityOptionRecords().find(o=>normalizeLocation(o.city)===normalizeLocation(value));
+            const parts = value.split(',').map(part => part.trim()).filter(Boolean);
+            const searchCity = parts.length > 1 ? parts.slice(0, -1).join(', ') : value;
+            const searchCountry = parts.length > 1 ? parts[parts.length - 1] : '';
+            const location=cityOptionRecords().find(o =>
+                calendarCityKey(o.city, o.country) === calendarCityKey(searchCity, searchCountry)
+                && (!searchCountry || normalizeLocation(o.country) === normalizeLocation(searchCountry))
+            );
             const country=countryOptions().find(o=>normalizeLocation(o)===normalizeLocation(value));
             if(location) setSharedLocationFromSelection('city::'+encodeURIComponent(location.city)+'::'+encodeURIComponent(location.country));
             else if(country) setSharedLocationFromSelection('country::'+country);
