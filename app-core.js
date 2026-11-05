@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.12";
+const APP_VERSION = "v1.5.13";
 const APP_DATE = "3 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -2841,11 +2841,11 @@ function startTutorial(type) {
             { target: '#search-input', text: 'Search for venues by name, city, or specific tags.' },
             { target: '#btn-location', text: 'Set your location and see venues closest to you.' },
             { target: '#filter-chips', text: 'Use dynamic filter pills to sort results.' },
-            { target: '#btn-favorites', text: 'View your locally saved Favourite venues.' },
+            { target: '#btn-favorites', text: 'Open My Venues to see the venues you saved.' },
             { target: '#btn-shortlists-menu', text: 'Create and view named venue collections.' },
             { target: '.card', text: 'Click any venue card to select it.' },
             { target: '.card.selected', text: 'Double tap a selected card to open its full profile.' },
-            { target: '#modal-star', text: 'Use these buttons to favourite, shortlist, report, or share.' },
+            { target: '#modal-star', text: 'Use these buttons to save a venue to My Venues, shortlist, report, or share.' },
             { target: '.ratings-table', text: 'Check out detailed venue ratings.' },
             { target: '.social-bar', text: 'Quickly access the venue\'s social media and websites.' },
             { target: '.full-width-about', text: 'Read detailed descriptions and opening hours.' },
@@ -3261,7 +3261,7 @@ function setupEventListeners() {
     });
     
     addEvt('btn-clear-data', 'click', () => {
-        if(confirm("Delete all favorites, shortlists, events, and settings? This cannot be undone.")) {
+        if(confirm("Delete all saved venues, shortlists, events, and settings? This cannot be undone.")) {
             localStorage.clear();
             window.location.reload();
         }
@@ -4040,11 +4040,11 @@ function toggleFavorite(id, btnElement) {
     if(index > -1) {
         userFavorites.splice(index, 1);
         btnElement?.classList.remove('active-star');
-        showToast("Removed from Favourites");
+        showToast("Removed from My Venues");
     } else {
         userFavorites.push(id);
         btnElement?.classList.add('active-star');
-        showToast("Added to Favourites ⚜️");
+        showToast("Saved to My Venues ⚜️");
     }
     saveCurrentToBundle();
     if(window.location.hash === '#favorites') renderFavoritesView();
@@ -4083,10 +4083,14 @@ function renderFavoritesView() {
     resetBackButton('← Back to Results', 'results');
     const cTitle = document.getElementById('context-title');
     const cDesc = document.getElementById('context-desc');
-    if(cTitle) cTitle.innerHTML = "⚜️ MY FAVOURITES";
-    if(cDesc) cDesc.innerText = "Venues you have starred locally.";
+    if(cTitle) cTitle.innerHTML = "⚜️ MY VENUES";
+    if(cDesc) cDesc.innerText = "Venues you have saved locally.";
     
     const favVenues = (venues||[]).filter(v => userFavorites.includes(v.Venue_ID));
+    if (favVenues.length === 0) {
+        if (resultsContainer) resultsContainer.innerHTML = '<p class="shortlist-empty-state">No venues saved yet.</p>';
+        return;
+    }
     renderListings(favVenues, true);
 }
 
@@ -4552,7 +4556,7 @@ function openProfileMenu() {
             else if(btnStack) btnStack.appendChild(mobileHi);
             else mobileFunctions.prepend(mobileHi);
         }
-        mobileHi.innerHTML = `<h4>Hi ${dispName},</h4><p>In this screen you can edit your profile. Your favorites, shortlists, events, travel pins and profile choices are stored locally in this browser. Export your data if you want a backup.</p>`;
+        mobileHi.innerHTML = `<h4>Hi ${dispName},</h4><p>In this screen you can edit your profile. Your saved venues, shortlists, events, travel pins and profile choices are stored locally in this browser. Export your data if you want a backup.</p>`;
     }
 
     const profileWipeToast = document.getElementById('profile-wipe-toast');

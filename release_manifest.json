@@ -1,6 +1,6 @@
 {
-  "version": "v1.5.12",
-  "date": "2026-11-03",
+  "version": "v1.5.13",
+  "date": "2026-11-05",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
     "index.html",
@@ -78,7 +78,8 @@
     "Added separate Top and Bottom app terms; assigned existing Profile_images illustrations for Top, Bottom, Side, BBC, BWC and FTM (same image as Trans Man)",
     "Show root europe.jpg artwork on Travel screen until Find options successfully displays a journey",
     "Add a compact ★ Featured filter in Venues and Search Results and within the existing two-row Events filter strip; match the exact picks.json records used for Featured badges and retain date, location, tag, and sharing behaviour.",
-    "Add the same Backroom Featured artwork to the full event detail popup and Upcoming Events rows within a venue; make each venue event date box a keyboard-accessible button opening the event detail and returning to the venue on close."
+    "Add the same Backroom Featured artwork to the full event detail popup and Upcoming Events rows within a venue; make each venue event date box a keyboard-accessible button opening the event detail and returning to the venue on close.",
+    "Rename the user-facing Favourites section to My Venues across navigation, headings, help, save/remove messages, settings and empty states; show My Shortlists in the top navigation. Keep the #favorites route, favorites storage/export keys and Terminology & Dress Codes data unchanged."
   ],
   "validation": {
     "javascript_syntax": "checked before publication",
