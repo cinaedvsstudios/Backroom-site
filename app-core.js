@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.17";
+const APP_VERSION = "v1.5.18";
 const APP_DATE = "5 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -2432,7 +2432,8 @@ function renderSharedListView(name, emoji, entries) {
     sharedHeader.innerHTML = `
         <h1 style="font-size:3rem; margin-bottom:10px; color:#fff;">${emoji} ${name}</h1>
         <p style="color:var(--text-light); margin-bottom:8px;">Someone shared this Backroom list with you!</p>
-        <p style="color:var(--primary-blue); margin-bottom:20px;">${countParts.join(' · ') || 'Shared shortlist'}</p>
+        <p style="color:var(--primary-blue); margin-bottom:12px;">${countParts.join(' · ') || 'Shared shortlist'}</p>
+        <p class="meta-text" role="note" style="max-width:550px; margin:0 auto 20px; font-size:0.95rem; line-height:1.5; color:var(--text-light);">Something missing? Make sure your friend has sent you the most recent link!</p>
         <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
             <button id="btn-save-shared" class="btn primary-btn pill-btn" style="padding:10px 20px;">💾 Save List to Profile</button>
             <button id="btn-open-site" class="btn secondary-btn pill-btn" style="padding:10px 20px;">🌍 Open Main Site</button>
