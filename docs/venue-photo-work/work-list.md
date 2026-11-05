@@ -40,11 +40,11 @@ Updated: 5 November 2026. Five venues per batch. Preserve all existing venue pho
 | — | WunderBar | Hamburg | HAM-BAR-12 | existing-photo-kept |
 | — | NY.Club | Munich | MUC-PAR-01 | existing-photo-kept |
 | — | Sauna Deutsche Eiche | Munich | MUC-SAU-01 | existing-photo-kept |
-| 4 | Ipanema Thermas | Alicante | ALC-SAU-IPANEMA-01 | pending |
-| 4 | Sauna Basaky | Alicante | ALC-SAU-BASAKY-01 | pending |
-| 4 | Sauna Steam | Alicante | ALC-SAU-STEAM-01 | pending |
-| 4 | Sauna Nieuwezijds | Amsterdam | AMS-SAU-01 | pending |
-| 4 | Le 139 | Ans | LIE-SAU-02 | pending |
+| 4 | Ipanema Thermas | Alicante | ALC-SAU-IPANEMA-01 | completed |
+| 4 | Sauna Basaky | Alicante | ALC-SAU-BASAKY-01 | completed |
+| 4 | Sauna Steam | Alicante | ALC-SAU-STEAM-01 | completed |
+| 4 | Sauna Nieuwezijds | Amsterdam | AMS-SAU-01 | completed |
+| 4 | Le 139 | Ans | LIE-SAU-02 | fallback-kept |
 | 5 | Sauna 't Herenhuis | Antwerp | BEL-ANT-SAU-01 | pending |
 | 5 | Alexander Sauna | Athens | ATH-SAU-01 | pending |
 | 5 | Flex Sauna | Athens | ATH-SAU-02 | pending |
