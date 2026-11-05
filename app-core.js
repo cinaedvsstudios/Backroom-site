@@ -759,6 +759,10 @@ function getCityTokens(venue) {
 // English spellings and common ue/oe/ae spellings resolve to the same city key.
 // Keep display labels and saved values untouched; this is intentionally a low-risk matcher.
 const CITY_NAME_ALIASES = {
+    // Gran Canaria destination: Playa del Inglés is part of the Maspalomas search area.
+    playadelingles: 'maspalomas',
+    maspalomas: 'maspalomas',
+
     // English / German exonyms
     koln: 'cologne',
     koeln: 'cologne',
@@ -1156,7 +1160,8 @@ function getSavedLocationScope(location = getSavedLocation()) {
         return { scope: 'all', city: '', country: '', label: '' };
     }
 
-    const city = String(location.city || '').trim();
+    const storedCity = String(location.city || '').trim();
+    const city = normalizeCityName(storedCity) === 'maspalomas' ? 'Maspalomas' : storedCity;
     const country = String(location.country || '').trim();
 
     if (city && city.toLowerCase() !== 'my location') {
