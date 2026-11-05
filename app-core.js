@@ -758,11 +758,32 @@ function getCityTokens(venue) {
 // German-city lookup for location comparisons only. It lets GPS/native spellings,
 // English spellings and common ue/oe/ae spellings resolve to the same city key.
 // Keep display labels and saved values untouched; this is intentionally a low-risk matcher.
-const CITY_NAME_ALIASES = {
-    // Gran Canaria destination: Playa del Inglés is part of the Maspalomas search area.
-    playadelingles: 'maspalomas',
-    maspalomas: 'maspalomas',
+// In location searches, all Gran Canaria municipalities and common resort
+// localities form one destination: Maspalomas, Spain. Venue/event City and
+// Address fields are deliberately left unchanged.
+const GRAN_CANARIA_LOCALITIES = new Set([
+    'Gran Canaria', 'Maspalomas', 'Maspalomas / Playa del Inglés',
+    'Playa del Inglés', 'Playa del Inglés / Maspalomas',
+    'Las Palmas', 'Las Palmas de Gran Canaria', 'Las Palmas GC',
+    // All 21 municipalities on Gran Canaria.
+    'Agaete', 'Agüimes', 'Artenara', 'Arucas', 'Firgas', 'Gáldar',
+    'Ingenio', 'La Aldea de San Nicolás', 'Mogán', 'Moya',
+    'San Bartolomé de Tirajana', 'Santa Brígida', 'Santa Lucía de Tirajana',
+    'Santa María de Guía', 'Santa María de Guía de Gran Canaria',
+    'Tejeda', 'Telde', 'Teror', 'Valsequillo', 'Valsequillo de Gran Canaria',
+    'Valleseco', 'Vega de San Mateo',
+    // Named resort areas and districts that maps commonly return.
+    'Meloneras', 'San Agustín', 'Sonnenland', 'El Tablero',
+    'San Fernando de Maspalomas', 'Bahía Feliz', 'Playa del Águila',
+    'Las Burras', 'Pasito Blanco', 'Arguineguín', 'Playa de Arguineguín',
+    'Puerto Rico', 'Puerto Rico de Gran Canaria', 'Puerto de Mogán',
+    'Playa de Mogán', 'Amadores', 'Patalavaca', 'Anfi del Mar',
+    'Taurito', 'Tauro', 'Vecindario', 'Arinaga', 'Las Canteras',
+    'Playa de Las Canteras', 'Puerto de las Nieves', 'Puerto de la Cruz de Mogán',
+    'Salobre', 'Campo Internacional', 'Playa de Maspalomas'
+].map(normalizeLocationName));
 
+const CITY_NAME_ALIASES = {
     // English / German exonyms
     koln: 'cologne',
     koeln: 'cologne',
@@ -822,8 +843,23 @@ function normalizeLocationName(value) {
         .replace(/[^a-z0-9]+/g, '');
 }
 
-function normalizeCityName(value) {
+function isGranCanariaCoordinates(record) {
+    if (!record || normalizeCountryName(record.Country || record.Event_Country || '') !== 'spain') return false;
+    const lat = Number.parseFloat(record.Latitude ?? record.Event_Latitude ?? record.Venue_Latitude);
+    const lon = Number.parseFloat(record.Longitude ?? record.Event_Longitude ?? record.Venue_Longitude);
+    // Gran Canaria island bounding box; excludes Tenerife, Fuerteventura and Lanzarote.
+    return Number.isFinite(lat) && Number.isFinite(lon)
+        && lat >= 27.68 && lat <= 28.22 && lon >= -15.90 && lon <= -15.32;
+}
+
+function normalizeCityName(value, country = '', record = null) {
     const normalized = normalizeLocationName(value);
+    // Query names have no country yet; records MUST be in Spain to use island aliases.
+    const isSpainOrQuery = !country || normalizeCountryName(country) === 'spain';
+    if (isSpainOrQuery &&
+        (GRAN_CANARIA_LOCALITIES.has(normalized) || isGranCanariaCoordinates(record))) {
+        return 'maspalomas';
+    }
     return CITY_NAME_ALIASES[normalized] || normalized;
 }
 
@@ -874,15 +910,17 @@ function getLocationDirectory() {
         if (country && countryKey && !countries.has(countryKey)) countries.set(countryKey, country);
 
         getCityTokens(record).forEach(city => {
-            const cityKey = normalizeCityName(city);
+            const cityKey = normalizeCityName(city, country, record);
             if (!cityKey) return;
+            const displayCity = cityKey === 'maspalomas' && countryKey === 'spain'
+                ? 'Maspalomas' : city;
 
             const entries = cities.get(cityKey) || [];
             if (!entries.some(entry =>
-                normalizeCityName(entry.city) === cityKey
+                normalizeCityName(entry.city, entry.country) === cityKey
                 && normalizeCountryName(entry.country) === countryKey
             )) {
-                entries.push({ city, country });
+                entries.push({ city: displayCity, country });
             }
             cities.set(cityKey, entries);
         });
@@ -957,7 +995,7 @@ function resolveLocationInput(value, mapResolution = getMapResolvedLocation(valu
         const cityRequest = parts.slice(0, -1).join(', ');
         const countryRequest = parts.at(-1);
         const canonicalCountry = countries.get(normalizeCountryName(countryRequest));
-        const candidates = cities.get(normalizeCityName(cityRequest)) || [];
+        const candidates = cities.get(normalizeCityName(cityRequest, countryRequest)) || [];
         const match = candidates.find(candidate =>
             normalizeCountryName(candidate.country) === normalizeCountryName(canonicalCountry)
         );
@@ -1035,7 +1073,7 @@ function locationsMatch(left, right) {
     const rightScope = getSavedLocationScope(right);
 
     return leftScope.scope === rightScope.scope
-        && normalizeCityName(leftScope.city) === normalizeCityName(rightScope.city)
+        && normalizeCityName(leftScope.city, leftScope.country) === normalizeCityName(rightScope.city, rightScope.country)
         && normalizeCountryName(leftScope.country) === normalizeCountryName(rightScope.country);
 }
 
@@ -1132,7 +1170,7 @@ function formatEventLocation(event, venue) {
 function venueMatchesCity(venue, cityName) {
     const target = normalizeCityName(cityName);
     if (!target) return true;
-    return getCityTokens(venue).some(city => normalizeCityName(city) === target);
+    return getCityTokens(venue).some(city => normalizeCityName(city, venue?.Country, venue) === target);
 }
 
 function venueMatchesCountry(venue, countryName) {
@@ -1152,7 +1190,7 @@ function getKnownCountryName(value, source = venues) {
 function hasKnownCityName(value, source = venues) {
     const target = normalizeCityName(value);
     if (!target) return false;
-    return (source || []).some(venue => getCityTokens(venue).some(city => normalizeCityName(city) === target));
+    return (source || []).some(venue => getCityTokens(venue).some(city => normalizeCityName(city, venue?.Country, venue) === target));
 }
 
 function getSavedLocationScope(location = getSavedLocation()) {
@@ -1161,8 +1199,8 @@ function getSavedLocationScope(location = getSavedLocation()) {
     }
 
     const storedCity = String(location.city || '').trim();
-    const city = normalizeCityName(storedCity) === 'maspalomas' ? 'Maspalomas' : storedCity;
     const country = String(location.country || '').trim();
+    const city = normalizeCityName(storedCity, country) === 'maspalomas' ? 'Maspalomas' : storedCity;
 
     if (city && city.toLowerCase() !== 'my location') {
         return { scope: 'city', city, country, label: country ? `${city}, ${country}` : city };
@@ -5530,11 +5568,11 @@ else void initApp();
     function getBrowseCountries() {
         const countries = new Map();
         const venueCountriesByCity = new Map();
-        const add = (city, country) => {
+        const add = (city, country, record = null) => {
             city = clean(city);
             country = clean(country);
             if (!isSpecificPlace(city) || !isCountry(country)) return;
-            const cityKey = normalizeCityName(city);
+            const cityKey = normalizeCityName(city, country, record);
             const countryKey = normalizeCountryName(country);
             if (!cityKey || !countryKey) return;
             let group = countries.get(countryKey);
@@ -5542,7 +5580,12 @@ else void initApp();
                 group = { country, cities: new Map() };
                 countries.set(countryKey, group);
             }
-            if (!group.cities.has(cityKey)) group.cities.set(cityKey, { city, country: group.country });
+            if (!group.cities.has(cityKey)) {
+                group.cities.set(cityKey, {
+                    city: cityKey === 'maspalomas' && countryKey === 'spain' ? 'Maspalomas' : city,
+                    country: group.country
+                });
+            }
         };
 
         // Venue-backed pairs take precedence over event spellings, such as Czech Republic/Czechia.
@@ -5550,18 +5593,20 @@ else void initApp();
             if (!isCountry(venue?.Country)) return;
             getCityTokens(venue).forEach(city => {
                 if (!isSpecificPlace(city)) return;
-                const cityKey = normalizeCityName(city);
+                const cityKey = normalizeCityName(city, venue.Country, venue);
                 const trusted = venueCountriesByCity.get(cityKey) || new Set();
                 trusted.add(normalizeCountryName(venue.Country));
                 venueCountriesByCity.set(cityKey, trusted);
-                add(city, venue.Country);
+                add(city, venue.Country, venue);
             });
         });
         (events || []).filter(isSearchableEvent).forEach(event => {
             if (!isCountry(event?.Country)) return;
             getCityTokens(event).forEach(city => {
                 // A broad or conflicting event cannot invent a country for a known venue city.
-                if (!venueCountriesByCity.has(normalizeCityName(city))) add(city, event.Country);
+                if (!venueCountriesByCity.has(normalizeCityName(city, event.Country, event))) {
+                    add(city, event.Country, event);
+                }
             });
         });
         return [...countries.values()]
