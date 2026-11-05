@@ -334,6 +334,18 @@ function getVenueFallbackImage(venue, previousGenericFallback = '') {
     );
 }
 
+function renderVenuePhotoCredit(venue) {
+    const credit = String(venue?.Image_Credit || '').trim();
+    const source = String(venue?.Image_Credit_URL || '').trim();
+    if (!credit || !/^https:\/\//i.test(source)) return '';
+    const license = String(venue?.Image_License || '').trim();
+    const licenseUrl = String(venue?.Image_License_URL || '').trim();
+    const licenseLink = license && /^https:\/\//i.test(licenseUrl)
+        ? ` · <a href="${escapeHTML(licenseUrl)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${escapeHTML(license)}</a>`
+        : '';
+    return `<div class="venue-photo-credit" style="padding:4px 8px;font-size:11px;line-height:1.35;color:#bfc7d0"><a href="${escapeHTML(source)}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">${escapeHTML(credit)}</a>${licenseLink}</div>`;
+}
+
 function getVenueImageSource(venue, preferredFallback = '') {
     // Shops and cinemas deliberately use their fixed directory artwork, even where an
     // older generic placeholder had previously been stored in the listing data.
@@ -4957,6 +4969,7 @@ function renderListings(data, isContextView = false, targetContainer = resultsCo
             <div class="card-image-wrapper">
                 <img class="venue-image centered-image" src="${baseImageSrc}" onerror="this.onerror=null; this.src='${fallbackImage}'" data-fallback-image="${fallbackImage}" data-id="${venue.Venue_ID}" data-index="1" title="Tap to see next photo">
             </div>
+            ${renderVenuePhotoCredit(venue)}
             <div class="card-inner-content">
                 <div class="card-header">
                     <div><h3 class="card-title display-font">${venue.Name || 'Unnamed venue'}</h3><div class="card-meta"><img src="location.png" style="width:14px; vertical-align:middle;"> ${formatVenueLocation(venue)}</div></div>
@@ -5209,6 +5222,7 @@ function openVenueModal(venue) {
                 <div class="modal-image-container">
                     <img id="modal-venue-image" class="venue-image centered-image" src="${modalImageSource}" onerror="this.onerror=null; this.src='${modalImageFallback}'" data-fallback-image="${modalImageFallback}" data-id="${venue.Venue_ID}" data-index="1" title="Tap for next image">
                 </div>
+                ${renderVenuePhotoCredit(venue)}
                 
                 <div class="desktop-stats">
                     <div class="desktop-stats-container">
