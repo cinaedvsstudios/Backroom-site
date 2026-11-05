@@ -199,20 +199,20 @@ Updated: 5 November 2026. Five venues per batch. Preserve all existing venue pho
 | 34 | Garage Club Torino | Turin | TRN-SAU-GARAGE-01 | completed |
 | 34 | Picca | Valencia | VLC-CLB-02 | listing-review |
 | 34 | Sauna Olímpic | Valencia | VLC-SAU-01 | completed |
-| 35 | The Muse | Valencia | VLC-BAR-01 | pending |
-| 35 | Metrò Venezia Club | Venice (Mestre) | VEN-SAU-METRO-01 | pending |
-| 35 | Apollo City Sauna | Vienna | VIE-SAU-03 | pending |
-| 35 | Hard On | Vienna | VIE-CRU-01 | pending |
-| 35 | Kaiserbründl | Vienna | VIE-SAU-01 | pending |
-| 36 | Römersauna | Vienna | VIE-SAU-02 | pending |
-| 36 | Glamour Gay Sauna | Vilnius | VNO-SAU-01 | pending |
-| 36 | D-Men Sauna Club | Warsaw | WAR-SAU-05 | pending |
-| 36 | Galla Klub Sauna | Warsaw | WAR-SAU-03 | pending |
-| 36 | HEAVEN Sauna | Warsaw | WAR-SAU-02 | pending |
-| 37 | Instytut Bar | Warsaw | WAR-CRU-01 | pending |
-| 37 | Sauna Stare Miasto | Warsaw | WAR-SAU-04 | pending |
-| 37 | Sauna The Fire | Warsaw | WAR-SAU-01 | pending |
-| 37 | ALIBI Club-Wellness-Center | Würzburg | WUE-SAU-01 | pending |
-| 37 | Sauna Centar Zagreb | Zagreb | HRV-ZAG-SAU-01 | pending |
-| 38 | Paragonya Wellness Club | Zurich | ZRH-SAU-02 | pending |
-| 38 | Renos Relax | Zurich | ZRH-SAU-01 | pending |
+| 35 | The Muse | Valencia | VLC-BAR-01 | listing-review |
+| 35 | Metrò Venezia Club | Venice (Mestre) | VEN-SAU-METRO-01 | completed |
+| 35 | Apollo City Sauna | Vienna | VIE-SAU-03 | completed |
+| 35 | Hard On | Vienna | VIE-CRU-01 | listing-review |
+| 35 | Kaiserbründl | Vienna | VIE-SAU-01 | completed |
+| 36 | Römersauna | Vienna | VIE-SAU-02 | completed |
+| 36 | Glamour Gay Sauna | Vilnius | VNO-SAU-01 | completed |
+| 36 | D-Men Sauna Club | Warsaw | WAR-SAU-05 | fallback-kept |
+| 36 | Galla Klub Sauna | Warsaw | WAR-SAU-03 | fallback-kept |
+| 36 | HEAVEN Sauna | Warsaw | WAR-SAU-02 | fallback-kept |
+| 37 | Instytut Bar | Warsaw | WAR-CRU-01 | listing-review |
+| 37 | Sauna Stare Miasto | Warsaw | WAR-SAU-04 | fallback-kept |
+| 37 | Sauna The Fire | Warsaw | WAR-SAU-01 | completed |
+| 37 | ALIBI Club-Wellness-Center | Würzburg | WUE-SAU-01 | completed |
+| 37 | Sauna Centar Zagreb | Zagreb | HRV-ZAG-SAU-01 | completed |
+| 38 | Paragonya Wellness Club | Zurich | ZRH-SAU-02 | completed |
+| 38 | Renos Relax | Zurich | ZRH-SAU-01 | completed |
