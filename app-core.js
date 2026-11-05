@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.13";
+const APP_VERSION = "v1.5.14";
 const APP_DATE = "5 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -2178,6 +2178,47 @@ function checkSharedListRoute() {
     return false;
 }
 
+
+function renameShortlist(oldName) {
+    if (!Object.prototype.hasOwnProperty.call(userShortlists || {}, oldName)) return;
+    const answer = prompt('Rename shortlist:', oldName);
+    if (answer === null) return;
+    const nextName = answer.trim();
+    if (!nextName) { showToast('Enter a shortlist name.'); return; }
+    if (nextName.length > 80) { showToast('Shortlist name must be 80 characters or less.'); return; }
+    if (nextName === oldName) return;
+    if (Object.keys(userShortlists).some(name => name !== oldName && name.toLowerCase() === nextName.toLowerCase())) {
+        showToast('A shortlist with that name already exists.');
+        return;
+    }
+    // Replace the name at its existing position, preserving items, ordering and icon.
+    userShortlists = Object.fromEntries(Object.entries(userShortlists).map(([name, entries]) =>
+        [name === oldName ? nextName : name, entries]));
+    if (Object.prototype.hasOwnProperty.call(userShortlistEmojis, oldName)) {
+        const icon = userShortlistEmojis[oldName];
+        delete userShortlistEmojis[oldName];
+        userShortlistEmojis[nextName] = icon;
+    }
+    if (activeShortlistContentName === oldName) activeShortlistContentName = nextName;
+    saveCurrentToBundle();
+    showToast('Shortlist renamed.');
+    if (window.location.hash === '#shortlist=' + encodeURIComponent(oldName)) {
+        window.location.hash = '#shortlist=' + encodeURIComponent(nextName);
+    } else {
+        renderShortlistsFullView();
+    }
+}
+
+function removeShortlistCollectionItem(listName, type, id, label) {
+    if (!Object.prototype.hasOwnProperty.call(userShortlists || {}, listName)) return;
+    if (!shortlistHasItem(listName, type, id)) return;
+    if (!confirm(`Remove "${label}" from "${listName}"? The ${type} will not be deleted from Backroom.`)) return;
+    setShortlistItem(listName, { type, id }, false);
+    saveCurrentToBundle();
+    showToast('Removed from shortlist.');
+    renderSingleShortlist(listName);
+}
+
 function getShortlistEventOccurrences(entries) {
     const eventIds = (entries || []).filter(entry => entry.type === 'event').map(entry => entry.id);
     return (events || [])
@@ -2187,7 +2228,7 @@ function getShortlistEventOccurrences(entries) {
         .sort(compareEventOccurrences);
 }
 
-function createShortlistEventCard(event) {
+function createShortlistEventCard(event, editableListName = '') {
     const venue = (venues || []).find(item => item.Venue_ID === event.Venue_ID) || null;
     const safeEventName = String(event.Event_Name || 'Event').replace(/'/g, "\\'");
     const eventTags = getEventTags(event, venue);
@@ -2214,6 +2255,20 @@ function createShortlistEventCard(event) {
         </div>
     `;
 
+    if (editableListName) {
+        const remove = document.createElement('button');
+        remove.type = 'button';
+        remove.className = 'event-action-btn shortlist-remove-action';
+        remove.textContent = '✕';
+        remove.title = `Remove ${event.Event_Name || 'event'} from this shortlist`;
+        remove.setAttribute('aria-label', remove.title);
+        remove.addEventListener('click', clickEvent => {
+            clickEvent.stopPropagation();
+            removeShortlistCollectionItem(editableListName, 'event', event.Event_ID, event.Event_Name || 'Event');
+        });
+        card.querySelector('.shortlist-event-actions')?.appendChild(remove);
+    }
+
     card.addEventListener('click', clickEvent => {
         if (clickEvent.target.closest('a, button')) return;
         if (venue?.Venue_ID) {
@@ -2225,7 +2280,7 @@ function createShortlistEventCard(event) {
     return card;
 }
 
-function renderShortlistCollection(entries, container, filter = 'all') {
+function renderShortlistCollection(entries, container, filter = 'all', editableListName = '') {
     if (!container) return { venueCount: 0, eventCount: 0 };
 
     const venueIds = (entries || []).filter(entry => entry.type === 'venue').map(entry => entry.id);
@@ -2245,6 +2300,25 @@ function renderShortlistCollection(entries, container, filter = 'all') {
         venueGrid.className = 'shortlist-venue-grid';
         venueSection.appendChild(venueGrid);
         renderListings(shortlistVenues, true, venueGrid);
+        if (editableListName) {
+            [...venueGrid.children].forEach((card, index) => {
+                const venue = shortlistVenues[index];
+                const actions = card.querySelector('.card-quick-actions');
+                if (!venue || !actions) return;
+                const remove = document.createElement('button');
+                remove.type = 'button';
+                remove.className = 'icon-btn shortlist-remove-action';
+                remove.textContent = '✕';
+                remove.title = `Remove ${venue.Name || 'venue'} from this shortlist`;
+                remove.setAttribute('aria-label', remove.title);
+                remove.addEventListener('click', clickEvent => {
+                    clickEvent.preventDefault();
+                    clickEvent.stopPropagation();
+                    removeShortlistCollectionItem(editableListName, 'venue', venue.Venue_ID, venue.Name || 'Venue');
+                });
+                actions.appendChild(remove);
+            });
+        }
         layout.appendChild(venueSection);
     }
 
@@ -2254,7 +2328,7 @@ function renderShortlistCollection(entries, container, filter = 'all') {
         eventSection.innerHTML = '<h2 class="display-font shortlist-section-title">📅 EVENTS</h2>';
         const eventGrid = document.createElement('div');
         eventGrid.className = 'shortlist-event-grid';
-        shortlistEvents.forEach(event => eventGrid.appendChild(createShortlistEventCard(event)));
+        shortlistEvents.forEach(event => eventGrid.appendChild(createShortlistEventCard(event, editableListName)));
         eventSection.appendChild(eventGrid);
         layout.appendChild(eventSection);
     }
@@ -2448,7 +2522,19 @@ function renderSingleShortlist(name) {
     const cTitle = document.getElementById('context-title');
     const cDesc = document.getElementById('context-desc');
     const eIcon = userShortlistEmojis[name] || '📑';
-    if(cTitle) cTitle.innerHTML = `${eIcon} ${escapeHTML(name)}`;
+    if(cTitle) {
+        cTitle.innerHTML = `${escapeHTML(eIcon)} ${escapeHTML(name)}`;
+        if (Object.prototype.hasOwnProperty.call(userShortlists || {}, name)) {
+            const rename = document.createElement('button');
+            rename.type = 'button';
+            rename.className = 'shortlist-rename-btn shortlist-heading-rename';
+            rename.textContent = '✏️';
+            rename.title = 'Rename this shortlist';
+            rename.setAttribute('aria-label', `Rename ${name}`);
+            rename.addEventListener('click', () => renameShortlist(name));
+            cTitle.appendChild(rename);
+        }
+    }
     if(cDesc) cDesc.innerText = `A saved shortlist collection: ${formatShortlistCount(name)}.`;
 
     if (activeShortlistContentName !== name) {
@@ -2479,7 +2565,7 @@ function renderSingleShortlist(name) {
 
     const entries = getShortlistEntries(name);
     if (resultsContainer) resultsContainer.innerHTML = '';
-    const counts = renderShortlistCollection(entries, resultsContainer, activeShortlistContentFilter);
+    const counts = renderShortlistCollection(entries, resultsContainer, activeShortlistContentFilter, name);
 
     if (!entries.length && resultsContainer) {
         resultsContainer.innerHTML = '<p class="shortlist-empty-state">This shortlist is empty.</p>';
@@ -4253,8 +4339,8 @@ function renderTravelFullView() {
     });
 }
 
+
 window.openEmojiPicker = function(listName) {
-    const listHtml = SHORTLIST_EMOJIS.map(e => `<span style="font-size:1.5rem; cursor:pointer; padding:5px;" onclick="userShortlistEmojis['${listName}']='${e}'; saveCurrentToBundle(); renderShortlistsFullView(); document.getElementById('emoji-picker-modal').classList.add('hidden');">${e}</span>`).join('');
     let modal = document.getElementById('emoji-picker-modal');
     if(!modal) {
         modal = document.createElement('div');
@@ -4262,13 +4348,30 @@ window.openEmojiPicker = function(listName) {
         modal.className = 'modal hidden';
         modal.style.zIndex = '4000';
         modal.innerHTML = `
-            <div class="modal-content small-modal" style="background:var(--panel-dark); max-width: 300px;">
-                <div class="modal-header"><h3 class="display-font" style="margin:0; font-size:1.2rem;">Pick Icon</h3><button class="btn-close" onclick="document.getElementById('emoji-picker-modal').classList.add('hidden');" style="position:relative; right:auto; top:auto;">❌</button></div>
+            <div class="modal-content small-modal" style="background:var(--panel-dark); max-width:300px;">
+                <div class="modal-header"><h3 class="display-font" style="margin:0; font-size:1.2rem;">Pick Icon</h3><button type="button" class="btn-close" aria-label="Close icon picker" style="position:relative; right:auto; top:auto;">❌</button></div>
                 <div class="modal-body" style="display:flex; flex-wrap:wrap; justify-content:center; gap:5px;"></div>
             </div>`;
         document.body.appendChild(modal);
+        modal.querySelector('.btn-close')?.addEventListener('click', () => modal.classList.add('hidden'));
     }
-    modal.querySelector('.modal-body').innerHTML = listHtml;
+    const body = modal.querySelector('.modal-body');
+    body.replaceChildren();
+    SHORTLIST_EMOJIS.forEach(icon => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'shortlist-emoji-choice';
+        btn.textContent = icon;
+        btn.setAttribute('aria-label', `Choose ${icon} icon`);
+        btn.addEventListener('click', () => {
+            if (!Object.prototype.hasOwnProperty.call(userShortlists || {}, listName)) return;
+            userShortlistEmojis[listName] = icon;
+            saveCurrentToBundle();
+            modal.classList.add('hidden');
+            renderShortlistsFullView();
+        });
+        body.appendChild(btn);
+    });
     modal.classList.remove('hidden');
 }
 
@@ -4314,24 +4417,52 @@ function renderShortlistsFullView() {
         return;
     }
 
+
     lists.forEach(name => {
         const eIcon = userShortlistEmojis[name] || '📑';
         const card = document.createElement('div');
-        card.className = 'card';
-        card.style.cursor = 'pointer';
+        card.className = 'card shortlist-index-card';
         card.innerHTML = `
-            <div class="card-inner-content" style="flex-direction:row; justify-content:space-between; align-items:center;">
-                <div style="font-size:2rem; margin-right:15px; cursor:pointer;" onclick="event.stopPropagation(); openEmojiPicker('${name.replace(/'/g, "\\'")}')" title="Tap to change icon">${eIcon}</div>
-                <div onclick="window.location.hash='#shortlist=${encodeURIComponent(name)}';" style="flex-grow:1;">
-                    <h3 class="card-title display-font" style="color:var(--primary-blue);">${name}</h3>
+            <div class="card-inner-content shortlist-index-content">
+                <button class="shortlist-emoji-trigger" type="button" title="Change icon" aria-label="Change icon for ${escapeHTML(name)}">${escapeHTML(eIcon)}</button>
+                <div class="shortlist-card-main" role="link" tabindex="0" aria-label="Open shortlist ${escapeHTML(name)}">
+                    <div class="shortlist-name-row">
+                        <h3 class="card-title display-font">${escapeHTML(name)}</h3>
+                        <button class="shortlist-rename-btn" type="button" title="Rename shortlist" aria-label="Rename ${escapeHTML(name)}">✏️</button>
+                    </div>
                     <p class="meta-text" style="margin-top:5px;">${formatShortlistCount(name)}</p>
                 </div>
-                <div style="display:flex; gap:10px;">
-                    <button class="icon-btn" onclick="event.stopPropagation(); shareShortlist('${name.replace(/'/g, "\\'")}')" title="Share" style="font-size:1.35rem;">${BR_ICONS.share}</button>
-                    <button class="icon-btn" style="color:var(--bright-red-orange);" onclick="event.stopPropagation(); if(confirm('Delete shortlist ${name.replace(/'/g, "\\'")}?')){ delete userShortlists['${name.replace(/'/g, "\\'")}']; saveCurrentToBundle(); renderShortlistsFullView(); }">❌</button>
+                <div class="shortlist-card-actions">
+                    <button class="icon-btn shortlist-share-btn" type="button" title="Share shortlist" aria-label="Share ${escapeHTML(name)}" style="font-size:1.35rem;">${BR_ICONS.share}</button>
+                    <button class="icon-btn shortlist-delete-btn" type="button" title="Delete entire shortlist" aria-label="Delete shortlist ${escapeHTML(name)}">❌</button>
                 </div>
             </div>
         `;
+        const open = () => window.location.hash = '#shortlist=' + encodeURIComponent(name);
+        const main = card.querySelector('.shortlist-card-main');
+        main.addEventListener('click', event => {
+            if (!event.target.closest('button')) open();
+        });
+        main.addEventListener('keydown', event => {
+            if (event.target !== main) return;
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                open();
+            }
+        });
+        card.querySelector('.shortlist-emoji-trigger').addEventListener('click', () => window.openEmojiPicker(name));
+        card.querySelector('.shortlist-rename-btn').addEventListener('click', event => {
+            event.stopPropagation();
+            renameShortlist(name);
+        });
+        card.querySelector('.shortlist-share-btn').addEventListener('click', () => shareShortlist(name));
+        card.querySelector('.shortlist-delete-btn').addEventListener('click', () => {
+            if (!confirm(`Delete the entire shortlist "${name}" and all its saved associations?`)) return;
+            delete userShortlists[name];
+            delete userShortlistEmojis[name];
+            saveCurrentToBundle();
+            renderShortlistsFullView();
+        });
         resultsContainer?.appendChild(card);
     });
 }

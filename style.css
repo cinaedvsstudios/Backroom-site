@@ -2050,3 +2050,29 @@ body:has(> .br-guide) > .br-guide{height:100%;max-width:1180px}
 .events-block button.event-date-open:hover{border-color:#77d7fa;box-shadow:0 0 0 2px rgba(44,168,212,.25);background:#1d3349}
 .events-block button.event-date-open:focus-visible{outline:3px solid #77d7fa;outline-offset:3px}
 @media(max-width:768px){.events-block .event-title-row>.backroom-featured-sticker{width:70px;max-width:36%}}
+
+/* v1.5.14 shortlist management: inline rename and item-level removal. */
+.shortlist-index-card{cursor:default}
+.shortlist-index-content{display:flex;flex-direction:row;align-items:center;gap:12px;min-width:0}
+.shortlist-emoji-trigger{appearance:none;border:0;background:transparent;font-size:2rem;line-height:1;cursor:pointer;flex:0 0 auto;padding:4px;color:inherit}
+.shortlist-card-main{min-width:0;flex:1 1 auto;cursor:pointer;border-radius:5px}
+.shortlist-name-row{display:flex;align-items:center;gap:8px;min-width:0}
+.shortlist-name-row .card-title{min-width:0;overflow-wrap:anywhere}
+.shortlist-rename-btn{appearance:none;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;vertical-align:middle;border:1px solid var(--panel-mid);background:var(--panel-dark);border-radius:7px;min-width:32px;min-height:32px;padding:3px 5px;color:#fff;font-size:1rem;cursor:pointer}
+.shortlist-heading-rename{margin-left:12px;font-size:.55em;vertical-align:middle}
+.shortlist-rename-btn:hover{border-color:var(--primary-blue);background:#18384b}
+.shortlist-card-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.shortlist-card-actions .shortlist-delete-btn,.shortlist-remove-action{color:#ff6b85!important}
+.shortlist-remove-action{display:inline-flex!important;align-items:center;justify-content:center;cursor:pointer;border:1px solid #a73b57!important;background:#361c2c!important;border-radius:7px;min-width:29px;min-height:29px;padding:2px 7px;line-height:1}
+.shortlist-remove-action:hover,.shortlist-remove-action:focus-visible{background:#61263b!important;border-color:#ff7b93!important;color:#fff!important}
+.shortlist-emoji-choice{appearance:none;background:none;border:1px solid transparent;border-radius:7px;padding:5px;font-size:1.5rem;line-height:1.2;cursor:pointer}
+.shortlist-emoji-choice:hover,.shortlist-emoji-choice:focus-visible{border-color:var(--primary-blue);background:var(--panel-standard)}
+.shortlist-index-card :is(button,[role="link"]):focus-visible,#context-title .shortlist-rename-btn:focus-visible{outline:3px solid var(--primary-blue);outline-offset:2px}
+@media(max-width:600px){
+  .shortlist-index-content{gap:6px;padding:11px}
+  .shortlist-emoji-trigger{font-size:1.6rem;padding:2px}
+  .shortlist-card-actions{gap:4px}
+  .shortlist-card-actions .icon-btn{font-size:1.05rem!important}
+  .shortlist-rename-btn{min-width:29px;min-height:29px}
+  .shortlist-event-actions{flex-wrap:wrap;max-width:75px}
+}
