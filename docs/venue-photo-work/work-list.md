@@ -9,11 +9,11 @@ Updated: 5 November 2026. Five venues per batch. Source photographs and credits 
 | 1 | Tipsy Bear | Berlin | BER-TIP-01 | completed |
 | 1 | Zum schmutzigen Hobby | Berlin | BER-ZSH-01 | completed |
 | 1 | SLM Copenhagen | Copenhagen | CPH-CRU-01 | completed |
-| 2 | Hard On Club | London | LON-PAR-01 | pending |
-| 2 | Alert! Manchester | Manchester | MAN-PAR-01 | pending |
-| 2 | SLM Oslo | Oslo | NOR-OSL-CLB-01 | pending |
-| 2 | Winter Pride Maspalomas | Playa del Inglés | MAS-PRD-02 | pending |
-| 2 | SLM Stockholm | Stockholm | STO-CRU-01 | pending |
+| 2 | Hard On Club | London | LON-PAR-01 | completed |
+| 2 | Alert! Manchester | Manchester | MAN-PAR-01 | completed |
+| 2 | SLM Oslo | Oslo | NOR-OSL-CLB-01 | completed |
+| 2 | Winter Pride Maspalomas | Playa del Inglés | MAS-PRD-02 | completed |
+| 2 | SLM Stockholm | Stockholm | STO-CRU-01 | completed |
 | 3 | Club 2B | Stuttgart | STR-CLB-2B-01 | pending |
 | 3 | Fabrik Du Plaisir | Zurich | ZRH-PAR-FABRDU-01 | pending |
 | — | Boiler | Berlin | BER-BGH-02 | existing-photo-review |
