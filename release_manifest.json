@@ -1,5 +1,5 @@
 {
-  "version": "v1.5.15",
+  "version": "v1.5.16",
   "date": "2026-11-05",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
@@ -83,7 +83,8 @@
     "Add a pencil icon on shortlist cards and detail headings to safely rename existing lists while preserving list items, emoji, and profile storage.",
     "Add clear single-item Remove controls for events and venues within owned shortlists only, with confirmation and persistence; leave public shared lists read-only.",
     "Improve mobile shortlist controls, keyboard accessibility, and emoji icon picker; preserve existing shortcode and shared-list formats.",
-    "Align shortlist rename, share and delete actions as one consistent row of equal 38px buttons, move rename outside the title, and use a tidy two-row layout on narrow mobile screens without altering any shortlist data or actions."
+    "Align shortlist rename, share and delete actions as one consistent row of equal 38px buttons, move rename outside the title, and use a tidy two-row layout on narrow mobile screens without altering any shortlist data or actions.",
+    "Add a Share action beside Rename in the opened shortlist heading; both are equally sized and use the existing shortlist sharing URL and functions, with accessible labels and consistent mobile alignment."
   ],
   "validation": {
     "javascript_syntax": "checked before publication",

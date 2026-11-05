@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.15";
+const APP_VERSION = "v1.5.16";
 const APP_DATE = "5 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -2525,6 +2525,11 @@ function renderSingleShortlist(name) {
     if(cTitle) {
         cTitle.innerHTML = `${escapeHTML(eIcon)} ${escapeHTML(name)}`;
         if (Object.prototype.hasOwnProperty.call(userShortlists || {}, name)) {
+            const actions = document.createElement('span');
+            actions.className = 'shortlist-heading-actions';
+            actions.setAttribute('role', 'group');
+            actions.setAttribute('aria-label', 'Manage this shortlist');
+
             const rename = document.createElement('button');
             rename.type = 'button';
             rename.className = 'shortlist-rename-btn shortlist-heading-rename';
@@ -2532,7 +2537,18 @@ function renderSingleShortlist(name) {
             rename.title = 'Rename this shortlist';
             rename.setAttribute('aria-label', `Rename ${name}`);
             rename.addEventListener('click', () => renameShortlist(name));
-            cTitle.appendChild(rename);
+            actions.appendChild(rename);
+
+            const share = document.createElement('button');
+            share.type = 'button';
+            share.className = 'shortlist-rename-btn shortlist-heading-share';
+            share.textContent = BR_ICONS.share;
+            share.title = 'Share this shortlist';
+            share.setAttribute('aria-label', `Share ${name}`);
+            share.addEventListener('click', () => shareShortlist(name));
+            actions.appendChild(share);
+
+            cTitle.appendChild(actions);
         }
     }
     if(cDesc) cDesc.innerText = `A saved shortlist collection: ${formatShortlistCount(name)}.`;

@@ -2155,3 +2155,42 @@ body:has(> .br-guide) > .br-guide{height:100%;max-width:1180px}
   .shortlist-index-card .shortlist-card-main{grid-area:title}
   .shortlist-index-card .shortlist-card-actions{grid-area:actions;justify-self:end}
 }
+
+/* v1.5.16 shortlist detail heading actions: Rename and Share aligned beside the title. */
+#context-title .shortlist-heading-actions{
+  display:inline-flex;
+  align-items:center;
+  vertical-align:middle;
+  gap:7px;
+  margin-left:12px;
+  white-space:nowrap;
+}
+#context-title .shortlist-heading-actions .shortlist-rename-btn{
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 38px;
+  width:38px;
+  min-width:38px;
+  max-width:38px;
+  height:38px;
+  min-height:38px;
+  max-height:38px;
+  padding:0;
+  margin:0;
+  border:1px solid var(--panel-mid);
+  border-radius:7px;
+  background:var(--panel-dark);
+  color:#fff;
+  font:400 1.15rem/1 Arial,sans-serif;
+  cursor:pointer;
+}
+#context-title .shortlist-heading-actions .shortlist-rename-btn:hover{
+  border-color:var(--primary-blue);
+  background:#18384b;
+}
+#context-title .shortlist-heading-actions .shortlist-rename-btn:focus-visible{
+  outline:3px solid var(--primary-blue);
+  outline-offset:2px;
+}
