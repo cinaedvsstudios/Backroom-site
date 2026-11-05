@@ -2076,3 +2076,82 @@ body:has(> .br-guide) > .br-guide{height:100%;max-width:1180px}
   .shortlist-rename-btn{min-width:29px;min-height:29px}
   .shortlist-event-actions{flex-wrap:wrap;max-width:75px}
 }
+
+/* v1.5.15 uniform shortlist action buttons: same 38px targets, one baseline. */
+.shortlist-index-card .shortlist-index-content{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+}
+.shortlist-index-card .shortlist-emoji-trigger{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  flex:0 0 38px;
+  padding:0;
+  font-size:1.7rem;
+  line-height:1;
+  vertical-align:middle;
+}
+.shortlist-index-card .shortlist-card-main{
+  flex:1 1 0;
+  min-width:0;
+}
+.shortlist-index-card .shortlist-card-actions{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:6px;
+  flex:0 0 auto;
+  flex-wrap:nowrap;
+  line-height:1;
+}
+.shortlist-index-card .shortlist-card-actions .shortlist-action-btn{
+  appearance:none;
+  box-sizing:border-box;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  min-width:38px;
+  min-height:38px;
+  max-width:38px;
+  max-height:38px;
+  flex:0 0 38px;
+  padding:0;
+  margin:0;
+  border:1px solid var(--panel-mid);
+  border-radius:7px;
+  background:var(--panel-dark);
+  color:#fff;
+  font:400 1.15rem/1 Arial,sans-serif;
+  cursor:pointer;
+  vertical-align:middle;
+  box-shadow:none;
+  transform:none;
+}
+.shortlist-index-card .shortlist-card-actions .shortlist-delete-btn{color:#ff6b85!important}
+.shortlist-index-card .shortlist-card-actions .shortlist-action-btn:hover{
+  border-color:var(--primary-blue);
+  background:#18384b;
+}
+.shortlist-index-card .shortlist-card-actions .shortlist-delete-btn:hover{
+  border-color:#ff6b85;
+  background:#361c2c;
+}
+@media(max-width:480px){
+  .shortlist-index-card .shortlist-index-content{
+    display:grid;
+    grid-template-columns:38px minmax(0,1fr);
+    grid-template-areas:"icon title" ". actions";
+    gap:7px 10px;
+  }
+  .shortlist-index-card .shortlist-emoji-trigger{grid-area:icon}
+  .shortlist-index-card .shortlist-card-main{grid-area:title}
+  .shortlist-index-card .shortlist-card-actions{grid-area:actions;justify-self:end}
+}

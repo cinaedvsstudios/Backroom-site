@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.14";
+const APP_VERSION = "v1.5.15";
 const APP_DATE = "5 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -4428,13 +4428,13 @@ function renderShortlistsFullView() {
                 <div class="shortlist-card-main" role="link" tabindex="0" aria-label="Open shortlist ${escapeHTML(name)}">
                     <div class="shortlist-name-row">
                         <h3 class="card-title display-font">${escapeHTML(name)}</h3>
-                        <button class="shortlist-rename-btn" type="button" title="Rename shortlist" aria-label="Rename ${escapeHTML(name)}">✏️</button>
                     </div>
                     <p class="meta-text" style="margin-top:5px;">${formatShortlistCount(name)}</p>
                 </div>
-                <div class="shortlist-card-actions">
-                    <button class="icon-btn shortlist-share-btn" type="button" title="Share shortlist" aria-label="Share ${escapeHTML(name)}" style="font-size:1.35rem;">${BR_ICONS.share}</button>
-                    <button class="icon-btn shortlist-delete-btn" type="button" title="Delete entire shortlist" aria-label="Delete shortlist ${escapeHTML(name)}">❌</button>
+                <div class="shortlist-card-actions" role="group" aria-label="Manage ${escapeHTML(name)}">
+                    <button class="shortlist-action-btn shortlist-rename-btn" type="button" title="Rename shortlist" aria-label="Rename ${escapeHTML(name)}">✏️</button>
+                    <button class="shortlist-action-btn shortlist-share-btn" type="button" title="Share shortlist" aria-label="Share ${escapeHTML(name)}">${BR_ICONS.share}</button>
+                    <button class="shortlist-action-btn shortlist-delete-btn" type="button" title="Delete entire shortlist" aria-label="Delete shortlist ${escapeHTML(name)}">❌</button>
                 </div>
             </div>
         `;
