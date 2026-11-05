@@ -163,27 +163,27 @@ Updated: 5 November 2026. Five venues per batch. Preserve all existing venue pho
 | 27 | Amigo Sauna Club | Poznań | POZ-SAU-01 | completed |
 | 27 | HaH Club | Poznań | POZ-PAR-01 | listing-review |
 | 27 | Sauna Babylonia | Prague | PRG-SAU-01 | listing-review |
-| 28 | Sauna Bonbon | Prague | PRG-SAU-BONBON-01 | pending |
-| 28 | Sauna David | Prague | PRG-SAU-02 | pending |
-| 28 | Up&Down Bar Prague | Prague | PRG-PAR-02 | pending |
-| 28 | Sauna Babylon | Puerto de la Cruz | TFN-SAU-BABYLON-01 | pending |
-| 28 | Atbalss Gay Sauna | Riga | RIX-SAU-01 | pending |
-| 29 | Bunker Cruising Bar | Riga | RIX-CRU-01 | pending |
-| 29 | 101 Club | Rome | ROM-BAR-03 | pending |
+| 28 | Sauna Bonbon | Prague | PRG-SAU-BONBON-01 | completed |
+| 28 | Sauna David | Prague | PRG-SAU-02 | completed |
+| 28 | Up&Down Bar Prague | Prague | PRG-PAR-02 | listing-review |
+| 28 | Sauna Babylon | Puerto de la Cruz | TFN-SAU-BABYLON-01 | fallback-kept |
+| 28 | Atbalss Gay Sauna | Riga | RIX-SAU-01 | fallback-kept |
+| 29 | Bunker Cruising Bar | Riga | RIX-CRU-01 | listing-review |
+| 29 | 101 Club | Rome | ROM-BAR-03 | listing-review |
 | 3 | Adam Sauna | Rome | ROM-SAU-01 | completed |
-| 29 | Apollion Sauna | Rome | ROM-SAU-02 | pending |
-| 29 | Company Roma | Rome | ROM-BAR-04 | pending |
-| 29 | XL Sauna | Saarbrücken | SAA-SAU-01 | pending |
-| 30 | The Boss | Santa Cruz de Tenerife | TFN-SAU-BOSS-01 | pending |
-| 30 | Sauna Termas Hispalis | Seville | SVQ-SAU-HISPALIS-01 | pending |
-| 30 | Sauna The Cube Urban | Seville | SVQ-SAU-CUBE-01 | pending |
-| 30 | ClubZeus Sheffield | Sheffield | SHF-SAU-01 | pending |
-| 30 | Sauna Sitges | Sitges | SIT-SAU-01 | pending |
-| 31 | Garage Sauna | Sofia | BGR-SOF-SAU-01 | pending |
-| 31 | Sauna Niko Sofia | Sofia | BGR-SOF-SAU-NIKO-01 | pending |
-| 31 | House of Q | Stockholm | STO-BAR-02 | pending |
-| 31 | Le Complex – Drak Sauna & L’Antracte | Strasbourg | SXB-SAU-01 | pending |
-| 31 | Oxydo Sauna | Strasbourg | SXB-SAU-02 | pending |
+| 29 | Apollion Sauna | Rome | ROM-SAU-02 | completed |
+| 29 | Company Roma | Rome | ROM-BAR-04 | listing-review |
+| 29 | XL Sauna | Saarbrücken | SAA-SAU-01 | fallback-kept |
+| 30 | The Boss | Santa Cruz de Tenerife | TFN-SAU-BOSS-01 | fallback-kept |
+| 30 | Sauna Termas Hispalis | Seville | SVQ-SAU-HISPALIS-01 | completed |
+| 30 | Sauna The Cube Urban | Seville | SVQ-SAU-CUBE-01 | completed |
+| 30 | ClubZeus Sheffield | Sheffield | SHF-SAU-01 | fallback-kept |
+| 30 | Sauna Sitges | Sitges | SIT-SAU-01 | completed |
+| 31 | Garage Sauna | Sofia | BGR-SOF-SAU-01 | completed |
+| 31 | Sauna Niko Sofia | Sofia | BGR-SOF-SAU-NIKO-01 | fallback-kept |
+| 31 | House of Q | Stockholm | STO-BAR-02 | listing-review |
+| 31 | Le Complex – Drak Sauna & L’Antracte | Strasbourg | SXB-SAU-01 | completed |
+| 31 | Oxydo Sauna | Strasbourg | SXB-SAU-02 | completed |
 | 32 | Sauna Equateur | Strasbourg | SXB-SAU-03 | pending |
 | 32 | Pour Lui Gay Sauna | Stuttgart | STR-SAU-02 | pending |
 | 32 | VIVA Sauna | Stuttgart | STR-SAU-01 | pending |
