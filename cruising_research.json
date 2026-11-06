@@ -268,7 +268,36 @@
           "reason": "No separate Kosovo page was found in source country directory. Two Kosovo-labelled places were present under Serbia and are tracked in Kosovo for later verification."
         }
       ],
-      "results_total": 563
+      "results_total": 598,
+      "city_pages_checked": [
+        {
+          "country": "Spain",
+          "city": "Maspalomas",
+          "url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+          "count": 15,
+          "kind": "city_page_additional_top_spots"
+        },
+        {
+          "country": "Spain",
+          "city": "Las Palmas de Gran Canaria",
+          "url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+          "count": 15,
+          "kind": "city_page_additional_top_spots"
+        },
+        {
+          "country": "Greece",
+          "city": "Mykonos",
+          "url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+          "count": 5,
+          "kind": "city_page_additional_top_spots"
+        }
+      ],
+      "city_specific_extension_notes": [
+        "Supplemented national top-15 results with targeted city pages for Maspalomas, Las Palmas de Gran Canaria, Mykonos.",
+        "Maspalomas Dunes and Camel Station are marked probable matches to Backroom Maspalomas Dunes; Mykonos Paraportiani is marked probable match to Paraportiani Church rocks.",
+        "Source places Achivadolimni beach (Milos island) under Mykonos. Preserve raw source entry but verify its true geographic location and do not publish as Mykonos without checking.",
+        "2026 comments appeared on Maspalomas and Las Palmas pages; specific claims should be independently checked for currency and site access restrictions."
+      ]
     }
   ],
   "countries": [
@@ -14313,7 +14342,7 @@
     {
       "country": "Greece",
       "cruising_now": 6,
-      "proposals": 14,
+      "proposals": 18,
       "cities": [
         {
           "city": "Ágioi",
@@ -14658,7 +14687,7 @@
         {
           "city": "Mykonos",
           "cruising_now": 1,
-          "proposals": 0,
+          "proposals": 4,
           "existing_cruising": [
             {
               "id": "GRC-MYK-CRU-PARAPORTIANI-01",
@@ -14666,8 +14695,126 @@
               "status": "Live"
             }
           ],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-GRC-MYK-02",
+              "name": "Elia Nudist Beach",
+              "city": "Mykonos",
+              "country": "Greece",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-GRC-MYK-03",
+              "name": "Achivadolimni nude beach, Milos",
+              "city": "Mykonos",
+              "country": "Greece",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+              "status": "unverified",
+              "notes": "Source city page lists a Milos beach under Mykonos; verify correct island."
+            },
+            {
+              "proposal_id": "GC1-GRC-MYK-04",
+              "name": "Free public toilets in the port",
+              "city": "Mykonos",
+              "country": "Greece",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-GRC-MYK-05",
+              "name": "Frangias Beach",
+              "city": "Mykonos",
+              "country": "Greece",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Paraportiani",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+                "source_scope": "city_top_spots",
+                "source_city": "Mykonos",
+                "detail_url": null,
+                "existing_venue_id": "GRC-MYK-CRU-PARAPORTIANI-01",
+                "proposal_id": null,
+                "assessment": "probable_existing_match",
+                "matching_note": "Likely already covered by existing Backroom cruising entry; verify geographic footprint before final deduplication."
+              },
+              {
+                "rank": 2,
+                "name": "Elia Nudist Beach",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+                "source_scope": "city_top_spots",
+                "source_city": "Mykonos",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GRC-MYK-02",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 3,
+                "name": "Achivadolimni nude beach, Milos",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+                "source_scope": "city_top_spots",
+                "source_city": "Mykonos",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GRC-MYK-03",
+                "assessment": "geography_review_source_labels_milos_as_mykonos",
+                "geography_note": "Name says Milos, but source city page assigns it to Mykonos; check correct island before publication."
+              },
+              {
+                "rank": 4,
+                "name": "Free public toilets in the port",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+                "source_scope": "city_top_spots",
+                "source_city": "Mykonos",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GRC-MYK-04",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 5,
+                "name": "Frangias Beach",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+                "source_scope": "city_top_spots",
+                "source_city": "Mykonos",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GRC-MYK-05",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         },
         {
           "city": "Rhodes",
@@ -17354,7 +17501,7 @@
     {
       "country": "Spain",
       "cruising_now": 13,
-      "proposals": 15,
+      "proposals": 43,
       "cities": [
         {
           "city": "A Coruña",
@@ -17625,6 +17772,393 @@
           }
         },
         {
+          "city": "Las Palmas de Gran Canaria",
+          "cruising_now": 0,
+          "proposals": 15,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ESP-LPA-01",
+              "name": "Centro Comercial 7 Palmas",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-02",
+              "name": "Tivoli",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Industrial Park",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-03",
+              "name": "Doramas - Las Palmas de Gran Canaria",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-04",
+              "name": "Baños CC. El Muelle",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-05",
+              "name": "Baños Corte Inglés",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-06",
+              "name": "La Laja-Mercalaspalmas",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-07",
+              "name": "Centro Comercial La Ballena",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-08",
+              "name": "CC Las Arenas",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-09",
+              "name": "Campos de fútbol de La Ballena",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-10",
+              "name": "Sauna Portugal",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-11",
+              "name": "Estación de guaguas de San Telmo",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-12",
+              "name": "Gay beach",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-13",
+              "name": "CC Las Ramblas",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-14",
+              "name": "Intercambiador Santa Catalina",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-LPA-15",
+              "name": "Biblioteca de San Telmo",
+              "city": "Las Palmas de Gran Canaria",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Centro Comercial 7 Palmas",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-01",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 2,
+                "name": "Tivoli",
+                "source_category": "Industrial Park",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-02",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 3,
+                "name": "Doramas - Las Palmas de Gran Canaria",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-03",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 4,
+                "name": "Baños CC. El Muelle",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-04",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 5,
+                "name": "Baños Corte Inglés",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-05",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 6,
+                "name": "La Laja-Mercalaspalmas",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-06",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 7,
+                "name": "Centro Comercial La Ballena",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-07",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 8,
+                "name": "CC Las Arenas",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-08",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 9,
+                "name": "Campos de fútbol de La Ballena",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-09",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 10,
+                "name": "Sauna Portugal",
+                "source_category": "Sauna",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-10",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 11,
+                "name": "Estación de guaguas de San Telmo",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-11",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 12,
+                "name": "Gay beach",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-12",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 13,
+                "name": "CC Las Ramblas",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-13",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 14,
+                "name": "Intercambiador Santa Catalina",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-14",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 15,
+                "name": "Biblioteca de San Telmo",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Las Palmas de Gran Canaria",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-LPA-15",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
           "city": "Leganés",
           "cruising_now": 0,
           "proposals": 1,
@@ -17777,7 +18311,7 @@
         {
           "city": "Maspalomas",
           "cruising_now": 1,
-          "proposals": 0,
+          "proposals": 13,
           "existing_cruising": [
             {
               "id": "CRU-LPA-MASDUN-01",
@@ -17785,8 +18319,363 @@
               "status": "Live"
             }
           ],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ESP-MAS-03",
+              "name": "Yumbo centrum",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-04",
+              "name": "Baños C.C. Cita",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-05",
+              "name": "Playa del Inglés",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-06",
+              "name": "C.C.Cita",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Theater",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-07",
+              "name": "Parque Cocheras Global",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-08",
+              "name": "Parque Hermanamiento Segovia",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-09",
+              "name": "Holidayworld Maspalomas Center",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-10",
+              "name": "Baños Centro Comercial Faro 2",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-11",
+              "name": "Baños Parque Urbano del Sur",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-12",
+              "name": "Punta del Cardón",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-13",
+              "name": "Detrás Hospital San Roque enfrente del Cementerio El Pedrazo",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-14",
+              "name": "Playa Carpinteras",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-15",
+              "name": "Maspalomas",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Check venue category, access and suitability."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Dunes",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": "CRU-LPA-MASDUN-01",
+                "proposal_id": null,
+                "assessment": "probable_existing_match",
+                "matching_note": "Likely already covered by existing Backroom cruising entry; verify geographic footprint before final deduplication."
+              },
+              {
+                "rank": 2,
+                "name": "Dunes - Camel Station",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": "CRU-LPA-MASDUN-01",
+                "proposal_id": null,
+                "assessment": "probable_existing_match",
+                "matching_note": "Likely already covered by existing Backroom cruising entry; verify geographic footprint before final deduplication."
+              },
+              {
+                "rank": 3,
+                "name": "Yumbo centrum",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-03",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 4,
+                "name": "Baños C.C. Cita",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-04",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 5,
+                "name": "Playa del Inglés",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-05",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 6,
+                "name": "C.C.Cita",
+                "source_category": "Theater",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-06",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 7,
+                "name": "Parque Cocheras Global",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-07",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 8,
+                "name": "Parque Hermanamiento Segovia",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-08",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 9,
+                "name": "Holidayworld Maspalomas Center",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-09",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 10,
+                "name": "Baños Centro Comercial Faro 2",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-10",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 11,
+                "name": "Baños Parque Urbano del Sur",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-11",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 12,
+                "name": "Punta del Cardón",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-12",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 13,
+                "name": "Detrás Hospital San Roque enfrente del Cementerio El Pedrazo",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-13",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 14,
+                "name": "Playa Carpinteras",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-14",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 15,
+                "name": "Maspalomas",
+                "source_category": "Sauna",
+                "source_country_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+                "source_scope": "city_top_spots",
+                "source_city": "Maspalomas",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESP-MAS-15",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
         },
         {
           "city": "Mazagón (Moguer)",
