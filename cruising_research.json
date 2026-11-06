@@ -23,7 +23,12 @@
     "continuation": "In future chats, load this GitHub file first, then each submitted research website. Add a new record to sources as scrape_1, scrape_2, etc, add per-city findings to city.scrapes[scrape_id], add unique candidates to proposed_places, recalculate city/country proposals, and commit the updated file. Never modify listings.json until final cross-reference and explicit publication step. All scrape_1 source findings are candidate-level, not 2026-verified or publish-ready. Preserve raw names/types; do not dedupe different cities. Cities may be added even if Backroom had no venues there.",
     "exclusions": "33 baseline entries without a country and one Europe-wide multi-city listing are not assigned to a country. Czech Republic is merged under Czechia. This is a country/city research tracker, not a complete copy of listings.json.",
     "review_notes": [
-      "Serbia source page has two Kosovo-labelled entries; stored in Kosovo country for review, not treated as verified country assignment."
+      "Serbia source page has two Kosovo-labelled entries; stored in Kosovo country for review, not treated as verified country assignment.",
+      "Scrape 1 processed each of 45 Backroom countries where the source country pages were available; no qualifying claim of activity recency is made from merely appearing in this directory.",
+      "Country page top lists include public toilets, transport sites, stores, gyms, restaurants, saunas and other public venues; publication requires extra review for legality, consent, and appropriateness.",
+      "Source labels are not necessarily canonical Backroom city labels (for example source 'Praha' was recorded as Prague).",
+      "Failed countries Albania, Croatia, Moldova are not recorded as zero results; Kosovo lacks an independently listed page.",
+      "Scrape 1 results are raw counts of directory top listings; proposed_places and proposals are preliminary candidates based on exact city/name match only and NOT final deduplicated, verified new places."
     ]
   },
   "sources": [
@@ -33,7 +38,7 @@
       "base_url": "https://www.gays-cruising.com/",
       "section": "Top Gay Cruising Spots in [country]",
       "started_berlin": "2026-11-06",
-      "status": "in_progress",
+      "status": "completed_with_unavailable_countries",
       "countries_checked": [
         {
           "country": "Andorra",
@@ -214,10 +219,56 @@
           "country": "France",
           "country_url": "https://www.gays-cruising.com/en/france",
           "count": 15
+        },
+        {
+          "country": "Armenia",
+          "country_url": "https://www.gays-cruising.com/en/armenia",
+          "count": 1
+        },
+        {
+          "country": "Bosnia and Herzegovina",
+          "country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+          "count": 15
+        },
+        {
+          "country": "Czechia",
+          "country_url": "https://www.gays-cruising.com/en/czech_republic",
+          "count": 15
+        },
+        {
+          "country": "United Kingdom",
+          "country_url": "https://www.gays-cruising.com/en/united_kingdom",
+          "count": 15
+        },
+        {
+          "country": "United States",
+          "country_url": "https://www.gays-cruising.com/en/united_states",
+          "count": 15
         }
       ],
-      "countries_failed": [],
-      "results_total": 502
+      "countries_failed": [
+        {
+          "country": "Albania",
+          "country_url": "https://www.gays-cruising.com/en/albania",
+          "reason": "Country page could not be accessed (HTTP 451)."
+        },
+        {
+          "country": "Croatia",
+          "country_url": "https://www.gays-cruising.com/en/croatia",
+          "reason": "Country page could not be accessed (HTTP 451)."
+        },
+        {
+          "country": "Moldova",
+          "country_url": "https://www.gays-cruising.com/en/moldova",
+          "reason": "Country page could not be accessed."
+        },
+        {
+          "country": "Kosovo",
+          "country_url": null,
+          "reason": "No separate Kosovo page was found in source country directory. Two Kosovo-labelled places were present under Serbia and are tracked in Kosovo for later verification."
+        }
+      ],
+      "results_total": 563
     }
   ],
   "countries": [
@@ -651,15 +702,42 @@
     {
       "country": "Armenia",
       "cruising_now": 0,
-      "proposals": 0,
+      "proposals": 1,
       "cities": [
         {
           "city": "Yerevan",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 1,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ARMENIA-01",
+              "name": "Toilets of Metronome Shopping mall/underground Passage",
+              "city": "Yerevan",
+              "country": "Armenia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/armenia",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Toilets of Metronome Shopping mall/underground Passage",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/armenia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ARMENIA-01",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
         }
       ]
     },
@@ -5861,8 +5939,311 @@
     {
       "country": "United States",
       "cruising_now": 0,
-      "proposals": 0,
+      "proposals": 15,
       "cities": [
+        {
+          "city": "Abingdon",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-11",
+              "name": "Bush River Books and Video",
+              "city": "Abingdon",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Theater",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 11,
+                "name": "Bush River Books and Video",
+                "source_category": "Theater",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-11",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Baltimore",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-13",
+              "name": "Fort Armistead Park",
+              "city": "Baltimore",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 13,
+                "name": "Fort Armistead Park",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-13",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Denton",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-07",
+              "name": "Clear Creek Park",
+              "city": "Denton",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 7,
+                "name": "Clear Creek Park",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-07",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Desert Hot Springs",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-10",
+              "name": "Worsley Road Between INDIAN Dillion",
+              "city": "Desert Hot Springs",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 10,
+                "name": "Worsley Road Between INDIAN Dillion",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-10",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Eunice",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-01",
+              "name": "City Lake",
+              "city": "Eunice",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "City Lake",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-01",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Houston",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-08",
+              "name": "Cullen Park",
+              "city": "Houston",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 8,
+                "name": "Cullen Park",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-08",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Miami",
+          "cruising_now": 0,
+          "proposals": 2,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-02",
+              "name": "T.J. Maxx Westchester Plaza",
+              "city": "Miami",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-UNITED-STATES-09",
+              "name": "Normandy Isle Park",
+              "city": "Miami",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 2,
+                "name": "T.J. Maxx Westchester Plaza",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-02",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 9,
+                "name": "Normandy Isle Park",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-09",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Miami Beach",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-04",
+              "name": "Flamingo Park",
+              "city": "Miami Beach",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 4,
+                "name": "Flamingo Park",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-04",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
         {
           "city": "New Orleans",
           "cruising_now": 0,
@@ -5870,6 +6251,216 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Phoenix",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-12",
+              "name": "Braewood Park",
+              "city": "Phoenix",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 12,
+                "name": "Braewood Park",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-12",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Sacramento",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-06",
+              "name": "Poly Urban Studios",
+              "city": "Sacramento",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Club",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 6,
+                "name": "Poly Urban Studios",
+                "source_category": "Club",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-06",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "San Antonio",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-05",
+              "name": "McAllister Park",
+              "city": "San Antonio",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 5,
+                "name": "McAllister Park",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-05",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "San Bernardino",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-15",
+              "name": "Blue Cut",
+              "city": "San Bernardino",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 15,
+                "name": "Blue Cut",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-15",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Springfield",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-03",
+              "name": "Phelps Grove Park",
+              "city": "Springfield",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 3,
+                "name": "Phelps Grove Park",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-03",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Wilkes Barre",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-STATES-14",
+              "name": "Adult Cinema 309",
+              "city": "Wilkes Barre",
+              "country": "United States",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Theater",
+              "source_url": "https://www.gays-cruising.com/en/united_states",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 14,
+                "name": "Adult Cinema 309",
+                "source_category": "Theater",
+                "source_country_url": "https://www.gays-cruising.com/en/united_states",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-STATES-14",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
         }
       ]
     },
@@ -5897,8 +6488,379 @@
     {
       "country": "Bosnia and Herzegovina",
       "cruising_now": 1,
-      "proposals": 0,
+      "proposals": 15,
       "cities": [
+        {
+          "city": "Alipasin Most",
+          "cruising_now": 0,
+          "proposals": 2,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-01",
+              "name": "Šumica",
+              "city": "Alipasin Most",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-07",
+              "name": "WC u Shopping centru Otoka",
+              "city": "Alipasin Most",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Šumica",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-01",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 7,
+                "name": "WC u Shopping centru Otoka",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-07",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Banja Ilidza",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-05",
+              "name": "Obala rijeke Zeljeznice",
+              "city": "Banja Ilidza",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 5,
+                "name": "Obala rijeke Zeljeznice",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-05",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Banja Luka",
+          "cruising_now": 0,
+          "proposals": 4,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-09",
+              "name": "Podru?je oko Kastela-Kastel",
+              "city": "Banja Luka",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-11",
+              "name": "Boska (II sprat)",
+              "city": "Banja Luka",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-13",
+              "name": "Cafe Mister X",
+              "city": "Banja Luka",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Bar",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-14",
+              "name": "Ziza",
+              "city": "Banja Luka",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Bar",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 9,
+                "name": "Podru?je oko Kastela-Kastel",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-09",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 11,
+                "name": "Boska (II sprat)",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-11",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 13,
+                "name": "Cafe Mister X",
+                "source_category": "Bar",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-13",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 14,
+                "name": "Ziza",
+                "source_category": "Bar",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-14",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Ildza",
+          "cruising_now": 0,
+          "proposals": 2,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-08",
+              "name": "Hollywood Hotel Sauna",
+              "city": "Ildza",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-12",
+              "name": "Pejton",
+              "city": "Ildza",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 8,
+                "name": "Hollywood Hotel Sauna",
+                "source_category": "Sauna",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-08",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 12,
+                "name": "Pejton",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-12",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Mostar",
+          "cruising_now": 0,
+          "proposals": 2,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-03",
+              "name": "Bacevici",
+              "city": "Mostar",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-04",
+              "name": "Mepas",
+              "city": "Mostar",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 3,
+                "name": "Bacevici",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-03",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 4,
+                "name": "Mepas",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-04",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Prijedor",
+          "cruising_now": 0,
+          "proposals": 2,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-10",
+              "name": "Parking kod Celpaka",
+              "city": "Prijedor",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Industrial Park",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-15",
+              "name": "Stari Grad",
+              "city": "Prijedor",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 10,
+                "name": "Parking kod Celpaka",
+                "source_category": "Industrial Park",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-10",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 15,
+                "name": "Stari Grad",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-15",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
         {
           "city": "Sarajevo",
           "cruising_now": 1,
@@ -5912,6 +6874,76 @@
           ],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Sarajlije",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-06",
+              "name": "Vils",
+              "city": "Sarajlije",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 6,
+                "name": "Vils",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-06",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Vogosca",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-02",
+              "name": "Park kod Porodilišta",
+              "city": "Vogosca",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 2,
+                "name": "Park kod Porodilišta",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-02",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         }
       ]
     },
@@ -6754,20 +7786,245 @@
     {
       "country": "Czechia",
       "cruising_now": 1,
-      "proposals": 0,
+      "proposals": 15,
       "cities": [
         {
           "city": "Brno",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 2,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-CZECHIA-03",
+              "name": "Lužánky Za Bazénem",
+              "city": "Brno",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-CZECHIA-04",
+              "name": "WC dole u Rossmana Hlavní Nádraží",
+              "city": "Brno",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 3,
+                "name": "Lužánky Za Bazénem",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-03",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 4,
+                "name": "WC dole u Rossmana Hlavní Nádraží",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-04",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Frýdek-Místek",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-CZECHIA-01",
+              "name": "Chlebovice",
+              "city": "Frýdek-Místek",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Chlebovice",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-01",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Jihlava",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-CZECHIA-02",
+              "name": "Stránecká Zhoř",
+              "city": "Jihlava",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 2,
+                "name": "Stránecká Zhoř",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-02",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Most",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-CZECHIA-09",
+              "name": "Za městem",
+              "city": "Most",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 9,
+                "name": "Za městem",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-09",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Ostrava",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-CZECHIA-12",
+              "name": "Forum Nova Karolina",
+              "city": "Ostrava",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 12,
+                "name": "Forum Nova Karolina",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-12",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Plzen",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-CZECHIA-13",
+              "name": "Nudapláž Bolevák",
+              "city": "Plzen",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 13,
+                "name": "Nudapláž Bolevák",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-13",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         },
         {
           "city": "Prague",
           "cruising_now": 1,
-          "proposals": 0,
+          "proposals": 7,
           "existing_cruising": [
             {
               "id": "CRU-PRG-LETPAR-01",
@@ -6775,8 +8032,208 @@
               "status": "Live"
             }
           ],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-CZECHIA-05",
+              "name": "Podolí Cliffs",
+              "city": "Prague",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-CZECHIA-06",
+              "name": "Palladium Shopping Mall WC",
+              "city": "Prague",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-CZECHIA-08",
+              "name": "Praha Hlavni Nadrazi- Zachody",
+              "city": "Prague",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-CZECHIA-10",
+              "name": "Public Toilet at OC Opatovska",
+              "city": "Prague",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-CZECHIA-11",
+              "name": "OC Nový Smíchov WC -1",
+              "city": "Prague",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-CZECHIA-14",
+              "name": "Folimanka Park",
+              "city": "Prague",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-CZECHIA-15",
+              "name": "Lesík u Metra Palmovka",
+              "city": "Prague",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 5,
+                "name": "Podolí Cliffs",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-05",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 6,
+                "name": "Palladium Shopping Mall WC",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-06",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 8,
+                "name": "Praha Hlavni Nadrazi- Zachody",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-08",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 10,
+                "name": "Public Toilet at OC Opatovska",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-10",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 11,
+                "name": "OC Nový Smíchov WC -1",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-11",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 14,
+                "name": "Folimanka Park",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-14",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 15,
+                "name": "Lesík u Metra Palmovka",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-15",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Teplice",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-CZECHIA-07",
+              "name": "Barbora",
+              "city": "Teplice",
+              "country": "Czechia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/czech_republic",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 7,
+                "name": "Barbora",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/czech_republic",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-CZECHIA-07",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         }
       ]
     },
@@ -13316,15 +14773,42 @@
     {
       "country": "United Kingdom",
       "cruising_now": 6,
-      "proposals": 0,
+      "proposals": 13,
       "cities": [
         {
           "city": "Belfast",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 1,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-12",
+              "name": "Barnetts Demesne",
+              "city": "Belfast",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 12,
+                "name": "Barnetts Demesne",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-12",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         },
         {
           "city": "Birmingham",
@@ -13381,6 +14865,41 @@
           "scrapes": {}
         },
         {
+          "city": "Cowdenbeath",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-03",
+              "name": "At the back of Lucy Sue Coffee Shop",
+              "city": "Cowdenbeath",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Bar",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 3,
+                "name": "At the back of Lucy Sue Coffee Shop",
+                "source_category": "Bar",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-03",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
           "city": "Edinburgh",
           "cruising_now": 0,
           "proposals": 0,
@@ -13395,6 +14914,111 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Havant",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-05",
+              "name": "Battens woods",
+              "city": "Havant",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 5,
+                "name": "Battens woods",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-05",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Hayes",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-11",
+              "name": "Cranford Park",
+              "city": "Hayes",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 11,
+                "name": "Cranford Park",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-11",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Hillsborough",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-09",
+              "name": "McKees Dam",
+              "city": "Hillsborough",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 9,
+                "name": "McKees Dam",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-09",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         },
         {
           "city": "Leeds",
@@ -13413,6 +15037,41 @@
           "scrapes": {}
         },
         {
+          "city": "Limavady",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-14",
+              "name": "Forest road",
+              "city": "Limavady",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 14,
+                "name": "Forest road",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-14",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
           "city": "Liverpool",
           "cruising_now": 0,
           "proposals": 0,
@@ -13423,7 +15082,7 @@
         {
           "city": "London",
           "cruising_now": 5,
-          "proposals": 0,
+          "proposals": 4,
           "existing_cruising": [
             {
               "id": "CRU-LON-BARPAR-03",
@@ -13456,8 +15115,159 @@
               "status": "Hold"
             }
           ],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-01",
+              "name": "Liverpool Street station toilets",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-06",
+              "name": "Cruising in Dark Garden",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-07",
+              "name": "Waterloo Train Station",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-08",
+              "name": "Public Toilets - Carnaby Street",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Liverpool Street station toilets",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-01",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 2,
+                "name": "Hampstead Heath",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": "CRU-LON-HAMHEA-01",
+                "proposal_id": null,
+                "assessment": "already_in_backroom"
+              },
+              {
+                "rank": 6,
+                "name": "Cruising in Dark Garden",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-06",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 7,
+                "name": "Waterloo Train Station",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-07",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 8,
+                "name": "Public Toilets - Carnaby Street",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-08",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 10,
+                "name": "Clapham Common",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": "CRU-LON-CLACOM-01",
+                "proposal_id": null,
+                "assessment": "already_in_backroom"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Maghera",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-04",
+              "name": "Glenshane lay by",
+              "city": "Maghera",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 4,
+                "name": "Glenshane lay by",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-04",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         },
         {
           "city": "Manchester",
@@ -13490,6 +15300,76 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "St Albans",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-13",
+              "name": "Ragged Hall Lane",
+              "city": "St Albans",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 13,
+                "name": "Ragged Hall Lane",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-13",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Wembley",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-15",
+              "name": "Horsenden Hill Car Park",
+              "city": "Wembley",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 15,
+                "name": "Horsenden Hill Car Park",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/united_kingdom",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-UNITED-KINGDOM-15",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         }
       ]
     },
