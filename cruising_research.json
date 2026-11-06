@@ -34,7 +34,8 @@
       "Clarification 2026-11-06: restored 41 previously excluded ordinary/managed sites as unverified candidates; 21 dedicated nightlife/sex businesses remain out of proposals. Raw source counts unchanged.",
       "Scrape 4 uses The Gay Passport city/destination guides; retained named cruising spots at ordinary/public sites (including shopping-centre and station toilets), excluded dedicated gay nightlife venues. Australia and Mexico are tracked separately because they are not among Backroom's current 45 country labels.",
       "Scrape 5 (Splashd) is an INDEX-ONLY research checkpoint, not a completed individual-place scrape. Its 56 advertised country counts are stored in research/cruising/scrape_5.json; site access currently blocks individual records and no proposals were added. Resume with an authorized full browser if possible.",
-      "Scrape 6 Popcorn.dating: 20 selected public outdoor/parking index records from cached general directory pages 1-2, with 8 preliminary new proposals. Source category and detail pages were inaccessible. Source mixes orientations and eras; all new candidates require current verification and male/gay relevance checking before publication."
+      "Scrape 6 Popcorn.dating: 20 selected public outdoor/parking index records from cached general directory pages 1-2, with 8 preliminary new proposals. Source category and detail pages were inaccessible. Source mixes orientations and eras; all new candidates require current verification and male/gay relevance checking before publication.",
+      "Manual scrape placeholders: scrape_5 (Splashd) and scrape_7 (Squirt.org) now have null per-city entries, meaning not yet collected; these are NOT zero-result counts. Squirt.org research file is reserved for a later user-supplied manual dump."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -934,7 +935,9 @@
       "spot_records_retrieved": 0,
       "results_total": null,
       "proposals_new": null,
-      "notes": "The map overview is indexed/readable and country totals for all 56 countries have been preserved in scrape_5.json. Country/city/individual-spot pages could not be fetched through the available research tools; ZERO records retrieved does not mean ZERO cruising places. Do not add city scrape counts or proposed_places until source records can be accessed in a full browser session. Never collect app user locations, check-ins, or chats."
+      "notes": "The map overview is indexed/readable and country totals for all 56 countries have been preserved in scrape_5.json. Country/city/individual-spot pages could not be fetched through the available research tools; ZERO records retrieved does not mean ZERO cruising places. Do not add city scrape counts or proposed_places until source records can be accessed in a full browser session. Never collect app user locations, check-ins, or chats.",
+      "manual_scrape_planned": true,
+      "manual_scrape_note": "User will manually collect Splashd's individual spot records and supply a dump for later reconciliation; null scrape_5 city columns mean not yet researched."
     },
     {
       "id": "scrape_6",
@@ -950,6 +953,18 @@
       "index_pages_read": 2,
       "details_accessible": false,
       "notes": "Outdoor and Parking lot entries from general public directory pages 1 and 2 (cached/stale). Target Outdoor category, later index pages and individual detail pages inaccessible. Mixed orientation, not necessarily gay or active. 8 unverified new proposals only; other leads include existing locations, vague entries and safety exclusions. No production listing changes."
+    },
+    {
+      "id": "scrape_7",
+      "site": "Squirt.org",
+      "base_url": "https://www.squirt.org/",
+      "started_berlin": "2026-11-06",
+      "status": "reserved_for_user_manual_scrape",
+      "data_file": "research/cruising/scrape_7.json",
+      "results_total": null,
+      "proposals_new": null,
+      "manually_collected_by_user": true,
+      "notes": "User plans to provide a manual extraction later. scrape_7 per-city column null means NOT COLLECTED, not zero results. Match against baseline and scrapes 1–6 after import. Retain source URLs and public place data only."
     }
   ],
   "countries": [
@@ -964,7 +979,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -1100,7 +1118,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 9
+            "scrape_1": 9,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1124,7 +1144,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1161,7 +1183,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1198,7 +1222,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1222,7 +1248,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -1253,7 +1281,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -1269,7 +1299,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Antwerp",
@@ -1318,7 +1351,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1383,7 +1418,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1420,7 +1457,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1444,7 +1483,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1468,7 +1509,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1492,7 +1535,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1516,7 +1561,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1525,7 +1572,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lommel",
@@ -1548,7 +1598,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1574,7 +1626,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1598,7 +1652,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1624,7 +1680,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1650,7 +1708,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1674,7 +1734,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -1705,7 +1767,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1742,7 +1806,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1896,7 +1962,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 11
+            "scrape_1": 11,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1920,7 +1988,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1929,7 +1999,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -1972,7 +2045,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1996,7 +2071,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2164,7 +2241,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 12
+            "scrape_1": 12,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -2195,7 +2274,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2219,7 +2300,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2270,7 +2353,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -2301,7 +2386,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2325,7 +2412,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2375,7 +2464,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2399,7 +2490,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2423,7 +2516,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2447,7 +2542,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2471,7 +2568,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2495,7 +2594,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2519,7 +2620,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2609,7 +2712,9 @@
           ],
           "scrapes": {
             "scrape_1": 4,
-            "scrape_4": 2
+            "scrape_4": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2618,7 +2723,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -2661,7 +2769,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2670,7 +2780,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -2700,7 +2813,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2725,7 +2840,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2734,7 +2851,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -2791,7 +2911,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2841,7 +2963,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2865,7 +2989,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2889,7 +3015,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2913,7 +3041,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3002,7 +3132,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 6
+            "scrape_1": 6,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -3033,7 +3165,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3071,7 +3205,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3095,7 +3231,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3119,7 +3257,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3143,7 +3283,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3167,7 +3309,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3191,7 +3335,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3215,7 +3361,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3239,7 +3387,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3263,7 +3413,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3287,7 +3439,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3311,7 +3465,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3337,7 +3493,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3362,7 +3520,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3386,7 +3546,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -3402,7 +3564,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -3458,7 +3623,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3495,7 +3662,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3519,7 +3688,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3595,7 +3766,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 5
+            "scrape_1": 5,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3619,7 +3792,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3669,7 +3844,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -3700,7 +3877,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3855,7 +4034,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 11
+            "scrape_1": 11,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3879,7 +4060,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3903,7 +4086,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3927,7 +4112,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -3959,7 +4146,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4074,7 +4263,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 10
+            "scrape_1": 10,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4098,7 +4289,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4122,7 +4315,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4146,7 +4341,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4170,7 +4367,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -4201,7 +4400,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4225,7 +4426,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4249,7 +4452,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4273,7 +4478,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4297,7 +4504,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4321,7 +4530,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4345,7 +4556,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4395,7 +4608,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4419,7 +4634,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4443,7 +4660,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4467,7 +4686,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4491,7 +4712,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4515,7 +4738,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -4546,7 +4771,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4638,7 +4865,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 6
+            "scrape_1": 6,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4743,7 +4972,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 8
+            "scrape_1": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -4760,7 +4991,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4784,7 +5017,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4808,7 +5043,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4832,7 +5069,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4856,7 +5095,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4880,7 +5121,9 @@
             }
           ],
           "scrapes": {
-            "scrape_4": 1
+            "scrape_4": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4904,7 +5147,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4941,7 +5186,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4965,7 +5212,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4974,7 +5223,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "New York",
@@ -5036,7 +5288,9 @@
             }
           ],
           "scrapes": {
-            "scrape_4": 4
+            "scrape_4": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5046,7 +5300,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_4": 0
+            "scrape_4": 0,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5070,7 +5326,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5080,7 +5338,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5104,7 +5364,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5128,7 +5390,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5153,7 +5417,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5163,7 +5429,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5173,7 +5441,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5183,7 +5453,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -5205,7 +5477,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -5248,7 +5523,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5272,7 +5549,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5309,7 +5588,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5347,7 +5628,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5384,7 +5667,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5421,7 +5706,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5436,7 +5723,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Sarajlije",
@@ -5459,7 +5749,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5483,7 +5775,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -5514,7 +5808,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5551,7 +5847,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5712,7 +6010,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 12
+            "scrape_1": 12,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -5744,7 +6044,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5807,7 +6109,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5831,7 +6135,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5874,7 +6180,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5911,7 +6219,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5935,7 +6245,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5998,7 +6310,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -6042,7 +6356,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6066,7 +6382,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6090,7 +6408,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6114,7 +6434,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6138,7 +6460,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6162,7 +6486,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6270,7 +6596,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 7
+            "scrape_1": 7,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6294,7 +6622,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -6325,7 +6655,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6350,7 +6682,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6360,7 +6694,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6590,7 +6926,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 23
+            "scrape_1": 23,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6616,7 +6954,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6641,7 +6981,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6667,7 +7009,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6692,7 +7036,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -6723,7 +7069,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6805,7 +7153,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 6
+            "scrape_1": 6,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6855,7 +7205,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6892,7 +7244,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6942,7 +7296,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -6973,7 +7329,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6997,7 +7355,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7021,7 +7381,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7058,7 +7420,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7067,7 +7431,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Sankt Pölten",
@@ -7090,7 +7457,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7216,7 +7585,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 8
+            "scrape_1": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7240,7 +7611,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -7271,7 +7644,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7280,7 +7655,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Dublin",
@@ -7406,7 +7784,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 9
+            "scrape_1": 9,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7456,7 +7836,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7480,7 +7862,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7504,7 +7888,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -7535,7 +7921,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7572,7 +7960,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7596,7 +7986,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7620,7 +8012,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7629,7 +8023,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Marsaskala",
@@ -7665,7 +8062,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7680,7 +8079,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Naxxar",
@@ -7703,7 +8105,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7740,7 +8144,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7767,7 +8173,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7817,7 +8225,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7847,7 +8257,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7856,7 +8268,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Victoria",
@@ -7864,7 +8279,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -8061,7 +8479,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 13
+            "scrape_1": 13,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -8186,7 +8606,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 7
+            "scrape_1": 7,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8210,7 +8632,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8234,7 +8658,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8258,7 +8684,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8282,7 +8710,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8319,7 +8749,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8356,7 +8788,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -8372,7 +8806,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Cagliari",
@@ -8380,7 +8817,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Calenzano (Florence)",
@@ -8388,7 +8828,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Caorle",
@@ -8411,7 +8854,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8435,7 +8880,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8459,7 +8906,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8535,7 +8984,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 5
+            "scrape_1": 5,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8559,7 +9010,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8568,7 +9021,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lacchiarella",
@@ -8591,7 +9047,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8615,7 +9073,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8738,7 +9198,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 8
+            "scrape_1": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8747,7 +9209,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Naples",
@@ -8755,7 +9220,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Padua",
@@ -8763,7 +9231,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Peschiera Borromeo",
@@ -8786,7 +9257,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8810,7 +9283,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8834,7 +9309,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8854,7 +9331,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "San Michele al Tagliamento",
@@ -8877,7 +9357,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8901,7 +9383,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8925,7 +9409,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8934,7 +9420,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Venice",
@@ -9022,7 +9511,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 6
+            "scrape_1": 6,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9031,7 +9522,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Verona",
@@ -9039,7 +9533,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Viareggio",
@@ -9053,7 +9550,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Chiavari",
@@ -9062,7 +9562,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -9093,7 +9595,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9117,7 +9621,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9313,7 +9819,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 13
+            "scrape_1": 13,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -9372,7 +9880,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9426,7 +9936,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9469,7 +9981,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9493,7 +10007,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9519,7 +10035,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9545,7 +10063,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9569,7 +10089,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9578,7 +10100,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Słubice",
@@ -9601,7 +10126,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9625,7 +10152,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9699,7 +10228,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9736,7 +10267,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -9767,7 +10300,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9791,7 +10326,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9815,7 +10352,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9873,7 +10412,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9898,7 +10439,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9922,7 +10465,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9946,7 +10491,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9970,7 +10517,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9994,7 +10543,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10018,7 +10569,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10042,7 +10595,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10066,7 +10621,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10090,7 +10647,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10100,7 +10659,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -10122,7 +10683,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Novalja",
@@ -10130,7 +10694,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Rijeka",
@@ -10144,7 +10711,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Split",
@@ -10168,7 +10738,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Zagreb",
@@ -10176,7 +10749,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lopar",
@@ -10185,7 +10761,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10195,7 +10773,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -10211,7 +10791,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Drammen",
@@ -10234,7 +10817,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10258,7 +10843,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10282,7 +10869,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10306,7 +10895,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10331,7 +10922,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10394,7 +10987,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10470,7 +11065,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10494,7 +11091,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10503,7 +11102,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Trondheim",
@@ -10526,7 +11128,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -10557,7 +11161,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10566,7 +11172,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Coina",
@@ -10589,7 +11198,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10613,7 +11224,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10622,7 +11235,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Leça da Palmeira",
@@ -10645,7 +11261,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10691,7 +11309,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_4": 0
+            "scrape_4": 0,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10715,7 +11335,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10752,7 +11374,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10776,7 +11400,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10800,7 +11426,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10815,7 +11443,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Vila Nova de Gaia",
@@ -10851,7 +11482,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -10882,7 +11515,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11006,7 +11641,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 8
+            "scrape_1": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11030,7 +11667,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11039,7 +11678,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Kos",
@@ -11075,7 +11717,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11158,7 +11802,9 @@
           ],
           "scrapes": {
             "scrape_1": 5,
-            "scrape_4": 2
+            "scrape_4": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11182,7 +11828,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11226,7 +11874,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -11257,7 +11907,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11266,7 +11918,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Blackpool",
@@ -11274,7 +11929,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Brighton",
@@ -11288,7 +11946,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Bristol",
@@ -11296,7 +11957,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Bury",
@@ -11304,7 +11968,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Cardiff",
@@ -11312,7 +11979,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Cowdenbeath",
@@ -11336,7 +12006,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11345,7 +12017,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Glasgow",
@@ -11353,7 +12028,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Havant",
@@ -11376,7 +12054,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11400,7 +12080,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11427,7 +12109,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11436,7 +12120,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Leicester",
@@ -11444,7 +12131,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Limavady",
@@ -11467,7 +12157,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11476,7 +12168,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "London",
@@ -11624,7 +12319,9 @@
           ],
           "scrapes": {
             "scrape_1": 6,
-            "scrape_4": 9
+            "scrape_4": 9,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11648,7 +12345,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11657,7 +12356,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Mansfield",
@@ -11665,7 +12367,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Newcastle",
@@ -11673,7 +12378,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Sheffield",
@@ -11681,7 +12389,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "St Albans",
@@ -11704,7 +12415,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11728,7 +12441,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -11744,7 +12459,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Alten",
@@ -11767,7 +12485,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11793,7 +12513,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11802,7 +12524,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Bern",
@@ -11836,7 +12561,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11860,7 +12587,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11884,7 +12613,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11893,7 +12624,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Dietikon",
@@ -11916,7 +12650,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11940,7 +12676,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11965,7 +12703,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Inwil",
@@ -11988,7 +12729,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12012,7 +12755,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12021,7 +12766,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lucerne",
@@ -12029,7 +12777,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Obfelden",
@@ -12054,7 +12805,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12080,7 +12833,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12089,7 +12844,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Wädenswil",
@@ -12112,7 +12870,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12136,7 +12896,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12160,7 +12922,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12234,7 +12998,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -12265,7 +13031,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12339,7 +13107,9 @@
           ],
           "scrapes": {
             "scrape_1": 2,
-            "scrape_4": 1
+            "scrape_4": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12363,7 +13133,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12387,7 +13159,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12411,7 +13185,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12435,7 +13211,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12461,7 +13239,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12485,7 +13265,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12494,7 +13276,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Kamperland",
@@ -12520,7 +13305,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12544,7 +13331,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12568,7 +13357,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12583,7 +13374,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Terneuzen",
@@ -12606,7 +13400,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12643,7 +13439,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12667,7 +13465,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12694,7 +13494,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12718,7 +13520,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12742,7 +13546,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12757,7 +13563,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Zoetermeer",
@@ -12780,7 +13589,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12790,7 +13601,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12814,7 +13627,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12824,7 +13639,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12848,7 +13665,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12858,7 +13677,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -12890,7 +13711,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12915,7 +13738,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12940,7 +13765,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -13927,7 +14754,9 @@
             "scrape_1": 1,
             "scrape_2": 60,
             "scrape_3": 49,
-            "scrape_4": 5
+            "scrape_4": 5,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -13936,7 +14765,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Bönningstedt",
@@ -13945,7 +14777,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14034,7 +14868,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 6
+            "scrape_2": 6,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14073,7 +14909,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_2": 3
+            "scrape_2": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14082,7 +14920,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Cologne",
@@ -14453,7 +15294,9 @@
           "scrapes": {
             "scrape_1": 2,
             "scrape_2": 12,
-            "scrape_3": 19
+            "scrape_3": 19,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14622,7 +15465,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 12
+            "scrape_2": 12,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14750,7 +15595,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 9
+            "scrape_2": 9,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14892,7 +15739,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_2": 9
+            "scrape_2": 9,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15073,7 +15922,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 13
+            "scrape_2": 13,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15097,7 +15948,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15148,7 +16001,9 @@
           ],
           "scrapes": {
             "scrape_1": 2,
-            "scrape_2": 1
+            "scrape_2": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15185,7 +16040,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 2
+            "scrape_2": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15210,7 +16067,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15396,7 +16255,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 13
+            "scrape_2": 13,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15405,7 +16266,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Gießen",
@@ -15413,7 +16277,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Gronau (Westfalen)",
@@ -15436,7 +16303,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15941,7 +16810,9 @@
           ],
           "scrapes": {
             "scrape_2": 22,
-            "scrape_3": 29
+            "scrape_3": 29,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16134,7 +17005,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 14
+            "scrape_2": 14,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16159,7 +17032,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16169,7 +17044,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16194,7 +17071,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16218,7 +17097,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16334,7 +17215,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 8
+            "scrape_2": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16343,7 +17226,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Königs Wusterhausen",
@@ -16367,7 +17253,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16469,7 +17357,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 7
+            "scrape_2": 7,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16478,7 +17368,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Magdeburg",
@@ -16486,7 +17379,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Mainz",
@@ -16494,7 +17390,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Mannheim",
@@ -16608,7 +17507,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 8
+            "scrape_2": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16632,7 +17533,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16683,7 +17586,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_2": 2
+            "scrape_2": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16938,7 +17843,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 20
+            "scrape_2": 20,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16947,7 +17854,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Nuremberg",
@@ -17048,7 +17958,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 7
+            "scrape_2": 7,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17057,7 +17969,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Radolfzell am Bodensee",
@@ -17080,7 +17995,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17132,7 +18049,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_2": 3
+            "scrape_2": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17157,7 +18076,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17182,7 +18103,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17192,7 +18115,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17231,7 +18156,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_2": 2
+            "scrape_2": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17334,7 +18261,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 7
+            "scrape_2": 7,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17359,7 +18288,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17369,7 +18300,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17394,7 +18327,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17419,7 +18354,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17667,7 +18604,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 20
+            "scrape_2": 20,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17676,7 +18615,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Tornesch",
@@ -17685,7 +18627,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17710,7 +18654,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17735,7 +18681,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17744,7 +18692,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -17774,7 +18725,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17798,7 +18751,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17807,7 +18762,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Avinyó",
@@ -17830,7 +18788,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17854,7 +18814,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17878,7 +18840,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17988,7 +18952,9 @@
           ],
           "scrapes": {
             "scrape_1": 5,
-            "scrape_4": 4
+            "scrape_4": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18012,7 +18978,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18022,7 +18990,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_4": 0
+            "scrape_4": 0,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18031,7 +19001,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Calella",
@@ -18056,7 +19029,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18071,7 +19046,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Cartagena",
@@ -18085,7 +19063,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Castellbisbal",
@@ -18108,7 +19089,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18132,7 +19115,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18156,7 +19141,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18180,7 +19167,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18189,7 +19178,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Granadilla de Abona",
@@ -18197,7 +19189,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Ibiza",
@@ -18211,7 +19206,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "La Marina",
@@ -18234,7 +19232,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18427,7 +19427,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 15
+            "scrape_1": 15,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18451,7 +19453,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18512,7 +19516,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18708,7 +19714,9 @@
           "scrapes": {
             "scrape_1": 15,
             "scrape_4": 3,
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18734,7 +19742,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18749,7 +19759,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Mollet",
@@ -18773,7 +19786,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18788,7 +19803,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Playa de las Américas",
@@ -18796,7 +19814,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Playa del Inglés",
@@ -18804,7 +19825,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Puerto de la Cruz",
@@ -18812,7 +19836,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Reus",
@@ -18835,7 +19862,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18888,7 +19917,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18914,7 +19945,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18938,7 +19971,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18947,7 +19982,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Seville",
@@ -18955,7 +19993,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Sitges",
@@ -18970,7 +20011,9 @@
           ],
           "proposed_places": [],
           "scrapes": {
-            "scrape_4": 1
+            "scrape_4": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18996,7 +20039,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19022,7 +20067,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19031,7 +20078,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Valdemoro",
@@ -19054,7 +20104,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19084,7 +20136,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Vigo",
@@ -19092,7 +20147,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Vilafranca del Penedès",
@@ -19115,7 +20173,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19139,7 +20199,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19154,7 +20216,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Villaviciosa de Odón",
@@ -19177,7 +20242,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19201,7 +20268,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19225,7 +20294,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19249,7 +20320,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -19265,7 +20338,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Bordeaux",
@@ -19273,7 +20349,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Brégnier-Cordon",
@@ -19296,7 +20375,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19311,7 +20392,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Entrange",
@@ -19334,7 +20418,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19349,7 +20435,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Hendaye",
@@ -19372,7 +20461,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19396,7 +20487,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19420,7 +20513,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19435,7 +20530,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lille",
@@ -19443,7 +20541,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lyon",
@@ -19451,7 +20552,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Marseille",
@@ -19475,7 +20579,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Montpellier",
@@ -19489,7 +20596,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Mulhouse",
@@ -19512,7 +20622,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19527,7 +20639,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Paris",
@@ -19634,7 +20749,9 @@
           ],
           "scrapes": {
             "scrape_1": 5,
-            "scrape_4": 2
+            "scrape_4": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19658,7 +20775,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19682,7 +20801,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19691,7 +20812,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Urrugne",
@@ -19714,7 +20838,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19738,7 +20864,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19748,7 +20876,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19772,7 +20902,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
