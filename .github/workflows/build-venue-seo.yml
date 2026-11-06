@@ -1,0 +1,43 @@
+name: Build Backroom venue search-entry pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - listings.json
+      - scripts/build_venue_seo.py
+      - .github/workflows/build-venue-seo.yml
+      - privacy.html
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: venue-seo-generator-main
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out current site
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Generate pages and sitemap from listings.json
+        run: python3 scripts/build_venue_seo.py
+
+      - name: Commit updated generated files
+        run: |
+          git add -A -- venue/ sitemap.xml
+          if git diff --cached --quiet; then
+            echo "SEO pages and sitemap already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "SEO: regenerate venue entry pages and sitemap from listings.json"
+          git push origin HEAD:main
