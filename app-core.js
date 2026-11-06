@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.21";
+const APP_VERSION = "v1.5.24";
 const APP_DATE = "6 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -2730,7 +2730,7 @@ async function renderStaticPageView(page) {
     container.innerHTML = `<p class="body-font">Loading content...</p>`;
     try {
         const staticUrl = page === 'cruising-guide'
-            ? 'cruising-guide.html?v=1.5.21'
+            ? 'cruising-guide.html?v=1.5.23'
             : `${page}.html`;
         const res = await fetch(staticUrl, { cache: 'no-cache' });
         if(!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -2761,12 +2761,95 @@ async function renderDressCodesGuide() {
     } catch(error) { console.warn('Glossary feedback redirect could not be completed',error); }
 }
 
+/* v1.5.24 — city bubbles use the SAME public Cruising Area records as the directory. */
+function buildCruisingMapCities() {
+    const eligible = getPublicVenues().filter(isCruisingAreaVenue);
+    const keyFor = (city, country, venue = null) =>
+        normalizeCityName(city, country, venue) + '|' + normalizeCountryName(country);
+    const inRegion = point => point && Number.isFinite(point.lat) && Number.isFinite(point.lng)
+        && point.lat >= 26 && point.lat <= 73 && point.lng >= -27 && point.lng <= 52;
+    const recordPoint = venue => {
+        const lat = Number.parseFloat(String(venue?.Latitude ?? ''));
+        const lng = Number.parseFloat(String(venue?.Longitude ?? ''));
+        const point = { lat, lng };
+        return inRegion(point) ? point : null;
+    };
+    const byCity = new Map();
+    const coordinates = new Map();
+    const known = new Map();
+    (window.BRHeatCityCoordinates || []).forEach(place => {
+        const key = keyFor(place.city, place.country);
+        if (inRegion(place) && !known.has(key)) known.set(key, { lat: place.lat, lng: place.lng });
+    });
+    getPublicVenues().forEach(venue => {
+        const cities = getCityTokens(venue);
+        const point = cities.length === 1 ? recordPoint(venue) : null;
+        if (!point) return;
+        const key = keyFor(cities[0], venue.Country, venue);
+        const current = coordinates.get(key) || { lat: 0, lng: 0, count: 0 };
+        current.lat += point.lat;
+        current.lng += point.lng;
+        current.count += 1;
+        coordinates.set(key, current);
+    });
+    eligible.forEach(venue => {
+        const country = String(venue.Country || '').trim();
+        const cities = getCityTokens(venue);
+        const seen = new Set();
+        cities.forEach(cityName => {
+            const key = keyFor(cityName, country, venue);
+            if (!country || !cityName || seen.has(key)) return;
+            seen.add(key);
+            const canonical = normalizeCityName(cityName, country, venue);
+            const city = canonical === 'maspalomas' && normalizeCountryName(country) === 'spain'
+                ? 'Maspalomas' : cityName;
+            if (!byCity.has(key)) byCity.set(key, {
+                key: canonical, countryKey: normalizeCountryName(country), city, country,
+                count: 0, latSum: 0, lngSum: 0, exact: 0
+            });
+            const entry = byCity.get(key);
+            entry.count += 1;
+            const point = cities.length === 1 ? recordPoint(venue) : null;
+            if (point) {
+                entry.latSum += point.lat;
+                entry.lngSum += point.lng;
+                entry.exact += 1;
+            }
+        });
+    });
+    let unplotted = 0;
+    const cities = [...byCity.values()].map(group => {
+        const reference = coordinates.get(group.key + '|' + group.countryKey);
+        const fallback = known.get(group.key + '|' + group.countryKey);
+        const point = fallback
+            || (group.exact ? { lat: group.latSum / group.exact, lng: group.lngSum / group.exact } : null)
+            || (reference ? { lat: reference.lat / reference.count, lng: reference.lng / reference.count } : null);
+        if (!inRegion(point)) { unplotted += 1; return null; }
+        return { ...group, lat: point.lat, lng: point.lng };
+    }).filter(Boolean);
+    return { cities, unplotted };
+}
+
+let cruisingMapExpanded = false;
+let cruisingMapViewport = null;
+let cruisingMapInstance = null;
+let cruisingMapLoadToken = 0;
+
 /* v1.5: Cruising Guide is a filtered venue browser, not a duplicate venue database. */
 let savedCruisingSearchText='';
 let cruisingGuideWasExpanded=false;
 let savedCruisingTopic='';
 async function renderCruisingDirectory() {
     const current=document.getElementById('cruising-guide-container');
+    ++cruisingMapLoadToken;
+    if(current?.querySelector('.br-cruising-map-details')) {
+        cruisingMapExpanded = current.querySelector('.br-cruising-map-details').open;
+    }
+    if(cruisingMapInstance) {
+        cruisingMapViewport = cruisingMapInstance.getView();
+        cruisingMapInstance.destroy();
+        cruisingMapInstance = null;
+    }
     if(current) {
         savedCruisingSearchText=current.querySelector('#v15-cruising-search')?.value ?? savedCruisingSearchText;
         cruisingGuideWasExpanded=current.querySelector('.v15-cruising-guide')?.open ?? cruisingGuideWasExpanded;
@@ -2781,10 +2864,78 @@ async function renderCruisingDirectory() {
     const guide=container.innerHTML;
     const scope=getSavedSearchScope();
     container.innerHTML='<div class="v154-cruising-heading"><h2 class="display-font v15-cruising-title">🔥 CRUISING AREAS</h2><span class="v154-cruising-heading-location"></span></div>'
+      +'<details class="br-cruising-map-details"><summary>🗺️ EXPLORE CRUISING AREAS BY MAP</summary><div class="br-cruising-map-inner"><div class="br-cruising-map-canvas" aria-label="Interactive map of cruising area cities" role="region"></div><p class="br-cruising-map-status" role="status" aria-live="polite"></p></div></details>'
       +'<details class="v15-cruising-guide"><summary>CRUISING GUIDE, TIPS & SEXUAL HEALTH</summary><div class="v15-cruising-guide-copy">'+guide+'</div></details>'
       +'<div class="v15-cruising-controls"><input id="v15-cruising-search" class="form-input pill-input" placeholder="Search public cruising areas, cities and countries…" aria-label="Search public cruising areas"></div>'
       +'<p id="v15-cruising-count" class="body-font"></p><div id="v15-cruising-results" class="v15-cruising-results"></div>';
     container.querySelector('.v154-cruising-heading-location')?.appendChild(createInlineLocationControl(scope));
+    const mapDetails=container.querySelector('.br-cruising-map-details');
+    if(mapDetails) {
+        mapDetails.open = cruisingMapExpanded;
+        let loading = false;
+        const openMap = async () => {
+            if(!mapDetails.open || loading || cruisingMapInstance) return;
+            loading = true;
+            const token = ++cruisingMapLoadToken;
+            const element = mapDetails.querySelector('.br-cruising-map-canvas');
+            const status = mapDetails.querySelector('.br-cruising-map-status');
+            status.textContent = 'Loading cruising area map…';
+            try {
+                if(!window.BackroomCruisingMap) throw new Error('Map component could not be loaded');
+                const data = buildCruisingMapCities();
+                const instance = await window.BackroomCruisingMap.mount({
+                    element,
+                    cities: data.cities,
+                    scope: {
+                        scope: scope.scope,
+                        key: normalizeCityName(scope.city, scope.country),
+                        countryKey: normalizeCountryName(scope.country)
+                    },
+                    viewport: cruisingMapViewport,
+                    onViewportChanged: nextView => { cruisingMapViewport = nextView; },
+                    isActive: () => token === cruisingMapLoadToken && mapDetails.isConnected && mapDetails.open,
+                    onCitySelected: city => {
+                        const input = getLocationInput();
+                        if(!input) return;
+                        const resolved = resolveLocationInput(city.city + ', ' + city.country);
+                        if(!resolved.valid) { showToast(resolved.message || 'City could not be selected.'); return; }
+                        input.value = resolved.label;
+                        saveLocation();
+                    }
+                });
+                if(!instance) return;
+                if(token !== cruisingMapLoadToken || !mapDetails.isConnected || !mapDetails.open) {
+                    instance.destroy();
+                    return;
+                }
+                cruisingMapInstance = instance;
+                status.textContent = data.unplotted
+                    ? data.unplotted + ' cities have no usable map coordinates; their listings remain searchable below.'
+                    : '';
+            } catch(error) {
+                if(token === cruisingMapLoadToken && mapDetails.isConnected) {
+                    status.textContent = 'Map could not be loaded. Close and reopen to retry.';
+                    console.warn('Cruising map unavailable:', error);
+                }
+            } finally {
+                loading = false;
+            }
+        };
+        mapDetails.addEventListener('toggle', () => {
+            cruisingMapExpanded = mapDetails.open;
+            if(mapDetails.open) {
+                void openMap();
+            } else {
+                ++cruisingMapLoadToken;
+                if(cruisingMapInstance) {
+                    cruisingMapViewport = cruisingMapInstance.getView();
+                    cruisingMapInstance.destroy();
+                    cruisingMapInstance = null;
+                }
+            }
+        });
+        if(mapDetails.open) void openMap();
+    }
     const details=container.querySelector('.v15-cruising-guide');
     if(details)details.open=cruisingGuideWasExpanded;
     if (savedCruisingTopic) {

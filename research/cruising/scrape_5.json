@@ -5,14 +5,14 @@
     "base_url": "https://www.splashd.app/",
     "index_url": "https://www.splashd.app/map",
     "created_berlin": "2026-11-06",
-    "status": "index_scoped__individual_spot_access_blocked",
+    "status": "index_scoped__browser_city_pages_confirmed_via_user_screenshots__direct_access_blocked",
     "research_only": true,
     "disclaimer": "Preliminary source inventory only. NONE of the advertised spot-level records were extracted or independently verified. Country totals must NEVER be treated as Backroom additions, current user locations, or active cruising evidence.",
     "advertised_spots_global": 13249,
     "advertised_countries": 56,
     "advertised_cities": 1552,
     "individual_spot_records_captured": 0,
-    "collection_method": "Publicly indexed Splashd map landing page (not live map/private app). The index exposes country counts; individual country, city and spot record access was unsuccessful through the tools available to this research pass.",
+    "collection_method": "Global country counts from public search index plus 2 Rome public cards manually transcribed from user screenshots; NO city page was accessible to model's direct web fetch. Rome screenshots are research notes, not a completed spot-data scrape.",
     "attempted_access": [
       {
         "url": "https://www.splashd.app/map",
@@ -39,8 +39,120 @@
         "result": "Not accessible through current fetch"
       }
     ],
-    "next_action": "Use an authorized full browser session to inspect actual public country/city link URLs, page DOM and any openly accessible directory payloads; check robots/terms and keep requests modest. Collect PUBLIC static place names/categories/coordinates/source URLs only, not users, live locations, check-ins or chat activity.",
-    "publication_rule": "Do not update listings.json. Once spot-level entries become available, apply the existing Backroom inclusion rules, geoduplicate and cross-source check before adding proposed_places; no assumed active cruising."
+    "next_action": "For manual collection, use the user-provided city URL directly in a normal browser. If records can be viewed, capture public place-level names, categories, descriptions and coordinates only. Do not include personal profiles/check-ins or live locations. On receipt, reconcile against previously researched Backroom locations.",
+    "publication_rule": "Do not update listings.json. Once spot-level entries become available, apply the existing Backroom inclusion rules, geoduplicate and cross-source check before adding proposed_places; no assumed active cruising.",
+    "user_supplied_city_url_example": "https://www.splashd.app/map/gb/eng/london",
+    "possible_public_route_format": "/map/{country_code}/{region_code}/{city_slug} (inferred from London example; not validated for other cities)",
+    "route_test_2026_11_06": {
+      "url": "https://www.splashd.app/map/gb/eng/london",
+      "result": "Direct web fetch cache miss; public location records could not be extracted using the available tools",
+      "other_urls_tested": [
+        "https://www.splashd.app/map/gb",
+        "https://www.splashd.app/map/gb/eng",
+        "https://splashd.app/map/gb/eng/london"
+      ],
+      "note": "This is a user-provided apparently navigable city URL. It is a manual-collection aid, not evidence that any individual places were successfully scraped. Site also mentions a separate age gate for /map."
+    },
+    "user_supplied_direct_city_routes": [
+      {
+        "city": "London",
+        "country": "United Kingdom",
+        "region": "England",
+        "url": "https://www.splashd.app/map/gb/eng/london",
+        "route_status": "user supplied; browser screenshot confirms Rome page loads; all directly attempted fetches in available web-reader returned cache miss"
+      },
+      {
+        "city": "Glasgow",
+        "country": "United Kingdom",
+        "region": "Scotland",
+        "url": "https://www.splashd.app/map/gb/sct/glasgow",
+        "route_status": "user supplied; browser screenshot confirms Rome page loads; all directly attempted fetches in available web-reader returned cache miss"
+      },
+      {
+        "city": "Prague",
+        "country": "Czechia",
+        "region": "Praha",
+        "url": "https://www.splashd.app/map/cz/10/praha",
+        "route_status": "user supplied; browser screenshot confirms Rome page loads; all directly attempted fetches in available web-reader returned cache miss"
+      },
+      {
+        "city": "Brussels",
+        "country": "Belgium",
+        "region": "Brussels Region",
+        "url": "https://www.splashd.app/map/be/bru/brussels",
+        "route_status": "user supplied; browser screenshot confirms Rome page loads; all directly attempted fetches in available web-reader returned cache miss"
+      },
+      {
+        "city": "Barcelona",
+        "country": "Spain",
+        "region": "Barcelona",
+        "url": "https://www.splashd.app/map/es/b/barcelona",
+        "route_status": "user supplied; browser screenshot confirms Rome page loads; all directly attempted fetches in available web-reader returned cache miss"
+      },
+      {
+        "city": "Sitges",
+        "country": "Spain",
+        "region": "Barcelona",
+        "url": "https://www.splashd.app/map/es/b/sitges",
+        "route_status": "user supplied; browser screenshot confirms Rome page loads; all directly attempted fetches in available web-reader returned cache miss"
+      },
+      {
+        "city": "Benidorm",
+        "country": "Spain",
+        "region": "Alicante",
+        "url": "https://www.splashd.app/map/es/a/benidorm",
+        "route_status": "user supplied; browser screenshot confirms Rome page loads; all directly attempted fetches in available web-reader returned cache miss"
+      },
+      {
+        "city": "Zurich",
+        "country": "Switzerland",
+        "region": "Zürich",
+        "url": "https://www.splashd.app/map/ch/zh/zurich",
+        "route_status": "user supplied; browser screenshot confirms Rome page loads; all directly attempted fetches in available web-reader returned cache miss"
+      },
+      {
+        "city": "Rome",
+        "country": "Italy",
+        "region": "Roma",
+        "url": "https://www.splashd.app/map/it/rm/roma",
+        "route_status": "user supplied; browser screenshot confirms Rome page loads; all directly attempted fetches in available web-reader returned cache miss"
+      }
+    ],
+    "browser_access_distinction": "Rome page visibly renders public spot cards and descriptive text in user's Chrome browser/DOM (confirmed by screenshots), but model's HTTP/web tool cannot retrieve city pages. Lack of extraction is tool access limitation, not missing data.",
+    "rome_page_user_screenshot_2026_11_06": {
+      "city": "Rome",
+      "url": "https://www.splashd.app/map/it/rm/roma",
+      "page_reported_last_updated": "2026-02-16",
+      "page_counts": {
+        "total": 9,
+        "park": 2,
+        "bar": 1,
+        "bathhouse": 5,
+        "arcade": 1
+      },
+      "source_kind": "User supplied screenshots; partial visible text, not direct machine extraction",
+      "visible_public_spots": [
+        {
+          "name": "Villa Gordiani",
+          "category": "Park",
+          "description_paraphrase": "Park with dense bushes described as offering secluded areas for meetings.",
+          "source_url": "https://www.splashd.app/map/it/rm/roma",
+          "assessment": "unverified_potential_new_candidate",
+          "notes": "Not in master Rome names as of this capture. User screenshot only; location pin, access hours and cross-source verification needed."
+        },
+        {
+          "name": "Piazzale Del Galoppatoio",
+          "category": "Park",
+          "description_paraphrase": "Reported meeting paths and steps around the Garibaldi monument and behind Cinema dei Piccoli, continuing towards Villa Borghese museum area.",
+          "source_url": "https://www.splashd.app/map/it/rm/roma",
+          "assessment": "possible_same_area_as_existing_villa_borghese_hold",
+          "notes": "Master includes Rome Villa Borghese ID CRU-ROM-VILBOR-02 (Hold); do not add separate proposal without checking boundary/subarea and status."
+        }
+      ],
+      "unseen_categories": "Bar, Bathhouse and Arcade descriptions not visible in screenshots. Do not assert their individual names or contents.",
+      "date_caveat": "Page updated date does not establish current operating status of individual spots."
+    },
+    "html_export_option": "Open public city page in Chrome DevTools Console and copy category sections as JSON (innerText and anchor hrefs), then provide to ChatGPT for parsing/deduplication; avoids per-spot manual transcription. Avoid personal profiles, live user positions and check-ins."
   },
   "directory_inventory": [
     {

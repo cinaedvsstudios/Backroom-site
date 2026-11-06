@@ -37,6 +37,34 @@ p{font-size:1.05rem;margin:0 0 14px}
 .br-cruising-topic-copy .br-cruising-source-links a:hover{color:#fff}
 @media(max-width:640px){.br-cruising-accordion{gap:8px}.br-cruising-topic > summary,.v15-cruising-guide .br-cruising-topic > summary{padding:12px 11px;font-size:1.02rem}.br-cruising-topic-copy{padding:12px}.br-cruising-topic-copy p{font-size:.96rem}.br-cruising-topic > summary::after{flex-basis:26px;width:26px;height:26px}}
 
+/* v1.5.22: two-column Cruising Guide on desktop, one column on mobile. */
+.br-cruising-accordion{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    align-items:start;
+    gap:12px;
+}
+.br-cruising-heading{
+    display:inline-flex;
+    align-items:center;
+    min-width:0;
+    gap:11px;
+}
+.br-cruising-heading > span:last-child{
+    min-width:0;
+}
+.br-cruising-emoji{
+    flex:0 0 27px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font:1.27rem/1.2 Arial,sans-serif;
+}
+@media(max-width:767px){
+    .br-cruising-accordion{grid-template-columns:minmax(0,1fr);gap:8px}
+    .br-cruising-heading{gap:9px}
+    .br-cruising-emoji{flex-basis:25px;font-size:1.18rem}
+}
+
 </style>
 </head>
 <body>
@@ -47,7 +75,7 @@ p{font-size:1.05rem;margin:0 0 14px}
 
 <div class="br-cruising-accordion" aria-label="Cruising guide topics">
   <details class="br-cruising-topic" name="br-cruising-topics" data-topic="first-time">
-    <summary>First Time Cruising — What to Expect</summary>
+    <summary><span class="br-cruising-heading"><span class="br-cruising-emoji" aria-hidden="true">👣</span><span>First Time Cruising — What to Expect</span></span></summary>
     <div class="br-cruising-topic-copy">
       <p>You don't have to arrive with a plan. Some guys walk around, exchange looks and pause when someone catches their eye. Others hang back, check out the atmosphere or decide it isn't their night. All of that is normal.</p>
       <p>You might find a busy location one evening and a quiet one the next. Give yourself time to get comfortable, and don't feel you have to join in just because you've turned up. If you want to leave, leave.</p>
@@ -55,7 +83,7 @@ p{font-size:1.05rem;margin:0 0 14px}
   </details>
 
   <details class="br-cruising-topic" name="br-cruising-topics" data-topic="where">
-    <summary>Different Places, Different Experiences</summary>
+    <summary><span class="br-cruising-heading"><span class="br-cruising-emoji" aria-hidden="true">🗺️</span><span>Different Places, Different Experiences</span></span></summary>
     <div class="br-cruising-topic-copy">
       <p>Outdoor places such as parks or beaches are usually less predictable: activity depends on the time, weather and who happens to be there. Public toilets are shared facilities, so respect other people using them. Local rules and laws around public sexual activity can be different from one city or country to another.</p>
       <p>Indoor cruising clubs, saunas and darkrooms generally have their own entry conditions, opening hours, dress codes and facilities. Check the individual Backroom listing before heading out, especially when you're travelling. A listed cruising spot isn't a guarantee that anyone will be there.</p>
@@ -63,7 +91,7 @@ p{font-size:1.05rem;margin:0 0 14px}
   </details>
 
   <details class="br-cruising-topic" name="br-cruising-topics" data-topic="consent">
-    <summary>Consent &amp; Reading the Signals</summary>
+    <summary><span class="br-cruising-heading"><span class="br-cruising-emoji" aria-hidden="true">👀</span><span>Consent &amp; Reading the Signals</span></span></summary>
     <div class="br-cruising-topic-copy">
       <p class="important">A “no” means no, regardless of the location or situation. This also includes nonverbal rejection: if you are standing watching someone and they wave you away, you are expected to move on and look for someone else.</p>
       <p>Eye contact and body language usually communicate interest more effectively than words. In fact, in a cruising area such as a park or a darkroom, it can feel a bit strange to start having a conversation with someone.</p>
@@ -73,7 +101,7 @@ p{font-size:1.05rem;margin:0 0 14px}
   </details>
 
   <details class="br-cruising-topic" name="br-cruising-topics" data-topic="boundaries">
-    <summary>Know Your Boundaries</summary>
+    <summary><span class="br-cruising-heading"><span class="br-cruising-emoji" aria-hidden="true">🛑</span><span>Know Your Boundaries</span></span></summary>
     <div class="br-cruising-topic-copy">
       <p>Know what you want or, more importantly, what you do not want. Negotiating this nonverbally can be something as simple as moving someone’s hand away from your arse.</p>
       <p>Be aware that letting one act happen may lead someone to try to move further. For example, if you let someone finger you, they may then try to penetrate you. That does not mean you have agreed to anything more: move them away or stop the interaction if that is not what you want.</p>
@@ -81,7 +109,7 @@ p{font-size:1.05rem;margin:0 0 14px}
   </details>
 
   <details class="br-cruising-topic" name="br-cruising-topics" data-topic="before">
-    <summary>Before You Go — Practical Essentials</summary>
+    <summary><span class="br-cruising-heading"><span class="br-cruising-emoji" aria-hidden="true">🎒</span><span>Before You Go — Practical Essentials</span></span></summary>
     <div class="br-cruising-topic-copy">
       <p>Check the location and opening times, think about how you'll get home and see whether the venue has any entry rules or cash-only payments. Bring a charged phone, whatever personal essentials you prefer, and any medication you need. Water and lubricant can be useful depending on your plans.</p>
       <p>Take only what you need, particularly at outdoor spots. Above all, remember that you can change your plans at any time — cruising should be something you enjoy, not something you feel obliged to do.</p>
@@ -89,7 +117,7 @@ p{font-size:1.05rem;margin:0 0 14px}
   </details>
 
   <details class="br-cruising-topic" name="br-cruising-topics" data-topic="prep">
-    <summary>PrEP, PEP &amp; HIV Prevention</summary>
+    <summary><span class="br-cruising-heading"><span class="br-cruising-emoji" aria-hidden="true">💊</span><span>PrEP, PEP &amp; HIV Prevention</span></span></summary>
     <div class="br-cruising-topic-copy">
       <p><strong>PrEP</strong> (pre-exposure prophylaxis) is medication taken by people without HIV to prevent HIV. When taken correctly, it's highly effective at preventing HIV from sex. For guys who cruise regularly, or who simply want the reassurance of protection, it's worth knowing about.</p>
       <p><strong>Daily PrEP</strong> tablets are a common option. Some gay and bisexual men can also take <strong>on-demand PrEP</strong> (sometimes called “2-1-1”) around planned sex. It needs the right medication and timing, isn't suitable for everyone, and availability and recommendations vary between countries. Some places also offer longer-acting PrEP injections. A sexual health clinic can help you choose what fits your circumstances.</p>
@@ -100,15 +128,18 @@ p{font-size:1.05rem;margin:0 0 14px}
   </details>
 
   <details class="br-cruising-topic" name="br-cruising-topics" data-topic="etiquette">
-    <summary>Privacy &amp; Cruising Etiquette</summary>
+    <summary><span class="br-cruising-heading"><span class="br-cruising-emoji" aria-hidden="true">🤫</span><span>Privacy &amp; Cruising Etiquette</span></span></summary>
     <div class="br-cruising-topic-copy">
+      <p><strong>A cruising area isn't a social hangout.</strong> If you come with a friend, that's fine, but don't stand around talking loudly for ages — especially right beside guys who are busy with each other. If you want a long conversation, move somewhere else rather than turning someone's cruising spot into a gathering place.</p>
+      <p><strong>Keep noise and light to a minimum.</strong> Don't walk through a cruising area while having a phone conversation, play music or videos out loud, or switch on your phone's flashlight and light everyone up. Being discreet is part of respecting the people around you. If you genuinely need light to navigate safely, keep it aimed at the ground and away from others.</p>
+      <p><strong>Don't expect everyone to talk.</strong> Many guys are there to cruise, not to chat. Eye contact and body language often do most of the talking. If you say something and a guy ignores you or deliberately walks away, don't be surprised — it can happen a lot. Don't demand a response or follow him. Just take the hint and move on.</p>
       <p>Keep other people's privacy in mind. Don't photograph or film anyone without their permission, and don't share pictures or details that could identify someone else. A guy's interest in cruising doesn't mean he wants to be outed.</p>
       <p>Respect people who aren't taking part, don't block paths or entrances, and leave a shared space as you found it. If someone isn't interested, don't follow or pressure them. Moving on gracefully is part of the experience.</p>
     </div>
   </details>
 
   <details class="br-cruising-topic" name="br-cruising-topics" data-topic="safety">
-    <summary>Personal Safety</summary>
+    <summary><span class="br-cruising-heading"><span class="br-cruising-emoji" aria-hidden="true">🛡️</span><span>Personal Safety</span></span></summary>
     <div class="br-cruising-topic-copy">
       <p>Stay aware of your surroundings, especially in outdoor areas after dark. Keep valuables secure and avoid carrying excessive cash or expensive items.</p>
       <p>Trust your instincts. If something feels off, leave immediately.</p>
