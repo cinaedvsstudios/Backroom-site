@@ -17,7 +17,7 @@ BASE = "https://cinaedvsstudios.github.io/Backroom-site/"
 ROOT = Path(__file__).resolve().parents[1]
 VENUES = ROOT / "venue"
 
-HTML_PAGE = """<!doctype html>
+HTML_PAGE = r"""<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
