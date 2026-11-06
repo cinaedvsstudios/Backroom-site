@@ -1,0 +1,83 @@
+{
+  "_meta": {
+    "title": "Splashd Naples browser export — user-provided",
+    "source": "scrape_5",
+    "site": "splashd.app",
+    "research_only": true,
+    "imported_berlin": "2026-11-06",
+    "city": "Naples",
+    "country": "Italy",
+    "source_city": "Napoli",
+    "city_url": null,
+    "no_individual_urls_or_gps": true,
+    "total": 3,
+    "counts": {
+      "hold_location_or_access_review": 1,
+      "matched_existing_research_location": 1,
+      "excluded_business_category": 1
+    },
+    "source_fidelity_note": "Descriptions under description_or_research_excerpt are either copied from pasted text, selected summaries (explicitly flagged), or blank where none appeared; never treat them as independently verified or quote them publicly.",
+    "publication_rule": "No live listings modifications; do not publish restroom/gym entries without public-access and consent/legality checks."
+  },
+  "records": [
+    {
+      "source_record_index": 1,
+      "name": "Via Brin",
+      "source_category": "Cruising Ground",
+      "source_city": "Napoli",
+      "city": "Naples",
+      "country": "Italy",
+      "source_age_label": "Added 8 mo ago",
+      "description_or_research_excerpt": "A very cruisy location, be discreet. All kind of guys come here.",
+      "source_text_status": "user_paste_text",
+      "source_city_url": null,
+      "source_detail_url": null,
+      "latitude": null,
+      "longitude": null,
+      "assessment": "hold_location_or_access_review",
+      "matched_master": {
+        "id": "GC1-GAP-NAPLES-11",
+        "relation": "street_vs_parking_review"
+      },
+      "independent_current_activity_verified": false
+    },
+    {
+      "source_record_index": 2,
+      "name": "Villa Comunale",
+      "source_category": "Park",
+      "source_city": "Napoli",
+      "city": "Naples",
+      "country": "Italy",
+      "source_age_label": "Added 8 mo ago",
+      "description_or_research_excerpt": "Next to the Aquarium in the large bushes. Men generally stand or walk slowly on the side of the building searching for eye contact. Best after 7pm during winter and 9pm during summer.",
+      "source_text_status": "user_paste_text",
+      "source_city_url": null,
+      "source_detail_url": null,
+      "latitude": null,
+      "longitude": null,
+      "assessment": "matched_existing_research_location",
+      "matched_master": {
+        "id": "GC1-GAP-NAPLES-09",
+        "relation": "exact"
+      },
+      "independent_current_activity_verified": false
+    },
+    {
+      "source_record_index": 3,
+      "name": "Blu Angels",
+      "source_category": "Bathhouse",
+      "source_city": "Napoli",
+      "city": "Naples",
+      "country": "Italy",
+      "source_age_label": "Added 8 mo ago",
+      "description_or_research_excerpt": "Three story bathhouse with dark room and labyrinth. Centro Direzionale Isola A/7.",
+      "source_text_status": "user_paste_text",
+      "source_city_url": null,
+      "source_detail_url": null,
+      "latitude": null,
+      "longitude": null,
+      "assessment": "excluded_business_category",
+      "independent_current_activity_verified": false
+    }
+  ]
+}
