@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.22";
+const APP_VERSION = "v1.5.23";
 const APP_DATE = "6 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -2730,7 +2730,7 @@ async function renderStaticPageView(page) {
     container.innerHTML = `<p class="body-font">Loading content...</p>`;
     try {
         const staticUrl = page === 'cruising-guide'
-            ? 'cruising-guide.html?v=1.5.22'
+            ? 'cruising-guide.html?v=1.5.23'
             : `${page}.html`;
         const res = await fetch(staticUrl, { cache: 'no-cache' });
         if(!res.ok) throw new Error(`HTTP ${res.status}`);
