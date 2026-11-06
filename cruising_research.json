@@ -39,7 +39,8 @@
       "Scrape 8 CruisingGays: 43 selected public/ordinary-site source records across 8 countries. 21 new provisional proposals, 17 prior/existing matches, 5 not counted for weak/ambiguous evidence. Exclude misclassified clubs/hotels/shops and correct location errors (Berlin/Maryland, Paris/Texas, London/Ontario). No assumption that a recent crawl or verification badge validates current cruising.",
       "Added six optional verification-only references (Couple of Men, Männer unterwegs, The Globetrotter Guys, Tripadvisor, Reddit, misterb&b Gay Guide). Do not assign scrape numbers or systematically crawl them. Research a specific unresolved detail only, reusing existing evidence first and stopping once sufficient.",
       "2026-11-06 user-selected city research priorities: 50 submitted city entries (Lisbon appears twice), 49 unique focus cities, 10 currently without Live or proposed cruising spots (including 2 cities not yet represented as tracker rows). Preserve all existing data. If research yields no qualifying locations, record a confirmed researched zero, not a fabricated proposal.",
-      "2026-11-06 cruising listing writing standards added: describe exact subarea, busy times, reported men/crowd, warnings; include grounded GPS coordinates and map links that point to that subarea or public entrance, plus truthful Last_Updated and count of independent supporting sources. Do not invent details or modify live listings in research."
+      "2026-11-06 cruising listing writing standards added: describe exact subarea, busy times, reported men/crowd, warnings; include grounded GPS coordinates and map links that point to that subarea or public entrance, plus truthful Last_Updated and count of independent supporting sources. Do not invent details or modify live listings in research.",
+      "Use colon-terminated mini-headings in each cruising description: Where:, Best times:, Crowd:, Watch out:. Show last updated and independently supporting source count below; display GPS and maps separately as structured fields."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -22245,6 +22246,32 @@
     },
     "missing_info_policy": "Do not make up a specific spot, GPS pin, busiest hour, crowd demographics, warning, verification count or update date. Research selectively; if still missing, flag as unknown or unverified. Do not claim a location has no cruising when only the source coverage is missing.",
     "publication_policy": "Do not modify production listings.json during discovery. Apply these rules to verified candidates in a later approved import; retain pre-existing research records unchanged.",
-    "search_efficiency": "First use existing archived URLs and source evidence; consult supplementary verification sites only for genuine gaps/contradictions; stop as soon as reliable support is adequate."
+    "search_efficiency": "First use existing archived URLs and source evidence; consult supplementary verification sites only for genuine gaps/contradictions; stop as soon as reliable support is adequate.",
+    "description_format": {
+      "layout": "Use clearly labelled mini-sections in this exact order, each with a concise heading followed by a colon. Keep one readable paragraph per heading, in natural, friendly, factual Backroom voice. No dense uninterrupted block of text.",
+      "required_sections": [
+        {
+          "heading": "Where:",
+          "purpose": "The precise subarea or meeting spot, recognisable landmark, and approach from an accessible public entrance."
+        },
+        {
+          "heading": "Best times:",
+          "purpose": "When visitors reportedly find the spot busy; note weekends, seasonality and nearby closing times only when supported."
+        },
+        {
+          "heading": "Crowd:",
+          "purpose": "Reported mix of guys, ages, locals/visitors and atmosphere, only where evidence exists."
+        },
+        {
+          "heading": "Watch out:",
+          "purpose": "Place-specific safety hazards, restricted access, opening/closure notes and other practical cautions, based on evidence."
+        }
+      ],
+      "metadata_display": "Below the four mini-sections, show separate compact metadata lines: 'Last updated: [actual Backroom record edit date]' and 'Verified sources: [count]'. Count only independent source confirmations of the specific spot and reported activity. Keep source URLs available as references. If not yet verified, display 'Verification: pending' rather than invent a count.",
+      "map_display": "GPS decimal coordinates and Google Maps/Apple Maps directions remain separate structured data and map actions, not buried in prose. Ensure the pin resolves to the particular subarea/public entrance, or label its location approximate.",
+      "missing_information": "Omit unsupported demographic or timing claims, or explicitly state they are not yet confirmed during internal review; never pad a mini-section with fabricated detail. A heading may have a concise 'Not confirmed' until enrichment is completed.",
+      "sample_format": "Where: At the end of the waterfront promenade by the church, with the paths leading toward the water identified as the reported meeting area.\n\nBest times: Reportedly after sunset, with quieter periods once nearby restaurants have closed.\n\nCrowd: Visitors of different ages are reported, but precise age patterns require checking.\n\nWatch out: Coastal rocks, poor footing and the sea near the water's edge.\n\nLast updated: [date of actual edit]\nVerified sources: [number of independently checked supporting sources]",
+      "sample_is_not_verified": "The sample illustrates the user's Paraportiani format preference; it is not a verified factual entry and must not be published without research."
+    }
   }
 }
