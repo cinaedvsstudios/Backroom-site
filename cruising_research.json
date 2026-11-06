@@ -1,0 +1,2551 @@
+{
+  "_meta": {
+    "title": "Backroom — temporary cruising-area research tracker",
+    "created_berlin": "2026-11-06",
+    "last_updated_berlin": "2026-11-06",
+    "status": "Research only — do not publish findings directly",
+    "baseline": {
+      "repository": "cinaedvsstudios/Backroom-site",
+      "file": "listings.json",
+      "sha": "1a1b3601d9e65c2910820eb45cba41105fbc9839",
+      "listing_count": 1292,
+      "country_count": 45,
+      "live_cruising_area_count": 116
+    },
+    "definitions": {
+      "cruising_now": "Count of existing listings in listings.json where Category is exactly 'Cruising Area' and Status is exactly 'Live'.",
+      "proposals": "Number of unique new cruising areas found in research that are not already in Backroom; count once per country/city even when multiple websites mention the location.",
+      "scrape_n": "One numbered source website per scrape. Registry below records the website URL. Each city.scrapes.scrape_n is an array of findings from that website; retain its specific source page URL.",
+      "proposed_places": "Deduplicated new candidates, with stable proposal_id, name, location details, evidence and linked scrape IDs; only these count toward proposals.",
+      "existing_cruising": "All baseline Category='Cruising Area' listing names, IDs, and statuses, including inactive records to prevent re-adding them.",
+      "city_names": "Use one canonical city when clearly equivalent (Frankfurt/Frankfurt am Main, St Julian's spelling). Preserve other city strings if ambiguous; add new cities as needed."
+    },
+    "continuation": "In future chats, load this GitHub file first, then each submitted research website. Add a new record to sources as scrape_1, scrape_2, etc, add per-city findings to city.scrapes[scrape_id], add unique candidates to proposed_places, recalculate city/country proposals, and commit the updated file. Never modify listings.json until final cross-reference and explicit publication step.",
+    "exclusions": "33 baseline entries without a country and one Europe-wide multi-city listing are not assigned to a country. Czech Republic is merged under Czechia. This is a country/city research tracker, not a complete copy of listings.json."
+  },
+  "sources": [],
+  "countries": [
+    {
+      "country": "Albania",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Tirana",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Andorra",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Andorra la Vella",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Armenia",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Yerevan",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Belgium",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Ans",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Antwerp",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Brussels",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Ghent",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Liège",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Estonia",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Tallinn",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Tartu / Rakvere",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Georgia",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Tbilisi",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Iceland",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Reykjavík",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Israel",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Tel Aviv",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Tel Aviv / Jerusalem",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Kosovo",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Pristina",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Liechtenstein",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Vaduz / Schaan",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Lithuania",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Vilnius",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Luxembourg",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Luxembourg City",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Moldova",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Chișinău",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Montenegro",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Podgorica",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Slovakia",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Bratislava",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Slovenia",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Ljubljana",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Sweden",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Gothenburg",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Stockholm",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Turkey",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Istanbul",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "United States",
+      "cruising_now": 0,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "New Orleans",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Azerbaijan",
+      "cruising_now": 1,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Baku",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-BAK-PRIBOU-01",
+              "name": "Primorsky Boulevard",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "cruising_now": 1,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Sarajevo",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-SJJ-VELPAR-01",
+              "name": "Veliki Park",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Bulgaria",
+      "cruising_now": 1,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Sofia",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-SOF-BORGRA-01",
+              "name": "Borisova Gradina",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Cyprus",
+      "cruising_now": 1,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Limassol",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-LMS-GOVBEA-01",
+              "name": "Governor’s Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Nicosia",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Paphos",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Czechia",
+      "cruising_now": 1,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Brno",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Prague",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-PRG-LETPAR-01",
+              "name": "Letná Park",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Hungary",
+      "cruising_now": 1,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Budapest",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-BUD-DANPRO-01",
+              "name": "Danube Promenade",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Romania",
+      "cruising_now": 1,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Bucharest",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-BUH-PAROPE-01",
+              "name": "Parcul Operei",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Cluj-Napoca",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Timișoara",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Austria",
+      "cruising_now": 2,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Graz",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Innsbruck",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Linz",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Salzburg",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Vienna",
+          "cruising_now": 2,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-VIE-ALBPASPUBW-02",
+              "name": "Albertina Passage Public WC",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-VIE-SCHGAR-01",
+              "name": "Schweizer Garten",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Ireland",
+      "cruising_now": 2,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Cork",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Dublin",
+          "cruising_now": 2,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-DUB-DOLSTR-01",
+              "name": "Dollymount Strand / Bull Island",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-DUB-PHOPAR-01",
+              "name": "Phoenix Park",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Galway",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Malta",
+      "cruising_now": 2,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Malta",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Mellieħa",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-MLH-GHATUF-01",
+              "name": "Għajn Tuffieħa / Riviera Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Sliema",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "St Julian's",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-SJL-PEMBEA-01",
+              "name": "Pembroke Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Valletta",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Victoria",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Serbia",
+      "cruising_now": 2,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Belgrade",
+          "cruising_now": 2,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-BEG-ADACIG-01",
+              "name": "Ada Ciganlija",
+              "status": "Live"
+            },
+            {
+              "id": "SER-BEL-CRU-SAV-01",
+              "name": "Savsko jezero cruising area",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Finland",
+      "cruising_now": 3,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Helsinki",
+          "cruising_now": 3,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-HEL-HIEBEA-01",
+              "name": "Hietalahti Beach",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-HEL-LAACENPAR-02",
+              "name": "Laakso Central Park",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-HEL-MANPAR-03",
+              "name": "Mäntymäki Park",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Turku",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Italy",
+      "cruising_now": 3,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Bologna",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Cagliari",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Calenzano (Florence)",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Florence",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Milan",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-MIL-PARSEM-01",
+              "name": "Parco Sempione",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Milan / Italy",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Naples",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Padua",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Rome",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-ROM-CAPBEA-01",
+              "name": "Capocotta Beach",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-ROM-VILBOR-02",
+              "name": "Villa Borghese",
+              "status": "Hold"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Turin",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Venice (Mestre)",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Verona",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Viareggio",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-VIA-LECBEA-01",
+              "name": "La Lecciona Beach (Torre del Lago)",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Latvia",
+      "cruising_now": 3,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Riga",
+          "cruising_now": 3,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-RIX-ARKPAR-02",
+              "name": "Arkādijas Park",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-RIX-ESP-01",
+              "name": "Esplanāde",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-RIX-KALBEA-03",
+              "name": "Kalngale Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Poland",
+      "cruising_now": 3,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Gdańsk",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Katowice",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Kraków",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-KRK-PLAPAR-01",
+              "name": "Planty Garden Ring",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Poznań",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Silesia",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Warsaw",
+          "cruising_now": 2,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-WAW-BOTBEA-02",
+              "name": "Błota Beach",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-WAW-VISWILBEA-01",
+              "name": "Vistula Wild Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Wrocław",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Denmark",
+      "cruising_now": 4,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Copenhagen",
+          "cruising_now": 4,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-CPH-AMAFLL-02",
+              "name": "Amager Fælled",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-CPH-AMASTR-04",
+              "name": "Amager Strandpark",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-CPH-BELSTR-03",
+              "name": "Bellevue Strand",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-CPH-RST-01",
+              "name": "Ørstedsparken",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Croatia",
+      "cruising_now": 5,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Dubrovnik",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-DBV-LOKISL-01",
+              "name": "Lokrum Island",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Novalja",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Rijeka",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-RJK-BIVBEA-01",
+              "name": "Bivio Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Split",
+          "cruising_now": 3,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-SPU-BACBEA-03",
+              "name": "Bačvice Beach",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-SPU-DUIBEA-02",
+              "name": "Duilovo Beach",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-SPU-KASBEA-01",
+              "name": "Kašjuni Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Zagreb",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Norway",
+      "cruising_now": 5,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Bergen",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Oslo",
+          "cruising_now": 5,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-OSL-HUKBEA-03",
+              "name": "Huk Beach",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-OSL-LAN-06",
+              "name": "Langøyene",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-OSL-SOG-04",
+              "name": "Sognsvann",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-OSL-STE-01",
+              "name": "Stensparken",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-OSL-SVA-05",
+              "name": "Svartkulp",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Tromsø",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Trondheim",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Portugal",
+      "cruising_now": 5,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Charneca de Caparica",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Funchal",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Lisbon",
+          "cruising_now": 4,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-LIS-CAMGRA-02",
+              "name": "Campo Grande",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-LIS-MONFOR-01",
+              "name": "Monsanto Forest Park",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-LIS-PAREDUVII-03",
+              "name": "Parque Eduardo VII",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-LIS-PRA19-01",
+              "name": "Praia 19",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Porto",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Sesimbra",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-SES-PRAMEC-01",
+              "name": "Praia do Meco",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Greece",
+      "cruising_now": 6,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Athens",
+          "cruising_now": 4,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-ATH-PEDTOUARE-01",
+              "name": "Pedion tou Areos",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-ATH-STRHIL-03",
+              "name": "Strefi Hill",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-ATH-VARBEA-04",
+              "name": "Varkiza Beach",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-ATH-ZAPGAR-02",
+              "name": "Zappeion Garden",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Chania / Heraklion",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Mykonos",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "GRC-MYK-CRU-PARAPORTIANI-01",
+              "name": "Paraportiani Church rocks",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Thessaloniki",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-SKG-RAISTA-01",
+              "name": "Central Railway Station Area",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "cruising_now": 6,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Belfast",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Birmingham",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Blackpool",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Brighton",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-BRI-DUKMOU-01",
+              "name": "Duke’s Mound",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Bristol",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Bury",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Cardiff",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Edinburgh",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Glasgow",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Leeds",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Leicester",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Liverpool",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "London",
+          "cruising_now": 5,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-LON-BARPAR-03",
+              "name": "Barnard Park",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-LON-CLACOM-01",
+              "name": "Clapham Common",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-LON-HAMHEA-01",
+              "name": "Hampstead Heath",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-LON-HYDPAR-05",
+              "name": "Hyde Park — Rose Garden",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-LON-KENGRE-02",
+              "name": "Kensal Green",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-LON-TOOBEC-01",
+              "name": "Tooting Bec Common",
+              "status": "Hold"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Manchester",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Mansfield",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Newcastle",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Sheffield",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Switzerland",
+      "cruising_now": 7,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Aarau",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Basel",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Bern",
+          "cruising_now": 2,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-BRN-DALARE-01",
+              "name": "Dalmazi (Aare Riverside)",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-BRN-KLESCH-01",
+              "name": "Kleine Schanze",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Chur",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Geneva",
+          "cruising_now": 3,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-GEN-COPHIGPAR-01",
+              "name": "Coppet Highway Parking",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-GEN-PERLAC-01",
+              "name": "Parc de la Perle du Lac",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-GEN-EAUVIV-01",
+              "name": "Parc des Eaux-Vives / La Grange",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Lausanne",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Lucerne",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Silvaplana",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Zurich",
+          "cruising_now": 2,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-ZRH-ALLBRU-01",
+              "name": "Allmend Brunau",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-ZRH-PLAPAR-01",
+              "name": "Platzspitz Park",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Netherlands",
+      "cruising_now": 11,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Amsterdam",
+          "cruising_now": 7,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-AMS-HETNIEMEE-01",
+              "name": "De Oeverlanden (Het Nieuwe Meer)",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-AMS-GAA-04",
+              "name": "Gaasperplas",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-AMS-OOS-06",
+              "name": "Oosterpark",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-AMS-SAR-03",
+              "name": "Sarphatipark",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-AMS-VON-02",
+              "name": "Vondelpark",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-AMS-WES-07",
+              "name": "Westerpark",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-AMS-ZIL-05",
+              "name": "Zilverstrand",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Eindhoven",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Rotterdam",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-RTM-KRABOS-01",
+              "name": "Kralingse Bos",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "The Hague",
+          "cruising_now": 2,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-HAG-SCHBOS-02",
+              "name": "Scheveningse Bosjes",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-HAG-VLI-03",
+              "name": "Vlietlanden",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Utrecht",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Zandvoort (near Amsterdam)",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-ZAN-SOUBEA-01",
+              "name": "Zandvoort South Gay / Naturist Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "cruising_now": 13,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Berlin",
+          "cruising_now": 4,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-BER-HAS-03",
+              "name": "Hasenheide",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-BER-WANBEA-01",
+              "name": "Strandbad Wannsee (FKK Beach)",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-BER-TEU-02",
+              "name": "Teufelsee",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-BER-TIE-01",
+              "name": "Tiergarten",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-BER-VOLFRI-04",
+              "name": "Volkspark Friedrichshain",
+              "status": "Flag"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Bielefeld",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Bremen",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Chemnitz",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Cologne",
+          "cruising_now": 3,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-CGN-AACWEI-01",
+              "name": "Aachener Weiher",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-CGN-CRA-03",
+              "name": "Cranachwäldchen",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-CGN-HER-02",
+              "name": "Herkulesberg",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Dresden",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Düsseldorf",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Essen",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Frankfurt am Main",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-FFM-GRU-01",
+              "name": "Grüneburgpark",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Freiburg im Breisgau",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Gießen",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Hamburg",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-HAM-BOBSEE-03",
+              "name": "Boberger See",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Hannover",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Karlsruhe",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Kassel",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Leipzig",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Ludwigshafen am Rhein",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Magdeburg",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Mainz",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Mannheim",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Munich",
+          "cruising_now": 4,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-MUC-ENGGAR-01",
+              "name": "Englischer Garten",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-MUC-FLAISL-01",
+              "name": "Flaucherinseln (Isar)",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-MUC-LUIPAR-01",
+              "name": "Luitpoldpark",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-MUC-SENTORPAR-03",
+              "name": "Sendlinger Tor Park",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Münster",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Nuremberg",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Offenbach am Main",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Saarbrücken",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Stuttgart",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Stuttgart, Köln, Berlin",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Würzburg",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "Spain",
+      "cruising_now": 13,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "A Coruña",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Alicante",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Arona",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Barcelona",
+          "cruising_now": 2,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-BCN-MARBEL-01",
+              "name": "Mar Bella",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-BCN-SANSEBBEA-02",
+              "name": "Sant Sebastià Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Benidorm",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Bilbao",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Campos (Mallorca)",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-CAM-ESTREN-01",
+              "name": "Es Trenc Beach",
+              "status": "Hold"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Cartagena",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-CTG-PARBEA-01",
+              "name": "Playa de Parreño",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Gijón",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Granadilla de Abona",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Ibiza",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-IBZ-ESCAVA-01",
+              "name": "Es Cavallet Beach",
+              "status": "Hold"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Madrid",
+          "cruising_now": 2,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-MAD-CASDECAM-01",
+              "name": "Casa de Campo",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-MAD-PAROES-01",
+              "name": "Parque del Oeste",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Maspalomas",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-LPA-MASDUN-01",
+              "name": "Maspalomas Dunes",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Mazagón (Moguer)",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-MAZ-ROMBEA-01",
+              "name": "Playa de Rompeculos",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Palma de Mallorca",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-PMI-SATEUL-01",
+              "name": "Sa Teulera woodland",
+              "status": "Flag"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Playa de las Américas",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Playa del Inglés",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Puerto de la Cruz",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Santa Cruz de Tenerife",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Seville",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Sitges",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-SIT-PLADELHOMO-03",
+              "name": "Platja de l’Home Mort",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Torremolinos",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Valencia",
+          "cruising_now": 4,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-VLC-JARDELTUR-02",
+              "name": "Jardín del Turia",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-VLC-MALBEA-05",
+              "name": "Malvarrosa Beach",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-VLC-PARDECAB-03",
+              "name": "Parque de Cabecera",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-VLC-PINBEA-01",
+              "name": "Pinedo Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Vigo",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Villajoyosa (near Benidorm)",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-BEN-RACCON-01",
+              "name": "Racó del Conill Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "cruising_now": 14,
+      "proposals": 0,
+      "cities": [
+        {
+          "city": "Ajaccio",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Bordeaux",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Cap d’Agde",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-AGD-NATBEA-01",
+              "name": "Cap d’Agde Naturist Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Èze-sur-Mer",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-EZE-STLEZE-01",
+              "name": "Saint-Laurent d’Èze Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Le Grau-du-Roi",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-EGR-ESPBEA-01",
+              "name": "Plage de l’Espiguette",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Lille",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Lyon",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Marseille",
+          "cruising_now": 3,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-MAR-CALSUG-01",
+              "name": "Calanque de Sugiton / Pierres Tombées",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-MAR-PARBOR-01",
+              "name": "Parc Borély",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-MAR-PLADUMONRO-01",
+              "name": "Plage du Mont Rose",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Montpellier",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-MON-PLADEMAG-01",
+              "name": "Plage de Maguelone",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Nice",
+          "cruising_now": 1,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-NIC-EZEBEA-01",
+              "name": "Èze Beach",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Paris",
+          "cruising_now": 6,
+          "proposals": 0,
+          "existing_cruising": [
+            {
+              "id": "CRU-PAR-BOIDEBOU-01",
+              "name": "Bois de Boulogne",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-PAR-BOIDVIN-01",
+              "name": "Bois de Vincennes",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-PAR-CHADEMAR-03",
+              "name": "Champ de Mars",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-PAR-QUADAU-04",
+              "name": "Quai d’Austerlitz",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-PAR-QUADESTUI-05",
+              "name": "Quai des Tuileries",
+              "status": "Live"
+            },
+            {
+              "id": "CRU-PAR-SQUDUPONDE-02",
+              "name": "Square du Pont de Sully",
+              "status": "Live"
+            }
+          ],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "Strasbourg",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        }
+      ]
+    }
+  ]
+}
