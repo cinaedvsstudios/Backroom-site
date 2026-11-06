@@ -16,8 +16,8 @@
     "source_7_uk_index_after": 1335,
     "source_7_names_after_cross_file_dedup": 1447,
     "source_frequency": {
-      "single_site": 962,
-      "multiple_sites": 85
+      "single_site": 956,
+      "multiple_sites": 91
     },
     "baseline_research_frequency": {
       "zero_known_sites": 94,
@@ -39,7 +39,9 @@
       "Historical raw source scraper pages were not destroyed; business-like records were removed from active master and manually imported Squirt working datasets, with an explicit exclusion log.",
       "Locations described as toilets inside shops, stations and managed venues were retained as public-facility research leads for access review, not proof of permission.",
       "Independent geographic lookups and authority webpages validating existence only are not counted as independent cruising reports."
-    ]
+    ],
+    "latest_squirt_detail_archive": "research/cruising/scrape_7_detail_export_2026-11-06.json",
+    "reconciliation_note": "Updated research source counts after adding the user's detailed Squirt URLs for unequivocally named public places; source counts are not visit validation."
   },
   "per_country": {
     "Andorra": {
@@ -1747,10 +1749,11 @@
       "city": "Vienna",
       "country": "Austria",
       "source_sites": [
-        "gays-cruising.com"
+        "gays-cruising.com",
+        "squirt.org"
       ],
-      "source_count": 1,
-      "flag": "single_site",
+      "source_count": 2,
+      "flag": "multiple_sites",
       "source_url": "https://www.gays-cruising.com/en/austria"
     },
     {
@@ -1771,10 +1774,11 @@
       "city": "Vienna",
       "country": "Austria",
       "source_sites": [
-        "gays-cruising.com"
+        "gays-cruising.com",
+        "squirt.org"
       ],
-      "source_count": 1,
-      "flag": "single_site",
+      "source_count": 2,
+      "flag": "multiple_sites",
       "source_url": "https://www.gays-cruising.com/en/austria"
     },
     {
@@ -7867,10 +7871,11 @@
       "city": "Cavallino-Treporti",
       "country": "Italy",
       "source_sites": [
-        "gays-cruising.com"
+        "gays-cruising.com",
+        "squirt.org"
       ],
-      "source_count": 1,
-      "flag": "single_site",
+      "source_count": 2,
+      "flag": "multiple_sites",
       "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy"
     },
     {
@@ -10435,10 +10440,11 @@
       "city": "Belgrade",
       "country": "Serbia",
       "source_sites": [
-        "gays-cruising.com"
+        "gays-cruising.com",
+        "squirt.org"
       ],
-      "source_count": 1,
-      "flag": "single_site",
+      "source_count": 2,
+      "flag": "multiple_sites",
       "source_url": "https://www.gays-cruising.com/en/serbia"
     },
     {
@@ -10447,10 +10453,11 @@
       "city": "Belgrade",
       "country": "Serbia",
       "source_sites": [
-        "gays-cruising.com"
+        "gays-cruising.com",
+        "squirt.org"
       ],
-      "source_count": 1,
-      "flag": "single_site",
+      "source_count": 2,
+      "flag": "multiple_sites",
       "source_url": "https://www.gays-cruising.com/en/serbia"
     },
     {
@@ -12019,10 +12026,11 @@
       "city": "Lucerne",
       "country": "Switzerland",
       "source_sites": [
-        "gays-cruising.com"
+        "gays-cruising.com",
+        "squirt.org"
       ],
-      "source_count": 1,
-      "flag": "single_site",
+      "source_count": 2,
+      "flag": "multiple_sites",
       "source_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland"
     },
     {
