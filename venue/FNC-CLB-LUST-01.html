@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>Lust Vintage — Funchal | Backroom</title>
+  <meta name="description" content="Lust Vintage, Gay Nightclub in Funchal, Portugal. LGBTQ nightlife club in Funchal’s old town, formerly 23 Vintage, hosting regular weekend performances and DJs.">
+  <link rel="canonical" href="https://cinaedvsstudios.github.io/Backroom-site/venue/FNC-CLB-LUST-01.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Backroom">
+  <meta property="og:title" content="Lust Vintage — Funchal | Backroom">
+  <meta property="og:description" content="Lust Vintage, Gay Nightclub in Funchal, Portugal. LGBTQ nightlife club in Funchal’s old town, formerly 23 Vintage, hosting regular weekend performances and DJs.">
+  <meta property="og:url" content="https://cinaedvsstudios.github.io/Backroom-site/venue/FNC-CLB-LUST-01.html">
+  
+  <style>
+    :root{color-scheme:dark}
+    *{box-sizing:border-box}
+    body{background:#000;color:#d3d8e3;font:16px/1.45 Arial,Helvetica,sans-serif;margin:0}
+    .site{max-width:920px;margin:20px auto;padding:24px;background:#1F2535;border:1px solid #313748;border-radius:12px}
+    h1{color:#fff;font-size:2rem;margin:12px 0 6px}
+    h2{font-size:1.12rem;color:#2CA8D4;margin:22px 0 8px}
+    a{color:#65c5ee}
+    .nav{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+    .nav a,.action{border:1px solid #2CA8D4;border-radius:6px;padding:9px 12px;text-decoration:none}
+    .nav strong{color:#2CA8D4;margin-right:auto;letter-spacing:.08em}
+    .meta{color:#aab4c6;margin:0 0 14px}
+    .facts{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+    .facts span{background:#313748;border-radius:5px;padding:6px 9px}
+    .photo{width:100%;max-height:340px;object-fit:cover;border-radius:8px;display:block;margin:12px 0}
+    .description{white-space:pre-wrap;overflow-wrap:anywhere}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+    .muted{color:#aab4c6;font-size:.9rem}
+    .gate{position:fixed;z-index:100;inset:0;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;padding:20px}
+    .gate-panel{max-width:460px;border:1px solid #2CA8D4;border-radius:12px;background:#1F2535;padding:25px;text-align:center}
+    button{border:0;background:#2CA8D4;color:#000;padding:12px 22px;border-radius:7px;font-weight:bold;cursor:pointer}
+    @media(max-width:700px){.site{margin:0;padding:17px;border-radius:0}.nav strong{width:100%}h1{font-size:1.55rem}}
+  </style>
+</head>
+<body>
+<!-- Backroom SEO: GENERATED; source of truth is listings.json. -->
+<main class="site">
+  <nav class="nav" aria-label="Backroom navigation">
+    <strong>BACKROOM</strong>
+    <a href="../">Home</a>
+    <a href="../#venues">Venues</a>
+    <a href="../#calendar">Events</a>
+  </nav>
+  <h1 id="venue-name">Lust Vintage</h1>
+  <p class="meta" id="venue-location">Funchal, Portugal</p>
+  
+  <section aria-label="Venue details">
+    <div class="facts">
+      <span id="venue-category">Gay Nightclub</span>
+      <span id="venue-address">Rua de Santa Maria 23 RC</span>
+      <span id="venue-hours">Check current opening hours</span>
+    </div>
+    <h2>About this venue</h2>
+    <p class="description" id="venue-description">LGBTQ nightlife club in Funchal’s old town, formerly 23 Vintage, hosting regular weekend performances and DJs.</p>
+    <div class="actions">
+      <a class="action" id="venue-open" href="../#venue=FNC-CLB-LUST-01">Open in Backroom</a>
+      <a class="action" href="../#calendar">Check upcoming events</a>
+      
+    </div>
+  </section>
+  <p class="muted">18+ gay nightlife and cruising directory. Check the venue's official information for current hours, entry rules and event details.</p>
+  <p class="muted"><a href="../privacy.html">Privacy</a> · <a href="../contact.html">Contact</a></p>
+</main>
+<div class="gate" id="age-gate">
+  <div class="gate-panel">
+    <h2>BACKROOM · 18+</h2>
+    <p>This directory contains adult nightlife and cruising information. Confirm that you are 18 or older to continue.</p>
+    <button type="button" id="enter">I AM 18+ — ENTER</button>
+  </div>
+</div>
+<script>
+(function(){
+  "use strict";
+  var gate = document.getElementById("age-gate");
+  try { if(localStorage.getItem("br_age_verified")==="true") gate.remove(); } catch(e){}
+  document.getElementById("enter")?.addEventListener("click",function(){
+    try { localStorage.setItem("br_age_verified","true"); } catch(e){}
+    gate?.remove();
+  });
+  // Keep the screen accurate even if the JSON changes before the next SEO build.
+  fetch("../listings.json",{cache:"no-store"}).then(function(r){return r.json();}).then(function(data){
+    var venue = Array.isArray(data) ? data.find(function(v){return v.Venue_ID==="FNC-CLB-LUST-01";}) : null;
+    if(!venue || venue.Status!=="Live") {
+      document.getElementById("venue-description").textContent = "This listing is no longer available. Browse the current Backroom venues.";
+      return;
+    }
+    var set = function(id,value){var el=document.getElementById(id);if(el) el.textContent=String(value||"");};
+    set("venue-name",venue.Name);
+    set("venue-location",[venue.City,venue.Country].filter(Boolean).join(", "));
+    set("venue-category",venue.Category);
+    set("venue-address",venue.Address);
+    set("venue-hours",[venue.Opening_Days,venue.Opening_Open_Time,venue.Opening_Close_Time].filter(Boolean).join(" · "));
+    set("venue-description",String(venue.Description||"").replace(/={4,}\s*\+{4,}/g,"\n\n").replace(/\|\|/g," ").replace(/ \-\- /g," · "));
+  }).catch(function(){ /* Initial server-rendered details remain available. */ });
+})();
+</script>
+</body>
+</html>
