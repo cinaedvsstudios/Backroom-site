@@ -1,6 +1,6 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.20";
-const APP_DATE = "5 November 2026";
+const APP_VERSION = "v1.5.21";
+const APP_DATE = "6 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
 let activeFilters = []; // v0.66 Multi-select Array
@@ -2729,7 +2729,10 @@ async function renderStaticPageView(page) {
     container.classList.remove('hidden');
     container.innerHTML = `<p class="body-font">Loading content...</p>`;
     try {
-        const res = await fetch(`${page}.html`, { cache: 'no-cache' });
+        const staticUrl = page === 'cruising-guide'
+            ? 'cruising-guide.html?v=1.5.21'
+            : `${page}.html`;
+        const res = await fetch(staticUrl, { cache: 'no-cache' });
         if(!res.ok) throw new Error(`HTTP ${res.status}`);
         const html = await res.text();
         const doc = new DOMParser().parseFromString(html, 'text/html');
@@ -2761,11 +2764,15 @@ async function renderDressCodesGuide() {
 /* v1.5: Cruising Guide is a filtered venue browser, not a duplicate venue database. */
 let savedCruisingSearchText='';
 let cruisingGuideWasExpanded=false;
+let savedCruisingTopic='';
 async function renderCruisingDirectory() {
     const current=document.getElementById('cruising-guide-container');
     if(current) {
         savedCruisingSearchText=current.querySelector('#v15-cruising-search')?.value ?? savedCruisingSearchText;
         cruisingGuideWasExpanded=current.querySelector('.v15-cruising-guide')?.open ?? cruisingGuideWasExpanded;
+        if (current.querySelector('.br-cruising-accordion')) {
+            savedCruisingTopic=current.querySelector('.br-cruising-topic[open]')?.dataset.topic || '';
+        }
     }
     await renderStaticPageView('cruising-guide');
     if(window.location.hash!=='#cruising-guide')return;
@@ -2774,12 +2781,17 @@ async function renderCruisingDirectory() {
     const guide=container.innerHTML;
     const scope=getSavedSearchScope();
     container.innerHTML='<div class="v154-cruising-heading"><h2 class="display-font v15-cruising-title">🔥 CRUISING AREAS</h2><span class="v154-cruising-heading-location"></span></div>'
-      +'<details class="v15-cruising-guide"><summary>CRUISING GUIDE, CONSENT & SAFETY</summary><div class="v15-cruising-guide-copy">'+guide+'</div></details>'
+      +'<details class="v15-cruising-guide"><summary>CRUISING GUIDE, TIPS & SEXUAL HEALTH</summary><div class="v15-cruising-guide-copy">'+guide+'</div></details>'
       +'<div class="v15-cruising-controls"><input id="v15-cruising-search" class="form-input pill-input" placeholder="Search public cruising areas, cities and countries…" aria-label="Search public cruising areas"></div>'
       +'<p id="v15-cruising-count" class="body-font"></p><div id="v15-cruising-results" class="v15-cruising-results"></div>';
     container.querySelector('.v154-cruising-heading-location')?.appendChild(createInlineLocationControl(scope));
     const details=container.querySelector('.v15-cruising-guide');
     if(details)details.open=cruisingGuideWasExpanded;
+    if (savedCruisingTopic) {
+        const topic=[...container.querySelectorAll('.br-cruising-topic')]
+            .find(section => section.dataset.topic === savedCruisingTopic);
+        if (topic) topic.open=true;
+    }
     const searchInput=container.querySelector('#v15-cruising-search');
     if(searchInput)searchInput.value=savedCruisingSearchText;
     const draw=()=>{

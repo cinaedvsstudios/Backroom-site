@@ -1,6 +1,6 @@
 {
-  "version": "v1.5.20",
-  "date": "2026-11-05",
+  "version": "v1.5.21",
+  "date": "2026-11-06",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
     "index.html",
@@ -90,7 +90,10 @@
     "Protect existing list names when importing shared links or creating new shortlists: warn on collisions and offer a separately named copy rather than overwriting stored items.",
     "Display a friendly 'Something missing? Make sure your friend has sent you the most recent link!' reminder on the shared shortlist viewer only; snapshot links and storage stay unchanged.",
     "Fix Maspalomas location search: accept San Bartolomé de Tirajana from the map and alias all Gran Canaria municipalities and common resorts to the same Maspalomas, Spain directory destination. Support records geolocated on Gran Canaria; preserve original venue/event cities and addresses. Browse Locations and saved location labels use one canonical destination.",
-    "Fix Maspalomas Events: calendar now reuses the existing directory's Gran Canaria city aliases and canonical country-aware location matching. Calendar Browse, saved-location sync and shared calendar routes use Maspalomas, Spain; original event cities and dates are preserved."
+    "Fix Maspalomas Events: calendar now reuses the existing directory's Gran Canaria city aliases and canonical country-aware location matching. Calendar Browse, saved-location sync and shared calendar routes use Maspalomas, Spain; original event cities and dates are preserved.",
+    "Expand the Cruising Guide into eight independent, mobile-friendly accordion topics: First Time, Different Places, Consent & Signals, Boundaries, Before You Go, PrEP/PEP & HIV Prevention, Privacy & Etiquette, and Personal Safety; preserve existing consent/arm-touch guidance and add verified clinical links.",
+    "PrEP-focused practical HIV prevention section explains daily/on-demand choices, routine checks and rapid PEP access, while mentioning other STIs briefly without moralising about condoms.",
+    "Keep Cruising Guide's outer expandable panel and venue results unchanged; remember the open topic after a location refresh. Bust caches for the updated CSS, JS and standalone guide."
   ],
   "validation": {
     "javascript_syntax": "checked before publication",

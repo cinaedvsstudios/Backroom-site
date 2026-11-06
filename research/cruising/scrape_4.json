@@ -1,0 +1,835 @@
+{
+  "_meta": {
+    "source_id": "scrape_4",
+    "site": "The Gay Passport",
+    "base_url": "https://thegaypassport.com/",
+    "created_berlin": "2026-11-06",
+    "purpose": "Named non-dedicated cruising spots from city guides and selected destination articles. Original source URL and paraphrased finding preserved.",
+    "publication_rule": "Research only; 2026-labelled guides are secondary-source claims, not independent 2026 visitor confirmation.",
+    "out_of_baseline_handling": "Australia and Mexico held in separately marked outside_backroom_country_scope field; 45-country baseline unchanged.",
+    "access_notes": "Some New York City guide content was verified from indexed text because opening the source webpage directly returned 403. Treat all 2026 guide labels as source claims, not 2026 visitor reports."
+  },
+  "countries": [
+    {
+      "country": "Germany",
+      "cities": [
+        {
+          "city": "Berlin",
+          "records": [
+            {
+              "name": "Tiergarten",
+              "city": "Berlin",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://thegaypassport.com/community/berlin-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Existing location; source describes west-central park activity.",
+              "rank": 1,
+              "existing_venue_id": "CRU-BER-TIE-01",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Existing location; source describes west-central park activity.",
+              "match_name": "Tiergarten"
+            },
+            {
+              "name": "Volkspark Friedrichshain",
+              "city": "Berlin",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://thegaypassport.com/community/berlin-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Existing Backroom record is Flag; source article alone does not justify unflagging.",
+              "rank": 2,
+              "existing_venue_id": "CRU-BER-VOLFRI-04",
+              "proposal_id": null,
+              "assessment": "existing_flagged_do_not_unflag",
+              "review_note": "Existing Backroom record is Flag; source article alone does not justify unflagging.",
+              "match_name": "Volkspark Friedrichshain"
+            },
+            {
+              "name": "Volkspark Hasenheide",
+              "city": "Berlin",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://thegaypassport.com/community/berlin-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source describes nude-sunbathing meadow and adjacent park areas.",
+              "rank": 3,
+              "existing_venue_id": "CRU-BER-HAS-03",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Source describes nude-sunbathing meadow and adjacent park areas.",
+              "match_name": "Hasenheide"
+            },
+            {
+              "name": "Grunewald",
+              "city": "Berlin",
+              "country": "Germany",
+              "place_type": "Forest",
+              "source_url": "https://thegaypassport.com/community/berlin-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source describes forest and parking-area cruising.",
+              "rank": 4,
+              "existing_venue_id": null,
+              "proposal_id": "GS2-DE-BERLIN-012",
+              "assessment": "corroborates_prior_proposal",
+              "review_note": "Source describes forest and parking-area cruising.",
+              "match_name": "Grunewald"
+            },
+            {
+              "name": "Lido Müggelsee",
+              "city": "Berlin",
+              "country": "Germany",
+              "place_type": "Beach / woodland",
+              "source_url": "https://thegaypassport.com/community/berlin-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source mentions the nude beach and adjoining woodland.",
+              "rank": 5,
+              "existing_venue_id": null,
+              "proposal_id": "GS2-DE-BERLIN-050",
+              "assessment": "corroborates_prior_proposal",
+              "review_note": "Source mentions the nude beach and adjoining woodland.",
+              "match_name": "Strandbad Müggelsee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "cities": [
+        {
+          "city": "Paris",
+          "records": [
+            {
+              "name": "Bois de Boulogne",
+              "city": "Paris",
+              "country": "France",
+              "place_type": "Park",
+              "source_url": "https://thegaypassport.com/community/paris-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source locates the activity around equestrian-area and southern forest paths.",
+              "rank": 1,
+              "existing_venue_id": "CRU-PAR-BOIDEBOU-01",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Source locates the activity around equestrian-area and southern forest paths.",
+              "match_name": "Bois de Boulogne"
+            },
+            {
+              "name": "Bois de Vincennes",
+              "city": "Paris",
+              "country": "France",
+              "place_type": "Park",
+              "source_url": "https://thegaypassport.com/community/paris-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source mentions Allée Royale and paths near Lac Daumesnil and Château de Vincennes.",
+              "rank": 2,
+              "existing_venue_id": "CRU-PAR-BOIDVIN-01",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Source mentions Allée Royale and paths near Lac Daumesnil and Château de Vincennes.",
+              "match_name": "Bois de Vincennes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Netherlands",
+      "cities": [
+        {
+          "city": "Amsterdam",
+          "records": [
+            {
+              "name": "De Oeverlanden",
+              "city": "Amsterdam",
+              "country": "Netherlands",
+              "place_type": "Park / designated area",
+              "source_url": "https://thegaypassport.com/community/amsterdam-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source describes the officially designated cruising zone, subject to zone boundaries.",
+              "rank": 1,
+              "existing_venue_id": "CRU-AMS-HETNIEMEE-01",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Source describes the officially designated cruising zone, subject to zone boundaries.",
+              "match_name": "De Oeverlanden (Het Nieuwe Meer)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "cities": [
+        {
+          "city": "London",
+          "records": [
+            {
+              "name": "Hampstead Heath",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Park",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source discusses paths and woods near Jack Straw's Castle.",
+              "rank": 1,
+              "existing_venue_id": "CRU-LON-HAMHEA-01",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Source discusses paths and woods near Jack Straw's Castle.",
+              "match_name": "Hampstead Heath"
+            },
+            {
+              "name": "Hyde Park (Rose Garden)",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Park",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source mentions Rose Garden and Serpentine areas.",
+              "rank": 2,
+              "existing_venue_id": "CRU-LON-HYDPAR-05",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Source mentions Rose Garden and Serpentine areas.",
+              "match_name": "Hyde Park — Rose Garden"
+            },
+            {
+              "name": "Clapham Common",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Park",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source identifies park woodland to the west.",
+              "rank": 3,
+              "existing_venue_id": "CRU-LON-CLACOM-01",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Source identifies park woodland to the west.",
+              "match_name": "Clapham Common"
+            },
+            {
+              "name": "Carnaby Street public toilets",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Public toilet",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source identifies the underground public toilets.",
+              "rank": 4,
+              "existing_venue_id": null,
+              "proposal_id": "GC1-UNITED-KINGDOM-08",
+              "assessment": "corroborates_prior_proposal",
+              "review_note": "Source identifies the underground public toilets.",
+              "match_name": "Public Toilets - Carnaby Street"
+            },
+            {
+              "name": "British Library — Level 3 toilets",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Public toilet",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source mentions additional security; verify access policies and current status.",
+              "rank": 5,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-UNITED-KINGDOM-LONDON-05",
+              "assessment": "candidate_unverified",
+              "review_note": "Source mentions additional security; verify access policies and current status.",
+              "match_name": null
+            },
+            {
+              "name": "Victoria Station — Main Concourse toilets",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Station toilet",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source names the main concourse facilities.",
+              "rank": 6,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-UNITED-KINGDOM-LONDON-06",
+              "assessment": "candidate_unverified",
+              "review_note": "Source names the main concourse facilities.",
+              "match_name": null
+            },
+            {
+              "name": "Liverpool Street Station toilets",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Station toilet",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source specifies facilities near Burger King.",
+              "rank": 7,
+              "existing_venue_id": null,
+              "proposal_id": "GC1-UNITED-KINGDOM-01",
+              "assessment": "corroborates_prior_proposal",
+              "review_note": "Source specifies facilities near Burger King.",
+              "match_name": "Liverpool Street station toilets"
+            },
+            {
+              "name": "Hilton London Bridge toilets",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Hotel toilet",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Verify visitor access; do not imply a hotel permits cruising.",
+              "rank": 8,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-UNITED-KINGDOM-LONDON-08",
+              "assessment": "candidate_unverified",
+              "review_note": "Verify visitor access; do not imply a hotel permits cruising.",
+              "match_name": null
+            },
+            {
+              "name": "One New Change shopping centre toilets",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Shopping-centre toilet",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source identifies lower-ground and first-floor toilets; verify access policies.",
+              "rank": 9,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-UNITED-KINGDOM-LONDON-09",
+              "assessment": "candidate_unverified",
+              "review_note": "Source identifies lower-ground and first-floor toilets; verify access policies.",
+              "match_name": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Spain",
+      "cities": [
+        {
+          "city": "Barcelona",
+          "records": [
+            {
+              "name": "Parc de la Ciutadella",
+              "city": "Barcelona",
+              "country": "Spain",
+              "place_type": "Park",
+              "source_url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source mentions the northeast end of the park.",
+              "rank": 1,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-SPAIN-BARCELONA-01",
+              "assessment": "candidate_unverified",
+              "review_note": "Source mentions the northeast end of the park.",
+              "match_name": null
+            },
+            {
+              "name": "Mar Bella Beach",
+              "city": "Barcelona",
+              "country": "Spain",
+              "place_type": "Beach",
+              "source_url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source describes cruising at beach edges, predominantly in warmer months.",
+              "rank": 2,
+              "existing_venue_id": "CRU-BCN-MARBEL-01",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Source describes cruising at beach edges, predominantly in warmer months.",
+              "match_name": "Mar Bella"
+            },
+            {
+              "name": "Barcelona Sants Station toilets",
+              "city": "Barcelona",
+              "country": "Spain",
+              "place_type": "Station toilet",
+              "source_url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source names toilets near platforms 6 and 7, subject to access requirements.",
+              "rank": 3,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-SPAIN-BARCELONA-03",
+              "assessment": "candidate_unverified",
+              "review_note": "Source names toilets near platforms 6 and 7, subject to access requirements.",
+              "match_name": null
+            },
+            {
+              "name": "Arenas de Barcelona shopping centre toilets",
+              "city": "Barcelona",
+              "country": "Spain",
+              "place_type": "Shopping-centre toilet",
+              "source_url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source names upper and basement toilets in Las Arenas shopping centre.",
+              "rank": 4,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-SPAIN-BARCELONA-04",
+              "assessment": "candidate_unverified",
+              "review_note": "Source names upper and basement toilets in Las Arenas shopping centre.",
+              "match_name": null
+            }
+          ]
+        },
+        {
+          "city": "Maspalomas",
+          "records": [
+            {
+              "name": "Maspalomas Dunes",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "place_type": "Dunes / natural area",
+              "source_url": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source divides the dunes into informal Bush A/B/C/D sections; protected landscape and possible park restrictions.",
+              "rank": 1,
+              "existing_venue_id": "CRU-LPA-MASDUN-01",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Source divides the dunes into informal Bush A/B/C/D sections; protected landscape and possible park restrictions.",
+              "match_name": "Maspalomas Dunes"
+            },
+            {
+              "name": "Maspalomas gay beach — Kiosk 7",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "place_type": "Beach",
+              "source_url": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source identifies the beach gathering area by kiosk 7, adjacent to but not the same as the dune paths.",
+              "rank": 2,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-SPAIN-MASPALOMAS-02",
+              "assessment": "candidate_unverified_possible_overlap",
+              "review_note": "Source identifies the beach gathering area by kiosk 7, adjacent to but not the same as the dune paths. Check if separate listing from nearby Maspalomas Dunes is justified.",
+              "match_name": null
+            },
+            {
+              "name": "Yumbo Centre toilets",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "place_type": "Shopping-centre toilet",
+              "source_url": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source explicitly identifies the centre's toilets, not the gay bars located inside.",
+              "rank": 3,
+              "existing_venue_id": null,
+              "proposal_id": "GC1-ESP-MAS-03",
+              "assessment": "corroborates_prior_proposal",
+              "review_note": "Source explicitly identifies the centre's toilets, not the gay bars located inside.",
+              "match_name": "Yumbo centrum"
+            }
+          ]
+        },
+        {
+          "city": "Sitges",
+          "records": [
+            {
+              "name": "Platja de l’Home Mort",
+              "city": "Sitges",
+              "country": "Spain",
+              "place_type": "Beach",
+              "source_url": "https://thegaypassport.com/destinations/gay-sitges/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source says cruising is reported at this relatively secluded nude beach.",
+              "rank": 1,
+              "existing_venue_id": "CRU-SIT-PLADELHOMO-03",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Source says cruising is reported at this relatively secluded nude beach.",
+              "match_name": "Platja de l’Home Mort"
+            }
+          ]
+        },
+        {
+          "city": "Benidorm",
+          "records": []
+        }
+      ]
+    },
+    {
+      "country": "Greece",
+      "cities": [
+        {
+          "city": "Mykonos",
+          "records": [
+            {
+              "name": "Rocks between Elia and Agrari",
+              "city": "Mykonos",
+              "country": "Greece",
+              "place_type": "Rocks / beach",
+              "source_url": "https://thegaypassport.com/mykonos/mykonos-gay-beaches-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source identifies the rocks between the two beaches; may overlap previous Elia Nudist Beach proposal; review footprint.",
+              "rank": 1,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-GREECE-MYKONOS-01",
+              "assessment": "candidate_unverified_possible_overlap",
+              "review_note": "Source identifies the rocks between the two beaches; may overlap previous Elia Nudist Beach proposal; review footprint. Possible overlap with earlier Elia Nudist Beach proposal; no automatic merge.",
+              "match_name": null
+            },
+            {
+              "name": "Paraportiani Church rocks",
+              "city": "Mykonos",
+              "country": "Greece",
+              "place_type": "Coastal rocks",
+              "source_url": "https://thegaypassport.com/mykonos/mykonos-gay-beaches-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source mentions Paraportiani Church area at night; matches an existing Backroom listing.",
+              "rank": 2,
+              "existing_venue_id": "GRC-MYK-CRU-PARAPORTIANI-01",
+              "proposal_id": null,
+              "assessment": "already_in_backroom",
+              "review_note": "Source mentions Paraportiani Church area at night; matches an existing Backroom listing.",
+              "match_name": "Paraportiani Church rocks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "United States",
+      "cities": [
+        {
+          "city": "New York",
+          "records": [
+            {
+              "name": "Central Park — The Ramble",
+              "city": "New York",
+              "country": "United States",
+              "place_type": "Park",
+              "source_url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source names the Ramble woodland in Central Park.",
+              "rank": 1,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-UNITED-STATES-NEW-YORK-01",
+              "assessment": "candidate_unverified",
+              "review_note": "Source names the Ramble woodland in Central Park.",
+              "match_name": null
+            },
+            {
+              "name": "Christopher Street Pier",
+              "city": "New York",
+              "country": "United States",
+              "place_type": "Pier",
+              "source_url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source describes the Christopher Street waterfront pier.",
+              "rank": 2,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-UNITED-STATES-NEW-YORK-02",
+              "assessment": "candidate_unverified",
+              "review_note": "Source describes the Christopher Street waterfront pier.",
+              "match_name": null
+            },
+            {
+              "name": "Jacob Riis Park — Bay 1",
+              "city": "New York",
+              "country": "United States",
+              "place_type": "Beach",
+              "source_url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source identifies a gay beach area at Bay 1; assess local rules and current conditions.",
+              "rank": 3,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-UNITED-STATES-NEW-YORK-03",
+              "assessment": "candidate_unverified",
+              "review_note": "Source identifies a gay beach area at Bay 1; assess local rules and current conditions.",
+              "match_name": null
+            },
+            {
+              "name": "Russian and Turkish Baths",
+              "city": "New York",
+              "country": "United States",
+              "place_type": "Public bathhouse",
+              "source_url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Ordinary mixed bathhouse with men-only sessions mentioned in source; not a dedicated gay sauna.",
+              "rank": 4,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-UNITED-STATES-NEW-YORK-04",
+              "assessment": "candidate_unverified",
+              "review_note": "Ordinary mixed bathhouse with men-only sessions mentioned in source; not a dedicated gay sauna.",
+              "match_name": null
+            }
+          ]
+        },
+        {
+          "city": "Fire Island",
+          "records": [
+            {
+              "name": "The Meat Rack — between The Pines and Cherry Grove",
+              "city": "Fire Island",
+              "country": "United States",
+              "place_type": "Wooded dunes",
+              "source_url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+              "source_section": "Named places in city/destination guide",
+              "source_note": "Source identifies trails between the two Fire Island communities; outside NYC proper.",
+              "rank": 1,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-UNITED-STATES-FIRE-ISLAND-01",
+              "assessment": "candidate_unverified",
+              "review_note": "Source identifies trails between the two Fire Island communities; outside NYC proper.",
+              "match_name": null
+            }
+          ]
+        },
+        {
+          "city": "Palm Springs",
+          "records": []
+        }
+      ]
+    },
+    {
+      "country": "Portugal",
+      "cities": [
+        {
+          "city": "Lisbon",
+          "records": []
+        }
+      ]
+    },
+    {
+      "country": "Israel",
+      "cities": [
+        {
+          "city": "Tel Aviv",
+          "records": [
+            {
+              "name": "Independence Park (Gan HaAtzmaut)",
+              "city": "Tel Aviv",
+              "country": "Israel",
+              "place_type": "Park",
+              "source_url": "https://thegaypassport.com/destinations/gay-tel-aviv/",
+              "source_section": "Destination guide / specific hotel review",
+              "source_note": "Source directly describes cruising in Independence Park beside Hilton Beach; verify activity recency and appropriate area.",
+              "rank": 1,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-ISRAEL-TEL-AVIV-01",
+              "assessment": "candidate_unverified",
+              "review_note": "Source directly describes cruising in Independence Park beside Hilton Beach; verify activity recency and appropriate area.",
+              "match_name": null
+            },
+            {
+              "name": "Hilton Beach (Tel Aviv)",
+              "city": "Tel Aviv",
+              "country": "Israel",
+              "place_type": "Beach",
+              "source_url": "https://thegaypassport.com/venue/leonardo-art-tel-aviv-by-the-beach/",
+              "source_section": "Destination guide / specific hotel review",
+              "source_note": "A hotel review on source site explicitly labels Hilton Beach an unofficial cruising area; requires stronger independent confirmation.",
+              "rank": 2,
+              "existing_venue_id": null,
+              "proposal_id": "GP4-ISRAEL-TEL-AVIV-02",
+              "assessment": "candidate_unverified",
+              "review_note": "A hotel review on source site explicitly labels Hilton Beach an unofficial cruising area; requires stronger independent confirmation.",
+              "match_name": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "outside_backroom_country_scope": [
+    {
+      "country": "Australia",
+      "city": "Sydney",
+      "url": "https://thegaypassport.com/community/sydney-cruising-guide/",
+      "records": [
+        {
+          "name": "Obelisk Beach",
+          "place_type": "Nude beach / nearby bushland",
+          "source_url": "https://thegaypassport.com/community/sydney-cruising-guide/",
+          "source_note": "Source identifies beach and surrounding bushland.",
+          "status": "research_only_outside_current_backroom_country_scope"
+        },
+        {
+          "name": "Lady Jane Beach",
+          "place_type": "Nude beach",
+          "source_url": "https://thegaypassport.com/community/sydney-cruising-guide/",
+          "source_note": "Source describes nudity but limited/less explicit on-site cruising; lower-confidence research lead.",
+          "status": "research_only_outside_current_backroom_country_scope"
+        }
+      ]
+    },
+    {
+      "country": "Mexico",
+      "city": "Puerto Vallarta",
+      "url": "https://thegaypassport.com/community/puerto-vallarta-cruising-guide/",
+      "records": [
+        {
+          "name": "Playa Los Muertos",
+          "place_type": "Beach",
+          "source_url": "https://thegaypassport.com/community/puerto-vallarta-cruising-guide/",
+          "source_note": "Source identifies beach and pier vicinity.",
+          "status": "research_only_outside_current_backroom_country_scope"
+        },
+        {
+          "name": "Playa Conchas Chinas",
+          "place_type": "Beach / rocky coves",
+          "source_url": "https://thegaypassport.com/community/puerto-vallarta-cruising-guide/",
+          "source_note": "Source identifies rocky coves near the beach.",
+          "status": "research_only_outside_current_backroom_country_scope"
+        },
+        {
+          "name": "Isla Río Cuale",
+          "place_type": "Wooded island",
+          "source_url": "https://thegaypassport.com/community/puerto-vallarta-cruising-guide/",
+          "source_note": "Source identifies wooded trails and benches.",
+          "status": "research_only_outside_current_backroom_country_scope"
+        },
+        {
+          "name": "El Malecón",
+          "place_type": "Boardwalk",
+          "source_url": "https://thegaypassport.com/community/puerto-vallarta-cruising-guide/",
+          "source_note": "Source identifies waterfront promenade.",
+          "status": "research_only_outside_current_backroom_country_scope"
+        },
+        {
+          "name": "Olas Altas Street",
+          "place_type": "Street",
+          "source_url": "https://thegaypassport.com/community/puerto-vallarta-cruising-guide/",
+          "source_note": "Source mentions street cruising in Zona Romántica; broad and must be verified before creating listing.",
+          "status": "research_only_outside_current_backroom_country_scope"
+        }
+      ]
+    }
+  ],
+  "pages_checked": [
+    {
+      "country": "Germany",
+      "city": "Berlin",
+      "url": "https://thegaypassport.com/community/berlin-cruising-guide/",
+      "count": 5
+    },
+    {
+      "country": "France",
+      "city": "Paris",
+      "url": "https://thegaypassport.com/community/paris-cruising-guide/",
+      "count": 2
+    },
+    {
+      "country": "Netherlands",
+      "city": "Amsterdam",
+      "url": "https://thegaypassport.com/community/amsterdam-cruising-guide/",
+      "count": 1
+    },
+    {
+      "country": "United Kingdom",
+      "city": "London",
+      "url": "https://thegaypassport.com/community/london-cruising-guide/",
+      "count": 9
+    },
+    {
+      "country": "Spain",
+      "city": "Barcelona",
+      "url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+      "count": 4
+    },
+    {
+      "country": "Spain",
+      "city": "Maspalomas",
+      "url": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/",
+      "count": 3
+    },
+    {
+      "country": "Spain",
+      "city": "Sitges",
+      "url": "https://thegaypassport.com/destinations/gay-sitges/",
+      "count": 1
+    },
+    {
+      "country": "Greece",
+      "city": "Mykonos",
+      "url": "https://thegaypassport.com/mykonos/mykonos-gay-beaches-guide/",
+      "count": 2
+    },
+    {
+      "country": "United States",
+      "city": "New York",
+      "url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+      "count": 4
+    },
+    {
+      "country": "United States",
+      "city": "Fire Island",
+      "url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+      "count": 1
+    },
+    {
+      "country": "United States",
+      "city": "Palm Springs",
+      "url": "https://thegaypassport.com/palm-springs/palm-springs-cruising-guide/",
+      "count": 0
+    },
+    {
+      "country": "Portugal",
+      "city": "Lisbon",
+      "url": "https://thegaypassport.com/destinations/gay-lisbon/",
+      "count": 0
+    },
+    {
+      "country": "Spain",
+      "city": "Benidorm",
+      "url": "https://thegaypassport.com/destinations/gay-benidorm/",
+      "count": 0
+    },
+    {
+      "country": "Israel",
+      "city": "Tel Aviv",
+      "url": "https://thegaypassport.com/destinations/gay-tel-aviv/",
+      "count": 1
+    },
+    {
+      "country": "Israel",
+      "city": "Tel Aviv",
+      "url": "https://thegaypassport.com/venue/leonardo-art-tel-aviv-by-the-beach/",
+      "count": 1
+    }
+  ],
+  "pages_with_no_qualifying_specific_places": [
+    {
+      "country": "United States",
+      "city": "Palm Springs",
+      "url": "https://thegaypassport.com/palm-springs/palm-springs-cruising-guide/",
+      "count": 0
+    },
+    {
+      "country": "Portugal",
+      "city": "Lisbon",
+      "url": "https://thegaypassport.com/destinations/gay-lisbon/",
+      "count": 0
+    },
+    {
+      "country": "Spain",
+      "city": "Benidorm",
+      "url": "https://thegaypassport.com/destinations/gay-benidorm/",
+      "count": 0
+    }
+  ],
+  "excluded_mentions": [
+    {
+      "source_url": "https://thegaypassport.com/community/amsterdam-cruising-guide/",
+      "name": "Zonneweide",
+      "reason": "Source explicitly says cruising is not officially allowed and does not establish an active on-site cruising spot."
+    },
+    {
+      "source_url": "https://thegaypassport.com/community/berlin-cruising-guide/",
+      "name": "Liquidrom",
+      "reason": "Source says it has no designated cruising or play area, only speculative chance encounters."
+    },
+    {
+      "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+      "name": "Highgate Men's Bathing Pond",
+      "reason": "Source explicitly says it is not exactly a cruising spot."
+    },
+    {
+      "source_url": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/",
+      "name": "Gay resorts and dedicated gay bars/saunas",
+      "reason": "Already belong in normal Backroom venue directory, not research cruising-area entries."
+    }
+  ]
+}
