@@ -1,0 +1,51 @@
+name: Combine Backroom Part 5 research
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/compile-part5-research.yml
+      - scripts/compile_part5_research.py
+      - research/cruising/part5/B/tracker_B.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: compile-part5-research-main
+  cancel-in-progress: false
+
+jobs:
+  combine:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out latest research
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Compile without altering worker files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/compile_part5_research.py
+            git add -- research/cruising/part5/combined_research_snapshot.json
+            if git diff --cached --quiet; then
+              echo "Research snapshot already current."
+              exit 0
+            fi
+            git commit -m "Research: compile saved Part 5 batches into one JSON snapshot"
+            if git push origin HEAD:main; then
+              echo "Research snapshot committed."
+              exit 0
+            fi
+            echo "Concurrent worker updated main; retrying against current branch."
+            sleep 4
+          done
+          echo "Could not commit snapshot after 5 attempts."
+          exit 1
