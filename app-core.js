@@ -1,5 +1,5 @@
 // --- Application State ---
-const APP_VERSION = "v1.5.24";
+const APP_VERSION = "v1.5.25";
 const APP_DATE = "6 November 2026";
 
 let systemInfo = {}, designTheme = {}, venues = [], events = [];
@@ -2540,6 +2540,7 @@ function handleRouting() {
     if (checkSharedListRoute()) return; 
 
     const hash = window.location.hash;
+    document.getElementById('main-content')?.classList.toggle('br-venues-sticky', hash === '#venues');
 
     document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden'));
     contextHeader?.classList.add('hidden');

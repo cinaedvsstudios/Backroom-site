@@ -1014,6 +1014,7 @@ function ensureSelectedDate() {
         const heading = festivalsMode ? '<div class="v15-festivals-heading"><h1 class="display-font">🎪 FESTIVALS IN</h1>'+renderLocationPill()+'</div>' : '<h1 class="display-font">📅 EVENTS IN</h1>'+renderLocationPill();
         const right = festivalsMode ? '<div class="v15-festival-search"><label for="v15-festival-search-input">SEARCH FESTIVALS</label><input id="v15-festival-search-input" class="form-input pill-input" type="search" placeholder="Search festival names, descriptions, events or cities…" value="'+escapeHTML(state.festivalSearch)+'" autocomplete="off"></div>' : renderFilterStrip();
         container.innerHTML = `<div class="calendar-page ${festivalsMode?'calendar-page--festivals':''}"><div class="calendar-title-row"><div class="calendar-title-block">${heading}</div>${right}</div><div class="calendar-layout"><section class="calendar-selector"><div class="calendar-month-row"><button type="button" class="calendar-month-button" id="calendar-prev-month" aria-label="Previous month">‹</button><h2 class="display-font">${monthLabel()}</h2><button type="button" class="calendar-month-button" id="calendar-next-month" aria-label="Next month">›</button></div>${renderGrid()}<p class="calendar-key"><span class="calendar-dot"></span> ${festivalsMode?'Festivals with events on this date':'Events listed on this date'}</p></section>${renderPanel()}</div></div>`;
+        window.BackroomCalendarLayout?.apply(container, festivalsMode);
         bindControls();
     }
 

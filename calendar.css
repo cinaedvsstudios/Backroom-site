@@ -424,3 +424,110 @@
 .calendar-filter-chip.pill-btn.event-filter-featured{min-height:26px;border-color:#e1b64b!important;color:#f7cf62!important;background:#211c13!important;font-weight:700}
 .calendar-filter-chip.pill-btn.event-filter-featured.active{border-color:#ffe398!important;background:#e3b955!important;color:#1b1404!important;box-shadow:0 0 9px rgba(227,185,85,.35)!important}
 .calendar-filter-chip.pill-btn.event-filter-featured:focus-visible{outline:2px solid #ffe398;outline-offset:2px}
+
+
+/* v1.5.25 — desktop Events only. Festivals and mobile Events unchanged. */
+@media(min-width:769px){
+  #main-content:has(.calendar-page--events) .content-wrapper{max-width:1480px}
+  #calendar-container:has(.calendar-page--events){
+    display:block;height:auto;min-height:0;overflow:visible;
+  }
+  #calendar-container .calendar-page--events{
+    max-width:none;width:100%;height:auto;min-height:0;display:block;overflow:visible;padding:20px;
+  }
+  .calendar-page--events .calendar-title-row{
+    display:flex;flex-flow:row wrap;justify-content:space-between;
+    align-items:center;gap:12px 20px;margin-bottom:17px;
+  }
+  .calendar-page--events .calendar-title-block{
+    display:flex;flex-flow:row wrap;align-items:center;gap:10px 13px;min-width:0;
+  }
+  .calendar-page--events .v15-calendar-location{margin:0;width:auto;max-width:100%}
+  .calendar-page--events .br-event-filter-top{flex:0 1 auto;min-width:0}
+  .calendar-page--events .br-event-quick-filters{
+    display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:6px;
+  }
+  .calendar-page--events .br-event-mobile-filters{display:none}
+  .calendar-page--events .calendar-layout{
+    grid-template-columns:minmax(265px,310px) minmax(0,1fr);
+    align-items:start;gap:18px;height:auto;min-height:0;
+  }
+  .calendar-page--events .br-event-control-sidebar{
+    display:flex;flex-direction:column;gap:13px;position:sticky;
+    top:86px;align-self:start;max-height:calc(100dvh - 98px);overflow-y:auto;
+    overscroll-behavior:contain;scrollbar-color:var(--primary-blue) var(--near-black);
+    scrollbar-width:thin;
+  }
+  .calendar-page--events .br-event-category-panel{
+    min-width:0;background:var(--near-black);border:1px solid var(--panel-mid);
+    border-radius:var(--radius-card);padding:13px;
+  }
+  .calendar-page--events .br-event-category-panel h2{
+    margin:0 0 10px;color:var(--primary-blue);
+    font:700 1.15rem 'Antonio',Arial,sans-serif;letter-spacing:.04em;
+  }
+  .calendar-page--events .br-event-category-scroll{
+    display:flex;flex-wrap:wrap;align-content:flex-start;gap:7px;
+    max-height:165px;overflow-y:auto;overflow-x:hidden;
+    padding:3px 4px 4px 1px;scrollbar-width:thin;
+    scrollbar-color:var(--primary-blue) var(--near-black);overscroll-behavior:contain;
+  }
+  .calendar-page--events .calendar-selector{min-width:0;padding:14px;align-self:start;max-height:none}
+  .calendar-page--events .calendar-grid{gap:4px}
+  .calendar-page--events .calendar-day{min-height:42px}
+  .calendar-page--events .calendar-weekday{padding:5px 0}
+  .calendar-page--events .calendar-month-row h2{font-size:1.3rem}
+  .calendar-page--events .calendar-month-button{width:34px;height:34px;font-size:1.7rem}
+  .calendar-page--events .calendar-event-panel{
+    min-width:0;height:auto;min-height:0;max-height:none;overflow:visible;padding:15px;
+  }
+  .calendar-page--events .br-event-card-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));
+    align-items:stretch;gap:13px;
+  }
+  .calendar-page--events .br-event-card-grid > .calendar-event-card{margin:0;min-width:0}
+  .calendar-page--events .br-event-card-grid > .v15-festival-card{
+    grid-column:1 / -1;min-width:0;margin:0;
+  }
+  .calendar-page--events .br-event-card-grid > .calendar-event-card .calendar-event-layout{
+    display:flex;align-items:flex-start;gap:10px;
+  }
+  .calendar-page--events .br-event-card-grid > .calendar-event-card .calendar-event-media{
+    flex:0 0 105px;width:105px;gap:6px;
+  }
+  .calendar-page--events .br-event-card-grid > .calendar-event-card .calendar-venue-thumb{
+    width:105px;height:100px;
+  }
+  .calendar-page--events .br-event-card-grid > .calendar-event-card .calendar-action{
+    width:105px;min-height:30px;padding:4px 3px;font-size:.68rem;overflow-wrap:anywhere;
+  }
+  .calendar-page--events .br-event-card-grid > .calendar-event-card .calendar-event-body{
+    min-width:0;overflow-wrap:anywhere;
+  }
+  .calendar-page--events .br-event-card-grid > .calendar-event-card .calendar-event-name{
+    font-size:1.22rem;line-height:1.15;
+  }
+  .calendar-page--events .br-event-card-grid > .calendar-event-card .calendar-event-description{
+    font-size:.92rem;line-height:1.35;
+  }
+  .calendar-page--events .br-event-card-grid > .calendar-event-card .calendar-tag{
+    font-size:.69rem;padding:4px 7px;
+  }
+}
+@media(min-width:769px) and (max-width:1100px){
+  .calendar-page--events .calendar-layout{
+    grid-template-columns:minmax(245px,285px) minmax(0,1fr);gap:12px;
+  }
+  #calendar-container .calendar-page--events{padding:14px}
+  .calendar-page--events .calendar-selector{padding:11px}
+  .calendar-page--events .calendar-event-panel{padding:11px}
+}
+@media(max-width:768px){
+  .calendar-page--events .br-event-quick-filters{display:none}
+  .calendar-page--events .br-event-mobile-filters{display:block;width:100%}
+  .calendar-page--events .br-event-filter-top{width:100%}
+  .calendar-page--events .br-event-control-sidebar{display:contents}
+  .calendar-page--events .br-event-category-panel{display:none}
+  .calendar-page--events .br-event-card-grid{display:block}
+  .calendar-page--events .calendar-title-row{display:grid;grid-template-columns:1fr}
+}
