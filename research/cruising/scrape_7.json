@@ -4,14 +4,3067 @@
     "site": "Squirt.org",
     "base_url": "https://www.squirt.org/",
     "created_berlin": "2026-11-06",
-    "status": "reserved_for_user_manual_scrape",
-    "collection_method": "User will manually collect and supply source findings later.",
-    "records_collected": 0,
-    "countries_covered": 0,
-    "meaning_of_empty": "NOT COLLECTED. Empty does not mean this website contains no cruising locations.",
-    "import_notes": "Upon receiving a user-supplied dump, retain each public spot's original source URL and locality, reconcile against live Backroom cruising areas and earlier scrape 1–6 proposals, update scrape_7 counts and deduplicated proposed_places without overwriting prior sources.",
+    "status": "user_supplied_city_search_exports_imported__pending_geographic_and_match_review",
+    "collection_method": "User-pasted Squirt.org city-proximity search result exports. Entries extend beyond each city because results include wide search radii.",
+    "records_collected": 205,
+    "countries_covered": null,
+    "meaning_of_empty": null,
+    "import_notes": "The pasted Link column is blank for every record; no detail URLs or confirmed Squirt listing IDs may be fabricated. Photo IDs are separate unconfirmed hints extracted from a subset of provided photo paths. Preserve dates verbatim. De-duplicate raw search appearances but not geographic subareas without review.",
     "privacy_scope": "Only publicly available place-level information; no profiles, usernames, private messages, real-time user positions, check-ins or other identifying user data.",
-    "publication_rule": "Manual imports are unverified research leads, not approved site listings. Verify venue relevance, safe/legal access and current status prior to publication; do not edit production listings.json during research."
+    "publication_rule": "Manual imports are unverified research leads, not approved site listings. Verify venue relevance, safe/legal access and current status prior to publication; do not edit production listings.json during research.",
+    "raw_row_appearances": 291,
+    "batches_received": 8,
+    "research_date_berlin": "2026-11-06",
+    "original_text_columns": [
+      "Title",
+      "Text",
+      "Link",
+      "Image"
+    ],
+    "caution": "Latest Reply is a forum timestamp or relative display, not proof of physical cruising activity. Many listings are located far from queried city. Commercial gay sex venues remain outside cruising-area proposal scope."
   },
-  "countries": []
+  "countries": [],
+  "batches": [
+    {
+      "batch": 1,
+      "label": "Italian regional / Riviera / Venice",
+      "raw_result_count": 40
+    },
+    {
+      "batch": 2,
+      "label": "Edinburgh",
+      "raw_result_count": 40
+    },
+    {
+      "batch": 3,
+      "label": "Munich / Vienna / Venice search",
+      "raw_result_count": 40
+    },
+    {
+      "batch": 4,
+      "label": "Seville / Malaga / Algarve",
+      "raw_result_count": 40
+    },
+    {
+      "batch": 5,
+      "label": "Naples / Rome / Italy / Croatia",
+      "raw_result_count": 36
+    },
+    {
+      "batch": 6,
+      "label": "Northern Italy / Milan / Brescia / Turin",
+      "raw_result_count": 40
+    },
+    {
+      "batch": 7,
+      "label": "Alps / Northern Italy / Swiss lakes",
+      "raw_result_count": 40
+    },
+    {
+      "batch": 8,
+      "label": "Nordics / Baltics",
+      "raw_result_count": 15
+    }
+  ],
+  "manual_index_records": [
+    {
+      "name": "Via Achille Sclavo",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Aug 22, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "Aug 22, 2026"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "Aug 22, 2026"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "Aug 22, 2026"
+        }
+      ]
+    },
+    {
+      "name": "Lecconia beach",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Jun 23, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Beaches, Hot Springs",
+          "last": "Jun 23, 2026"
+        },
+        {
+          "category": "Beaches, Hot Springs",
+          "last": "Jun 23, 2026"
+        }
+      ],
+      "photo_id_from_url": "0000239228"
+    },
+    {
+      "name": "Steam Sauna",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "Jul 03, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Bathhouses, Saunas",
+          "last": "Jul 03, 2026"
+        },
+        {
+          "category": "Bathhouses, Saunas",
+          "last": "Jul 03, 2026"
+        }
+      ],
+      "photo_id_from_url": "0000221914"
+    },
+    {
+      "name": "Via Ripa di Meana",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "1 year ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "1 year ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "1 year ago"
+        }
+      ]
+    },
+    {
+      "name": "Parco Ducale, Parma",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Jul 30, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "Jul 30, 2026"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "Jul 30, 2026"
+        }
+      ]
+    },
+    {
+      "name": "Pineta della Feniglia",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        5,
+        6
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Parks",
+          "last": "1 year ago"
+        },
+        {
+          "category": "Parks",
+          "last": "1 year ago"
+        }
+      ],
+      "photo_id_from_url": "0000133191"
+    },
+    {
+      "name": "Sauna Velluto",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Bathhouses, Saunas",
+          "last": "1 year ago"
+        },
+        {
+          "category": "Bathhouses, Saunas",
+          "last": "1 year ago"
+        },
+        {
+          "category": "Bathhouses, Saunas",
+          "last": "1 year ago"
+        }
+      ],
+      "photo_id_from_url": "0000221746"
+    },
+    {
+      "name": "Via Lungo Po Europa",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        }
+      ]
+    },
+    {
+      "name": "Via Panoramica",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Parks",
+          "last": "2 years ago"
+        },
+        {
+          "category": "Parks",
+          "last": "2 years ago"
+        },
+        {
+          "category": "Parks",
+          "last": "2 years ago"
+        }
+      ]
+    },
+    {
+      "name": "Liquid Club",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "Oct 08, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Bathhouses, Saunas",
+          "last": "Oct 08, 2026"
+        },
+        {
+          "category": "Bathhouses, Saunas",
+          "last": "Oct 08, 2026"
+        }
+      ],
+      "photo_id_from_url": "0000003963"
+    },
+    {
+      "name": "Piazza San Marco",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Apr 26, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        3,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "Apr 26, 2026"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "Apr 26, 2026"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "Apr 26, 2026"
+        }
+      ],
+      "photo_id_from_url": "0000013627"
+    },
+    {
+      "name": "Punta Sabbioni Forest",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Sep 02, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        3,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Beaches, Hot Springs",
+          "last": "Sep 02, 2026"
+        },
+        {
+          "category": "Beaches, Hot Springs",
+          "last": "Sep 02, 2026"
+        },
+        {
+          "category": "Beaches, Hot Springs",
+          "last": "Sep 02, 2026"
+        }
+      ],
+      "photo_id_from_url": "0000229818"
+    },
+    {
+      "name": "Zona Industriale",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        }
+      ]
+    },
+    {
+      "name": "Via Torrelunga and Via Spalto San Marco",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "1 year ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "1 year ago"
+        }
+      ]
+    },
+    {
+      "name": "Viale Italia",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        }
+      ]
+    },
+    {
+      "name": "Via Chilesotti",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        3,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        }
+      ],
+      "photo_id_from_url": "0000077616"
+    },
+    {
+      "name": "Viale Venezia",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Apr 13, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        3,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "Apr 13, 2026"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "Apr 13, 2026"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "Apr 13, 2026"
+        }
+      ],
+      "photo_id_from_url": "0000077617"
+    },
+    {
+      "name": "Piazzale Del Galoppatoio",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Oct 20, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        5,
+        6
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Parks",
+          "last": "Oct 20, 2026"
+        },
+        {
+          "category": "Parks",
+          "last": "Oct 20, 2026"
+        }
+      ],
+      "photo_id_from_url": "0000003010"
+    },
+    {
+      "name": "101 Club",
+      "source_category": "Bars, Clubs",
+      "latest_reply_as_shown": "Oct 19, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        5,
+        6
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Bars, Clubs",
+          "last": "Oct 19, 2026"
+        },
+        {
+          "category": "Bars, Clubs",
+          "last": "Oct 19, 2026"
+        }
+      ],
+      "photo_id_from_url": "0000194534"
+    },
+    {
+      "name": "Censured Club Roma",
+      "source_category": "Bars, Clubs",
+      "latest_reply_as_shown": "Oct 20, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        5,
+        6
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Bars, Clubs",
+          "last": "Oct 20, 2026"
+        },
+        {
+          "category": "Bars, Clubs",
+          "last": "Oct 20, 2026"
+        }
+      ]
+    },
+    {
+      "name": "Il Diavolo Dentro - Cruising Club",
+      "source_category": "Bars, Clubs",
+      "latest_reply_as_shown": "Oct 16, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        5,
+        6
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Bars, Clubs",
+          "last": "Oct 16, 2026"
+        },
+        {
+          "category": "Bars, Clubs",
+          "last": "Oct 16, 2026"
+        }
+      ],
+      "photo_id_from_url": "0000232598"
+    },
+    {
+      "name": "Apollion Sauna",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "Oct 18, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        5,
+        6
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Bathhouses, Saunas",
+          "last": "Oct 18, 2026"
+        },
+        {
+          "category": "Bathhouses, Saunas",
+          "last": "Oct 18, 2026"
+        }
+      ],
+      "photo_id_from_url": "0000197731"
+    },
+    {
+      "name": "Villa Gordiani",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Jul 16, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        5,
+        6
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Parks",
+          "last": "Jul 16, 2026"
+        },
+        {
+          "category": "Parks",
+          "last": "Jul 16, 2026"
+        }
+      ],
+      "photo_id_from_url": "0000083841"
+    },
+    {
+      "name": "Punta Kriz Naturist Beach",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Sep 20, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "Sep 20, 2026"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "Sep 20, 2026"
+        }
+      ]
+    },
+    {
+      "name": "Distributore STOIL",
+      "source_category": "Truck Stops, Rest Areas",
+      "latest_reply_as_shown": "Jul 08, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Truck Stops, Rest Areas",
+          "last": "Jul 08, 2026"
+        },
+        {
+          "category": "Truck Stops, Rest Areas",
+          "last": "Jul 08, 2026"
+        }
+      ]
+    },
+    {
+      "name": "Via Lambro (Peschiera Borromeo, MI)",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Oct 14, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "Oct 14, 2026"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "Oct 14, 2026"
+        }
+      ]
+    },
+    {
+      "name": "Valalta naturist resort Croatia",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Beaches, Hot Springs",
+          "last": "2 years ago"
+        },
+        {
+          "category": "Beaches, Hot Springs",
+          "last": "2 years ago"
+        }
+      ]
+    },
+    {
+      "name": "Ottobiano - Sosta Camion SP211 (Vicino Grande Azienda)",
+      "source_category": "Truck Stops, Rest Areas",
+      "latest_reply_as_shown": "Jul 07, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Truck Stops, Rest Areas",
+          "last": "Jul 07, 2026"
+        },
+        {
+          "category": "Truck Stops, Rest Areas",
+          "last": "Jul 07, 2026"
+        }
+      ]
+    },
+    {
+      "name": "Marriott Milan",
+      "source_category": "Hotels, Resorts, Campgrounds",
+      "latest_reply_as_shown": "Mar 31, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Hotels, Resorts, Campgrounds",
+          "last": "Mar 31, 2026"
+        },
+        {
+          "category": "Hotels, Resorts, Campgrounds",
+          "last": "Mar 31, 2026"
+        }
+      ]
+    },
+    {
+      "name": "Parco Nord",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Jul 07, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "Jul 07, 2026"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "Jul 07, 2026"
+        }
+      ]
+    },
+    {
+      "name": "Plomin fkk",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "May 28, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Beaches, Hot Springs",
+          "last": "May 28, 2026"
+        },
+        {
+          "category": "Beaches, Hot Springs",
+          "last": "May 28, 2026"
+        }
+      ]
+    },
+    {
+      "name": "Via Raffaello",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        }
+      ]
+    },
+    {
+      "name": "Via Samaden",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "5 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "5 years ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "5 years ago"
+        }
+      ]
+    },
+    {
+      "name": "Tour du Capitello",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Balzi Rossi",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Roseraie Princess Grace",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Villefranche Sur Mer",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Parc du mont boron",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Aug 04, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "G.I. Sex Shop",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Oct 26, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Viale Giosue Carducci",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        1,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        }
+      ]
+    },
+    {
+      "name": "Princes Street Gardens Ross Bandstand Public Toilets (Edinburgh)",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "5 days ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "photo_id_from_url": "0000051176"
+    },
+    {
+      "name": "Princes Street Gardens West Public Toilets (Edinburgh)",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Oct 05, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "photo_id_from_url": "0000074040"
+    },
+    {
+      "name": "The Royal Scottish Academy",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Stockbridge Public Toilets",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "18 hours ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "photo_id_from_url": "0000036421"
+    },
+    {
+      "name": "NCP king stables road",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "1 day ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Steamworks Sauna (Edinburgh)",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "6 hours ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Village Apartments (Edinburgh)",
+      "source_category": "Hotels, Resorts, Campgrounds",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "The Balmoral Spa (Edinburgh)",
+      "source_category": "Gyms",
+      "latest_reply_as_shown": "Feb 09, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Sheraton Grand Hotel & Spa (Edinburgh)",
+      "source_category": "Gyms",
+      "latest_reply_as_shown": "Jul 29, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Waverley Train Station Public Toilets (Edinburgh)",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "6 days ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "PureGym (Edinburgh Exchange Crescent)",
+      "source_category": "Gyms",
+      "latest_reply_as_shown": "17 hours ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "kickass grassmarkets male showers (near room 106)",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Sep 07, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "The Gym (Edinburgh City)",
+      "source_category": "Gyms",
+      "latest_reply_as_shown": "Dec 01, 2025",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "St James Quarter Shopping Centre Toilets (Edinburgh)",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "16 hours ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "John Lewis Store Toilets (Edinburgh)",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Oct 17, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Nuffield Health (Edinburgh Omni)",
+      "source_category": "Gyms",
+      "latest_reply_as_shown": "Sep 16, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Radisson Blu Spa (Edinburgh)",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "6 days ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Calton Hill",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "1 day ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "PureGym (Edinburgh Quartermile)",
+      "source_category": "Gyms",
+      "latest_reply_as_shown": "Jun 02, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Britannia Hotel Toilets (Edinburgh)",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Jul 27, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Potterrow Dome Student Union Toilets",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "3 days ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Warriston Cemetery (Edinburgh)",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Jul 23, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Teviot Row House Student Union Toilets",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Oct 16, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Canongate Kirkyard (Edinburgh)",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Sep 11, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "London Road Gardens",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Oct 14, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Pleasance Sports Complex & Gym (Dumbiedykes, Edinburgh)",
+      "source_category": "Gyms",
+      "latest_reply_as_shown": "Oct 18, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Robert Burns Monument",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Oct 14, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Edinburgh University Library Toilets",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Mar 04, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "New Calton Cemetery",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "1 day ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Nuffield Health (Edinburgh Fountain Park)",
+      "source_category": "Gyms",
+      "latest_reply_as_shown": "17 hours ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Regent Road Park",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Oct 14, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Bruntsfield Links Public Toilets (Edinburgh)",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "2 days ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Meadows Public Toilets",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Oct 28, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Rosebank cemetery",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "2 days ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Dalry Cemetery (Edinburgh)",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "1 day ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "The Gym Group (Meadowbank)",
+      "source_category": "Gyms",
+      "latest_reply_as_shown": "Aug 03, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "North Merchiston Cemetery (Edinburgh)",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Sep 12, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Napier University Toilets (Merchiston, Edinburgh)",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "PureGym Edinburgh Craigleith",
+      "source_category": "Gyms",
+      "latest_reply_as_shown": "Jan 14, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Balantyne Trees (Edinburgh)",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Oct 06, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        2
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Erotik Store Reiter",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Jan 15, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "A10 Lay-by - Northbound",
+      "source_category": "Truck Stops, Rest Areas",
+      "latest_reply_as_shown": "Feb 16, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "A10 - Southbound",
+      "source_category": "Truck Stops, Rest Areas",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Haus Romeo Alpine Gay Resort",
+      "source_category": "Hotels, Resorts, Campgrounds",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Hotels, Resorts, Campgrounds",
+          "last": "1 year ago"
+        }
+      ]
+    },
+    {
+      "name": "An d. Fahre",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Jul 09, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Erotixx - Rosenheimerstr.",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Jul 24, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Deutsche Eiche",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "Oct 20, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Munich Hauptbahnhof",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "May 19, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Erotixx - Theresienstr.",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Jun 24, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Erotixx - Poccistr",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Aug 09, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Scheidplatz",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Jun 24, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Muenchner Loewen Club",
+      "source_category": "Bars, Clubs",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Hawaii/FKK",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        },
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        }
+      ]
+    },
+    {
+      "name": "Ziirl Rest Stop",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        }
+      ]
+    },
+    {
+      "name": "Pendlerparkplatz Lappersdorf",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Schubert Park - Theatre Park",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Wolfzahnau auf der Kiesinsel",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Kaisersee",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "5 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Wertach / Schwimmschulstrabe",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Wolfzahnau",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "5 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Waldparkplatz zwischen A96 und Bad Wörishofen",
+      "source_category": "Truck Stops, Rest Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "District 35",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3,
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Bathhouses, Saunas",
+          "last": "1 year ago"
+        },
+        {
+          "category": "Bathhouses, Saunas",
+          "last": "1 year ago"
+        }
+      ]
+    },
+    {
+      "name": "World of Sex",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Parkplatz Gründlach A73 (northbound)",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Apr 10, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "VFR Stadium",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "5 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Wienerberg Nudist Area",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Hard On",
+      "source_category": "Bars, Clubs",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Romersauna",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "3 days ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Rathaus Park",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Sep 05, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Wertheimstein Park",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "5 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Wertheimsteinpark",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Praterstern, Wien Toilets",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Feb 14, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Washroom Near Football Pitch",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Toter Grund",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Jul 20, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Danube Island - Vienna",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Seberak Pond",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        3
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Parque de Maria Luisa",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Jan 28, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "El Bunker",
+      "source_category": "Bars, Clubs",
+      "latest_reply_as_shown": "Aug 03, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "The Cube urban",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "Aug 03, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Santa Justa Train Station",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "La Ralla",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Sep 20, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "photo_id_from_url": "0000218070"
+    },
+    {
+      "name": "Nervión Plaza Shopping Mall",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Chiclana Park / N340",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Oct 05, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Praia de Monte Gordo",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Oct 11, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Costa Natura",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "3 days ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Los Granados",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Oct 15, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Barcelo Marbella toilets",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Antequera ITV Car Building off A-45",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Parque de la Constitucion",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Feb 09, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Cabo Pino",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Oct 17, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "John Mackintosh Square, Gibraltar",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Aug 02, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Praia do Barill (Tavira)",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Sep 25, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Fuengirola Feria",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Oct 14, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Paloma Park",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Oct 20, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Larios Centro Shopping Mall",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Oct 06, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Cupido Sex Shop",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Oct 23, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Eagle",
+      "source_category": "Bars, Clubs",
+      "latest_reply_as_shown": "Sep 30, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Sex Shop Fantasy Benalmadena Sala X",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Oct 11, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Cuero Cruising Club Torremolinos",
+      "source_category": "Bars, Clubs",
+      "latest_reply_as_shown": "Oct 11, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Apolo Sauna Torremolinos",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "Oct 23, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Exxxtreme Cruising club",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "Oct 11, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Parque de Malaga",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Sep 06, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Guadalmar",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Oct 25, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Pikante sex shop (with cabins)",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "6 days ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Jardines de Puerta Oscura",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Jul 29, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Armona Iskand",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Faro Riverside area Portas do Mar",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Oct 17, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Estadio Algarve",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Praia de Faro",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Aug 07, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Torre del Mar Nudist Beach Gay End",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Sep 04, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Cavalo Preto Beach",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Oct 16, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Centro Comercial Modelo de Albufeira",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Sep 28, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Praia Grande",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Oct 27, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "La Herradura",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Aug 23, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "El Corte Ingles Granada",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Apr 23, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "X Cinema Room",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Sep 30, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        4
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Villa Comunale Park",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "photo_id_from_url": "0000090883"
+    },
+    {
+      "name": "Museo Metro Station",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "May 07, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "photo_id_from_url": "0000245724"
+    },
+    {
+      "name": "Via Brin",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "photo_id_from_url": "0000077725"
+    },
+    {
+      "name": "Baia Regina Giovanna",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Oct 16, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "photo_id_from_url": "0000169058"
+    },
+    {
+      "name": "Viale Carlo III",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "5 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Caserta Stazione",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Oct 17, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "photo_id_from_url": "0000166344"
+    },
+    {
+      "name": "Ripalta Walk",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Viale Virgilio",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Ponte Punta Penna",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Spiaggia DAyala",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Aug 30, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Rosarno Rest Stop",
+      "source_category": "Truck Stops, Rest Areas",
+      "latest_reply_as_shown": "Aug 30, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Maxximum Time Sauna",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "6 days ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Via Lincoln",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "6 days ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Viale Regina Margherita",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Dunes behind Balestrate Beach",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Fondaco Parrino Beach",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Sep 10, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Kasjuni",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Sep 26, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Hotel Split",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Aug 12, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Makarska Dog Beach",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Sep 24, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Krvavica FKK beach",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Sep 24, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Villa Bellini",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "Nov 17, 2025",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Park Gradac",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Lokrum Island",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "Jul 12, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Caito Rock Beach",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Aereoporto Fontanarossa Catania",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Jul 10, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        5
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Central Station",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Washrooms, Cottages",
+          "last": "1 year ago"
+        }
+      ]
+    },
+    {
+      "name": "Giardini Alpini d'Italia",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Parks",
+          "last": "2 years ago"
+        }
+      ]
+    },
+    {
+      "name": "Parco Pellerina entrata laghi",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Cruising Areas",
+          "last": "2 years ago"
+        }
+      ]
+    },
+    {
+      "name": "A13 Rastplatz Apfelwuhr Zizers",
+      "source_category": "Truck Stops, Rest Areas",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        6,
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "conflicting_source_values": [
+        {
+          "category": "Truck Stops, Rest Areas",
+          "last": "1 year ago"
+        }
+      ]
+    },
+    {
+      "name": "Gay Toilette in Zug",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Toilette Stierenmarkt",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Werftsteg",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Bundesplatz Public Toilets",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Woods",
+      "source_category": "Parks",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        7
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Manhattan Biograf",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Jun 16, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "photo_id_from_url": "0000219730"
+    },
+    {
+      "name": "Batvagan",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Dv Population Building 2nd floor washroom",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Xxx Paradise adult bookstore",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Mar 06, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Yyteri Nudist Beach",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "2 years ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false,
+      "photo_id_from_url": "0000075769"
+    },
+    {
+      "name": "Marbäcks Viken",
+      "source_category": "Beaches, Hot Springs",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Club 69 Sauna",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "Aug 25, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "SexMax on Narva Mnt 9",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Sep 12, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "SexMax - Taillinn",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Venus Center",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "1 year ago",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "US Video Sex Store",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Aug 20, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Keltainen Ruusu Yellow Rose",
+      "source_category": "Theatres, Bookstores, Sex Shops",
+      "latest_reply_as_shown": "Aug 20, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Kauppakeskus Kamppi",
+      "source_category": "Washrooms, Cottages",
+      "latest_reply_as_shown": "Oct 21, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Laakso Central Park",
+      "source_category": "Cruising Areas",
+      "latest_reply_as_shown": "Jul 14, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    },
+    {
+      "name": "Sauna Con Hombres",
+      "source_category": "Bathhouses, Saunas",
+      "latest_reply_as_shown": "Oct 16, 2026",
+      "source_url": null,
+      "image_url": null,
+      "found_in_batches": [
+        8
+      ],
+      "original_link_column_blank": true,
+      "last_reply_is_activity_confirmation": false
+    }
+  ]
 }
