@@ -20,10 +20,63 @@
       "existing_cruising": "All baseline Category='Cruising Area' listing names, IDs, and statuses, including inactive records to prevent re-adding them.",
       "city_names": "Use one canonical city when clearly equivalent (Frankfurt/Frankfurt am Main, St Julian's spelling). Preserve other city strings if ambiguous; add new cities as needed."
     },
-    "continuation": "In future chats, load this GitHub file first, then each submitted research website. Add a new record to sources as scrape_1, scrape_2, etc, add per-city findings to city.scrapes[scrape_id], add unique candidates to proposed_places, recalculate city/country proposals, and commit the updated file. Never modify listings.json until final cross-reference and explicit publication step.",
+    "continuation": "In future chats, load this GitHub file first, then each submitted research website. Add a new record to sources as scrape_1, scrape_2, etc, add per-city findings to city.scrapes[scrape_id], add unique candidates to proposed_places, recalculate city/country proposals, and commit the updated file. Never modify listings.json until final cross-reference and explicit publication step. All scrape_1 source findings are candidate-level, not 2026-verified or publish-ready. Preserve raw names/types; do not dedupe different cities. Cities may be added even if Backroom had no venues there.",
     "exclusions": "33 baseline entries without a country and one Europe-wide multi-city listing are not assigned to a country. Czech Republic is merged under Czechia. This is a country/city research tracker, not a complete copy of listings.json."
   },
-  "sources": [],
+  "sources": [
+    {
+      "id": "scrape_1",
+      "site": "Gays-Cruising.com",
+      "base_url": "https://www.gays-cruising.com/",
+      "section": "Top Gay Cruising Spots in [country]",
+      "started_berlin": "2026-11-06",
+      "status": "in_progress",
+      "countries_checked": [
+        {
+          "country": "Andorra",
+          "country_url": "https://www.gays-cruising.com/en/andorra",
+          "count": 15
+        },
+        {
+          "country": "Belgium",
+          "country_url": "https://www.gays-cruising.com/en/belgium",
+          "count": 15
+        },
+        {
+          "country": "Estonia",
+          "country_url": "https://www.gays-cruising.com/en/estonia",
+          "count": 15
+        },
+        {
+          "country": "Georgia",
+          "country_url": "https://www.gays-cruising.com/en/georgia",
+          "count": 15
+        },
+        {
+          "country": "Iceland",
+          "country_url": "https://www.gays-cruising.com/en/iceland",
+          "count": 5
+        },
+        {
+          "country": "Israel",
+          "country_url": "https://www.gays-cruising.com/en/israel",
+          "count": 15
+        },
+        {
+          "country": "Liechtenstein",
+          "country_url": "https://www.gays-cruising.com/en/liechtenstein",
+          "count": 2
+        },
+        {
+          "country": "Lithuania",
+          "country_url": "https://www.gays-cruising.com/en/lithuania",
+          "count": 15
+        }
+      ],
+      "countries_failed": [],
+      "results_total": 97
+    }
+  ],
   "countries": [
     {
       "country": "Albania",
@@ -43,15 +96,412 @@
     {
       "country": "Andorra",
       "cruising_now": 0,
-      "proposals": 0,
+      "proposals": 15,
       "cities": [
         {
           "city": "Andorra la Vella",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 9,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ANDORRA-01",
+              "name": "Escale (Súper U)",
+              "city": "Andorra la Vella",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-02",
+              "name": "Hiper E.Leclerc",
+              "city": "Andorra la Vella",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-03",
+              "name": "Parc Central",
+              "city": "Andorra la Vella",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-04",
+              "name": "El rec del sols",
+              "city": "Andorra la Vella",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-05",
+              "name": "Rec del Obac",
+              "city": "Andorra la Vella",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-06",
+              "name": "Paseo al lado del Río Valira",
+              "city": "Andorra la Vella",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-08",
+              "name": "Casa de la Vall",
+              "city": "Andorra la Vella",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-11",
+              "name": "Zona relax Serradells",
+              "city": "Andorra la Vella",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Gym",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-13",
+              "name": "Anyos",
+              "city": "Andorra la Vella",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Gym",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Escale (Súper U)",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-01",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 2,
+                "name": "Hiper E.Leclerc",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-02",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 3,
+                "name": "Parc Central",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-03",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 4,
+                "name": "El rec del sols",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-04",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 5,
+                "name": "Rec del Obac",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-05",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 6,
+                "name": "Paseo al lado del Río Valira",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-06",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 8,
+                "name": "Casa de la Vall",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-08",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 11,
+                "name": "Zona relax Serradells",
+                "source_category": "Gym",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-11",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 13,
+                "name": "Anyos",
+                "source_category": "Gym",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-13",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Encamp",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ANDORRA-15",
+              "name": "Pas de la Casa",
+              "city": "Encamp",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 15,
+                "name": "Pas de la Casa",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-15",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "La Massana",
+          "cruising_now": 0,
+          "proposals": 2,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ANDORRA-07",
+              "name": "Parc de La Massana",
+              "city": "La Massana",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-09",
+              "name": "Parc de la Anita",
+              "city": "La Massana",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 7,
+                "name": "Parc de La Massana",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-07",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 9,
+                "name": "Parc de la Anita",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-09",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Ordino",
+          "cruising_now": 0,
+          "proposals": 2,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ANDORRA-10",
+              "name": "Jardín",
+              "city": "Ordino",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-12",
+              "name": "Segudet",
+              "city": "Ordino",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 10,
+                "name": "Jardín",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-10",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 12,
+                "name": "Segudet",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-12",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Sant Julià de Lòria",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ANDORRA-14",
+              "name": "Centre Cultural",
+              "city": "Sant Julià de Lòria",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 14,
+                "name": "Centre Cultural",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/andorra",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ANDORRA-14",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
         }
       ]
     },
@@ -73,7 +523,7 @@
     {
       "country": "Belgium",
       "cruising_now": 0,
-      "proposals": 0,
+      "proposals": 15,
       "cities": [
         {
           "city": "Ans",
@@ -86,26 +536,362 @@
         {
           "city": "Antwerp",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 3,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BELGIUM-02",
+              "name": "Wolvenberg",
+              "city": "Antwerp",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-BELGIUM-07",
+              "name": "Stadspark- Diamant",
+              "city": "Antwerp",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-BELGIUM-13",
+              "name": "Linkeroever",
+              "city": "Antwerp",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 2,
+                "name": "Wolvenberg",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-02",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 7,
+                "name": "Stadspark- Diamant",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-07",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 13,
+                "name": "Linkeroever",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-13",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         },
         {
           "city": "Brussels",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 3,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BELGIUM-06",
+              "name": "Parc de Bruxelles",
+              "city": "Brussels",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-BELGIUM-09",
+              "name": "Théatre Américain",
+              "city": "Brussels",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-BELGIUM-12",
+              "name": "Toilettes de la gare",
+              "city": "Brussels",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 6,
+                "name": "Parc de Bruxelles",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-06",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 9,
+                "name": "Théatre Américain",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-09",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 12,
+                "name": "Toilettes de la gare",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-12",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
         },
         {
           "city": "Ghent",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 2,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BELGIUM-05",
+              "name": "Citadelpark",
+              "city": "Ghent",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-BELGIUM-10",
+              "name": "Parking viaductstraat",
+              "city": "Ghent",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 5,
+                "name": "Citadelpark",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-05",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 10,
+                "name": "Parking viaductstraat",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-10",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Herentals",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BELGIUM-14",
+              "name": "Overkant Jachthaven Herentals",
+              "city": "Herentals",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 14,
+                "name": "Overkant Jachthaven Herentals",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-14",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Holsbeek",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BELGIUM-03",
+              "name": "Carpool Holsbeek",
+              "city": "Holsbeek",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 3,
+                "name": "Carpool Holsbeek",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-03",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Kontich",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BELGIUM-01",
+              "name": "P&R",
+              "city": "Kontich",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "P&R",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-01",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Laakdal",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BELGIUM-15",
+              "name": "Carpool parking E313 Geel-Oost",
+              "city": "Laakdal",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 15,
+                "name": "Carpool parking E313 Geel-Oost",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-15",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         },
         {
           "city": "Liège",
@@ -114,21 +900,511 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Lommel",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BELGIUM-08",
+              "name": "At the parking next to the water at the Hoeverdijk",
+              "city": "Lommel",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 8,
+                "name": "At the parking next to the water at the Hoeverdijk",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-08",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Pont-à-Celles",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BELGIUM-04",
+              "name": "Parking Luttre a54",
+              "city": "Pont-à-Celles",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 4,
+                "name": "Parking Luttre a54",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-04",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Waasmunster",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-BELGIUM-11",
+              "name": "waasmunsterbos",
+              "city": "Waasmunster",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 11,
+                "name": "waasmunsterbos",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/belgium",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-BELGIUM-11",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         }
       ]
     },
     {
       "country": "Estonia",
       "cruising_now": 0,
-      "proposals": 0,
+      "proposals": 15,
       "cities": [
+        {
+          "city": "Narva",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ESTONIA-13",
+              "name": "Narva-Jõesuu nude rand",
+              "city": "Narva",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 13,
+                "name": "Narva-Jõesuu nude rand",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-13",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Pärnu",
+          "cruising_now": 0,
+          "proposals": 2,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ESTONIA-02",
+              "name": "Pärnu beach",
+              "city": "Pärnu",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESTONIA-08",
+              "name": "Parking and forest",
+              "city": "Pärnu",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 2,
+                "name": "Pärnu beach",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-02",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 8,
+                "name": "Parking and forest",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-08",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
         {
           "city": "Tallinn",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 11,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ESTONIA-01",
+              "name": "Parklas/Metsas",
+              "city": "Tallinn",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESTONIA-03",
+              "name": "Parking",
+              "city": "Tallinn",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESTONIA-04",
+              "name": "Valdeku",
+              "city": "Tallinn",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESTONIA-05",
+              "name": "Outdoor cruising",
+              "city": "Tallinn",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESTONIA-06",
+              "name": "Nautica Keskus Toillet",
+              "city": "Tallinn",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-ESTONIA-07",
+              "name": "Shnelli Park",
+              "city": "Tallinn",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESTONIA-09",
+              "name": "Old monument near the sea-Tallinn",
+              "city": "Tallinn",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESTONIA-10",
+              "name": "Nude Beach",
+              "city": "Tallinn",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESTONIA-12",
+              "name": "Promenade WC",
+              "city": "Tallinn",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-ESTONIA-14",
+              "name": "Jussikalda Parking",
+              "city": "Tallinn",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESTONIA-15",
+              "name": "Punane tn - Car Hookup Spot",
+              "city": "Tallinn",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Parklas/Metsas",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-01",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 3,
+                "name": "Parking",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-03",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 4,
+                "name": "Valdeku",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-04",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 5,
+                "name": "Outdoor cruising",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-05",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 6,
+                "name": "Nautica Keskus Toillet",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-06",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 7,
+                "name": "Shnelli Park",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-07",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 9,
+                "name": "Old monument near the sea-Tallinn",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-09",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 10,
+                "name": "Nude Beach",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-10",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 12,
+                "name": "Promenade WC",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-12",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 14,
+                "name": "Jussikalda Parking",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-14",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 15,
+                "name": "Punane tn - Car Hookup Spot",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-15",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Tartu",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ESTONIA-11",
+              "name": "Põlva",
+              "city": "Tartu",
+              "country": "Estonia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/estonia",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 11,
+                "name": "Põlva",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/estonia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ESTONIA-11",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         },
         {
           "city": "Tartu / Rakvere",
@@ -143,45 +1419,1018 @@
     {
       "country": "Georgia",
       "cruising_now": 0,
-      "proposals": 0,
+      "proposals": 15,
       "cities": [
+        {
+          "city": "Batumi",
+          "cruising_now": 0,
+          "proposals": 2,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-GEORGIA-06",
+              "name": "Park near Holy Mother Virgin Nativity Cathedral",
+              "city": "Batumi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-13",
+              "name": "6 May Park",
+              "city": "Batumi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 6,
+                "name": "Park near Holy Mother Virgin Nativity Cathedral",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-06",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 13,
+                "name": "6 May Park",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-13",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Kutaisi",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-GEORGIA-14",
+              "name": "Railway station of Kutaisi",
+              "city": "Kutaisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 14,
+                "name": "Railway station of Kutaisi",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-14",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
         {
           "city": "Tbilisi",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 12,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-GEORGIA-01",
+              "name": "Dighomi",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-02",
+              "name": "Circus",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-03",
+              "name": "Toilet near Top Sport in City Mall",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-04",
+              "name": "Old Town (Abanotubani/Kharpukhi) Sulfur Baths and Saunas",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-05",
+              "name": "Didube Railway Station (railway behind the bus terminal)",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-07",
+              "name": "Toilets at Galerea",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-08",
+              "name": "Karvasla Bathrooms",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-09",
+              "name": "Paid Public Bathrooms Near Kidobani",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-10",
+              "name": "Isani public pee spot near Shaurmafia",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-11",
+              "name": "Baratashvili Bride",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-12",
+              "name": "Bio Toilet Near Tbilisi Central (on the Dadiani Side)",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-15",
+              "name": "Tbilisi Central Platform, disused side",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Dighomi",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-01",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 2,
+                "name": "Circus",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-02",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 3,
+                "name": "Toilet near Top Sport in City Mall",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-03",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 4,
+                "name": "Old Town (Abanotubani/Kharpukhi) Sulfur Baths and Saunas",
+                "source_category": "Sauna",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-04",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 5,
+                "name": "Didube Railway Station (railway behind the bus terminal)",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-05",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 7,
+                "name": "Toilets at Galerea",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-07",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 8,
+                "name": "Karvasla Bathrooms",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-08",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 9,
+                "name": "Paid Public Bathrooms Near Kidobani",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-09",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 10,
+                "name": "Isani public pee spot near Shaurmafia",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-10",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 11,
+                "name": "Baratashvili Bride",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-11",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 12,
+                "name": "Bio Toilet Near Tbilisi Central (on the Dadiani Side)",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-12",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 15,
+                "name": "Tbilisi Central Platform, disused side",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/georgia",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-GEORGIA-15",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
         }
       ]
     },
     {
       "country": "Iceland",
       "cruising_now": 0,
-      "proposals": 0,
+      "proposals": 5,
       "cities": [
+        {
+          "city": "Akureyri",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ICELAND-03",
+              "name": "Kjarnarskógur",
+              "city": "Akureyri",
+              "country": "Iceland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/iceland",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 3,
+                "name": "Kjarnarskógur",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/iceland",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ICELAND-03",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Keflavík",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ICELAND-02",
+              "name": "WC",
+              "city": "Keflavík",
+              "country": "Iceland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/iceland",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 2,
+                "name": "WC",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/iceland",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ICELAND-02",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
         {
           "city": "Reykjavík",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 3,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ICELAND-01",
+              "name": "Öskjuhlíð",
+              "city": "Reykjavík",
+              "country": "Iceland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/iceland",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ICELAND-04",
+              "name": "Men sauna",
+              "city": "Reykjavík",
+              "country": "Iceland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/iceland",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-ICELAND-05",
+              "name": "Öskjuhlíð II",
+              "city": "Reykjavík",
+              "country": "Iceland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/iceland",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Öskjuhlíð",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/iceland",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ICELAND-01",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 4,
+                "name": "Men sauna",
+                "source_category": "Sauna",
+                "source_country_url": "https://www.gays-cruising.com/en/iceland",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ICELAND-04",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 5,
+                "name": "Öskjuhlíð II",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/iceland",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ICELAND-05",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         }
       ]
     },
     {
       "country": "Israel",
       "cruising_now": 0,
-      "proposals": 0,
+      "proposals": 15,
       "cities": [
+        {
+          "city": "Hadera",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ISRAEL-01",
+              "name": "Forest",
+              "city": "Hadera",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Forest",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-01",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Haifa",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ISRAEL-07",
+              "name": "Students Beach",
+              "city": "Haifa",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 7,
+                "name": "Students Beach",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-07",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Jerusalem",
+          "cruising_now": 0,
+          "proposals": 3,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ISRAEL-02",
+              "name": "Behind the king david hotel-Jerusalem",
+              "city": "Jerusalem",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ISRAEL-10",
+              "name": "Men's room Safra Square, floor 0",
+              "city": "Jerusalem",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-ISRAEL-13",
+              "name": "Independence Part-Jerusalem",
+              "city": "Jerusalem",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 2,
+                "name": "Behind the king david hotel-Jerusalem",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-02",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 10,
+                "name": "Men's room Safra Square, floor 0",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-10",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 13,
+                "name": "Independence Part-Jerusalem",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-13",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Nesher",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ISRAEL-12",
+              "name": "פארק שמואל",
+              "city": "Nesher",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 12,
+                "name": "פארק שמואל",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-12",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Netanya",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ISRAEL-08",
+              "name": "Gaash beach",
+              "city": "Netanya",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 8,
+                "name": "Gaash beach",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-08",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Petah Tikva",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ISRAEL-15",
+              "name": "Kenyon HaGadol Mall Washroom",
+              "city": "Petah Tikva",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 15,
+                "name": "Kenyon HaGadol Mall Washroom",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-15",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Qiryat Motzkin",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ISRAEL-05",
+              "name": "Lev HaMifratz Shopping Mall",
+              "city": "Qiryat Motzkin",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 5,
+                "name": "Lev HaMifratz Shopping Mall",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-05",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Ramat HaSharon",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ISRAEL-11",
+              "name": "Park Shaul Cemetery",
+              "city": "Ramat HaSharon",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 11,
+                "name": "Park Shaul Cemetery",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-11",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Rishon LeZion",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ISRAEL-14",
+              "name": "Bat Yam Grove",
+              "city": "Rishon LeZion",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 14,
+                "name": "Bat Yam Grove",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-14",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
         {
           "city": "Tel Aviv",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 4,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-ISRAEL-03",
+              "name": "The Seperated / Nordau beach",
+              "city": "Tel Aviv",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ISRAEL-04",
+              "name": "Bograshov Beach",
+              "city": "Tel Aviv",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ISRAEL-06",
+              "name": "Central Train Station",
+              "city": "Tel Aviv",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-ISRAEL-09",
+              "name": "Azrieli Mall Washroom",
+              "city": "Tel Aviv",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/israel",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 3,
+                "name": "The Seperated / Nordau beach",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-03",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 4,
+                "name": "Bograshov Beach",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-04",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 6,
+                "name": "Central Train Station",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-06",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 9,
+                "name": "Azrieli Mall Washroom",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/israel",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-ISRAEL-09",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
         },
         {
           "city": "Tel Aviv / Jerusalem",
@@ -211,8 +2460,78 @@
     {
       "country": "Liechtenstein",
       "cruising_now": 0,
-      "proposals": 0,
+      "proposals": 2,
       "cities": [
+        {
+          "city": "Balzers",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-LIECHTENSTEIN-01",
+              "name": "Balzers Sportplatz",
+              "city": "Balzers",
+              "country": "Liechtenstein",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sports area",
+              "source_url": "https://www.gays-cruising.com/en/liechtenstein",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Balzers Sportplatz",
+                "source_category": "Sports area",
+                "source_country_url": "https://www.gays-cruising.com/en/liechtenstein",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LIECHTENSTEIN-01",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Ruggell",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-LIECHTENSTEIN-02",
+              "name": "Kokon",
+              "city": "Ruggell",
+              "country": "Liechtenstein",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Gym",
+              "source_url": "https://www.gays-cruising.com/en/liechtenstein",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 2,
+                "name": "Kokon",
+                "source_category": "Gym",
+                "source_country_url": "https://www.gays-cruising.com/en/liechtenstein",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LIECHTENSTEIN-02",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
         {
           "city": "Vaduz / Schaan",
           "cruising_now": 0,
@@ -226,15 +2545,424 @@
     {
       "country": "Lithuania",
       "cruising_now": 0,
-      "proposals": 0,
+      "proposals": 15,
       "cities": [
+        {
+          "city": "Kaunas",
+          "cruising_now": 0,
+          "proposals": 3,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-LITHUANIA-03",
+              "name": "Railway Station (WC) M. K. Čiurlionio g. 16",
+              "city": "Kaunas",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-LITHUANIA-11",
+              "name": "Kaunas Akropolis WV",
+              "city": "Kaunas",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-LITHUANIA-14",
+              "name": "Lemon Gym",
+              "city": "Kaunas",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Gym",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 3,
+                "name": "Railway Station (WC) M. K. Čiurlionio g. 16",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-03",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 11,
+                "name": "Kaunas Akropolis WV",
+                "source_category": "Shopping area",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-11",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 14,
+                "name": "Lemon Gym",
+                "source_category": "Gym",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-14",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Klaipėda",
+          "cruising_now": 0,
+          "proposals": 3,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-LITHUANIA-01",
+              "name": "Polygonas",
+              "city": "Klaipėda",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-LITHUANIA-05",
+              "name": "Nude beach Smiltyne",
+              "city": "Klaipėda",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-LITHUANIA-15",
+              "name": "Trinyciu Park",
+              "city": "Klaipėda",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 1,
+                "name": "Polygonas",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-01",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 5,
+                "name": "Nude beach Smiltyne",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-05",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 15,
+                "name": "Trinyciu Park",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-15",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Palanga",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-LITHUANIA-06",
+              "name": "Men's beach (nudist)",
+              "city": "Palanga",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 6,
+                "name": "Men's beach (nudist)",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-06",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Pasvalys",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-LITHUANIA-04",
+              "name": "Parking Cruising Area",
+              "city": "Pasvalys",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 4,
+                "name": "Parking Cruising Area",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-04",
+                "assessment": "needs_category_and_access_review"
+              }
+            ]
+          }
+        },
+        {
+          "city": "Plungė",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-LITHUANIA-02",
+              "name": "Poilsio Vieta",
+              "city": "Plungė",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 2,
+                "name": "Poilsio Vieta",
+                "source_category": "Rest area",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-02",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
+        },
         {
           "city": "Vilnius",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 6,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-LITHUANIA-07",
+              "name": "Cinema toilet",
+              "city": "Vilnius",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-LITHUANIA-08",
+              "name": "End of first Beach in Valakampiai",
+              "city": "Vilnius",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-LITHUANIA-09",
+              "name": "Vilnius Central Train Station",
+              "city": "Vilnius",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-LITHUANIA-10",
+              "name": "Vilnius Bus Station WC",
+              "city": "Vilnius",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-LITHUANIA-12",
+              "name": "Public toilet",
+              "city": "Vilnius",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GC1-LITHUANIA-13",
+              "name": "Nudist beach",
+              "city": "Vilnius",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": [
+              {
+                "rank": 7,
+                "name": "Cinema toilet",
+                "source_category": "Other",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-07",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 8,
+                "name": "End of first Beach in Valakampiai",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-08",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 9,
+                "name": "Vilnius Central Train Station",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-09",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 10,
+                "name": "Vilnius Bus Station WC",
+                "source_category": "Transport station",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-10",
+                "assessment": "needs_category_and_access_review"
+              },
+              {
+                "rank": 12,
+                "name": "Public toilet",
+                "source_category": "Park",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-12",
+                "assessment": "candidate_unverified"
+              },
+              {
+                "rank": 13,
+                "name": "Nudist beach",
+                "source_category": "Natural area",
+                "source_country_url": "https://www.gays-cruising.com/en/lithuania",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GC1-LITHUANIA-13",
+                "assessment": "candidate_unverified"
+              }
+            ]
+          }
         }
       ]
     },
