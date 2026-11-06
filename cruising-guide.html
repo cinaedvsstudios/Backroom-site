@@ -4,36 +4,119 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🔥 Cruising Guide | Backroom</title>
-<meta name="description" content="Backroom's practical cruising guide covering consent, etiquette and personal safety for gay nightlife and cruising areas.">
+<meta name="description" content="Backroom's practical gay cruising guide: first-time tips, venues, consent and boundaries, PrEP and PEP, etiquette and personal safety.">
 <link rel="canonical" href="https://cinaedvsstudios.github.io/Backroom-site/cruising-guide.html">
 <style>
-:root{--black:#000;--cyan:#2CA8D4;--white:#fff;--panel:#1F2535;--mid:#313748;--text:#969CAE;--red:#D55036;}
-*{box-sizing:border-box}body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55;padding:32px;}
-main{max-width:900px;margin:0 auto;background:var(--panel);border:1px solid var(--mid);border-radius:18px;padding:32px;box-shadow:0 0 24px rgba(44,168,212,.18);}
-h1{color:var(--cyan);text-transform:uppercase;letter-spacing:.06em;margin-top:0}h2{color:var(--cyan);text-transform:uppercase;letter-spacing:.04em;margin-top:30px;margin-bottom:8px;font-size:1.2rem}a{color:var(--cyan)}p{font-size:1.05rem;margin:0 0 14px}.important{border-left:3px solid var(--red);padding-left:14px}.muted{color:var(--text)}
-@media (max-width:640px){body{padding:14px;}main{padding:20px;border-radius:12px;}h1{font-size:1.6rem;}}
+:root{--black:#000;--cyan:#2CA8D4;--white:#fff;--panel:#1F2535;--mid:#313748;--text:#b7bdc9;--red:#D55036}
+*{box-sizing:border-box}
+body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55;padding:32px}
+main{max-width:900px;margin:0 auto;background:var(--panel);border:1px solid var(--mid);border-radius:18px;padding:32px;box-shadow:0 0 24px rgba(44,168,212,.18)}
+h1{color:var(--cyan);text-transform:uppercase;letter-spacing:.06em;margin-top:0}
+a{color:var(--cyan)}
+p{font-size:1.05rem;margin:0 0 14px}
+.important{border-left:3px solid var(--red);padding-left:14px}
+.muted{color:var(--text)}
+@media(max-width:640px){body{padding:14px}main{padding:20px;border-radius:12px}h1{font-size:1.6rem}}
+/* Backroom v1.5.21 — compact, accessible topic accordions inside Cruising Guide. */
+.br-cruising-accordion-hint{margin:3px 0 15px!important;color:#b7bdc9!important;font-size:.94rem!important}
+.br-cruising-accordion{display:grid;grid-template-columns:minmax(0,1fr);gap:9px;margin:14px 0}
+.br-cruising-topic{min-width:0;border:1px solid #75505b;border-radius:10px;background:#321b24;overflow:hidden}
+.br-cruising-topic[open]{border-color:#e36d5c;background:#25151c}
+.br-cruising-topic > summary,.v15-cruising-guide .br-cruising-topic > summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px;cursor:pointer;padding:13px 16px;margin:0;color:#fff;font:700 1.16rem/1.3 'Antonio',Arial,sans-serif;letter-spacing:.025em;text-transform:none}
+.br-cruising-topic > summary::-webkit-details-marker{display:none}
+.br-cruising-topic > summary::after{content:'+';display:inline-flex;flex:0 0 27px;width:27px;height:27px;align-items:center;justify-content:center;background:#5a2932;color:#ffe9e4;border:1px solid #9c5156;border-radius:6px;font:700 1.3rem/1 Arial,sans-serif}
+.br-cruising-topic[open] > summary::after{content:'−';background:#994b42;color:#fff}
+.br-cruising-topic > summary:hover,.br-cruising-topic > summary:focus-visible{background:#4b252d}
+.br-cruising-topic > summary:focus-visible{outline:3px solid #ff9b88;outline-offset:-4px}
+.br-cruising-topic-copy{padding:14px 17px 17px;border-top:1px solid #69404a;color:#f4eff0}
+.br-cruising-topic-copy p{font-size:1rem;line-height:1.57;margin:0 0 12px}
+.br-cruising-topic-copy p:last-child{margin-bottom:0}
+.br-cruising-topic-copy .important{border-left:3px solid #ec7a65;padding-left:12px}
+.br-cruising-topic-copy .br-cruising-source-links{font-size:.92rem;color:#d7d0d2}
+.br-cruising-topic-copy .br-cruising-source-links a{color:#78d1ee;text-decoration:underline;text-underline-offset:2px}
+.br-cruising-topic-copy .br-cruising-source-links a:hover{color:#fff}
+@media(max-width:640px){.br-cruising-accordion{gap:8px}.br-cruising-topic > summary,.v15-cruising-guide .br-cruising-topic > summary{padding:12px 11px;font-size:1.02rem}.br-cruising-topic-copy{padding:12px}.br-cruising-topic-copy p{font-size:.96rem}.br-cruising-topic > summary::after{flex-basis:26px;width:26px;height:26px}}
+
 </style>
 </head>
 <body>
 <main>
 <h1>🔥 Cruising Guide</h1>
-<p>A gay cruising spot is a place where you can have sex with men you do not know in a public or semi-public setting. Generally, this refers to public places such as parks and toilets. Some people also include cruising clubs, where the main idea of the venue is sex.</p>
+<p>Cruising is about meeting other men for sex or flirtation, often without arranging anything in advance. That might mean a park, beach, public toilet or another outdoor spot, or a cruising club or darkroom. The setting changes, but the basics are the same: notice who's interested, be considerate and decide for yourself what you want.</p>
+<p class="muted br-cruising-accordion-hint">Choose a topic below to open it. Only one section is expanded at a time.</p>
 
-<h2>Consent</h2>
-<p class="important">A “no” means no, regardless of the location or situation. This also includes nonverbal rejection: if you are standing watching someone and they wave you away, you are expected to move on and look for someone else.</p>
-<p>Eye contact and body language usually communicate interest more effectively than words. In fact, in a cruising area such as a park or a darkroom, it can feel a bit strange to start having a conversation with someone.</p>
-<p>The key to good cruising is eye contact. Similarly, the key to rejecting someone clearly is a lack of eye contact. If you are staring someone down and they are looking everywhere except at you, they are <strong>not interested</strong>.</p>
-<p>A touch on the arm or shoulder should be more than enough to indicate interest. If the person does not respond, that means they are not interested and you should move on.</p>
+<div class="br-cruising-accordion" aria-label="Cruising guide topics">
+  <details class="br-cruising-topic" name="br-cruising-topics" data-topic="first-time">
+    <summary>First Time Cruising — What to Expect</summary>
+    <div class="br-cruising-topic-copy">
+      <p>You don't have to arrive with a plan. Some guys walk around, exchange looks and pause when someone catches their eye. Others hang back, check out the atmosphere or decide it isn't their night. All of that is normal.</p>
+      <p>You might find a busy location one evening and a quiet one the next. Give yourself time to get comfortable, and don't feel you have to join in just because you've turned up. If you want to leave, leave.</p>
+    </div>
+  </details>
 
-<h2>Know Your Boundaries</h2>
-<p>Know what you want or, more importantly, what you do not want. Negotiating this nonverbally can be something as simple as moving someone’s hand away from your arse.</p>
-<p>Be aware that letting one act happen may lead someone to try to move further. For example, if you let someone finger you, they may then try to penetrate you. That does not mean you have agreed to anything more: move them away or stop the interaction if that is not what you want.</p>
+  <details class="br-cruising-topic" name="br-cruising-topics" data-topic="where">
+    <summary>Different Places, Different Experiences</summary>
+    <div class="br-cruising-topic-copy">
+      <p>Outdoor places such as parks or beaches are usually less predictable: activity depends on the time, weather and who happens to be there. Public toilets are shared facilities, so respect other people using them. Local rules and laws around public sexual activity can be different from one city or country to another.</p>
+      <p>Indoor cruising clubs, saunas and darkrooms generally have their own entry conditions, opening hours, dress codes and facilities. Check the individual Backroom listing before heading out, especially when you're travelling. A listed cruising spot isn't a guarantee that anyone will be there.</p>
+    </div>
+  </details>
 
-<h2>Personal Safety</h2>
-<p>Stay aware of your surroundings, especially in outdoor areas after dark. Keep valuables secure and avoid carrying excessive cash or expensive items.</p>
-<p>Trust your instincts. If something feels off, leave immediately.</p>
+  <details class="br-cruising-topic" name="br-cruising-topics" data-topic="consent">
+    <summary>Consent &amp; Reading the Signals</summary>
+    <div class="br-cruising-topic-copy">
+      <p class="important">A “no” means no, regardless of the location or situation. This also includes nonverbal rejection: if you are standing watching someone and they wave you away, you are expected to move on and look for someone else.</p>
+      <p>Eye contact and body language usually communicate interest more effectively than words. In fact, in a cruising area such as a park or a darkroom, it can feel a bit strange to start having a conversation with someone.</p>
+      <p>The key to good cruising is eye contact. Similarly, the key to rejecting someone clearly is a lack of eye contact. If you are staring someone down and they are looking everywhere except at you, they are <strong>not interested</strong>.</p>
+      <p>A touch on the arm or shoulder should be more than enough to indicate interest. If the person does not respond, that means they are not interested and you should move on.</p>
+    </div>
+  </details>
 
-<p class="muted" style="margin-top:32px; font-size:0.95rem;">If you are viewing this page outside of the Backroom site <a href="https://cinaedvsstudios.github.io/Backroom-site/" style="font-weight:700;">click here to open the Backroom site.</a></p>
+  <details class="br-cruising-topic" name="br-cruising-topics" data-topic="boundaries">
+    <summary>Know Your Boundaries</summary>
+    <div class="br-cruising-topic-copy">
+      <p>Know what you want or, more importantly, what you do not want. Negotiating this nonverbally can be something as simple as moving someone’s hand away from your arse.</p>
+      <p>Be aware that letting one act happen may lead someone to try to move further. For example, if you let someone finger you, they may then try to penetrate you. That does not mean you have agreed to anything more: move them away or stop the interaction if that is not what you want.</p>
+    </div>
+  </details>
+
+  <details class="br-cruising-topic" name="br-cruising-topics" data-topic="before">
+    <summary>Before You Go — Practical Essentials</summary>
+    <div class="br-cruising-topic-copy">
+      <p>Check the location and opening times, think about how you'll get home and see whether the venue has any entry rules or cash-only payments. Bring a charged phone, whatever personal essentials you prefer, and any medication you need. Water and lubricant can be useful depending on your plans.</p>
+      <p>Take only what you need, particularly at outdoor spots. Above all, remember that you can change your plans at any time — cruising should be something you enjoy, not something you feel obliged to do.</p>
+    </div>
+  </details>
+
+  <details class="br-cruising-topic" name="br-cruising-topics" data-topic="prep">
+    <summary>PrEP, PEP &amp; HIV Prevention</summary>
+    <div class="br-cruising-topic-copy">
+      <p><strong>PrEP</strong> (pre-exposure prophylaxis) is medication taken by people without HIV to prevent HIV. When taken correctly, it's highly effective at preventing HIV from sex. For guys who cruise regularly, or who simply want the reassurance of protection, it's worth knowing about.</p>
+      <p><strong>Daily PrEP</strong> tablets are a common option. Some gay and bisexual men can also take <strong>on-demand PrEP</strong> (sometimes called “2-1-1”) around planned sex. It needs the right medication and timing, isn't suitable for everyone, and availability and recommendations vary between countries. Some places also offer longer-acting PrEP injections. A sexual health clinic can help you choose what fits your circumstances.</p>
+      <p>Before starting PrEP, you'll need an HIV test, and regular follow-up appointments include HIV screening and, for certain tablets, kidney checks. Routine STI testing is also part of looking after your sexual health. PrEP prevents HIV, but not other STIs.</p>
+      <p><strong>PEP</strong> (post-exposure prophylaxis) is different: it's emergency medication after a possible HIV exposure. If you think you might need it, seek medical advice as soon as possible — ideally within 24 hours and no later than 72 hours. And one important fact worth knowing: <strong>U=U</strong> means that people living with HIV who maintain an undetectable viral load on treatment do not transmit HIV through sex.</p>
+      <p class="br-cruising-source-links">Want the details? Read <a href="https://www.nhs.uk/medicines/pre-exposure-prophylaxis-prep/how-and-when-to-take-pre-exposure-prophylaxis-prep/" target="_blank" rel="noopener noreferrer">NHS guidance on daily and on-demand PrEP</a>, <a href="https://www.who.int/publications/i/item/what-s-the-2-1-1-event-driven-oral-pre-exposure-prophylaxis-to-prevent-hiv-for-men-who-have-sex-with-men" target="_blank" rel="noopener noreferrer">WHO guidance on 2-1-1</a>, or <a href="https://www.cdc.gov/hivnexus/hcp/pep/" target="_blank" rel="noopener noreferrer">CDC guidance on PEP</a>. Local clinics can explain what is available where you live.</p>
+    </div>
+  </details>
+
+  <details class="br-cruising-topic" name="br-cruising-topics" data-topic="etiquette">
+    <summary>Privacy &amp; Cruising Etiquette</summary>
+    <div class="br-cruising-topic-copy">
+      <p>Keep other people's privacy in mind. Don't photograph or film anyone without their permission, and don't share pictures or details that could identify someone else. A guy's interest in cruising doesn't mean he wants to be outed.</p>
+      <p>Respect people who aren't taking part, don't block paths or entrances, and leave a shared space as you found it. If someone isn't interested, don't follow or pressure them. Moving on gracefully is part of the experience.</p>
+    </div>
+  </details>
+
+  <details class="br-cruising-topic" name="br-cruising-topics" data-topic="safety">
+    <summary>Personal Safety</summary>
+    <div class="br-cruising-topic-copy">
+      <p>Stay aware of your surroundings, especially in outdoor areas after dark. Keep valuables secure and avoid carrying excessive cash or expensive items.</p>
+      <p>Trust your instincts. If something feels off, leave immediately.</p>
+    </div>
+  </details>
+</div>
+
+<p class="muted" style="margin-top:24px; font-size:0.95rem;">If you are viewing this page outside of the Backroom site <a href="https://cinaedvsstudios.github.io/Backroom-site/" style="font-weight:700;">click here to open the Backroom site.</a></p>
 </main>
 </body>
 </html>
