@@ -1,5 +1,5 @@
 {
-  "version": "v1.5.23",
+  "version": "v1.5.24",
   "date": "2026-11-06",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
@@ -40,7 +40,9 @@
     "thanks.html",
     "travel-v110.js",
     "travel-v110.css",
-    "event-detail.css"
+    "event-detail.css",
+    "cruising-area-map.js",
+    "heatmap-city-coordinates-v110.js"
   ],
   "changes": [
     "Multi-select dates with aggregated events, festival grouping and dark-green expandable cards",
@@ -95,7 +97,9 @@
     "PrEP-focused practical HIV prevention section explains daily/on-demand choices, routine checks and rapid PEP access, while mentioning other STIs briefly without moralising about condoms.",
     "Keep Cruising Guide's outer expandable panel and venue results unchanged; remember the open topic after a location refresh. Bust caches for the updated CSS, JS and standalone guide.",
     "Display the eight Cruising Guide accordion topics in two columns on desktop (768px and wider), and one column on mobile, with distinct leading emojis. Preserve all guide text and behaviour.",
-    "Expand Privacy & Cruising Etiquette with quiet-space etiquette: no loud conversations or social hangouts beside active cruisers, no phone calls, loud videos/music or unnecessary phone flashlights, and no expectation of conversation when someone ignores or walks away. Preserve all other Cruising Guide topics and two-column layout."
+    "Expand Privacy & Cruising Etiquette with quiet-space etiquette: no loud conversations or social hangouts beside active cruisers, no phone calls, loud videos/music or unnecessary phone flashlights, and no expectation of conversation when someone ignores or walks away. Preserve all other Cruising Guide topics and two-column layout.",
+    "Add a compact collapsible cruising-only Europe map with city-count bubbles and zoomable geographic clustering; clicking a city reuses Backroom's saved location selector and filters the existing Cruising Areas listings, without duplicate controls.",
+    "Map stays in normal page flow and retains its extent/expanded state across same-page location updates; desktop mouse-wheel plus/minus and mobile two-finger pinch/touch zoom with page scrolling. Restrict overview to Iceland–Canaries–Russia–Turkey/Israel and prevent street-level zoom."
   ],
   "validation": {
     "javascript_syntax": "checked before publication",
