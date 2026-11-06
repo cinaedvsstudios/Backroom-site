@@ -24,15 +24,16 @@
     "caution": "Latest Reply is a forum timestamp or relative display, not proof of physical cruising activity. Many listings are located far from queried city. Commercial gay sex venues remain outside cruising-area proposal scope.",
     "country_assignment_method": "Only selected place-specific city hints were assigned. An Edinburgh search batch may still contain mislocated records; each requires review.",
     "triage_counts": {
-      "candidate_unverified_needs_detail_url": 60,
+      "candidate_unverified_needs_detail_url": 58,
       "geography_unresolved_needs_detail_url": 52,
       "separate_commercial_venue_not_cruising_area": 39,
-      "old_or_stale_hold": 31,
+      "old_or_stale_hold": 30,
       "match_or_possible_subarea_existing": 20,
+      "new_provisional_proposal_after_external_source_check": 3,
       "private_or_managed_property_hold": 3
     },
     "master_match_count": 20,
-    "master_proposals_added": 0,
+    "master_proposals_added": 3,
     "publication_ready_count": 0,
     "source_url_gaps": "All 205 records lack detail URLs in supplied Link column. No URLs are invented and photo IDs are not treated as confirmed listing IDs.",
     "top_review_names": [
@@ -62,7 +63,13 @@
       "Via Torrelunga and Via Spalto San Marco",
       "Princes Street Gardens Ross Bandstand Public Toilets (Edinburgh)",
       "Princes Street Gardens West Public Toilets (Edinburgh)"
-    ]
+    ],
+    "master_proposals_added_names": [
+      "Villa Gordiani",
+      "Parco Nord",
+      "Stockbridge Public Toilets"
+    ],
+    "geography_correction": "Viale Venezia and Via Chilesotti are Bassano del Grappa, supported by independent public geographic sources; earlier Viale Venezia Brescia hint corrected."
   },
   "countries": [],
   "batches": [
@@ -636,12 +643,17 @@
         }
       ],
       "photo_id_from_url": "0000077616",
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "old_or_stale_hold",
+      "city_hint": "Bassano del Grappa",
+      "country_hint": "Italy",
+      "geo_basis": "Historical gay-travel place list naming both streets in Bassano del Grappa, supported by public street directory",
+      "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "geography_verification_urls": [
+        "https://www.arcigay.it/wp-content/uploads/TravelForGay.pdf",
+        "https://www.italiamappe.it/stradario/bassano-del-grappa/viale-venezia/"
+      ],
+      "priority_review_note": "Bassano del Grappa, not Venice/Brescia. Older 2008 reference does not confirm current activity; Squirt index latest reply is not necessarily a visit."
     },
     {
       "name": "Viale Venezia",
@@ -672,12 +684,17 @@
         }
       ],
       "photo_id_from_url": "0000077617",
-      "city_hint": "Brescia",
+      "city_hint": "Bassano del Grappa",
       "country_hint": "Italy",
-      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "geo_basis": "Historical gay-travel place list naming both streets in Bassano del Grappa, supported by public street directory",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "geography_verification_urls": [
+        "https://www.arcigay.it/wp-content/uploads/TravelForGay.pdf",
+        "https://www.italiamappe.it/stradario/bassano-del-grappa/viale-venezia/"
+      ],
+      "priority_review_note": "Bassano del Grappa, not Venice/Brescia. Older 2008 reference does not confirm current activity; Squirt index latest reply is not necessarily a visit."
     },
     {
       "name": "Piazzale Del Galoppatoio",
@@ -870,10 +887,17 @@
       "city_hint": "Rome",
       "country_hint": "Italy",
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
-      "assessment": "candidate_unverified_needs_detail_url",
+      "assessment": "new_provisional_proposal_after_external_source_check",
       "needs_review": true,
       "priority_review_note": "Rome, Italy — new park lead. Request Squirt details or corroboration of reported activity.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "proposal_id": "SQ7-ITA-ROM-VILGOR-01",
+      "supporting_source_urls": [
+        "https://www.crusit.com/spots/villa-gordiani-rome",
+        "https://www.crusit.com/blog/cruising-in-rome",
+        "https://queereurope.com/lgbtq-guide-to-rome/"
+      ],
+      "geography_verified_at_place_level": true
     },
     {
       "name": "Punta Kriz Naturist Beach",
@@ -1081,10 +1105,17 @@
       "city_hint": "Milan",
       "country_hint": "Italy",
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
-      "assessment": "candidate_unverified_needs_detail_url",
+      "assessment": "new_provisional_proposal_after_external_source_check",
       "needs_review": true,
       "priority_review_note": "Milan — large park; exact section and public evidence needed.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "proposal_id": "SQ7-ITA-MIL-PARNOR-01",
+      "supporting_source_urls": [
+        "https://www.cruisinggays.com/milan/areas/54762-parco-nord/",
+        "https://www.gay.it/cruising-milano",
+        "https://www.wearegaylyplanet.com/cruising-milano/"
+      ],
+      "geography_verified_at_place_level": true
     },
     {
       "name": "Plomin fkk",
@@ -1406,10 +1437,16 @@
       "city_hint": "Edinburgh",
       "country_hint": "United Kingdom",
       "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "candidate_unverified_needs_detail_url",
+      "assessment": "new_provisional_proposal_after_external_source_check",
       "needs_review": true,
       "priority_review_note": "Edinburgh — new named public-facility lead; direct listing URL needed.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "proposal_id": "SQ7-GB-EDI-STOCKWC-01",
+      "supporting_source_urls": [
+        "https://www.cruisinggays.com/map/?cityid=3733&filter=11",
+        "https://www.edinburgh.gov.uk/publictoilets"
+      ],
+      "geography_verified_at_place_level": true
     },
     {
       "name": "NCP king stables road",
