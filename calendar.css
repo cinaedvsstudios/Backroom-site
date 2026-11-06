@@ -428,7 +428,7 @@
 
 /* v1.5.25 — desktop Events only. Festivals and mobile Events unchanged. */
 @media(min-width:769px){
-  #main-content:has(.calendar-page--events) .content-wrapper{max-width:1480px}
+  #main-content:has(#calendar-container:not(.hidden) .calendar-page--events) .content-wrapper{max-width:1480px}
   #calendar-container:has(.calendar-page--events){
     display:block;height:auto;min-height:0;overflow:visible;
   }
