@@ -1,4 +1,4 @@
-const BACKROOM_VERSION = 'v1.5.22';
+const BACKROOM_VERSION = 'v1.5.26';
 const BACKROOM_EMBEDDED_HASHES = new Set(['#heatmap', '#travel']);
 const BACKROOM_INITIAL_EMBEDDED_HASH = BACKROOM_EMBEDDED_HASHES.has(window.location.hash) ? window.location.hash : '';
 
@@ -15,7 +15,7 @@ if (BACKROOM_INITIAL_EMBEDDED_HASH) {
   const key = value => clean(value).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('en');
   const splitCities = value => (Array.isArray(value) ? value : String(value ?? '').split(/[;,|]+/)).map(clean).filter(Boolean);
   const embeddedPages = {
-    heatmap: { src: 'heatmap.html?embed=1&v=1.10.1', title: 'Heat Map' },
+    heatmap: { src: 'heatmap.html?embed=1&v=1.10.6', title: 'Heat Map' },
     travel: { src: 'travel.html?embed=1&v=1.10.4', title: 'Travel' }
   };
 
