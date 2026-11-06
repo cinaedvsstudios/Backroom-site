@@ -1,0 +1,697 @@
+{
+  "_meta": {
+    "title": "Worker C Part5 research batch 802-806",
+    "section": "C",
+    "range_start": 802,
+    "range_end": 806,
+    "count": 5,
+    "date_berlin": "2026-11-06",
+    "cutoff_inclusive": "2025-11-06",
+    "research_only": true,
+    "source_alignment": "research/cruising/cross_source_alignment_2026-11-06.json"
+  },
+  "records": [
+    {
+      "index": 802,
+      "id": "GS2-DE-HAMBURG-010",
+      "name": "Kennedybrücke / Lombardsbrücke",
+      "city": "Hamburg",
+      "country": "Germany",
+      "source_count_original": 2,
+      "original_source_refs": [
+        {
+          "s": "2",
+          "f": "research/cruising/scrape_2.json",
+          "i": 150,
+          "u": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html"
+        },
+        {
+          "s": "3",
+          "f": "research/cruising/scrape_3.json",
+          "i": 102,
+          "u": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/4/"
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
+            "https://gay-szene.net/kennedybruecke-und-lombardsbruecke-in-hamburg/10836/eintrag.html"
+          ],
+          "method": "archived_name_and_live_dated_forum_where_public",
+          "checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/4/"
+          ],
+          "method": "archived_name_and_live_dated_forum_where_public",
+          "checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        }
+      ],
+      "description_rewritten": "The source names two distinct central Hamburg bridges, Kennedybrücke and Lombardsbrücke, with a green embankment along the western Binnenalster/New Jungfernstieg approach and a nearby railway bank. A 6 May 2021 firsthand visitor reported very little activity despite frequent visits, while 2010 forum users said this was part of a wider BAT-Park/Planten un Blomen historic zone. Neither claim establishes current activity in 2026. Keep bridge embankments separate from former BAT-Park and managed station/rail property.",
+      "place_identity": "two_Binnenalster_bridges_parkbank_broad_historical_zone",
+      "primary_detail_url": "https://gay-szene.net/kennedybruecke-und-lombardsbruecke-in-hamburg/10836/eintrag.html",
+      "supplementary_evidence": [
+        {
+          "url": "https://gay-szene.net/kennedybruecke-und-lombardsbruecke-in-hamburg/10836/eintrag.html",
+          "kind": "original_detail",
+          "note": "Last 2021 visitor report weak; 2010 broad-area overlap claim historical."
+        }
+      ],
+      "activity_evidence": {
+        "cutoff": "2025-11-06",
+        "recent_credible_visitor_reports": [],
+        "historical_dated_reports": [
+          {
+            "date": "2021-05-06",
+            "kind": "first_person_low_activity",
+            "note": "Multiple recent 2021 visits, little success."
+          },
+          {
+            "date": "2010-10-01",
+            "kind": "older_geographic_overlap_claim",
+            "note": "Suggested combining BAT, bridge greens and Planten un Blomen; not necessarily same venue."
+          }
+        ],
+        "editorial_undated_is_not_current_activity": true
+      },
+      "access_information": "Urban waterfront footpaths subject to city and rail restrictions; no right to enter railway embankment, under bridges or private garden sections. Not a sanctioned sex area.",
+      "possible_duplicates_and_access_flags": [
+        "Potential broad historic overlap with BAT-Park (#795) and Planten un Blomen (#808), not automatic duplicate.",
+        "Two separate transport bridges and rail bank."
+      ],
+      "retain_research": true,
+      "live_publication_approved": false,
+      "checked_date_berlin": "2026-11-06"
+    },
+    {
+      "index": 803,
+      "id": "GS2-DE-HAMBURG-011",
+      "name": "Lise-Meitner-Park",
+      "city": "Hamburg",
+      "country": "Germany",
+      "source_count_original": 2,
+      "original_source_refs": [
+        {
+          "s": "2",
+          "f": "research/cruising/scrape_2.json",
+          "i": 151,
+          "u": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html"
+        },
+        {
+          "s": "3",
+          "f": "research/cruising/scrape_3.json",
+          "i": 88,
+          "u": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/3/"
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
+            "https://gay-szene.net/lise-meitner-park-in-hamburg/8965/eintrag.html"
+          ],
+          "method": "archived_name_and_live_dated_forum_where_public",
+          "checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/3/"
+          ],
+          "method": "archived_name_and_live_dated_forum_where_public",
+          "checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        }
+      ],
+      "description_rewritten": "Lise-Meitner-Park near Stiefmütterchenweg is a public landscaped hill/green park adjoining former DESY facilities in Hamburg-Bahrenfeld. Two gay directory sources name the place, but the latest forum comment is from November 2020 and actually recommends other sites rather than describing Lise-Meitner activity. A December 2019 firsthand visitor found little happening. No 2026 visit or current authorized cruise was verified; parks and fenced DESY property must be distinguished.",
+      "place_identity": "known_park_adjoining_research_land_no_recent_cruising",
+      "primary_detail_url": "https://gay-szene.net/lise-meitner-park-in-hamburg/8965/eintrag.html",
+      "supplementary_evidence": [],
+      "activity_evidence": {
+        "cutoff": "2025-11-06",
+        "recent_credible_visitor_reports": [],
+        "historical_dated_reports": [
+          {
+            "date": "2020-11-21",
+            "kind": "alternative_location_suggestion",
+            "note": "Comment redirects readers to other places, not firsthand success."
+          },
+          {
+            "date": "2019-12-05",
+            "kind": "first_person_low_activity",
+            "note": "Park has suitable green spots but says little happens."
+          },
+          {
+            "date": "2019-06-10",
+            "kind": "historic_contact_seeking",
+            "note": "Claims occasional conversation with men, no specific 2026 relevance."
+          }
+        ],
+        "editorial_undated_is_not_current_activity": true
+      },
+      "access_information": "Public municipal walking paths where signed, adjacent research institute/land and cemetery fencing must not be crossed. No authorization for public sex.",
+      "possible_duplicates_and_access_flags": [
+        "No post-2020 dated on-site activity.",
+        "Keep separate from Volkspark II (nearby)."
+      ],
+      "retain_research": true,
+      "live_publication_approved": false,
+      "checked_date_berlin": "2026-11-06"
+    },
+    {
+      "index": 804,
+      "id": "GS2-DE-HAMBURG-012",
+      "name": "Park am Weiher - Eimsbüttel",
+      "city": "Hamburg",
+      "country": "Germany",
+      "source_count_original": 2,
+      "original_source_refs": [
+        {
+          "s": "2",
+          "f": "research/cruising/scrape_2.json",
+          "i": 152,
+          "u": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html"
+        },
+        {
+          "s": "3",
+          "f": "research/cruising/scrape_3.json",
+          "i": 99,
+          "u": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/4/"
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
+            "https://gay-szene.net/park-am-weiher-eimsbuettel-in-hamburg/12769/eintrag.html"
+          ],
+          "method": "archived_name_and_live_dated_forum_where_public",
+          "checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/4/"
+          ],
+          "method": "archived_name_and_live_dated_forum_where_public",
+          "checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        }
+      ],
+      "description_rewritten": "Park am Weiher is the Eimsbüttel green space with a pond near Unnastraße and a former Park-Café toilet. Gay-szene and Planet Randy retain historic cruising leads, but last dated forum post (18 August 2022) is a speculative note about surviving shrubs, not actual 2026 encounters. Several February–June 2022 eyewitnesses reported heavy shrub removal, very little activity, and ordinary pedestrians/dog walkers. No recent 2026 cruising or fixed hours.",
+      "place_identity": "real_small_urban_park_historic_WC_closed_or_converted",
+      "primary_detail_url": "https://gay-szene.net/park-am-weiher-eimsbuettel-in-hamburg/12769/eintrag.html",
+      "supplementary_evidence": [],
+      "activity_evidence": {
+        "cutoff": "2025-11-06",
+        "recent_credible_visitor_reports": [],
+        "historical_dated_reports": [
+          {
+            "date": "2022-08-18",
+            "kind": "historical_speculative_activity",
+            "note": "Claims possibilities behind old café, not firsthand current."
+          },
+          {
+            "date": "2022-06-30",
+            "kind": "historical_activity_decline",
+            "note": "Forum says scene gone."
+          },
+          {
+            "date": "2022-04-25",
+            "kind": "first_person_negative",
+            "note": "Visited and found no other people."
+          },
+          {
+            "date": "2022-02-07",
+            "kind": "first_person_negative",
+            "note": "90-minute visit, no cruisers observed."
+          }
+        ],
+        "editorial_undated_is_not_current_activity": true
+      },
+      "access_information": "Public neighbourhood park and play areas, park café/old toilet is not evidence of current restroom access. No permission for public sexual activity.",
+      "possible_duplicates_and_access_flags": [
+        "Former Park-Café toilet is historical; verify current physical facility.",
+        "Large vegetation removal recorded 2022.",
+        "No current 2026 activity."
+      ],
+      "retain_research": true,
+      "live_publication_approved": false,
+      "checked_date_berlin": "2026-11-06"
+    },
+    {
+      "index": 805,
+      "id": "GS2-DE-HAMBURG-013",
+      "name": "Parkplatz A1 zwischen Hittfeld und Dibbersen",
+      "city": "Hamburg",
+      "country": "Germany",
+      "source_count_original": 1,
+      "original_source_refs": [
+        {
+          "s": "2",
+          "f": "research/cruising/scrape_2.json",
+          "i": 153,
+          "u": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html"
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
+            "https://gay-szene.net/parkplatz-a1-zwischen-hittfeld-und-dibbersen-in-hamburg/8554/eintrag.html"
+          ],
+          "method": "archived_name_and_live_dated_forum_where_public",
+          "checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        }
+      ],
+      "description_rewritten": "The source describes A1 car parking between Hittfeld and Dibbersen, loosely labelled Hamburg even though the area is south of the city. The listing conflates the first stop off A261 towards Bremen with another return stop. A 2017 first-person commenter stated the site was inactive, and an April 2014 source said the adjoining woodland was closed. In 2008 an observer questioned whether the described stop was actually Rosengarten. None is a current access/2026 cruising report, and possible overlap with the separate Rosengarten/A261 listing #809 must be reviewed rather than merged.",
+      "place_identity": "multiple_directional_A1_rest_areas_Hittfeld_Dibbersen_vs_Rosengarten_ambiguous",
+      "primary_detail_url": "https://gay-szene.net/parkplatz-a1-zwischen-hittfeld-und-dibbersen-in-hamburg/8554/eintrag.html",
+      "supplementary_evidence": [
+        {
+          "url": "https://gay-szene.net/parkplatz-a1-zwischen-hittfeld-und-dibbersen-in-hamburg/8554/eintrag.html",
+          "kind": "original_location_conflict",
+          "note": "2008 comment challenges name and identifies Rosengarten alternative."
+        }
+      ],
+      "activity_evidence": {
+        "cutoff": "2025-11-06",
+        "recent_credible_visitor_reports": [],
+        "historical_dated_reports": [
+          {
+            "date": "2017-03-31",
+            "kind": "reported_no_activity",
+            "note": "States no cruising, suggests different Rosengarten/A39 lot."
+          },
+          {
+            "date": "2016-04-30",
+            "kind": "reported_no_activity",
+            "note": "Says site inactive."
+          },
+          {
+            "date": "2014-04-01",
+            "kind": "reported_woodland_closure",
+            "note": "Old fence/woods closure reference."
+          },
+          {
+            "date": "2008-06-09",
+            "kind": "site_identity_question",
+            "note": "Possible misidentified Rosengarten parking rather than Hittfeld–Dibbersen."
+          }
+        ],
+        "editorial_undated_is_not_current_activity": true
+      },
+      "access_information": "Motorway stops only via right carriageway/exit. Avoid closed woodland and illegal motorway access; specific 2026 operation and exact facilities unverified.",
+      "possible_duplicates_and_access_flags": [
+        "Likely geographic/motorway direction confusion; don't assign precise GPS.",
+        "Possible overlap with #809 Rastplatz Rosengarten but source's 7.6km separation means not automatic identical.",
+        "All activity reports old, newest 2017 says inactive."
+      ],
+      "retain_research": true,
+      "live_publication_approved": false,
+      "checked_date_berlin": "2026-11-06"
+    },
+    {
+      "index": 806,
+      "id": "GS2-DE-HAMBURG-014",
+      "name": "Parkplatz A1-Stillhorn",
+      "city": "Hamburg",
+      "country": "Germany",
+      "source_count_original": 1,
+      "original_source_refs": [
+        {
+          "s": "2",
+          "f": "research/cruising/scrape_2.json",
+          "i": 154,
+          "u": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html"
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
+            "https://gay-szene.net/parkplatz-a1-stillhorn-in-hamburg/10852/eintrag.html"
+          ],
+          "method": "archived_name_and_live_dated_forum_where_public",
+          "checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "method": "source_snapshots_and_cross_source_alignment",
+          "checked_berlin": "2026-11-06",
+          "coverage_note": "No aligned match, not exhaustive present-day source check."
+        }
+      ],
+      "description_rewritten": "A1 Stillhorn is a large motorway rest/service area at Hamburg-Wilhelmsburg, comprising east/west facilities and truck parking. The latest cruising forum post is 14 February 2024 claiming past early-morning encounters; nothing dated within the 12-month cutoff. The official Serways operator currently marks the Stillhorn Ost restaurant/rest facility temporarily CLOSED but says the petrol station remains open 24 hours. 2026 motorway bridge replacement works have caused specific weekend lane closures; these should not be overstated as a permanent site-wide closure.",
+      "place_identity": "motorway_rest_area_exists_Stillhorn_Ost_service_facility_temporarily_closed",
+      "primary_detail_url": "https://gay-szene.net/parkplatz-a1-stillhorn-in-hamburg/10852/eintrag.html",
+      "supplementary_evidence": [
+        {
+          "url": "https://www.serways.de/standorte/hamburg-stillhorn-ost/",
+          "kind": "current_operator_facility_status",
+          "note": "Raststätte east temporarily closed; petrol station 24h and other service attributes listed. Not proof parking closed."
+        },
+        {
+          "url": "https://www.autobahn.de/betrieb-verkehr/verkehrsmeldung/erinnerung-a1-wochenendsperrung-der-richtungsfahrbahn-bremen-zwischen-as-hh-stillhorn-und-hh-harburg",
+          "kind": "2026_motorway_works",
+          "note": "Sep 18–21 southbound temporary closure as part of Süderelbbrücke replacement, not ongoing full closure."
+        }
+      ],
+      "activity_evidence": {
+        "cutoff": "2025-11-06",
+        "recent_credible_visitor_reports": [],
+        "historical_dated_reports": [
+          {
+            "date": "2024-02-14",
+            "kind": "historical_positive_first_person_claim",
+            "note": "Early-morning meetings reported, pre-cutoff."
+          },
+          {
+            "date": "2024-01-10",
+            "kind": "historical_negative_visitor",
+            "note": "Repeated stops, did not see cruising."
+          },
+          {
+            "date": "2023-11-07",
+            "kind": "historic_positive_encounter_claim",
+            "note": "Reported men and contacts in earlier years."
+          }
+        ],
+        "editorial_undated_is_not_current_activity": true
+      },
+      "access_information": "Service station and parking on controlled motorway directions, temporary closure at Stillhorn Ost restaurant, petrol station 24h per operator. No permission for sexual conduct or woodland shortcuts; road works may disrupt exits.",
+      "possible_duplicates_and_access_flags": [
+        "Do NOT interpret Serways restaurant closure as total motorway parking closure.",
+        "Distinguish east/west service sides.",
+        "No post-Nov 2025 visitor accounts."
+      ],
+      "retain_research": true,
+      "live_publication_approved": false,
+      "checked_date_berlin": "2026-11-06"
+    }
+  ]
+}
