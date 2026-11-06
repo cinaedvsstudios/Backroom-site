@@ -31,7 +31,8 @@
       "Scrape 1 results are raw counts of directory top listings; proposed_places and proposals are preliminary candidates based on exact city/name match only and NOT final deduplicated, verified new places.",
       "Scrape 3 deliberately excluded ALL bars, clubs, saunas, cinemas, sex shops and massage businesses even though some appear in the site tag. Includes three city tag lists with 16 pages and their nearby towns. Do not count a site page as 2026 activity proof.",
       "Removed 62 commercial or managed-facility candidates from provisional proposal totals after Scrape 3 user clarification. Original source entries retained in scrape source files with excluded assessment.",
-      "Clarification 2026-11-06: restored 41 previously excluded ordinary/managed sites as unverified candidates; 21 dedicated nightlife/sex businesses remain out of proposals. Raw source counts unchanged."
+      "Clarification 2026-11-06: restored 41 previously excluded ordinary/managed sites as unverified candidates; 21 dedicated nightlife/sex businesses remain out of proposals. Raw source counts unchanged.",
+      "Scrape 4 uses The Gay Passport city/destination guides; retained named cruising spots at ordinary/public sites (including shopping-centre and station toilets), excluded dedicated gay nightlife venues. Australia and Mexico are tracked separately because they are not among Backroom's current 45 country labels."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -635,6 +636,102 @@
       ],
       "notes": "Berlin tag also contains Brandenburg towns and Hamburg tag includes nearby towns; candidates are assigned to actual town where source supplies it. Source listings are not 2026-verified activity. Cologne page 3 was read via its equivalent German page; it contained only commercial entries.",
       "excluded_businesses_note": "8 Berlin pages (75 total cards), 5 Hamburg pages (50), 3 Cologne pages (24): 149 cards total. 116 qualifying, 33 excluded commercial listings."
+    },
+    {
+      "id": "scrape_4",
+      "site": "The Gay Passport",
+      "base_url": "https://thegaypassport.com/",
+      "country_scope": "Backroom's 45 baseline countries; Australia and Mexico held separately",
+      "section": "Named public or ordinary-site cruising spots in guides, excluding dedicated gay bars, clubs, gay saunas, adult sex venues, vague generic neighborhoods and speculative venues.",
+      "started_berlin": "2026-11-06",
+      "status": "completed_targeted_guide_pass",
+      "data_file": "research/cruising/scrape_4.json",
+      "pages_checked": [
+        {
+          "country": "Germany",
+          "city": "Berlin",
+          "url": "https://thegaypassport.com/community/berlin-cruising-guide/",
+          "count": 5
+        },
+        {
+          "country": "France",
+          "city": "Paris",
+          "url": "https://thegaypassport.com/community/paris-cruising-guide/",
+          "count": 2
+        },
+        {
+          "country": "Netherlands",
+          "city": "Amsterdam",
+          "url": "https://thegaypassport.com/community/amsterdam-cruising-guide/",
+          "count": 1
+        },
+        {
+          "country": "United Kingdom",
+          "city": "London",
+          "url": "https://thegaypassport.com/community/london-cruising-guide/",
+          "count": 9
+        },
+        {
+          "country": "Spain",
+          "city": "Barcelona",
+          "url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+          "count": 4
+        },
+        {
+          "country": "Spain",
+          "city": "Maspalomas",
+          "url": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/",
+          "count": 3
+        },
+        {
+          "country": "Spain",
+          "city": "Sitges",
+          "url": "https://thegaypassport.com/destinations/gay-sitges/",
+          "count": 1
+        },
+        {
+          "country": "Greece",
+          "city": "Mykonos",
+          "url": "https://thegaypassport.com/mykonos/mykonos-gay-beaches-guide/",
+          "count": 2
+        },
+        {
+          "country": "United States",
+          "city": "New York",
+          "url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+          "count": 4
+        },
+        {
+          "country": "United States",
+          "city": "Fire Island",
+          "url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+          "count": 1
+        },
+        {
+          "country": "United States",
+          "city": "Palm Springs",
+          "url": "https://thegaypassport.com/palm-springs/palm-springs-cruising-guide/",
+          "count": 0
+        },
+        {
+          "country": "Portugal",
+          "city": "Lisbon",
+          "url": "https://thegaypassport.com/destinations/gay-lisbon/",
+          "count": 0
+        },
+        {
+          "country": "Spain",
+          "city": "Benidorm",
+          "url": "https://thegaypassport.com/destinations/gay-benidorm/",
+          "count": 0
+        }
+      ],
+      "results_total": 32,
+      "proposals_new": 14,
+      "prior_research_matches": 5,
+      "backroom_existing_matches": 13,
+      "outside_baseline_spots": 7,
+      "scope_note": "2026 guide label is not independent verification of recent activity. Keep precise evidence links, preserve aliases, and flag access/legal concerns."
     }
   ],
   "countries": [
@@ -4276,7 +4373,7 @@
     {
       "country": "United States",
       "cruising_now": 0,
-      "proposals": 12,
+      "proposals": 17,
       "cities": [
         {
           "city": "Abingdon",
@@ -4385,6 +4482,30 @@
           }
         },
         {
+          "city": "Fire Island",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GP4-UNITED-STATES-FIRE-ISLAND-01",
+              "name": "The Meat Rack — between The Pines and Cherry Grove",
+              "city": "Fire Island",
+              "country": "United States",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Wooded dunes",
+              "source_url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+              "status": "unverified",
+              "notes": "Source identifies trails between the two Fire Island communities; outside NYC proper."
+            }
+          ],
+          "scrapes": {
+            "scrape_4": 1
+          }
+        },
+        {
           "city": "Houston",
           "cruising_now": 0,
           "proposals": 1,
@@ -4471,6 +4592,77 @@
         },
         {
           "city": "New Orleans",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {}
+        },
+        {
+          "city": "New York",
+          "cruising_now": 0,
+          "proposals": 4,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GP4-UNITED-STATES-NEW-YORK-01",
+              "name": "Central Park — The Ramble",
+              "city": "New York",
+              "country": "United States",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Park",
+              "source_url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+              "status": "unverified",
+              "notes": "Source names the Ramble woodland in Central Park."
+            },
+            {
+              "proposal_id": "GP4-UNITED-STATES-NEW-YORK-02",
+              "name": "Christopher Street Pier",
+              "city": "New York",
+              "country": "United States",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Pier",
+              "source_url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+              "status": "unverified",
+              "notes": "Source describes the Christopher Street waterfront pier."
+            },
+            {
+              "proposal_id": "GP4-UNITED-STATES-NEW-YORK-03",
+              "name": "Jacob Riis Park — Bay 1",
+              "city": "New York",
+              "country": "United States",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Beach",
+              "source_url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+              "status": "unverified",
+              "notes": "Source identifies a gay beach area at Bay 1; assess local rules and current conditions."
+            },
+            {
+              "proposal_id": "GP4-UNITED-STATES-NEW-YORK-04",
+              "name": "Russian and Turkish Baths",
+              "city": "New York",
+              "country": "United States",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Public bathhouse",
+              "source_url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+              "status": "unverified",
+              "notes": "Ordinary mixed bathhouse with men-only sessions mentioned in source; not a dedicated gay sauna."
+            }
+          ],
+          "scrapes": {
+            "scrape_4": 4
+          }
+        },
+        {
+          "city": "Palm Springs",
           "cruising_now": 0,
           "proposals": 0,
           "existing_cruising": [],
@@ -9685,7 +9877,7 @@
     {
       "country": "Greece",
       "cruising_now": 6,
-      "proposals": 18,
+      "proposals": 19,
       "cities": [
         {
           "city": "Ágioi",
@@ -9907,7 +10099,7 @@
         {
           "city": "Mykonos",
           "cruising_now": 1,
-          "proposals": 4,
+          "proposals": 5,
           "existing_cruising": [
             {
               "id": "GRC-MYK-CRU-PARAPORTIANI-01",
@@ -9967,10 +10159,24 @@
               "source_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GP4-GREECE-MYKONOS-01",
+              "name": "Rocks between Elia and Agrari",
+              "city": "Mykonos",
+              "country": "Greece",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Rocks / beach",
+              "source_url": "https://thegaypassport.com/mykonos/mykonos-gay-beaches-guide/",
+              "status": "unverified",
+              "notes": "Source identifies the rocks between the two beaches; may overlap previous Elia Nudist Beach proposal; review footprint. Possible overlap with earlier Elia Nudist Beach proposal; no automatic merge."
             }
           ],
           "scrapes": {
-            "scrape_1": 5
+            "scrape_1": 5,
+            "scrape_4": 2
           }
         },
         {
@@ -10046,7 +10252,7 @@
     {
       "country": "United Kingdom",
       "cruising_now": 6,
-      "proposals": 13,
+      "proposals": 17,
       "cities": [
         {
           "city": "Belfast",
@@ -10290,7 +10496,7 @@
         {
           "city": "London",
           "cruising_now": 5,
-          "proposals": 4,
+          "proposals": 8,
           "existing_cruising": [
             {
               "id": "CRU-LON-BARPAR-03",
@@ -10330,7 +10536,8 @@
               "city": "London",
               "country": "United Kingdom",
               "source_ids": [
-                "scrape_1"
+                "scrape_1",
+                "scrape_4"
               ],
               "source_category": "Transport station",
               "source_url": "https://www.gays-cruising.com/en/united_kingdom",
@@ -10369,16 +10576,70 @@
               "city": "London",
               "country": "United Kingdom",
               "source_ids": [
-                "scrape_1"
+                "scrape_1",
+                "scrape_4"
               ],
               "source_category": "Other",
               "source_url": "https://www.gays-cruising.com/en/united_kingdom",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GP4-UNITED-KINGDOM-LONDON-05",
+              "name": "British Library — Level 3 toilets",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Public toilet",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "status": "unverified",
+              "notes": "Source mentions additional security; verify access policies and current status."
+            },
+            {
+              "proposal_id": "GP4-UNITED-KINGDOM-LONDON-06",
+              "name": "Victoria Station — Main Concourse toilets",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Station toilet",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "status": "unverified",
+              "notes": "Source names the main concourse facilities."
+            },
+            {
+              "proposal_id": "GP4-UNITED-KINGDOM-LONDON-08",
+              "name": "Hilton London Bridge toilets",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Hotel toilet",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "status": "unverified",
+              "notes": "Verify visitor access; do not imply a hotel permits cruising."
+            },
+            {
+              "proposal_id": "GP4-UNITED-KINGDOM-LONDON-09",
+              "name": "One New Change shopping centre toilets",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Shopping-centre toilet",
+              "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
+              "status": "unverified",
+              "notes": "Source identifies lower-ground and first-floor toilets; verify access policies."
             }
           ],
           "scrapes": {
-            "scrape_1": 6
+            "scrape_1": 6,
+            "scrape_4": 9
           }
         },
         {
@@ -11014,7 +11275,8 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_4": 1
           }
         },
         {
@@ -11616,7 +11878,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_4"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -12063,7 +12326,8 @@
               "country": "Germany",
               "source_ids": [
                 "scrape_2",
-                "scrape_3"
+                "scrape_3",
+                "scrape_4"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
@@ -12423,7 +12687,8 @@
           "scrapes": {
             "scrape_1": 1,
             "scrape_2": 60,
-            "scrape_3": 49
+            "scrape_3": 49,
+            "scrape_4": 5
           }
         },
         {
@@ -16247,7 +16512,7 @@
     {
       "country": "Spain",
       "cruising_now": 13,
-      "proposals": 40,
+      "proposals": 44,
       "cities": [
         {
           "city": "A Coruña",
@@ -16308,7 +16573,7 @@
         {
           "city": "Barcelona",
           "cruising_now": 2,
-          "proposals": 1,
+          "proposals": 4,
           "existing_cruising": [
             {
               "id": "CRU-BCN-MARBEL-01",
@@ -16334,10 +16599,50 @@
               "source_url": "https://www.gays-cruising.com/en/spain",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GP4-SPAIN-BARCELONA-01",
+              "name": "Parc de la Ciutadella",
+              "city": "Barcelona",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Park",
+              "source_url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+              "status": "unverified",
+              "notes": "Source mentions the northeast end of the park."
+            },
+            {
+              "proposal_id": "GP4-SPAIN-BARCELONA-03",
+              "name": "Barcelona Sants Station toilets",
+              "city": "Barcelona",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Station toilet",
+              "source_url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+              "status": "unverified",
+              "notes": "Source names toilets near platforms 6 and 7, subject to access requirements."
+            },
+            {
+              "proposal_id": "GP4-SPAIN-BARCELONA-04",
+              "name": "Arenas de Barcelona shopping centre toilets",
+              "city": "Barcelona",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Shopping-centre toilet",
+              "source_url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+              "status": "unverified",
+              "notes": "Source names upper and basement toilets in Las Arenas shopping centre."
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_4": 4
           }
         },
         {
@@ -16743,7 +17048,7 @@
         {
           "city": "Maspalomas",
           "cruising_now": 1,
-          "proposals": 12,
+          "proposals": 13,
           "existing_cruising": [
             {
               "id": "CRU-LPA-MASDUN-01",
@@ -16758,7 +17063,8 @@
               "city": "Maspalomas",
               "country": "Spain",
               "source_ids": [
-                "scrape_1"
+                "scrape_1",
+                "scrape_4"
               ],
               "source_category": "Shopping area",
               "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
@@ -16908,10 +17214,24 @@
               "status": "unverified",
               "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
               "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GP4-SPAIN-MASPALOMAS-02",
+              "name": "Maspalomas gay beach — Kiosk 7",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Beach",
+              "source_url": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/",
+              "status": "unverified",
+              "notes": "Source identifies the beach gathering area by kiosk 7, adjacent to but not the same as the dune paths. Check if separate listing from nearby Maspalomas Dunes is justified."
             }
           ],
           "scrapes": {
-            "scrape_1": 15
+            "scrape_1": 15,
+            "scrape_4": 3
           }
         },
         {
@@ -17066,7 +17386,9 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_4": 1
+          }
         },
         {
           "city": "Torremolinos",
@@ -17556,7 +17878,8 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 5
+            "scrape_1": 5,
+            "scrape_4": 2
           }
         },
         {
