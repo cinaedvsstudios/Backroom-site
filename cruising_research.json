@@ -43,7 +43,8 @@
       "Use colon-terminated mini-headings in each cruising description: Where:, Best times:, Crowd:, Watch out:. Show last updated and independently supporting source count below; display GPS and maps separately as structured fields.",
       "Scrape 1 gap audit stored at research/cruising/gap_analysis_scrape_1.json: ten zero-coverage priority city index pages expose 142 raw top-list entries (11 Florence, 11 Edinburgh, eight other cities with 15 each). These are source leads, not deduplicated proposals; spot details, precise GPS, timing/crowd/warnings and independent confirmation still pending.",
       "Scrape 2 gap fill: 24 existing Berlin/Munich source locations were enriched with specific spot directions, reported busy times/crowd and warnings in research/cruising/gap_fill_scrape_2.json. Page 4 of Berlin remains inaccessible. Karlshorst demolition report and Volkspark Friedrichshain safety flags added without changing any existing statuses or deleting any findings.",
-      "Scrape 3 gap fill discovered an uncollected Munich Planet-Randy city tag (20 records across two accessible pages and 3 additional places in a differently spelled Munich tag); page 3 remains blocked. Saved 23 raw leads, added 7 unverified proposals, matched 9 previously archived venues/proposals, held 7 for geography, likely duplicates or access/activity uncertainty. Older Berlin/Hamburg/Cologne raw records retained without change."
+      "Scrape 3 gap fill discovered an uncollected Munich Planet-Randy city tag (20 records across two accessible pages and 3 additional places in a differently spelled Munich tag); page 3 remains blocked. Saved 23 raw leads, added 7 unverified proposals, matched 9 previously archived venues/proposals, held 7 for geography, likely duplicates or access/activity uncertainty. Older Berlin/Hamburg/Cologne raw records retained without change.",
+      "Scrape 4 Gay Passport gap fill: 26 existing archived spots across Berlin, Paris, Amsterdam, London, Barcelona, Maspalomas and Mykonos now have specific Where / Best times / Crowd / Watch out source notes in research/cruising/gap_fill_scrape_4.json. Rome, Vienna, Athens, Madrid and Milan general guides yielded no NEW qualified ordinary/public areas; Prague page timed out. No source records or proposals added, no original research deleted, no GPS invented."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -963,7 +964,12 @@
       "prior_research_matches": 5,
       "backroom_existing_matches": 13,
       "outside_baseline_spots": 7,
-      "scope_note": "2026 guide label is not independent verification of recent activity. Keep precise evidence links, preserve aliases, and flag access/legal concerns."
+      "scope_note": "2026 guide label is not independent verification of recent activity. Keep precise evidence links, preserve aliases, and flag access/legal concerns.",
+      "gap_fill_file": "research/cruising/gap_fill_scrape_4.json",
+      "gap_fill_status": "26 existing location records enriched from seven previously archived city/destination guides; 5 new priority destination pages checked, 1 failed, no new qualifying places",
+      "gap_fill_existing_records_enriched": 26,
+      "gap_fill_new_proposals": 0,
+      "source_records_total_unchanged": 34
     },
     {
       "id": "scrape_5",
@@ -22699,6 +22705,42 @@
         "2026 public report says Paradiesparkplatz restroom was locked; Wörthsee 2025 review reports no activity. Staffelsee is outside Munich.",
         "No production listings changed."
       ]
+    },
+    "scrape_4": {
+      "audit_date_berlin": "2026-11-06",
+      "status": "existing_records_enriched__no_new_eligible_spots_from_guide_pages",
+      "audit_file": "research/cruising/gap_fill_scrape_4.json",
+      "original_source_records_unchanged": 34,
+      "original_proposals_unchanged": true,
+      "prior_records_enriched": 26,
+      "priority_city_guides_enriched": [
+        "Berlin",
+        "Paris",
+        "Amsterdam",
+        "London",
+        "Barcelona"
+      ],
+      "other_guide_places": [
+        "Maspalomas",
+        "Mykonos"
+      ],
+      "additional_priority_destination_pages_checked": [
+        "Rome",
+        "Vienna",
+        "Athens",
+        "Madrid",
+        "Milan"
+      ],
+      "blocked_or_incomplete_pages": [
+        {
+          "city": "Prague",
+          "url": "https://thegaypassport.com/destinations/gay-prague/",
+          "status": "timeout"
+        }
+      ],
+      "new_proposals": 0,
+      "gap_analysis": "Dedicated cruising articles are comparatively rich in place descriptions but are limited to certain destinations. Standard destination pages in additional cities mainly mention commercial bars, saunas, and sex clubs; no distinct new public-area candidates supported. Do not infer those cities have zero cruising locations.",
+      "next_step": "Continue to Scrape 5 manual Splashd when user supplies exported pages; skip Scrape 5 and Scrape 7 during automated gaps per user, and review Scrape 6 Popcorn next. User requested one source at a time."
     }
   }
 }
