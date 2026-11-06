@@ -4,16 +4,16 @@
     "site": "Squirt.org",
     "base_url": "https://www.squirt.org/",
     "created_berlin": "2026-11-06",
-    "status": "user_search_exports_deduplicated_and_triaged__not_full_place_detail_import",
-    "collection_method": "User-pasted Squirt.org city-proximity search result exports. Entries extend beyond each city because results include wide search radii.",
-    "records_collected": 205,
+    "status": "manual_city_search_and_uk_regional_name_index_imported__research_only",
+    "collection_method": "User-pasted Squirt.org city-proximity search result exports. Entries extend beyond each city because results include wide search radii. Additional wide-region UK name-only bulk export imported separately, preserving 1680 source appearances.",
+    "records_collected": 1827,
     "countries_covered": null,
     "meaning_of_empty": null,
     "import_notes": "The pasted Link column is blank for every record; no detail URLs or confirmed Squirt listing IDs may be fabricated. Photo IDs are separate unconfirmed hints extracted from a subset of provided photo paths. Preserve dates verbatim. De-duplicate raw search appearances but not geographic subareas without review.",
     "privacy_scope": "Only publicly available place-level information; no profiles, usernames, private messages, real-time user positions, check-ins or other identifying user data.",
     "publication_rule": "Manual imports are unverified research leads, not approved site listings. Verify venue relevance, safe/legal access and current status prior to publication; do not edit production listings.json during research.",
-    "raw_row_appearances": 291,
-    "batches_received": 8,
+    "raw_row_appearances": 1971,
+    "batches_received": 9,
     "research_date_berlin": "2026-11-06",
     "original_text_columns": [
       "Title",
@@ -69,7 +69,9 @@
       "Parco Nord",
       "Stockbridge Public Toilets"
     ],
-    "geography_correction": "Viale Venezia and Via Chilesotti are Bassano del Grappa, supported by independent public geographic sources; earlier Viale Venezia Brescia hint corrected."
+    "geography_correction": "Viale Venezia and Via Chilesotti are Bassano del Grappa, supported by independent public geographic sources; earlier Viale Venezia Brescia hint corrected.",
+    "large_bulk_file_linked": "research/cruising/scrape_7_uk_list_2026-11-06.json",
+    "activity_caveat": "Squirt reply timestamps and name matches do not independently validate visits; same-source repeats cannot be counted as additional sources."
   },
   "countries": [],
   "batches": [
@@ -4579,6 +4581,19 @@
       "assessment": "separate_commercial_venue_not_cruising_area",
       "needs_review": false,
       "observation_date_berlin": "2026-11-06"
+    }
+  ],
+  "bulk_files": [
+    {
+      "path": "research/cruising/scrape_7_uk_list_2026-11-06.json",
+      "region": "United Kingdom (wide regional Squirt nearby results)",
+      "rows": 1680,
+      "unique_normalized_titles": 1662,
+      "already_in_prior_squirt_export": 40,
+      "master_name_matches": 6,
+      "other_directory_matches": 5,
+      "detail_urls_present": false,
+      "status": "index_only__triage__no_direct_publication"
     }
   ]
 }
