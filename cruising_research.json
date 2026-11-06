@@ -40,7 +40,8 @@
       "Added six optional verification-only references (Couple of Men, Männer unterwegs, The Globetrotter Guys, Tripadvisor, Reddit, misterb&b Gay Guide). Do not assign scrape numbers or systematically crawl them. Research a specific unresolved detail only, reusing existing evidence first and stopping once sufficient.",
       "2026-11-06 user-selected city research priorities: 50 submitted city entries (Lisbon appears twice), 49 unique focus cities, 10 currently without Live or proposed cruising spots (including 2 cities not yet represented as tracker rows). Preserve all existing data. If research yields no qualifying locations, record a confirmed researched zero, not a fabricated proposal.",
       "2026-11-06 cruising listing writing standards added: describe exact subarea, busy times, reported men/crowd, warnings; include grounded GPS coordinates and map links that point to that subarea or public entrance, plus truthful Last_Updated and count of independent supporting sources. Do not invent details or modify live listings in research.",
-      "Use colon-terminated mini-headings in each cruising description: Where:, Best times:, Crowd:, Watch out:. Show last updated and independently supporting source count below; display GPS and maps separately as structured fields."
+      "Use colon-terminated mini-headings in each cruising description: Where:, Best times:, Crowd:, Watch out:. Show last updated and independently supporting source count below; display GPS and maps separately as structured fields.",
+      "Scrape 1 gap audit stored at research/cruising/gap_analysis_scrape_1.json: ten zero-coverage priority city index pages expose 142 raw top-list entries (11 Florence, 11 Edinburgh, eight other cities with 15 each). These are source leads, not deduplicated proposals; spot details, precise GPS, timing/crowd/warnings and independent confirmation still pending."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -21739,7 +21740,10 @@
         "provisional_proposals": 0,
         "coverage_status": "no_known_spot_yet",
         "priority_pass_status": "not_yet_assessed",
-        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority.",
+        "scrape_1_gap_audit_status": "index_discovered__individual_spot_review_pending",
+        "scrape_1_gap_audit_source_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+        "scrape_1_gap_audit_raw_index_count": 11
       },
       {
         "rank": 11,
@@ -21794,7 +21798,10 @@
         "provisional_proposals": 0,
         "coverage_status": "no_known_spot_yet",
         "priority_pass_status": "not_yet_assessed",
-        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority.",
+        "scrape_1_gap_audit_status": "index_discovered__individual_spot_review_pending",
+        "scrape_1_gap_audit_source_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+        "scrape_1_gap_audit_raw_index_count": 11
       },
       {
         "rank": 16,
@@ -21849,7 +21856,10 @@
         "provisional_proposals": 0,
         "coverage_status": "city_not_yet_indexed",
         "priority_pass_status": "not_yet_assessed",
-        "coverage_note": "No matching city row currently exists; does not imply no cruising areas. Research when prioritized."
+        "coverage_note": "No matching city row currently exists; does not imply no cruising areas. Research when prioritized.",
+        "scrape_1_gap_audit_status": "index_discovered__individual_spot_review_pending",
+        "scrape_1_gap_audit_source_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+        "scrape_1_gap_audit_raw_index_count": 15
       },
       {
         "rank": 21,
@@ -21882,7 +21892,10 @@
         "provisional_proposals": 0,
         "coverage_status": "no_known_spot_yet",
         "priority_pass_status": "not_yet_assessed",
-        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority.",
+        "scrape_1_gap_audit_status": "index_discovered__individual_spot_review_pending",
+        "scrape_1_gap_audit_source_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+        "scrape_1_gap_audit_raw_index_count": 15
       },
       {
         "rank": 24,
@@ -21904,7 +21917,10 @@
         "provisional_proposals": 0,
         "coverage_status": "no_known_spot_yet",
         "priority_pass_status": "not_yet_assessed",
-        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority.",
+        "scrape_1_gap_audit_status": "index_discovered__individual_spot_review_pending",
+        "scrape_1_gap_audit_source_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+        "scrape_1_gap_audit_raw_index_count": 15
       },
       {
         "rank": 26,
@@ -22014,7 +22030,10 @@
         "provisional_proposals": 0,
         "coverage_status": "no_known_spot_yet",
         "priority_pass_status": "not_yet_assessed",
-        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority.",
+        "scrape_1_gap_audit_status": "index_discovered__individual_spot_review_pending",
+        "scrape_1_gap_audit_source_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+        "scrape_1_gap_audit_raw_index_count": 15
       },
       {
         "rank": 36,
@@ -22025,7 +22044,10 @@
         "provisional_proposals": 0,
         "coverage_status": "city_not_yet_indexed",
         "priority_pass_status": "not_yet_assessed",
-        "coverage_note": "No matching city row currently exists; does not imply no cruising areas. Research when prioritized."
+        "coverage_note": "No matching city row currently exists; does not imply no cruising areas. Research when prioritized.",
+        "scrape_1_gap_audit_status": "index_discovered__individual_spot_review_pending",
+        "scrape_1_gap_audit_source_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+        "scrape_1_gap_audit_raw_index_count": 15
       },
       {
         "rank": 37,
@@ -22047,7 +22069,10 @@
         "provisional_proposals": 0,
         "coverage_status": "no_known_spot_yet",
         "priority_pass_status": "not_yet_assessed",
-        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority.",
+        "scrape_1_gap_audit_status": "index_discovered__individual_spot_review_pending",
+        "scrape_1_gap_audit_source_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+        "scrape_1_gap_audit_raw_index_count": 15
       },
       {
         "rank": 39,
@@ -22058,7 +22083,10 @@
         "provisional_proposals": 0,
         "coverage_status": "no_known_spot_yet",
         "priority_pass_status": "not_yet_assessed",
-        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority.",
+        "scrape_1_gap_audit_status": "index_discovered__individual_spot_review_pending",
+        "scrape_1_gap_audit_source_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+        "scrape_1_gap_audit_raw_index_count": 15
       },
       {
         "rank": 40,
@@ -22069,7 +22097,10 @@
         "provisional_proposals": 0,
         "coverage_status": "no_known_spot_yet",
         "priority_pass_status": "not_yet_assessed",
-        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority.",
+        "scrape_1_gap_audit_status": "index_discovered__individual_spot_review_pending",
+        "scrape_1_gap_audit_source_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+        "scrape_1_gap_audit_raw_index_count": 15
       },
       {
         "rank": 41,
@@ -22272,6 +22303,21 @@
       "missing_information": "Omit unsupported demographic or timing claims, or explicitly state they are not yet confirmed during internal review; never pad a mini-section with fabricated detail. A heading may have a concise 'Not confirmed' until enrichment is completed.",
       "sample_format": "Where: At the end of the waterfront promenade by the church, with the paths leading toward the water identified as the reported meeting area.\n\nBest times: Reportedly after sunset, with quieter periods once nearby restaurants have closed.\n\nCrowd: Visitors of different ages are reported, but precise age patterns require checking.\n\nWatch out: Coastal rocks, poor footing and the sea near the water's edge.\n\nLast updated: [date of actual edit]\nVerified sources: [number of independently checked supporting sources]",
       "sample_is_not_verified": "The sample illustrates the user's Paraportiani format preference; it is not a verified factual entry and must not be published without research."
+    }
+  },
+  "source_gap_audits": {
+    "scrape_1": {
+      "audit_date_berlin": "2026-11-06",
+      "status": "zero-coverage-priority-city-index-gaps_checked__details_pending",
+      "audit_file": "research/cruising/gap_analysis_scrape_1.json",
+      "scrape_1_old_records": 672,
+      "priority_cities_total": 49,
+      "priority_cities_with_old_records": 32,
+      "priority_cities_missing_from_old_scrape": 17,
+      "zero_coverage_priority_cities_newly_indexed": 10,
+      "raw_source_index_entries_in_these_ten": 142,
+      "new_proposals_this_audit": 0,
+      "next_step": "Complete individual public spot detail page and GPS enrichment for the 142 raw index leads, deduplicate and classify; then check remaining 7 priority cities with no Scrape 1 records where worthwhile. Do not alter production or count 142 as proposals."
     }
   }
 }
