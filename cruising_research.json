@@ -32,7 +32,8 @@
       "Scrape 3 deliberately excluded ALL bars, clubs, saunas, cinemas, sex shops and massage businesses even though some appear in the site tag. Includes three city tag lists with 16 pages and their nearby towns. Do not count a site page as 2026 activity proof.",
       "Removed 62 commercial or managed-facility candidates from provisional proposal totals after Scrape 3 user clarification. Original source entries retained in scrape source files with excluded assessment.",
       "Clarification 2026-11-06: restored 41 previously excluded ordinary/managed sites as unverified candidates; 21 dedicated nightlife/sex businesses remain out of proposals. Raw source counts unchanged.",
-      "Scrape 4 uses The Gay Passport city/destination guides; retained named cruising spots at ordinary/public sites (including shopping-centre and station toilets), excluded dedicated gay nightlife venues. Australia and Mexico are tracked separately because they are not among Backroom's current 45 country labels."
+      "Scrape 4 uses The Gay Passport city/destination guides; retained named cruising spots at ordinary/public sites (including shopping-centre and station toilets), excluded dedicated gay nightlife venues. Australia and Mexico are tracked separately because they are not among Backroom's current 45 country labels.",
+      "Scrape 5 (Splashd) is an INDEX-ONLY research checkpoint, not a completed individual-place scrape. Its 56 advertised country counts are stored in research/cruising/scrape_5.json; site access currently blocks individual records and no proposals were added. Resume with an authorized full browser if possible."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -917,6 +918,22 @@
       "backroom_existing_matches": 13,
       "outside_baseline_spots": 7,
       "scope_note": "2026 guide label is not independent verification of recent activity. Keep precise evidence links, preserve aliases, and flag access/legal concerns."
+    },
+    {
+      "id": "scrape_5",
+      "site": "Splashd",
+      "base_url": "https://www.splashd.app/",
+      "index_url": "https://www.splashd.app/map",
+      "started_berlin": "2026-11-06",
+      "status": "source_inventory_only__spot_pages_not_accessible",
+      "data_file": "research/cruising/scrape_5.json",
+      "advertised_country_count": 56,
+      "advertised_city_count": 1552,
+      "advertised_spot_count": 13249,
+      "spot_records_retrieved": 0,
+      "results_total": null,
+      "proposals_new": null,
+      "notes": "The map overview is indexed/readable and country totals for all 56 countries have been preserved in scrape_5.json. Country/city/individual-spot pages could not be fetched through the available research tools; ZERO records retrieved does not mean ZERO cruising places. Do not add city scrape counts or proposed_places until source records can be accessed in a full browser session. Never collect app user locations, check-ins, or chats."
     }
   ],
   "countries": [
