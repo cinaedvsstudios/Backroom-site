@@ -39,8 +39,20 @@
         "result": "Not accessible through current fetch"
       }
     ],
-    "next_action": "Use an authorized full browser session to inspect actual public country/city link URLs, page DOM and any openly accessible directory payloads; check robots/terms and keep requests modest. Collect PUBLIC static place names/categories/coordinates/source URLs only, not users, live locations, check-ins or chat activity.",
-    "publication_rule": "Do not update listings.json. Once spot-level entries become available, apply the existing Backroom inclusion rules, geoduplicate and cross-source check before adding proposed_places; no assumed active cruising."
+    "next_action": "For manual collection, use the user-provided city URL directly in a normal browser. If records can be viewed, capture public place-level names, categories, descriptions and coordinates only. Do not include personal profiles/check-ins or live locations. On receipt, reconcile against previously researched Backroom locations.",
+    "publication_rule": "Do not update listings.json. Once spot-level entries become available, apply the existing Backroom inclusion rules, geoduplicate and cross-source check before adding proposed_places; no assumed active cruising.",
+    "user_supplied_city_url_example": "https://www.splashd.app/map/gb/eng/london",
+    "possible_public_route_format": "/map/{country_code}/{region_code}/{city_slug} (inferred from London example; not validated for other cities)",
+    "route_test_2026_11_06": {
+      "url": "https://www.splashd.app/map/gb/eng/london",
+      "result": "Direct web fetch cache miss; public location records could not be extracted using the available tools",
+      "other_urls_tested": [
+        "https://www.splashd.app/map/gb",
+        "https://www.splashd.app/map/gb/eng",
+        "https://splashd.app/map/gb/eng/london"
+      ],
+      "note": "This is a user-provided apparently navigable city URL. It is a manual-collection aid, not evidence that any individual places were successfully scraped. Site also mentions a separate age gate for /map."
+    }
   },
   "directory_inventory": [
     {
