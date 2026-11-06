@@ -42,7 +42,8 @@
       "2026-11-06 cruising listing writing standards added: describe exact subarea, busy times, reported men/crowd, warnings; include grounded GPS coordinates and map links that point to that subarea or public entrance, plus truthful Last_Updated and count of independent supporting sources. Do not invent details or modify live listings in research.",
       "Use colon-terminated mini-headings in each cruising description: Where:, Best times:, Crowd:, Watch out:. Show last updated and independently supporting source count below; display GPS and maps separately as structured fields.",
       "Scrape 1 gap audit stored at research/cruising/gap_analysis_scrape_1.json: ten zero-coverage priority city index pages expose 142 raw top-list entries (11 Florence, 11 Edinburgh, eight other cities with 15 each). These are source leads, not deduplicated proposals; spot details, precise GPS, timing/crowd/warnings and independent confirmation still pending.",
-      "Scrape 2 gap fill: 24 existing Berlin/Munich source locations were enriched with specific spot directions, reported busy times/crowd and warnings in research/cruising/gap_fill_scrape_2.json. Page 4 of Berlin remains inaccessible. Karlshorst demolition report and Volkspark Friedrichshain safety flags added without changing any existing statuses or deleting any findings."
+      "Scrape 2 gap fill: 24 existing Berlin/Munich source locations were enriched with specific spot directions, reported busy times/crowd and warnings in research/cruising/gap_fill_scrape_2.json. Page 4 of Berlin remains inaccessible. Karlshorst demolition report and Volkspark Friedrichshain safety flags added without changing any existing statuses or deleting any findings.",
+      "Scrape 3 gap fill discovered an uncollected Munich Planet-Randy city tag (20 records across two accessible pages and 3 additional places in a differently spelled Munich tag); page 3 remains blocked. Saved 23 raw leads, added 7 unverified proposals, matched 9 previously archived venues/proposals, held 7 for geography, likely duplicates or access/activity uncertainty. Older Berlin/Hamburg/Cologne raw records retained without change."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -805,9 +806,30 @@
           "url": "https://planet-randy.com/blog/eintrag/tag/gay-cruising-koeln/page/3/",
           "qualified": 0,
           "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Munich",
+          "page": 1,
+          "url": "https://planet-randy.com/blog/eintrag/tag/gay-cruising-muenchen/",
+          "qualified": 10,
+          "note": "Additional gap fill from Munich not in original scrape 3"
+        },
+        {
+          "tag_city": "Munich",
+          "page": 2,
+          "url": "https://planet-randy.com/blog/eintrag/tag/gay-cruising-muenchen/page/2/",
+          "qualified": 10,
+          "note": "Additional gap fill"
+        },
+        {
+          "tag_city": "Munich alternate English-spelling tag",
+          "page": 1,
+          "url": "https://planet-randy.com/blog/eintrag/tag/gay-cruising-munich/",
+          "qualified": 3,
+          "note": "Distinct alias tag, additional three locations"
         }
       ],
-      "results_total": 116,
+      "results_total": 139,
       "excluded_businesses": 33,
       "excluded_examples": [
         "Gay massages Berlin",
@@ -818,7 +840,22 @@
         "sex cinemas and sex shops"
       ],
       "notes": "Berlin tag also contains Brandenburg towns and Hamburg tag includes nearby towns; candidates are assigned to actual town where source supplies it. Source listings are not 2026-verified activity. Cologne page 3 was read via its equivalent German page; it contained only commercial entries.",
-      "excluded_businesses_note": "8 Berlin pages (75 total cards), 5 Hamburg pages (50), 3 Cologne pages (24): 149 cards total. 116 qualifying, 33 excluded commercial listings."
+      "excluded_businesses_note": "8 Berlin pages (75 total cards), 5 Hamburg pages (50), 3 Cologne pages (24): 149 cards total. 116 qualifying, 33 excluded commercial listings.",
+      "original_city_tag_results": 116,
+      "additional_gap_fill_results": 23,
+      "additional_gap_fill_file": "research/cruising/gap_fill_scrape_3.json",
+      "gap_fill_status": "Munich tag page 1-2 and separate Munich alias index checked; third München page blocked",
+      "gap_fill_new_unverified_candidates": 7,
+      "gap_fill_existing_matches": 9,
+      "gap_fill_held_without_new_proposals": 7,
+      "city_pages_checked_completed_original": true,
+      "unavailable_city_pages": [
+        {
+          "city": "Munich",
+          "url": "https://planet-randy.com/blog/eintrag/tag/gay-cruising-muenchen/page/3/",
+          "reason": "Page 3 link and direct URL cache miss; unknown remaining source records, not confirmed zero"
+        }
+      ]
     },
     {
       "id": "scrape_4",
@@ -13942,7 +13979,7 @@
     {
       "country": "Germany",
       "cruising_now": 13,
-      "proposals": 316,
+      "proposals": 323,
       "cities": [
         {
           "city": "Ahrensburg",
@@ -17400,7 +17437,8 @@
           "scrapes": {
             "scrape_1": 1,
             "scrape_5": null,
-            "scrape_7": null
+            "scrape_7": null,
+            "scrape_3": 1
           }
         },
         {
@@ -17895,12 +17933,15 @@
         {
           "city": "Munich",
           "cruising_now": 4,
-          "proposals": 17,
+          "proposals": 21,
           "existing_cruising": [
             {
               "id": "CRU-MUC-ENGGAR-01",
               "name": "Englischer Garten",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_3"
+              ]
             },
             {
               "id": "CRU-MUC-FLAISL-01",
@@ -17910,7 +17951,10 @@
             {
               "id": "CRU-MUC-LUIPAR-01",
               "name": "Luitpoldpark",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_3"
+              ]
             },
             {
               "id": "CRU-MUC-SENTORPAR-03",
@@ -17964,7 +18008,8 @@
               "city": "Munich",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
@@ -17977,7 +18022,8 @@
               "city": "Munich",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
@@ -17990,7 +18036,8 @@
               "city": "Munich",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
@@ -18003,7 +18050,8 @@
               "city": "Munich",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
@@ -18016,7 +18064,8 @@
               "city": "Munich",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
@@ -18094,7 +18143,8 @@
               "city": "Munich",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
@@ -18107,7 +18157,8 @@
               "city": "Munich",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
@@ -18141,12 +18192,97 @@
               "status": "unverified",
               "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
               "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "PR3-MUC-GAP-02",
+              "name": "Autobahnparkplatz A95",
+              "city": "Munich",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/eintrag/autobahnparkplatz-a95/",
+              "status": "unverified",
+              "notes": "Unnamed motorway rest area on the A95 near Forstenrieder Park, with shrub-covered edges. Precise carriageway, parking-area identity and legal/safe access point must be verified before a GPS pin is added. Source single-provider report; GPS and current activity not independently verified.",
+              "source_address": "A95, Forstenrieder Park",
+              "review_required": [
+                "confirm_location_and_precise_pin",
+                "verify_current_cruising_activity",
+                "check_access_rules",
+                "verify_reported_times_and_crowd"
+              ],
+              "detail_research_file": "research/cruising/gap_fill_scrape_3.json"
+            },
+            {
+              "proposal_id": "PR3-MUC-GAP-03",
+              "name": "Ostpark",
+              "city": "Munich",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/eintrag/ostpark/",
+              "status": "unverified",
+              "notes": "Ostpark in eastern Munich, among grass and tree-covered sections; no precise subsection is established. Public recreation park with families and other visitors; source's sole dated 2021 review refers to meeting a date, not confirming cruising. Source single-provider report; GPS and current activity not independently verified.",
+              "source_address": "Feichtstraße 19, 81735 München",
+              "review_required": [
+                "confirm_location_and_precise_pin",
+                "verify_current_cruising_activity",
+                "check_access_rules",
+                "verify_reported_times_and_crowd"
+              ],
+              "detail_research_file": "research/cruising/gap_fill_scrape_3.json"
+            },
+            {
+              "proposal_id": "PR3-MUC-GAP-04",
+              "name": "Weißenseepark",
+              "city": "Munich",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "waterside",
+              "source_url": "https://planet-randy.com/blog/eintrag/weissenseepark/",
+              "status": "unverified",
+              "notes": "Grass and wooded parts of Weißenseepark, without a reliably identified precise meeting point. The park is used for ordinary recreation. Confirm precise spot and current reports before publication. Source single-provider report; GPS and current activity not independently verified.",
+              "source_address": "Obergiesing-Fasangarten, 81539 München",
+              "review_required": [
+                "confirm_location_and_precise_pin",
+                "verify_current_cruising_activity",
+                "check_access_rules",
+                "verify_reported_times_and_crowd"
+              ],
+              "detail_research_file": "research/cruising/gap_fill_scrape_3.json"
+            },
+            {
+              "proposal_id": "PR3-MUC-GAP-08",
+              "name": "U-Bahn Fraunhoferstraße",
+              "city": "Munich",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "public_toilet_or_station",
+              "source_url": "https://planet-randy.com/blog/eintrag/u-bahn-frauenhoferstrasse/",
+              "status": "unverified",
+              "notes": "Restroom area within U-Bahn station Fraunhoferstraße, close to the Isar. Public station restroom; current existence, operating hours, access and venue rules must be verified. Source spells street 'Frauenhofer', while established station name is Fraunhoferstraße. Source single-provider report; GPS and current activity not independently verified.",
+              "source_address": "U-Bahnhof Fraunhoferstraße, 80469 München",
+              "review_required": [
+                "confirm_location_and_precise_pin",
+                "verify_current_cruising_activity",
+                "check_access_rules",
+                "verify_reported_times_and_crowd"
+              ],
+              "detail_research_file": "research/cruising/gap_fill_scrape_3.json"
             }
           ],
           "scrapes": {
             "scrape_2": 20,
             "scrape_5": null,
-            "scrape_7": null
+            "scrape_7": null,
+            "scrape_3": 13
           }
         },
         {
@@ -19063,6 +19199,180 @@
             "scrape_5": null,
             "scrape_7": null,
             "scrape_8": 1
+          }
+        },
+        {
+          "city": "Wörthsee",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Uffing am Staffelsee",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Eching am Ammersee",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Germering",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Brunnthal",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Tegernsee",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Unterföhring",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-MUC-GAP-21",
+              "name": "Isar Strandbank",
+              "city": "Unterföhring",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "waterside",
+              "source_url": "https://planet-randy.com/blog/eintrag/isar-strandbank/",
+              "status": "unverified",
+              "notes": "Isar gravel/shingle riverbank area and adjacent bushes near Kanalstraße, Unterföhring. Moving water and mixed recreational use. GPS must distinguish Unterföhring from the B471 Ismaning site. Source single-provider report; GPS and current activity not independently verified.",
+              "source_address": "Kanalstraße 21A, 85774 Unterföhring",
+              "review_required": [
+                "confirm_location_and_precise_pin",
+                "verify_current_cruising_activity",
+                "check_access_rules",
+                "verify_reported_times_and_crowd"
+              ],
+              "detail_research_file": "research/cruising/gap_fill_scrape_3.json"
+            }
+          ],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Aschheim",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-MUC-GAP-22",
+              "name": "Parkplatz Aschheim",
+              "city": "Aschheim",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/eintrag/parkplatz-aschheim/",
+              "status": "unverified",
+              "notes": "A99 northbound parking area between Kirchheim and Aschheim, along the central treed strip of the rest area. Confirm northbound carriageway, site access and safe/legal public movement near traffic. Do not present source claims of daily crowds as measured fact. Source single-provider report; GPS and current activity not independently verified.",
+              "source_address": "A99 northbound between Kirchheim and Aschheim exits, 85609 Aschheim",
+              "review_required": [
+                "confirm_location_and_precise_pin",
+                "verify_current_cruising_activity",
+                "check_access_rules",
+                "verify_reported_times_and_crowd"
+              ],
+              "detail_research_file": "research/cruising/gap_fill_scrape_3.json"
+            }
+          ],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Pöcking",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-MUC-GAP-23",
+              "name": "Paradiesparkplatz",
+              "city": "Pöcking",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/eintrag/paradiesparkplatz/",
+              "status": "unverified",
+              "notes": "Parkland and shoreside paths by Paradiesparkplatz near the Starnberger See promenade, with the public toilet between parking areas referred to as 12 and 8. A 30 January 2026 public review says the toilet was locked. Keep restroom access unverified; family recreation area and lakeshore require caution. Source single-provider report; GPS and current activity not independently verified.",
+              "source_address": "Paradies/Possenhofen recreation area, 82343 Pöcking",
+              "review_required": [
+                "confirm_location_and_precise_pin",
+                "verify_current_cruising_activity",
+                "check_access_rules",
+                "verify_reported_times_and_crowd"
+              ],
+              "detail_research_file": "research/cruising/gap_fill_scrape_3.json"
+            }
+          ],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_3": 1
           }
         }
       ]
@@ -22363,6 +22673,31 @@
         "Volkspark Friedrichshain currently Flag and 2025 visitor reports mention threats.",
         "Luitpoldpark June 2026 report of activity and change to former toilet site.",
         "Two OSM points saved as general reference markers, not exact meeting coordinates."
+      ]
+    },
+    "scrape_3": {
+      "audit_date_berlin": "2026-11-06",
+      "status": "munich_priority_city_gap_fill_saved__third_page_blocked",
+      "audit_file": "research/cruising/gap_fill_scrape_3.json",
+      "former_city_tags": [
+        "Berlin",
+        "Hamburg",
+        "Cologne"
+      ],
+      "added_priority_city": "Munich",
+      "new_source_records": 23,
+      "previous_source_records": 116,
+      "combined_source_records": 139,
+      "unverified_proposals_new": 7,
+      "existing_records_correlated": 9,
+      "held_for_geography_access_or_duplicate_review": 7,
+      "original_scrape_3_file_preserved": true,
+      "notes": [
+        "Original Berlin/Hamburg/Cologne tags were already fully checked and not reopened systematically.",
+        "Munich tag page 3 unavailable, so the source isn't exhaustively done.",
+        "A95/rest area candidate needs exact GPS/carraigeway before publication.",
+        "2026 public report says Paradiesparkplatz restroom was locked; Wörthsee 2025 review reports no activity. Staffelsee is outside Munich.",
+        "No production listings changed."
       ]
     }
   }
