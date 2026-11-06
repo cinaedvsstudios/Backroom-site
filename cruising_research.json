@@ -30,7 +30,8 @@
       "Failed countries Albania, Croatia, Moldova are not recorded as zero results; Kosovo lacks an independently listed page.",
       "Scrape 1 results are raw counts of directory top listings; proposed_places and proposals are preliminary candidates based on exact city/name match only and NOT final deduplicated, verified new places.",
       "Scrape 3 deliberately excluded ALL bars, clubs, saunas, cinemas, sex shops and massage businesses even though some appear in the site tag. Includes three city tag lists with 16 pages and their nearby towns. Do not count a site page as 2026 activity proof.",
-      "Removed 62 commercial or managed-facility candidates from provisional proposal totals after Scrape 3 user clarification. Original source entries retained in scrape source files with excluded assessment."
+      "Removed 62 commercial or managed-facility candidates from provisional proposal totals after Scrape 3 user clarification. Original source entries retained in scrape source files with excluded assessment.",
+      "Clarification 2026-11-06: restored 41 previously excluded ordinary/managed sites as unverified candidates; 21 dedicated nightlife/sex businesses remain out of proposals. Raw source counts unchanged."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -38,7 +39,7 @@
       "workflow": "Main file contains per-city counts, baseline IDs and deduplicated proposals; source-specific files contain the complete records grouped by country/city. For the next scrape, add a new source file and update only this master summary and proposals. Never replace earlier source files unless correcting those source records.",
       "continuation": "Load the master file, then any relevant source files when comparing source details or updating matches. All new findings must retain source URLs and each city.scrapes.scrape_N holds the count. Add proposed_places only if location not already represented across prior sources. Keep every source's original records in separate research/cruising/scrape_N.json."
     },
-    "candidate_policy": "Cruising research is for public-space locations such as parks, beaches, woodlands, public toilets, lay-bys and rest areas. Bars, clubs, cinemas, saunas, gyms, swimming baths and other commercial or managed leisure venues are excluded from the proposal counts; source records are retained as excluded audit evidence. Generic malls, transit hubs and indoor public toilets still require access and recency checks."
+    "candidate_policy": "Include non-dedicated public and ordinary commercial places where cruising is reported: parks, woods, beaches, public toilets, rest stops, gyms, pools, shopping centres, train stations, cinemas, regular bathhouses and similar. Exclude dedicated gay nightlife/sex-business venues that belong in Backroom's normal venues database (gay bars, gay clubs, dedicated gay saunas, adult sex venues). Inclusion is a research lead only, not proof of current activity or permission to engage in sexual conduct on site."
   },
   "sources": [
     {
@@ -655,12 +656,12 @@
     {
       "country": "Andorra",
       "cruising_now": 0,
-      "proposals": 13,
+      "proposals": 15,
       "cities": [
         {
           "city": "Andorra la Vella",
           "cruising_now": 0,
-          "proposals": 7,
+          "proposals": 9,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -753,6 +754,34 @@
               "source_url": "https://www.gays-cruising.com/en/andorra",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-11",
+              "name": "Zona relax Serradells",
+              "city": "Andorra la Vella",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Gym",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GC1-ANDORRA-13",
+              "name": "Anyos",
+              "city": "Andorra la Vella",
+              "country": "Andorra",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Gym",
+              "source_url": "https://www.gays-cruising.com/en/andorra",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -1499,7 +1528,7 @@
     {
       "country": "Georgia",
       "cruising_now": 0,
-      "proposals": 14,
+      "proposals": 15,
       "cities": [
         {
           "city": "Batumi",
@@ -1565,7 +1594,7 @@
         {
           "city": "Tbilisi",
           "cruising_now": 0,
-          "proposals": 11,
+          "proposals": 12,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -1710,6 +1739,20 @@
               "source_url": "https://www.gays-cruising.com/en/georgia",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-GEORGIA-04",
+              "name": "Old Town (Abanotubani/Kharpukhi) Sulfur Baths and Saunas",
+              "city": "Tbilisi",
+              "country": "Georgia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/georgia",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -1721,7 +1764,7 @@
     {
       "country": "Iceland",
       "cruising_now": 0,
-      "proposals": 4,
+      "proposals": 5,
       "cities": [
         {
           "city": "Akureyri",
@@ -1774,7 +1817,7 @@
         {
           "city": "Reykjavík",
           "cruising_now": 0,
-          "proposals": 2,
+          "proposals": 3,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -1802,6 +1845,20 @@
               "source_url": "https://www.gays-cruising.com/en/iceland",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ICELAND-04",
+              "name": "Men sauna",
+              "city": "Reykjavík",
+              "country": "Iceland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/iceland",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -2185,7 +2242,7 @@
     {
       "country": "Liechtenstein",
       "cruising_now": 0,
-      "proposals": 1,
+      "proposals": 2,
       "cities": [
         {
           "city": "Balzers",
@@ -2214,9 +2271,24 @@
         {
           "city": "Ruggell",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 1,
           "existing_cruising": [],
-          "proposed_places": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-LIECHTENSTEIN-02",
+              "name": "Kokon",
+              "city": "Ruggell",
+              "country": "Liechtenstein",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Gym",
+              "source_url": "https://www.gays-cruising.com/en/liechtenstein",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            }
+          ],
           "scrapes": {
             "scrape_1": 1
           }
@@ -2234,12 +2306,12 @@
     {
       "country": "Lithuania",
       "cruising_now": 0,
-      "proposals": 14,
+      "proposals": 15,
       "cities": [
         {
           "city": "Kaunas",
           "cruising_now": 0,
-          "proposals": 2,
+          "proposals": 3,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -2267,6 +2339,20 @@
               "source_url": "https://www.gays-cruising.com/en/lithuania",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-LITHUANIA-14",
+              "name": "Lemon Gym",
+              "city": "Kaunas",
+              "country": "Lithuania",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Gym",
+              "source_url": "https://www.gays-cruising.com/en/lithuania",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -2489,7 +2575,7 @@
     {
       "country": "Luxembourg",
       "cruising_now": 0,
-      "proposals": 13,
+      "proposals": 14,
       "cities": [
         {
           "city": "Belvaux",
@@ -2782,9 +2868,24 @@
         {
           "city": "Strassen",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 1,
           "existing_cruising": [],
-          "proposed_places": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-LUXEMBOURG-13",
+              "name": "Les Thermes",
+              "city": "Strassen",
+              "country": "Luxembourg",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/luxembourg",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            }
+          ],
           "scrapes": {
             "scrape_1": 1
           }
@@ -3101,7 +3202,7 @@
     {
       "country": "Slovakia",
       "cruising_now": 0,
-      "proposals": 14,
+      "proposals": 15,
       "cities": [
         {
           "city": "Banská Bystrica",
@@ -3130,7 +3231,7 @@
         {
           "city": "Bratislava",
           "cruising_now": 0,
-          "proposals": 10,
+          "proposals": 11,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -3262,6 +3363,20 @@
               "source_url": "https://www.gays-cruising.com/en/slovakia",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GC1-SLOVAKIA-09",
+              "name": "Sauna Expert-Staré Mesto",
+              "city": "Bratislava",
+              "country": "Slovakia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/slovakia",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -3345,14 +3460,29 @@
     {
       "country": "Slovenia",
       "cruising_now": 0,
-      "proposals": 12,
+      "proposals": 13,
       "cities": [
         {
           "city": "Koper",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 1,
           "existing_cruising": [],
-          "proposed_places": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-SLOVENIA-11",
+              "name": "Sauna Hotel Casino Carnevale",
+              "city": "Koper",
+              "country": "Slovenia",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/slovenia",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            }
+          ],
           "scrapes": {
             "scrape_1": 1
           }
@@ -3918,7 +4048,7 @@
     {
       "country": "Turkey",
       "cruising_now": 0,
-      "proposals": 8,
+      "proposals": 14,
       "cities": [
         {
           "city": "Ankara",
@@ -3947,7 +4077,7 @@
         {
           "city": "Antalya",
           "cruising_now": 0,
-          "proposals": 3,
+          "proposals": 6,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -3988,6 +4118,48 @@
               "source_url": "https://www.gays-cruising.com/en/turkey",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GC1-TURKEY-04",
+              "name": "Aspendos Cinema",
+              "city": "Antalya",
+              "country": "Turkey",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Theater",
+              "source_url": "https://www.gays-cruising.com/en/turkey",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GC1-TURKEY-07",
+              "name": "Kent Cinema",
+              "city": "Antalya",
+              "country": "Turkey",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Theater",
+              "source_url": "https://www.gays-cruising.com/en/turkey",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GC1-TURKEY-14",
+              "name": "Class Cinema",
+              "city": "Antalya",
+              "country": "Turkey",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Theater",
+              "source_url": "https://www.gays-cruising.com/en/turkey",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -3997,7 +4169,7 @@
         {
           "city": "Istanbul",
           "cruising_now": 0,
-          "proposals": 4,
+          "proposals": 7,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -4051,6 +4223,48 @@
               "source_url": "https://www.gays-cruising.com/en/turkey",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-TURKEY-01",
+              "name": "Yesildirek Hamam",
+              "city": "Istanbul",
+              "country": "Turkey",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/turkey",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GC1-TURKEY-09",
+              "name": "Firuzaga Hamam",
+              "city": "Istanbul",
+              "country": "Turkey",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/turkey",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GC1-TURKEY-11",
+              "name": "Balat Çavuș Hamami",
+              "city": "Istanbul",
+              "country": "Turkey",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/turkey",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -4405,7 +4619,7 @@
     {
       "country": "Bosnia and Herzegovina",
       "cruising_now": 1,
-      "proposals": 12,
+      "proposals": 13,
       "cities": [
         {
           "city": "Alipasin Most",
@@ -4508,7 +4722,7 @@
         {
           "city": "Ildza",
           "cruising_now": 0,
-          "proposals": 1,
+          "proposals": 2,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -4523,6 +4737,20 @@
               "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-08",
+              "name": "Hollywood Hotel Sauna",
+              "city": "Ildza",
+              "country": "Bosnia and Herzegovina",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -4670,7 +4898,7 @@
     {
       "country": "Bulgaria",
       "cruising_now": 1,
-      "proposals": 13,
+      "proposals": 14,
       "cities": [
         {
           "city": "Burgas",
@@ -4736,7 +4964,7 @@
         {
           "city": "Sofia",
           "cruising_now": 1,
-          "proposals": 10,
+          "proposals": 11,
           "existing_cruising": [
             {
               "id": "CRU-SOF-BORGRA-01",
@@ -4874,6 +5102,20 @@
               "source_url": "https://www.gays-cruising.com/en/bulgaria",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-BULGARIA-08",
+              "name": "World Class Fitness and Spa",
+              "city": "Sofia",
+              "country": "Bulgaria",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/bulgaria",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -4885,14 +5127,29 @@
     {
       "country": "Cyprus",
       "cruising_now": 1,
-      "proposals": 14,
+      "proposals": 15,
       "cities": [
         {
           "city": "Aglandjia",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 1,
           "existing_cruising": [],
-          "proposed_places": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-CYPRUS-15",
+              "name": "Skali",
+              "city": "Aglandjia",
+              "country": "Cyprus",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Theater",
+              "source_url": "https://www.gays-cruising.com/en/cyprus",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            }
+          ],
           "scrapes": {
             "scrape_1": 1
           }
@@ -5452,7 +5709,7 @@
     {
       "country": "Hungary",
       "cruising_now": 1,
-      "proposals": 13,
+      "proposals": 14,
       "cities": [
         {
           "city": "Albertfalva",
@@ -5505,7 +5762,7 @@
         {
           "city": "Budapest",
           "cruising_now": 1,
-          "proposals": 9,
+          "proposals": 10,
           "existing_cruising": [
             {
               "id": "CRU-BUD-DANPRO-01",
@@ -5630,6 +5887,20 @@
               "source_url": "https://www.gays-cruising.com/en/hungary",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-HUNGARY-05",
+              "name": "Rudas Fürdö",
+              "city": "Budapest",
+              "country": "Hungary",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Sauna",
+              "source_url": "https://www.gays-cruising.com/en/hungary",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -6237,7 +6508,7 @@
     {
       "country": "Ireland",
       "cruising_now": 2,
-      "proposals": 13,
+      "proposals": 14,
       "cities": [
         {
           "city": "Cahir",
@@ -6274,7 +6545,7 @@
         {
           "city": "Dublin",
           "cruising_now": 2,
-          "proposals": 7,
+          "proposals": 8,
           "existing_cruising": [
             {
               "id": "CRU-DUB-DOLSTR-01",
@@ -6378,6 +6649,20 @@
               "source_url": "https://www.gays-cruising.com/en/ireland",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-IRELAND-06",
+              "name": "Basic Instincts",
+              "city": "Dublin",
+              "country": "Ireland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Theater",
+              "source_url": "https://www.gays-cruising.com/en/ireland",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -8745,7 +9030,7 @@
     {
       "country": "Norway",
       "cruising_now": 5,
-      "proposals": 13,
+      "proposals": 14,
       "cities": [
         {
           "city": "Bergen",
@@ -8854,9 +9139,24 @@
         {
           "city": "Mjøndalen",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 1,
           "existing_cruising": [],
-          "proposed_places": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-NORWAY-03",
+              "name": "Sauna Sporty Mjøndalshallen",
+              "city": "Mjøndalen",
+              "country": "Norway",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Gym",
+              "source_url": "https://www.gays-cruising.com/en/norway",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            }
+          ],
           "scrapes": {
             "scrape_1": 1
           }
@@ -9385,7 +9685,7 @@
     {
       "country": "Greece",
       "cruising_now": 6,
-      "proposals": 16,
+      "proposals": 18,
       "cities": [
         {
           "city": "Ágioi",
@@ -9414,7 +9714,7 @@
         {
           "city": "Athens",
           "cruising_now": 4,
-          "proposals": 6,
+          "proposals": 7,
           "existing_cruising": [
             {
               "id": "CRU-ATH-PEDTOUARE-01",
@@ -9515,6 +9815,20 @@
               "source_url": "https://www.gays-cruising.com/en/greece",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GC1-GREECE-13",
+              "name": "Village Shopping & More",
+              "city": "Athens",
+              "country": "Greece",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Theater",
+              "source_url": "https://www.gays-cruising.com/en/greece",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -9686,7 +10000,7 @@
         {
           "city": "Thessaloniki",
           "cruising_now": 1,
-          "proposals": 1,
+          "proposals": 2,
           "existing_cruising": [
             {
               "id": "CRU-SKG-RAISTA-01",
@@ -9707,6 +10021,20 @@
               "source_url": "https://www.gays-cruising.com/en/greece",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-GREECE-14",
+              "name": "Vilma Cinema",
+              "city": "Thessaloniki",
+              "country": "Greece",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Theater",
+              "source_url": "https://www.gays-cruising.com/en/greece",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -9718,7 +10046,7 @@
     {
       "country": "United Kingdom",
       "cruising_now": 6,
-      "proposals": 12,
+      "proposals": 13,
       "cities": [
         {
           "city": "Belfast",
@@ -9801,9 +10129,24 @@
         {
           "city": "Cowdenbeath",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 1,
           "existing_cruising": [],
-          "proposed_places": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-UNITED-KINGDOM-03",
+              "name": "At the back of Lucy Sue Coffee Shop",
+              "city": "Cowdenbeath",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Bar",
+              "source_url": "https://www.gays-cruising.com/en/united_kingdom",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            }
+          ],
           "scrapes": {
             "scrape_1": 1
           }
@@ -11022,7 +11365,7 @@
     {
       "country": "Germany",
       "cruising_now": 13,
-      "proposals": 296,
+      "proposals": 312,
       "cities": [
         {
           "city": "Ahrensburg",
@@ -11102,7 +11445,7 @@
         {
           "city": "Berlin",
           "cruising_now": 4,
-          "proposals": 64,
+          "proposals": 69,
           "existing_cruising": [
             {
               "id": "CRU-BER-HAS-03",
@@ -12005,6 +12348,76 @@
               "status": "unverified",
               "notes": "",
               "source_address": "Königsweg, 14193 Berlin"
+            },
+            {
+              "proposal_id": "GS2-DE-BERLIN-002",
+              "name": "Bad am Spreewaldplatz",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GS2-DE-BERLIN-029",
+              "name": "McFit",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GS2-DE-BERLIN-037",
+              "name": "Prater Berlin",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GS2-DE-BERLIN-047",
+              "name": "Stadtbad Mitte - Gemeinschaftsdusche",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GS2-DE-BERLIN-048",
+              "name": "Stadtbad Neukölln",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -12170,7 +12583,7 @@
         {
           "city": "Cologne",
           "cruising_now": 3,
-          "proposals": 24,
+          "proposals": 25,
           "existing_cruising": [
             {
               "id": "CRU-CGN-AACWEI-01",
@@ -12517,6 +12930,20 @@
               "status": "unverified",
               "notes": "",
               "source_address": "Roggendorf/Thenhoven, 50765 Cologne"
+            },
+            {
+              "proposal_id": "GS2-DE-KOELN-004",
+              "name": "Agrippabad",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -12528,7 +12955,7 @@
         {
           "city": "Dortmund",
           "cruising_now": 0,
-          "proposals": 10,
+          "proposals": 12,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -12660,6 +13087,34 @@
               "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-010",
+              "name": "Solebad Wischlingen",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-011",
+              "name": "Technische Universität Dortmund",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -12939,7 +13394,7 @@
         {
           "city": "Düsseldorf",
           "cruising_now": 0,
-          "proposals": 12,
+          "proposals": 13,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -13097,6 +13552,20 @@
               "source_url": "https://gay-szene.net/gay-cruising-in-duesseldorf/68/17/rubrik.html",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DUESSELDORF-005",
+              "name": "Freizeitbad Düsselstrand",
+              "city": "Düsseldorf",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-duesseldorf/68/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -14251,7 +14720,7 @@
         {
           "city": "Karlsruhe",
           "cruising_now": 0,
-          "proposals": 7,
+          "proposals": 8,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -14344,6 +14813,20 @@
               "source_url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-KARLSRUHE-004",
+              "name": "Fächerbad",
+              "city": "Karlsruhe",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -14702,7 +15185,7 @@
         {
           "city": "Munich",
           "cruising_now": 4,
-          "proposals": 15,
+          "proposals": 17,
           "existing_cruising": [
             {
               "id": "CRU-MUC-ENGGAR-01",
@@ -14920,6 +15403,34 @@
               "source_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
               "status": "unverified",
               "notes": "Verify category, legitimate access, venue policy and current 2026 status."
+            },
+            {
+              "proposal_id": "GS2-DE-MUENCHEN-012",
+              "name": "Naturbad Maria Einsiedel",
+              "city": "Munich",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GS2-DE-MUENCHEN-013",
+              "name": "Olympiabad",
+              "city": "Munich",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -15222,7 +15733,7 @@
         {
           "city": "Saarbrücken",
           "cruising_now": 0,
-          "proposals": 6,
+          "proposals": 7,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -15302,6 +15813,20 @@
               "source_url": "https://gay-szene.net/gay-cruising-in-saarbruecken/233/17/rubrik.html",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-SAARBRUCKEN-002",
+              "name": "Calypso Sauna",
+              "city": "Saarbrücken",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-saarbruecken/233/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -15396,7 +15921,7 @@
         {
           "city": "Stuttgart",
           "cruising_now": 0,
-          "proposals": 15,
+          "proposals": 18,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -15593,6 +16118,48 @@
               "source_url": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html",
               "status": "unverified",
               "notes": "Verify category, legitimate access, venue policy and current 2026 status."
+            },
+            {
+              "proposal_id": "GS2-DE-STUTTGART-006",
+              "name": "Hallenbad Heslach",
+              "city": "Stuttgart",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GS2-DE-STUTTGART-013",
+              "name": "Mineralbad Leuze",
+              "city": "Stuttgart",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GS2-DE-STUTTGART-018",
+              "name": "Schwaben Quellen",
+              "city": "Stuttgart",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
@@ -15680,7 +16247,7 @@
     {
       "country": "Spain",
       "cruising_now": 13,
-      "proposals": 39,
+      "proposals": 40,
       "cities": [
         {
           "city": "A Coruña",
@@ -16176,7 +16743,7 @@
         {
           "city": "Maspalomas",
           "cruising_now": 1,
-          "proposals": 11,
+          "proposals": 12,
           "existing_cruising": [
             {
               "id": "CRU-LPA-MASDUN-01",
@@ -16327,6 +16894,20 @@
               "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GC1-ESP-MAS-06",
+              "name": "C.C.Cita",
+              "city": "Maspalomas",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Theater",
+              "source_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+              "status": "unverified",
+              "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
+              "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
             }
           ],
           "scrapes": {
