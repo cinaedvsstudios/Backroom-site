@@ -1,5 +1,5 @@
 {
-  "version": "v1.5.26",
+  "version": "v1.5.27",
   "date": "2026-11-06",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
@@ -109,7 +109,9 @@
     "Mobile back-to-top button fades to 25% while scrolling/finger held and returns to full opacity after release and stop.",
     "Fix broken desktop Event cards by wrapping long dress-code labels beneath event titles, and make the calendar fill the width of the category filter panel.",
     "Keep Events heading/location/quick filters and left calendar visible at desktop browser zoom: scroll only the right-hand results panel while preserving two event columns and existing mobile layout.",
-    "Restore the generic Heat Map with a locally bundled official Leaflet.heat v0.2.0 plugin, including upstream BSD licence, cache-busted iframe, and fallback to count bubbles if the heat overlay fails."
+    "Restore the generic Heat Map with a locally bundled official Leaflet.heat v0.2.0 plugin, including upstream BSD licence, cache-busted iframe, and fallback to count bubbles if the heat overlay fails.",
+    "Fix mobile Events horizontal category-tag scrolling after desktop redesign: constrain the wrappers to the viewport, keep tags wider than the container and restore touch swipe.",
+    "Keep the mobile EVENTS IN heading, existing selected-location pill and map-pin button on the same responsive row, with ellipsis for long location names. No changes to desktop Events, mobile cards, Venues, Festivals, Cruising Guide or back-to-top."
   ],
   "validation": {
     "javascript_syntax": "checked before publication",
