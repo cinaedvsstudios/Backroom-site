@@ -36,7 +36,8 @@
       "Scrape 5 (Splashd) is an INDEX-ONLY research checkpoint, not a completed individual-place scrape. Its 56 advertised country counts are stored in research/cruising/scrape_5.json; site access currently blocks individual records and no proposals were added. Resume with an authorized full browser if possible.",
       "Scrape 6 Popcorn.dating: 20 selected public outdoor/parking index records from cached general directory pages 1-2, with 8 preliminary new proposals. Source category and detail pages were inaccessible. Source mixes orientations and eras; all new candidates require current verification and male/gay relevance checking before publication.",
       "Manual scrape placeholders: scrape_5 (Splashd) and scrape_7 (Squirt.org) now have null per-city entries, meaning not yet collected; these are NOT zero-result counts. Squirt.org research file is reserved for a later user-supplied manual dump.",
-      "Scrape 8 CruisingGays: 43 selected public/ordinary-site source records across 8 countries. 21 new provisional proposals, 17 prior/existing matches, 5 not counted for weak/ambiguous evidence. Exclude misclassified clubs/hotels/shops and correct location errors (Berlin/Maryland, Paris/Texas, London/Ontario). No assumption that a recent crawl or verification badge validates current cruising."
+      "Scrape 8 CruisingGays: 43 selected public/ordinary-site source records across 8 countries. 21 new provisional proposals, 17 prior/existing matches, 5 not counted for weak/ambiguous evidence. Exclude misclassified clubs/hotels/shops and correct location errors (Berlin/Maryland, Paris/Texas, London/Ontario). No assumption that a recent crawl or verification badge validates current cruising.",
+      "Added six optional verification-only references (Couple of Men, Männer unterwegs, The Globetrotter Guys, Tripadvisor, Reddit, misterb&b Gay Guide). Do not assign scrape numbers or systematically crawl them. Research a specific unresolved detail only, reusing existing evidence first and stopping once sufficient."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -21310,5 +21311,53 @@
         }
       ]
     }
-  ]
+  ],
+  "verification_reference_sites": {
+    "role": "Optional spot-specific verification and editorial enrichment, NOT primary discovery sources or numbered scrapes.",
+    "added_berlin": "2026-11-06",
+    "references": [
+      {
+        "site": "Couple of Men",
+        "url": "https://coupleofmen.com/themes/gay-travel/europe/",
+        "use_for": "Travel context and destination-specific practical detail"
+      },
+      {
+        "site": "Männer unterwegs",
+        "url": "https://www.maenner-unterwegs.de/",
+        "use_for": "German-language gay travel and locality context"
+      },
+      {
+        "site": "The Globetrotter Guys",
+        "url": "https://www.theglobetrotterguys.com/",
+        "use_for": "Gay travel guides and practical city context"
+      },
+      {
+        "site": "Tripadvisor",
+        "url": "https://www.tripadvisor.com/",
+        "use_for": "Recent public reviews, location/access information, and potential closure signals"
+      },
+      {
+        "site": "Reddit",
+        "url": "https://www.reddit.com/",
+        "use_for": "Recent first-hand experience reports, only when they are relevant and checkable"
+      },
+      {
+        "site": "misterb&b Gay Guide",
+        "url": "https://www.misterbandb.com/gay-guide/",
+        "use_for": "Gay travel city guides and destination context"
+      }
+    ],
+    "trigger": "Use only when an individual cruising-area listing lacks important details, has contradictory information, needs recent access/closure confirmation, or needs a specific practical detail for an original description.",
+    "workflow": [
+      "Start with existing Backroom listing and prior source records. Reuse earlier evidence and URLs; do not revisit identical facts across many websites.",
+      "Prefer the actual place's official or authoritative locality/access sources when available; use one or two relevant supplementary references as necessary.",
+      "Stop searching once the specific uncertainty is sufficiently resolved, or record it as unresolved. Do not search all six references by default.",
+      "Keep original source URLs and a concise evidence note for claims that materially influence records. A general destination guide does not independently verify a specific cruising place.",
+      "Compare any new location claim against existing Backroom IDs and all earlier research proposals; do not double-count the same place.",
+      "Write descriptions originally in Backroom's practical friend-to-friend voice, without copying source wording and without presenting unverified material as established fact.",
+      "Do not mine user identities, private messages, check-ins, or real-time locations; public reports about public places are leads rather than proof of current activity.",
+      "Do not alter production listings.json until final review."
+    ],
+    "research_count_impact": "None. These reference sites do not increment scrape_N, per-city scrape counts, or proposal totals merely by being registered."
+  }
 }
