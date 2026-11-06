@@ -1,0 +1,701 @@
+{
+  "_meta": {
+    "worker": "B",
+    "section": "B",
+    "range_start": 489,
+    "range_end": 493,
+    "count": 5,
+    "checked_berlin": "2026-11-06",
+    "cutoff": "2025-11-06",
+    "research_only": true,
+    "publication_approved": false,
+    "source_alignment": "research/cruising/cross_source_alignment_2026-11-06.json",
+    "note": "Staurby actual roadway confirmed, Axelved municipal labeling ambiguous, Antvorskov side unclear, Popcorn Tinglevvej possible Gays-Cruising alias flagged; none has verified recent actual cruising."
+  },
+  "records": [
+    {
+      "index": 489,
+      "id": "GC1-DENMARK-02",
+      "name": "Resteplads Stauerby",
+      "city": "Middelfart",
+      "country": "Denmark",
+      "original_queue_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/scrape_1.json",
+          "i": 469,
+          "u": "https://www.gays-cruising.com/en/denmark"
+        }
+      ],
+      "original_source_url": "https://www.gays-cruising.com/en/denmark",
+      "original_spot_url": "https://www.gays-cruising.com/en/cruising/resteplads_stauerby_middelfart_denmark_18895",
+      "eight_source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "url": "https://www.gays-cruising.com/en/cruising/resteplads_stauerby_middelfart_denmark_18895",
+          "notes": "Original-source matching listing in archive. Read source direct details where accessible; see primary_page_status and linked sources."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        }
+      ],
+      "description_rewritten": "Staurby is a motorway-adjacent rest area on the Funen side of the Little Belt crossing, identified by the directory as 'Resteplads Stauerby' at Jyllandsvej 101. The directory describes paths in woods west of the parking and suggests toilets in winter, but those claims are from an undated description and a 2021 user report. An independent road-parking database and property record confirm a site called Staurby at the same address, separate from the nearby Staurby Skov shelter car park. No cruising encounters after November 2025 were verified.",
+      "location_identity": "Staurby roadside rest area, E20/Jyllandsvej 101, 5500 Middelfart, geographic identity credible; do not conflate with Staurby Skov shelter public parking on Staurbyskovvej 3.",
+      "access_conditions": "Roadside park is intended for drivers stopping safely. Official Danish road authority says rest areas can operate all hours but individual services/toilets may close. Do not infer a building's or woodland's unrestricted night access from the directory. Nearby Staurby Skov shelter requires booking for overnight stay.",
+      "primary_page_status": "direct_page_read_2021_2023_comments",
+      "independent_and_secondary_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/denmark",
+          "type": "original_exact_archive",
+          "finding": "Candidate originally captured under this source."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/resteplads_stauerby_middelfart_denmark_18895",
+          "type": "original_detail",
+          "finding": "2023 and 2021 dated comments, older user description of wooded area and winter toilets."
+        },
+        {
+          "url": "https://poi.gpsforalle.dk/print2.php?cid=1026&gid=555",
+          "type": "third_party_rest_area_directory",
+          "finding": "Lists Staurby E20/Jyllandsvej 101 Middelfart, independently confirming place name and roadway."
+        },
+        {
+          "url": "https://empiri.dk/ejendom/9506483",
+          "type": "property_register_aggregation",
+          "finding": "Jyllandsvej 101 public-road parcel, owner Vejdirektoratet; no cruising verification."
+        },
+        {
+          "url": "https://www.vejdirektoratet.dk/trafikant/rastepladser-din-pause-paa-turen",
+          "type": "official_roads_authority",
+          "finding": "Rest stops generally open 24h; some service facilities close overnight."
+        },
+        {
+          "url": "https://www.visitdenmark.com/denmark/plan-your-trip/staurby-skov-shelter-gdk1128563",
+          "type": "nearby_separate_site",
+          "finding": "Staurby Skov car park and shelters address Staurbyskovvej 3, not proven same as motorway rest area."
+        }
+      ],
+      "dated_reports": [
+        {
+          "date": "2023-05-24",
+          "type": "historical_question_not_visit",
+          "url": "https://www.gays-cruising.com/en/cruising/resteplads_stauerby_middelfart_denmark_18895",
+          "summary": "Visitor asks how the place works; no claimed firsthand sighting."
+        },
+        {
+          "date": "2021-08-19",
+          "type": "historical_user_location_description",
+          "url": "https://www.gays-cruising.com/en/cruising/resteplads_stauerby_middelfart_denmark_18895",
+          "summary": "User describes expansive wooded area west of parking, pallets, cable reels, pedestrians and mountain bikers; years old, no recent encounter confirmation."
+        }
+      ],
+      "credible_physical_activity_since_2025_11_06": false,
+      "possible_aliases": [
+        {
+          "name": "Staurby Rasteplads / Resteplads Stauerby",
+          "relation": "name_spelling_variant"
+        },
+        {
+          "name": "Staurby Skov shelter car park",
+          "relation": "nearby_distinct_site_not_same_address"
+        }
+      ],
+      "review_flags": [
+        "historical_only_comments",
+        "wooded_area_multifunctional",
+        "rest_area_toilets_hours_unverified",
+        "avoid_confusion_with_shelter_parking"
+      ],
+      "research_decision": "roadside_area_confirmed_historical_cruising_report_only",
+      "publication_approved": false,
+      "checked_berlin": "2026-11-06"
+    },
+    {
+      "index": 490,
+      "id": "GC1-DENMARK-07",
+      "name": "Axelved Rasteplads",
+      "city": "Næstved",
+      "country": "Denmark",
+      "original_queue_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/scrape_1.json",
+          "i": 470,
+          "u": "https://www.gays-cruising.com/en/denmark"
+        }
+      ],
+      "original_source_url": "https://www.gays-cruising.com/en/denmark",
+      "original_spot_url": "https://www.gays-cruising.com/en/cruising/axelved_rasteplads_nastved_denmark_78217",
+      "eight_source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "url": "https://www.gays-cruising.com/en/cruising/axelved_rasteplads_nastved_denmark_78217",
+          "notes": "Original-source matching listing in archive. Read source direct details where accessible; see primary_page_status and linked sources."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        }
+      ],
+      "description_rewritten": "Axelved is a named roadside rest stop at Vordingborgvej near Rønnede, south of Copenhagen. One gay directory associates its parking and adjacent woods with cruising, but the publicly accessible indexed excerpt contains an undated description rather than recent eyewitness activity; its comments were login-gated when checked. The rest stop independently appears in Danish police reporting and as an address in a university research project. The directory categorises it under Næstved, while independent physical references place it at Axelved near Rønnede, around Faxe municipality, so its city label needs later review.",
+      "location_identity": "Rasteplads Axelved on Vordingborgvej / Hovedvej A2 near Rønnede, postal site Axelved 151, 4683 Rønnede (from University of Southern Denmark), not verified as in central Næstved.",
+      "access_conditions": "Public road pull-in/parking with traffic rules, not a dedicated sex venue; use marked foot access only. Historical motel site and roadside pull-in are not necessarily same building/facility. Avoid assuming full-time toilet availability.",
+      "primary_page_status": "spot_index_read_detail_comments_login_gated",
+      "independent_and_secondary_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/denmark",
+          "type": "original_exact_archive",
+          "finding": "Candidate originally captured under this source."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/axelved_rasteplads_nastved_denmark_78217",
+          "type": "original_spot_index",
+          "finding": "Adult-gated 4 comments; undated claim that woodland lies near park. No readable dated reports."
+        },
+        {
+          "url": "https://www.sdu.dk/da/forskning/population-biology/research-areas/citizen-science/indlevering",
+          "type": "university_official_collection",
+          "finding": "Lists Rasteplads ved Axelved, Axelved 151, 4683 Rønnede as collection location; proves road stop."
+        },
+        {
+          "url": "https://politi.dk/sydsjaellands-og-lolland-falsters-politi/doegnrapporter/uddrag-af-tirsdagens-doegnrapport/2024/02/28",
+          "type": "official_police",
+          "finding": "2024 account of litter dumping at Axelved rest area near Rønnede; physical place exists, not gay cruising evidence."
+        },
+        {
+          "url": "https://historiskatlas.dk/Axelveds_livlige_rasteplads_%2823432%29",
+          "type": "historical_local_atlas",
+          "finding": "Describes 20th-century road-stop/motel at Axelved on former A2 and historic use; does not demonstrate continuity of adult meeting use."
+        }
+      ],
+      "dated_reports": [],
+      "credible_physical_activity_since_2025_11_06": false,
+      "possible_aliases": [
+        {
+          "name": "Axelved rasteplads Rønnede/Faxe",
+          "relation": "same_named_roadside_place_but_source_city_mismatch"
+        }
+      ],
+      "review_flags": [
+        "city_mismatch_Naestved_vs_Ronnede",
+        "4_comments_gated",
+        "no_recent_direct_evidence",
+        "historic_motel_not_current_facility"
+      ],
+      "research_decision": "named_rest_area_verified_current_activity_unconfirmed",
+      "publication_approved": false,
+      "checked_berlin": "2026-11-06"
+    },
+    {
+      "index": 491,
+      "id": "GC1-DENMARK-10",
+      "name": "Rudolf dieselvej",
+      "city": "Randers",
+      "country": "Denmark",
+      "original_queue_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/scrape_1.json",
+          "i": 471,
+          "u": "https://www.gays-cruising.com/en/denmark"
+        }
+      ],
+      "original_source_url": "https://www.gays-cruising.com/en/denmark",
+      "original_spot_url": "https://www.gays-cruising.com/en/cruising/rudolf_dieselvej_randers_dinamarca_2041",
+      "eight_source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "url": "https://www.gays-cruising.com/en/cruising/rudolf_dieselvej_randers_dinamarca_2041",
+          "notes": "Original-source matching listing in archive. Read source direct details where accessible; see primary_page_status and linked sources."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        }
+      ],
+      "description_rewritten": "The directory describes Rudolf Diesels Vej in Randers as an isolated industrial-edge area with greenery, but gives no reliable cross-street or current configuration. Its latest accessible comment dates from August 2025 and is an invitation rather than a firsthand encounter. The source's own nearby-results list has a separate Viborgvej toilet parking candidate 0.9 km away; that is not automatically the same site. The street name may identify a wider light-industrial district, and the precise claimed outdoor area remains unpinned.",
+      "location_identity": "Road/street Rudolf Diesels Vej in Randers, eastern Jutland, but specific section, driveway, woods and any current safe publicly accessible spot unknown.",
+      "access_conditions": "Industrial roads and private commercial lots may have changing access restrictions. No official hours, current site map or permissions verified; avoid treating undated 'empty industrial zone' description as current.",
+      "primary_page_status": "direct_detail_read_last_2025_08",
+      "independent_and_secondary_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/denmark",
+          "type": "original_exact_archive",
+          "finding": "Candidate originally captured under this source."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/rudolf_dieselvej_randers_dinamarca_2041",
+          "type": "original_detail",
+          "finding": "3 comments, latest 2025-08-29 before cutoff; undated area description."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/parkeringsplads_ved_viborg_vej_offentligt_toilet_randers_denmark_51890",
+          "type": "nearby_separate_directory_candidate",
+          "finding": "Listed 0.9km away as another parking/toilet location, not automatically duplicate."
+        }
+      ],
+      "dated_reports": [
+        {
+          "date": "2025-08-29",
+          "type": "precutoff_online_interest",
+          "url": "https://www.gays-cruising.com/en/cruising/rudolf_dieselvej_randers_dinamarca_2041",
+          "summary": "User expresses sexual interest, not a physical onsite visit."
+        },
+        {
+          "date": "2025-01-23",
+          "type": "precutoff_arranged_proposal",
+          "url": "https://www.gays-cruising.com/en/cruising/rudolf_dieselvej_randers_dinamarca_2041",
+          "summary": "Contributor proposes public-facing activity near parked vehicle; no confirmed encounter."
+        }
+      ],
+      "credible_physical_activity_since_2025_11_06": false,
+      "possible_aliases": [
+        {
+          "name": "Rudolf Diesels Vej Randers",
+          "relation": "standardized_street_spelling"
+        },
+        {
+          "name": "Parkeringsplads ved Viborg vej offentligt toilet",
+          "relation": "nearby_separate_indexed_place_0_9km"
+        }
+      ],
+      "review_flags": [
+        "street_section_unknown",
+        "industrial_property_access",
+        "no_aftercutoff_reports",
+        "nearby_place_distinct"
+      ],
+      "research_decision": "single_directory_claim_without_recent_verification",
+      "publication_approved": false,
+      "checked_berlin": "2026-11-06"
+    },
+    {
+      "index": 492,
+      "id": "GC1-DENMARK-11",
+      "name": "Antvorskov rest area",
+      "city": "Slagelse",
+      "country": "Denmark",
+      "original_queue_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/scrape_1.json",
+          "i": 472,
+          "u": "https://www.gays-cruising.com/en/denmark"
+        }
+      ],
+      "original_source_url": "https://www.gays-cruising.com/en/denmark",
+      "original_spot_url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
+      "eight_source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
+          "notes": "Original-source matching listing in archive. Read source direct details where accessible; see primary_page_status and linked sources."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        }
+      ],
+      "description_rewritten": "Antvorskov is an E20 motorway service/rest area near Slagelse with northern and southern stopping sides. The gay directory gives a description of bushes near toilets and a bridge, while a 2021 commenter specifically named Antvorskov Syd. Government road rules independently identify both direction-specific stopping places. The newer March–April 2026 posts are mostly meeting requests, with one March visitor explicitly complaining that nobody turned up. These demonstrate recent interest and a negative firsthand visit, not a confirmed encounter.",
+      "location_identity": "Antvorskov motorway rest areas E20 Slagelse, likely Antvorskov Syd side per 2021 user; primary description's west-to-east reference may conflict with direction, so side identity is not conclusively resolved.",
+      "access_conditions": "Public E20 rest areas can be used by motorists subject to signed parking bays and traffic flow; do not cross live highway carriageways. Danish roads authority says motorway rest areas open 24h but some service/toilet facilities close. Direction-specific vehicle routes apply.",
+      "primary_page_status": "direct_page_read_2026_comments",
+      "independent_and_secondary_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/denmark",
+          "type": "original_exact_archive",
+          "finding": "Candidate originally captured under this source."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
+          "type": "original_spot_page",
+          "finding": "8 comments including 2026 meetup intentions and March 2026 complaint of no attendees."
+        },
+        {
+          "url": "https://www.vejdirektoratet.dk/trafikant/rastepladser-din-pause-paa-turen",
+          "type": "official_road_authority",
+          "finding": "General 24-hour rest-area access, some facilities close overnight."
+        },
+        {
+          "url": "https://www.retsinformation.dk/eli/lta/2023/1431",
+          "type": "official_legal_road_document",
+          "finding": "Specifies Antvorskov Nord direction/road access and marked bays for large vehicles."
+        },
+        {
+          "url": "https://poi.gpsforalle.dk/print2.php?cid=1026&gid=555",
+          "type": "rest_area_index",
+          "finding": "Antvorskov Nord and Syd are listed separately on opposite sides of E20."
+        }
+      ],
+      "dated_reports": [
+        {
+          "date": "2026-04-02",
+          "type": "onsite_presence_claim_no_encounter",
+          "url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
+          "summary": "User states they are waiting behind toilets, invites contact; not a witnessed encounter."
+        },
+        {
+          "date": "2026-04-01",
+          "type": "future_meetup_intent",
+          "url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
+          "summary": "Poster says they will be there that evening."
+        },
+        {
+          "date": "2026-03-19",
+          "type": "negative_onsite_visitor_report",
+          "url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
+          "summary": "Visitor complains nobody shows up at the place."
+        },
+        {
+          "date": "2021-07-02",
+          "type": "historical_direction_report",
+          "url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
+          "summary": "Commenter labels Antvorskov Syd and gives older directions near lake/wooden gate; not confirmed current."
+        }
+      ],
+      "credible_physical_activity_since_2025_11_06": false,
+      "possible_aliases": [
+        {
+          "name": "Antvorskov Syd",
+          "relation": "probable_same_direction_specific_stop_per_2021_comment"
+        },
+        {
+          "name": "Antvorskov Nord",
+          "relation": "adjacent_opposite_direction_rest_area_not_automatically_same"
+        }
+      ],
+      "review_flags": [
+        "north_south_access_ambiguity",
+        "recent_negative_visitor_report",
+        "positive_meetup_activity_unverified",
+        "motorway_safety"
+      ],
+      "research_decision": "rest_area_identified_recent_visitors_interest_but_no_verified_encounter",
+      "publication_approved": false,
+      "checked_berlin": "2026-11-06"
+    },
+    {
+      "index": 493,
+      "id": "PC6-DK-TINGLEVVEJEN",
+      "name": "Tinglevvejen Rastplads",
+      "city": "Bolderslev",
+      "country": "Denmark",
+      "original_queue_refs": [
+        {
+          "s": "6",
+          "f": "research/cruising/scrape_6.json",
+          "i": 3,
+          "u": "https://www.popcorn.dating/denmark/syddanmark/bolderslev/locations/public-sex/parking%2Blot/tinglevvejen-rastplads/19234/"
+        }
+      ],
+      "original_source_url": "https://www.popcorn.dating/denmark/syddanmark/bolderslev/locations/public-sex/parking%2Blot/tinglevvejen-rastplads/19234/",
+      "original_spot_url": "https://www.popcorn.dating/denmark/syddanmark/bolderslev/locations/public-sex/parking%2Blot/tinglevvejen-rastplads/19234/",
+      "eight_source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "possible_alias_not_confirmed",
+          "url": "https://www.gays-cruising.com/en/cruising/tinglevvej_aabenraa_danemark_102701",
+          "notes": "Different city label Tinglevvej vs Tinglevvejen; cross-source exact location not confirmed."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "linked_page_matched_archived_live_blocked",
+          "url": "https://www.popcorn.dating/denmark/syddanmark/bolderslev/locations/public-sex/parking%2Blot/tinglevvejen-rastplads/19234/",
+          "notes": "Original-source matching listing in archive. Read source direct details where accessible; see primary_page_status and linked sources."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "notes": "No exact same-location match in canonical eight-source cross-alignment and targeted public-domain searches 2026-11-06; gated resources may remain unavailable."
+        }
+      ],
+      "description_rewritten": "Popcorn.dating lists a roadside rest stop called Tinglevvejen Rastplads under Bolderslev in southern Denmark, describing visits by men and occasionally couples. The source copy does not carry a usable date or verified physical address. A different gay directory independently lists a 'Tinglevvej' forest-side parking place under Aabenraa with a similarly undated claim, and a June 2026 user asked if anyone was at that stop. They might be the same roadside location along the long Tinglevvej corridor, but no exact matching pins were available to prove it.",
+      "location_identity": "Roadside parking on/near Tinglevvej/Tinglevvejen in Aabenraa municipality, source6 says Bolderslev, source1 says Aabenraa. Exact location and identity equivalence unresolved.",
+      "access_conditions": "Roadside pull-in may be public parking or a privately managed rest area; signs and adjacent forest/road access rules unknown. A municipal road map confirms Tinglevvej roadway but does not pinpoint this site.",
+      "primary_page_status": "popcorn_archived_exact_page_live_inaccessible_gays_cruising_possible_alias",
+      "independent_and_secondary_sources": [
+        {
+          "url": "https://www.popcorn.dating/denmark/syddanmark/bolderslev/locations/public-sex/parking%2Blot/tinglevvejen-rastplads/19234/",
+          "type": "original_exact_archive",
+          "finding": "Candidate originally captured under this source."
+        },
+        {
+          "url": "https://www.popcorn.dating/denmark/syddanmark/bolderslev/locations/public-sex/parking%2Blot/tinglevvejen-rastplads/19234/",
+          "type": "original_source_6_archived_detail",
+          "finding": "Archived record describes chiefly male visitors, occasional couples and afternoon/evening periods; page inaccessible live."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/tinglevvej_aabenraa_danemark_102701",
+          "type": "source_1_possible_alias",
+          "finding": "Aabenraa Tinglevvej roadside wooded parking entry with zero direct comments; geographic identity unverified against Popcorn."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/denmark",
+          "type": "source_1_country_recent_feed",
+          "finding": "June 24 2026 under Tinglevvej asks whether anyone is at rest stop; no encounter."
+        },
+        {
+          "url": "https://aabenraa.dk/media/g1cdul3d/lokalrute-6-kliplev.pdf",
+          "type": "municipal_road_reference",
+          "finding": "Municipal local route map contains Tinglevvej and nearby woodland but no rest-stop pin."
+        }
+      ],
+      "dated_reports": [
+        {
+          "date": "2026-06-24",
+          "type": "potential_alias_online_question_not_physical",
+          "url": "https://www.gays-cruising.com/en/denmark",
+          "summary": "A commenter asks if anyone is at 'Tinglevvej' rest area. Applies only if Aabenraa and Bolderslev entries represent same site."
+        }
+      ],
+      "credible_physical_activity_since_2025_11_06": false,
+      "possible_aliases": [
+        {
+          "name": "Tinglevvej Aabenraa Gays-Cruising ID 102701",
+          "relation": "possible_same_place_different_city_labels_unconfirmed"
+        },
+        {
+          "name": "Tinglevvejen Rastplads Bolderslev",
+          "relation": "original_Popcorn_name"
+        }
+      ],
+      "review_flags": [
+        "possible_cross_source_duplicate_unconfirmed",
+        "primary_site_inaccessible",
+        "exact_roadside_pin_missing",
+        "reports_from_possible_alias_only"
+      ],
+      "research_decision": "unverified_rest_area_candidate_with_potential_same_road_alias",
+      "publication_approved": false,
+      "checked_berlin": "2026-11-06"
+    }
+  ]
+}
