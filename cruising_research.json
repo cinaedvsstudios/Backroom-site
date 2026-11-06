@@ -41,7 +41,8 @@
       "2026-11-06 user-selected city research priorities: 50 submitted city entries (Lisbon appears twice), 49 unique focus cities, 10 currently without Live or proposed cruising spots (including 2 cities not yet represented as tracker rows). Preserve all existing data. If research yields no qualifying locations, record a confirmed researched zero, not a fabricated proposal.",
       "2026-11-06 cruising listing writing standards added: describe exact subarea, busy times, reported men/crowd, warnings; include grounded GPS coordinates and map links that point to that subarea or public entrance, plus truthful Last_Updated and count of independent supporting sources. Do not invent details or modify live listings in research.",
       "Use colon-terminated mini-headings in each cruising description: Where:, Best times:, Crowd:, Watch out:. Show last updated and independently supporting source count below; display GPS and maps separately as structured fields.",
-      "Scrape 1 gap audit stored at research/cruising/gap_analysis_scrape_1.json: ten zero-coverage priority city index pages expose 142 raw top-list entries (11 Florence, 11 Edinburgh, eight other cities with 15 each). These are source leads, not deduplicated proposals; spot details, precise GPS, timing/crowd/warnings and independent confirmation still pending."
+      "Scrape 1 gap audit stored at research/cruising/gap_analysis_scrape_1.json: ten zero-coverage priority city index pages expose 142 raw top-list entries (11 Florence, 11 Edinburgh, eight other cities with 15 each). These are source leads, not deduplicated proposals; spot details, precise GPS, timing/crowd/warnings and independent confirmation still pending.",
+      "Scrape 2 gap fill: 24 existing Berlin/Munich source locations were enriched with specific spot directions, reported busy times/crowd and warnings in research/cruising/gap_fill_scrape_2.json. Page 4 of Berlin remains inaccessible. Karlshorst demolition report and Volkspark Friedrichshain safety flags added without changing any existing statuses or deleting any findings."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -14061,6 +14062,15 @@
               "status": "Flag",
               "source_ids": [
                 "scrape_8"
+              ],
+              "review_flags": [
+                {
+                  "code": "public_safety_2025_report",
+                  "priority": "high",
+                  "source_url": "https://gay-szene.net/volkspark-friedrichshain-in-berlin/11826/eintrag.html",
+                  "report_date": "2025-08-23",
+                  "note": "Reports of harassment and attacks in 2025. Keep existing Flag status pending independent safety review."
+                }
               ]
             }
           ],
@@ -14281,7 +14291,16 @@
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
               "status": "unverified",
-              "notes": "Source says old area was sold and closed, and describes access through a hole in a wall. Do not recommend trespassing; require legal access verification."
+              "notes": "Source says old area was sold and closed, and describes access through a hole in a wall. Do not recommend trespassing; require legal access verification.",
+              "review_flags": [
+                {
+                  "code": "possible_demolition_and_restricted_access",
+                  "priority": "high",
+                  "source_url": "https://gay-szene.net/karlshorst-treskowallee-in-berlin/11594/eintrag.html",
+                  "report_date": "2026-03-29",
+                  "note": "User reports site structures demolished. Original source says land is sold/closed. Preserve record; do not publish old directions without verifying public access and current existence."
+                }
+              ]
             },
             {
               "proposal_id": "GS2-DE-BERLIN-019",
@@ -22318,6 +22337,33 @@
       "raw_source_index_entries_in_these_ten": 142,
       "new_proposals_this_audit": 0,
       "next_step": "Complete individual public spot detail page and GPS enrichment for the 142 raw index leads, deduplicate and classify; then check remaining 7 priority cities with no Scrape 1 records where worthwhile. Do not alter production or count 142 as proposals."
+    },
+    "scrape_2": {
+      "audited_berlin": "2026-11-06",
+      "status": "priority_city_detail_enrichment_completed__berlin_4th_page_still_blocked",
+      "file": "research/cruising/gap_fill_scrape_2.json",
+      "source_record_total_unchanged": 260,
+      "previously_collected_berlin": 60,
+      "previously_collected_munich": 20,
+      "enriched_previous_records": 24,
+      "enriched_berlin": 16,
+      "enriched_munich": 8,
+      "preserved_original_raw_records": true,
+      "new_proposals": 0,
+      "unresolved": [
+        {
+          "city": "Berlin",
+          "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/3/rubrik.html",
+          "status": "blocked",
+          "next_action": "Retry only if accessible later; do not mark remaining pages as zero."
+        }
+      ],
+      "significant_review_flags": [
+        "Karlshorst Treskowallee site demolished according to 29 March 2026 user report; location restricted according to original entry.",
+        "Volkspark Friedrichshain currently Flag and 2025 visitor reports mention threats.",
+        "Luitpoldpark June 2026 report of activity and change to former toilet site.",
+        "Two OSM points saved as general reference markers, not exact meeting coordinates."
+      ]
     }
   }
 }
