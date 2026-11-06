@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "type": "immutable_research_erratum",
+    "worker": "B",
+    "created_berlin": "2026-11-06",
+    "affected_batch": "research/cruising/part5/B/batch_0314_0318.json",
+    "no_original_data_overwritten": true
+  },
+  "corrections": [
+    {
+      "candidate_index": 317,
+      "candidate_id": "GC1-AUSTRIA-13",
+      "field": "eight_source_checks[source_id=2]",
+      "error": "Entry inadvertently assigned possible_area_alias_only and cited rainbow.at as though it were gay-szene.net.",
+      "correct_status": "searched_no_match",
+      "correct_url": null,
+      "explanation": "The independent Rainbow Guide is rainbow.at, not source 2 gay-szene.net. Its Konstantinhügel entry is a possible nearby spot and remains separately cited under secondary_sources, not proof that gay-szene.net has matched Konstantinteich."
+    }
+  ]
+}
