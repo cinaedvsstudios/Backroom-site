@@ -1,0 +1,2328 @@
+{
+  "_meta": {
+    "title": "Scrape 1 gap analysis — Gays-Cruising.com",
+    "created_berlin": "2026-11-06",
+    "source_id": "scrape_1",
+    "status": "priority_city_gap_audit_completed__pending_spot_detail_collection",
+    "research_only": true,
+    "original_scrape_source_records": 672,
+    "original_scrape_country_groups": 41,
+    "original_scrape_priority_cities_with_records": 32,
+    "priority_cities_without_old_records": 17,
+    "unique_priority_cities": 49,
+    "zero_coverage_priority_cities_with_now_readable_city_top_lists": 10,
+    "new_city_index_page_count": 10,
+    "new_city_index_raw_entries": 142,
+    "added_to_proposals": 0,
+    "restrictions": "No existing source, master proposal, or live listing was deleted or updated. 142 city top-list records are not verified, not yet deduplicated, and not a count of new places. Individual detail URLs and GPS must be fetched in follow-up stage."
+  },
+  "country_access_gaps": [
+    {
+      "country": "Albania",
+      "status": "HTTP 451 repeatedly",
+      "url": "https://www.gays-cruising.com/en/albania"
+    },
+    {
+      "country": "Croatia",
+      "status": "HTTP 451 repeatedly",
+      "url": "https://www.gays-cruising.com/en/croatia"
+    },
+    {
+      "country": "Moldova",
+      "status": "source failed repeatedly",
+      "url": "https://www.gays-cruising.com/en/moldova"
+    },
+    {
+      "country": "Kosovo",
+      "status": "no separate country page, two Kosovo-labelled spots under Serbia already archived",
+      "url": null
+    }
+  ],
+  "city_status_49": [
+    {
+      "rank": 1,
+      "city": "Paris",
+      "country": "France",
+      "tracker_city": "Paris",
+      "prior_scrape_1_record_count": 5,
+      "existing_live": 6,
+      "existing_proposals": 5,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 2,
+      "city": "London",
+      "country": "United Kingdom",
+      "tracker_city": "London",
+      "prior_scrape_1_record_count": 6,
+      "existing_live": 5,
+      "existing_proposals": 20,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 3,
+      "city": "Istanbul",
+      "country": "Turkey",
+      "tracker_city": "Istanbul",
+      "prior_scrape_1_record_count": 8,
+      "existing_live": 0,
+      "existing_proposals": 7,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 4,
+      "city": "Rome",
+      "country": "Italy",
+      "tracker_city": "Rome",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 1,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1"
+    },
+    {
+      "rank": 5,
+      "city": "Barcelona",
+      "country": "Spain",
+      "tracker_city": "Barcelona",
+      "prior_scrape_1_record_count": 5,
+      "existing_live": 2,
+      "existing_proposals": 6,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 6,
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "tracker_city": "Amsterdam",
+      "prior_scrape_1_record_count": 2,
+      "existing_live": 7,
+      "existing_proposals": 2,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 7,
+      "city": "Prague",
+      "country": "Czechia",
+      "tracker_city": "Prague",
+      "prior_scrape_1_record_count": 7,
+      "existing_live": 1,
+      "existing_proposals": 7,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 8,
+      "city": "Vienna",
+      "country": "Austria",
+      "tracker_city": "Vienna",
+      "prior_scrape_1_record_count": 8,
+      "existing_live": 2,
+      "existing_proposals": 8,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 9,
+      "city": "Venice",
+      "country": "Italy",
+      "tracker_city": "Venice",
+      "prior_scrape_1_record_count": 6,
+      "existing_live": 0,
+      "existing_proposals": 6,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 10,
+      "city": "Florence",
+      "country": "Italy",
+      "tracker_city": "Florence",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 0,
+      "existing_proposals": 0,
+      "status": "priority_zero_city_index_captured_now"
+    },
+    {
+      "rank": 11,
+      "city": "Budapest",
+      "country": "Hungary",
+      "tracker_city": "Budapest",
+      "prior_scrape_1_record_count": 23,
+      "existing_live": 1,
+      "existing_proposals": 16,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 12,
+      "city": "Berlin",
+      "country": "Germany",
+      "tracker_city": "Berlin",
+      "prior_scrape_1_record_count": 1,
+      "existing_live": 4,
+      "existing_proposals": 70,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 13,
+      "city": "Athens",
+      "country": "Greece",
+      "tracker_city": "Athens",
+      "prior_scrape_1_record_count": 8,
+      "existing_live": 4,
+      "existing_proposals": 7,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 14,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "tracker_city": "Lisbon",
+      "prior_scrape_1_record_count": 1,
+      "existing_live": 4,
+      "existing_proposals": 1,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 15,
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "tracker_city": "Edinburgh",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 0,
+      "existing_proposals": 0,
+      "status": "priority_zero_city_index_captured_now"
+    },
+    {
+      "rank": 16,
+      "city": "Madrid",
+      "country": "Spain",
+      "tracker_city": "Madrid",
+      "prior_scrape_1_record_count": 4,
+      "existing_live": 2,
+      "existing_proposals": 3,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 17,
+      "city": "Dublin",
+      "country": "Ireland",
+      "tracker_city": "Dublin",
+      "prior_scrape_1_record_count": 9,
+      "existing_live": 2,
+      "existing_proposals": 8,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 18,
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "tracker_city": "Copenhagen",
+      "prior_scrape_1_record_count": 4,
+      "existing_live": 4,
+      "existing_proposals": 2,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 19,
+      "city": "Stockholm",
+      "country": "Sweden",
+      "tracker_city": "Stockholm",
+      "prior_scrape_1_record_count": 3,
+      "existing_live": 0,
+      "existing_proposals": 3,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 20,
+      "city": "Bruges",
+      "country": "Belgium",
+      "tracker_city": null,
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 0,
+      "existing_proposals": 0,
+      "status": "priority_zero_city_index_captured_now"
+    },
+    {
+      "rank": 21,
+      "city": "Dubrovnik",
+      "country": "Croatia",
+      "tracker_city": "Dubrovnik",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 1,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1"
+    },
+    {
+      "rank": 22,
+      "city": "Munich",
+      "country": "Germany",
+      "tracker_city": "Munich",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 4,
+      "existing_proposals": 17,
+      "status": "not_covered_by_scrape_1"
+    },
+    {
+      "rank": 23,
+      "city": "Salzburg",
+      "country": "Austria",
+      "tracker_city": "Salzburg",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 0,
+      "existing_proposals": 0,
+      "status": "priority_zero_city_index_captured_now"
+    },
+    {
+      "rank": 24,
+      "city": "Zurich",
+      "country": "Switzerland",
+      "tracker_city": "Zurich",
+      "prior_scrape_1_record_count": 4,
+      "existing_live": 2,
+      "existing_proposals": 4,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 25,
+      "city": "Seville",
+      "country": "Spain",
+      "tracker_city": "Seville",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 0,
+      "existing_proposals": 0,
+      "status": "priority_zero_city_index_captured_now"
+    },
+    {
+      "rank": 26,
+      "city": "Krakow",
+      "country": "Poland",
+      "tracker_city": "Kraków",
+      "prior_scrape_1_record_count": 2,
+      "existing_live": 1,
+      "existing_proposals": 2,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 27,
+      "city": "Milan",
+      "country": "Italy",
+      "tracker_city": "Milan",
+      "prior_scrape_1_record_count": 8,
+      "existing_live": 1,
+      "existing_proposals": 8,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 28,
+      "city": "Nice",
+      "country": "France",
+      "tracker_city": "Nice",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 1,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1"
+    },
+    {
+      "rank": 29,
+      "city": "Porto",
+      "country": "Portugal",
+      "tracker_city": "Porto",
+      "prior_scrape_1_record_count": 4,
+      "existing_live": 0,
+      "existing_proposals": 2,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 30,
+      "city": "Brussels",
+      "country": "Belgium",
+      "tracker_city": "Brussels",
+      "prior_scrape_1_record_count": 4,
+      "existing_live": 0,
+      "existing_proposals": 4,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 31,
+      "city": "Reykjavik",
+      "country": "Iceland",
+      "tracker_city": "Reykjavík",
+      "prior_scrape_1_record_count": 3,
+      "existing_live": 0,
+      "existing_proposals": 3,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 32,
+      "city": "Helsinki",
+      "country": "Finland",
+      "tracker_city": "Helsinki",
+      "prior_scrape_1_record_count": 7,
+      "existing_live": 3,
+      "existing_proposals": 7,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 33,
+      "city": "Oslo",
+      "country": "Norway",
+      "tracker_city": "Oslo",
+      "prior_scrape_1_record_count": 4,
+      "existing_live": 5,
+      "existing_proposals": 3,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 34,
+      "city": "Geneva",
+      "country": "Switzerland",
+      "tracker_city": "Geneva",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 3,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1"
+    },
+    {
+      "rank": 35,
+      "city": "Lucerne",
+      "country": "Switzerland",
+      "tracker_city": "Lucerne",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 0,
+      "existing_proposals": 0,
+      "status": "priority_zero_city_index_captured_now"
+    },
+    {
+      "rank": 36,
+      "city": "Granada",
+      "country": "Spain",
+      "tracker_city": null,
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 0,
+      "existing_proposals": 0,
+      "status": "priority_zero_city_index_captured_now"
+    },
+    {
+      "rank": 37,
+      "city": "Valencia",
+      "country": "Spain",
+      "tracker_city": "Valencia",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 4,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1"
+    },
+    {
+      "rank": 38,
+      "city": "Naples",
+      "country": "Italy",
+      "tracker_city": "Naples",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 0,
+      "existing_proposals": 0,
+      "status": "priority_zero_city_index_captured_now"
+    },
+    {
+      "rank": 39,
+      "city": "Bologna",
+      "country": "Italy",
+      "tracker_city": "Bologna",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 0,
+      "existing_proposals": 0,
+      "status": "priority_zero_city_index_captured_now"
+    },
+    {
+      "rank": 40,
+      "city": "Verona",
+      "country": "Italy",
+      "tracker_city": "Verona",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 0,
+      "existing_proposals": 0,
+      "status": "priority_zero_city_index_captured_now"
+    },
+    {
+      "rank": 41,
+      "city": "Ljubljana",
+      "country": "Slovenia",
+      "tracker_city": "Ljubljana",
+      "prior_scrape_1_record_count": 10,
+      "existing_live": 0,
+      "existing_proposals": 8,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 42,
+      "city": "Split",
+      "country": "Croatia",
+      "tracker_city": "Split",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 3,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1"
+    },
+    {
+      "rank": 43,
+      "city": "Bucharest",
+      "country": "Romania",
+      "tracker_city": "Bucharest",
+      "prior_scrape_1_record_count": 6,
+      "existing_live": 1,
+      "existing_proposals": 5,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 44,
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "tracker_city": "Sofia",
+      "prior_scrape_1_record_count": 12,
+      "existing_live": 1,
+      "existing_proposals": 11,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 45,
+      "city": "Warsaw",
+      "country": "Poland",
+      "tracker_city": "Warsaw",
+      "prior_scrape_1_record_count": 4,
+      "existing_live": 2,
+      "existing_proposals": 4,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 46,
+      "city": "Bratislava",
+      "country": "Slovakia",
+      "tracker_city": "Bratislava",
+      "prior_scrape_1_record_count": 11,
+      "existing_live": 0,
+      "existing_proposals": 11,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 47,
+      "city": "Riga",
+      "country": "Latvia",
+      "tracker_city": "Riga",
+      "prior_scrape_1_record_count": 13,
+      "existing_live": 3,
+      "existing_proposals": 13,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 48,
+      "city": "Tallinn",
+      "country": "Estonia",
+      "tracker_city": "Tallinn",
+      "prior_scrape_1_record_count": 11,
+      "existing_live": 0,
+      "existing_proposals": 11,
+      "status": "already_in_scrape_1"
+    },
+    {
+      "rank": 49,
+      "city": "Vilnius",
+      "country": "Lithuania",
+      "tracker_city": "Vilnius",
+      "prior_scrape_1_record_count": 6,
+      "existing_live": 0,
+      "existing_proposals": 6,
+      "status": "already_in_scrape_1"
+    }
+  ],
+  "zero_city_pages_checked": [
+    {
+      "city": "Florence",
+      "country": "Italy",
+      "source_city": "Firenze",
+      "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+      "listed_top_count": 11,
+      "status": "index_names_collected__individual_details_not_yet_all_checked",
+      "records": [
+        {
+          "source_rank": 1,
+          "name": "Parco delle Cascine",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 2,
+          "name": "Parco San Donato",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 3,
+          "name": "Parcheggio della Motorizzazione",
+          "source_category": "Industrial Park",
+          "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 4,
+          "name": "Bagni centro commerciale Careggi",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 5,
+          "name": "Argingrosso",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 6,
+          "name": "Torrente Mugnone",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 7,
+          "name": "Firenze Nord",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 8,
+          "name": "Lungarno",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 9,
+          "name": "Lago di Peretola",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 10,
+          "name": "Hub T2 Guidoni",
+          "source_category": "Transport station",
+          "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 11,
+          "name": "Parking",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        }
+      ]
+    },
+    {
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "source_city": "Edinburgh",
+      "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+      "listed_top_count": 11,
+      "status": "index_names_collected__individual_details_not_yet_all_checked",
+      "records": [
+        {
+          "source_rank": 1,
+          "name": "Silverknowes Woods",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 2,
+          "name": "Quick Fuck",
+          "source_category": "Sports area",
+          "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 3,
+          "name": "Toilets Prince's Street Garden",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 4,
+          "name": "London Road Gardens",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 5,
+          "name": "Broughton Market",
+          "source_category": "Sauna",
+          "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 6,
+          "name": "Burleigh Sands",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 7,
+          "name": "North Merchiston Cemetery",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 8,
+          "name": "Blackford Hill",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 9,
+          "name": "Nicolson Square",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 10,
+          "name": "Dalry Cemeterya",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 11,
+          "name": "Yellow Craig Beach",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        }
+      ]
+    },
+    {
+      "city": "Bruges",
+      "country": "Belgium",
+      "source_city": "Brugge",
+      "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+      "listed_top_count": 15,
+      "status": "index_names_collected__individual_details_not_yet_all_checked",
+      "records": [
+        {
+          "source_rank": 1,
+          "name": "Parking Doornstraat",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 2,
+          "name": "Waggelwaterbos Dichtbij",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 3,
+          "name": "Erotic Shop",
+          "source_category": "Theater",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 4,
+          "name": "Waggelwaterbos",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 5,
+          "name": "Baronruzettelaan",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 6,
+          "name": "Lappersfortbos",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 7,
+          "name": "Minnewaterpark",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 8,
+          "name": "Basic fit",
+          "source_category": "Gym",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 9,
+          "name": "Astridlaan parkje",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 10,
+          "name": "Astridpark",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 11,
+          "name": "Fort Van Beieren",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 12,
+          "name": "Zeebrugge Haven",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 13,
+          "name": "Loppem carpool parking",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 14,
+          "name": "Pastoor Van haecke Plantsoen",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 15,
+          "name": "Natuurgebied Achterhaven",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        }
+      ]
+    },
+    {
+      "city": "Salzburg",
+      "country": "Austria",
+      "source_city": "Salzburg",
+      "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+      "listed_top_count": 15,
+      "status": "index_names_collected__individual_details_not_yet_all_checked",
+      "records": [
+        {
+          "source_rank": 1,
+          "name": "Fkk an det Saalach",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 2,
+          "name": "Klos Europark",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 3,
+          "name": "WCs Designer Outlet",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 4,
+          "name": "Rosenhügel Mirabellgarten",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 5,
+          "name": "Paracelsusbad",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 6,
+          "name": "Cruising Line",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 7,
+          "name": "Gemütliches platzerl",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 8,
+          "name": "WildesWäldle",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 9,
+          "name": "Josefiau Wald",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 10,
+          "name": "Fürbergstraße",
+          "source_category": "Restaurant",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 11,
+          "name": "Main Train Station",
+          "source_category": "Transport station",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 12,
+          "name": "Forum 1 WC",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 13,
+          "name": "Kiesel Shopping Centre",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 14,
+          "name": "Bürglstein",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 15,
+          "name": "Toiletten Shopping Arena",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        }
+      ]
+    },
+    {
+      "city": "Seville",
+      "country": "Spain",
+      "source_city": "Sevilla",
+      "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+      "listed_top_count": 15,
+      "status": "index_names_collected__individual_details_not_yet_all_checked",
+      "records": [
+        {
+          "source_rank": 1,
+          "name": "Carrefour Macarena",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 2,
+          "name": "La Raya",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 3,
+          "name": "Baños de la estación Santa Justa",
+          "source_category": "Transport station",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 4,
+          "name": "Jardines del Guadalquivir",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 5,
+          "name": "CC Nervión Plaza",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 6,
+          "name": "Cuarto de baño Torre Sevilla",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 7,
+          "name": "Parque de Maria Luisa",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 8,
+          "name": "Estación de autobuses de Plaza de Armas",
+          "source_category": "Transport station",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 9,
+          "name": "Baños del sótano Corte Inglés",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 10,
+          "name": "Wc Estación de autobuses del Prado de San Sebastián",
+          "source_category": "Transport station",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 11,
+          "name": "Baños Facultad Reina Mercedes",
+          "source_category": "University",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 12,
+          "name": "El Corte Inglés Plaza del Duque",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 13,
+          "name": "Baños Los Arcos",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 14,
+          "name": "Alcampo Tamarguillo",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 15,
+          "name": "Bajo las vías y el enorme árbol",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        }
+      ]
+    },
+    {
+      "city": "Granada",
+      "country": "Spain",
+      "source_city": "Granada",
+      "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+      "listed_top_count": 15,
+      "status": "index_names_collected__individual_details_not_yet_all_checked",
+      "records": [
+        {
+          "source_rank": 1,
+          "name": "Granada Sala X Sex Shop",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 2,
+          "name": "Aseos Neptuno",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 3,
+          "name": "Baños Estación Buses",
+          "source_category": "Transport station",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 4,
+          "name": "Puleva",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 5,
+          "name": "El Corte Inglés",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 6,
+          "name": "Baños Hipercor",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 7,
+          "name": "Baños 1ª Planta Parking Alcampo",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 8,
+          "name": "Centro Comercial Serrallo Plaza",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 9,
+          "name": "Parking",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 10,
+          "name": "Puente de los Vados",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 11,
+          "name": "Baños Parking Granaita",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 12,
+          "name": "Cartuja",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 13,
+          "name": "Parque Tico Medina",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 14,
+          "name": "Aseos parking cubierto Nevada Shopping",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 15,
+          "name": "Parking Severo Ochoa",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/granada/granada/spain",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        }
+      ]
+    },
+    {
+      "city": "Lucerne",
+      "country": "Switzerland",
+      "source_city": "Luzern",
+      "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+      "listed_top_count": 15,
+      "status": "index_names_collected__individual_details_not_yet_all_checked",
+      "records": [
+        {
+          "source_rank": 1,
+          "name": "Ufschötti",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 2,
+          "name": "Inseli WC",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 3,
+          "name": "Bundesplatz",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 4,
+          "name": "Migros Fitnesspark Allmend",
+          "source_category": "Sauna",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 5,
+          "name": "Luzern - Altstadt (Unter der Egg)",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 6,
+          "name": "Eichwald",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 7,
+          "name": "Fitnesspark National",
+          "source_category": "Gym",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 8,
+          "name": "Banhof",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 9,
+          "name": "Reusszopf",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 10,
+          "name": "öffentliches Pissoir/Maihof-Bushaltestelle \"Maihof\"",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 11,
+          "name": "Kriens-Luzern",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 12,
+          "name": "Parkhaus Gütsch",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 13,
+          "name": "WC Manor",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 14,
+          "name": "Carparkplatz Toilette",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 15,
+          "name": "Tribschen öffentlicher Wc",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        }
+      ]
+    },
+    {
+      "city": "Naples",
+      "country": "Italy",
+      "source_city": "Napoli",
+      "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+      "listed_top_count": 15,
+      "status": "index_names_collected__individual_details_not_yet_all_checked",
+      "records": [
+        {
+          "source_rank": 1,
+          "name": "Bagno Stazione Napoli Centrale",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 2,
+          "name": "Giardini Del Molosiglio",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 3,
+          "name": "Cinema Iride",
+          "source_category": "Theater",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 4,
+          "name": "Scala Privata - Private Staircase",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 5,
+          "name": "Parco Mascagni",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 6,
+          "name": "Centro direzionale auna Blu Angel",
+          "source_category": "Sauna",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 7,
+          "name": "Bagno Pubblico",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 8,
+          "name": "Napoli",
+          "source_category": "Bar",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 9,
+          "name": "Villa Comunale",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 10,
+          "name": "Ponticelli",
+          "source_category": "Sports area",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 11,
+          "name": "Parcheggio Brin",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 12,
+          "name": "Bosco di Capodimonte",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 13,
+          "name": "Autogrill Sarni San Nicola Ovest",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 14,
+          "name": "Cinema Via Casanova",
+          "source_category": "Theater",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 15,
+          "name": "Strada laterale - Palazzo Gentile",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        }
+      ]
+    },
+    {
+      "city": "Bologna",
+      "country": "Italy",
+      "source_city": "Bologna",
+      "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+      "listed_top_count": 15,
+      "status": "index_names_collected__individual_details_not_yet_all_checked",
+      "records": [
+        {
+          "source_rank": 1,
+          "name": "Autogril",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 2,
+          "name": "Parcheggio Cinema The Space",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 3,
+          "name": "Parcheggio del Cimitero di Borgo panigale",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 4,
+          "name": "Via Felice Battaglia / Parco Barone Rampante",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 5,
+          "name": "Ponte fiume Reno a Borgo Panigale",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 6,
+          "name": "Caserme Rosse",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 7,
+          "name": "Parco della Montagnola - VIII Agosto",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 8,
+          "name": "Parco di Villa Angeletti",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 9,
+          "name": "Circolo Red",
+          "source_category": "Club",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 10,
+          "name": "Via Michelino",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 11,
+          "name": "Ex Manifattura",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 12,
+          "name": "Torrente Setta",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 13,
+          "name": "Cinema Corallo",
+          "source_category": "Theater",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 14,
+          "name": "Via Bovi Campeggi",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 15,
+          "name": "COSMOS | Sauna gay | Circolo federato | ENDAS",
+          "source_category": "Sauna",
+          "source_page_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        }
+      ]
+    },
+    {
+      "city": "Verona",
+      "country": "Italy",
+      "source_city": "Verona",
+      "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+      "listed_top_count": 15,
+      "status": "index_names_collected__individual_details_not_yet_all_checked",
+      "records": [
+        {
+          "source_rank": 1,
+          "name": "Cimitero Verona Sud",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 2,
+          "name": "Oasi - Lungadige (Est)",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 3,
+          "name": "Alpo Cavalcavia",
+          "source_category": "Industrial Park",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 4,
+          "name": "Lungadige lazzareto",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 5,
+          "name": "Parcheggio B visitatori - Stadio Marcantonio Bentegodi",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 6,
+          "name": "Zona Industriale - Ca' di Mazze",
+          "source_category": "Industrial Park",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 7,
+          "name": "Parco delle Mura - Bastioni",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 8,
+          "name": "Parkplatz veronamercato",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 9,
+          "name": "Palazzina",
+          "source_category": "Industrial Park",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 10,
+          "name": "Autostrada Sud Verona",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 11,
+          "name": "Golosine",
+          "source_category": "Park",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 12,
+          "name": "Area sosta MONTEBALDO-HOTEL SACCARDI-(dir Milano)",
+          "source_category": "Rest area",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 13,
+          "name": "Oasi - Lungadige (Ovest)",
+          "source_category": "Natural area",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 14,
+          "name": "Centro Commerciale Verona Uno",
+          "source_category": "Shopping area",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        },
+        {
+          "source_rank": 15,
+          "name": "Viale Andrea Palladio",
+          "source_category": "Other",
+          "source_page_url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+          "assessment": "raw_lead_only__classify_deduplicate_and_verify",
+          "spot_detail_url": null,
+          "latitude": null,
+          "longitude": null,
+          "notes": "This is a top-list lead, not a confirmed current cruising location."
+        }
+      ]
+    }
+  ],
+  "other_uncovered_priority_cities": [
+    {
+      "rank": 4,
+      "city": "Rome",
+      "country": "Italy",
+      "tracker_city": "Rome",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 1,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1",
+      "next_step": "Lower-priority city-level enrichment; use existing Backroom/source records first"
+    },
+    {
+      "rank": 21,
+      "city": "Dubrovnik",
+      "country": "Croatia",
+      "tracker_city": "Dubrovnik",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 1,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1",
+      "next_step": "Lower-priority city-level enrichment; use existing Backroom/source records first"
+    },
+    {
+      "rank": 22,
+      "city": "Munich",
+      "country": "Germany",
+      "tracker_city": "Munich",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 4,
+      "existing_proposals": 17,
+      "status": "not_covered_by_scrape_1",
+      "next_step": "Lower-priority city-level enrichment; use existing Backroom/source records first"
+    },
+    {
+      "rank": 28,
+      "city": "Nice",
+      "country": "France",
+      "tracker_city": "Nice",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 1,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1",
+      "next_step": "Lower-priority city-level enrichment; use existing Backroom/source records first"
+    },
+    {
+      "rank": 34,
+      "city": "Geneva",
+      "country": "Switzerland",
+      "tracker_city": "Geneva",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 3,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1",
+      "next_step": "Lower-priority city-level enrichment; use existing Backroom/source records first"
+    },
+    {
+      "rank": 37,
+      "city": "Valencia",
+      "country": "Spain",
+      "tracker_city": "Valencia",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 4,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1",
+      "next_step": "Lower-priority city-level enrichment; use existing Backroom/source records first"
+    },
+    {
+      "rank": 42,
+      "city": "Split",
+      "country": "Croatia",
+      "tracker_city": "Split",
+      "prior_scrape_1_record_count": 0,
+      "existing_live": 3,
+      "existing_proposals": 0,
+      "status": "not_covered_by_scrape_1",
+      "next_step": "Lower-priority city-level enrichment; use existing Backroom/source records first"
+    }
+  ],
+  "data_quality": {
+    "original_record_fields": "The first 672 raw records chiefly preserve name, country/city, rank, source category and country or region page URL; all 672 have detail_url=null. No individual spot-level coordinates, subarea information, hours, crowd, or warnings were systematically extracted into scrape_1.json.",
+    "city_page_landing_results": "City-specific top lists can be read in English and, when English route fails, in other languages (Salzburg German page succeeded).",
+    "source_detail_example": [
+      {
+        "name": "Parco delle Cascine",
+        "city": "Florence",
+        "url": "https://www.gays-cruising.com/en/cruising/parco_delle_cascine_firenze_italia_20550",
+        "observed_fields": [
+          "subarea by pyramid/hedgerow",
+          "Evening labelled hours",
+          "High source-reported influx",
+          "warnings about passing vehicles / patrol cars",
+          "Google directions point to decimal latitude/longitude"
+        ],
+        "gps_from_source_directions": {
+          "latitude": 43.7791824341,
+          "longitude": 11.2244653702
+        },
+        "note": "Only example; not an audited site pin or proof of live 2026 activity."
+      },
+      {
+        "name": "Silverknowes Woods",
+        "city": "Edinburgh",
+        "url": "https://www.gays-cruising.com/en/cruising/silverknowes_woods_edinburgh_united_kingdom_23528",
+        "observed_fields": [
+          "specific approach at end of dual carriageway",
+          "source reports daytime woods and evening parking area",
+          "Medium source-reported influx",
+          "Google directions point to decimal latitude/longitude"
+        ],
+        "gps_from_source_directions": {
+          "latitude": 55.9778327942,
+          "longitude": -3.2854270935
+        },
+        "note": "Only example; no independent 2026 activity verification."
+      }
+    ],
+    "user_listing_standard": "Each accepted location later needs Where:, Best times:, Crowd:, Watch out:, grounded latitude/longitude and map links, Last_Updated actual edit date, and truthful distinct supporting-source count.",
+    "classification_notes": "Some city lists contain dedicated gay saunas, clubs, bars, sex businesses and ambiguous cases. Preserve these as raw evidence but exclude from cruising-area proposals when they belong in regular venues. Public/ordinary managed places remain research leads only. The site top lists are not complete interactive-map inventories.",
+    "source_recency": "Search engine cached crawl and a site comment/check-in do not independently establish operational status or typical crowd in 2026. Don't collect personal profiles, check-ins or live user data."
+  },
+  "follow_up_order": [
+    "From the ten zero-covered priority city index lists, follow individual public location pages to capture exact subarea, reported times, warnings, possible crowd description, and GPS using directions links. Preserve detail URLs and source excerpts as notes; independently verify before listing.",
+    "Cross-match every discovered place with all existing Backroom live/held/flagged cruising areas and proposals from scrapes 1-8, including spelling and park subsection variants.",
+    "Exclude dedicated gay sex and nightlife businesses from cruising-area proposals, but keep source findings as raw records; verify ordinary managed-public places cautiously.",
+    "If material details are missing, use one or two supplementary sources as needed, not every research site.",
+    "After the ten zero cities, review the remaining seven priority cities absent from Scrape 1, giving priority to those with fewer existing known places.",
+    "For 32 priority cities represented only through national top lists, selectively check city pages where content appears materially incomplete; do not redo identical source records.",
+    "Maintain separately marked blocked country pages; use alternative accessible websites without assuming zero.",
+    "Once complete, update master only with deduplicated new proposals, not raw category counts. Do not touch production listings.json."
+  ]
+}
