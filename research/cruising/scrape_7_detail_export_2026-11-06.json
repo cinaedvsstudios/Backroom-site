@@ -12,10 +12,10 @@
     "detail_records_in_scope": 160,
     "excluded_business_pages": 64,
     "incomplete_or_error_pages": 27,
-    "with_recovered_names": 48,
-    "high_confidence_names": 43,
-    "probable_names": 5,
-    "possible_master_matches": 8,
+    "with_recovered_names": 59,
+    "high_confidence_names": 51,
+    "probable_names": 8,
+    "possible_master_matches": 14,
     "name_resolution_methods": {
       "unmatched": 176,
       "user_photo_url_from_previous_export": 18,
@@ -33,7 +33,11 @@
     "exclude_policy": "Do not add dedicated bars, clubs, saunas, gyms, adult cinemas, sex shops or hotels to cruising-area research.",
     "activity_policy": "Last reply recency is not confirmation of an in-person visit, current cruising activity or permission to have sex on premises.",
     "publication_policy": "Research-only. No production listings changed; source prose is not rewritten or copied for public listing until editorial verification. No GPS inferred.",
-    "geographical_note": "Squirt city labels can be incorrect; for example the Viale Giosuè Carducci record says Milan while text places it in Biella. City must be independently checked before publication."
+    "geographical_note": "Squirt city labels can be incorrect; for example the Viale Giosuè Carducci record says Milan while text places it in Biella. City must be independently checked before publication.",
+    "new_distinct_source_correlations": 9,
+    "proposal_count_unchanged": 1047,
+    "verified_active_locations": 0,
+    "caution": "Attribution of a name or geographic association is distinct from verification that a cruising scene is currently active. Commercial pages and failed records remain archived separately."
   },
   "detail_records": [
     {
@@ -228,9 +232,9 @@
     {
       "squirt_listing_id": "221003",
       "source_url": "https://mobile.squirt.org/cruise/display/221003/detail",
-      "name": null,
-      "name_resolution_method": "unresolved",
-      "name_resolution_confidence": "unmatched",
+      "name": "Valakampiai nudist beach",
+      "name_resolution_method": "specific_beach_name_in_description",
+      "name_resolution_confidence": "high",
       "possible_name": null,
       "possible_name_alternatives": [],
       "city_as_reported": "Vilnius",
@@ -250,7 +254,14 @@
       "postcode_as_reported": "",
       "original_duplicate_row_count": 1,
       "matched_master_record": null,
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "possible_master_records": [
+        {
+          "id": "GC1-LITHUANIA-08",
+          "reason": "Valakampiai_beach_subsection_not_unambiguously_identical",
+          "match_status": "requires_geographic_review"
+        }
+      ]
     },
     {
       "squirt_listing_id": "3010",
@@ -281,11 +292,12 @@
         "name": "Villa Borghese",
         "city": "Rome",
         "country": "Italy",
-        "match_relation": "known_subarea_or_alias",
         "kind": "existing",
-        "confidence": "high"
+        "confidence": "probable",
+        "match_relation": "subarea_of_Villa_Borghese"
       },
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "related_area_review_before_publication"
     },
     {
       "squirt_listing_id": "83841",
@@ -316,11 +328,12 @@
         "name": "Villa Gordiani",
         "city": "Rome",
         "country": "Italy",
-        "match_relation": "same_named_place",
         "kind": "proposal",
-        "confidence": "high"
+        "confidence": "high",
+        "match_relation": "same_named_location"
       },
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "place_identification_supported__activity_still_unverified"
     },
     {
       "squirt_listing_id": "133191",
@@ -490,7 +503,14 @@
         "kind": "proposal",
         "confidence": "high"
       },
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "possible_master_records": [
+        {
+          "id": "GC1-GAP-NAPLES-11",
+          "reason": "Via_Brin_is_a_broad_road_near_the_Parking_Brin_site",
+          "match_status": "requires_geographic_review"
+        }
+      ]
     },
     {
       "squirt_listing_id": "77608",
@@ -548,11 +568,12 @@
         "name": "La Lecciona Beach (Torre del Lago)",
         "city": "Viareggio",
         "country": "Italy",
-        "match_relation": "known_subarea_or_alias",
         "kind": "existing",
-        "confidence": "high"
+        "confidence": "probable",
+        "match_relation": "same_beach_spelling_variant"
       },
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "related_area_review_before_publication"
     },
     {
       "squirt_listing_id": "163622",
@@ -611,9 +632,9 @@
     {
       "squirt_listing_id": "247366",
       "source_url": "https://mobile.squirt.org/cruise/display/247366/detail",
-      "name": null,
-      "name_resolution_method": "unresolved",
-      "name_resolution_confidence": "unmatched",
+      "name": "Parco Ducale, Parma",
+      "name_resolution_method": "exact_public_place_in_location",
+      "name_resolution_confidence": "high",
       "possible_name": null,
       "possible_name_alternatives": [],
       "city_as_reported": "Parma",
@@ -799,11 +820,12 @@
         "name": "Pineta Punta Sabbioni",
         "city": "Cavallino-Treporti",
         "country": "Italy",
-        "match_relation": "known_subarea_or_alias",
         "kind": "proposal",
-        "confidence": "high"
+        "confidence": "high",
+        "match_relation": "geographic_name_alias"
       },
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "place_identification_supported__activity_still_unverified"
     },
     {
       "squirt_listing_id": "246390",
@@ -1483,9 +1505,9 @@
     {
       "squirt_listing_id": "208802",
       "source_url": "https://mobile.squirt.org/cruise/display/208802/detail",
-      "name": null,
-      "name_resolution_method": "unresolved",
-      "name_resolution_confidence": "unmatched",
+      "name": "Bundesplatz Public Toilets",
+      "name_resolution_method": "prior_name_and_precise_street_location",
+      "name_resolution_confidence": "high",
       "possible_name": null,
       "possible_name_alternatives": [],
       "city_as_reported": "Luzern",
@@ -1504,8 +1526,17 @@
       "glory_hole_source_text": "No",
       "postcode_as_reported": "6003",
       "original_duplicate_row_count": 1,
-      "matched_master_record": null,
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "matched_master_record": {
+        "id": "GC1-GAP-LUCERNE-03",
+        "name": "Bundesplatz",
+        "city": "Lucerne",
+        "country": "Switzerland",
+        "kind": "proposal",
+        "confidence": "high",
+        "match_relation": "Bundesplatz_public_toilet_location"
+      },
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "place_identification_supported__activity_still_unverified"
     },
     {
       "squirt_listing_id": "237299",
@@ -1563,11 +1594,12 @@
         "name": "Stockbridge Public Toilets",
         "city": "Edinburgh",
         "country": "United Kingdom",
-        "match_relation": "same_named_place",
         "kind": "proposal",
-        "confidence": "high"
+        "confidence": "high",
+        "match_relation": "same_named_location"
       },
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "place_identification_supported__activity_still_unverified"
     },
     {
       "squirt_listing_id": "243365",
@@ -1760,11 +1792,12 @@
         "name": "Calton Hill",
         "city": "Edinburgh",
         "country": "United Kingdom",
-        "match_relation": "same_named_place",
         "kind": "proposal",
-        "confidence": "high"
+        "confidence": "high",
+        "match_relation": "ordered_index_same_named_location"
       },
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "place_identification_supported__activity_still_unverified"
     },
     {
       "squirt_listing_id": "176227",
@@ -1930,11 +1963,12 @@
         "name": "London Road Gardens",
         "city": "Edinburgh",
         "country": "United Kingdom",
-        "match_relation": "same_named_place",
         "kind": "proposal",
-        "confidence": "high"
+        "confidence": "high",
+        "match_relation": "ordered_index_same_named_location"
       },
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "place_identification_supported__activity_still_unverified"
     },
     {
       "squirt_listing_id": "239238",
@@ -2486,9 +2520,9 @@
     {
       "squirt_listing_id": "223644",
       "source_url": "https://mobile.squirt.org/cruise/display/223644/detail",
-      "name": null,
-      "name_resolution_method": "unresolved",
-      "name_resolution_confidence": "unmatched",
+      "name": "Praterstern, Wien Toilets",
+      "name_resolution_method": "location_and_prior_export",
+      "name_resolution_confidence": "high",
       "possible_name": null,
       "possible_name_alternatives": [],
       "city_as_reported": "Wien/Vienna",
@@ -2513,9 +2547,9 @@
     {
       "squirt_listing_id": "92169",
       "source_url": "https://mobile.squirt.org/cruise/display/92169/detail",
-      "name": null,
-      "name_resolution_method": "unresolved",
-      "name_resolution_confidence": "unmatched",
+      "name": "Wienerberg Nudist Area",
+      "name_resolution_method": "explicit_park_name_in_description",
+      "name_resolution_confidence": "high",
       "possible_name": null,
       "possible_name_alternatives": [],
       "city_as_reported": "Wien/Vienna",
@@ -2534,15 +2568,24 @@
       "glory_hole_source_text": "No",
       "postcode_as_reported": "1100",
       "original_duplicate_row_count": 1,
-      "matched_master_record": null,
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "matched_master_record": {
+        "id": "GC1-AUSTRIA-02",
+        "name": "Wienerberg",
+        "city": "Vienna",
+        "country": "Austria",
+        "kind": "proposal",
+        "confidence": "high",
+        "match_relation": "Wienerberg_park_explicit_in_source_description"
+      },
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "place_identification_supported__activity_still_unverified"
     },
     {
       "squirt_listing_id": "458",
       "source_url": "https://mobile.squirt.org/cruise/display/458/detail",
-      "name": null,
-      "name_resolution_method": "unresolved",
-      "name_resolution_confidence": "unmatched",
+      "name": "Rathaus Park",
+      "name_resolution_method": "prior_name_category_reply_and_locality_match",
+      "name_resolution_confidence": "high",
       "possible_name": null,
       "possible_name_alternatives": [],
       "city_as_reported": "Wien/Vienna",
@@ -2561,15 +2604,24 @@
       "glory_hole_source_text": "No",
       "postcode_as_reported": "1010",
       "original_duplicate_row_count": 1,
-      "matched_master_record": null,
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "matched_master_record": {
+        "id": "GC1-AUSTRIA-05",
+        "name": "Rathauspark",
+        "city": "Vienna",
+        "country": "Austria",
+        "kind": "proposal",
+        "confidence": "high",
+        "match_relation": "Rathaus_park_geographic_match"
+      },
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "place_identification_supported__activity_still_unverified"
     },
     {
       "squirt_listing_id": "76792",
       "source_url": "https://mobile.squirt.org/cruise/display/76792/detail",
-      "name": null,
-      "name_resolution_method": "unresolved",
-      "name_resolution_confidence": "unmatched",
+      "name": "Wertheimsteinpark",
+      "name_resolution_method": "prior_name_category_reply_and_locality_match",
+      "name_resolution_confidence": "high",
       "possible_name": null,
       "possible_name_alternatives": [],
       "city_as_reported": "Wien/Vienna",
@@ -2594,9 +2646,9 @@
     {
       "squirt_listing_id": "92168",
       "source_url": "https://mobile.squirt.org/cruise/display/92168/detail",
-      "name": null,
-      "name_resolution_method": "unresolved",
-      "name_resolution_confidence": "unmatched",
+      "name": "Wertheimstein Park",
+      "name_resolution_method": "prior_name_category_reply_and_locality_match",
+      "name_resolution_confidence": "high",
       "possible_name": null,
       "possible_name_alternatives": [],
       "city_as_reported": "Wien/Vienna",
@@ -2648,9 +2700,9 @@
     {
       "squirt_listing_id": "11253",
       "source_url": "https://mobile.squirt.org/cruise/display/11253/detail",
-      "name": null,
-      "name_resolution_method": "unresolved",
-      "name_resolution_confidence": "unmatched",
+      "name": "Usce Park",
+      "name_resolution_method": "matching_public_place_and_city_from_other_source",
+      "name_resolution_confidence": "probable",
       "possible_name": null,
       "possible_name_alternatives": [],
       "city_as_reported": "Belgrade",
@@ -2669,15 +2721,24 @@
       "glory_hole_source_text": "No",
       "postcode_as_reported": "",
       "original_duplicate_row_count": 1,
-      "matched_master_record": null,
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "matched_master_record": {
+        "id": "GC1-SERBIA-05",
+        "name": "Usce Park",
+        "city": "Belgrade",
+        "country": "Serbia",
+        "kind": "proposal",
+        "confidence": "high",
+        "match_relation": "Usce_park_location_and_description"
+      },
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "place_identification_supported__activity_still_unverified"
     },
     {
       "squirt_listing_id": "114889",
       "source_url": "https://mobile.squirt.org/cruise/display/114889/detail",
-      "name": null,
-      "name_resolution_method": "unresolved",
-      "name_resolution_confidence": "unmatched",
+      "name": "Zeleni Venac market toilet",
+      "name_resolution_method": "market_toilet_location_and_neighborhood_match",
+      "name_resolution_confidence": "probable",
       "possible_name": null,
       "possible_name_alternatives": [],
       "city_as_reported": "Belgrade",
@@ -2696,8 +2757,17 @@
       "glory_hole_source_text": "Yes",
       "postcode_as_reported": "",
       "original_duplicate_row_count": 1,
-      "matched_master_record": null,
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "matched_master_record": {
+        "id": "GC1-SERBIA-02",
+        "name": "Zeleni Venac market toilet",
+        "city": "Belgrade",
+        "country": "Serbia",
+        "kind": "proposal",
+        "confidence": "high",
+        "match_relation": "Zeleni_Venac_market_toilet_description"
+      },
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "place_identification_supported__activity_still_unverified"
     },
     {
       "squirt_listing_id": "125353",
@@ -3026,9 +3096,9 @@
     {
       "squirt_listing_id": "24504",
       "source_url": "https://mobile.squirt.org/cruise/display/24504/detail",
-      "name": null,
-      "name_resolution_method": "unresolved",
-      "name_resolution_confidence": "unmatched",
+      "name": "Linkeroever",
+      "name_resolution_method": "named_area_in_description_title_is_not_known",
+      "name_resolution_confidence": "probable",
       "possible_name": null,
       "possible_name_alternatives": [],
       "city_as_reported": "Antwerpen",
@@ -3047,8 +3117,17 @@
       "glory_hole_source_text": "No",
       "postcode_as_reported": "2020",
       "original_duplicate_row_count": 1,
-      "matched_master_record": null,
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "matched_master_record": {
+        "id": "GC1-BELGIUM-13",
+        "name": "Linkeroever",
+        "city": "Antwerp",
+        "country": "Belgium",
+        "kind": "proposal",
+        "confidence": "probable",
+        "match_relation": "explicit_Linkeroever_park_in_source_description"
+      },
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "master_association_review_status": "geographic_alias_probable__activity_still_unverified"
     },
     {
       "squirt_listing_id": "47842",
@@ -3777,7 +3856,14 @@
       "postcode_as_reported": "1070-051",
       "original_duplicate_row_count": 1,
       "matched_master_record": null,
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "possible_master_records": [
+        {
+          "id": "CRU-LIS-PAREDUVII-03",
+          "reason": "Pavilhao_dos_Desportos_near_Parque_Eduardo_VII",
+          "match_status": "requires_geographic_review"
+        }
+      ]
     },
     {
       "squirt_listing_id": "196226",
@@ -3804,7 +3890,14 @@
       "postcode_as_reported": "",
       "original_duplicate_row_count": 1,
       "matched_master_record": null,
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "possible_master_records": [
+        {
+          "id": "CRU-LIS-MONFOR-01",
+          "reason": "Monsanto_fort_entrance_vs_broader_forest_park",
+          "match_status": "requires_geographic_review"
+        }
+      ]
     },
     {
       "squirt_listing_id": "225997",
@@ -3912,7 +4005,14 @@
       "postcode_as_reported": "",
       "original_duplicate_row_count": 1,
       "matched_master_record": null,
-      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication."
+      "source_count_note": "This is a Squirt.org page only. Latest reply is not proof of an on-site visit. Source text requires original paraphrasing before publication.",
+      "possible_master_records": [
+        {
+          "id": "CRU-SES-PRAMEC-01",
+          "reason": "EM561_potential_Praia_do_Meco",
+          "match_status": "requires_geographic_review"
+        }
+      ]
     },
     {
       "squirt_listing_id": "231664",
