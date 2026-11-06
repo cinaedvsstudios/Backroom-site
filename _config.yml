@@ -1,0 +1,7 @@
+# Backroom GitHub Pages configuration.
+# GitHub Pages runs Jekyll against the repository root.
+# The promo folder contains large Instagram/social production videos, not
+# resources referenced by the public Backroom application. Keep the source
+# media in GitHub, but do not copy it to the published site (1 GB Pages cap).
+exclude:
+  - promo
