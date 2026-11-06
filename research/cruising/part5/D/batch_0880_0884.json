@@ -1,0 +1,662 @@
+{
+  "_meta": {
+    "section": "D",
+    "first_index": 880,
+    "last_index": 884,
+    "count": 5,
+    "researched_berlin": "2026-11-06",
+    "activity_cutoff": "2025-11-06",
+    "queue_path": "research/cruising/part5/master_queue.json",
+    "original_evidence_paths": [
+      "research/cruising/scrape_2.json",
+      "research/cruising/gap_fill_scrape_3.json",
+      "research/cruising/cross_source_alignment_2026-11-06.json",
+      "research/cruising/splashd_munich_2026-11-06.json"
+    ],
+    "coverage_note": "Eight source domains checked via archived cross-source alignment and domain-targeted indexed searches; searched-no-match means no exact match established in available evidence, not proof of absence. Named possible aliases have not been merged. Forum messages are unverified claims; crawler recency never proves a fresh visit.",
+    "write_scope": "D batch only; master queue and other worker files untouched"
+  },
+  "records": [
+    {
+      "index": 880,
+      "id": "GS2-DE-MUENCHEN-009",
+      "name": "Klappe U-Bahnhof Olympia-Einkaufszentrum",
+      "city": "Munich",
+      "country": "Germany",
+      "source_count_from_alignment": 2,
+      "archive_refs": [
+        {
+          "s": "2",
+          "f": "research/cruising/scrape_2.json",
+          "i": 210,
+          "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+        }
+      ],
+      "original_assessment": "restricted_or_private_space_review",
+      "original_description": "",
+      "identity_support": "multiple_websites",
+      "location_type": "station_or_retail_public_toilet",
+      "research_description": "Historic gay-scene entry references washrooms associated with Olympia-Einkaufszentrum U-Bahn station at Pelkovenstraße, Moosach. Separate user report in 2015 talks about a restroom in nearby Moma shopping complex, not necessarily the station facility. No proof the former station facility remains accessible or active.",
+      "primary_direct_url": "https://gay-szene.net/klappe-u-bahnhof-olympia-einkaufszentrum-in-muenchen/10458/eintrag.html",
+      "sources": [
+        {
+          "s": "1",
+          "site": "Gays-Cruising.com",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "2",
+          "site": "gay-szene.net",
+          "status": "linked_page_matched",
+          "url": "https://gay-szene.net/klappe-u-bahnhof-olympia-einkaufszentrum-in-muenchen/10458/eintrag.html",
+          "method": "live_detail_and_archive",
+          "limitation": null
+        },
+        {
+          "s": "3",
+          "site": "Planet Randy",
+          "status": "linked_page_matched",
+          "url": "https://planet-randy.com/blog/eintrag/olympia-einkaufszentrum/",
+          "method": "live_detail_and_gap_fill_archive",
+          "limitation": null
+        },
+        {
+          "s": "4",
+          "site": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "5",
+          "site": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "Munich_2026-11-06_archive_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "6",
+          "site": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "7",
+          "site": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "8",
+          "site": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        }
+      ],
+      "evidence_timeline": [
+        {
+          "date": "2015-08-07",
+          "source": "gay-szene.net",
+          "type": "firsthand_report_different_nearby_facility",
+          "finding": "Visitor reported being alone at a WC in nearby Moma shopping centre; not a verified station encounter."
+        },
+        {
+          "date": "2015-07-18",
+          "source": "gay-szene.net",
+          "type": "access_negative_report",
+          "finding": "Forum visitor said the cruising toilets no longer existed."
+        },
+        {
+          "date": "2014-08-04",
+          "source": "gay-szene.net",
+          "type": "negative_visit_report",
+          "finding": "Person reported frequent visits over three weeks with no encounters."
+        }
+      ],
+      "access_and_safety": "Station/public or retail restroom; operational status and permissions not verified. Do not recommend as currently accessible.",
+      "activity_freshness": {
+        "cutoff": "2025-11-06",
+        "assessment": "No credible dated report of cruising from 2025-11-06 onward; most recent comments in 2015 are negative/ambiguous.",
+        "has_recent_claim": false,
+        "independently_verified_current_activity": false
+      },
+      "possible_duplicates": [],
+      "additional_external_references": [],
+      "research_note": "Planet Randy confirms named station as an undated directory entry; it does not establish 2026 conditions.",
+      "publication_decision": "RESEARCH_ONLY_NO_PUBLICATION_APPROVAL"
+    },
+    {
+      "index": 881,
+      "id": "GS2-DE-MUENCHEN-010",
+      "name": "Langwieder See",
+      "city": "Munich",
+      "country": "Germany",
+      "source_count_from_alignment": 2,
+      "archive_refs": [
+        {
+          "s": "2",
+          "f": "research/cruising/scrape_2.json",
+          "i": 211,
+          "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+        },
+        {
+          "s": "3",
+          "f": "research/cruising/gap_fill_scrape_3.json",
+          "i": 15,
+          "u": "https://planet-randy.com/blog/eintrag/langwieder-see/"
+        }
+      ],
+      "original_assessment": "candidate_unverified",
+      "original_description": "",
+      "identity_support": "multiple_websites",
+      "location_type": "lakeside_parkland",
+      "research_description": "Langwieder See / Langwieder Seenplatte on Munich's northwestern edge. Archive refers to the old parking area at Brückerl, another parking area and nearby Birkensee nudist lakeshore. Planet Randy mentions shoreline in summer and parking area in colder seasons; these are general undated observations, not independently verified current schedules.",
+      "primary_direct_url": "https://gay-szene.net/langwieder-see-in-muenchen/7798/eintrag.html",
+      "sources": [
+        {
+          "s": "1",
+          "site": "Gays-Cruising.com",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "2",
+          "site": "gay-szene.net",
+          "status": "linked_page_matched",
+          "url": "https://gay-szene.net/langwieder-see-in-muenchen/7798/eintrag.html",
+          "method": "live_detail_and_archive",
+          "limitation": null
+        },
+        {
+          "s": "3",
+          "site": "Planet Randy",
+          "status": "linked_page_matched",
+          "url": "https://planet-randy.com/blog/eintrag/langwieder-see/",
+          "method": "live_detail_and_gap_fill_archive",
+          "limitation": null
+        },
+        {
+          "s": "4",
+          "site": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "5",
+          "site": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "Munich_2026-11-06_archive_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "6",
+          "site": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "7",
+          "site": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "8",
+          "site": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        }
+      ],
+      "evidence_timeline": [
+        {
+          "date": "2025-08-16",
+          "source": "gay-szene.net",
+          "type": "visitor_activity_report",
+          "finding": "First-person poster said the place was busy the previous evening; report is older than this cycle's 12-month freshness cutoff and does not clarify exact lakeshore versus parking area."
+        },
+        {
+          "date": "2024-10-06",
+          "source": "gay-szene.net",
+          "type": "question_only",
+          "finding": "Visitor asks which car park is relevant; does not confirm activity."
+        },
+        {
+          "date": "2024-07-02",
+          "source": "gay-szene.net",
+          "type": "visitor_activity_report_nearby_subarea",
+          "finding": "Visitor described encounter at Birkensee; separate lake/subarea, not proof of activity at Langwieder See itself."
+        }
+      ],
+      "access_and_safety": "Public lakeside/recreation grounds with separate car parks and swimmers. Specific shore, FKK restrictions, parking hours, permitted behaviour and suitable map point must be verified.",
+      "activity_freshness": {
+        "cutoff": "2025-11-06",
+        "assessment": "No dated account at/after 2025-11-06 found; Aug 2025 activity is historical.",
+        "has_recent_claim": false,
+        "independently_verified_current_activity": false
+      },
+      "possible_duplicates": [
+        {
+          "name": "Birkensee",
+          "relation": "nearby lake; do not merge automatically"
+        },
+        {
+          "name": "Langwieder See parking areas",
+          "relation": "same general lake, exact subarea unresolved"
+        }
+      ],
+      "additional_external_references": [],
+      "research_note": "Two separate independent directories match the named lake. Planet Randy's narrative has no dated user reviews.",
+      "publication_decision": "RESEARCH_ONLY_NO_PUBLICATION_APPROVAL"
+    },
+    {
+      "index": 882,
+      "id": "GS2-DE-MUENCHEN-014",
+      "name": "Parkplatz A8 Salzburg München nach der Ausfahrt Hofolding",
+      "city": "Munich",
+      "country": "Germany",
+      "source_count_from_alignment": 1,
+      "archive_refs": [
+        {
+          "s": "2",
+          "f": "research/cruising/scrape_2.json",
+          "i": 215,
+          "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+        }
+      ],
+      "original_assessment": "candidate_unverified",
+      "original_description": "",
+      "identity_support": "single_website",
+      "location_type": "motorway_rest_area",
+      "research_description": "Older gay-szene listing describes an A8 stopping point approximately 500 m after the Hofolding exit toward Munich. Planet Randy lists Parkplatz Brunnthal in the A8 Hofoldinger Forst–München Süd corridor, but no exact direction or identity reconciliation is available.",
+      "primary_direct_url": "https://gay-szene.net/parkplatz-a8-salzburg-muenchen-nach-der-ausfahrt-hofolding-in-muenchen/6165/eintrag.html",
+      "sources": [
+        {
+          "s": "1",
+          "site": "Gays-Cruising.com",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "2",
+          "site": "gay-szene.net",
+          "status": "linked_page_matched",
+          "url": "https://gay-szene.net/parkplatz-a8-salzburg-muenchen-nach-der-ausfahrt-hofolding-in-muenchen/6165/eintrag.html",
+          "method": "live_detail_and_archive",
+          "limitation": null
+        },
+        {
+          "s": "3",
+          "site": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "4",
+          "site": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "5",
+          "site": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "Munich_2026-11-06_archive_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "6",
+          "site": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "7",
+          "site": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "8",
+          "site": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        }
+      ],
+      "evidence_timeline": [
+        {
+          "date": "2017-08-01",
+          "source": "gay-szene.net",
+          "type": "question_only",
+          "finding": "Newest visible forum post asks whether the location is still active, not positive evidence."
+        },
+        {
+          "date": "2016-07-06",
+          "source": "gay-szene.net",
+          "type": "historic_activity_report",
+          "finding": "Visitor described some encounters by a replacement WC building."
+        },
+        {
+          "date": "2013-10-03",
+          "source": "gay-szene.net",
+          "type": "access_obstruction_report",
+          "finding": "Contributor said fencing blocked access into adjacent woods."
+        }
+      ],
+      "access_and_safety": "Motorway rest area with road-direction-dependent access, possible fences and changed WC buildings. Do not assume adjacent woodland access.",
+      "activity_freshness": {
+        "cutoff": "2025-11-06",
+        "assessment": "No positive visitor evidence in 12-month window; latest visible question from 2017.",
+        "has_recent_claim": false,
+        "independently_verified_current_activity": false
+      },
+      "possible_duplicates": [
+        {
+          "name": "Parkplatz Brunnthal",
+          "source_url": "https://planet-randy.com/blog/eintrag/parkplatz-brunnthal/",
+          "relation": "possible A8 corridor match; precise carriageway/exit unresolved",
+          "confidence": "tentative"
+        }
+      ],
+      "additional_external_references": [],
+      "research_note": "Planet Randy link is comparison evidence, not a confirmed second-source exact match.",
+      "publication_decision": "RESEARCH_ONLY_NO_PUBLICATION_APPROVAL"
+    },
+    {
+      "index": 883,
+      "id": "GS2-DE-MUENCHEN-015",
+      "name": "Parkplatz A96 Lindau - München",
+      "city": "Munich",
+      "country": "Germany",
+      "source_count_from_alignment": 1,
+      "archive_refs": [
+        {
+          "s": "2",
+          "f": "research/cruising/scrape_2.json",
+          "i": 216,
+          "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+        }
+      ],
+      "original_assessment": "needs_manual_review",
+      "original_description": "Source itself describes disruption by construction.",
+      "identity_support": "single_website",
+      "location_type": "motorway_rest_area",
+      "research_description": "A96 rest stop near Germering with a woodland margin; original description warns construction reduced activity, but comments subsequently described reopening. Exact carriageway and whether Kreuzlinger Forst is the same parking area remain unverified.",
+      "primary_direct_url": "https://gay-szene.net/parkplatz-a96-lindau-muenchen-in-muenchen/6088/eintrag.html",
+      "sources": [
+        {
+          "s": "1",
+          "site": "Gays-Cruising.com",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "2",
+          "site": "gay-szene.net",
+          "status": "linked_page_matched",
+          "url": "https://gay-szene.net/parkplatz-a96-lindau-muenchen-in-muenchen/6088/eintrag.html",
+          "method": "live_detail_and_archive",
+          "limitation": null
+        },
+        {
+          "s": "3",
+          "site": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "4",
+          "site": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "5",
+          "site": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "Munich_2026-11-06_archive_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "6",
+          "site": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "7",
+          "site": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "8",
+          "site": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        }
+      ],
+      "evidence_timeline": [
+        {
+          "date": "2022-06-13",
+          "source": "gay-szene.net",
+          "type": "historic_activity_report",
+          "finding": "Visitor described a longstanding meeting area but also acknowledged construction interruptions."
+        },
+        {
+          "date": "2022-06-11",
+          "source": "gay-szene.net",
+          "type": "negative_visit_report",
+          "finding": "Visitor reported seeing nobody on that visit."
+        },
+        {
+          "date": "2021-01-07",
+          "source": "gay-szene.net",
+          "type": "reopening_report",
+          "finding": "Poster claimed both directions had reopened after works; not current road-access confirmation."
+        }
+      ],
+      "access_and_safety": "Motorway rest area; roadworks history, fences and access changes reported. No live road/parking confirmation and no GPS pin established.",
+      "activity_freshness": {
+        "cutoff": "2025-11-06",
+        "assessment": "Newest relevant forum accounts in June 2022; no verified activity within previous 12 months.",
+        "has_recent_claim": false,
+        "independently_verified_current_activity": false
+      },
+      "possible_duplicates": [
+        {
+          "name": "Parkplatz Kreuzlinger Forst",
+          "source_url": "https://planet-randy.com/blog/eintrag/parkplatz-kreuzlinger-forst/",
+          "relation": "possible same A96 rest area; cited between Germering-Süd and Gilching",
+          "confidence": "tentative"
+        },
+        {
+          "name": "Parkplatz Wörthsee",
+          "source_url": "https://planet-randy.com/blog/eintrag/parkplatz-woerthsee/",
+          "relation": "different A96 stop; do not conflate"
+        }
+      ],
+      "additional_external_references": [],
+      "research_note": "Some archived directory access warnings may be superseded by 2019–2021 reopenings; current status is unknown.",
+      "publication_decision": "RESEARCH_ONLY_NO_PUBLICATION_APPROVAL"
+    },
+    {
+      "index": 884,
+      "id": "GS2-DE-MUENCHEN-016",
+      "name": "Parkplatz an der B 471",
+      "city": "Munich",
+      "country": "Germany",
+      "source_count_from_alignment": 1,
+      "archive_refs": [
+        {
+          "s": "2",
+          "f": "research/cruising/scrape_2.json",
+          "i": 217,
+          "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+        }
+      ],
+      "original_assessment": "candidate_unverified",
+      "original_description": "",
+      "identity_support": "single_website",
+      "location_type": "riverside_woodland_parking",
+      "research_description": "B471 forest car park near Isar bridge between Garching and Ismaning; source describes entrance by the bridge. Planet Randy's Isar-Kiesbank describes a car park over the Isar bank nearby; geographic overlap is plausible but not independently pinned.",
+      "primary_direct_url": "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
+      "sources": [
+        {
+          "s": "1",
+          "site": "Gays-Cruising.com",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "2",
+          "site": "gay-szene.net",
+          "status": "linked_page_matched",
+          "url": "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
+          "method": "live_detail_and_archive",
+          "limitation": null
+        },
+        {
+          "s": "3",
+          "site": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "4",
+          "site": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "5",
+          "site": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "Munich_2026-11-06_archive_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "6",
+          "site": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "7",
+          "site": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        },
+        {
+          "s": "8",
+          "site": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "method": "source_archive_alignment_and_indexed_search",
+          "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+        }
+      ],
+      "evidence_timeline": [
+        {
+          "date": "2026-06-08",
+          "source": "gay-szene.net",
+          "type": "positive_firsthand_claim",
+          "finding": "Visitor described men using woodland area on dry days, providing a contemporary but unverified first-person activity account."
+        },
+        {
+          "date": "2026-06-07",
+          "source": "gay-szene.net",
+          "type": "negative_firsthand_claim",
+          "finding": "Another visitor said they had visited twice, on Thursday and Saturday, without meeting anyone."
+        },
+        {
+          "date": "2024-06-02",
+          "source": "gay-szene.net",
+          "type": "historic_activity_report",
+          "finding": "Contributor described informal encounters in woodland and asked visitors to respect others and take rubbish away."
+        }
+      ],
+      "access_and_safety": "Open woodland and Isar riverbank; mixed recreational users, possible restrictions/complaints/police checks mentioned in older comments. Public sexual activity is not assumed lawful; avoid unverified route or water-access guidance.",
+      "activity_freshness": {
+        "cutoff": "2025-11-06",
+        "assessment": "Yes: two conflicting dated June 2026 firsthand claims, one positive and one negative; neither independently corroborated.",
+        "has_recent_claim": true,
+        "independently_verified_current_activity": false
+      },
+      "possible_duplicates": [
+        {
+          "name": "Isar-Kiesbank",
+          "source_url": "https://planet-randy.com/blog/eintrag/isar-kiesbank/",
+          "relation": "potentially same riverside B471 parking/woodland area",
+          "confidence": "probable_but_unconfirmed"
+        }
+      ],
+      "additional_external_references": [
+        {
+          "url": "https://www.sueddeutsche.de/muenchen/toter-aus-ismaning-vermisster-81-jaehriger-wurde-ermordet-1.1176927",
+          "role": "2011 historical site identity, not recent activity"
+        }
+      ],
+      "research_note": "Nearby area independently discussed in 2011 news coverage; that establishes historic reputation only, not current activity.",
+      "publication_decision": "RESEARCH_ONLY_NO_PUBLICATION_APPROVAL"
+    }
+  ]
+}
