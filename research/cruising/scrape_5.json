@@ -1,0 +1,310 @@
+{
+  "_meta": {
+    "source_id": "scrape_5",
+    "site": "Splashd",
+    "base_url": "https://www.splashd.app/",
+    "index_url": "https://www.splashd.app/map",
+    "created_berlin": "2026-11-06",
+    "status": "index_scoped__individual_spot_access_blocked",
+    "research_only": true,
+    "disclaimer": "Preliminary source inventory only. NONE of the advertised spot-level records were extracted or independently verified. Country totals must NEVER be treated as Backroom additions, current user locations, or active cruising evidence.",
+    "advertised_spots_global": 13249,
+    "advertised_countries": 56,
+    "advertised_cities": 1552,
+    "individual_spot_records_captured": 0,
+    "collection_method": "Publicly indexed Splashd map landing page (not live map/private app). The index exposes country counts; individual country, city and spot record access was unsuccessful through the tools available to this research pass.",
+    "attempted_access": [
+      {
+        "url": "https://www.splashd.app/map",
+        "result": "Readable as indexed search result; direct page fetch returned cache miss"
+      },
+      {
+        "url": "https://www.splashd.app/map/de",
+        "result": "No retrievable page"
+      },
+      {
+        "url": "https://www.splashd.app/map/germany",
+        "result": "No retrievable page"
+      },
+      {
+        "url": "https://www.splashd.app/map/country/germany",
+        "result": "No retrievable page"
+      },
+      {
+        "url": "https://www.splashd.app/sitemap.xml",
+        "result": "Not accessible through current fetch"
+      },
+      {
+        "url": "https://www.splashd.app/robots.txt",
+        "result": "Not accessible through current fetch"
+      }
+    ],
+    "next_action": "Use an authorized full browser session to inspect actual public country/city link URLs, page DOM and any openly accessible directory payloads; check robots/terms and keep requests modest. Collect PUBLIC static place names/categories/coordinates/source URLs only, not users, live locations, check-ins or chat activity.",
+    "publication_rule": "Do not update listings.json. Once spot-level entries become available, apply the existing Backroom inclusion rules, geoduplicate and cross-source check before adding proposed_places; no assumed active cruising."
+  },
+  "directory_inventory": [
+    {
+      "country": "Argentina",
+      "advertised_spots": 22
+    },
+    {
+      "country": "Australia",
+      "advertised_spots": 1584
+    },
+    {
+      "country": "Austria",
+      "advertised_spots": 13
+    },
+    {
+      "country": "Belgium",
+      "advertised_spots": 11
+    },
+    {
+      "country": "Brazil",
+      "advertised_spots": 98
+    },
+    {
+      "country": "Cambodia",
+      "advertised_spots": 6
+    },
+    {
+      "country": "Canada",
+      "advertised_spots": 1501
+    },
+    {
+      "country": "Chile",
+      "advertised_spots": 8
+    },
+    {
+      "country": "China",
+      "advertised_spots": 4
+    },
+    {
+      "country": "Colombia",
+      "advertised_spots": 18
+    },
+    {
+      "country": "Costa Rica",
+      "advertised_spots": 5
+    },
+    {
+      "country": "Czechia",
+      "advertised_spots": 7
+    },
+    {
+      "country": "Denmark",
+      "advertised_spots": 6
+    },
+    {
+      "country": "Ecuador",
+      "advertised_spots": 7
+    },
+    {
+      "country": "Egypt",
+      "advertised_spots": 5
+    },
+    {
+      "country": "El Salvador",
+      "advertised_spots": 3
+    },
+    {
+      "country": "Estonia",
+      "advertised_spots": 3
+    },
+    {
+      "country": "Finland",
+      "advertised_spots": 5
+    },
+    {
+      "country": "France",
+      "advertised_spots": 46
+    },
+    {
+      "country": "Germany",
+      "advertised_spots": 92
+    },
+    {
+      "country": "Greece",
+      "advertised_spots": 10
+    },
+    {
+      "country": "Guam",
+      "advertised_spots": 8
+    },
+    {
+      "country": "Hungary",
+      "advertised_spots": 7
+    },
+    {
+      "country": "India",
+      "advertised_spots": 12
+    },
+    {
+      "country": "Indonesia",
+      "advertised_spots": 10
+    },
+    {
+      "country": "Ireland",
+      "advertised_spots": 217
+    },
+    {
+      "country": "Israel",
+      "advertised_spots": 5
+    },
+    {
+      "country": "Italy",
+      "advertised_spots": 34
+    },
+    {
+      "country": "Latvia",
+      "advertised_spots": 3
+    },
+    {
+      "country": "Malaysia",
+      "advertised_spots": 9
+    },
+    {
+      "country": "Malta",
+      "advertised_spots": 3
+    },
+    {
+      "country": "Mexico",
+      "advertised_spots": 24
+    },
+    {
+      "country": "Morocco",
+      "advertised_spots": 6
+    },
+    {
+      "country": "Netherlands",
+      "advertised_spots": 26
+    },
+    {
+      "country": "New Zealand",
+      "advertised_spots": 263
+    },
+    {
+      "country": "Panama",
+      "advertised_spots": 7
+    },
+    {
+      "country": "Paraguay",
+      "advertised_spots": 3
+    },
+    {
+      "country": "Peru",
+      "advertised_spots": 13
+    },
+    {
+      "country": "Philippines",
+      "advertised_spots": 4
+    },
+    {
+      "country": "Poland",
+      "advertised_spots": 13
+    },
+    {
+      "country": "Portugal",
+      "advertised_spots": 5
+    },
+    {
+      "country": "Russia",
+      "advertised_spots": 7
+    },
+    {
+      "country": "Serbia",
+      "advertised_spots": 3
+    },
+    {
+      "country": "South Africa",
+      "advertised_spots": 28
+    },
+    {
+      "country": "South Korea",
+      "advertised_spots": 8
+    },
+    {
+      "country": "Spain",
+      "advertised_spots": 98
+    },
+    {
+      "country": "Sweden",
+      "advertised_spots": 8
+    },
+    {
+      "country": "Switzerland",
+      "advertised_spots": 27
+    },
+    {
+      "country": "Thailand",
+      "advertised_spots": 24
+    },
+    {
+      "country": "Türkiye",
+      "advertised_spots": 7
+    },
+    {
+      "country": "United Arab Emirates",
+      "advertised_spots": 6
+    },
+    {
+      "country": "United Kingdom",
+      "advertised_spots": 2604
+    },
+    {
+      "country": "United States",
+      "advertised_spots": 6284
+    },
+    {
+      "country": "Uruguay",
+      "advertised_spots": 3
+    },
+    {
+      "country": "Venezuela",
+      "advertised_spots": 6
+    },
+    {
+      "country": "Vietnam",
+      "advertised_spots": 10
+    }
+  ],
+  "baseline_coverage": {
+    "matched_backroom_country_count": 25,
+    "matched_backroom_advertised_spots": 9537,
+    "outside_backroom_country_labels": [
+      "Argentina",
+      "Australia",
+      "Brazil",
+      "Cambodia",
+      "Canada",
+      "Chile",
+      "China",
+      "Colombia",
+      "Costa Rica",
+      "Ecuador",
+      "Egypt",
+      "El Salvador",
+      "Guam",
+      "India",
+      "Indonesia",
+      "Malaysia",
+      "Mexico",
+      "Morocco",
+      "New Zealand",
+      "Panama",
+      "Paraguay",
+      "Peru",
+      "Philippines",
+      "Russia",
+      "South Africa",
+      "South Korea",
+      "Thailand",
+      "United Arab Emirates",
+      "Uruguay",
+      "Venezuela",
+      "Vietnam"
+    ]
+  },
+  "countries": [],
+  "note": "countries is empty because no individual Splashd spot pages were retrieved. directory_inventory is NOT a venue-record list."
+}
