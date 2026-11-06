@@ -5,18 +5,21 @@
     "base_url": "https://www.cruisinggays.com/",
     "index_url": "https://www.cruisinggays.com/sitemap/countries.aspx",
     "started_berlin": "2026-11-06",
-    "status": "completed_selected_city_public_area_pass__not_full_directory",
+    "status": "targeted_priority_city_expansion_1_completed__not_full_directory",
     "research_only": true,
-    "scope": "Selected public/open-air and ordinary managed-location leads from Germany, UK, Netherlands, Finland, Sweden, France, Switzerland and Spain. Not an exhaustive site or country crawl.",
-    "source_record_count": 43,
-    "selected_country_count": 8,
+    "scope": "Selected public/open-air and ordinary managed-location leads from Germany, UK, Netherlands, Finland, Sweden, France, Switzerland and Spain. Not an exhaustive site or country crawl. Follow-up: selected public/ordinary leads for Bruges, Salzburg, Florence, Bologna, Verona, Edinburgh, Lucerne, Seville, Granada; Naples Italy rejected due to US name collision.",
+    "source_record_count": 71,
+    "selected_country_count": 11,
     "individual_source_urls_preserved": true,
     "limitations": [
       "Many 'cruising area' pages are misclassified bars, hotels, retail stores, charities or event venues. Dedicated nightlife and sex-business sites were omitted.",
       "A few geographic assignments are incorrect (e.g. an Assateague Island beach from Maryland filed under Berlin, London Ontario sites under London England, and Paris Texas sites under France). Check actual physical location.",
       "Some city landing pages and individual detail pages timed out or were inaccessible, but indexed content or the category pages exposed names and location descriptions.",
       "Some source pages say 'verified' in 2026 while older variants have decades-old text; recent indexing or a badge alone does not independently validate current activity.",
-      "Never collect member locations, profiles, check-ins, messages or real-time activity."
+      "Never collect member locations, profiles, check-ins, messages or real-time activity.",
+      "Edinburgh's city category notes update dating to September 2012; no recent active status established.",
+      "Some detail URLs could not be opened, but their names and category snippets were available on public city index pages.",
+      "Florence/Firenze duplicates and same park corridor were linked rather than counted repeatedly."
     ],
     "false_positive_examples": [
       {
@@ -40,11 +43,12 @@
     ],
     "publication_rule": "Each finding requires independent verification of exact place, continued public access, legal/safe use and relevance before any live Backroom entry. Research-only; do not change production listings.json.",
     "review_notes": [
-      "Cross-source correction: Hyde Park matches a live Backroom record; Frescati and Allmend Park match existing proposals and are not new candidates."
+      "Cross-source correction: Hyde Park matches a live Backroom record; Frescati and Allmend Park match existing proposals and are not new candidates.",
+      "Targeted expansion 1: 28 new source leads, 18 new provisional proposals; checked Naples Italy against false-positive Florida directory pages."
     ],
-    "new_candidate_source_records": 21,
-    "existing_or_prior_proposal_matches": 17,
-    "not_counted_weak_or_ambiguous": 5,
+    "new_candidate_source_records": 39,
+    "existing_or_prior_proposal_matches": 18,
+    "not_counted_weak_or_ambiguous": 14,
     "master_updated_berlin": "2026-11-06"
   },
   "countries": [
@@ -473,6 +477,63 @@
               "source_access": "public web index or individually indexed detail page"
             }
           ]
+        },
+        {
+          "city": "Seville",
+          "records": [
+            {
+              "source_rank": 69,
+              "name": "Plaza de Armas Bus Station",
+              "city": "Seville",
+              "country": "Spain",
+              "place_type": "Bus station",
+              "source_url": "https://www.cruisinggays.com/sevilla/areas/35061-plaza-de-armas-bus-station/",
+              "source_city_path": "sevilla",
+              "assessment": "unverified_candidate",
+              "review_note": "Older source describes a male meeting scene around the intercity bus station, but current activity and rules for managed transport property are unverified.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-35061"
+            },
+            {
+              "source_rank": 70,
+              "name": "Estación Santa Justa",
+              "city": "Seville",
+              "country": "Spain",
+              "place_type": "Railway station",
+              "source_url": "https://www.cruisinggays.com/sevilla/areas/34493-estacion-santa-justa/",
+              "source_city_path": "sevilla",
+              "assessment": "unverified_candidate",
+              "review_note": "Directory has a historical male cruising claim about the main station; ordinary passengers and public facilities must be respected. No recent dated corroboration.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-34493"
+            }
+          ]
+        },
+        {
+          "city": "Granada",
+          "records": [
+            {
+              "source_rank": 71,
+              "name": "Paseo de Basilios",
+              "city": "Granada",
+              "country": "Spain",
+              "place_type": "Urban river corridor",
+              "source_url": "https://www.cruisinggays.com/map/?cityid=4137&filter=4",
+              "source_city_path": "granada",
+              "assessment": "stale_negative_report",
+              "review_note": "Listed as cruising area, but its own 27 February 2009 update reports the area was cleared and activity reduced. Not counted without renewed evidence.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null
+            }
+          ]
         }
       ]
     },
@@ -521,6 +582,42 @@
               "source_category": "Cruising areas",
               "source_access": "public web index or individually indexed detail page",
               "existing_match_id": "GC1-SWITZERLAND-12"
+            }
+          ]
+        },
+        {
+          "city": "Lucerne",
+          "records": [
+            {
+              "source_rank": 67,
+              "name": "Inseliquai public toilets",
+              "city": "Lucerne",
+              "country": "Switzerland",
+              "place_type": "Public facilities",
+              "source_url": "https://www.cruisinggays.com/luzern/areas/33988-lucerne/",
+              "source_city_path": "luzern",
+              "assessment": "unverified_candidate",
+              "review_note": "Source describes public toilet by the station, including other ordinary users. No dated male-cruising confirmation; active use and legal/access issues must be checked.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-33988"
+            },
+            {
+              "source_rank": 68,
+              "name": "Luzern – Bundesplatz",
+              "city": "Lucerne",
+              "country": "Switzerland",
+              "place_type": "Public square / facilities",
+              "source_url": "https://www.cruisinggays.com/luzern/areas/59457-luzern-bundesplatz/",
+              "source_city_path": "luzern",
+              "assessment": "insufficient_specific_evidence",
+              "review_note": "Indexed as area but accessible result lacks sufficient specific activity information; held and not proposed.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null
             }
           ]
         }
@@ -772,6 +869,411 @@
               "source_verified_current": false,
               "source_category": "Cruising areas",
               "source_access": "public web index or individually indexed detail page"
+            }
+          ]
+        },
+        {
+          "city": "Edinburgh",
+          "records": [
+            {
+              "source_rank": 58,
+              "name": "Calton Hill",
+              "city": "Edinburgh",
+              "country": "United Kingdom",
+              "place_type": "Hill / public park",
+              "source_url": "https://www.cruisinggays.com/edinburgh/c/areas/5/",
+              "source_city_path": "edinburgh",
+              "assessment": "unverified_candidate",
+              "review_note": "Listed in Edinburgh's outdoor cruising category; directory itself marks the city's entries as needing checks, with old updates. Historical local LGBTQ article also references Calton Hill, not proof of current activity.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-GAP-58"
+            },
+            {
+              "source_rank": 59,
+              "name": "Blackford Hill",
+              "city": "Edinburgh",
+              "country": "United Kingdom",
+              "place_type": "Public hill / woodland",
+              "source_url": "https://www.cruisinggays.com/map/?cityid=3733&filter=4",
+              "source_city_path": "edinburgh",
+              "assessment": "unverified_candidate",
+              "review_note": "Named in city cruising directory; no dated recent activity report or precise responsible-access guidance found.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-GAP-59"
+            },
+            {
+              "source_rank": 60,
+              "name": "Saughton Park",
+              "city": "Edinburgh",
+              "country": "United Kingdom",
+              "place_type": "Public park",
+              "source_url": "https://www.cruisinggays.com/edinburgh/c/areas/",
+              "source_city_path": "edinburgh",
+              "assessment": "unverified_candidate",
+              "review_note": "Saughton Park/Car park appears among Edinburgh directory spots. Council confirms park and opening restrictions for certain gardens/facilities, but does not independently confirm cruising.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-GAP-60"
+            },
+            {
+              "source_rank": 61,
+              "name": "Royal Terrace Gardens",
+              "city": "Edinburgh",
+              "country": "United Kingdom",
+              "place_type": "Public gardens",
+              "source_url": "https://www.cruisinggays.com/edinburgh/c/areas/",
+              "source_city_path": "edinburgh",
+              "assessment": "unverified_candidate",
+              "review_note": "Listed on city category as park/outdoor lead; no recent independent male cruising evidence and access conditions still need checking.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-GAP-61"
+            },
+            {
+              "source_rank": 62,
+              "name": "Princes Street Gardens",
+              "city": "Edinburgh",
+              "country": "United Kingdom",
+              "place_type": "Public gardens",
+              "source_url": "https://www.cruisinggays.com/edinburgh/c/areas/4/",
+              "source_city_path": "edinburgh",
+              "assessment": "unverified_candidate",
+              "review_note": "Directory lists gardens, but official council operating hours are seasonal and gated; historical queer-history reports are not evidence of current activity.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-GAP-62"
+            },
+            {
+              "source_rank": 63,
+              "name": "Marine Drive / Silverknowes Promenade",
+              "city": "Edinburgh",
+              "country": "United Kingdom",
+              "place_type": "Coastal promenade",
+              "source_url": "https://www.cruisinggays.com/map/?cityid=3733&filter=4",
+              "source_city_path": "edinburgh",
+              "assessment": "unverified_candidate",
+              "review_note": "Source calls this Marine Drive (misspelled Sliverknowes). Broad promenade reference only; no recent individual-source activity corroboration.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-GAP-63"
+            },
+            {
+              "source_rank": 64,
+              "name": "Braid Hills Drive Car Park",
+              "city": "Edinburgh",
+              "country": "United Kingdom",
+              "place_type": "Public viewpoint car park",
+              "source_url": "https://www.cruisinggays.com/edinburgh/c/areas/",
+              "source_city_path": "edinburgh",
+              "assessment": "unverified_candidate",
+              "review_note": "Outdoor car park appears on city cruising category; exact lawful access and current relevance not established.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-GAP-64"
+            },
+            {
+              "source_rank": 65,
+              "name": "Cammo Park",
+              "city": "Edinburgh",
+              "country": "United Kingdom",
+              "place_type": "Public park",
+              "source_url": "https://www.cruisinggays.com/sitemap/locations.aspx?CityId=3733",
+              "source_city_path": "edinburgh",
+              "assessment": "unverified_candidate",
+              "review_note": "Named on Edinburgh directory sitemap and map. Current activity not substantiated; preserve only broad park-level information.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-GAP-65"
+            },
+            {
+              "source_rank": 66,
+              "name": "Warriston Cemetery",
+              "city": "Edinburgh",
+              "country": "United Kingdom",
+              "place_type": "Cemetery",
+              "source_url": "https://www.cruisinggays.com/edinburgh/areas/556-warriston-cemetery/",
+              "source_city_path": "edinburgh",
+              "assessment": "safety_access_review",
+              "review_note": "Archived under cruising category without meaningful current evidence. Sensitive cemetery setting, opening hours and suitability require review; not proposed.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Belgium",
+      "cities": [
+        {
+          "city": "Bruges",
+          "records": [
+            {
+              "source_rank": 44,
+              "name": "Brug Expressweg Waggelwater",
+              "city": "Bruges",
+              "country": "Belgium",
+              "place_type": "Woodland / parking area",
+              "source_url": "https://www.cruisinggays.com/brugge/areas/54292-brug-expressweg-waggelwater/",
+              "source_city_path": "brugge",
+              "assessment": "unverified_candidate",
+              "review_note": "Source reports male cruising around Waggelwater/Expressweg. Broad location identifiable; exact access, legality and present activity not independently verified.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-54292"
+            },
+            {
+              "source_rank": 45,
+              "name": "Zeebrugge–Blankenberge dunes",
+              "city": "Bruges",
+              "country": "Belgium",
+              "place_type": "Coastal dunes",
+              "source_url": "https://www.cruisinggays.com/brugge/areas/14735-zeebrugges-sand-dunes/",
+              "source_city_path": "brugge",
+              "assessment": "unverified_candidate",
+              "review_note": "Coastal dune area between Zeebrugge and Blankenberge. Source lists a male crowd, but age and current cruising activity are not verified. Confirm geography and protected-area access rules.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-14735"
+            },
+            {
+              "source_rank": 46,
+              "name": "Minnewaterpark",
+              "city": "Bruges",
+              "country": "Belgium",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/brugge/areas/449-minnewaterpark/",
+              "source_city_path": "brugge",
+              "assessment": "insufficient_specific_evidence",
+              "review_note": "Indexed as a cruising area but visible public description supplies no male activity, dates or location-specific detail; not added as proposal.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Austria",
+      "cities": [
+        {
+          "city": "Salzburg",
+          "records": [
+            {
+              "source_rank": 47,
+              "name": "Parking A10, both directions",
+              "city": "Salzburg",
+              "country": "Austria",
+              "place_type": "Motorway rest area",
+              "source_url": "https://www.cruisinggays.com/salzburg/areas/6897-parking-a10-both-directions/",
+              "source_city_path": "salzburg",
+              "assessment": "insufficient_location_precision",
+              "review_note": "Source describes A10 parking/restrooms around Salzburg without separately naming two directional facilities. Hold pending actual rest-area names and current access confirmation; no GPS inferred.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null
+            },
+            {
+              "source_rank": 48,
+              "name": "Rosenhügel (Mirabellgarten)",
+              "city": "Salzburg",
+              "country": "Austria",
+              "place_type": "Public garden",
+              "source_url": "https://www.cruisinggays.com/salzburg/c/areas/",
+              "source_city_path": "salzburg",
+              "assessment": "insufficient_specific_evidence",
+              "review_note": "City category lists a garden area and a broad crowd description, but no substantiated activity/precise place or date; held.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Italy",
+      "cities": [
+        {
+          "city": "Florence",
+          "records": [
+            {
+              "source_rank": 49,
+              "name": "Parco delle Cascine (Cascine Park)",
+              "city": "Florence",
+              "country": "Italy",
+              "place_type": "Public park",
+              "source_url": "https://www.cruisinggays.com/firenze/areas/77769-cascine-park-florence/",
+              "source_city_path": "firenze",
+              "assessment": "unverified_candidate",
+              "review_note": "Separate Firenze detail page describes seasonal male cruising along the Cascine park public riverside area. Research-only; seasonal notes and present use require independent corroboration.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-77769"
+            },
+            {
+              "source_rank": 50,
+              "name": "The Cascine Park (Florence directory entry)",
+              "city": "Florence",
+              "country": "Italy",
+              "place_type": "Public park",
+              "source_url": "https://www.cruisinggays.com/florence/c/areas/",
+              "source_city_path": "florence",
+              "assessment": "overlap_same_location",
+              "review_note": "Directory's The Cascine Park is the same park as the Firenze Cascine park detail entry. Linked to the new single Cascine proposal; not counted twice.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null
+            },
+            {
+              "source_rank": 51,
+              "name": "Viale Lincoln-Washington",
+              "city": "Florence",
+              "country": "Italy",
+              "place_type": "Park-side cycleway",
+              "source_url": "https://www.cruisinggays.com/florence/c/areas/",
+              "source_city_path": "florence",
+              "assessment": "possible_overlap_same_location",
+              "review_note": "Directory describes a cycleway on the Arno/Cascine corridor. Treat as a possible subarea of Cascine Park until a map comparison establishes distinct boundaries; no separate proposal.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null
+            },
+            {
+              "source_rank": 52,
+              "name": "Autostrada SE of Florence",
+              "city": "Florence",
+              "country": "Italy",
+              "place_type": "Unspecified motorway rest stops",
+              "source_url": "https://www.cruisinggays.com/florence/c/areas/",
+              "source_city_path": "florence",
+              "assessment": "insufficient_location_precision",
+              "review_note": "Source refers collectively to multiple unnamed motorway rest stops southeast of Florence; no single identifiable place for a valid new record.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null
+            }
+          ]
+        },
+        {
+          "city": "Bologna",
+          "records": [
+            {
+              "source_rank": 53,
+              "name": "Via della Manifattura (Tabacchi)",
+              "city": "Bologna",
+              "country": "Italy",
+              "place_type": "Urban street",
+              "source_url": "https://www.cruisinggays.com/bologna/areas/13207-via-della-manifattura/",
+              "source_city_path": "bologna",
+              "assessment": "unverified_candidate",
+              "review_note": "Older source reports men cruising in vehicles on Via della Manifattura Tabacchi; latest visible corroborating comment dates to September 2009, so no current-activity claim.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-13207"
+            },
+            {
+              "source_rank": 54,
+              "name": "Via Zanardi / Reno riverside",
+              "city": "Bologna",
+              "country": "Italy",
+              "place_type": "Riverside path",
+              "source_url": "https://www.cruisinggays.com/bologna/areas/13206-via-zanardi/",
+              "source_city_path": "bologna",
+              "assessment": "unverified_candidate",
+              "review_note": "Source describes a river-side outdoor meeting area off Via Zanardi, but detail explicitly says last updated 2011 and needs checking.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-13206"
+            },
+            {
+              "source_rank": 55,
+              "name": "Via Boni Campeggi",
+              "city": "Bologna",
+              "country": "Italy",
+              "place_type": "Street",
+              "source_url": "https://www.cruisinggays.com/bologna/c/areas/",
+              "source_city_path": "bologna",
+              "assessment": "insufficient_cruising_evidence",
+              "review_note": "Only visible description concerns hustlers; insufficient evidence of an ordinary consensual male cruising spot. Retain as excluded research lead.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public city/category index",
+              "last_public_confirmation": null
+            }
+          ]
+        },
+        {
+          "city": "Verona",
+          "records": [
+            {
+              "source_rank": 56,
+              "name": "Porta Vescovo",
+              "city": "Verona",
+              "country": "Italy",
+              "place_type": "Station district gardens / parking",
+              "source_url": "https://www.cruisinggays.com/verona/areas/13629-porta-vescovo/",
+              "source_city_path": "verona",
+              "assessment": "unverified_candidate",
+              "review_note": "Source describes street/parking and gardens in the Porta Vescovo area. Confirm precise public area, current access and activity before publication.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-13629"
+            },
+            {
+              "source_rank": 57,
+              "name": "Lazzaretto",
+              "city": "Verona",
+              "country": "Italy",
+              "place_type": "Historic ruin / riverside grounds",
+              "source_url": "https://www.cruisinggays.com/verona/areas/13189-lazzaretto/",
+              "source_city_path": "verona",
+              "assessment": "unverified_candidate",
+              "review_note": "Source describes daytime gay cruising near the Lazzaretto historic site. Access restrictions and latest activity have not been independently verified.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "individual detail link (full content may be inaccessible)",
+              "last_public_confirmation": null,
+              "proposal_id": "CG8-13189"
             }
           ]
         }
