@@ -2294,3 +2294,32 @@ body:has(> .br-guide) > .br-guide{height:100%;max-width:1180px}
 .br-cruising-topic-copy .br-cruising-source-links a{color:#78d1ee;text-decoration:underline;text-underline-offset:2px}
 .br-cruising-topic-copy .br-cruising-source-links a:hover{color:#fff}
 @media(max-width:640px){.br-cruising-accordion{gap:8px}.br-cruising-topic > summary,.v15-cruising-guide .br-cruising-topic > summary{padding:12px 11px;font-size:1.02rem}.br-cruising-topic-copy{padding:12px}.br-cruising-topic-copy p{font-size:.96rem}.br-cruising-topic > summary::after{flex-basis:26px;width:26px;height:26px}}
+
+
+/* v1.5.22: two-column Cruising Guide on desktop, one column on mobile. */
+.br-cruising-accordion{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    align-items:start;
+    gap:12px;
+}
+.br-cruising-heading{
+    display:inline-flex;
+    align-items:center;
+    min-width:0;
+    gap:11px;
+}
+.br-cruising-heading > span:last-child{
+    min-width:0;
+}
+.br-cruising-emoji{
+    flex:0 0 27px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font:1.27rem/1.2 Arial,sans-serif;
+}
+@media(max-width:767px){
+    .br-cruising-accordion{grid-template-columns:minmax(0,1fr);gap:8px}
+    .br-cruising-heading{gap:9px}
+    .br-cruising-emoji{flex-basis:25px;font-size:1.18rem}
+}

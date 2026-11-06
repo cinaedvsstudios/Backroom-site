@@ -1,5 +1,5 @@
 {
-  "version": "v1.5.21",
+  "version": "v1.5.22",
   "date": "2026-11-06",
   "rollback_baseline": "main commit 756a0892b05874e1dd3fa05ebe0d538b63e62e17 (preserves latest events/listings and featured.png)",
   "files_changed": [
@@ -93,7 +93,8 @@
     "Fix Maspalomas Events: calendar now reuses the existing directory's Gran Canaria city aliases and canonical country-aware location matching. Calendar Browse, saved-location sync and shared calendar routes use Maspalomas, Spain; original event cities and dates are preserved.",
     "Expand the Cruising Guide into eight independent, mobile-friendly accordion topics: First Time, Different Places, Consent & Signals, Boundaries, Before You Go, PrEP/PEP & HIV Prevention, Privacy & Etiquette, and Personal Safety; preserve existing consent/arm-touch guidance and add verified clinical links.",
     "PrEP-focused practical HIV prevention section explains daily/on-demand choices, routine checks and rapid PEP access, while mentioning other STIs briefly without moralising about condoms.",
-    "Keep Cruising Guide's outer expandable panel and venue results unchanged; remember the open topic after a location refresh. Bust caches for the updated CSS, JS and standalone guide."
+    "Keep Cruising Guide's outer expandable panel and venue results unchanged; remember the open topic after a location refresh. Bust caches for the updated CSS, JS and standalone guide.",
+    "Display the eight Cruising Guide accordion topics in two columns on desktop (768px and wider), and one column on mobile, with distinct leading emojis. Preserve all guide text and behaviour."
   ],
   "validation": {
     "javascript_syntax": "checked before publication",
