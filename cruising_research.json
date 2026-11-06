@@ -38,7 +38,8 @@
       "Manual scrape placeholders: scrape_5 (Splashd) and scrape_7 (Squirt.org) now have null per-city entries, meaning not yet collected; these are NOT zero-result counts. Squirt.org research file is reserved for a later user-supplied manual dump.",
       "Scrape 8 CruisingGays: 43 selected public/ordinary-site source records across 8 countries. 21 new provisional proposals, 17 prior/existing matches, 5 not counted for weak/ambiguous evidence. Exclude misclassified clubs/hotels/shops and correct location errors (Berlin/Maryland, Paris/Texas, London/Ontario). No assumption that a recent crawl or verification badge validates current cruising.",
       "Added six optional verification-only references (Couple of Men, Männer unterwegs, The Globetrotter Guys, Tripadvisor, Reddit, misterb&b Gay Guide). Do not assign scrape numbers or systematically crawl them. Research a specific unresolved detail only, reusing existing evidence first and stopping once sufficient.",
-      "2026-11-06 user-selected city research priorities: 50 submitted city entries (Lisbon appears twice), 49 unique focus cities, 10 currently without Live or proposed cruising spots (including 2 cities not yet represented as tracker rows). Preserve all existing data. If research yields no qualifying locations, record a confirmed researched zero, not a fabricated proposal."
+      "2026-11-06 user-selected city research priorities: 50 submitted city entries (Lisbon appears twice), 49 unique focus cities, 10 currently without Live or proposed cruising spots (including 2 cities not yet represented as tracker rows). Preserve all existing data. If research yields no qualifying locations, record a confirmed researched zero, not a fabricated proposal.",
+      "2026-11-06 cruising listing writing standards added: describe exact subarea, busy times, reported men/crowd, warnings; include grounded GPS coordinates and map links that point to that subarea or public entrance, plus truthful Last_Updated and count of independent supporting sources. Do not invent details or modify live listings in research."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -22179,5 +22180,71 @@
       "refresh_snapshots": "baseline_live, provisional_proposals and coverage_status are dated snapshots from 2026-11-06. Recompute after future research updates, don't assume they remain live totals.",
       "source_count_policy": "A city may have multiple stored rows representing outlying sites (e.g. Mestre near Venice); do not accidentally combine distinct locations or treat absence of exact matches as zero if alternate spelling exists."
     }
+  },
+  "cruising_listing_editorial_guidelines": {
+    "title": "Backroom — Cruising Area listing information and writing standard",
+    "recorded_berlin": "2026-11-06",
+    "scope": "Cruising Area records, not dedicated gay bars, clubs or sex businesses. Preserve all research data and existing records.",
+    "required_content": [
+      {
+        "field": "specific_spot",
+        "description": "Explain WHERE within the named park, beach, promenade, public area or facility the reported meeting area is: named trails, edges, entrances, sections, landmarks, directions from a recognisable point. Don't merely say 'the park' or 'near the beach' if a more specific location is supported."
+      },
+      {
+        "field": "busy_times",
+        "description": "When it is reportedly busiest (hours, after sunset, weekends, seasons, after nearby businesses close); distinguish recurring reports from confirmed current hours. Never infer a time simply from the type of place."
+      },
+      {
+        "field": "reported_crowd",
+        "description": "Describe, only when supported, the kinds of men reportedly visiting: typical age range, mixed/younger/older crowd, locals/tourists, discreet or social scene and any reported patterns. Do not guess ages or present anecdotal reports as guarantees."
+      },
+      {
+        "field": "practical_warnings",
+        "description": "Relevant hazards and cautions: rough rocks/cliffs, water, poorly lit paths, isolated terrain, tide, restricted access, opening hours, crowds/families, privacy, applicable local regulations, closures or changes. Don't invent risks or imply illegal activity is permitted."
+      },
+      {
+        "field": "precise_geography",
+        "description": "Record Latitude and Longitude (numeric decimal degrees) and a usable Google Maps URL, Apple Maps URL and Native Map Query when grounded. Aim for the specific public-area section/entrance described, not merely the city centre or park centroid. Say explicitly when coordinates are only an approximate entrance/reference point. Keep any disputed/unknown coordinates empty and flagged for review rather than fabricating precision."
+      },
+      {
+        "field": "original_description",
+        "description": "Write an original, natural and practical friend-to-friend paragraph saying why someone might go, how to find the place, what to expect and concerns. Do not copy source wording or mention internal scraping/extrapolation."
+      },
+      {
+        "field": "source_evidence",
+        "description": "Preserve all original Source_URLs and concise source notes; verification count is the number of distinct relevant independently checked sources supporting the precise location/activity, not raw links, mirrored sites or generic city articles. Never claim 'verified across 5 sources' if five independent confirmations are unavailable."
+      },
+      {
+        "field": "dating_and_provenance",
+        "description": "Use Last_Updated for the date the Backroom listing actually changed, as the master specification requires. Separately track date of latest substantive source verification / report in research notes. Do not confuse Last_Updated with the last time the location was visited. If no recent confirmation is available, disclose uncertainty in internal research status."
+      }
+    ],
+    "gps_and_map_detail": {
+      "required_existing_schema_fields": [
+        "Address",
+        "Latitude",
+        "Longitude",
+        "Google_Maps_URL",
+        "Apple_Maps_URL",
+        "Native_Map_Query",
+        "Nearest_Station"
+      ],
+      "expected_map_behavior": "Coordinates should match the described specific subsection or sensible lawful public access point. Both Google and Apple map links must resolve to the correct location; native query should make sense on a smartphone. The map pin must not suggest an arbitrary street/building or another city.",
+      "preferred_accuracy": "Exact point or practical public entry for named area if reliable; otherwise public landmark reference point labelled approximate, or leave unfilled if unsupported.",
+      "coordinate_evidence": "Cross-check coordinate against place name, geography, source descriptions and map where possible. Preserve differing access-point/meeting-point information as research notes rather than silently choosing an unsupported coordinate.",
+      "privacy_safety": "Do not collect or publish real-time locations of individuals, check-ins, private meeting details, user identities or precise private-property access points."
+    },
+    "example": {
+      "name": "Church of Paraportiani",
+      "city": "Mykonos",
+      "country": "Greece",
+      "purpose": "User-provided style model only, not independently fact-checked source text or verified GPS/busyness/age claims.",
+      "style": "Describe the specific waterside location and approach, approximate busy time after sunset and when nearby restaurants close, reported broad mix of visitors when supported, and caution about rocks and sea.",
+      "display_metadata_example": "Last updated [actual Backroom edit date] · Verified across [distinct independently checked supporting sources] sources",
+      "example_caveat": "Never copy the user's sample factual claims into production without source confirmation; retain the requested prose style and field coverage."
+    },
+    "missing_info_policy": "Do not make up a specific spot, GPS pin, busiest hour, crowd demographics, warning, verification count or update date. Research selectively; if still missing, flag as unknown or unverified. Do not claim a location has no cruising when only the source coverage is missing.",
+    "publication_policy": "Do not modify production listings.json during discovery. Apply these rules to verified candidates in a later approved import; retain pre-existing research records unchanged.",
+    "search_efficiency": "First use existing archived URLs and source evidence; consult supplementary verification sites only for genuine gaps/contradictions; stop as soon as reliable support is adequate."
   }
 }
