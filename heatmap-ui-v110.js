@@ -69,6 +69,11 @@
     const denominator = ui.scale.value === 'relative' ? maxCount : (data.mode === 'cities' ? 60 : 12);
     const isRecordMode = data.mode !== 'cities';
 
+    // Do not fail the entire map if its heat overlay is unavailable.
+    if (ui.display.value === 'heat' && typeof L.heatLayer !== 'function') {
+      console.warn('Heat overlay unavailable; switching to count bubbles.');
+      ui.display.value = 'bubbles';
+    }
     if (ui.display.value === 'heat') {
       layers.heat = L.heatLayer(data.points.map(point => [
         point.lat,
