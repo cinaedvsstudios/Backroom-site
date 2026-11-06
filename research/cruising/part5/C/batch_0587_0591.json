@@ -1,0 +1,618 @@
+{
+  "_meta": {
+    "title": "Backroom Part 5 Worker C immutable research checkpoint",
+    "section": "C",
+    "range_start": 587,
+    "range_end": 591,
+    "count": 5,
+    "created_berlin": "2026-11-06",
+    "source_alignment": "research/cruising/cross_source_alignment_2026-11-06.json",
+    "research_only": true,
+    "check_cutoff_recent": "2025-11-06",
+    "source_status_definitions": {
+      "linked_page_matched": "Source carries matching named listing; not current-activity confirmation",
+      "searched_no_match": "No match in searches and collected archive, not comprehensive proof",
+      "unavailable_or_blocked": "Unable to examine source",
+      "not_checked": "No attempt made"
+    }
+  },
+  "records": [
+    {
+      "index": 587,
+      "id": "GC1-GAP-LUCERNE-06",
+      "name": "Eichwald",
+      "city": "Lucerne",
+      "country": "Switzerland",
+      "source_count_original": 1,
+      "source_category": "woodland / park",
+      "original_source_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/gap_fill_scrape_1.json",
+          "i": 88,
+          "u": "https://www.gays-cruising.com/en/cruising/eichwald_luzern_schweiz_18819"
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+            "https://www.gays-cruising.com/en/cruising/eichwald_luzern_schweiz_18819"
+          ],
+          "inspection": "Index listing located; detail content accessible only for Eichwald. The remaining candidate detail pages were linked by the index but direct retrieval returned cache-miss.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        }
+      ],
+      "source_description_paraphrase": "Eichwald is a small wooded area in Lucerne. Its Gays-Cruising entry calls it a secluded woodland location and labels the afternoon period, medium visitor influx and high privacy; these are undated directory claims, not verified current patterns.",
+      "extra_evidence_urls": [
+        {
+          "url": "https://www.gays-cruising.com/de/cruising/eichwald_bunker_luzern_schweiz_56106",
+          "kind": "directory_nearby_different_area",
+          "finding": "The Eichwald Bunker listing expressly says the bunker and Eichwald forest are different locations."
+        }
+      ],
+      "place_identity_status": "directory_named_location_only",
+      "activity_evidence": {
+        "recent_cutoff_inclusive": "2025-11-06",
+        "dated_recent_visitor_activity_reports": [],
+        "older_dated_posts": [
+          {
+            "date": "2025-08-04",
+            "type": "visitor_question_not_visit_confirmation",
+            "note": "A commenter asked whether anyone was there on the day."
+          },
+          {
+            "date": "2025-07-05",
+            "type": "visitor_question_not_visit_confirmation",
+            "note": "A commenter asked when the place is active."
+          },
+          {
+            "date": "2025-05-26",
+            "type": "visitor_observation_unverified",
+            "note": "A commenter remarked it seemed marshy at that time."
+          }
+        ],
+        "directory_claim": "Undated directory label; presence in a list is not evidence of actual visits.",
+        "independently_verified_current_activity": false,
+        "crowd_or_hours_claims_verified": false,
+        "last_confirmed_cruising_visit_date": null
+      },
+      "access_information": {
+        "type": "woodland",
+        "verification": "Exact public right of entry, opening/access restrictions and permitted conduct not independently established",
+        "caution": "Do not infer that public sexual activity is authorised."
+      },
+      "duplicates_or_aliases": [
+        {
+          "name": "Eichwald Bunker",
+          "relation": "nearby_but_explicitly_distinct",
+          "url": "https://www.gays-cruising.com/de/cruising/eichwald_bunker_luzern_schweiz_56106"
+        }
+      ],
+      "assessment": "retain_candidate_research_only_no_verified_recent_activity",
+      "research_checked_berlin": "2026-11-06",
+      "limitations": "Preserved original directory lead. Independent place verification is not independent evidence of cruising. None of these records is approved for publication."
+    },
+    {
+      "index": 588,
+      "id": "GC1-GAP-LUCERNE-09",
+      "name": "Reusszopf",
+      "city": "Lucerne",
+      "country": "Switzerland",
+      "source_count_original": 1,
+      "source_category": "riverside recreation area",
+      "original_source_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/gap_fill_scrape_1.json",
+          "i": 91,
+          "u": "https://www.gays-cruising.com/en/cruising/reusszopf_luzern_schweiz_41900"
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+            "https://www.gays-cruising.com/en/cruising/reusszopf_luzern_schweiz_41900"
+          ],
+          "inspection": "Index listing located; detail content accessible only for Eichwald. The remaining candidate detail pages were linked by the index but direct retrieval returned cache-miss.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        }
+      ],
+      "source_description_paraphrase": "Reusszopf is a riverside leisure area where the Kleine Emme joins the Reuss, with green space, a play area, picnic facilities and public toilets. The cruising-specific mention is an undated single-directory entry; no current cruising or attendance pattern was verified.",
+      "extra_evidence_urls": [
+        {
+          "url": "https://www.luzernnord.ch/gebietsmanagement/gebiete/reusszopf",
+          "kind": "independent_place_confirmation",
+          "finding": "LuzernNord identifies Reusszopf as a public recreational area, with a playground, sports areas, barbecues and a modern WC."
+        }
+      ],
+      "place_identity_status": "independently_verified_place",
+      "activity_evidence": {
+        "recent_cutoff_inclusive": "2025-11-06",
+        "dated_recent_visitor_activity_reports": [],
+        "older_dated_posts": [],
+        "directory_claim": "Undated directory label; presence in a list is not evidence of actual visits.",
+        "independently_verified_current_activity": false,
+        "crowd_or_hours_claims_verified": false,
+        "last_confirmed_cruising_visit_date": null
+      },
+      "access_information": {
+        "type": "public recreational park",
+        "verification": "Park itself documented; individual sections, restroom opening and permitted behavior not confirmed",
+        "caution": "Family recreation space; do not interpret directory presence as permission for sexual activity."
+      },
+      "duplicates_or_aliases": [],
+      "assessment": "retain_candidate_research_only_no_verified_recent_activity",
+      "research_checked_berlin": "2026-11-06",
+      "limitations": "Preserved original directory lead. Independent place verification is not independent evidence of cruising. None of these records is approved for publication."
+    },
+    {
+      "index": 589,
+      "id": "GC1-GAP-LUCERNE-10",
+      "name": "öffentliches Pissoir/Maihof-Bushaltestelle \"Maihof\"",
+      "city": "Lucerne",
+      "country": "Switzerland",
+      "source_count_original": 1,
+      "source_category": "claimed public urinal / transit stop",
+      "original_source_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/gap_fill_scrape_1.json",
+          "i": 92,
+          "u": "https://www.gays-cruising.com/en/luzern/luzern/switzerland"
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+            "https://www.gays-cruising.com/en/cruising/offentliches_pissoirmaihof_bushaltestelle_maihof_luzern_schweiz_44503"
+          ],
+          "inspection": "Index listing located; detail content accessible only for Eichwald. The remaining candidate detail pages were linked by the index but direct retrieval returned cache-miss.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        }
+      ],
+      "source_description_paraphrase": "A Gays-Cruising index points to a purported public urinal near the Maihof bus stop in Lucerne. The exact facility, its precise position, access and continued operation could not be independently confirmed; the named neighbourhood alone is insufficient.",
+      "extra_evidence_urls": [
+        {
+          "url": "https://www.stadtluzern.ch/dienstleistungeninformation/85756",
+          "kind": "municipal_general_facilities",
+          "finding": "The City of Lucerne maintains an inventory of public WCs; this does not establish a Maihof urinal at the claimed location."
+        }
+      ],
+      "place_identity_status": "area_only_not_exact_facility",
+      "activity_evidence": {
+        "recent_cutoff_inclusive": "2025-11-06",
+        "dated_recent_visitor_activity_reports": [],
+        "older_dated_posts": [],
+        "directory_claim": "Undated directory label; presence in a list is not evidence of actual visits.",
+        "independently_verified_current_activity": false,
+        "crowd_or_hours_claims_verified": false,
+        "last_confirmed_cruising_visit_date": null
+      },
+      "access_information": {
+        "type": "claimed public restroom",
+        "verification": "Exact restroom unverified; municipal directory available for later spot-specific check",
+        "caution": "No proof of lawful cruising, privacy or current access."
+      },
+      "duplicates_or_aliases": [],
+      "assessment": "retain_candidate_research_only_no_verified_recent_activity",
+      "research_checked_berlin": "2026-11-06",
+      "limitations": "Preserved original directory lead. Independent place verification is not independent evidence of cruising. None of these records is approved for publication."
+    },
+    {
+      "index": 590,
+      "id": "GC1-GAP-LUCERNE-12",
+      "name": "Parkhaus Gütsch",
+      "city": "Lucerne",
+      "country": "Switzerland",
+      "source_count_original": 1,
+      "source_category": "managed parking garage",
+      "original_source_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/gap_fill_scrape_1.json",
+          "i": 94,
+          "u": "https://www.gays-cruising.com/en/luzern/luzern/switzerland"
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+            "https://www.gays-cruising.com/en/cruising/parkhaus_gutsch_luzern_schweiz_71493"
+          ],
+          "inspection": "Index listing located; detail content accessible only for Eichwald. The remaining candidate detail pages were linked by the index but direct retrieval returned cache-miss.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        }
+      ],
+      "source_description_paraphrase": "The Parkhaus am Gütsch is an operating multistorey garage at Baselstrasse 61A in Lucerne. The official operator documents 24-hour vehicle access and paid parking; the cruising claim remains an unsupported undated directory entry.",
+      "extra_evidence_urls": [
+        {
+          "url": "https://www.parking-luzern.ch/de/Parkhaeuser/Am-Guetsch2",
+          "kind": "official_place_confirmation",
+          "finding": "Parking operator confirms address Baselstrasse 61A, garage operating around the clock and parking regulations."
+        },
+        {
+          "url": "https://www.parking-luzern.ch/de/Parkvarianten/Variante/short-term-parking",
+          "kind": "official_pricing_reference",
+          "finding": "Operator lists short-stay paid parking, not special cruise access."
+        }
+      ],
+      "place_identity_status": "independently_verified_place",
+      "activity_evidence": {
+        "recent_cutoff_inclusive": "2025-11-06",
+        "dated_recent_visitor_activity_reports": [],
+        "older_dated_posts": [],
+        "directory_claim": "Undated directory label; presence in a list is not evidence of actual visits.",
+        "independently_verified_current_activity": false,
+        "crowd_or_hours_claims_verified": false,
+        "last_confirmed_cruising_visit_date": null
+      },
+      "access_information": {
+        "type": "commercial managed parking",
+        "verification": "Official 24/7 vehicle entry; pedestrian access and internal toilets not established",
+        "caution": "Managed property; no permission for sexual use established."
+      },
+      "duplicates_or_aliases": [],
+      "assessment": "retain_candidate_research_only_no_verified_recent_activity",
+      "research_checked_berlin": "2026-11-06",
+      "limitations": "Preserved original directory lead. Independent place verification is not independent evidence of cruising. None of these records is approved for publication."
+    },
+    {
+      "index": 591,
+      "id": "GC1-GAP-LUCERNE-13",
+      "name": "WC Manor",
+      "city": "Lucerne",
+      "country": "Switzerland",
+      "source_count_original": 1,
+      "source_category": "department-store restroom",
+      "original_source_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/gap_fill_scrape_1.json",
+          "i": 95,
+          "u": "https://www.gays-cruising.com/en/luzern/luzern/switzerland"
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "source_urls": [
+            "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+            "https://www.gays-cruising.com/en/cruising/wc_manor_luzern_svizzera_131658"
+          ],
+          "inspection": "Index listing located; detail content accessible only for Eichwald. The remaining candidate detail pages were linked by the index but direct retrieval returned cache-miss.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "source_urls": [],
+          "inspection": "No name-and-city match in archived collected records or targeted indexed website search; source archive coverage may be incomplete, so this is not proof of absence.",
+          "date_checked_berlin": "2026-11-06"
+        }
+      ],
+      "source_description_paraphrase": "A directory refers to toilets at the Manor department store in Lucerne. Manor confirms its current store at Weggisgasse 5, and independent historical reports confirm toilets existed there, but no credible current cruising evidence or unrestricted restroom access has been verified.",
+      "extra_evidence_urls": [
+        {
+          "url": "https://www.manor.ch/de/store-finder/store/luz",
+          "kind": "official_store_confirmation",
+          "finding": "Current department store at Weggisgasse 5, with retail opening days and hours."
+        },
+        {
+          "url": "https://www.nau.ch/news/schweiz/angewiderte-manor-kundin-hinterlasst-zettel-auf-laden-toilette-66474774",
+          "kind": "dated_restroom_existence",
+          "finding": "21 April 2023 report about the store toilets; does not document cruising."
+        }
+      ],
+      "place_identity_status": "store_and_historical_restroom_verified",
+      "activity_evidence": {
+        "recent_cutoff_inclusive": "2025-11-06",
+        "dated_recent_visitor_activity_reports": [],
+        "older_dated_posts": [],
+        "directory_claim": "Undated directory label; presence in a list is not evidence of actual visits.",
+        "independently_verified_current_activity": false,
+        "crowd_or_hours_claims_verified": false,
+        "last_confirmed_cruising_visit_date": null
+      },
+      "access_information": {
+        "type": "commercial in-store restroom",
+        "verification": "Store exists and ordinary public trading hours documented; access to toilets and any restrictions not confirmed as of this cycle",
+        "caution": "Store rules and consent apply; no right to use premises for sexual activity established."
+      },
+      "duplicates_or_aliases": [],
+      "assessment": "retain_candidate_research_only_no_verified_recent_activity",
+      "research_checked_berlin": "2026-11-06",
+      "limitations": "Preserved original directory lead. Independent place verification is not independent evidence of cruising. None of these records is approved for publication."
+    }
+  ]
+}
