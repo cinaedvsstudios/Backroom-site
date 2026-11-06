@@ -316,7 +316,7 @@
       ],
       "section": "City-specific Cruising category (Rubrik 17), not the full Gay Index of all businesses",
       "started_berlin": "2026-11-06",
-      "status": "in_progress",
+      "status": "priority_city_pass_complete_with_gaps",
       "city_pages_checked": [
         {
           "city": "Berlin",
@@ -413,15 +413,83 @@
           "page": 0,
           "url": "https://gay-szene.net/gay-cruising-in-mannheim/174/17/rubrik.html",
           "count": 8
+        },
+        {
+          "city": "Duisburg",
+          "page": 0,
+          "url": "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+          "count": 9
+        },
+        {
+          "city": "Regensburg",
+          "page": 0,
+          "url": "https://gay-szene.net/gay-cruising-in-regensburg/220/17/rubrik.html",
+          "count": 3
+        },
+        {
+          "city": "Essen",
+          "page": 0,
+          "url": "https://gay-szene.net/gay-cruising-in-essen/79/17/rubrik.html",
+          "count": 2
+        },
+        {
+          "city": "Dortmund",
+          "page": 0,
+          "url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+          "count": 12
+        },
+        {
+          "city": "Saarbrücken",
+          "page": 0,
+          "url": "https://gay-szene.net/gay-cruising-in-saarbruecken/233/17/rubrik.html",
+          "count": 7
+        },
+        {
+          "city": "Karlsruhe",
+          "page": 0,
+          "url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+          "count": 8
+        },
+        {
+          "city": "Brühl",
+          "page": 0,
+          "url": "https://gay-szene.net/gay-cruising-in-bruehl/429/17/rubrik.html",
+          "count": 3
+        },
+        {
+          "city": "Mörfelden-Walldorf",
+          "page": 0,
+          "url": "https://gay-szene.net/gay-cruising-in-moerfelden-walldorf/357/17/rubrik.html",
+          "count": 2
+        },
+        {
+          "city": "Rottweil",
+          "page": 0,
+          "url": "https://gay-szene.net/gay-cruising-in-rottweil/232/17/rubrik.html",
+          "count": 2
+        },
+        {
+          "city": "Efringen-Kirchen",
+          "page": 0,
+          "url": "https://gay-szene.net/gay-cruising-in-loerrach/167/17/rubrik.html",
+          "count": 1,
+          "source_city_label": "Lörrach - Kleinkems"
         }
       ],
-      "city_pages_unavailable": [],
-      "results_total": 211,
+      "city_pages_unavailable": [
+        {
+          "city": "Berlin",
+          "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/3/rubrik.html",
+          "reason": "Additional pagination was not available during this research pass; 60 Berlin records from first three pages are recorded."
+        }
+      ],
+      "results_total": 260,
       "raw_2026_comments": "Detailed forum comments to be evaluated per location in final verification; listing alone does not prove current operation.",
       "progress_notes": [
         "13 major German cities added from city-specific Cruising pages, including Berlin first three pages (page 4 inaccessible), Hamburg two pages.",
         "For Scrape 2, duplicate checks are preliminary exact/limited-alias matches; additional geographic deduplication and current operation review still needed.",
-        "Public restroom, gym, pool, rail stations and other facilities are only source findings, not automatically eligible public Backroom cruising guide entries."
+        "Public restroom, gym, pool, rail stations and other facilities are only source findings, not automatically eligible public Backroom cruising guide entries.",
+        "Added nine more German city pages and one Efringen-Kirchen location indexed on Lörrach page."
       ],
       "data_file": "research/cruising/scrape_2.json"
     }
@@ -11341,7 +11409,7 @@
     {
       "country": "Germany",
       "cruising_now": 13,
-      "proposals": 210,
+      "proposals": 256,
       "cities": [
         {
           "city": "Berlin",
@@ -12183,7 +12251,7 @@
         {
           "city": "Brühl",
           "cruising_now": 0,
-          "proposals": 1,
+          "proposals": 3,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -12192,16 +12260,44 @@
               "city": "Brühl",
               "country": "Germany",
               "source_ids": [
-                "scrape_1"
+                "scrape_1",
+                "scrape_2"
               ],
               "source_category": "Rest area",
               "source_url": "https://www.gays-cruising.com/en/germany",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-BRUHL-002",
+              "name": "Bleibtreusee",
+              "city": "Brühl",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-bruehl/429/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-BRUHL-003",
+              "name": "GMK Bi-Club Brühl",
+              "city": "Brühl",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-bruehl/429/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Adult club: separate from outdoor cruising spots; assess venue type."
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_2": 3
           }
         },
         {
@@ -12372,6 +12468,173 @@
           }
         },
         {
+          "city": "Dortmund",
+          "cruising_now": 0,
+          "proposals": 12,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GS2-DE-DORTMUND-001",
+              "name": "A45 Parkplatz - Flöz Mausegatt und Johannes Erbstollen",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-002",
+              "name": "Hengsteysee",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Source describes no cruising at this location; disqualify unless independent current evidence contradicts."
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-003",
+              "name": "Klappe am Hoeschpark",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Review private/regulated venue access and category before publishing."
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-004",
+              "name": "P & R Eichlinghofen",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-005",
+              "name": "Parkplatz A45 Dortmund Westerfilde beidseitig",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-006",
+              "name": "Rastplatz Beverbach an der A 40 (Ruhrschnellweg)",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-007",
+              "name": "Rastplatz Kleine Herrenthey an der A 2",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-008",
+              "name": "Rombergpark",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-009",
+              "name": "Rosenterrassen",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-010",
+              "name": "Solebad Wischlingen",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Review private/regulated venue access and category before publishing."
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-011",
+              "name": "Technische Universität Dortmund",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Review private/regulated venue access and category before publishing."
+            },
+            {
+              "proposal_id": "GS2-DE-DORTMUND-012",
+              "name": "Westpark Eingang Möllerstraße",
+              "city": "Dortmund",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_2": 12
+          }
+        },
+        {
           "city": "Dresden",
           "cruising_now": 0,
           "proposals": 9,
@@ -12502,7 +12765,7 @@
         {
           "city": "Duisburg",
           "cruising_now": 0,
-          "proposals": 1,
+          "proposals": 10,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -12517,10 +12780,128 @@
               "source_url": "https://www.gays-cruising.com/en/germany",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DUISBURG-001",
+              "name": "A57 Parkplatz zwischen Moers-Hülsdonk und Kreuz Lamp Lintfort",
+              "city": "Duisburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DUISBURG-002",
+              "name": "Kantpark",
+              "city": "Duisburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DUISBURG-003",
+              "name": "Landschaftspark Nord, ehemalige Stahlhütte",
+              "city": "Duisburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DUISBURG-004",
+              "name": "Loheidesee",
+              "city": "Duisburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DUISBURG-005",
+              "name": "Parkplatz A3 Abfahrt Kaiserberg",
+              "city": "Duisburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DUISBURG-006",
+              "name": "Parkplatz A3 Stockweg",
+              "city": "Duisburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DUISBURG-007",
+              "name": "Rahmer See",
+              "city": "Duisburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DUISBURG-008",
+              "name": "Rheinufer an der Brücke der Solidarität",
+              "city": "Duisburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-DUISBURG-009",
+              "name": "Ruhr-Werthacker",
+              "city": "Duisburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_2": 9
           }
         },
         {
@@ -12730,7 +13111,7 @@
         {
           "city": "Efringen-Kirchen",
           "cruising_now": 0,
-          "proposals": 2,
+          "proposals": 3,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -12758,19 +13139,62 @@
               "source_url": "https://www.gays-cruising.com/en/germany",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-EFRINGEN-KIRCHEN-001",
+              "name": "Parkplatz Efringen-Kirchen",
+              "city": "Efringen-Kirchen",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-loerrach/167/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Source indexes under Lörrach/Kleinkems; location is Efringen-Kirchen; review exact coordinates."
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_2": 1
           }
         },
         {
           "city": "Essen",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 2,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GS2-DE-ESSEN-001",
+              "name": "Helbingbrücken",
+              "city": "Essen",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-essen/79/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-ESSEN-002",
+              "name": "Segeroth Park",
+              "city": "Essen",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-essen/79/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_2": 2
+          }
         },
         {
           "city": "Frankfurt am Main",
@@ -13508,10 +13932,117 @@
         {
           "city": "Karlsruhe",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 8,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GS2-DE-KARLSRUHE-001",
+              "name": "A5 - Parkplatz Kreuzlach/Höfelschlag",
+              "city": "Karlsruhe",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-KARLSRUHE-002",
+              "name": "Baggersee Epplesee",
+              "city": "Karlsruhe",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Source indicates previous cruising activity may no longer be current; check 2026 reports."
+            },
+            {
+              "proposal_id": "GS2-DE-KARLSRUHE-003",
+              "name": "Baggersee Grötzingen",
+              "city": "Karlsruhe",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-KARLSRUHE-004",
+              "name": "Fächerbad",
+              "city": "Karlsruhe",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Review private/regulated venue access and category before publishing."
+            },
+            {
+              "proposal_id": "GS2-DE-KARLSRUHE-005",
+              "name": "Nymphengarten",
+              "city": "Karlsruhe",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-KARLSRUHE-006",
+              "name": "Rastplatz Birkenwäldle an der A 8",
+              "city": "Karlsruhe",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-KARLSRUHE-007",
+              "name": "Rheinhafen Karlsruhe",
+              "city": "Karlsruhe",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-KARLSRUHE-008",
+              "name": "Turmberg",
+              "city": "Karlsruhe",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_2": 8
+          }
         },
         {
           "city": "Kassel",
@@ -13789,7 +14320,7 @@
         {
           "city": "Mörfelden-Walldorf",
           "cruising_now": 0,
-          "proposals": 1,
+          "proposals": 3,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -13804,10 +14335,37 @@
               "source_url": "https://www.gays-cruising.com/en/germany",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-MORFELDEN-WALLDORF-001",
+              "name": "Bornbruchsee",
+              "city": "Mörfelden-Walldorf",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-moerfelden-walldorf/357/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-MORFELDEN-WALLDORF-002",
+              "name": "Walldorfer Badesee",
+              "city": "Mörfelden-Walldorf",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-moerfelden-walldorf/357/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_2": 2
           }
         },
         {
@@ -14208,7 +14766,7 @@
         {
           "city": "Regensburg",
           "cruising_now": 0,
-          "proposals": 1,
+          "proposals": 3,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -14217,22 +14775,50 @@
               "city": "Regensburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_1"
+                "scrape_1",
+                "scrape_2"
               ],
               "source_category": "Rest area",
               "source_url": "https://www.gays-cruising.com/en/germany",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-REGENSBURG-001",
+              "name": "Almer Weiher",
+              "city": "Regensburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-regensburg/220/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-REGENSBURG-003",
+              "name": "Stadtpark",
+              "city": "Regensburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-regensburg/220/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_2": 3
           }
         },
         {
           "city": "Rottweil",
           "cruising_now": 0,
-          "proposals": 1,
+          "proposals": 2,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -14241,25 +14827,134 @@
               "city": "Rottweil",
               "country": "Germany",
               "source_ids": [
-                "scrape_1"
+                "scrape_1",
+                "scrape_2"
               ],
               "source_category": "Rest area",
               "source_url": "https://www.gays-cruising.com/en/germany",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-ROTTWEIL-002",
+              "name": "WC hinter dem alten Rathaus",
+              "city": "Rottweil",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-rottweil/232/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Review private/regulated venue access and category before publishing."
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_2": 2
           }
         },
         {
           "city": "Saarbrücken",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 7,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GS2-DE-SAARBRUCKEN-001",
+              "name": "Bürgerpark",
+              "city": "Saarbrücken",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-saarbruecken/233/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-SAARBRUCKEN-002",
+              "name": "Calypso Sauna",
+              "city": "Saarbrücken",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-saarbruecken/233/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Review private/regulated venue access and category before publishing."
+            },
+            {
+              "proposal_id": "GS2-DE-SAARBRUCKEN-003",
+              "name": "Geisterbrücke",
+              "city": "Saarbrücken",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-saarbruecken/233/17/rubrik.html",
+              "status": "unverified",
+              "notes": "Possible protected natural area; do not publish without access and legal review."
+            },
+            {
+              "proposal_id": "GS2-DE-SAARBRUCKEN-004",
+              "name": "Leinpfad an der Mettlacher Straße",
+              "city": "Saarbrücken",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-saarbruecken/233/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-SAARBRUCKEN-005",
+              "name": "Ostspange",
+              "city": "Saarbrücken",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-saarbruecken/233/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-SAARBRUCKEN-006",
+              "name": "Parkplatz Neuhaus an der A 1",
+              "city": "Saarbrücken",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-saarbruecken/233/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            },
+            {
+              "proposal_id": "GS2-DE-SAARBRUCKEN-007",
+              "name": "Prinzenweiher",
+              "city": "Saarbrücken",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_2"
+              ],
+              "source_category": "Cruising",
+              "source_url": "https://gay-szene.net/gay-cruising-in-saarbruecken/233/17/rubrik.html",
+              "status": "unverified",
+              "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_2": 7
+          }
         },
         {
           "city": "Stuttgart",
