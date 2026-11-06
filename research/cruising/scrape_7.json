@@ -4,9 +4,9 @@
     "site": "Squirt.org",
     "base_url": "https://www.squirt.org/",
     "created_berlin": "2026-11-06",
-    "status": "manual_city_search_and_uk_regional_name_index_imported__research_only",
+    "status": "business_venues_removed_from_active_scrape_7__source_frequency_flagged",
     "collection_method": "User-pasted Squirt.org city-proximity search result exports. Entries extend beyond each city because results include wide search radii. Additional wide-region UK name-only bulk export imported separately, preserving 1680 source appearances.",
-    "records_collected": 1827,
+    "records_collected": 1447,
     "countries_covered": null,
     "meaning_of_empty": null,
     "import_notes": "The pasted Link column is blank for every record; no detail URLs or confirmed Squirt listing IDs may be fabricated. Photo IDs are separate unconfirmed hints extracted from a subset of provided photo paths. Preserve dates verbatim. De-duplicate raw search appearances but not geographic subareas without review.",
@@ -71,7 +71,15 @@
     ],
     "geography_correction": "Viale Venezia and Via Chilesotti are Bassano del Grappa, supported by independent public geographic sources; earlier Viale Venezia Brescia hint corrected.",
     "large_bulk_file_linked": "research/cruising/scrape_7_uk_list_2026-11-06.json",
-    "activity_caveat": "Squirt reply timestamps and name matches do not independently validate visits; same-source repeats cannot be counted as additional sources."
+    "activity_caveat": "Squirt reply timestamps and name matches do not independently validate visits; same-source repeats cannot be counted as additional sources.",
+    "active_unique_names": 1447,
+    "active_city_export_records": 152,
+    "active_uk_bulk_records": 1335,
+    "removed_businesses_from_city_export": 53,
+    "removed_businesses_from_uk_export": 345,
+    "active_source_evidence_method": "Distinct domains only; multi-Squirt appearances are same-site repeats, not independent verification.",
+    "original_row_appearances_before_exclusions": 1971,
+    "business_exclusion_audit": "research/cruising/source_frequency_audit_2026-11-06.json"
   },
   "countries": [],
   "batches": [
@@ -150,7 +158,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Lecconia beach",
@@ -181,38 +197,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Steam Sauna",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "Jul 03, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        1,
-        6,
-        7
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "conflicting_source_values": [
-        {
-          "category": "Bathhouses, Saunas",
-          "last": "Jul 03, 2026"
-        },
-        {
-          "category": "Bathhouses, Saunas",
-          "last": "Jul 03, 2026"
-        }
-      ],
-      "photo_id_from_url": "0000221914",
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Via Ripa di Meana",
@@ -247,7 +240,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Parco Ducale, Parma",
@@ -277,7 +278,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Pineta della Feniglia",
@@ -308,43 +317,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Sauna Velluto",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "1 year ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        1,
-        5,
-        6,
-        7
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "conflicting_source_values": [
-        {
-          "category": "Bathhouses, Saunas",
-          "last": "1 year ago"
-        },
-        {
-          "category": "Bathhouses, Saunas",
-          "last": "1 year ago"
-        },
-        {
-          "category": "Bathhouses, Saunas",
-          "last": "1 year ago"
-        }
-      ],
-      "photo_id_from_url": "0000221746",
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Via Lungo Po Europa",
@@ -374,7 +355,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Via Panoramica",
@@ -409,38 +398,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Liquid Club",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "Oct 08, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        1,
-        6,
-        7
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "conflicting_source_values": [
-        {
-          "category": "Bathhouses, Saunas",
-          "last": "Oct 08, 2026"
-        },
-        {
-          "category": "Bathhouses, Saunas",
-          "last": "Oct 08, 2026"
-        }
-      ],
-      "photo_id_from_url": "0000003963",
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Piazza San Marco",
@@ -477,7 +443,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Venice — prominent landmark but too broad to accept cruising activity from an index alone.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Punta Sabbioni Forest",
@@ -523,7 +497,21 @@
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
       "priority_review_note": "Cavallino-Treporti, not Venice — overlaps existing Pineta Punta Sabbioni proposal.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "GC1-EX-ITALY-CAVALLINO-TREPORTI-PINETA-PUNTA-SABBIONI",
+          "name": "Pineta Punta Sabbioni",
+          "city": "Cavallino-Treporti"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Zona Industriale",
@@ -553,7 +541,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Via Torrelunga and Via Spalto San Marco",
@@ -584,7 +580,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Brescia, not Venice — location corroborated by Brescia municipal geography, not cruising activity.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Viale Italia",
@@ -614,7 +618,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Via Chilesotti",
@@ -655,7 +667,15 @@
         "https://www.arcigay.it/wp-content/uploads/TravelForGay.pdf",
         "https://www.italiamappe.it/stradario/bassano-del-grappa/viale-venezia/"
       ],
-      "priority_review_note": "Bassano del Grappa, not Venice/Brescia. Older 2008 reference does not confirm current activity; Squirt index latest reply is not necessarily a visit."
+      "priority_review_note": "Bassano del Grappa, not Venice/Brescia. Older 2008 reference does not confirm current activity; Squirt index latest reply is not necessarily a visit.",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Viale Venezia",
@@ -696,7 +716,15 @@
         "https://www.arcigay.it/wp-content/uploads/TravelForGay.pdf",
         "https://www.italiamappe.it/stradario/bassano-del-grappa/viale-venezia/"
       ],
-      "priority_review_note": "Bassano del Grappa, not Venice/Brescia. Older 2008 reference does not confirm current activity; Squirt index latest reply is not necessarily a visit."
+      "priority_review_note": "Bassano del Grappa, not Venice/Brescia. Older 2008 reference does not confirm current activity; Squirt index latest reply is not necessarily a visit.",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Piazzale Del Galoppatoio",
@@ -737,130 +765,21 @@
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
       "priority_review_note": "Rome, Italy — part of existing Villa Borghese Hold entry; cannot treat a reply as reason to unflag.",
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "101 Club",
-      "source_category": "Bars, Clubs",
-      "latest_reply_as_shown": "Oct 19, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        1,
-        5,
-        6
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "conflicting_source_values": [
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
         {
-          "category": "Bars, Clubs",
-          "last": "Oct 19, 2026"
-        },
-        {
-          "category": "Bars, Clubs",
-          "last": "Oct 19, 2026"
+          "id": "CRU-ROM-VILBOR-02",
+          "name": "Villa Borghese",
+          "city": "Rome"
         }
       ],
-      "photo_id_from_url": "0000194534",
-      "city_hint": "Rome",
-      "country_hint": "Italy",
-      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Censured Club Roma",
-      "source_category": "Bars, Clubs",
-      "latest_reply_as_shown": "Oct 20, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        1,
-        5,
-        6
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "conflicting_source_values": [
-        {
-          "category": "Bars, Clubs",
-          "last": "Oct 20, 2026"
-        },
-        {
-          "category": "Bars, Clubs",
-          "last": "Oct 20, 2026"
-        }
-      ],
-      "city_hint": "Rome",
-      "country_hint": "Italy",
-      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Il Diavolo Dentro - Cruising Club",
-      "source_category": "Bars, Clubs",
-      "latest_reply_as_shown": "Oct 16, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        1,
-        5,
-        6
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "conflicting_source_values": [
-        {
-          "category": "Bars, Clubs",
-          "last": "Oct 16, 2026"
-        },
-        {
-          "category": "Bars, Clubs",
-          "last": "Oct 16, 2026"
-        }
-      ],
-      "photo_id_from_url": "0000232598",
-      "city_hint": "Rome",
-      "country_hint": "Italy",
-      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Apollion Sauna",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "Oct 18, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        1,
-        5,
-        6
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "conflicting_source_values": [
-        {
-          "category": "Bathhouses, Saunas",
-          "last": "Oct 18, 2026"
-        },
-        {
-          "category": "Bathhouses, Saunas",
-          "last": "Oct 18, 2026"
-        }
-      ],
-      "photo_id_from_url": "0000197731",
-      "city_hint": "Rome",
-      "country_hint": "Italy",
-      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Villa Gordiani",
@@ -899,7 +818,17 @@
         "https://www.crusit.com/blog/cruising-in-rome",
         "https://queereurope.com/lgbtq-guide-to-rome/"
       ],
-      "geography_verified_at_place_level": true
+      "geography_verified_at_place_level": true,
+      "evidence_flag": "multiple_sites",
+      "distinct_source_site_count": 3,
+      "source_websites": [
+        "crusit.com",
+        "queereurope.com",
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": "SQ7-ITA-ROM-VILGOR-01",
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Punta Kriz Naturist Beach",
@@ -929,7 +858,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Distributore STOIL",
@@ -959,7 +896,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Via Lambro (Peschiera Borromeo, MI)",
@@ -989,7 +934,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Valalta naturist resort Croatia",
@@ -1019,7 +972,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Ottobiano - Sosta Camion SP211 (Vicino Grande Azienda)",
@@ -1049,37 +1010,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Marriott Milan",
-      "source_category": "Hotels, Resorts, Campgrounds",
-      "latest_reply_as_shown": "Mar 31, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        1,
-        6,
-        7
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "conflicting_source_values": [
-        {
-          "category": "Hotels, Resorts, Campgrounds",
-          "last": "Mar 31, 2026"
-        },
-        {
-          "category": "Hotels, Resorts, Campgrounds",
-          "last": "Mar 31, 2026"
-        }
-      ],
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "private_or_managed_property_hold",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Parco Nord",
@@ -1117,7 +1056,18 @@
         "https://www.gay.it/cruising-milano",
         "https://www.wearegaylyplanet.com/cruising-milano/"
       ],
-      "geography_verified_at_place_level": true
+      "geography_verified_at_place_level": true,
+      "evidence_flag": "multiple_sites",
+      "distinct_source_site_count": 4,
+      "source_websites": [
+        "cruisinggays.com",
+        "gay.it",
+        "squirt.org",
+        "wearegaylyplanet.com"
+      ],
+      "exact_master_proposal_id": "SQ7-ITA-MIL-PARNOR-01",
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Plomin fkk",
@@ -1147,7 +1097,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Via Raffaello",
@@ -1177,7 +1135,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Via Samaden",
@@ -1207,7 +1173,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Tour du Capitello",
@@ -1225,7 +1199,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Balzi Rossi",
@@ -1243,7 +1225,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Roseraie Princess Grace",
@@ -1261,7 +1251,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Villefranche Sur Mer",
@@ -1279,7 +1277,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Parc du mont boron",
@@ -1298,25 +1304,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Nice — new park lead; requires specific corroboration.",
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "G.I. Sex Shop",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Oct 26, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        1
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Viale Giosue Carducci",
@@ -1346,7 +1342,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Princes Street Gardens Ross Bandstand Public Toilets (Edinburgh)",
@@ -1375,7 +1379,21 @@
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
       "priority_review_note": "Edinburgh — subarea within existing Princes Street Gardens proposal, not automatically separate.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "CG8-GAP-62",
+          "name": "Princes Street Gardens",
+          "city": "Edinburgh"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Princes Street Gardens West Public Toilets (Edinburgh)",
@@ -1404,7 +1422,21 @@
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
       "priority_review_note": "Edinburgh — subarea within existing Princes Street Gardens proposal, not automatically separate.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "CG8-GAP-62",
+          "name": "Princes Street Gardens",
+          "city": "Edinburgh"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "The Royal Scottish Academy",
@@ -1422,7 +1454,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Stockbridge Public Toilets",
@@ -1448,7 +1488,15 @@
         "https://www.cruisinggays.com/map/?cityid=3733&filter=11",
         "https://www.edinburgh.gov.uk/publictoilets"
       ],
-      "geography_verified_at_place_level": true
+      "geography_verified_at_place_level": true,
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": "SQ7-GB-EDI-STOCKWC-01",
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "NCP king stables road",
@@ -1466,79 +1514,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Steamworks Sauna (Edinburgh)",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "6 hours ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Village Apartments (Edinburgh)",
-      "source_category": "Hotels, Resorts, Campgrounds",
-      "latest_reply_as_shown": "2 years ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "private_or_managed_property_hold",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "The Balmoral Spa (Edinburgh)",
-      "source_category": "Gyms",
-      "latest_reply_as_shown": "Feb 09, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "candidate_unverified_needs_detail_url",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Sheraton Grand Hotel & Spa (Edinburgh)",
-      "source_category": "Gyms",
-      "latest_reply_as_shown": "Jul 29, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "candidate_unverified_needs_detail_url",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Waverley Train Station Public Toilets (Edinburgh)",
@@ -1557,25 +1541,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Edinburgh — new named transit-facility lead; check access and policy.",
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "PureGym (Edinburgh Exchange Crescent)",
-      "source_category": "Gyms",
-      "latest_reply_as_shown": "17 hours ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "candidate_unverified_needs_detail_url",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "kickass grassmarkets male showers (near room 106)",
@@ -1593,25 +1567,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "The Gym (Edinburgh City)",
-      "source_category": "Gyms",
-      "latest_reply_as_shown": "Dec 01, 2025",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "candidate_unverified_needs_detail_url",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "St James Quarter Shopping Centre Toilets (Edinburgh)",
@@ -1630,7 +1594,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Edinburgh — new managed-facility lead; verify user access and activity independently.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "John Lewis Store Toilets (Edinburgh)",
@@ -1648,25 +1620,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Nuffield Health (Edinburgh Omni)",
-      "source_category": "Gyms",
-      "latest_reply_as_shown": "Sep 16, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "candidate_unverified_needs_detail_url",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Radisson Blu Spa (Edinburgh)",
@@ -1684,7 +1646,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Calton Hill",
@@ -1712,25 +1682,16 @@
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
       "priority_review_note": "Edinburgh — matches existing proposal; recent reply prompts source review.",
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "PureGym (Edinburgh Quartermile)",
-      "source_category": "Gyms",
-      "latest_reply_as_shown": "Jun 02, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "multiple_sites",
+      "distinct_source_site_count": 2,
+      "source_websites": [
+        "cruisinggays.com",
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "candidate_unverified_needs_detail_url",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": "CG8-GAP-58",
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Britannia Hotel Toilets (Edinburgh)",
@@ -1748,7 +1709,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Potterrow Dome Student Union Toilets",
@@ -1766,7 +1735,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Warriston Cemetery (Edinburgh)",
@@ -1784,7 +1761,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Teviot Row House Student Union Toilets",
@@ -1802,7 +1787,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Canongate Kirkyard (Edinburgh)",
@@ -1820,7 +1813,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "London Road Gardens",
@@ -1848,25 +1849,16 @@
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
       "priority_review_note": "Edinburgh — matches existing proposal, useful cross-source reference.",
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Pleasance Sports Complex & Gym (Dumbiedykes, Edinburgh)",
-      "source_category": "Gyms",
-      "latest_reply_as_shown": "Oct 18, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "multiple_sites",
+      "distinct_source_site_count": 2,
+      "source_websites": [
+        "gays-cruising.com",
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "candidate_unverified_needs_detail_url",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": "GC1-GAP-EDINBURG-04",
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Robert Burns Monument",
@@ -1884,7 +1876,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Edinburgh University Library Toilets",
@@ -1902,7 +1902,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "New Calton Cemetery",
@@ -1920,25 +1928,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Nuffield Health (Edinburgh Fountain Park)",
-      "source_category": "Gyms",
-      "latest_reply_as_shown": "17 hours ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "candidate_unverified_needs_detail_url",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Regent Road Park",
@@ -1957,7 +1955,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Edinburgh — possible Calton Hill adjacency; map review needed before separate proposal.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Bruntsfield Links Public Toilets (Edinburgh)",
@@ -1976,7 +1982,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Edinburgh — new named facility lead.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Meadows Public Toilets",
@@ -1995,7 +2009,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Edinburgh — new named facility lead.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Rosebank cemetery",
@@ -2013,7 +2035,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Dalry Cemetery (Edinburgh)",
@@ -2031,25 +2061,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "The Gym Group (Meadowbank)",
-      "source_category": "Gyms",
-      "latest_reply_as_shown": "Aug 03, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "candidate_unverified_needs_detail_url",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "North Merchiston Cemetery (Edinburgh)",
@@ -2067,7 +2087,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Napier University Toilets (Merchiston, Edinburgh)",
@@ -2085,25 +2113,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "PureGym Edinburgh Craigleith",
-      "source_category": "Gyms",
-      "latest_reply_as_shown": "Jan 14, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        2
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Edinburgh",
-      "country_hint": "United Kingdom",
-      "geo_basis": "Edinburgh search group; needs spot-specific check",
-      "assessment": "candidate_unverified_needs_detail_url",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Balantyne Trees (Edinburgh)",
@@ -2121,25 +2139,15 @@
       "geo_basis": "Edinburgh search group; needs spot-specific check",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Erotik Store Reiter",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Jan 15, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        3
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "A10 Lay-by - Northbound",
@@ -2157,7 +2165,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "A10 - Southbound",
@@ -2175,32 +2191,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Haus Romeo Alpine Gay Resort",
-      "source_category": "Hotels, Resorts, Campgrounds",
-      "latest_reply_as_shown": "1 year ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        3,
-        7
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "conflicting_source_values": [
-        {
-          "category": "Hotels, Resorts, Campgrounds",
-          "last": "1 year ago"
-        }
-      ],
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "private_or_managed_property_hold",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "An d. Fahre",
@@ -2218,43 +2217,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Erotixx - Rosenheimerstr.",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Jul 24, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        3
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Deutsche Eiche",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "Oct 20, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        3
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Munich",
-      "country_hint": "Germany",
-      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Munich Hauptbahnhof",
@@ -2272,43 +2243,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Erotixx - Theresienstr.",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Jun 24, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        3
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Erotixx - Poccistr",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Aug 09, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        3
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Scheidplatz",
@@ -2327,25 +2270,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Munich — identifiable station area; location details and legal access needed.",
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Muenchner Loewen Club",
-      "source_category": "Bars, Clubs",
-      "latest_reply_as_shown": "2 years ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        3
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Hawaii/FKK",
@@ -2375,7 +2308,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Ziirl Rest Stop",
@@ -2400,7 +2341,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Pendlerparkplatz Lappersdorf",
@@ -2418,7 +2367,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Schubert Park - Theatre Park",
@@ -2436,7 +2393,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Wolfzahnau auf der Kiesinsel",
@@ -2454,7 +2419,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Kaisersee",
@@ -2472,7 +2445,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Wertach / Schwimmschulstrabe",
@@ -2490,7 +2471,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Wolfzahnau",
@@ -2508,7 +2497,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Waldparkplatz zwischen A96 und Bad Wörishofen",
@@ -2526,55 +2523,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "District 35",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "1 year ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        3,
-        6,
-        7
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "conflicting_source_values": [
-        {
-          "category": "Bathhouses, Saunas",
-          "last": "1 year ago"
-        },
-        {
-          "category": "Bathhouses, Saunas",
-          "last": "1 year ago"
-        }
-      ],
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "World of Sex",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "1 year ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        3
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Parkplatz Gründlach A73 (northbound)",
@@ -2592,7 +2549,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "VFR Stadium",
@@ -2610,7 +2575,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Wienerberg Nudist Area",
@@ -2637,43 +2610,21 @@
       ],
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Hard On",
-      "source_category": "Bars, Clubs",
-      "latest_reply_as_shown": "2 years ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        3
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Romersauna",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "3 days ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        3
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "GC1-AUSTRIA-02",
+          "name": "Wienerberg",
+          "city": "Vienna"
+        }
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Rathaus Park",
@@ -2700,7 +2651,21 @@
       ],
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "GC1-AUSTRIA-05",
+          "name": "Rathauspark",
+          "city": "Vienna"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Wertheimstein Park",
@@ -2718,7 +2683,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Wertheimsteinpark",
@@ -2736,7 +2709,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Praterstern, Wien Toilets",
@@ -2755,7 +2736,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Vienna — new named public-facility lead.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Washroom Near Football Pitch",
@@ -2773,7 +2762,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Toter Grund",
@@ -2800,7 +2797,21 @@
       ],
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "GC1-AUSTRIA-10",
+          "name": "Donauinsel, Toter Grund",
+          "city": "Vienna"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Danube Island - Vienna",
@@ -2827,7 +2838,21 @@
       ],
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "GC1-AUSTRIA-10",
+          "name": "Donauinsel, Toter Grund",
+          "city": "Vienna"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Seberak Pond",
@@ -2845,7 +2870,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Parque de Maria Luisa",
@@ -2872,43 +2905,16 @@
       ],
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "El Bunker",
-      "source_category": "Bars, Clubs",
-      "latest_reply_as_shown": "Aug 03, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        4
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "multiple_sites",
+      "distinct_source_site_count": 2,
+      "source_websites": [
+        "gays-cruising.com",
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "The Cube urban",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "Aug 03, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        4
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": "GC1-GAP-SEVILLE-07",
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Santa Justa Train Station",
@@ -2936,7 +2942,21 @@
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
       "priority_review_note": "Seville — matches existing Estación Santa Justa proposal.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "CG8-34493",
+          "name": "Estación Santa Justa",
+          "city": "Seville"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "La Ralla",
@@ -2956,7 +2976,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Seville — likely overlaps Scrape 1 raw 'La Raya', but source place definition requires checking.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Nervión Plaza Shopping Mall",
@@ -2984,7 +3012,21 @@
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
       "priority_review_note": "Seville — matches existing shopping centre proposal.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "GC1-GAP-SEVILLE-05",
+          "name": "CC Nervión Plaza",
+          "city": "Seville"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Chiclana Park / N340",
@@ -3002,7 +3044,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Praia de Monte Gordo",
@@ -3020,7 +3070,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Costa Natura",
@@ -3038,7 +3096,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Los Granados",
@@ -3056,7 +3122,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Barcelo Marbella toilets",
@@ -3074,7 +3148,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Antequera ITV Car Building off A-45",
@@ -3092,7 +3174,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Parque de la Constitucion",
@@ -3110,7 +3200,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Cabo Pino",
@@ -3128,7 +3226,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "John Mackintosh Square, Gibraltar",
@@ -3146,7 +3252,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Praia do Barill (Tavira)",
@@ -3164,7 +3278,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Fuengirola Feria",
@@ -3182,7 +3304,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Paloma Park",
@@ -3200,7 +3330,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Larios Centro Shopping Mall",
@@ -3218,115 +3356,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Cupido Sex Shop",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Oct 23, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        4
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Eagle",
-      "source_category": "Bars, Clubs",
-      "latest_reply_as_shown": "Sep 30, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        4
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Sex Shop Fantasy Benalmadena Sala X",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Oct 11, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        4
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Cuero Cruising Club Torremolinos",
-      "source_category": "Bars, Clubs",
-      "latest_reply_as_shown": "Oct 11, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        4
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Apolo Sauna Torremolinos",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "Oct 23, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        4
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Exxxtreme Cruising club",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "Oct 11, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        4
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Parque de Malaga",
@@ -3344,7 +3382,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Guadalmar",
@@ -3362,25 +3408,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Pikante sex shop (with cabins)",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "6 days ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        4
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Jardines de Puerta Oscura",
@@ -3398,7 +3434,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Armona Iskand",
@@ -3416,7 +3460,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Faro Riverside area Portas do Mar",
@@ -3434,7 +3486,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Estadio Algarve",
@@ -3452,7 +3512,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Praia de Faro",
@@ -3470,7 +3538,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Torre del Mar Nudist Beach Gay End",
@@ -3488,7 +3564,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Cavalo Preto Beach",
@@ -3506,7 +3590,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Centro Comercial Modelo de Albufeira",
@@ -3524,7 +3616,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Praia Grande",
@@ -3542,7 +3642,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "La Herradura",
@@ -3560,7 +3668,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "El Corte Ingles Granada",
@@ -3578,25 +3694,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "X Cinema Room",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Sep 30, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        4
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Villa Comunale Park",
@@ -3624,7 +3730,21 @@
       ],
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "GC1-GAP-NAPLES-09",
+          "name": "Villa Comunale",
+          "city": "Naples"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Museo Metro Station",
@@ -3644,7 +3764,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Naples — new named transit station lead.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Via Brin",
@@ -3673,7 +3801,21 @@
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
       "priority_review_note": "Naples — likely same general Brin parking district as existing proposal.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "GC1-GAP-NAPLES-11",
+          "name": "Parcheggio Brin",
+          "city": "Naples"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Baia Regina Giovanna",
@@ -3693,7 +3835,15 @@
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
       "priority_review_note": "Sorrento, not Naples — public coastal lead requiring seasonal access and current verification.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Viale Carlo III",
@@ -3711,7 +3861,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Caserta Stazione",
@@ -3730,7 +3888,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Ripalta Walk",
@@ -3748,7 +3914,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Viale Virgilio",
@@ -3766,7 +3940,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Ponte Punta Penna",
@@ -3784,7 +3966,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Spiaggia DAyala",
@@ -3802,7 +3992,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Rosarno Rest Stop",
@@ -3820,25 +4018,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Maxximum Time Sauna",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "6 days ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        5
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Via Lincoln",
@@ -3856,7 +4044,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Viale Regina Margherita",
@@ -3874,7 +4070,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Dunes behind Balestrate Beach",
@@ -3892,7 +4096,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Fondaco Parrino Beach",
@@ -3910,7 +4122,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Kasjuni",
@@ -3937,25 +4157,21 @@
       ],
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Hotel Split",
-      "source_category": "Cruising Areas",
-      "latest_reply_as_shown": "Aug 12, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        5
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Split",
-      "country_hint": "Croatia",
-      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
-      "assessment": "candidate_unverified_needs_detail_url",
-      "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "CRU-SPU-KASBEA-01",
+          "name": "Kašjuni Beach",
+          "city": "Split"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Makarska Dog Beach",
@@ -3973,7 +4189,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Krvavica FKK beach",
@@ -3991,7 +4215,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Villa Bellini",
@@ -4009,7 +4241,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Park Gradac",
@@ -4027,7 +4267,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Lokrum Island",
@@ -4054,7 +4302,21 @@
       ],
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "CRU-DBV-LOKISL-01",
+          "name": "Lokrum Island",
+          "city": "Dubrovnik"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Caito Rock Beach",
@@ -4072,7 +4334,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Aereoporto Fontanarossa Catania",
@@ -4090,7 +4360,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Central Station",
@@ -4115,7 +4393,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Giardini Alpini d'Italia",
@@ -4140,7 +4426,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Parco Pellerina entrata laghi",
@@ -4165,7 +4459,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "A13 Rastplatz Apfelwuhr Zizers",
@@ -4190,7 +4492,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Gay Toilette in Zug",
@@ -4208,7 +4518,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Toilette Stierenmarkt",
@@ -4226,7 +4544,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "candidate_unverified_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Werftsteg",
@@ -4244,7 +4570,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Bundesplatz Public Toilets",
@@ -4271,7 +4605,21 @@
       ],
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "GC1-GAP-LUCERNE-03",
+          "name": "Bundesplatz",
+          "city": "Lucerne"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Woods",
@@ -4289,26 +4637,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Manhattan Biograf",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Jun 16, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        8
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000219730",
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Batvagan",
@@ -4326,7 +4663,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Dv Population Building 2nd floor washroom",
@@ -4344,25 +4689,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Xxx Paradise adult bookstore",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Mar 06, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        8
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Yyteri Nudist Beach",
@@ -4381,7 +4716,15 @@
       "geo_basis": "named place or external geography cross-check; not a source-listed City field",
       "assessment": "old_or_stale_hold",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Marbäcks Viken",
@@ -4399,115 +4742,15 @@
       "geo_basis": "unassigned: search-radius result not reliable as city",
       "assessment": "geography_unresolved_needs_detail_url",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Club 69 Sauna",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "Aug 25, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        8
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "SexMax on Narva Mnt 9",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Sep 12, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        8
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Tallinn",
-      "country_hint": "Estonia",
-      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "SexMax - Taillinn",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "1 year ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        8
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": "Tallinn",
-      "country_hint": "Estonia",
-      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Venus Center",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "1 year ago",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        8
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "US Video Sex Store",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Aug 20, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        8
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Keltainen Ruusu Yellow Rose",
-      "source_category": "Theatres, Bookstores, Sex Shops",
-      "latest_reply_as_shown": "Aug 20, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        8
-      ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Kauppakeskus Kamppi",
@@ -4535,7 +4778,21 @@
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
       "priority_review_note": "Helsinki — matches prior Kamppi Shopping Centre WC proposal.",
-      "observation_date_berlin": "2026-11-06"
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
+      ],
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "GC1-FINLAND-01",
+          "name": "Kamppi Shopping Centre WC",
+          "city": "Helsinki"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     },
     {
       "name": "Laakso Central Park",
@@ -4562,38 +4819,36 @@
       ],
       "assessment": "match_or_possible_subarea_existing",
       "needs_review": true,
-      "observation_date_berlin": "2026-11-06"
-    },
-    {
-      "name": "Sauna Con Hombres",
-      "source_category": "Bathhouses, Saunas",
-      "latest_reply_as_shown": "Oct 16, 2026",
-      "source_url": null,
-      "image_url": null,
-      "found_in_batches": [
-        8
+      "observation_date_berlin": "2026-11-06",
+      "evidence_flag": "single_site",
+      "distinct_source_site_count": 1,
+      "source_websites": [
+        "squirt.org"
       ],
-      "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false,
-      "city_hint": null,
-      "country_hint": null,
-      "geo_basis": "unassigned: search-radius result not reliable as city",
-      "assessment": "separate_commercial_venue_not_cruising_area",
-      "needs_review": false,
-      "observation_date_berlin": "2026-11-06"
+      "exact_master_proposal_id": null,
+      "possible_alias_matches": [
+        {
+          "id": "CRU-HEL-LAACENPAR-02",
+          "name": "Laakso Central Park",
+          "city": "Helsinki"
+        }
+      ],
+      "counting_caveat": "Name-only Squirt export. One Squirt website regardless of repeated exports; independent matches are tentative unless exact and geographically plausible."
     }
   ],
   "bulk_files": [
     {
       "path": "research/cruising/scrape_7_uk_list_2026-11-06.json",
       "region": "United Kingdom (wide regional Squirt nearby results)",
-      "rows": 1680,
+      "rows": 1335,
       "unique_normalized_titles": 1662,
       "already_in_prior_squirt_export": 40,
       "master_name_matches": 6,
       "other_directory_matches": 5,
       "detail_urls_present": false,
-      "status": "index_only__triage__no_direct_publication"
+      "status": "commercial_venues_removed__source_frequency_flagged",
+      "original_rows": 1680,
+      "venues_removed": 345
     }
   ]
 }
