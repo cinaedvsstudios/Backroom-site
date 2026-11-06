@@ -1,0 +1,781 @@
+{
+  "_meta": {
+    "source_id": "scrape_8",
+    "site": "CruisingGays",
+    "base_url": "https://www.cruisinggays.com/",
+    "index_url": "https://www.cruisinggays.com/sitemap/countries.aspx",
+    "started_berlin": "2026-11-06",
+    "status": "completed_selected_city_public_area_pass__not_full_directory",
+    "research_only": true,
+    "scope": "Selected public/open-air and ordinary managed-location leads from Germany, UK, Netherlands, Finland, Sweden, France, Switzerland and Spain. Not an exhaustive site or country crawl.",
+    "source_record_count": 43,
+    "selected_country_count": 8,
+    "individual_source_urls_preserved": true,
+    "limitations": [
+      "Many 'cruising area' pages are misclassified bars, hotels, retail stores, charities or event venues. Dedicated nightlife and sex-business sites were omitted.",
+      "A few geographic assignments are incorrect (e.g. an Assateague Island beach from Maryland filed under Berlin, London Ontario sites under London England, and Paris Texas sites under France). Check actual physical location.",
+      "Some city landing pages and individual detail pages timed out or were inaccessible, but indexed content or the category pages exposed names and location descriptions.",
+      "Some source pages say 'verified' in 2026 while older variants have decades-old text; recent indexing or a badge alone does not independently validate current activity.",
+      "Never collect member locations, profiles, check-ins, messages or real-time activity."
+    ],
+    "false_positive_examples": [
+      {
+        "name": "Assateague Island",
+        "incorrect_directory_city": "Berlin, Germany",
+        "actual_location": "Maryland, United States",
+        "source_url": "https://www.cruisinggays.com/berlin/areas/15960-assateague-island/"
+      },
+      {
+        "name": "Lake Crook",
+        "incorrect_directory_city": "Paris, France",
+        "actual_location": "Paris, Texas, United States",
+        "source_url": "https://www.cruisinggays.com/paris/areas/51245-lake-crook/"
+      },
+      {
+        "name": "University of Western Ontario UCC washrooms",
+        "incorrect_directory_city": "London, United Kingdom",
+        "actual_location": "London, Ontario, Canada",
+        "source_url": "https://www.cruisinggays.com/Default.aspx?CityID=127&Filter=4"
+      }
+    ],
+    "publication_rule": "Each finding requires independent verification of exact place, continued public access, legal/safe use and relevance before any live Backroom entry. Research-only; do not change production listings.json.",
+    "review_notes": [
+      "Cross-source correction: Hyde Park matches a live Backroom record; Frescati and Allmend Park match existing proposals and are not new candidates."
+    ],
+    "new_candidate_source_records": 21,
+    "existing_or_prior_proposal_matches": 17,
+    "not_counted_weak_or_ambiguous": 5,
+    "master_updated_berlin": "2026-11-06"
+  },
+  "countries": [
+    {
+      "country": "Finland",
+      "cities": [
+        {
+          "city": "Tampere",
+          "records": [
+            {
+              "source_rank": 34,
+              "name": "Tuomikallio",
+              "city": "Tampere",
+              "country": "Finland",
+              "place_type": "Forest / rock sunbathing area",
+              "source_url": "https://www.cruisinggays.com/tampere/areas/58898-tuomikallio/",
+              "source_city_path": "tampere",
+              "assessment": "unverified_candidate",
+              "review_note": "Source explicitly describes nude sunbathing and cruising at a rocky area in Kauppi forest.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 35,
+              "name": "Alasjarvi",
+              "city": "Tampere",
+              "country": "Finland",
+              "place_type": "Lake / forest",
+              "source_url": "https://www.cruisinggays.com/tampere/areas/23053-alasjarvi/",
+              "source_city_path": "tampere",
+              "assessment": "unverified_candidate",
+              "review_note": "Public lake and wooded paths near Teiskontie; source describes male cruising away from family beach.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 36,
+              "name": "Koskipuisto",
+              "city": "Tampere",
+              "country": "Finland",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/tampere/areas/23052-koskipuisto/",
+              "source_city_path": "tampere",
+              "assessment": "insufficient_evidence",
+              "review_note": "Named park in source's cruising category but accessible page has no substantive evidence.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 37,
+              "name": "Etelapuisto (Southern Park)",
+              "city": "Tampere",
+              "country": "Finland",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/tampere/areas/23051-etelapuisto-southern-park/",
+              "source_city_path": "tampere",
+              "assessment": "unverified_candidate",
+              "review_note": "Source identifies southern park/lakeside around Hämeenpuisto; older unverified activity descriptions.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "cities": [
+        {
+          "city": "Paris",
+          "records": [
+            {
+              "source_rank": 39,
+              "name": "Bois de Boulogne",
+              "city": "Paris",
+              "country": "France",
+              "place_type": "Park / woods",
+              "source_url": "https://www.cruisinggays.com/paris/areas/3902-bois-de-boulogne/",
+              "source_city_path": "paris",
+              "assessment": "existing",
+              "review_note": "Matches CRU-PAR-BOIDEBOU-01; large park, historic cruising report, verify any specific subdivisions separately.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-PAR-BOIDEBOU-01"
+            }
+          ]
+        },
+        {
+          "city": "Raville",
+          "records": [
+            {
+              "source_rank": 41,
+              "name": "RN12 Aire de Raville westbound",
+              "city": "Raville",
+              "country": "France",
+              "place_type": "Motorway rest area",
+              "source_url": "https://www.cruisinggays.com/raville/areas/17169-rn12-aire-de-raville-westbound/",
+              "source_city_path": "raville",
+              "assessment": "unverified_candidate",
+              "review_note": "Westbound RN12 rest area near Raville, source reports male cruising by woodland and car park; access must be checked.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            }
+          ]
+        },
+        {
+          "city": "Villeron",
+          "records": [
+            {
+              "source_rank": 40,
+              "name": "A1 Aire de Villeron Rest Area",
+              "city": "Villeron",
+              "country": "France",
+              "place_type": "Motorway rest area",
+              "source_url": "https://www.cruisinggays.com/paris/areas/16073-a1-aire-de-villeron-rest-area/",
+              "source_city_path": "paris",
+              "assessment": "unverified_candidate",
+              "review_note": "Listed under Paris but actually along A1 by CDG airport/Villeron; older reports and policing/access changes need review.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "cities": [
+        {
+          "city": "Berlin",
+          "records": [
+            {
+              "source_rank": 1,
+              "name": "Tiergarten",
+              "city": "Berlin",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/berlin/areas/450-tiergarten/",
+              "source_city_path": "berlin",
+              "assessment": "existing",
+              "review_note": "Same public park as CRU-BER-TIE-01; older public source says historical night-time male cruising.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-BER-TIE-01"
+            },
+            {
+              "source_rank": 2,
+              "name": "Kleiner Tiergarten",
+              "city": "Berlin",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/berlin/areas/2894-kleiner-tiergarten/",
+              "source_city_path": "berlin",
+              "assessment": "existing_proposal",
+              "review_note": "Distinct park from Tiergarten; already proposed GS2-DE-BERLIN-026.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "GS2-DE-BERLIN-026"
+            },
+            {
+              "source_rank": 3,
+              "name": "Volkspark Hasenheide",
+              "city": "Berlin",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/berlin/areas/53147-volkspark-hasenheide/",
+              "source_city_path": "berlin",
+              "assessment": "existing",
+              "review_note": "Matches existing Hasenheide CRU-BER-HAS-03; source displays an Oct 2026 verification badge.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-BER-HAS-03"
+            },
+            {
+              "source_rank": 4,
+              "name": "Volkspark Friedricshain",
+              "city": "Berlin",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/berlin/areas/40324-volkspark-friedricshain/",
+              "source_city_path": "berlin",
+              "assessment": "existing_flagged",
+              "review_note": "Alias of Volkspark Friedrichshain CRU-BER-VOLFRI-04; existing is Flag; do not unflag based on this source.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-BER-VOLFRI-04"
+            },
+            {
+              "source_rank": 5,
+              "name": "Stadtpark Willmersdorf",
+              "city": "Berlin",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/berlin/areas/30265-stadtpark-willmersdorf/",
+              "source_city_path": "berlin",
+              "assessment": "probable_existing_proposal",
+              "review_note": "Likely same Wilmersdorf park area as PR3-DE-BERLIN-04-08; verify specific subarea before separate entry.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "PR3-DE-BERLIN-04-08"
+            },
+            {
+              "source_rank": 6,
+              "name": "Berlin Carre",
+              "city": "Berlin",
+              "country": "Germany",
+              "place_type": "Shopping-centre washrooms",
+              "source_url": "https://www.cruisinggays.com/berlin/areas/46289-berlin-carre/",
+              "source_city_path": "berlin",
+              "assessment": "unverified_candidate",
+              "review_note": "Old source identifies shopping-centre toilets by Alexanderplatz; accessibility, operating status and consent/safety require verification.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            }
+          ]
+        },
+        {
+          "city": "Hamburg",
+          "records": [
+            {
+              "source_rank": 7,
+              "name": "Volkspark II",
+              "city": "Hamburg",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/hamburg/areas/75893-volkspark-ii/",
+              "source_city_path": "hamburg",
+              "assessment": "existing_proposal",
+              "review_note": "Already present GS2-DE-HAMBURG-022; page lacks substantial current descriptive evidence.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "GS2-DE-HAMBURG-022"
+            },
+            {
+              "source_rank": 8,
+              "name": "Stadtpark Blindengarten",
+              "city": "Hamburg",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/hamburg/areas/75628-stadtpark-blindengarten/",
+              "source_city_path": "hamburg",
+              "assessment": "existing_proposal",
+              "review_note": "Alias of Stadtpark - Blindengarten GS2-DE-HAMBURG-020; page includes street but no current activity detail.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "GS2-DE-HAMBURG-020"
+            },
+            {
+              "source_rank": 9,
+              "name": "Park gegenüber Hotel Berlin",
+              "city": "Hamburg",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/hamburg/areas/75368-park-gegenuber-hotel-berlin/",
+              "source_city_path": "hamburg",
+              "assessment": "insufficient_evidence",
+              "review_note": "Borgfelder Straße park listed without convincing venue-specific cruising report in accessible index.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            }
+          ]
+        },
+        {
+          "city": "Raunheim",
+          "records": [
+            {
+              "source_rank": 11,
+              "name": "Raunheim A3 rest area",
+              "city": "Raunheim",
+              "country": "Germany",
+              "place_type": "Motorway rest area",
+              "source_url": "https://www.cruisinggays.com/wiesbaden/areas/13286-raunheim/",
+              "source_city_path": "wiesbaden",
+              "assessment": "unverified_candidate",
+              "review_note": "Listed under Wiesbaden; original location refers to the A3 near Raunheim, not central Wiesbaden. Precise side and location need confirmation.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            }
+          ]
+        },
+        {
+          "city": "Wiesbaden",
+          "records": [
+            {
+              "source_rank": 10,
+              "name": "Kurhaus Park",
+              "city": "Wiesbaden",
+              "country": "Germany",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/wiesbaden/areas/44436-kurhaus-park/",
+              "source_city_path": "wiesbaden",
+              "assessment": "unverified_candidate",
+              "review_note": "Identifiable public park near Kurhaus; directory mentions men meeting in park and nearby toilets, but not date-confirmed.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            }
+          ]
+        },
+        {
+          "city": "Würzburg",
+          "records": [
+            {
+              "source_rank": 12,
+              "name": "A7 Parking Area",
+              "city": "Würzburg",
+              "country": "Germany",
+              "place_type": "Motorway rest area",
+              "source_url": "https://www.cruisinggays.com/wurzburg/areas/16746-a7-parking-area/",
+              "source_city_path": "wurzburg",
+              "assessment": "unverified_candidate",
+              "review_note": "Source gives an A7 rest area near Biebelried/Marktbreit with male-cruising claims; verify carriageway and site status.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Netherlands",
+      "cities": [
+        {
+          "city": "Amsterdam",
+          "records": [
+            {
+              "source_rank": 30,
+              "name": "Vondelpark",
+              "city": "Amsterdam",
+              "country": "Netherlands",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/amsterdam/areas/454-vondelpark/",
+              "source_city_path": "amsterdam",
+              "assessment": "existing",
+              "review_note": "Matches CRU-AMS-VON-02; source is mainly older historical activity.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-AMS-VON-02"
+            },
+            {
+              "source_rank": 31,
+              "name": "Westerpark",
+              "city": "Amsterdam",
+              "country": "Netherlands",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/amsterdam/areas/14941-westerpark/",
+              "source_city_path": "amsterdam",
+              "assessment": "existing",
+              "review_note": "Matches CRU-AMS-WES-07; source places reported activity along wooded/rail-side paths.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-AMS-WES-07"
+            },
+            {
+              "source_rank": 32,
+              "name": "Oosterpark",
+              "city": "Amsterdam",
+              "country": "Netherlands",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/amsterdam/areas/14938-oosterpark/",
+              "source_city_path": "amsterdam",
+              "assessment": "existing",
+              "review_note": "Matches CRU-AMS-OOS-06; source describes the area near Tropenmuseum.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-AMS-OOS-06"
+            },
+            {
+              "source_rank": 33,
+              "name": "Gaasperplas",
+              "city": "Amsterdam",
+              "country": "Netherlands",
+              "place_type": "Lake / park",
+              "source_url": "https://www.cruisinggays.com/amsterdam/areas/10412-gaasperplas/",
+              "source_city_path": "amsterdam",
+              "assessment": "existing",
+              "review_note": "Matches CRU-AMS-GAA-04; old source places reported activity near path and lake.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-AMS-GAA-04"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Spain",
+      "cities": [
+        {
+          "city": "Barcelona",
+          "records": [
+            {
+              "source_rank": 43,
+              "name": "Playa de Sant Sebastiá",
+              "city": "Barcelona",
+              "country": "Spain",
+              "place_type": "Gay-friendly beach",
+              "source_url": "https://www.cruisinggays.com/barcelona/areas/72825-playa-de-sant-sebastia/",
+              "source_city_path": "barcelona",
+              "assessment": "insufficient_evidence",
+              "review_note": "Source reports mixed gay beach and optional nudity only; not sufficient proof of cruising activity.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Sweden",
+      "cities": [
+        {
+          "city": "Stockholm",
+          "records": [
+            {
+              "source_rank": 38,
+              "name": "Frescati",
+              "city": "Stockholm",
+              "country": "Sweden",
+              "place_type": "Woods / university-adjacent",
+              "source_url": "https://www.cruisinggays.com/stockholm/areas/15730-frescati/",
+              "source_city_path": "stockholm",
+              "assessment": "existing_proposal",
+              "review_note": "Existing research proposal Frescati - Stockholm, same wooded university area.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "GC1-SWEDEN-03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Switzerland",
+      "cities": [
+        {
+          "city": "Bern",
+          "records": [
+            {
+              "source_rank": 42,
+              "name": "Allmend Park",
+              "city": "Bern",
+              "country": "Switzerland",
+              "place_type": "Park / wooded trails",
+              "source_url": "https://www.cruisinggays.com/bern/areas/51393-allmend-park/",
+              "source_city_path": "bern",
+              "assessment": "existing_proposal",
+              "review_note": "Existing research proposal Allmend Anhöhe by Wankdorf stadium; likely same park, do not add separately.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "GC1-SWITZERLAND-12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "cities": [
+        {
+          "city": "London",
+          "records": [
+            {
+              "source_rank": 13,
+              "name": "Kensal Green London Park",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/london/areas/56231-kensal-green-london-park/",
+              "source_city_path": "london",
+              "assessment": "existing",
+              "review_note": "Matches existing Kensal Green CRU-LON-KENGRE-02; source notes public park close to underground station.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-LON-KENGRE-02"
+            },
+            {
+              "source_rank": 14,
+              "name": "Dickens Square",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/london/areas/55091-dickens-square/",
+              "source_city_path": "london",
+              "assessment": "unverified_candidate",
+              "review_note": "Identifiable park by Harper Road and Brockham Street, Southwark; source reports meeting along paths.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 15,
+              "name": "Woolwich Riverwalk",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Riverside path",
+              "source_url": "https://www.cruisinggays.com/london/areas/46027-woolwich-riverwalk/",
+              "source_city_path": "london",
+              "assessment": "unverified_candidate",
+              "review_note": "Source identifies section by Thames Barrier as a public riverside meeting area; check overlap with Thames Barrier Park.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 16,
+              "name": "Canal Tow Path",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Canal / woodland path",
+              "source_url": "https://www.cruisinggays.com/london/areas/41061-canal-tow-path/",
+              "source_city_path": "london",
+              "assessment": "unverified_candidate",
+              "review_note": "Green Lanes N4/Manor House canal-side route with male-cruising descriptions; determine exact canal/path.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 17,
+              "name": "Hyde Park",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/london/areas/30576-hyde-park/",
+              "source_city_path": "london",
+              "assessment": "existing",
+              "review_note": "Existing Backroom live Hyde Park — Rose Garden; this is the same park, not a new place.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-LON-HYDPAR-05"
+            },
+            {
+              "source_rank": 18,
+              "name": "Hampstead Heath",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/london/areas/27940-hampstead-heath/",
+              "source_city_path": "london",
+              "assessment": "existing",
+              "review_note": "Matches existing Hampstead Heath CRU-LON-HAMHEA-01; source shows recent verification badge on newer view.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-LON-HAMHEA-01"
+            },
+            {
+              "source_rank": 19,
+              "name": "Thames Path Blackfriars–Millennium Bridge north side",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Riverside path",
+              "source_url": "https://www.cruisinggays.com/london/areas/22500-thames-path-blackfriars-millenium-bridge-north-side/",
+              "source_city_path": "london",
+              "assessment": "unverified_candidate",
+              "review_note": "Public Thames-side footpath around Blackfriars and Millennium bridges; old source describes secluded sections and little activity.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 20,
+              "name": "Broadgate Shopping Centre (Lower Level)",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Shopping-centre toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/22361-broadgate-shopping-centre-lower-level/",
+              "source_city_path": "london",
+              "assessment": "unverified_candidate",
+              "review_note": "Public-commercial washrooms near Liverpool Street station; access, renovation and surveillance may have changed.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 21,
+              "name": "Finsbury Circus",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Park / nearby toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/42506-finsbury-circus/",
+              "source_city_path": "london",
+              "assessment": "insufficient_evidence",
+              "review_note": "Source primarily describes it as a pickup point with limited activity in the park itself; verify before considering.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 22,
+              "name": "Barbican",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Arts complex toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/37701-barbican/",
+              "source_city_path": "london",
+              "assessment": "unverified_candidate",
+              "review_note": "Barbican arts-centre washrooms near theatre on lower level; old reports, managed premises and access restrictions need checking.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 23,
+              "name": "Bishopsgate Institute",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Institution toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/40095-bishopsgate-institute/",
+              "source_city_path": "london",
+              "assessment": "unverified_candidate",
+              "review_note": "Source claims cruising in building washrooms near Bishopsgate; confirm current access and on-site restrictions.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 24,
+              "name": "Eastcheap",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Public toilet",
+              "source_url": "https://www.cruisinggays.com/london/areas/45298-eastcheap/",
+              "source_city_path": "london",
+              "assessment": "unverified_candidate",
+              "review_note": "Brief directory report on male cruising in a named City of London toilet; exact facility and whether still open must be checked.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 25,
+              "name": "Bermondsey Street",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Street / multiple adjoining parks",
+              "source_url": "https://www.cruisinggays.com/london/areas/47849-bermondsey-street/",
+              "source_city_path": "london",
+              "assessment": "needs_geographic_split",
+              "review_note": "Source bundles Tanner Street Park, Leathermarket Park and a nearby churchyard under a street-wide story; do not count as one new spot until locations separated.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 26,
+              "name": "The National Archives",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Institution toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/48711-the-national-archives/",
+              "source_city_path": "london",
+              "assessment": "unverified_candidate",
+              "review_note": "Source reports men's washrooms in the public visitor facility at Kew; managed-location access and date need verification.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 27,
+              "name": "The Truman Brewery Building",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Commercial building toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/29110-the-truman-brewery-building/",
+              "source_city_path": "london",
+              "assessment": "unverified_candidate",
+              "review_note": "Source describes upper-floor building toilets in Brick Lane; likely access/renovation changes, verify before publication.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 28,
+              "name": "City Thameslink National Rail Station",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Station toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/15932-city-thameslink-national-rail-station/",
+              "source_city_path": "london",
+              "assessment": "unverified_candidate",
+              "review_note": "Named London rail station toilet entry; source is old and facilities may have changed.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            },
+            {
+              "source_rank": 29,
+              "name": "Thames Barrier Park",
+              "city": "London",
+              "country": "United Kingdom",
+              "place_type": "Park",
+              "source_url": "https://www.cruisinggays.com/lb-of-newham/areas/11168-thames-barrier-park/",
+              "source_city_path": "lb-of-newham",
+              "assessment": "unverified_candidate",
+              "review_note": "Distinct north-bank park near Silvertown, filed under LB of Newham; verify potential overlap with Woolwich Riverwalk.",
+              "source_verified_current": false,
+              "source_category": "Cruising areas",
+              "source_access": "public web index or individually indexed detail page"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

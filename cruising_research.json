@@ -34,7 +34,11 @@
       "Clarification 2026-11-06: restored 41 previously excluded ordinary/managed sites as unverified candidates; 21 dedicated nightlife/sex businesses remain out of proposals. Raw source counts unchanged.",
       "Scrape 4 uses The Gay Passport city/destination guides; retained named cruising spots at ordinary/public sites (including shopping-centre and station toilets), excluded dedicated gay nightlife venues. Australia and Mexico are tracked separately because they are not among Backroom's current 45 country labels.",
       "Scrape 5 (Splashd) is an INDEX-ONLY research checkpoint, not a completed individual-place scrape. Its 56 advertised country counts are stored in research/cruising/scrape_5.json; site access currently blocks individual records and no proposals were added. Resume with an authorized full browser if possible.",
-      "Scrape 6 Popcorn.dating: 20 selected public outdoor/parking index records from cached general directory pages 1-2, with 8 preliminary new proposals. Source category and detail pages were inaccessible. Source mixes orientations and eras; all new candidates require current verification and male/gay relevance checking before publication."
+      "Scrape 6 Popcorn.dating: 20 selected public outdoor/parking index records from cached general directory pages 1-2, with 8 preliminary new proposals. Source category and detail pages were inaccessible. Source mixes orientations and eras; all new candidates require current verification and male/gay relevance checking before publication.",
+      "Manual scrape placeholders: scrape_5 (Splashd) and scrape_7 (Squirt.org) now have null per-city entries, meaning not yet collected; these are NOT zero-result counts. Squirt.org research file is reserved for a later user-supplied manual dump.",
+      "Scrape 8 CruisingGays: 43 selected public/ordinary-site source records across 8 countries. 21 new provisional proposals, 17 prior/existing matches, 5 not counted for weak/ambiguous evidence. Exclude misclassified clubs/hotels/shops and correct location errors (Berlin/Maryland, Paris/Texas, London/Ontario). No assumption that a recent crawl or verification badge validates current cruising.",
+      "Added six optional verification-only references (Couple of Men, Männer unterwegs, The Globetrotter Guys, Tripadvisor, Reddit, misterb&b Gay Guide). Do not assign scrape numbers or systematically crawl them. Research a specific unresolved detail only, reusing existing evidence first and stopping once sufficient.",
+      "2026-11-06 user-selected city research priorities: 50 submitted city entries (Lisbon appears twice), 49 unique focus cities, 10 currently without Live or proposed cruising spots (including 2 cities not yet represented as tracker rows). Preserve all existing data. If research yields no qualifying locations, record a confirmed researched zero, not a fabricated proposal."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -934,7 +938,9 @@
       "spot_records_retrieved": 0,
       "results_total": null,
       "proposals_new": null,
-      "notes": "The map overview is indexed/readable and country totals for all 56 countries have been preserved in scrape_5.json. Country/city/individual-spot pages could not be fetched through the available research tools; ZERO records retrieved does not mean ZERO cruising places. Do not add city scrape counts or proposed_places until source records can be accessed in a full browser session. Never collect app user locations, check-ins, or chats."
+      "notes": "The map overview is indexed/readable and country totals for all 56 countries have been preserved in scrape_5.json. Country/city/individual-spot pages could not be fetched through the available research tools; ZERO records retrieved does not mean ZERO cruising places. Do not add city scrape counts or proposed_places until source records can be accessed in a full browser session. Never collect app user locations, check-ins, or chats.",
+      "manual_scrape_planned": true,
+      "manual_scrape_note": "User will manually collect Splashd's individual spot records and supply a dump for later reconciliation; null scrape_5 city columns mean not yet researched."
     },
     {
       "id": "scrape_6",
@@ -950,6 +956,31 @@
       "index_pages_read": 2,
       "details_accessible": false,
       "notes": "Outdoor and Parking lot entries from general public directory pages 1 and 2 (cached/stale). Target Outdoor category, later index pages and individual detail pages inaccessible. Mixed orientation, not necessarily gay or active. 8 unverified new proposals only; other leads include existing locations, vague entries and safety exclusions. No production listing changes."
+    },
+    {
+      "id": "scrape_7",
+      "site": "Squirt.org",
+      "base_url": "https://www.squirt.org/",
+      "started_berlin": "2026-11-06",
+      "status": "reserved_for_user_manual_scrape",
+      "data_file": "research/cruising/scrape_7.json",
+      "results_total": null,
+      "proposals_new": null,
+      "manually_collected_by_user": true,
+      "notes": "User plans to provide a manual extraction later. scrape_7 per-city column null means NOT COLLECTED, not zero results. Match against baseline and scrapes 1–6 after import. Retain source URLs and public place data only."
+    },
+    {
+      "id": "scrape_8",
+      "site": "CruisingGays",
+      "base_url": "https://www.cruisinggays.com/",
+      "index_url": "https://www.cruisinggays.com/sitemap/countries.aspx",
+      "started_berlin": "2026-11-06",
+      "status": "selected_city_public_area_pass_complete__directory_not_exhaustive",
+      "data_file": "research/cruising/scrape_8.json",
+      "results_total": 43,
+      "proposals_new": 21,
+      "prior_record_matches": 17,
+      "notes": "43 selected research leads across eight countries; 21 new unverified candidates, 17 linked to existing Backroom/proposals, 5 held due to inadequate specificity or evidence. Site's Cruising area category mixes bars, hotels, nonprofits, shops and genuinely public areas; geographic errors identified. No production changes."
     }
   ],
   "countries": [
@@ -964,7 +995,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -1100,7 +1134,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 9
+            "scrape_1": 9,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1124,7 +1160,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1161,7 +1199,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1198,7 +1238,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1222,7 +1264,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -1253,7 +1297,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -1269,7 +1315,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Antwerp",
@@ -1318,7 +1367,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1383,7 +1434,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1420,7 +1473,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1444,7 +1499,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1468,7 +1525,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1492,7 +1551,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1516,7 +1577,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1525,7 +1588,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lommel",
@@ -1548,7 +1614,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1574,7 +1642,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1598,7 +1668,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1624,7 +1696,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1650,7 +1724,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1674,7 +1750,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -1705,7 +1783,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1742,7 +1822,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1896,7 +1978,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 11
+            "scrape_1": 11,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1920,7 +2004,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1929,7 +2015,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -1972,7 +2061,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -1996,7 +2087,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2164,7 +2257,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 12
+            "scrape_1": 12,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -2195,7 +2290,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2219,7 +2316,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2270,7 +2369,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -2301,7 +2402,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2325,7 +2428,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2375,7 +2480,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2399,7 +2506,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2423,7 +2532,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2447,7 +2558,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2471,7 +2584,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2495,7 +2610,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2519,7 +2636,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2609,7 +2728,9 @@
           ],
           "scrapes": {
             "scrape_1": 4,
-            "scrape_4": 2
+            "scrape_4": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2618,7 +2739,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -2661,7 +2785,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2670,7 +2796,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -2700,7 +2829,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2725,7 +2856,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2734,7 +2867,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -2791,7 +2927,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2841,7 +2979,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2865,7 +3005,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2889,7 +3031,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -2913,7 +3057,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3002,7 +3148,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 6
+            "scrape_1": 6,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -3033,7 +3181,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3071,7 +3221,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3095,7 +3247,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3119,7 +3273,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3143,7 +3299,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3167,7 +3325,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3191,7 +3351,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3215,7 +3377,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3239,7 +3403,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3263,7 +3429,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3287,7 +3455,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3311,7 +3481,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3337,7 +3509,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3362,7 +3536,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3386,7 +3562,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -3402,7 +3580,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -3458,7 +3639,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3495,7 +3678,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3519,7 +3704,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3595,7 +3782,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 5
+            "scrape_1": 5,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3619,7 +3808,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3669,7 +3860,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -3700,7 +3893,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3855,7 +4050,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 11
+            "scrape_1": 11,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3879,7 +4076,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3903,7 +4102,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -3927,7 +4128,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -3959,7 +4162,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4074,7 +4279,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 10
+            "scrape_1": 10,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4098,7 +4305,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4122,7 +4331,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4146,7 +4357,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4170,7 +4383,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -4201,7 +4416,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4225,7 +4442,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4249,7 +4468,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4273,7 +4494,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4297,7 +4520,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4321,7 +4546,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4345,7 +4572,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4360,7 +4589,8 @@
               "city": "Stockholm",
               "country": "Sweden",
               "source_ids": [
-                "scrape_1"
+                "scrape_1",
+                "scrape_8"
               ],
               "source_category": "Natural area",
               "source_url": "https://www.gays-cruising.com/en/sweden",
@@ -4395,7 +4625,10 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 1
           }
         },
         {
@@ -4419,7 +4652,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4443,7 +4678,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4467,7 +4704,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4491,7 +4730,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4515,7 +4756,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -4546,7 +4789,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4638,7 +4883,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 6
+            "scrape_1": 6,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4743,7 +4990,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 8
+            "scrape_1": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -4760,7 +5009,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4784,7 +5035,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4808,7 +5061,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4832,7 +5087,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4856,7 +5113,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4880,7 +5139,9 @@
             }
           ],
           "scrapes": {
-            "scrape_4": 1
+            "scrape_4": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4904,7 +5165,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4941,7 +5204,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4965,7 +5230,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -4974,7 +5241,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "New York",
@@ -5036,7 +5306,9 @@
             }
           ],
           "scrapes": {
-            "scrape_4": 4
+            "scrape_4": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5046,7 +5318,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_4": 0
+            "scrape_4": 0,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5070,7 +5344,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5080,7 +5356,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5104,7 +5382,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5128,7 +5408,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5153,7 +5435,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5163,7 +5447,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5173,7 +5459,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5183,7 +5471,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -5205,7 +5495,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -5248,7 +5541,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5272,7 +5567,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5309,7 +5606,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5347,7 +5646,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5384,7 +5685,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5421,7 +5724,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5436,7 +5741,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Sarajlije",
@@ -5459,7 +5767,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5483,7 +5793,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -5514,7 +5826,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5551,7 +5865,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5712,7 +6028,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 12
+            "scrape_1": 12,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -5744,7 +6062,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5807,7 +6127,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5831,7 +6153,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5874,7 +6198,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5911,7 +6237,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5935,7 +6263,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -5998,7 +6328,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -6042,7 +6374,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6066,7 +6400,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6090,7 +6426,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6114,7 +6452,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6138,7 +6478,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6162,7 +6504,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6270,7 +6614,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 7
+            "scrape_1": 7,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6294,7 +6640,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -6325,7 +6673,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6350,7 +6700,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6360,7 +6712,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6590,7 +6944,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 23
+            "scrape_1": 23,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6616,7 +6972,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6641,7 +6999,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6667,7 +7027,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6692,7 +7054,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -6723,7 +7087,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6805,7 +7171,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 6
+            "scrape_1": 6,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6855,7 +7223,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6892,7 +7262,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6942,7 +7314,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -6973,7 +7347,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -6997,7 +7373,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7021,7 +7399,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7058,7 +7438,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7067,7 +7449,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Sankt Pölten",
@@ -7090,7 +7475,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7216,7 +7603,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 8
+            "scrape_1": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7240,7 +7629,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -7271,7 +7662,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7280,7 +7673,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Dublin",
@@ -7406,7 +7802,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 9
+            "scrape_1": 9,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7456,7 +7854,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7480,7 +7880,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7504,7 +7906,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -7535,7 +7939,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7572,7 +7978,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7596,7 +8004,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7620,7 +8030,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7629,7 +8041,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Marsaskala",
@@ -7665,7 +8080,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7680,7 +8097,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Naxxar",
@@ -7703,7 +8123,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7740,7 +8162,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7767,7 +8191,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7817,7 +8243,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7847,7 +8275,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -7856,7 +8286,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Victoria",
@@ -7864,7 +8297,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         }
       ]
     },
@@ -8061,7 +8497,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 13
+            "scrape_1": 13,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -8069,7 +8507,7 @@
     {
       "country": "Finland",
       "cruising_now": 3,
-      "proposals": 15,
+      "proposals": 18,
       "cities": [
         {
           "city": "Helsinki",
@@ -8186,7 +8624,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 7
+            "scrape_1": 7,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8210,7 +8650,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8234,7 +8676,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8258,7 +8702,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8282,7 +8728,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8319,7 +8767,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8356,7 +8806,61 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
+          }
+        },
+        {
+          "city": "Tampere",
+          "cruising_now": 0,
+          "proposals": 3,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "CG8-58898",
+              "name": "Tuomikallio",
+              "city": "Tampere",
+              "country": "Finland",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Forest / rock sunbathing area",
+              "source_url": "https://www.cruisinggays.com/tampere/areas/58898-tuomikallio/",
+              "status": "unverified",
+              "notes": "Source explicitly describes nude sunbathing and cruising at a rocky area in Kauppi forest. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-23053",
+              "name": "Alasjarvi",
+              "city": "Tampere",
+              "country": "Finland",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Lake / forest",
+              "source_url": "https://www.cruisinggays.com/tampere/areas/23053-alasjarvi/",
+              "status": "unverified",
+              "notes": "Public lake and wooded paths near Teiskontie; source describes male cruising away from family beach. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-23051",
+              "name": "Etelapuisto (Southern Park)",
+              "city": "Tampere",
+              "country": "Finland",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.cruisinggays.com/tampere/areas/23051-etelapuisto-southern-park/",
+              "status": "unverified",
+              "notes": "Source identifies southern park/lakeside around Hämeenpuisto; older unverified activity descriptions. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 4
           }
         }
       ]
@@ -8372,7 +8876,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Cagliari",
@@ -8380,7 +8887,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Calenzano (Florence)",
@@ -8388,7 +8898,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Caorle",
@@ -8411,7 +8924,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8435,7 +8950,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8459,7 +8976,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8535,7 +9054,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 5
+            "scrape_1": 5,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8559,7 +9080,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8568,7 +9091,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lacchiarella",
@@ -8591,7 +9117,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8615,7 +9143,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8738,7 +9268,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 8
+            "scrape_1": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8747,7 +9279,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Naples",
@@ -8755,7 +9290,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Padua",
@@ -8763,7 +9301,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Peschiera Borromeo",
@@ -8786,7 +9327,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8810,7 +9353,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8834,7 +9379,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8854,7 +9401,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "San Michele al Tagliamento",
@@ -8877,7 +9427,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8901,7 +9453,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8925,7 +9479,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -8934,7 +9490,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Venice",
@@ -9022,7 +9581,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 6
+            "scrape_1": 6,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9031,7 +9592,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Verona",
@@ -9039,7 +9603,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Viareggio",
@@ -9053,7 +9620,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Chiavari",
@@ -9062,7 +9632,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -9093,7 +9665,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9117,7 +9691,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9313,7 +9889,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 13
+            "scrape_1": 13,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -9372,7 +9950,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9426,7 +10006,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9469,7 +10051,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9493,7 +10077,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9519,7 +10105,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9545,7 +10133,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9569,7 +10159,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9578,7 +10170,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Słubice",
@@ -9601,7 +10196,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9625,7 +10222,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9699,7 +10298,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9736,7 +10337,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -9767,7 +10370,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9791,7 +10396,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9815,7 +10422,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9873,7 +10482,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9898,7 +10509,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9922,7 +10535,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9946,7 +10561,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9970,7 +10587,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -9994,7 +10613,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10018,7 +10639,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10042,7 +10665,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10066,7 +10691,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10090,7 +10717,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10100,7 +10729,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -10122,7 +10753,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Novalja",
@@ -10130,7 +10764,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Rijeka",
@@ -10144,7 +10781,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Split",
@@ -10168,7 +10808,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Zagreb",
@@ -10176,7 +10819,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lopar",
@@ -10185,7 +10831,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10195,7 +10843,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -10211,7 +10861,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Drammen",
@@ -10234,7 +10887,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10258,7 +10913,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10282,7 +10939,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10306,7 +10965,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10331,7 +10992,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10394,7 +11057,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10470,7 +11135,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10494,7 +11161,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10503,7 +11172,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Trondheim",
@@ -10526,7 +11198,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -10557,7 +11231,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10566,7 +11242,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Coina",
@@ -10589,7 +11268,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10613,7 +11294,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10622,7 +11305,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Leça da Palmeira",
@@ -10645,7 +11331,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10691,7 +11379,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_4": 0
+            "scrape_4": 0,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10715,7 +11405,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10752,7 +11444,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10776,7 +11470,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10800,7 +11496,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -10815,7 +11513,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Vila Nova de Gaia",
@@ -10851,7 +11552,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -10882,7 +11585,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11006,7 +11711,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 8
+            "scrape_1": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11030,7 +11737,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11039,7 +11748,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Kos",
@@ -11075,7 +11787,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11158,7 +11872,9 @@
           ],
           "scrapes": {
             "scrape_1": 5,
-            "scrape_4": 2
+            "scrape_4": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11182,7 +11898,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11226,7 +11944,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -11234,7 +11954,7 @@
     {
       "country": "United Kingdom",
       "cruising_now": 6,
-      "proposals": 17,
+      "proposals": 29,
       "cities": [
         {
           "city": "Belfast",
@@ -11257,7 +11977,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11266,7 +11988,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Blackpool",
@@ -11274,7 +11999,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Brighton",
@@ -11288,7 +12016,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Bristol",
@@ -11296,7 +12027,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Bury",
@@ -11304,7 +12038,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Cardiff",
@@ -11312,7 +12049,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Cowdenbeath",
@@ -11336,7 +12076,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11345,7 +12087,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Glasgow",
@@ -11353,7 +12098,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Havant",
@@ -11376,7 +12124,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11400,7 +12150,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11427,7 +12179,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11436,7 +12190,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Leicester",
@@ -11444,7 +12201,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Limavady",
@@ -11467,7 +12227,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11476,12 +12238,15 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "London",
           "cruising_now": 5,
-          "proposals": 8,
+          "proposals": 20,
           "existing_cruising": [
             {
               "id": "CRU-LON-BARPAR-03",
@@ -11496,17 +12261,26 @@
             {
               "id": "CRU-LON-HAMHEA-01",
               "name": "Hampstead Heath",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_8"
+              ]
             },
             {
               "id": "CRU-LON-HYDPAR-05",
               "name": "Hyde Park — Rose Garden",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_8"
+              ]
             },
             {
               "id": "CRU-LON-KENGRE-02",
               "name": "Kensal Green",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_8"
+              ]
             },
             {
               "id": "CRU-LON-TOOBEC-01",
@@ -11620,11 +12394,170 @@
               "source_url": "https://thegaypassport.com/community/london-cruising-guide/",
               "status": "unverified",
               "notes": "Source identifies lower-ground and first-floor toilets; verify access policies."
+            },
+            {
+              "proposal_id": "CG8-55091",
+              "name": "Dickens Square",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.cruisinggays.com/london/areas/55091-dickens-square/",
+              "status": "unverified",
+              "notes": "Identifiable park by Harper Road and Brockham Street, Southwark; source reports meeting along paths. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-46027",
+              "name": "Woolwich Riverwalk",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Riverside path",
+              "source_url": "https://www.cruisinggays.com/london/areas/46027-woolwich-riverwalk/",
+              "status": "unverified",
+              "notes": "Source identifies section by Thames Barrier as a public riverside meeting area; check overlap with Thames Barrier Park. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-41061",
+              "name": "Canal Tow Path",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Canal / woodland path",
+              "source_url": "https://www.cruisinggays.com/london/areas/41061-canal-tow-path/",
+              "status": "unverified",
+              "notes": "Green Lanes N4/Manor House canal-side route with male-cruising descriptions; determine exact canal/path. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-22500",
+              "name": "Thames Path Blackfriars–Millennium Bridge north side",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Riverside path",
+              "source_url": "https://www.cruisinggays.com/london/areas/22500-thames-path-blackfriars-millenium-bridge-north-side/",
+              "status": "unverified",
+              "notes": "Public Thames-side footpath around Blackfriars and Millennium bridges; old source describes secluded sections and little activity. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-22361",
+              "name": "Broadgate Shopping Centre (Lower Level)",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Shopping-centre toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/22361-broadgate-shopping-centre-lower-level/",
+              "status": "unverified",
+              "notes": "Public-commercial washrooms near Liverpool Street station; access, renovation and surveillance may have changed. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-37701",
+              "name": "Barbican",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Arts complex toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/37701-barbican/",
+              "status": "unverified",
+              "notes": "Barbican arts-centre washrooms near theatre on lower level; old reports, managed premises and access restrictions need checking. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-40095",
+              "name": "Bishopsgate Institute",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Institution toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/40095-bishopsgate-institute/",
+              "status": "unverified",
+              "notes": "Source claims cruising in building washrooms near Bishopsgate; confirm current access and on-site restrictions. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-45298",
+              "name": "Eastcheap",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Public toilet",
+              "source_url": "https://www.cruisinggays.com/london/areas/45298-eastcheap/",
+              "status": "unverified",
+              "notes": "Brief directory report on male cruising in a named City of London toilet; exact facility and whether still open must be checked. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-48711",
+              "name": "The National Archives",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Institution toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/48711-the-national-archives/",
+              "status": "unverified",
+              "notes": "Source reports men's washrooms in the public visitor facility at Kew; managed-location access and date need verification. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-29110",
+              "name": "The Truman Brewery Building",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Commercial building toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/29110-the-truman-brewery-building/",
+              "status": "unverified",
+              "notes": "Source describes upper-floor building toilets in Brick Lane; likely access/renovation changes, verify before publication. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-15932",
+              "name": "City Thameslink National Rail Station",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Station toilets",
+              "source_url": "https://www.cruisinggays.com/london/areas/15932-city-thameslink-national-rail-station/",
+              "status": "unverified",
+              "notes": "Named London rail station toilet entry; source is old and facilities may have changed. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            },
+            {
+              "proposal_id": "CG8-11168",
+              "name": "Thames Barrier Park",
+              "city": "London",
+              "country": "United Kingdom",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.cruisinggays.com/lb-of-newham/areas/11168-thames-barrier-park/",
+              "status": "unverified",
+              "notes": "Distinct north-bank park near Silvertown, filed under LB of Newham; verify potential overlap with Woolwich Riverwalk. CruisingGays source data may be old; verify specific place, current access and locality before publication."
             }
           ],
           "scrapes": {
             "scrape_1": 6,
-            "scrape_4": 9
+            "scrape_4": 9,
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 17
           }
         },
         {
@@ -11648,7 +12581,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11657,7 +12592,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Mansfield",
@@ -11665,7 +12603,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Newcastle",
@@ -11673,7 +12614,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Sheffield",
@@ -11681,7 +12625,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "St Albans",
@@ -11704,7 +12651,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11728,7 +12677,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -11744,7 +12695,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Alten",
@@ -11767,7 +12721,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11793,7 +12749,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11802,7 +12760,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Bern",
@@ -11827,7 +12788,8 @@
               "city": "Bern",
               "country": "Switzerland",
               "source_ids": [
-                "scrape_1"
+                "scrape_1",
+                "scrape_8"
               ],
               "source_category": "Park",
               "source_url": "https://www.gays-cruising.com/en/switzerland",
@@ -11836,7 +12798,10 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 1
           }
         },
         {
@@ -11860,7 +12825,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11884,7 +12851,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11893,7 +12862,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Dietikon",
@@ -11916,7 +12888,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11940,7 +12914,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -11965,7 +12941,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Inwil",
@@ -11988,7 +12967,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12012,7 +12993,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12021,7 +13004,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lucerne",
@@ -12029,7 +13015,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Obfelden",
@@ -12054,7 +13043,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12080,7 +13071,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12089,7 +13082,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Wädenswil",
@@ -12112,7 +13108,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12136,7 +13134,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12160,7 +13160,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12234,7 +13236,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -12265,7 +13269,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12281,12 +13287,18 @@
             {
               "id": "CRU-AMS-GAA-04",
               "name": "Gaasperplas",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_8"
+              ]
             },
             {
               "id": "CRU-AMS-OOS-06",
               "name": "Oosterpark",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_8"
+              ]
             },
             {
               "id": "CRU-AMS-SAR-03",
@@ -12296,12 +13308,18 @@
             {
               "id": "CRU-AMS-VON-02",
               "name": "Vondelpark",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_8"
+              ]
             },
             {
               "id": "CRU-AMS-WES-07",
               "name": "Westerpark",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_8"
+              ]
             },
             {
               "id": "CRU-AMS-ZIL-05",
@@ -12339,7 +13357,10 @@
           ],
           "scrapes": {
             "scrape_1": 2,
-            "scrape_4": 1
+            "scrape_4": 1,
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 4
           }
         },
         {
@@ -12363,7 +13384,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12387,7 +13410,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12411,7 +13436,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12435,7 +13462,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12461,7 +13490,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12485,7 +13516,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12494,7 +13527,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Kamperland",
@@ -12520,7 +13556,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12544,7 +13582,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12568,7 +13608,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12583,7 +13625,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Terneuzen",
@@ -12606,7 +13651,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12643,7 +13690,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12667,7 +13716,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12694,7 +13745,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12718,7 +13771,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12742,7 +13797,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12757,7 +13814,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Zoetermeer",
@@ -12780,7 +13840,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12790,7 +13852,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12814,7 +13878,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12824,7 +13890,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12848,7 +13916,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12858,7 +13928,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -12866,7 +13938,7 @@
     {
       "country": "Germany",
       "cruising_now": 13,
-      "proposals": 312,
+      "proposals": 316,
       "cities": [
         {
           "city": "Ahrensburg",
@@ -12890,7 +13962,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12915,7 +13989,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -12940,18 +14016,23 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
           "city": "Berlin",
           "cruising_now": 4,
-          "proposals": 69,
+          "proposals": 70,
           "existing_cruising": [
             {
               "id": "CRU-BER-HAS-03",
               "name": "Hasenheide",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_8"
+              ]
             },
             {
               "id": "CRU-BER-WANBEA-01",
@@ -12966,12 +14047,18 @@
             {
               "id": "CRU-BER-TIE-01",
               "name": "Tiergarten",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_8"
+              ]
             },
             {
               "id": "CRU-BER-VOLFRI-04",
               "name": "Volkspark Friedrichshain",
-              "status": "Flag"
+              "status": "Flag",
+              "source_ids": [
+                "scrape_8"
+              ]
             }
           ],
           "proposed_places": [
@@ -13295,7 +14382,8 @@
               "country": "Germany",
               "source_ids": [
                 "scrape_2",
-                "scrape_3"
+                "scrape_3",
+                "scrape_8"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
@@ -13816,7 +14904,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_3"
+                "scrape_3",
+                "scrape_8"
               ],
               "source_category": "public_toilet",
               "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/",
@@ -13921,13 +15010,29 @@
               "status": "unverified",
               "notes": "Ordinary managed/indoor facility; verify access policies, reported cruising and 2026 recency.",
               "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "CG8-46289",
+              "name": "Berlin Carre",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Shopping-centre washrooms",
+              "source_url": "https://www.cruisinggays.com/berlin/areas/46289-berlin-carre/",
+              "status": "unverified",
+              "notes": "Old source identifies shopping-centre toilets by Alexanderplatz; accessibility, operating status and consent/safety require verification. CruisingGays source data may be old; verify specific place, current access and locality before publication."
             }
           ],
           "scrapes": {
             "scrape_1": 1,
             "scrape_2": 60,
             "scrape_3": 49,
-            "scrape_4": 5
+            "scrape_4": 5,
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 6
           }
         },
         {
@@ -13936,7 +15041,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Bönningstedt",
@@ -13945,7 +15053,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14034,7 +15144,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 6
+            "scrape_2": 6,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14073,7 +15185,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_2": 3
+            "scrape_2": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14082,7 +15196,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Cologne",
@@ -14453,7 +15570,9 @@
           "scrapes": {
             "scrape_1": 2,
             "scrape_2": 12,
-            "scrape_3": 19
+            "scrape_3": 19,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14622,7 +15741,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 12
+            "scrape_2": 12,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14750,7 +15871,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 9
+            "scrape_2": 9,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -14892,7 +16015,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_2": 9
+            "scrape_2": 9,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15073,7 +16198,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 13
+            "scrape_2": 13,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15097,7 +16224,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15148,7 +16277,9 @@
           ],
           "scrapes": {
             "scrape_1": 2,
-            "scrape_2": 1
+            "scrape_2": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15185,7 +16316,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 2
+            "scrape_2": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15210,7 +16343,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15396,7 +16531,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 13
+            "scrape_2": 13,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15405,7 +16542,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Gießen",
@@ -15413,7 +16553,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Gronau (Westfalen)",
@@ -15436,7 +16579,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -15707,7 +16852,8 @@
               "country": "Germany",
               "source_ids": [
                 "scrape_2",
-                "scrape_3"
+                "scrape_3",
+                "scrape_8"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -15735,7 +16881,8 @@
               "country": "Germany",
               "source_ids": [
                 "scrape_2",
-                "scrape_3"
+                "scrape_3",
+                "scrape_8"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/1/rubrik.html",
@@ -15941,7 +17088,10 @@
           ],
           "scrapes": {
             "scrape_2": 22,
-            "scrape_3": 29
+            "scrape_3": 29,
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 3
           }
         },
         {
@@ -16134,7 +17284,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 14
+            "scrape_2": 14,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16159,7 +17311,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16169,7 +17323,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16194,7 +17350,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16218,7 +17376,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16334,7 +17494,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 8
+            "scrape_2": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16343,7 +17505,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Königs Wusterhausen",
@@ -16367,7 +17532,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16469,7 +17636,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 7
+            "scrape_2": 7,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16478,7 +17647,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Magdeburg",
@@ -16486,7 +17658,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Mainz",
@@ -16494,7 +17669,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Mannheim",
@@ -16608,7 +17786,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 8
+            "scrape_2": 8,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16632,7 +17812,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16683,7 +17865,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_2": 2
+            "scrape_2": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16938,7 +18122,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 20
+            "scrape_2": 20,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -16947,7 +18133,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Nuremberg",
@@ -17048,7 +18237,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 7
+            "scrape_2": 7,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17057,7 +18248,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Radolfzell am Bodensee",
@@ -17080,7 +18274,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17132,7 +18328,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_2": 3
+            "scrape_2": 3,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17157,7 +18355,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17182,7 +18382,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17192,7 +18394,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17231,7 +18435,9 @@
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_2": 2
+            "scrape_2": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17334,7 +18540,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 7
+            "scrape_2": 7,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17359,7 +18567,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17369,7 +18579,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17394,7 +18606,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17419,7 +18633,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17667,7 +18883,9 @@
             }
           ],
           "scrapes": {
-            "scrape_2": 20
+            "scrape_2": 20,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17676,7 +18894,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Tornesch",
@@ -17685,7 +18906,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17710,7 +18933,9 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17735,16 +18960,88 @@
             }
           ],
           "scrapes": {
-            "scrape_3": 1
+            "scrape_3": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
           "city": "Würzburg",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 1,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "CG8-16746",
+              "name": "A7 Parking Area",
+              "city": "Würzburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Motorway rest area",
+              "source_url": "https://www.cruisinggays.com/wurzburg/areas/16746-a7-parking-area/",
+              "status": "unverified",
+              "notes": "Source gives an A7 rest area near Biebelried/Marktbreit with male-cruising claims; verify carriageway and site status. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 1
+          }
+        },
+        {
+          "city": "Raunheim",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "CG8-13286",
+              "name": "Raunheim A3 rest area",
+              "city": "Raunheim",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Motorway rest area",
+              "source_url": "https://www.cruisinggays.com/wiesbaden/areas/13286-raunheim/",
+              "status": "unverified",
+              "notes": "Listed under Wiesbaden; original location refers to the A3 near Raunheim, not central Wiesbaden. Precise side and location need confirmation. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 1
+          }
+        },
+        {
+          "city": "Wiesbaden",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "CG8-44436",
+              "name": "Kurhaus Park",
+              "city": "Wiesbaden",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.cruisinggays.com/wiesbaden/areas/44436-kurhaus-park/",
+              "status": "unverified",
+              "notes": "Identifiable public park near Kurhaus; directory mentions men meeting in park and nearby toilets, but not date-confirmed. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 1
+          }
         }
       ]
     },
@@ -17774,7 +19071,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17798,7 +19097,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17807,7 +19108,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Avinyó",
@@ -17830,7 +19134,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17854,7 +19160,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17878,7 +19186,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -17988,7 +19298,10 @@
           ],
           "scrapes": {
             "scrape_1": 5,
-            "scrape_4": 4
+            "scrape_4": 4,
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 1
           }
         },
         {
@@ -18012,7 +19325,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18022,7 +19337,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_4": 0
+            "scrape_4": 0,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18031,7 +19348,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Calella",
@@ -18056,7 +19376,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18071,7 +19393,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Cartagena",
@@ -18085,7 +19410,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Castellbisbal",
@@ -18108,7 +19436,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18132,7 +19462,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18156,7 +19488,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18180,7 +19514,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18189,7 +19525,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Granadilla de Abona",
@@ -18197,7 +19536,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Ibiza",
@@ -18211,7 +19553,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "La Marina",
@@ -18234,7 +19579,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18427,7 +19774,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 15
+            "scrape_1": 15,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18451,7 +19800,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18512,7 +19863,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18708,7 +20061,9 @@
           "scrapes": {
             "scrape_1": 15,
             "scrape_4": 3,
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18734,7 +20089,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18749,7 +20106,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Mollet",
@@ -18773,7 +20133,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 2,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18788,7 +20150,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Playa de las Américas",
@@ -18796,7 +20161,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Playa del Inglés",
@@ -18804,7 +20172,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Puerto de la Cruz",
@@ -18812,7 +20183,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Reus",
@@ -18835,7 +20209,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18888,7 +20264,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18914,7 +20292,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18938,7 +20318,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18947,7 +20329,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Seville",
@@ -18955,7 +20340,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Sitges",
@@ -18970,7 +20358,9 @@
           ],
           "proposed_places": [],
           "scrapes": {
-            "scrape_4": 1
+            "scrape_4": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -18996,7 +20386,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19022,7 +20414,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19031,7 +20425,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Valdemoro",
@@ -19054,7 +20451,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19084,7 +20483,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Vigo",
@@ -19092,7 +20494,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Vilafranca del Penedès",
@@ -19115,7 +20520,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19139,7 +20546,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19154,7 +20563,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Villaviciosa de Odón",
@@ -19177,7 +20589,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19201,7 +20615,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19225,7 +20641,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19249,7 +20667,9 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         }
       ]
@@ -19257,7 +20677,7 @@
     {
       "country": "France",
       "cruising_now": 14,
-      "proposals": 16,
+      "proposals": 18,
       "cities": [
         {
           "city": "Ajaccio",
@@ -19265,7 +20685,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Bordeaux",
@@ -19273,7 +20696,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Brégnier-Cordon",
@@ -19296,7 +20722,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19311,7 +20739,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Entrange",
@@ -19334,7 +20765,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19349,7 +20782,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Hendaye",
@@ -19372,7 +20808,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19396,7 +20834,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19420,7 +20860,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19435,7 +20877,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lille",
@@ -19443,7 +20888,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Lyon",
@@ -19451,7 +20899,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Marseille",
@@ -19475,7 +20926,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Montpellier",
@@ -19489,7 +20943,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Mulhouse",
@@ -19512,7 +20969,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19527,7 +20986,10 @@
             }
           ],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Paris",
@@ -19537,7 +20999,10 @@
             {
               "id": "CRU-PAR-BOIDEBOU-01",
               "name": "Bois de Boulogne",
-              "status": "Live"
+              "status": "Live",
+              "source_ids": [
+                "scrape_8"
+              ]
             },
             {
               "id": "CRU-PAR-BOIDVIN-01",
@@ -19634,7 +21099,10 @@
           ],
           "scrapes": {
             "scrape_1": 5,
-            "scrape_4": 2
+            "scrape_4": 2,
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 1
           }
         },
         {
@@ -19658,7 +21126,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19682,7 +21152,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19691,7 +21163,10 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null
+          }
         },
         {
           "city": "Urrugne",
@@ -19714,7 +21189,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19738,7 +21215,9 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19748,7 +21227,9 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
           }
         },
         {
@@ -19772,10 +21253,931 @@
             }
           ],
           "scrapes": {
-            "scrape_6": 1
+            "scrape_6": 1,
+            "scrape_5": null,
+            "scrape_7": null
+          }
+        },
+        {
+          "city": "Raville",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "CG8-17169",
+              "name": "RN12 Aire de Raville westbound",
+              "city": "Raville",
+              "country": "France",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Motorway rest area",
+              "source_url": "https://www.cruisinggays.com/raville/areas/17169-rn12-aire-de-raville-westbound/",
+              "status": "unverified",
+              "notes": "Westbound RN12 rest area near Raville, source reports male cruising by woodland and car park; access must be checked. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 1
+          }
+        },
+        {
+          "city": "Villeron",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "CG8-16073",
+              "name": "A1 Aire de Villeron Rest Area",
+              "city": "Villeron",
+              "country": "France",
+              "source_ids": [
+                "scrape_8"
+              ],
+              "source_category": "Motorway rest area",
+              "source_url": "https://www.cruisinggays.com/paris/areas/16073-a1-aire-de-villeron-rest-area/",
+              "status": "unverified",
+              "notes": "Listed under Paris but actually along A1 by CDG airport/Villeron; older reports and policing/access changes need review. CruisingGays source data may be old; verify specific place, current access and locality before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_5": null,
+            "scrape_7": null,
+            "scrape_8": 1
           }
         }
       ]
     }
-  ]
+  ],
+  "verification_reference_sites": {
+    "role": "Optional spot-specific verification and editorial enrichment, NOT primary discovery sources or numbered scrapes.",
+    "added_berlin": "2026-11-06",
+    "references": [
+      {
+        "site": "Couple of Men",
+        "url": "https://coupleofmen.com/themes/gay-travel/europe/",
+        "use_for": "Travel context and destination-specific practical detail"
+      },
+      {
+        "site": "Männer unterwegs",
+        "url": "https://www.maenner-unterwegs.de/",
+        "use_for": "German-language gay travel and locality context"
+      },
+      {
+        "site": "The Globetrotter Guys",
+        "url": "https://www.theglobetrotterguys.com/",
+        "use_for": "Gay travel guides and practical city context"
+      },
+      {
+        "site": "Tripadvisor",
+        "url": "https://www.tripadvisor.com/",
+        "use_for": "Recent public reviews, location/access information, and potential closure signals"
+      },
+      {
+        "site": "Reddit",
+        "url": "https://www.reddit.com/",
+        "use_for": "Recent first-hand experience reports, only when they are relevant and checkable"
+      },
+      {
+        "site": "misterb&b Gay Guide",
+        "url": "https://www.misterbandb.com/gay-guide/",
+        "use_for": "Gay travel city guides and destination context"
+      }
+    ],
+    "trigger": "Use only when an individual cruising-area listing lacks important details, has contradictory information, needs recent access/closure confirmation, or needs a specific practical detail for an original description.",
+    "workflow": [
+      "Start with existing Backroom listing and prior source records. Reuse earlier evidence and URLs; do not revisit identical facts across many websites.",
+      "Prefer the actual place's official or authoritative locality/access sources when available; use one or two relevant supplementary references as necessary.",
+      "Stop searching once the specific uncertainty is sufficiently resolved, or record it as unresolved. Do not search all six references by default.",
+      "Keep original source URLs and a concise evidence note for claims that materially influence records. A general destination guide does not independently verify a specific cruising place.",
+      "Compare any new location claim against existing Backroom IDs and all earlier research proposals; do not double-count the same place.",
+      "Write descriptions originally in Backroom's practical friend-to-friend voice, without copying source wording and without presenting unverified material as established fact.",
+      "Do not mine user identities, private messages, check-ins, or real-time locations; public reports about public places are leads rather than proof of current activity.",
+      "Do not alter production listings.json until final review."
+    ],
+    "research_count_impact": "None. These reference sites do not increment scrape_N, per-city scrape counts, or proposal totals merely by being registered."
+  },
+  "priority_city_research": {
+    "title": "Backroom cruising-area research — user's 50-entry city focus list",
+    "created_berlin": "2026-11-06",
+    "ordered_source_list": [
+      {
+        "submitted_order": 1,
+        "city": "Paris",
+        "country": "France"
+      },
+      {
+        "submitted_order": 2,
+        "city": "London",
+        "country": "United Kingdom"
+      },
+      {
+        "submitted_order": 3,
+        "city": "Istanbul",
+        "country": "Turkey"
+      },
+      {
+        "submitted_order": 4,
+        "city": "Rome",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 5,
+        "city": "Barcelona",
+        "country": "Spain"
+      },
+      {
+        "submitted_order": 6,
+        "city": "Amsterdam",
+        "country": "Netherlands"
+      },
+      {
+        "submitted_order": 7,
+        "city": "Prague",
+        "country": "Czechia"
+      },
+      {
+        "submitted_order": 8,
+        "city": "Vienna",
+        "country": "Austria"
+      },
+      {
+        "submitted_order": 9,
+        "city": "Venice",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 10,
+        "city": "Florence",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 11,
+        "city": "Budapest",
+        "country": "Hungary"
+      },
+      {
+        "submitted_order": 12,
+        "city": "Berlin",
+        "country": "Germany"
+      },
+      {
+        "submitted_order": 13,
+        "city": "Athens",
+        "country": "Greece"
+      },
+      {
+        "submitted_order": 14,
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "submitted_order": 15,
+        "city": "Edinburgh",
+        "country": "United Kingdom"
+      },
+      {
+        "submitted_order": 16,
+        "city": "Madrid",
+        "country": "Spain"
+      },
+      {
+        "submitted_order": 17,
+        "city": "Dublin",
+        "country": "Ireland"
+      },
+      {
+        "submitted_order": 18,
+        "city": "Copenhagen",
+        "country": "Denmark"
+      },
+      {
+        "submitted_order": 19,
+        "city": "Stockholm",
+        "country": "Sweden"
+      },
+      {
+        "submitted_order": 20,
+        "city": "Bruges",
+        "country": "Belgium"
+      },
+      {
+        "submitted_order": 21,
+        "city": "Dubrovnik",
+        "country": "Croatia"
+      },
+      {
+        "submitted_order": 22,
+        "city": "Munich",
+        "country": "Germany"
+      },
+      {
+        "submitted_order": 23,
+        "city": "Salzburg",
+        "country": "Austria"
+      },
+      {
+        "submitted_order": 24,
+        "city": "Zurich",
+        "country": "Switzerland"
+      },
+      {
+        "submitted_order": 25,
+        "city": "Seville",
+        "country": "Spain"
+      },
+      {
+        "submitted_order": 26,
+        "city": "Krakow",
+        "country": "Poland"
+      },
+      {
+        "submitted_order": 27,
+        "city": "Milan",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 28,
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "submitted_order": 29,
+        "city": "Nice",
+        "country": "France"
+      },
+      {
+        "submitted_order": 30,
+        "city": "Porto",
+        "country": "Portugal"
+      },
+      {
+        "submitted_order": 31,
+        "city": "Brussels",
+        "country": "Belgium"
+      },
+      {
+        "submitted_order": 32,
+        "city": "Reykjavik",
+        "country": "Iceland"
+      },
+      {
+        "submitted_order": 33,
+        "city": "Helsinki",
+        "country": "Finland"
+      },
+      {
+        "submitted_order": 34,
+        "city": "Oslo",
+        "country": "Norway"
+      },
+      {
+        "submitted_order": 35,
+        "city": "Geneva",
+        "country": "Switzerland"
+      },
+      {
+        "submitted_order": 36,
+        "city": "Lucerne",
+        "country": "Switzerland"
+      },
+      {
+        "submitted_order": 37,
+        "city": "Granada",
+        "country": "Spain"
+      },
+      {
+        "submitted_order": 38,
+        "city": "Valencia",
+        "country": "Spain"
+      },
+      {
+        "submitted_order": 39,
+        "city": "Naples",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 40,
+        "city": "Bologna",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 41,
+        "city": "Verona",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 42,
+        "city": "Ljubljana",
+        "country": "Slovenia"
+      },
+      {
+        "submitted_order": 43,
+        "city": "Split",
+        "country": "Croatia"
+      },
+      {
+        "submitted_order": 44,
+        "city": "Bucharest",
+        "country": "Romania"
+      },
+      {
+        "submitted_order": 45,
+        "city": "Sofia",
+        "country": "Bulgaria"
+      },
+      {
+        "submitted_order": 46,
+        "city": "Warsaw",
+        "country": "Poland"
+      },
+      {
+        "submitted_order": 47,
+        "city": "Bratislava",
+        "country": "Slovakia"
+      },
+      {
+        "submitted_order": 48,
+        "city": "Riga",
+        "country": "Latvia"
+      },
+      {
+        "submitted_order": 49,
+        "city": "Tallinn",
+        "country": "Estonia"
+      },
+      {
+        "submitted_order": 50,
+        "city": "Vilnius",
+        "country": "Lithuania"
+      }
+    ],
+    "unique_city_count": 49,
+    "repeated_entries": [
+      {
+        "city": "Lisbon",
+        "country": "Portugal",
+        "positions": [
+          14,
+          28
+        ],
+        "handling": "Single research target; both original source-list positions preserved"
+      }
+    ],
+    "unique_priority_cities": [
+      {
+        "rank": 1,
+        "user_city": "Paris",
+        "country": "France",
+        "tracker_city": "Paris",
+        "baseline_live": 6,
+        "provisional_proposals": 5,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 2,
+        "user_city": "London",
+        "country": "United Kingdom",
+        "tracker_city": "London",
+        "baseline_live": 5,
+        "provisional_proposals": 20,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 3,
+        "user_city": "Istanbul",
+        "country": "Turkey",
+        "tracker_city": "Istanbul",
+        "baseline_live": 0,
+        "provisional_proposals": 7,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 4,
+        "user_city": "Rome",
+        "country": "Italy",
+        "tracker_city": "Rome",
+        "baseline_live": 1,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 5,
+        "user_city": "Barcelona",
+        "country": "Spain",
+        "tracker_city": "Barcelona",
+        "baseline_live": 2,
+        "provisional_proposals": 6,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 6,
+        "user_city": "Amsterdam",
+        "country": "Netherlands",
+        "tracker_city": "Amsterdam",
+        "baseline_live": 7,
+        "provisional_proposals": 2,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 7,
+        "user_city": "Prague",
+        "country": "Czechia",
+        "tracker_city": "Prague",
+        "baseline_live": 1,
+        "provisional_proposals": 7,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 8,
+        "user_city": "Vienna",
+        "country": "Austria",
+        "tracker_city": "Vienna",
+        "baseline_live": 2,
+        "provisional_proposals": 8,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 9,
+        "user_city": "Venice",
+        "country": "Italy",
+        "tracker_city": "Venice",
+        "baseline_live": 0,
+        "provisional_proposals": 6,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 10,
+        "user_city": "Florence",
+        "country": "Italy",
+        "tracker_city": "Florence",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 11,
+        "user_city": "Budapest",
+        "country": "Hungary",
+        "tracker_city": "Budapest",
+        "baseline_live": 1,
+        "provisional_proposals": 16,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 12,
+        "user_city": "Berlin",
+        "country": "Germany",
+        "tracker_city": "Berlin",
+        "baseline_live": 4,
+        "provisional_proposals": 70,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 13,
+        "user_city": "Athens",
+        "country": "Greece",
+        "tracker_city": "Athens",
+        "baseline_live": 4,
+        "provisional_proposals": 7,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 14,
+        "user_city": "Lisbon",
+        "country": "Portugal",
+        "tracker_city": "Lisbon",
+        "baseline_live": 4,
+        "provisional_proposals": 1,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 15,
+        "user_city": "Edinburgh",
+        "country": "United Kingdom",
+        "tracker_city": "Edinburgh",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 16,
+        "user_city": "Madrid",
+        "country": "Spain",
+        "tracker_city": "Madrid",
+        "baseline_live": 2,
+        "provisional_proposals": 3,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 17,
+        "user_city": "Dublin",
+        "country": "Ireland",
+        "tracker_city": "Dublin",
+        "baseline_live": 2,
+        "provisional_proposals": 8,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 18,
+        "user_city": "Copenhagen",
+        "country": "Denmark",
+        "tracker_city": "Copenhagen",
+        "baseline_live": 4,
+        "provisional_proposals": 2,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 19,
+        "user_city": "Stockholm",
+        "country": "Sweden",
+        "tracker_city": "Stockholm",
+        "baseline_live": 0,
+        "provisional_proposals": 3,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 20,
+        "user_city": "Bruges",
+        "country": "Belgium",
+        "tracker_city": null,
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "city_not_yet_indexed",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No matching city row currently exists; does not imply no cruising areas. Research when prioritized."
+      },
+      {
+        "rank": 21,
+        "user_city": "Dubrovnik",
+        "country": "Croatia",
+        "tracker_city": "Dubrovnik",
+        "baseline_live": 1,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 22,
+        "user_city": "Munich",
+        "country": "Germany",
+        "tracker_city": "Munich",
+        "baseline_live": 4,
+        "provisional_proposals": 17,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 23,
+        "user_city": "Salzburg",
+        "country": "Austria",
+        "tracker_city": "Salzburg",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 24,
+        "user_city": "Zurich",
+        "country": "Switzerland",
+        "tracker_city": "Zurich",
+        "baseline_live": 2,
+        "provisional_proposals": 4,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 25,
+        "user_city": "Seville",
+        "country": "Spain",
+        "tracker_city": "Seville",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 26,
+        "user_city": "Krakow",
+        "country": "Poland",
+        "tracker_city": "Kraków",
+        "baseline_live": 1,
+        "provisional_proposals": 2,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 27,
+        "user_city": "Milan",
+        "country": "Italy",
+        "tracker_city": "Milan",
+        "baseline_live": 1,
+        "provisional_proposals": 8,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 28,
+        "user_city": "Nice",
+        "country": "France",
+        "tracker_city": "Nice",
+        "baseline_live": 1,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 29,
+        "user_city": "Porto",
+        "country": "Portugal",
+        "tracker_city": "Porto",
+        "baseline_live": 0,
+        "provisional_proposals": 2,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 30,
+        "user_city": "Brussels",
+        "country": "Belgium",
+        "tracker_city": "Brussels",
+        "baseline_live": 0,
+        "provisional_proposals": 4,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 31,
+        "user_city": "Reykjavik",
+        "country": "Iceland",
+        "tracker_city": "Reykjavík",
+        "baseline_live": 0,
+        "provisional_proposals": 3,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 32,
+        "user_city": "Helsinki",
+        "country": "Finland",
+        "tracker_city": "Helsinki",
+        "baseline_live": 3,
+        "provisional_proposals": 7,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 33,
+        "user_city": "Oslo",
+        "country": "Norway",
+        "tracker_city": "Oslo",
+        "baseline_live": 5,
+        "provisional_proposals": 3,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 34,
+        "user_city": "Geneva",
+        "country": "Switzerland",
+        "tracker_city": "Geneva",
+        "baseline_live": 3,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 35,
+        "user_city": "Lucerne",
+        "country": "Switzerland",
+        "tracker_city": "Lucerne",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 36,
+        "user_city": "Granada",
+        "country": "Spain",
+        "tracker_city": null,
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "city_not_yet_indexed",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No matching city row currently exists; does not imply no cruising areas. Research when prioritized."
+      },
+      {
+        "rank": 37,
+        "user_city": "Valencia",
+        "country": "Spain",
+        "tracker_city": "Valencia",
+        "baseline_live": 4,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 38,
+        "user_city": "Naples",
+        "country": "Italy",
+        "tracker_city": "Naples",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 39,
+        "user_city": "Bologna",
+        "country": "Italy",
+        "tracker_city": "Bologna",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 40,
+        "user_city": "Verona",
+        "country": "Italy",
+        "tracker_city": "Verona",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 41,
+        "user_city": "Ljubljana",
+        "country": "Slovenia",
+        "tracker_city": "Ljubljana",
+        "baseline_live": 0,
+        "provisional_proposals": 8,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 42,
+        "user_city": "Split",
+        "country": "Croatia",
+        "tracker_city": "Split",
+        "baseline_live": 3,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 43,
+        "user_city": "Bucharest",
+        "country": "Romania",
+        "tracker_city": "Bucharest",
+        "baseline_live": 1,
+        "provisional_proposals": 5,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 44,
+        "user_city": "Sofia",
+        "country": "Bulgaria",
+        "tracker_city": "Sofia",
+        "baseline_live": 1,
+        "provisional_proposals": 11,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 45,
+        "user_city": "Warsaw",
+        "country": "Poland",
+        "tracker_city": "Warsaw",
+        "baseline_live": 2,
+        "provisional_proposals": 4,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 46,
+        "user_city": "Bratislava",
+        "country": "Slovakia",
+        "tracker_city": "Bratislava",
+        "baseline_live": 0,
+        "provisional_proposals": 11,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 47,
+        "user_city": "Riga",
+        "country": "Latvia",
+        "tracker_city": "Riga",
+        "baseline_live": 3,
+        "provisional_proposals": 13,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 48,
+        "user_city": "Tallinn",
+        "country": "Estonia",
+        "tracker_city": "Tallinn",
+        "baseline_live": 0,
+        "provisional_proposals": 11,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 49,
+        "user_city": "Vilnius",
+        "country": "Lithuania",
+        "tracker_city": "Vilnius",
+        "baseline_live": 0,
+        "provisional_proposals": 6,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      }
+    ],
+    "policy": {
+      "existing_data": "Preserve all existing countries, city records, sources, venue IDs, proposed_places and raw scrape files. No deletion or replacement of existing research.",
+      "priority": "Focus on user-supplied cities first, particularly cities with zero baseline Live cruising-area listings AND zero research proposals. Prioritize by supplied order within the relevant group; do not exclude other locations from the database.",
+      "zero_is_valid": "After a reasonable investigation, if no identifiable qualifying cruising locations are found, explicitly record the city as checked_zero_qualifying_results, with source URLs, date and scope. Do not invent, force or extrapolate a spot to fill a zero.",
+      "zero_is_not_not_checked": "Distinguish no_known_spot_yet, city_not_yet_indexed, blocked_or_incomplete and checked_zero_qualifying_results; don't conflate absence of research with confirmed absence of spots.",
+      "avoid_wasted_search": "Review existing live and provisional data/source URLs first, then investigate only coverage holes or genuine inconsistencies. Do not crawl every supplemental reference for the same facts. Stop when enough reliable information exists or the pass is reasonably exhausted.",
+      "no_live_import": "Keep all discoveries as research proposals until separately reviewed and authorized for production.",
+      "refresh_snapshots": "baseline_live, provisional_proposals and coverage_status are dated snapshots from 2026-11-06. Recompute after future research updates, don't assume they remain live totals.",
+      "source_count_policy": "A city may have multiple stored rows representing outlying sites (e.g. Mestre near Venice); do not accidentally combine distinct locations or treat absence of exact matches as zero if alternate spelling exists."
+    }
+  }
 }
