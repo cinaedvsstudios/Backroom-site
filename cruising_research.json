@@ -279,7 +279,7 @@
           "reason": "No separate Kosovo page was found in source country directory. Two Kosovo-labelled places were present under Serbia and are tracked in Kosovo for later verification."
         }
       ],
-      "results_total": 598,
+      "results_total": 672,
       "city_pages_checked": [
         {
           "country": "Spain",
@@ -301,6 +301,13 @@
           "url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
           "count": 5,
           "kind": "city_page_additional_top_spots"
+        },
+        {
+          "country": "Hungary",
+          "city": "Budapest",
+          "url": "https://www.gays-cruising.com/en/budapest/hungary",
+          "count": 15,
+          "kind": "city_page_additional_top_spots"
         }
       ],
       "city_specific_extension_notes": [
@@ -309,7 +316,173 @@
         "Source places Achivadolimni beach (Milos island) under Mykonos. Preserve raw source entry but verify its true geographic location and do not publish as Mykonos without checking.",
         "2026 comments appeared on Maspalomas and Las Palmas pages; specific claims should be independently checked for currency and site access restrictions."
       ],
-      "data_file": "research/cruising/scrape_1.json"
+      "data_file": "research/cruising/scrape_1.json",
+      "user_supplied_map_pages": [
+        {
+          "country": "Spain",
+          "scope": "Maspalomas",
+          "reference_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain#map-zoom=14&map-lat=27.761177972011023&map-lng=-15.595521926879885",
+          "page_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Greece",
+          "scope": "Mykonos",
+          "reference_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece#map-zoom=7&map-lat=37.807145022840984&map-lng=22.318852499860792",
+          "page_url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Malta",
+          "scope": "country",
+          "reference_url": "https://www.gays-cruising.com/en/malta",
+          "page_url": "https://www.gays-cruising.com/en/malta",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Belgium",
+          "scope": "country",
+          "reference_url": "https://www.gays-cruising.com/en/belgium#map-zoom=7&map-lat=50.52925472865799&map-lng=4.380334973350016",
+          "page_url": "https://www.gays-cruising.com/en/belgium",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Poland",
+          "scope": "country",
+          "reference_url": "https://www.gays-cruising.com/en/poland#map-zoom=5&map-lat=52.14938737020347&map-lng=18.91322422025001",
+          "page_url": "https://www.gays-cruising.com/en/poland",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Switzerland",
+          "scope": "country",
+          "reference_url": "https://www.gays-cruising.com/en/switzerland#map-zoom=7&map-lat=46.7973657449026&map-lng=8.139571189900023",
+          "page_url": "https://www.gays-cruising.com/en/switzerland",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Luxembourg",
+          "scope": "country",
+          "reference_url": "https://www.gays-cruising.com/en/luxembourg#map-zoom=8&map-lat=49.8199684707167&map-lng=6.246125221250002",
+          "page_url": "https://www.gays-cruising.com/en/luxembourg",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "United Kingdom",
+          "scope": "country",
+          "reference_url": "https://www.gays-cruising.com/en/united_kingdom#map-zoom=4&map-lat=55.02802211299252&map-lng=-3.0322265625000004",
+          "page_url": "https://www.gays-cruising.com/en/united_kingdom",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Ireland",
+          "scope": "country",
+          "reference_url": "https://www.gays-cruising.com/en/ireland#map-zoom=6&map-lat=53.39353966934477&map-lng=-8.119754791249996",
+          "page_url": "https://www.gays-cruising.com/en/ireland",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Italy",
+          "scope": "country",
+          "reference_url": "https://www.gays-cruising.com/en/italy#map-zoom=4&map-lat=41.44272637767212&map-lng=12.612304687500002",
+          "page_url": "https://www.gays-cruising.com/en/italy",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Italy",
+          "scope": "Veneto - Venezia",
+          "reference_url": "https://www.gays-cruising.com/en/veneto_venezia/italy#map-zoom=7&map-lat=44.855868807357275&map-lng=11.8707275390625",
+          "page_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Spain",
+          "scope": "Barcelona",
+          "reference_url": "https://www.gays-cruising.com/en/barcelona/spain#map-zoom=8&map-lat=41.72623044860004&map-lng=2.0846557617187504",
+          "page_url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Netherlands",
+          "scope": "country",
+          "reference_url": "https://www.gays-cruising.com/en/netherlands#map-zoom=6&map-lat=52.13554477456471&map-lng=5.297266244850016",
+          "page_url": "https://www.gays-cruising.com/en/netherlands",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Czechia",
+          "scope": "country",
+          "reference_url": "https://www.gays-cruising.com/en/czech_republic#map-zoom=6&map-lat=49.84182965333571&map-lng=15.5022125244",
+          "page_url": "https://www.gays-cruising.com/en/czech_republic",
+          "previously_collected": true,
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        },
+        {
+          "country": "Hungary",
+          "scope": "Budapest",
+          "reference_url": "https://www.gays-cruising.com/en/budapest/hungary#map-zoom=10&map-lat=47.50609475402791&map-lng=19.065039634700003",
+          "page_url": "https://www.gays-cruising.com/en/budapest/hungary",
+          "verified_source_page": true,
+          "notes": "The URL fragment is map zoom/viewport state, not individual spot coordinates or a separate set of entries."
+        }
+      ],
+      "region_pages_checked": [
+        {
+          "country": "Italy",
+          "region": "Veneto - Venezia",
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "count": 15,
+          "kind": "province_or_region_top_spots"
+        },
+        {
+          "country": "Spain",
+          "region": "Barcelona",
+          "url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "count": 15,
+          "kind": "province_or_region_top_spots"
+        }
+      ],
+      "user_supplied_page_review": {
+        "received_berlin": "2026-11-06",
+        "country_or_city_links": 15,
+        "already_collected_top_lists": 12,
+        "new_top_spots_pages": 3,
+        "newly_collected_top_spots": 45,
+        "recent_comment_or_checkin_spots": 29,
+        "known_map_limit": "The map is interactive and a URL #map-zoom fragment only changes map viewport; this pass does not claim to export every pin visible on the interactive map.",
+        "other_notes": [
+          "Maspalomas and Mykonos city top lists were already included in Scrape 1; no duplicate source entries created.",
+          "Barcelona is a province-level page listing spots in many different cities; Veneto - Venezia is a regional page and spot city assignments were preserved.",
+          "Public baths, shopping-centre toilets, pools, gyms and similar ordinary facilities remain eligible research leads. Dedicated gay saunas/clubs are excluded from proposals.",
+          "A July 2026 complaint about CC Las Arenas describes paid toilets and possible new restrictions; review before publication.",
+          "A June 2026 Malta comment reported the Garden of Serenity public toilets were closed; keep flagged as unverified closure."
+        ]
+      }
     },
     {
       "id": "scrape_2",
@@ -1055,7 +1228,7 @@
     {
       "country": "Belgium",
       "cruising_now": 0,
-      "proposals": 15,
+      "proposals": 19,
       "cities": [
         {
           "city": "Ans",
@@ -1118,7 +1291,7 @@
         {
           "city": "Brussels",
           "cruising_now": 0,
-          "proposals": 3,
+          "proposals": 4,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -1159,10 +1332,25 @@
               "source_url": "https://www.gays-cruising.com/en/belgium",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-EX-BELGIUM-BRUSSELS-PARC-DU-CINQUANTENAIRE",
+              "name": "Parc du Cinquantenaire",
+              "city": "Brussels",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": "June 2026 check-in; no activity guarantee.",
+              "latest_source_activity_date": "2026-06-27",
+              "latest_source_activity_type": "check-in"
             }
           ],
           "scrapes": {
-            "scrape_1": 3
+            "scrape_1": 4
           }
         },
         {
@@ -1331,6 +1519,32 @@
           }
         },
         {
+          "city": "Mechelen",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-BELGIUM-MECHELEN-BATTENBROEK",
+              "name": "Battenbroek",
+              "city": "Mechelen",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Outdoor area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": "June 2026 check-in; additional on-site evidence needed.",
+              "latest_source_activity_date": "2026-06-27",
+              "latest_source_activity_type": "check-in"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
           "city": "Pont-à-Celles",
           "cruising_now": 0,
           "proposals": 1,
@@ -1348,6 +1562,58 @@
               "source_url": "https://www.gays-cruising.com/en/belgium",
               "status": "unverified",
               "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Verviers",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-BELGIUM-VERVIERS-LA-TOURELLE",
+              "name": "La tourelle",
+              "city": "Verviers",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Outdoor area",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": "June 2026 check-in; verify location.",
+              "latest_source_activity_date": "2026-06-27",
+              "latest_source_activity_type": "check-in"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Vorselaar",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-BELGIUM-VORSELAAR-TOILETS-TRUCK-PARKING-VORSELAAR",
+              "name": "Toilets truck parking Vorselaar",
+              "city": "Vorselaar",
+              "country": "Belgium",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area / toilet",
+              "source_url": "https://www.gays-cruising.com/en/belgium",
+              "status": "unverified",
+              "notes": "June 2026 check-in; verify site name and access.",
+              "latest_source_activity_date": "2026-06-27",
+              "latest_source_activity_type": "check-in"
             }
           ],
           "scrapes": {
@@ -2711,7 +2977,7 @@
     {
       "country": "Luxembourg",
       "cruising_now": 0,
-      "proposals": 14,
+      "proposals": 15,
       "cities": [
         {
           "city": "Belvaux",
@@ -2995,6 +3261,32 @@
               "source_url": "https://www.gays-cruising.com/en/luxembourg",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Senningen",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-LUXEMBOURG-SENNINGEN-AIRPORT-TOILETS",
+              "name": "Airport toilets",
+              "city": "Senningen",
+              "country": "Luxembourg",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/luxembourg",
+              "status": "unverified",
+              "notes": "June 2026 check-in near airport; verify which public toilets and access.",
+              "latest_source_activity_date": "2026-06-19",
+              "latest_source_activity_type": "check-in"
             }
           ],
           "scrapes": {
@@ -5942,7 +6234,7 @@
     {
       "country": "Hungary",
       "cruising_now": 1,
-      "proposals": 14,
+      "proposals": 22,
       "cities": [
         {
           "city": "Albertfalva",
@@ -5985,9 +6277,20 @@
               "source_category": "Shopping area",
               "source_url": "https://www.gays-cruising.com/en/hungary",
               "status": "unverified",
-              "notes": "Review venue type and public-access suitability before considering publication."
+              "notes": "Review venue type and public-access suitability before considering publication.",
+              "research_notes": []
             }
           ],
+          "scrapes": {
+            "scrape_1": 2
+          }
+        },
+        {
+          "city": "Buda",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
           "scrapes": {
             "scrape_1": 1
           }
@@ -5995,7 +6298,7 @@
         {
           "city": "Budapest",
           "cruising_now": 1,
-          "proposals": 10,
+          "proposals": 16,
           "existing_cruising": [
             {
               "id": "CRU-BUD-DANPRO-01",
@@ -6015,7 +6318,8 @@
               "source_category": "Shopping area",
               "source_url": "https://www.gays-cruising.com/en/hungary",
               "status": "unverified",
-              "notes": "Review venue type and public-access suitability before considering publication."
+              "notes": "Review venue type and public-access suitability before considering publication.",
+              "research_notes": []
             },
             {
               "proposal_id": "GC1-HUNGARY-04",
@@ -6054,7 +6358,8 @@
               "source_category": "Park",
               "source_url": "https://www.gays-cruising.com/en/hungary",
               "status": "unverified",
-              "notes": ""
+              "notes": "",
+              "research_notes": []
             },
             {
               "proposal_id": "GC1-HUNGARY-09",
@@ -6080,7 +6385,8 @@
               "source_category": "Shopping area",
               "source_url": "https://www.gays-cruising.com/en/hungary",
               "status": "unverified",
-              "notes": "Review venue type and public-access suitability before considering publication."
+              "notes": "Review venue type and public-access suitability before considering publication.",
+              "research_notes": []
             },
             {
               "proposal_id": "GC1-HUNGARY-12",
@@ -6093,7 +6399,8 @@
               "source_category": "Shopping area",
               "source_url": "https://www.gays-cruising.com/en/hungary",
               "status": "unverified",
-              "notes": "Review venue type and public-access suitability before considering publication."
+              "notes": "Review venue type and public-access suitability before considering publication.",
+              "research_notes": []
             },
             {
               "proposal_id": "GC1-HUNGARY-13",
@@ -6134,10 +6441,114 @@
               "status": "unverified",
               "notes": "Verify this is a non-dedicated venue with cruising activity; do not add if already covered by main Backroom venues.",
               "scope_note": "Restored as ordinary-site research candidate per 2026-11-06 instructions; not approved for publication."
+            },
+            {
+              "proposal_id": "GC1-EX-HUNGARY-BUDAPEST-HATAR-UT-BEHIND-IBIS-HOTEL",
+              "name": "Határ út, behind Ibis Hotel",
+              "city": "Budapest",
+              "country": "Hungary",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/budapest/hungary",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-HUNGARY-BUDAPEST-BUDAPEST-AIRPORT",
+              "name": "Budapest Airport",
+              "city": "Budapest",
+              "country": "Hungary",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Transport station",
+              "source_url": "https://www.gays-cruising.com/en/budapest/hungary",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-HUNGARY-BUDAPEST-ELTE-GLORY-HOLE",
+              "name": "ELTE Glory Hole",
+              "city": "Budapest",
+              "country": "Hungary",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "University",
+              "source_url": "https://www.gays-cruising.com/en/budapest/hungary",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-HUNGARY-BUDAPEST-NEPLIGET",
+              "name": "Népliget",
+              "city": "Budapest",
+              "country": "Hungary",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/budapest/hungary",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-HUNGARY-BUDAPEST-ARKAD-FERFI-WC",
+              "name": "Árkád Ferfi WC",
+              "city": "Budapest",
+              "country": "Hungary",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/budapest/hungary",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-HUNGARY-BUDAPEST-GERMANUS-GYULA-PARK",
+              "name": "Germanus Gyula Park",
+              "city": "Budapest",
+              "country": "Hungary",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/budapest/hungary",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
             }
           ],
           "scrapes": {
-            "scrape_1": 11
+            "scrape_1": 23
+          }
+        },
+        {
+          "city": "Csepel",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-HUNGARY-CSEPEL-ROZSA-UTCAI-DUNA-PART",
+              "name": "Rózsa utcai Duna-part",
+              "city": "Csepel",
+              "country": "Hungary",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Waterside",
+              "source_url": "https://www.gays-cruising.com/en/budapest/hungary",
+              "status": "unverified",
+              "notes": "July 2026 commenter says they pass the area and never see anyone; negative activity signal.",
+              "latest_source_activity_date": "2026-07-06",
+              "latest_source_activity_type": "comment"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
           }
         },
         {
@@ -6157,7 +6568,34 @@
               "source_category": "Shopping area",
               "source_url": "https://www.gays-cruising.com/en/hungary",
               "status": "unverified",
-              "notes": "Review venue type and public-access suitability before considering publication."
+              "notes": "Review venue type and public-access suitability before considering publication.",
+              "research_notes": []
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 2
+          }
+        },
+        {
+          "city": "Kispest",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-HUNGARY-KISPEST-SHOPMARK-FIRST-FLOOR-TOILET",
+              "name": "Shopmark (first floor toilet)",
+              "city": "Kispest",
+              "country": "Hungary",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/budapest/hungary",
+              "status": "unverified",
+              "notes": "July 2026 question about first-floor toilets; still requires independent confirmation.",
+              "latest_source_activity_date": "2026-07-05",
+              "latest_source_activity_type": "comment"
             }
           ],
           "scrapes": {
@@ -6181,11 +6619,12 @@
               "source_category": "Natural area",
               "source_url": "https://www.gays-cruising.com/en/hungary",
               "status": "unverified",
-              "notes": ""
+              "notes": "",
+              "research_notes": []
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 2
           }
         }
       ]
@@ -7253,7 +7692,10 @@
               "source_category": "Park",
               "source_url": "https://www.gays-cruising.com/en/malta",
               "status": "unverified",
-              "notes": ""
+              "notes": "",
+              "research_notes": [
+                "Gays-Cruising user comment dated 2026-06-09 says public toilets were currently closed, possibly for refurbishment; independently verify before listing."
+              ]
             }
           ],
           "scrapes": {
@@ -7854,7 +8296,7 @@
     {
       "country": "Italy",
       "cruising_now": 3,
-      "proposals": 15,
+      "proposals": 31,
       "cities": [
         {
           "city": "Bologna",
@@ -7879,6 +8321,30 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Caorle",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-ITALY-CAORLE-PRA-DELLE-TORRI",
+              "name": "Pra Delle Torri",
+              "city": "Caorle",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
         },
         {
           "city": "Carisio",
@@ -7929,6 +8395,106 @@
           }
         },
         {
+          "city": "Cavallino-Treporti",
+          "cruising_now": 0,
+          "proposals": 5,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-ITALY-CAVALLINO-TREPORTI-UNION-LIDO-WASCHHAUS-WC-8",
+              "name": "Union Lido Waschhaus wc 8",
+              "city": "Cavallino-Treporti",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-ITALY-CAVALLINO-TREPORTI-MARINA-CAMPING",
+              "name": "Marina Camping",
+              "city": "Cavallino-Treporti",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-ITALY-CAVALLINO-TREPORTI-PINETA-PUNTA-SABBIONI",
+              "name": "Pineta Punta Sabbioni",
+              "city": "Cavallino-Treporti",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-ITALY-CAVALLINO-TREPORTI-WALD-HINTER-DEN-DUNEN",
+              "name": "Wald Hinter den Dünen",
+              "city": "Cavallino-Treporti",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-ITALY-CAVALLINO-TREPORTI-JACK-DANNER",
+              "name": "Jack Danner",
+              "city": "Cavallino-Treporti",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 5
+          }
+        },
+        {
+          "city": "Eraclea",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-ITALY-ERACLEA-SPIAGGIA-DEL-MORT-A-ERACLEA",
+              "name": "Spiaggia del Mort a Eraclea",
+              "city": "Eraclea",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
           "city": "Florence",
           "cruising_now": 0,
           "proposals": 0,
@@ -7961,9 +8527,33 @@
           }
         },
         {
+          "city": "Meolo",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-ITALY-MEOLO-CASELLO-A4",
+              "name": "Casello A4",
+              "city": "Meolo",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
           "city": "Milan",
           "cruising_now": 1,
-          "proposals": 7,
+          "proposals": 8,
           "existing_cruising": [
             {
               "id": "CRU-MIL-PARSEM-01",
@@ -8062,10 +8652,25 @@
               "source_url": "https://www.gays-cruising.com/en/italy",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-EX-ITALY-MILAN-BAGNI-PALAZZO-REALE",
+              "name": "Bagni Palazzo Reale",
+              "city": "Milan",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Public toilet",
+              "source_url": "https://www.gays-cruising.com/en/italy",
+              "status": "unverified",
+              "notes": "July 2026 check-in, verify exact Palazzo Reale bathrooms and access.",
+              "latest_source_activity_date": "2026-07-06",
+              "latest_source_activity_type": "check-in"
             }
           ],
           "scrapes": {
-            "scrape_1": 7
+            "scrape_1": 8
           }
         },
         {
@@ -8184,6 +8789,30 @@
           "scrapes": {}
         },
         {
+          "city": "San Michele al Tagliamento",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-ITALY-SAN-MICHELE-AL-TAGLIAMENTO-SPIAGGIA-BIBIONE-FARO",
+              "name": "Spiaggia Bibione Faro",
+              "city": "San Michele al Tagliamento",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
           "city": "Santa Cristina Valgardena",
           "cruising_now": 0,
           "proposals": 1,
@@ -8238,6 +8867,95 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Venice",
+          "cruising_now": 0,
+          "proposals": 6,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-ITALY-VENICE-BAGNI-GRILL-BAZZERA",
+              "name": "Bagni Grill Bazzera",
+              "city": "Venice",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-ITALY-VENICE-CC-PORTE-DI-MESTRE",
+              "name": "CC. Porte di Mestre",
+              "city": "Venice",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-ITALY-VENICE-GIARDINI-DELLA-BIENNALE",
+              "name": "Giardini della Biennale",
+              "city": "Venice",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-ITALY-VENICE-RADURA-PARCO-SAN-GIULIANO-MESTRE",
+              "name": "Radura parco San Giuliano (Mestre)",
+              "city": "Venice",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-ITALY-VENICE-AEROPORTO-MARCO-POLO",
+              "name": "Aeroporto Marco Polo",
+              "city": "Venice",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Other",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-ITALY-VENICE-BANCHINA-AZOTO",
+              "name": "Banchina Azoto",
+              "city": "Venice",
+              "country": "Italy",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Industrial Park",
+              "source_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 6
+          }
         },
         {
           "city": "Venice (Mestre)",
@@ -8525,12 +9243,12 @@
     {
       "country": "Poland",
       "cruising_now": 3,
-      "proposals": 15,
+      "proposals": 20,
       "cities": [
         {
           "city": "Gdańsk",
           "cruising_now": 0,
-          "proposals": 2,
+          "proposals": 3,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -8558,16 +9276,31 @@
               "source_url": "https://www.gays-cruising.com/en/poland",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GC1-EX-POLAND-GDANSK-GALERIA-METROPOLIA",
+              "name": "Galeria Metropolia",
+              "city": "Gdańsk",
+              "country": "Poland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/poland",
+              "status": "unverified",
+              "notes": "Shopping centre mentioned in June 2026 comments; investigate exact restroom area.",
+              "latest_source_activity_date": "2026-06-27",
+              "latest_source_activity_type": "comment"
             }
           ],
           "scrapes": {
-            "scrape_1": 2
+            "scrape_1": 3
           }
         },
         {
           "city": "Katowice",
           "cruising_now": 0,
-          "proposals": 1,
+          "proposals": 3,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -8582,10 +9315,40 @@
               "source_url": "https://www.gays-cruising.com/en/poland",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "GC1-EX-POLAND-KATOWICE-PARKING-MURCKI",
+              "name": "Parking Murcki",
+              "city": "Katowice",
+              "country": "Poland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Parking area",
+              "source_url": "https://www.gays-cruising.com/en/poland",
+              "status": "unverified",
+              "notes": "June 2026 meeting inquiry; verify which parking area.",
+              "latest_source_activity_date": "2026-06-27",
+              "latest_source_activity_type": "comment"
+            },
+            {
+              "proposal_id": "GC1-EX-POLAND-KATOWICE-AQUADROM-POOL",
+              "name": "Aquadrom Pool",
+              "city": "Katowice",
+              "country": "Poland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Swimming pool",
+              "source_url": "https://www.gays-cruising.com/en/poland",
+              "status": "unverified",
+              "notes": "Ordinary swimming pool, eligible research lead; verify facility policies and on-site evidence.",
+              "latest_source_activity_date": "2026-06-27",
+              "latest_source_activity_type": "comment"
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 3
           }
         },
         {
@@ -8658,10 +9421,54 @@
         {
           "city": "Poznań",
           "cruising_now": 0,
-          "proposals": 0,
+          "proposals": 1,
           "existing_cruising": [],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-POLAND-POZNAN-AS-24",
+              "name": "AS 24",
+              "city": "Poznań",
+              "country": "Poland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Service station",
+              "source_url": "https://www.gays-cruising.com/en/poland",
+              "status": "unverified",
+              "notes": "Source city says Posen; normalised Poznań. Needs precise address.",
+              "latest_source_activity_date": "2026-06-27",
+              "latest_source_activity_type": "comment"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Rumia",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-POLAND-RUMIA-TOALETY-AUCHAN-PORT-HANDLOWY-RUMIA",
+              "name": "Toalety Auchan Port Handlowy Rumia",
+              "city": "Rumia",
+              "country": "Poland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/poland",
+              "status": "unverified",
+              "notes": "June 2026 meetup inquiry; not evidence of current access.",
+              "latest_source_activity_date": "2026-06-27",
+              "latest_source_activity_type": "comment"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
         },
         {
           "city": "Rybnik",
@@ -10480,7 +11287,10 @@
               "source_category": "Natural area",
               "source_url": "https://www.gays-cruising.com/en/united_kingdom",
               "status": "unverified",
-              "notes": ""
+              "notes": "",
+              "research_notes": [
+                "A Gays-Cruising comment dated 2026-06-22 asks whether anyone still visits. Activity is uncertain."
+              ]
             }
           ],
           "scrapes": {
@@ -10793,7 +11603,7 @@
     {
       "country": "Switzerland",
       "cruising_now": 7,
-      "proposals": 15,
+      "proposals": 18,
       "cities": [
         {
           "city": "Aarau",
@@ -10821,6 +11631,32 @@
               "source_url": "https://www.gays-cruising.com/en/switzerland",
               "status": "unverified",
               "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Arlesheim",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SWITZERLAND-ARLESHEIM-PARKPLATZ-ARLESHEIM",
+              "name": "Parkplatz Arlesheim",
+              "city": "Arlesheim",
+              "country": "Switzerland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Parking area",
+              "source_url": "https://www.gays-cruising.com/en/switzerland",
+              "status": "unverified",
+              "notes": "July 2026 check-in, unverified.",
+              "latest_source_activity_date": "2026-07-04",
+              "latest_source_activity_type": "check-in"
             }
           ],
           "scrapes": {
@@ -11063,6 +11899,58 @@
           "scrapes": {}
         },
         {
+          "city": "Obfelden",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SWITZERLAND-OBFELDEN-AM-FLUSS",
+              "name": "Am Fluss",
+              "city": "Obfelden",
+              "country": "Switzerland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Waterside",
+              "source_url": "https://www.gays-cruising.com/en/switzerland",
+              "status": "unverified",
+              "notes": "July 2026 check-in; very broad name, verify precise location.",
+              "latest_source_activity_date": "2026-07-04",
+              "latest_source_activity_type": "check-in"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Sevelen",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SWITZERLAND-SEVELEN-RASTPLATZ-WALDCHEN-MIT-TUR-ZU-MEHR",
+              "name": "Rastplatz Wäldchen mit Tür zu mehr",
+              "city": "Sevelen",
+              "country": "Switzerland",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/switzerland",
+              "status": "unverified",
+              "notes": "July 2026 check-in; verify exact service area.",
+              "latest_source_activity_date": "2026-07-04",
+              "latest_source_activity_type": "check-in"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
           "city": "Silvaplana",
           "cruising_now": 0,
           "proposals": 0,
@@ -11221,7 +12109,7 @@
     {
       "country": "Netherlands",
       "cruising_now": 11,
-      "proposals": 15,
+      "proposals": 19,
       "cities": [
         {
           "city": "Almere",
@@ -11418,6 +12306,32 @@
           }
         },
         {
+          "city": "Cromvoirt",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-NETHERLANDS-CROMVOIRT-DE-BANKJES",
+              "name": "De Bankjes",
+              "city": "Cromvoirt",
+              "country": "Netherlands",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Outdoor area",
+              "source_url": "https://www.gays-cruising.com/en/netherlands",
+              "status": "unverified",
+              "notes": "July 2026 check-in; verify exact site.",
+              "latest_source_activity_date": "2026-07-04",
+              "latest_source_activity_type": "check-in"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
           "city": "Delft",
           "cruising_now": 0,
           "proposals": 1,
@@ -11448,6 +12362,32 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Kamperland",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-NETHERLANDS-KAMPERLAND-NEELTJE-JANS",
+              "name": "Neeltje Jans",
+              "city": "Kamperland",
+              "country": "Netherlands",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Outdoor area",
+              "source_url": "https://www.gays-cruising.com/en/netherlands",
+              "status": "unverified",
+              "notes": "July 2026 check-in; verify spot coordinates.",
+              "latest_source_activity_date": "2026-07-04",
+              "latest_source_activity_type": "check-in"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
         },
         {
           "city": "Naarden",
@@ -11538,7 +12478,7 @@
         {
           "city": "The Hague",
           "cruising_now": 2,
-          "proposals": 0,
+          "proposals": 1,
           "existing_cruising": [
             {
               "id": "CRU-HAG-SCHBOS-02",
@@ -11551,8 +12491,26 @@
               "status": "Live"
             }
           ],
-          "proposed_places": [],
-          "scrapes": {}
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-NETHERLANDS-THE-HAGUE-MEER-EN-BOS-PARK",
+              "name": "Meer en Bos Park",
+              "city": "The Hague",
+              "country": "Netherlands",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/netherlands",
+              "status": "unverified",
+              "notes": "July 2026 check-in, not proof of cruising activity.",
+              "latest_source_activity_date": "2026-07-04",
+              "latest_source_activity_type": "check-in"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
         },
         {
           "city": "Tholen",
@@ -11572,6 +12530,32 @@
               "source_url": "https://www.gays-cruising.com/en/netherlands",
               "status": "unverified",
               "notes": ""
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Urmond",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-NETHERLANDS-URMOND-SWENTIBOLD",
+              "name": "Swentibold",
+              "city": "Urmond",
+              "country": "Netherlands",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Outdoor area",
+              "source_url": "https://www.gays-cruising.com/en/netherlands",
+              "status": "unverified",
+              "notes": "July 2026 check-in; verify location.",
+              "latest_source_activity_date": "2026-07-04",
+              "latest_source_activity_type": "check-in"
             }
           ],
           "scrapes": {
@@ -16554,7 +17538,7 @@
     {
       "country": "Spain",
       "cruising_now": 13,
-      "proposals": 44,
+      "proposals": 63,
       "cities": [
         {
           "city": "A Coruña",
@@ -16613,9 +17597,81 @@
           "scrapes": {}
         },
         {
+          "city": "Avinyó",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-AVINYO-ZONA-DESCANSO-AVINYO-C25",
+              "name": "Zona descanso Avinyó c25",
+              "city": "Avinyó",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Badalona",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-BADALONA-RIERA-POMAR",
+              "name": "Riera Pomar",
+              "city": "Badalona",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Bagà",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-BAGA-PISCIFACTORIA",
+              "name": "Piscifactoria",
+              "city": "Bagà",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
           "city": "Barcelona",
           "cruising_now": 2,
-          "proposals": 4,
+          "proposals": 6,
           "existing_cruising": [
             {
               "id": "CRU-BCN-MARBEL-01",
@@ -16640,7 +17696,8 @@
               "source_category": "Park",
               "source_url": "https://www.gays-cruising.com/en/spain",
               "status": "unverified",
-              "notes": ""
+              "notes": "",
+              "research_notes": []
             },
             {
               "proposal_id": "GP4-SPAIN-BARCELONA-01",
@@ -16674,16 +17731,50 @@
               "city": "Barcelona",
               "country": "Spain",
               "source_ids": [
-                "scrape_4"
+                "scrape_4",
+                "scrape_1"
               ],
               "source_category": "Shopping-centre toilet",
               "source_url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
               "status": "unverified",
-              "notes": "Source names upper and basement toilets in Las Arenas shopping centre."
+              "notes": "Source names upper and basement toilets in Las Arenas shopping centre.",
+              "research_notes": [
+                "Gays-Cruising July 2026 comments for CC Las Arenas say the toilets are paid and question whether cruising remains possible. This is a user report, not independently verified."
+              ]
+            },
+            {
+              "proposal_id": "GC1-EX-SPAIN-BARCELONA-ASEOS-MERCAT-SANT-ANTONI",
+              "name": "Aseos Mercat Sant Antoni",
+              "city": "Barcelona",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Public restroom",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "July 2026 meeting inquiry referencing market toilets; not proof of activity.",
+              "latest_source_activity_date": "2026-07-18",
+              "latest_source_activity_type": "comment"
+            },
+            {
+              "proposal_id": "GC1-EX-SPAIN-BARCELONA-PARQUE-SAGRADA-FAMILIA",
+              "name": "Parque Sagrada Familia",
+              "city": "Barcelona",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "July 2026 inquiry; no independent confirmation.",
+              "latest_source_activity_date": "2026-07-18",
+              "latest_source_activity_type": "comment"
             }
           ],
           "scrapes": {
-            "scrape_1": 1,
+            "scrape_1": 5,
             "scrape_4": 4
           }
         },
@@ -16730,6 +17821,32 @@
           "scrapes": {}
         },
         {
+          "city": "Calella",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-CALELLA-PLATJA-DE-LA-ROCA-GROSSA",
+              "name": "Platja de La Roca Grossa",
+              "city": "Calella",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Beach",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "July 2026 discussion, no independent on-site confirmation.",
+              "latest_source_activity_date": "2026-07-18",
+              "latest_source_activity_type": "comment"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
           "city": "Campos (Mallorca)",
           "cruising_now": 0,
           "proposals": 0,
@@ -16756,6 +17873,102 @@
           ],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Castellbisbal",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-CASTELLBISBAL-BAJO-EL-PUENTE-DE-CASTELLBISBAL",
+              "name": "Bajo el puente de Castellbisbal",
+              "city": "Castellbisbal",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Cerdanyola del Vallès",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-CERDANYOLA-DEL-VALLES-AREA-DE-SERVICIO-BELLATERRA",
+              "name": "Área de servicio Bellaterra",
+              "city": "Cerdanyola del Vallès",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "El Prat de Llobregat",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-EL-PRAT-DE-LLOBREGAT-PARKING-RIO-LLOBREGAT-EL-PRAT",
+              "name": "Parking río Llobregat El Prat",
+              "city": "El Prat de Llobregat",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Gelida",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-GELIDA-AREA-DE-SERVICIO-AP7",
+              "name": "Área de servicio AP7",
+              "city": "Gelida",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Rest area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
         },
         {
           "city": "Gijón",
@@ -17279,6 +18492,32 @@
           }
         },
         {
+          "city": "Mataró",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-MATARO-PARC-CENTRAL-MATARO",
+              "name": "Parc central mataro",
+              "city": "Mataró",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Park",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "One user posted a meeting inquiry in July 2026; activity not confirmed.",
+              "latest_source_activity_date": "2026-07-18",
+              "latest_source_activity_type": "comment"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
           "city": "Mazagón (Moguer)",
           "cruising_now": 1,
           "proposals": 0,
@@ -17309,11 +18548,12 @@
               "source_category": "Natural area",
               "source_url": "https://www.gays-cruising.com/en/spain",
               "status": "unverified",
-              "notes": ""
+              "notes": "",
+              "research_notes": []
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 2
           }
         },
         {
@@ -17381,7 +18621,7 @@
         {
           "city": "Sabadell",
           "cruising_now": 0,
-          "proposals": 1,
+          "proposals": 3,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -17395,7 +18635,86 @@
               "source_category": "Natural area",
               "source_url": "https://www.gays-cruising.com/en/spain",
               "status": "unverified",
-              "notes": ""
+              "notes": "",
+              "research_notes": []
+            },
+            {
+              "proposal_id": "GC1-EX-SPAIN-SABADELL-BOSC-CANDEU",
+              "name": "Bosc CanDeu",
+              "city": "Sabadell",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            },
+            {
+              "proposal_id": "GC1-EX-SPAIN-SABADELL-BANOS-4A-PLANTA-EL-CORTE-INGLES",
+              "name": "Baños 4a planta El Corte Inglés",
+              "city": "Sabadell",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "July 2026 discussion about fourth-floor restrooms; verify access.",
+              "latest_source_activity_date": "2026-07-18",
+              "latest_source_activity_type": "comment"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 4
+          }
+        },
+        {
+          "city": "Sant Andreu de la Barca",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-SANT-ANDREU-DE-LA-BARCA-PARKING-SANT-ANDREU-DE-LA-BARCA",
+              "name": "Parking Sant Andreu de la Barca",
+              "city": "Sant Andreu de la Barca",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Parking area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "A check-in is listed for 2026-07-18, but does not verify cruising activity.",
+              "latest_source_activity_date": "2026-07-18",
+              "latest_source_activity_type": "check-in"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Sant Pol de Mar",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-SANT-POL-DE-MAR-PLAYA-DEL-MOLI",
+              "name": "Playa del Molí",
+              "city": "Sant Pol de Mar",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
             }
           ],
           "scrapes": {
@@ -17432,6 +18751,58 @@
           "proposed_places": [],
           "scrapes": {
             "scrape_4": 1
+          }
+        },
+        {
+          "city": "Terrassa",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-TERRASSA-CARREFOUR-TERRASSA",
+              "name": "Carrefour Terrassa",
+              "city": "Terrassa",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Shopping area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "July 2026 discussion refers to shopping centre; verify exact toilet/place and access.",
+              "latest_source_activity_date": "2026-07-18",
+              "latest_source_activity_type": "comment"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Tordera",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-TORDERA-POLIGONO-INDUSTRIAL-MAS-PUIGVERT",
+              "name": "Polígono Industrial Mas Puigvert",
+              "city": "Tordera",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Industrial area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "July 2026 comment; assess precise location and access.",
+              "latest_source_activity_date": "2026-07-18",
+              "latest_source_activity_type": "comment"
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
           }
         },
         {
@@ -17502,6 +18873,54 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Vilafranca del Penedès",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-VILAFRANCA-DEL-PENEDES-LA-SERRETA",
+              "name": "La Serreta",
+              "city": "Vilafranca del Penedès",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
+        },
+        {
+          "city": "Vilanova i la Geltrú",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "GC1-EX-SPAIN-VILANOVA-I-LA-GELTRU-EL-RACO-DE-SANTA-LLUCIA-PLATJA-LLAR",
+              "name": "El Racó de Santa Llucia - Platja Llarga",
+              "city": "Vilanova i la Geltrú",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_1"
+              ],
+              "source_category": "Natural area",
+              "source_url": "https://www.gays-cruising.com/en/barcelona/spain",
+              "status": "unverified",
+              "notes": "Not verified in 2026 beyond appearance in a secondary directory."
+            }
+          ],
+          "scrapes": {
+            "scrape_1": 1
+          }
         },
         {
           "city": "Villajoyosa (near Benidorm)",
