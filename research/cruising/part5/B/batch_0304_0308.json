@@ -1,0 +1,574 @@
+{
+  "_meta": {
+    "title": "Part5 Worker B checkpoint 304–308",
+    "worker": "B",
+    "research_only": true,
+    "immutable": true,
+    "count": 5,
+    "range": [
+      304,
+      308
+    ],
+    "created_berlin": "2026-11-06",
+    "physical_activity_cutoff": "2025-11-06",
+    "source_alignment": "research/cruising/cross_source_alignment_2026-11-06.json",
+    "note": "Archived source data and independent place evidence retained separately. No production changes or deletion of candidates."
+  },
+  "records": [
+    {
+      "index": 304,
+      "id": "GC1-GAP-SALZBURG-05",
+      "name": "Paracelsusbad",
+      "city": "Salzburg",
+      "country": "Austria",
+      "original_source_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/gap_fill_scrape_1.json",
+          "i": 42,
+          "u": "https://www.gays-cruising.com/de/cruising/paracelsusbad_salzburg_osterreich_94994"
+        }
+      ],
+      "archive_record": {
+        "file": "research/cruising/gap_fill_scrape_1.json",
+        "category": "Other",
+        "assessment": "candidate_unverified",
+        "original_source_index": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+        "original_detail_url": "https://www.gays-cruising.com/de/cruising/paracelsusbad_salzburg_osterreich_94994",
+        "detail_access": "detail_link_found_not_accessible",
+        "review_note": "Index source only: current cruising, exact access, recent attendance, timing and permission remain unverified."
+      },
+      "description_rewritten": "Municipal bath and sauna complex in central Salzburg, with a separate spa area. A cruising website describes communal shower and sauna facilities, but its directory listing does not independently verify cruising and falsely suggests all-day availability.",
+      "location_and_access": "Salzburg Paracelsus Bad & Kurhaus, operated bathing/sauna premises; not a dedicated gay cruise venue.",
+      "access_hours_or_conditions": "Official pool and sauna opening hours daily 10:00–21:00; admission applies, operator rules must be respected.",
+      "primary_source_url": "https://www.gays-cruising.com/en/cruising/paracelsusbad_salzburg_osterreich_94994",
+      "primary_page_access": "indexed_primary_detail",
+      "eight_source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "url": "https://www.gays-cruising.com/en/cruising/paracelsusbad_salzburg_osterreich_94994",
+          "scope_note": "Source archive with web-indexed follow-up if available; directory listing only."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        }
+      ],
+      "independent_sources": [
+        {
+          "url": "https://www.paracelsusbad.at/de/service/preise-oeffnungszeiten",
+          "note": "Operator: bath/sauna hours, ticket prices and access."
+        },
+        {
+          "url": "https://www.stadt-salzburg.at/presseaussendungen-2025/paracelsus-bad-wasser-marsch",
+          "note": "Municipality confirms 14 November 2025 reopening."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/paracelsusbad_salzburg_osterreich_94994",
+          "note": "Original directory's undated reference to showers and sauna."
+        }
+      ],
+      "dated_reports": [
+        {
+          "date": "2025-11-14",
+          "kind": "facility_reopening_not_cruising",
+          "note": "Municipality confirms reopening after renovation."
+        },
+        {
+          "date": "2026-04",
+          "kind": "municipal_year_report_not_cruising",
+          "note": "Municipal tourism update describes attendance after reopening, no cruising claim."
+        }
+      ],
+      "credible_recent_physical_cruising_report": false,
+      "duplicate_candidates": [],
+      "flags": [
+        "managed_bath_sauna",
+        "no_current_cruising_evidence",
+        "not_24_hour_access"
+      ],
+      "research_decision": "hold_non_dedicated_bath_and_activity",
+      "publication_approved": false,
+      "checked_berlin": "2026-11-06"
+    },
+    {
+      "index": 305,
+      "id": "GC1-GAP-SALZBURG-09",
+      "name": "Josefiau Wald",
+      "city": "Salzburg",
+      "country": "Austria",
+      "original_source_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/gap_fill_scrape_1.json",
+          "i": 46,
+          "u": "https://www.gays-cruising.com/de/cruising/josefiau_wald_salzburg_osterreich_93151"
+        }
+      ],
+      "archive_record": {
+        "file": "research/cruising/gap_fill_scrape_1.json",
+        "category": "Park",
+        "assessment": "candidate_unverified",
+        "original_source_index": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+        "original_detail_url": "https://www.gays-cruising.com/de/cruising/josefiau_wald_salzburg_osterreich_93151",
+        "detail_access": "detail_link_found_not_accessible",
+        "review_note": "Index source only: current cruising, exact access, recent attendance, timing and permission remain unverified."
+      },
+      "description_rewritten": "Wooded area around Salzburg's Josefiau district. Geographic references establish that woodland paths exist in the Josefiau area, but no trustworthy dated report establishes recent cruising in an identifiable subsection.",
+      "location_and_access": "Josefiau wooded corridor in southern Salzburg; path and boundaries not established.",
+      "access_hours_or_conditions": "Outdoor location with access conditions, lighting and possible nature-protection restrictions unverified.",
+      "primary_source_url": "https://www.gays-cruising.com/de/cruising/josefiau_wald_salzburg_osterreich_93151",
+      "primary_page_access": "source_archive_link_unavailable",
+      "eight_source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "url": "https://www.gays-cruising.com/de/cruising/josefiau_wald_salzburg_osterreich_93151",
+          "scope_note": "Source archive with web-indexed follow-up if available; directory listing only."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        }
+      ],
+      "independent_sources": [
+        {
+          "url": "https://www.komoot.com/de-de/smarttour/28783790/",
+          "note": "2026 route map includes Josefiau Wald; existence of path is not cruising evidence."
+        }
+      ],
+      "dated_reports": [],
+      "credible_recent_physical_cruising_report": false,
+      "duplicate_candidates": [],
+      "flags": [
+        "poor_spot_precision",
+        "woodland_safety_and_access_not_checked",
+        "no_recent_activity"
+      ],
+      "research_decision": "hold_location_and_activity",
+      "publication_approved": false,
+      "checked_berlin": "2026-11-06"
+    },
+    {
+      "index": 306,
+      "id": "GC1-GAP-SALZBURG-12",
+      "name": "Forum 1 WC",
+      "city": "Salzburg",
+      "country": "Austria",
+      "original_source_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/gap_fill_scrape_1.json",
+          "i": 49,
+          "u": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich"
+        }
+      ],
+      "archive_record": {
+        "file": "research/cruising/gap_fill_scrape_1.json",
+        "category": "Shopping area",
+        "assessment": "candidate_unverified",
+        "original_source_index": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+        "original_detail_url": null,
+        "detail_access": "not_opened",
+        "review_note": "Index source only: current cruising, exact access, recent attendance, timing and permission remain unverified."
+      },
+      "description_rewritten": "Public-facing toilet facilities within the FORUM 1 shopping centre near Salzburg Hauptbahnhof. The operator explicitly places the toilets on the upper level, but the cruising-directory claim has no independently dated on-site confirmation.",
+      "location_and_access": "FORUM 1, Südtiroler Platz 13, 5020 Salzburg; upper-level toilets.",
+      "access_hours_or_conditions": "Centre generally Mon–Fri 09:00–19:00 and Sat 09:00–18:00; Sunday/holidays closed, toilet-specific access must be confirmed.",
+      "primary_source_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+      "primary_page_access": "source_city_index_only",
+      "eight_source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "scope_note": "Source archive with web-indexed follow-up if available; directory listing only."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        }
+      ],
+      "independent_sources": [
+        {
+          "url": "https://www.forum1.at/en/service/",
+          "note": "Operator confirms toilet position on upper floor."
+        },
+        {
+          "url": "https://www.forum1.at/de/service/",
+          "note": "Operator supplies centre opening hours."
+        },
+        {
+          "url": "https://www.salzburg.info/en/dining-shopping/shopping-center/forum-1",
+          "note": "City tourism source confirms address, shopping centre and station proximity."
+        }
+      ],
+      "dated_reports": [],
+      "credible_recent_physical_cruising_report": false,
+      "duplicate_candidates": [],
+      "flags": [
+        "managed_shopping_centre",
+        "specific_toilet_use_unverified",
+        "no_dated_cruising_report"
+      ],
+      "research_decision": "hold_managed_property",
+      "publication_approved": false,
+      "checked_berlin": "2026-11-06"
+    },
+    {
+      "index": 307,
+      "id": "GC1-GAP-SALZBURG-13",
+      "name": "Kiesel Shopping Centre",
+      "city": "Salzburg",
+      "country": "Austria",
+      "original_source_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/gap_fill_scrape_1.json",
+          "i": 50,
+          "u": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich"
+        }
+      ],
+      "archive_record": {
+        "file": "research/cruising/gap_fill_scrape_1.json",
+        "category": "Shopping area",
+        "assessment": "candidate_unverified",
+        "original_source_index": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+        "original_detail_url": null,
+        "detail_access": "not_opened",
+        "review_note": "Index source only: current cruising, exact access, recent attendance, timing and permission remain unverified."
+      },
+      "description_rewritten": "The Kiesel Passage shopping centre between Salzburg's central station and old town. The structure and address are confirmed by official tourism material, while the primary cruising-directory reference has not been supported by a recent visitor account.",
+      "location_and_access": "KIESEL Passage, Rainerstraße 21, 5020 Salzburg.",
+      "access_hours_or_conditions": "City tourist listing: weekdays around 08:00–18:30, Saturdays around 09:00–17:00; individual shops may vary. Indoor private premises.",
+      "primary_source_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+      "primary_page_access": "source_city_index_only",
+      "eight_source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "scope_note": "Source archive with web-indexed follow-up if available; directory listing only."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        }
+      ],
+      "independent_sources": [
+        {
+          "url": "https://www.salzburg.info/en/dining-shopping/shopping-center/kiesel",
+          "note": "Official tourism entry: address, shopping and centre hours."
+        },
+        {
+          "url": "https://www.herold.at/gelbe-seiten/salzburg/rGsCc/kiesel-shoppingcenter/",
+          "note": "2026-04-10 independent business listing, no cruising evidence."
+        }
+      ],
+      "dated_reports": [],
+      "credible_recent_physical_cruising_report": false,
+      "duplicate_candidates": [],
+      "flags": [
+        "managed_shopping_centre",
+        "precise_cruising_subarea_not_identified",
+        "no_activity_verification"
+      ],
+      "research_decision": "hold_unspecified_spot",
+      "publication_approved": false,
+      "checked_berlin": "2026-11-06"
+    },
+    {
+      "index": 308,
+      "id": "GC1-GAP-SALZBURG-14",
+      "name": "Bürglstein",
+      "city": "Salzburg",
+      "country": "Austria",
+      "original_source_refs": [
+        {
+          "s": "1",
+          "f": "research/cruising/gap_fill_scrape_1.json",
+          "i": 51,
+          "u": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich"
+        }
+      ],
+      "archive_record": {
+        "file": "research/cruising/gap_fill_scrape_1.json",
+        "category": "Park",
+        "assessment": "candidate_unverified",
+        "original_source_index": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+        "original_detail_url": null,
+        "detail_access": "not_opened",
+        "review_note": "Index source only: current cruising, exact access, recent attendance, timing and permission remain unverified."
+      },
+      "description_rewritten": "A small wooded hill south of Kapuzinerberg, separated by Arenbergstraße. Although the name identifies a real Salzburg landform, no source supplies credible recent first-hand evidence of cruising or identifies a specific appropriate access path.",
+      "location_and_access": "Bürglstein hill near Arenbergstraße, Salzburg; not the separate Kapuzinerberg.",
+      "access_hours_or_conditions": "Outdoor wooded hill; route, conditions and land access unverified.",
+      "primary_source_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+      "primary_page_access": "source_city_index_only",
+      "eight_source_checks": [
+        {
+          "source_id": "1",
+          "website": "Gays-Cruising.com",
+          "status": "linked_page_matched",
+          "url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "scope_note": "Source archive with web-indexed follow-up if available; directory listing only."
+        },
+        {
+          "source_id": "2",
+          "website": "gay-szene.net",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "3",
+          "website": "Planet Randy",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "4",
+          "website": "The Gay Passport",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "5",
+          "website": "Splashd",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "6",
+          "website": "Popcorn.dating",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "7",
+          "website": "Squirt.org",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        },
+        {
+          "source_id": "8",
+          "website": "CruisingGays",
+          "status": "searched_no_match",
+          "url": null,
+          "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+        }
+      ],
+      "independent_sources": [
+        {
+          "url": "https://de.wikipedia.org/wiki/B%C3%BCrglstein_%28Salzburg%29",
+          "note": "Geographic description of wooded Salzburg hill; not a cruising source."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/paracelsusbad_salzburg_osterreich_94994",
+          "note": "Primary directory's indexed nearby-spots list includes Bürglstein as another park; independent activity not demonstrated."
+        }
+      ],
+      "dated_reports": [],
+      "credible_recent_physical_cruising_report": false,
+      "duplicate_candidates": [],
+      "flags": [
+        "woodland_access_uncertain",
+        "not_enough_spot_detail",
+        "directory_only_for_cruising"
+      ],
+      "research_decision": "needs_precise_geo_and_recent_activity",
+      "publication_approved": false,
+      "checked_berlin": "2026-11-06"
+    }
+  ]
+}
