@@ -3,6 +3,9 @@
   'use strict';
 
   function apply(container, festivalsMode) {
+    // Direct calendar/festival navigation can bypass the normal hash-route handler.
+    // Clear Venues-only sticky mode before rendering either calendar screen.
+    document.getElementById('main-content')?.classList.remove('br-venues-sticky');
     if (festivalsMode || !container) return;
     const page = container.querySelector('.calendar-page');
     const row = page?.querySelector('.calendar-title-row');
