@@ -38,7 +38,11 @@
         "source_url": "https://www.cruisinggays.com/Default.aspx?CityID=127&Filter=4"
       }
     ],
-    "publication_rule": "Each finding requires independent verification of exact place, continued public access, legal/safe use and relevance before any live Backroom entry. Research-only; do not change production listings.json."
+    "publication_rule": "Each finding requires independent verification of exact place, continued public access, legal/safe use and relevance before any live Backroom entry. Research-only; do not change production listings.json.",
+    "review_notes": [
+      "Cross-source correction: Hyde Park matches a live Backroom record; Frescati and Allmend Park match existing proposals and are not new candidates."
+    ],
+    "new_candidate_source_records": 21
   },
   "countries": [
     {
@@ -471,11 +475,12 @@
               "place_type": "Woods / university-adjacent",
               "source_url": "https://www.cruisinggays.com/stockholm/areas/15730-frescati/",
               "source_city_path": "stockholm",
-              "assessment": "unverified_candidate",
-              "review_note": "Source identifies wooded area by university and a rail/motorway crossing; ensure public access and current use.",
+              "assessment": "existing_proposal",
+              "review_note": "Existing research proposal Frescati - Stockholm, same wooded university area.",
               "source_verified_current": false,
               "source_category": "Cruising areas",
-              "source_access": "public web index or individually indexed detail page"
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "GC1-SWEDEN-03"
             }
           ]
         }
@@ -495,11 +500,12 @@
               "place_type": "Park / wooded trails",
               "source_url": "https://www.cruisinggays.com/bern/areas/51393-allmend-park/",
               "source_city_path": "bern",
-              "assessment": "unverified_candidate",
-              "review_note": "Park by Wankdorf stadium; source describes men meeting in trees near recreation areas.",
+              "assessment": "existing_proposal",
+              "review_note": "Existing research proposal Allmend Anhöhe by Wankdorf stadium; likely same park, do not add separately.",
               "source_verified_current": false,
               "source_category": "Cruising areas",
-              "source_access": "public web index or individually indexed detail page"
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "GC1-SWITZERLAND-12"
             }
           ]
         }
@@ -575,11 +581,12 @@
               "place_type": "Park",
               "source_url": "https://www.cruisinggays.com/london/areas/30576-hyde-park/",
               "source_city_path": "london",
-              "assessment": "unverified_candidate",
-              "review_note": "Source describes historic activity near rose garden; park closing times and safety limitations require independent verification.",
+              "assessment": "existing",
+              "review_note": "Existing Backroom live Hyde Park — Rose Garden; this is the same park, not a new place.",
               "source_verified_current": false,
               "source_category": "Cruising areas",
-              "source_access": "public web index or individually indexed detail page"
+              "source_access": "public web index or individually indexed detail page",
+              "existing_match_id": "CRU-LON-HYDPAR-05"
             },
             {
               "source_rank": 18,
