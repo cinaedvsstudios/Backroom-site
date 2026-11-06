@@ -33,7 +33,8 @@
       "Removed 62 commercial or managed-facility candidates from provisional proposal totals after Scrape 3 user clarification. Original source entries retained in scrape source files with excluded assessment.",
       "Clarification 2026-11-06: restored 41 previously excluded ordinary/managed sites as unverified candidates; 21 dedicated nightlife/sex businesses remain out of proposals. Raw source counts unchanged.",
       "Scrape 4 uses The Gay Passport city/destination guides; retained named cruising spots at ordinary/public sites (including shopping-centre and station toilets), excluded dedicated gay nightlife venues. Australia and Mexico are tracked separately because they are not among Backroom's current 45 country labels.",
-      "Scrape 5 (Splashd) is an INDEX-ONLY research checkpoint, not a completed individual-place scrape. Its 56 advertised country counts are stored in research/cruising/scrape_5.json; site access currently blocks individual records and no proposals were added. Resume with an authorized full browser if possible."
+      "Scrape 5 (Splashd) is an INDEX-ONLY research checkpoint, not a completed individual-place scrape. Its 56 advertised country counts are stored in research/cruising/scrape_5.json; site access currently blocks individual records and no proposals were added. Resume with an authorized full browser if possible.",
+      "Scrape 6 Popcorn.dating: 20 selected public outdoor/parking index records from cached general directory pages 1-2, with 8 preliminary new proposals. Source category and detail pages were inaccessible. Source mixes orientations and eras; all new candidates require current verification and male/gay relevance checking before publication."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -934,6 +935,21 @@
       "results_total": null,
       "proposals_new": null,
       "notes": "The map overview is indexed/readable and country totals for all 56 countries have been preserved in scrape_5.json. Country/city/individual-spot pages could not be fetched through the available research tools; ZERO records retrieved does not mean ZERO cruising places. Do not add city scrape counts or proposed_places until source records can be accessed in a full browser session. Never collect app user locations, check-ins, or chats."
+    },
+    {
+      "id": "scrape_6",
+      "site": "Popcorn.dating",
+      "base_url": "https://www.popcorn.dating/",
+      "index_url": "https://www.popcorn.dating/locations/",
+      "target_url": "https://www.popcorn.dating/locations/public-sex/outdoor/",
+      "started_berlin": "2026-11-06",
+      "status": "partial_two_cached_index_pages_only",
+      "data_file": "research/cruising/scrape_6.json",
+      "results_total": 20,
+      "proposals_new": 8,
+      "index_pages_read": 2,
+      "details_accessible": false,
+      "notes": "Outdoor and Parking lot entries from general public directory pages 1 and 2 (cached/stale). Target Outdoor category, later index pages and individual detail pages inaccessible. Mixed orientation, not necessarily gay or active. 8 unverified new proposals only; other leads include existing locations, vague entries and safety exclusions. No production listing changes."
     }
   ],
   "countries": [
@@ -2994,7 +3010,7 @@
     {
       "country": "Luxembourg",
       "cruising_now": 0,
-      "proposals": 15,
+      "proposals": 16,
       "cities": [
         {
           "city": "Belvaux",
@@ -3023,7 +3039,7 @@
         {
           "city": "Dippach",
           "cruising_now": 0,
-          "proposals": 1,
+          "proposals": 2,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -3038,10 +3054,24 @@
               "source_url": "https://www.gays-cruising.com/en/luxembourg",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "PC6-LU-DIPPACH",
+              "name": "Route de Dippach",
+              "city": "Dippach",
+              "country": "Luxembourg",
+              "source_ids": [
+                "scrape_6"
+              ],
+              "source_category": "Parking lot",
+              "source_url": "https://www.popcorn.dating/luxembourg/luxembourg/dippach/locations/public-sex/parking%2Blot/route-de-dippach/19535/",
+              "status": "unverified",
+              "notes": "Describes a parking place along rural road between Bertrange and Dippach, but no confirmed gay-specific activity. Mixed-orientation directory lead; verify male/gay relevance and actual location before publication."
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_6": 1
           }
         },
         {
@@ -5122,7 +5152,8 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_6": 1
           }
         },
         {
@@ -5133,6 +5164,26 @@
           "proposed_places": [],
           "scrapes": {
             "scrape_1": 1
+          }
+        },
+        {
+          "city": "San Jacinto",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_6": 1
+          }
+        },
+        {
+          "city": "Tulsa",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_6": 1
           }
         }
       ]
@@ -9003,6 +9054,16 @@
           ],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Chiavari",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_6": 1
+          }
         }
       ]
     },
@@ -9683,7 +9744,7 @@
     {
       "country": "Denmark",
       "cruising_now": 4,
-      "proposals": 13,
+      "proposals": 14,
       "cities": [
         {
           "city": "Aalborg",
@@ -9827,7 +9888,8 @@
               "city": "Esbjerg",
               "country": "Denmark",
               "source_ids": [
-                "scrape_1"
+                "scrape_1",
+                "scrape_6"
               ],
               "source_category": "Other",
               "source_url": "https://www.gays-cruising.com/en/denmark",
@@ -10006,6 +10068,40 @@
           "scrapes": {
             "scrape_1": 1
           }
+        },
+        {
+          "city": "Bolderslev",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PC6-DK-TINGLEVVEJEN",
+              "name": "Tinglevvejen Rastplads",
+              "city": "Bolderslev",
+              "country": "Denmark",
+              "source_ids": [
+                "scrape_6"
+              ],
+              "source_category": "Parking lot",
+              "source_url": "https://www.popcorn.dating/denmark/syddanmark/bolderslev/locations/public-sex/parking%2Blot/tinglevvejen-rastplads/19234/",
+              "status": "unverified",
+              "notes": "Rest area said to receive mainly male visitors with occasional couples, especially afternoon or early evening. Mixed-orientation directory lead; verify male/gay relevance and actual location before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_6": 1
+          }
+        },
+        {
+          "city": "Nørre Nebel",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_6": 1
+          }
         }
       ]
     },
@@ -10081,6 +10177,26 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Lopar",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_6": 1
+          }
+        },
+        {
+          "city": "Rovinj",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_6": 1
+          }
         }
       ]
     },
@@ -12126,7 +12242,7 @@
     {
       "country": "Netherlands",
       "cruising_now": 11,
-      "proposals": 19,
+      "proposals": 21,
       "cities": [
         {
           "city": "Almere",
@@ -12392,7 +12508,8 @@
               "city": "Kamperland",
               "country": "Netherlands",
               "source_ids": [
-                "scrape_1"
+                "scrape_1",
+                "scrape_6"
               ],
               "source_category": "Outdoor area",
               "source_url": "https://www.gays-cruising.com/en/netherlands",
@@ -12565,7 +12682,8 @@
               "city": "Urmond",
               "country": "Netherlands",
               "source_ids": [
-                "scrape_1"
+                "scrape_1",
+                "scrape_6"
               ],
               "source_category": "Outdoor area",
               "source_url": "https://www.gays-cruising.com/en/netherlands",
@@ -12663,6 +12781,84 @@
           ],
           "scrapes": {
             "scrape_1": 1
+          }
+        },
+        {
+          "city": "Guttecoven",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_6": 1
+          }
+        },
+        {
+          "city": "Haaksbergen",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PC6-NL-BUURSE",
+              "name": "Buurse",
+              "city": "Haaksbergen",
+              "country": "Netherlands",
+              "source_ids": [
+                "scrape_6"
+              ],
+              "source_category": "Parking lot",
+              "source_url": "https://www.popcorn.dating/netherlands/overijssel/haaksbergen/locations/public-sex/parking%2Blot/buurse/17366/",
+              "status": "unverified",
+              "notes": "Source describes mostly male visitors and some couples, especially after dark, at a quiet car park. Mixed-orientation directory lead; verify male/gay relevance and actual location before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_6": 1
+          }
+        },
+        {
+          "city": "Herten",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_6": 1
+          }
+        },
+        {
+          "city": "Oud-Alblas",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PC6-NL-KIPPENBOS",
+              "name": "Kippenbos",
+              "city": "Oud-Alblas",
+              "country": "Netherlands",
+              "source_ids": [
+                "scrape_6"
+              ],
+              "source_category": "Parking lot",
+              "source_url": "https://www.popcorn.dating/netherlands/zuid-holland/oud-alblas/locations/public-sex/parking%2Blot/kippenbos/19840/",
+              "status": "unverified",
+              "notes": "Source describes a frequently visited meeting location accessed from parking into woods. Mixed-orientation directory lead; verify male/gay relevance and actual location before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_6": 1
+          }
+        },
+        {
+          "city": "Vrouwenpolder",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_6": 1
           }
         }
       ]
@@ -17555,7 +17751,7 @@
     {
       "country": "Spain",
       "cruising_now": 13,
-      "proposals": 63,
+      "proposals": 66,
       "cities": [
         {
           "city": "A Coruña",
@@ -18511,7 +18707,8 @@
           ],
           "scrapes": {
             "scrape_1": 15,
-            "scrape_4": 3
+            "scrape_4": 3,
+            "scrape_6": 1
           }
         },
         {
@@ -18982,13 +19179,85 @@
           "scrapes": {
             "scrape_1": 1
           }
+        },
+        {
+          "city": "Can Pastilla",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PC6-ES-CAN-PASTILLA",
+              "name": "Naturschutzgebiet Can Pastilla",
+              "city": "Can Pastilla",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_6"
+              ],
+              "source_category": "Parking lot",
+              "source_url": "https://www.popcorn.dating/spain/islas%2Bbaleares/can%2Bpastilla/locations/public-sex/parking%2Blot/naturschutzgebiet-can-pastilla/22480/",
+              "status": "unverified",
+              "notes": "Source describes a secluded side path adjoining a nature reserve; male cruising not independently established. Mixed-orientation directory lead; verify male/gay relevance and actual location before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_6": 1
+          }
+        },
+        {
+          "city": "L'Infant",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PC6-ES-PLATJA-TORN",
+              "name": "Platja del Torn",
+              "city": "L'Infant",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_6"
+              ],
+              "source_category": "Outdoor",
+              "source_url": "https://www.popcorn.dating/spain/tarragona/l%27infant/locations/public-sex/outdoor/platja-del-torn/18421/",
+              "status": "unverified",
+              "notes": "Source identifies a cruising area in woodland near the south end of a naturist beach, with families using other areas. Mixed-orientation directory lead; verify male/gay relevance and actual location before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_6": 1
+          }
+        },
+        {
+          "city": "Sa Coma",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PC6-ES-SA-COMA",
+              "name": "Sa Coma",
+              "city": "Sa Coma",
+              "country": "Spain",
+              "source_ids": [
+                "scrape_6"
+              ],
+              "source_category": "Parking lot",
+              "source_url": "https://www.popcorn.dating/spain/islas%2Bbaleares/sa%2Bcoma/locations/public-sex/parking%2Blot/sa-coma/21790/",
+              "status": "unverified",
+              "notes": "Source mentions numerous secluded corners and trails accessible from an entrance; vague male-focused evidence. Mixed-orientation directory lead; verify male/gay relevance and actual location before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_6": 1
+          }
         }
       ]
     },
     {
       "country": "France",
       "cruising_now": 14,
-      "proposals": 15,
+      "proposals": 16,
       "cities": [
         {
           "city": "Ajaccio",
@@ -19470,6 +19739,40 @@
           ],
           "scrapes": {
             "scrape_1": 1
+          }
+        },
+        {
+          "city": "Fort-Louis",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_6": 1
+          }
+        },
+        {
+          "city": "Seltz",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PC6-FR-SELTZ-WOODS",
+              "name": "Trimm-dich Pfad Seltz im Wald",
+              "city": "Seltz",
+              "country": "France",
+              "source_ids": [
+                "scrape_6"
+              ],
+              "source_category": "Parking lot",
+              "source_url": "https://www.popcorn.dating/france/alsace/seltz/locations/public-sex/parking%2Blot/trimm-dich-pfad-seltz-im-wald/20663/",
+              "status": "unverified",
+              "notes": "Forest trail and unlit parking area described as a meeting place for men, women and couples; gay specificity unverified. Mixed-orientation directory lead; verify male/gay relevance and actual location before publication."
+            }
+          ],
+          "scrapes": {
+            "scrape_6": 1
           }
         }
       ]
