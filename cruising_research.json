@@ -37,7 +37,8 @@
       "Scrape 6 Popcorn.dating: 20 selected public outdoor/parking index records from cached general directory pages 1-2, with 8 preliminary new proposals. Source category and detail pages were inaccessible. Source mixes orientations and eras; all new candidates require current verification and male/gay relevance checking before publication.",
       "Manual scrape placeholders: scrape_5 (Splashd) and scrape_7 (Squirt.org) now have null per-city entries, meaning not yet collected; these are NOT zero-result counts. Squirt.org research file is reserved for a later user-supplied manual dump.",
       "Scrape 8 CruisingGays: 43 selected public/ordinary-site source records across 8 countries. 21 new provisional proposals, 17 prior/existing matches, 5 not counted for weak/ambiguous evidence. Exclude misclassified clubs/hotels/shops and correct location errors (Berlin/Maryland, Paris/Texas, London/Ontario). No assumption that a recent crawl or verification badge validates current cruising.",
-      "Added six optional verification-only references (Couple of Men, Männer unterwegs, The Globetrotter Guys, Tripadvisor, Reddit, misterb&b Gay Guide). Do not assign scrape numbers or systematically crawl them. Research a specific unresolved detail only, reusing existing evidence first and stopping once sufficient."
+      "Added six optional verification-only references (Couple of Men, Männer unterwegs, The Globetrotter Guys, Tripadvisor, Reddit, misterb&b Gay Guide). Do not assign scrape numbers or systematically crawl them. Research a specific unresolved detail only, reusing existing evidence first and stopping once sufficient.",
+      "2026-11-06 user-selected city research priorities: 50 submitted city entries (Lisbon appears twice), 49 unique focus cities, 10 currently without Live or proposed cruising spots (including 2 cities not yet represented as tracker rows). Preserve all existing data. If research yields no qualifying locations, record a confirmed researched zero, not a fabricated proposal."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -21359,5 +21360,824 @@
       "Do not alter production listings.json until final review."
     ],
     "research_count_impact": "None. These reference sites do not increment scrape_N, per-city scrape counts, or proposal totals merely by being registered."
+  },
+  "priority_city_research": {
+    "title": "Backroom cruising-area research — user's 50-entry city focus list",
+    "created_berlin": "2026-11-06",
+    "ordered_source_list": [
+      {
+        "submitted_order": 1,
+        "city": "Paris",
+        "country": "France"
+      },
+      {
+        "submitted_order": 2,
+        "city": "London",
+        "country": "United Kingdom"
+      },
+      {
+        "submitted_order": 3,
+        "city": "Istanbul",
+        "country": "Turkey"
+      },
+      {
+        "submitted_order": 4,
+        "city": "Rome",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 5,
+        "city": "Barcelona",
+        "country": "Spain"
+      },
+      {
+        "submitted_order": 6,
+        "city": "Amsterdam",
+        "country": "Netherlands"
+      },
+      {
+        "submitted_order": 7,
+        "city": "Prague",
+        "country": "Czechia"
+      },
+      {
+        "submitted_order": 8,
+        "city": "Vienna",
+        "country": "Austria"
+      },
+      {
+        "submitted_order": 9,
+        "city": "Venice",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 10,
+        "city": "Florence",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 11,
+        "city": "Budapest",
+        "country": "Hungary"
+      },
+      {
+        "submitted_order": 12,
+        "city": "Berlin",
+        "country": "Germany"
+      },
+      {
+        "submitted_order": 13,
+        "city": "Athens",
+        "country": "Greece"
+      },
+      {
+        "submitted_order": 14,
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "submitted_order": 15,
+        "city": "Edinburgh",
+        "country": "United Kingdom"
+      },
+      {
+        "submitted_order": 16,
+        "city": "Madrid",
+        "country": "Spain"
+      },
+      {
+        "submitted_order": 17,
+        "city": "Dublin",
+        "country": "Ireland"
+      },
+      {
+        "submitted_order": 18,
+        "city": "Copenhagen",
+        "country": "Denmark"
+      },
+      {
+        "submitted_order": 19,
+        "city": "Stockholm",
+        "country": "Sweden"
+      },
+      {
+        "submitted_order": 20,
+        "city": "Bruges",
+        "country": "Belgium"
+      },
+      {
+        "submitted_order": 21,
+        "city": "Dubrovnik",
+        "country": "Croatia"
+      },
+      {
+        "submitted_order": 22,
+        "city": "Munich",
+        "country": "Germany"
+      },
+      {
+        "submitted_order": 23,
+        "city": "Salzburg",
+        "country": "Austria"
+      },
+      {
+        "submitted_order": 24,
+        "city": "Zurich",
+        "country": "Switzerland"
+      },
+      {
+        "submitted_order": 25,
+        "city": "Seville",
+        "country": "Spain"
+      },
+      {
+        "submitted_order": 26,
+        "city": "Krakow",
+        "country": "Poland"
+      },
+      {
+        "submitted_order": 27,
+        "city": "Milan",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 28,
+        "city": "Lisbon",
+        "country": "Portugal"
+      },
+      {
+        "submitted_order": 29,
+        "city": "Nice",
+        "country": "France"
+      },
+      {
+        "submitted_order": 30,
+        "city": "Porto",
+        "country": "Portugal"
+      },
+      {
+        "submitted_order": 31,
+        "city": "Brussels",
+        "country": "Belgium"
+      },
+      {
+        "submitted_order": 32,
+        "city": "Reykjavik",
+        "country": "Iceland"
+      },
+      {
+        "submitted_order": 33,
+        "city": "Helsinki",
+        "country": "Finland"
+      },
+      {
+        "submitted_order": 34,
+        "city": "Oslo",
+        "country": "Norway"
+      },
+      {
+        "submitted_order": 35,
+        "city": "Geneva",
+        "country": "Switzerland"
+      },
+      {
+        "submitted_order": 36,
+        "city": "Lucerne",
+        "country": "Switzerland"
+      },
+      {
+        "submitted_order": 37,
+        "city": "Granada",
+        "country": "Spain"
+      },
+      {
+        "submitted_order": 38,
+        "city": "Valencia",
+        "country": "Spain"
+      },
+      {
+        "submitted_order": 39,
+        "city": "Naples",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 40,
+        "city": "Bologna",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 41,
+        "city": "Verona",
+        "country": "Italy"
+      },
+      {
+        "submitted_order": 42,
+        "city": "Ljubljana",
+        "country": "Slovenia"
+      },
+      {
+        "submitted_order": 43,
+        "city": "Split",
+        "country": "Croatia"
+      },
+      {
+        "submitted_order": 44,
+        "city": "Bucharest",
+        "country": "Romania"
+      },
+      {
+        "submitted_order": 45,
+        "city": "Sofia",
+        "country": "Bulgaria"
+      },
+      {
+        "submitted_order": 46,
+        "city": "Warsaw",
+        "country": "Poland"
+      },
+      {
+        "submitted_order": 47,
+        "city": "Bratislava",
+        "country": "Slovakia"
+      },
+      {
+        "submitted_order": 48,
+        "city": "Riga",
+        "country": "Latvia"
+      },
+      {
+        "submitted_order": 49,
+        "city": "Tallinn",
+        "country": "Estonia"
+      },
+      {
+        "submitted_order": 50,
+        "city": "Vilnius",
+        "country": "Lithuania"
+      }
+    ],
+    "unique_city_count": 49,
+    "repeated_entries": [
+      {
+        "city": "Lisbon",
+        "country": "Portugal",
+        "positions": [
+          14,
+          28
+        ],
+        "handling": "Single research target; both original source-list positions preserved"
+      }
+    ],
+    "unique_priority_cities": [
+      {
+        "rank": 1,
+        "user_city": "Paris",
+        "country": "France",
+        "tracker_city": "Paris",
+        "baseline_live": 6,
+        "provisional_proposals": 5,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 2,
+        "user_city": "London",
+        "country": "United Kingdom",
+        "tracker_city": "London",
+        "baseline_live": 5,
+        "provisional_proposals": 20,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 3,
+        "user_city": "Istanbul",
+        "country": "Turkey",
+        "tracker_city": "Istanbul",
+        "baseline_live": 0,
+        "provisional_proposals": 7,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 4,
+        "user_city": "Rome",
+        "country": "Italy",
+        "tracker_city": "Rome",
+        "baseline_live": 1,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 5,
+        "user_city": "Barcelona",
+        "country": "Spain",
+        "tracker_city": "Barcelona",
+        "baseline_live": 2,
+        "provisional_proposals": 6,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 6,
+        "user_city": "Amsterdam",
+        "country": "Netherlands",
+        "tracker_city": "Amsterdam",
+        "baseline_live": 7,
+        "provisional_proposals": 2,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 7,
+        "user_city": "Prague",
+        "country": "Czechia",
+        "tracker_city": "Prague",
+        "baseline_live": 1,
+        "provisional_proposals": 7,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 8,
+        "user_city": "Vienna",
+        "country": "Austria",
+        "tracker_city": "Vienna",
+        "baseline_live": 2,
+        "provisional_proposals": 8,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 9,
+        "user_city": "Venice",
+        "country": "Italy",
+        "tracker_city": "Venice",
+        "baseline_live": 0,
+        "provisional_proposals": 6,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 10,
+        "user_city": "Florence",
+        "country": "Italy",
+        "tracker_city": "Florence",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 11,
+        "user_city": "Budapest",
+        "country": "Hungary",
+        "tracker_city": "Budapest",
+        "baseline_live": 1,
+        "provisional_proposals": 16,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 12,
+        "user_city": "Berlin",
+        "country": "Germany",
+        "tracker_city": "Berlin",
+        "baseline_live": 4,
+        "provisional_proposals": 70,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 13,
+        "user_city": "Athens",
+        "country": "Greece",
+        "tracker_city": "Athens",
+        "baseline_live": 4,
+        "provisional_proposals": 7,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 14,
+        "user_city": "Lisbon",
+        "country": "Portugal",
+        "tracker_city": "Lisbon",
+        "baseline_live": 4,
+        "provisional_proposals": 1,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 15,
+        "user_city": "Edinburgh",
+        "country": "United Kingdom",
+        "tracker_city": "Edinburgh",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 16,
+        "user_city": "Madrid",
+        "country": "Spain",
+        "tracker_city": "Madrid",
+        "baseline_live": 2,
+        "provisional_proposals": 3,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 17,
+        "user_city": "Dublin",
+        "country": "Ireland",
+        "tracker_city": "Dublin",
+        "baseline_live": 2,
+        "provisional_proposals": 8,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 18,
+        "user_city": "Copenhagen",
+        "country": "Denmark",
+        "tracker_city": "Copenhagen",
+        "baseline_live": 4,
+        "provisional_proposals": 2,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 19,
+        "user_city": "Stockholm",
+        "country": "Sweden",
+        "tracker_city": "Stockholm",
+        "baseline_live": 0,
+        "provisional_proposals": 3,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 20,
+        "user_city": "Bruges",
+        "country": "Belgium",
+        "tracker_city": null,
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "city_not_yet_indexed",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No matching city row currently exists; does not imply no cruising areas. Research when prioritized."
+      },
+      {
+        "rank": 21,
+        "user_city": "Dubrovnik",
+        "country": "Croatia",
+        "tracker_city": "Dubrovnik",
+        "baseline_live": 1,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 22,
+        "user_city": "Munich",
+        "country": "Germany",
+        "tracker_city": "Munich",
+        "baseline_live": 4,
+        "provisional_proposals": 17,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 23,
+        "user_city": "Salzburg",
+        "country": "Austria",
+        "tracker_city": "Salzburg",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 24,
+        "user_city": "Zurich",
+        "country": "Switzerland",
+        "tracker_city": "Zurich",
+        "baseline_live": 2,
+        "provisional_proposals": 4,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 25,
+        "user_city": "Seville",
+        "country": "Spain",
+        "tracker_city": "Seville",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 26,
+        "user_city": "Krakow",
+        "country": "Poland",
+        "tracker_city": "Kraków",
+        "baseline_live": 1,
+        "provisional_proposals": 2,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 27,
+        "user_city": "Milan",
+        "country": "Italy",
+        "tracker_city": "Milan",
+        "baseline_live": 1,
+        "provisional_proposals": 8,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 28,
+        "user_city": "Nice",
+        "country": "France",
+        "tracker_city": "Nice",
+        "baseline_live": 1,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 29,
+        "user_city": "Porto",
+        "country": "Portugal",
+        "tracker_city": "Porto",
+        "baseline_live": 0,
+        "provisional_proposals": 2,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 30,
+        "user_city": "Brussels",
+        "country": "Belgium",
+        "tracker_city": "Brussels",
+        "baseline_live": 0,
+        "provisional_proposals": 4,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 31,
+        "user_city": "Reykjavik",
+        "country": "Iceland",
+        "tracker_city": "Reykjavík",
+        "baseline_live": 0,
+        "provisional_proposals": 3,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 32,
+        "user_city": "Helsinki",
+        "country": "Finland",
+        "tracker_city": "Helsinki",
+        "baseline_live": 3,
+        "provisional_proposals": 7,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 33,
+        "user_city": "Oslo",
+        "country": "Norway",
+        "tracker_city": "Oslo",
+        "baseline_live": 5,
+        "provisional_proposals": 3,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 34,
+        "user_city": "Geneva",
+        "country": "Switzerland",
+        "tracker_city": "Geneva",
+        "baseline_live": 3,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 35,
+        "user_city": "Lucerne",
+        "country": "Switzerland",
+        "tracker_city": "Lucerne",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 36,
+        "user_city": "Granada",
+        "country": "Spain",
+        "tracker_city": null,
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "city_not_yet_indexed",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No matching city row currently exists; does not imply no cruising areas. Research when prioritized."
+      },
+      {
+        "rank": 37,
+        "user_city": "Valencia",
+        "country": "Spain",
+        "tracker_city": "Valencia",
+        "baseline_live": 4,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 38,
+        "user_city": "Naples",
+        "country": "Italy",
+        "tracker_city": "Naples",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 39,
+        "user_city": "Bologna",
+        "country": "Italy",
+        "tracker_city": "Bologna",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 40,
+        "user_city": "Verona",
+        "country": "Italy",
+        "tracker_city": "Verona",
+        "baseline_live": 0,
+        "provisional_proposals": 0,
+        "coverage_status": "no_known_spot_yet",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "No known existing/proposed spots in current tracker; research priority."
+      },
+      {
+        "rank": 41,
+        "user_city": "Ljubljana",
+        "country": "Slovenia",
+        "tracker_city": "Ljubljana",
+        "baseline_live": 0,
+        "provisional_proposals": 8,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 42,
+        "user_city": "Split",
+        "country": "Croatia",
+        "tracker_city": "Split",
+        "baseline_live": 3,
+        "provisional_proposals": 0,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 43,
+        "user_city": "Bucharest",
+        "country": "Romania",
+        "tracker_city": "Bucharest",
+        "baseline_live": 1,
+        "provisional_proposals": 5,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 44,
+        "user_city": "Sofia",
+        "country": "Bulgaria",
+        "tracker_city": "Sofia",
+        "baseline_live": 1,
+        "provisional_proposals": 11,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 45,
+        "user_city": "Warsaw",
+        "country": "Poland",
+        "tracker_city": "Warsaw",
+        "baseline_live": 2,
+        "provisional_proposals": 4,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 46,
+        "user_city": "Bratislava",
+        "country": "Slovakia",
+        "tracker_city": "Bratislava",
+        "baseline_live": 0,
+        "provisional_proposals": 11,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 47,
+        "user_city": "Riga",
+        "country": "Latvia",
+        "tracker_city": "Riga",
+        "baseline_live": 3,
+        "provisional_proposals": 13,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 48,
+        "user_city": "Tallinn",
+        "country": "Estonia",
+        "tracker_city": "Tallinn",
+        "baseline_live": 0,
+        "provisional_proposals": 11,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      },
+      {
+        "rank": 49,
+        "user_city": "Vilnius",
+        "country": "Lithuania",
+        "tracker_city": "Vilnius",
+        "baseline_live": 0,
+        "provisional_proposals": 6,
+        "coverage_status": "known_places_exist",
+        "priority_pass_status": "not_yet_assessed",
+        "coverage_note": "Known existing and/or provisional spots; use existing evidence before further discovery."
+      }
+    ],
+    "policy": {
+      "existing_data": "Preserve all existing countries, city records, sources, venue IDs, proposed_places and raw scrape files. No deletion or replacement of existing research.",
+      "priority": "Focus on user-supplied cities first, particularly cities with zero baseline Live cruising-area listings AND zero research proposals. Prioritize by supplied order within the relevant group; do not exclude other locations from the database.",
+      "zero_is_valid": "After a reasonable investigation, if no identifiable qualifying cruising locations are found, explicitly record the city as checked_zero_qualifying_results, with source URLs, date and scope. Do not invent, force or extrapolate a spot to fill a zero.",
+      "zero_is_not_not_checked": "Distinguish no_known_spot_yet, city_not_yet_indexed, blocked_or_incomplete and checked_zero_qualifying_results; don't conflate absence of research with confirmed absence of spots.",
+      "avoid_wasted_search": "Review existing live and provisional data/source URLs first, then investigate only coverage holes or genuine inconsistencies. Do not crawl every supplemental reference for the same facts. Stop when enough reliable information exists or the pass is reasonably exhausted.",
+      "no_live_import": "Keep all discoveries as research proposals until separately reviewed and authorized for production.",
+      "refresh_snapshots": "baseline_live, provisional_proposals and coverage_status are dated snapshots from 2026-11-06. Recompute after future research updates, don't assume they remain live totals.",
+      "source_count_policy": "A city may have multiple stored rows representing outlying sites (e.g. Mestre near Venice); do not accidentally combine distinct locations or treat absence of exact matches as zero if alternate spelling exists."
+    }
   }
 }
