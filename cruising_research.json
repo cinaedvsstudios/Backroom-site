@@ -28,7 +28,8 @@
       "Country page top lists include public toilets, transport sites, stores, gyms, restaurants, saunas and other public venues; publication requires extra review for legality, consent, and appropriateness.",
       "Source labels are not necessarily canonical Backroom city labels (for example source 'Praha' was recorded as Prague).",
       "Failed countries Albania, Croatia, Moldova are not recorded as zero results; Kosovo lacks an independently listed page.",
-      "Scrape 1 results are raw counts of directory top listings; proposed_places and proposals are preliminary candidates based on exact city/name match only and NOT final deduplicated, verified new places."
+      "Scrape 1 results are raw counts of directory top listings; proposed_places and proposals are preliminary candidates based on exact city/name match only and NOT final deduplicated, verified new places.",
+      "Scrape 3 deliberately excluded ALL bars, clubs, saunas, cinemas, sex shops and massage businesses even though some appear in the site tag. Includes three city tag lists with 16 pages and their nearby towns. Do not count a site page as 2026 activity proof."
     ],
     "storage_layout": {
       "master_file": "cruising_research.json",
@@ -492,6 +493,144 @@
         "Added nine more German city pages and one Efringen-Kirchen location indexed on Lörrach page."
       ],
       "data_file": "research/cruising/scrape_2.json"
+    },
+    {
+      "id": "scrape_3",
+      "site": "Planet-Randy",
+      "base_url": "https://planet-randy.com/blog/en/",
+      "country_scope": [
+        "Germany"
+      ],
+      "entry_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+      "section": "Gay Cruising city tags Berlin, Hamburg, Cologne — public/open-air places only",
+      "started_berlin": "2026-11-06",
+      "status": "completed_city_tags",
+      "data_file": "research/cruising/scrape_3.json",
+      "city_tag_pages_checked": [
+        {
+          "tag_city": "Berlin",
+          "page": 1,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+          "qualified": 9,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Berlin",
+          "page": 2,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/2/",
+          "qualified": 7,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Berlin",
+          "page": 3,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/3/",
+          "qualified": 10,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Berlin",
+          "page": 4,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/",
+          "qualified": 10,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Berlin",
+          "page": 5,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/5/",
+          "qualified": 9,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Berlin",
+          "page": 6,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/",
+          "qualified": 10,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Berlin",
+          "page": 7,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/7/",
+          "qualified": 0,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Berlin",
+          "page": 8,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/8/",
+          "qualified": 1,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Hamburg",
+          "page": 1,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/",
+          "qualified": 10,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Hamburg",
+          "page": 2,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
+          "qualified": 10,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Hamburg",
+          "page": 3,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/3/",
+          "qualified": 10,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Hamburg",
+          "page": 4,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/4/",
+          "qualified": 10,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Hamburg",
+          "page": 5,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/5/",
+          "qualified": 1,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Cologne",
+          "page": 1,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+          "qualified": 10,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Cologne",
+          "page": 2,
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/page/2/",
+          "qualified": 9,
+          "excluded_business_categories": true
+        },
+        {
+          "tag_city": "Cologne",
+          "page": 3,
+          "url": "https://planet-randy.com/blog/eintrag/tag/gay-cruising-koeln/page/3/",
+          "qualified": 0,
+          "excluded_business_categories": true
+        }
+      ],
+      "results_total": 116,
+      "excluded_businesses": 38,
+      "excluded_examples": [
+        "Gay massages Berlin",
+        "Great Freedom 114",
+        "Fuck 3000",
+        "Pullermanns Cologne",
+        "Boiler Sauna Berlin",
+        "sex cinemas and sex shops"
+      ],
+      "notes": "Berlin tag also contains Brandenburg towns and Hamburg tag includes nearby towns; candidates are assigned to actual town where source supplies it. Source listings are not 2026-verified activity. Cologne page 3 was read via its equivalent German page; it contained only commercial entries."
     }
   ],
   "countries": [
@@ -11409,12 +11548,87 @@
     {
       "country": "Germany",
       "cruising_now": 13,
-      "proposals": 256,
+      "proposals": 314,
       "cities": [
+        {
+          "city": "Ahrensburg",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-HAMBURG-02-01",
+              "name": "Bredenbek pond",
+              "city": "Ahrensburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Ahrensburg"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Appen",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-HAMBURG-02-09",
+              "name": "Dredging lake in Appen",
+              "city": "Appen",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "25482 Appen"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Beelitz",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-BERLIN-01-02",
+              "name": "Parking lot Borker Heide",
+              "city": "Beelitz",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Schäpe, 14547 Beelitz"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
         {
           "city": "Berlin",
           "cruising_now": 4,
-          "proposals": 54,
+          "proposals": 69,
           "existing_cruising": [
             {
               "id": "CRU-BER-HAS-03",
@@ -11475,7 +11689,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -11488,7 +11703,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -11501,7 +11717,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -11527,7 +11744,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -11540,7 +11758,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -11566,7 +11785,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -11605,7 +11825,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -11631,7 +11852,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -11644,7 +11866,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -11670,7 +11893,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -11683,7 +11907,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
@@ -11696,7 +11921,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
@@ -11735,7 +11961,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
@@ -11761,7 +11988,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
@@ -11813,7 +12041,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
@@ -11878,7 +12107,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
@@ -11891,7 +12121,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
@@ -11917,7 +12148,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
@@ -11943,7 +12175,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
@@ -11969,7 +12202,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
@@ -11982,7 +12216,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
@@ -11995,7 +12230,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
@@ -12060,7 +12296,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
@@ -12073,7 +12310,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
@@ -12086,7 +12324,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
@@ -12099,7 +12338,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
@@ -12112,7 +12352,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
@@ -12125,7 +12366,8 @@
               "city": "Berlin",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
@@ -12144,11 +12386,222 @@
               "source_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-01-05",
+              "name": "Parking lot Schorfheide",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Schorfheidestraße, 12689 Berlin"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-01-06",
+              "name": "Austria Park",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Sömmeringstraße 10, 10589 Berlin"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-01-07",
+              "name": "Lietzenseepark",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Wundtstraße 40, 14057 Berlin"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-01-08",
+              "name": "Quiet park",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+              "status": "unverified",
+              "notes": "Generic translated place name; identify exact park before accepting.",
+              "source_address": "Heinrich-Roller-Strasse 24, 10405 Berlin"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-01-09",
+              "name": "Lake Tegel",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "H6HV+3V Berlin, Germany"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-02-01",
+              "name": "Schlachtensee",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "C6V9+CP Berlin, Germany"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-02-02",
+              "name": "Goethepark",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Ugandastrasse 17, 13351 Berlin"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-02-03",
+              "name": "Britz Garden",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/2/",
+              "status": "unverified",
+              "notes": "Managed botanical park; confirm actual access and relevant site rules before recommending.",
+              "source_address": "Sangerhauser Weg 1, 12349 Berlin"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-02-04",
+              "name": "Arkenberg quarry pond",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "JCQ7+72 Berlin, Germany"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-02-06",
+              "name": "People's Park Prenzlauer Berg",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "GFP9+42 Berlin, Germany"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-02-07",
+              "name": "Flap at Leuthener Platz",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "public_toilet",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Naumannstrasse 55, 10829 Berlin"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-04-05",
+              "name": "Thomashöhe",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/",
+              "status": "unverified",
+              "notes": "Possibly Park Thomasstraße in source 2; verify exact footprint.",
+              "source_address": "Neukölln District, 12053 Berlin"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-04-08",
+              "name": "Flap at the Volkspark Wilmersdorf",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "public_toilet",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Am Volkspark 51, 10715 Berlin"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-05-01",
+              "name": "Sand pit in hunting 86",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "forest",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/5/",
+              "status": "unverified",
+              "notes": "Compare with Jagen 87 in source 2 but do not merge without coordinates.",
+              "source_address": "14193 Berlin"
+            },
+            {
+              "proposal_id": "PR3-DE-BERLIN-05-02",
+              "name": "Parking lot Grunewald",
+              "city": "Berlin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/5/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Königsweg, 14193 Berlin"
             }
           ],
           "scrapes": {
             "scrape_1": 1,
-            "scrape_2": 60
+            "scrape_2": 60,
+            "scrape_3": 49
           }
         },
         {
@@ -12158,6 +12611,16 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Bönningstedt",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_3": 1
+          }
         },
         {
           "city": "Bremen",
@@ -12311,7 +12774,7 @@
         {
           "city": "Cologne",
           "cruising_now": 3,
-          "proposals": 10,
+          "proposals": 25,
           "existing_cruising": [
             {
               "id": "CRU-CGN-AACWEI-01",
@@ -12428,7 +12891,8 @@
               "city": "Cologne",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html",
@@ -12460,11 +12924,222 @@
               "source_url": "https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-01-01",
+              "name": "Lake Escher",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "50765 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-01-02",
+              "name": "Decksteiner pond",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-01-03",
+              "name": "Foothills Park",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Nauheimer Str. 15, 50969 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-01-04",
+              "name": "Roman Park",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "50678 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-01-05",
+              "name": "Pyramid Park",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "50679 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-01-06",
+              "name": "Lake Von Diergardt",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "51069 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-01-07",
+              "name": "Stammheim Castle Park",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "51061 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-01-08",
+              "name": "Hiroshima Nagasaki Park",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Universitätsstraße 22a, 50923 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-01-09",
+              "name": "Ubierring Park",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "50678 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-01-10",
+              "name": "Beethoven Park",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Neuenhöfer Allee 10, 50937 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-02-01",
+              "name": "Blücherpark",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Parkgürtel, 50823 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-02-03",
+              "name": "Volksgarten Cologne",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/page/2/",
+              "status": "unverified",
+              "notes": "May overlap source 2 Rosengarten im Volksgarten but potentially different subareas.",
+              "source_address": "Eifelstraße, 50677 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-02-05",
+              "name": "Gravel pit lake Gremberghoven",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "51149 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-02-07",
+              "name": "Parking lot Lustheide",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "51427 Cologne"
+            },
+            {
+              "proposal_id": "PR3-DE-COLOGNE-02-08",
+              "name": "Rest area hamlet",
+              "city": "Cologne",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Roggendorf/Thenhoven, 50765 Cologne"
             }
           ],
           "scrapes": {
             "scrape_1": 2,
-            "scrape_2": 12
+            "scrape_2": 12,
+            "scrape_3": 19
           }
         },
         {
@@ -13197,6 +13872,31 @@
           }
         },
         {
+          "city": "Fehrbellin",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-BERLIN-08-01",
+              "name": "Linumer Bruch parking lot A24",
+              "city": "Fehrbellin",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/8/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "16833 Fehrbellin"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
           "city": "Frankfurt am Main",
           "cruising_now": 1,
           "proposals": 13,
@@ -13425,7 +14125,7 @@
         {
           "city": "Hamburg",
           "cruising_now": 1,
-          "proposals": 21,
+          "proposals": 35,
           "existing_cruising": [
             {
               "id": "CRU-HAM-BOBSEE-03",
@@ -13440,7 +14140,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13453,7 +14154,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13466,7 +14168,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13479,7 +14182,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13505,7 +14209,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13518,7 +14223,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13531,7 +14237,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13544,7 +14251,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13557,7 +14265,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13570,7 +14279,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13609,7 +14319,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13622,7 +14333,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13635,7 +14347,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13648,7 +14361,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13661,7 +14375,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13674,7 +14389,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
@@ -13687,7 +14403,8 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/1/rubrik.html",
@@ -13700,16 +14417,214 @@
               "city": "Hamburg",
               "country": "Germany",
               "source_ids": [
-                "scrape_2"
+                "scrape_2",
+                "scrape_3"
               ],
               "source_category": "Cruising",
               "source_url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/1/rubrik.html",
               "status": "unverified",
               "notes": ""
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-01-02",
+              "name": "Lake Neuland",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "21079 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-01-03",
+              "name": "Hohendeich Lake",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "21037 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-01-04",
+              "name": "Copper Pond",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "22399 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-01-05",
+              "name": "Dove Elbe",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "waterside",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-01-08",
+              "name": "Eppendorf Park",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "20251 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-01-09",
+              "name": "Jenfelder Moor",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "22045 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-01-10",
+              "name": "Lake Bahrenfeld",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "22761 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-02-02",
+              "name": "Powder Yard Park",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Am Pulverhof 20A, 22147 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-02-03",
+              "name": "Eilbekpark",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Barmbek South, 22081 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-02-04",
+              "name": "Lake Allermöher",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "21035 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-02-05",
+              "name": "Finkenwerder lighthouse",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "waterside",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "21129 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-02-06",
+              "name": "Öjendorf Park",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Barsbütteler Weg 49, 22117 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-03-08",
+              "name": "Ohlsdorf Cemetery - Chapel 3",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/3/",
+              "status": "unverified",
+              "notes": "Cemetery setting; confirm suitable location and restrictions; not automatically recommended.",
+              "source_address": "22337 Hamburg"
+            },
+            {
+              "proposal_id": "PR3-DE-HAMBURG-03-09",
+              "name": "Lake Bramfeld",
+              "city": "Hamburg",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "lake",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/3/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "22309 Hamburg"
             }
           ],
           "scrapes": {
-            "scrape_2": 22
+            "scrape_2": 22,
+            "scrape_3": 29
           }
         },
         {
@@ -13906,6 +14821,66 @@
           }
         },
         {
+          "city": "Heiligengrabe",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-BERLIN-01-04",
+              "name": "Rest area Prignitz",
+              "city": "Heiligengrabe",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Prignitz East, A24, 16909 Heiligengrabe"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Hetlingen",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Hollern-Twielenfleth",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-HAMBURG-02-10",
+              "name": "Bassenfleth beach",
+              "city": "Hollern-Twielenfleth",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "beach",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "21723 Hollern-Twielenfleth"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
           "city": "Ismaning",
           "cruising_now": 0,
           "proposals": 1,
@@ -14051,6 +15026,31 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Königs Wusterhausen",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-BERLIN-01-01",
+              "name": "Parking lot Lankensee",
+              "city": "Königs Wusterhausen",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Wernsdorf, 15713 Königs Wusterhausen"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
         },
         {
           "city": "Leipzig",
@@ -14816,6 +15816,66 @@
           }
         },
         {
+          "city": "Regesbostel",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-HAMBURG-01-01",
+              "name": "Rest area Stellheide",
+              "city": "Regesbostel",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "21649 Regesbostel"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Reinbek",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-HAMBURG-05-01",
+              "name": "Parking lot Hahnenkoppel",
+              "city": "Reinbek",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/5/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "21465 Reinbek"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Rosengarten",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
           "city": "Rottweil",
           "cruising_now": 0,
           "proposals": 2,
@@ -14954,6 +16014,91 @@
           ],
           "scrapes": {
             "scrape_2": 7
+          }
+        },
+        {
+          "city": "Schönefeld",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-BERLIN-03-04",
+              "name": "Parking lot A117 Waldeck West",
+              "city": "Schönefeld",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/3/",
+              "status": "unverified",
+              "notes": "Nearby parking lot also listed as Waldeck Ost in source 2; determine if opposite directions/same rest stop.",
+              "source_address": "Waldeck West, 12529 Schönefeld"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Seevetal",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Soltau",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-HAMBURG-01-07",
+              "name": "Juniper Park",
+              "city": "Soltau",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "park",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Am Wacholderpark 1, 29614 Soltau"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Spreenhagen",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-BERLIN-01-03",
+              "name": "Rest area Briesenluch",
+              "city": "Spreenhagen",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "Markgrafpieske, 15528 Spreenhagen"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
           }
         },
         {
@@ -15221,6 +16366,66 @@
           "existing_cruising": [],
           "proposed_places": [],
           "scrapes": {}
+        },
+        {
+          "city": "Tornesch",
+          "cruising_now": 0,
+          "proposals": 0,
+          "existing_cruising": [],
+          "proposed_places": [],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Wedel",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-HAMBURG-03-04",
+              "name": "Holmer Sandberge parking lot",
+              "city": "Wedel",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/3/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "22880 Wedel"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
+        },
+        {
+          "city": "Woltersdorf",
+          "cruising_now": 0,
+          "proposals": 1,
+          "existing_cruising": [],
+          "proposed_places": [
+            {
+              "proposal_id": "PR3-DE-BERLIN-02-05",
+              "name": "Rest area A10 Kalkberge",
+              "city": "Woltersdorf",
+              "country": "Germany",
+              "source_ids": [
+                "scrape_3"
+              ],
+              "source_category": "rest_area",
+              "source_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/2/",
+              "status": "unverified",
+              "notes": "",
+              "source_address": "15569 Woltersdorf"
+            }
+          ],
+          "scrapes": {
+            "scrape_3": 1
+          }
         },
         {
           "city": "Würzburg",
