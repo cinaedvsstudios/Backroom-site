@@ -30,14 +30,29 @@ jobs:
       - name: Generate pages and sitemap from listings.json
         run: python3 scripts/build_venue_seo.py
 
-      - name: Commit updated generated files
+      - name: Commit updated generated files without overwriting concurrent site changes
         run: |
-          git add -A -- venue/ sitemap.xml
-          if git diff --cached --quiet; then
-            echo "SEO pages and sitemap already up to date."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "SEO: regenerate venue entry pages and sitemap from listings.json"
-          git push origin HEAD:main
+          for attempt in 1 2 3 4 5; do
+            echo "SEO publication attempt $attempt"
+            # Other Backroom edits may be published while this action runs.
+            # Reset only this temporary runner checkout; never force-push main.
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/build_venue_seo.py
+            git add -A -- venue/ sitemap.xml
+            if git diff --cached --quiet; then
+              echo "SEO pages and sitemap already up to date."
+              exit 0
+            fi
+            git commit -m "SEO: regenerate venue entry pages and sitemap from listings.json"
+            if git push origin HEAD:main; then
+              echo "SEO pages and sitemap published."
+              exit 0
+            fi
+            echo "Another update arrived before the SEO commit. Retrying safely."
+            sleep 4
+          done
+          echo "Unable to publish SEO pages after five attempts."
+          exit 1
