@@ -724,10 +724,22 @@
           "city": "Benidorm",
           "url": "https://thegaypassport.com/destinations/gay-benidorm/",
           "count": 0
+        },
+        {
+          "country": "Israel",
+          "city": "Tel Aviv",
+          "url": "https://thegaypassport.com/destinations/gay-tel-aviv/",
+          "count": 1
+        },
+        {
+          "country": "Israel",
+          "city": "Tel Aviv",
+          "url": "https://thegaypassport.com/venue/leonardo-art-tel-aviv-by-the-beach/",
+          "count": 1
         }
       ],
-      "results_total": 32,
-      "proposals_new": 14,
+      "results_total": 34,
+      "proposals_new": 16,
       "prior_research_matches": 5,
       "backroom_existing_matches": 13,
       "outside_baseline_spots": 7,
@@ -1967,7 +1979,7 @@
     {
       "country": "Israel",
       "cruising_now": 0,
-      "proposals": 15,
+      "proposals": 17,
       "cities": [
         {
           "city": "Hadera",
@@ -2214,7 +2226,7 @@
         {
           "city": "Tel Aviv",
           "cruising_now": 0,
-          "proposals": 4,
+          "proposals": 6,
           "existing_cruising": [],
           "proposed_places": [
             {
@@ -2268,10 +2280,37 @@
               "source_url": "https://www.gays-cruising.com/en/israel",
               "status": "unverified",
               "notes": "Review venue type and public-access suitability before considering publication."
+            },
+            {
+              "proposal_id": "GP4-ISRAEL-TEL-AVIV-01",
+              "name": "Independence Park (Gan HaAtzmaut)",
+              "city": "Tel Aviv",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Park",
+              "source_url": "https://thegaypassport.com/destinations/gay-tel-aviv/",
+              "status": "unverified",
+              "notes": "Source directly describes cruising in Independence Park beside Hilton Beach; verify activity recency and appropriate area."
+            },
+            {
+              "proposal_id": "GP4-ISRAEL-TEL-AVIV-02",
+              "name": "Hilton Beach (Tel Aviv)",
+              "city": "Tel Aviv",
+              "country": "Israel",
+              "source_ids": [
+                "scrape_4"
+              ],
+              "source_category": "Beach",
+              "source_url": "https://thegaypassport.com/venue/leonardo-art-tel-aviv-by-the-beach/",
+              "status": "unverified",
+              "notes": "A hotel review on source site explicitly labels Hilton Beach an unofficial cruising area; requires stronger independent confirmation."
             }
           ],
           "scrapes": {
-            "scrape_1": 4
+            "scrape_1": 4,
+            "scrape_4": 2
           }
         },
         {
@@ -4667,7 +4706,9 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_4": 0
+          }
         },
         {
           "city": "Phoenix",
@@ -9709,7 +9750,8 @@
             }
           ],
           "scrapes": {
-            "scrape_1": 1
+            "scrape_1": 1,
+            "scrape_4": 0
           }
         },
         {
@@ -16675,7 +16717,9 @@
           "proposals": 0,
           "existing_cruising": [],
           "proposed_places": [],
-          "scrapes": {}
+          "scrapes": {
+            "scrape_4": 0
+          }
         },
         {
           "city": "Bilbao",
