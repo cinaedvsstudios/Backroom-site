@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "name": "Part5 A research tracker",
+    "research_only": true,
+    "source_queue": "research/cruising/part5/master_queue.json",
+    "section": "A",
+    "created_berlin": "2026-11-06",
+    "checkpoint_interval": 5,
+    "owner": "Part 5 original chat"
+  },
+  "range": {
+    "start": 1,
+    "end": 293,
+    "total": 293,
+    "first_id": "GC1-ANDORRA-01",
+    "last_id": "GC1-ROMANIA-09"
+  },
+  "progress": {
+    "complete": 0,
+    "remaining": 293,
+    "last_completed_index": null,
+    "last_completed_id": null,
+    "next_index": 1,
+    "next_id": "GC1-ANDORRA-01",
+    "checkpoint_count": 0,
+    "batch_files": [],
+    "last_checkpoint_berlin": null
+  },
+  "policy": {
+    "write_only_this_section": true,
+    "do_not_change_master_queue": true,
+    "do_not_modify_live_listings": true,
+    "never_remove_candidates_during_collection": true,
+    "source_data_immutable": true,
+    "research_every_source_status": true,
+    "no_invented_visitor_evidence": true
+  },
+  "recovery": {
+    "if_tracker_and_batch_disagree": "Check existing batch file contents and update tracker from committed results; do not repeat completed IDs",
+    "write_sequence": "Commit unique batch file first, then reread tracker and update it using latest SHA",
+    "github_conflict": "Re-fetch tracker/branch state, merge only your section, retry with latest SHA; never force-push or replace other workers' files"
+  }
+}
