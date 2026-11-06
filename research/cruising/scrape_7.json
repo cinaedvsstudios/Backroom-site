@@ -4,7 +4,7 @@
     "site": "Squirt.org",
     "base_url": "https://www.squirt.org/",
     "created_berlin": "2026-11-06",
-    "status": "user_supplied_city_search_exports_imported__pending_geographic_and_match_review",
+    "status": "user_search_exports_deduplicated_and_triaged__not_full_place_detail_import",
     "collection_method": "User-pasted Squirt.org city-proximity search result exports. Entries extend beyond each city because results include wide search radii.",
     "records_collected": 205,
     "countries_covered": null,
@@ -21,7 +21,48 @@
       "Link",
       "Image"
     ],
-    "caution": "Latest Reply is a forum timestamp or relative display, not proof of physical cruising activity. Many listings are located far from queried city. Commercial gay sex venues remain outside cruising-area proposal scope."
+    "caution": "Latest Reply is a forum timestamp or relative display, not proof of physical cruising activity. Many listings are located far from queried city. Commercial gay sex venues remain outside cruising-area proposal scope.",
+    "country_assignment_method": "Only selected place-specific city hints were assigned. An Edinburgh search batch may still contain mislocated records; each requires review.",
+    "triage_counts": {
+      "candidate_unverified_needs_detail_url": 60,
+      "geography_unresolved_needs_detail_url": 52,
+      "separate_commercial_venue_not_cruising_area": 39,
+      "old_or_stale_hold": 31,
+      "match_or_possible_subarea_existing": 20,
+      "private_or_managed_property_hold": 3
+    },
+    "master_match_count": 20,
+    "master_proposals_added": 0,
+    "publication_ready_count": 0,
+    "source_url_gaps": "All 205 records lack detail URLs in supplied Link column. No URLs are invented and photo IDs are not treated as confirmed listing IDs.",
+    "top_review_names": [
+      "Villa Gordiani",
+      "Piazzale Del Galoppatoio",
+      "Stockbridge Public Toilets",
+      "St James Quarter Shopping Centre Toilets (Edinburgh)",
+      "Waverley Train Station Public Toilets (Edinburgh)",
+      "Bruntsfield Links Public Toilets (Edinburgh)",
+      "Meadows Public Toilets",
+      "Calton Hill",
+      "Regent Road Park",
+      "London Road Gardens",
+      "La Ralla",
+      "Santa Justa Train Station",
+      "Nervión Plaza Shopping Mall",
+      "Museo Metro Station",
+      "Via Brin",
+      "Baia Regina Giovanna",
+      "Piazza San Marco",
+      "Punta Sabbioni Forest",
+      "Scheidplatz",
+      "Praterstern, Wien Toilets",
+      "Parc du mont boron",
+      "Kauppakeskus Kamppi",
+      "Parco Nord",
+      "Via Torrelunga and Via Spalto San Marco",
+      "Princes Street Gardens Ross Bandstand Public Toilets (Edinburgh)",
+      "Princes Street Gardens West Public Toilets (Edinburgh)"
+    ]
   },
   "countries": [],
   "batches": [
@@ -94,7 +135,13 @@
           "category": "Cruising Areas",
           "last": "Aug 22, 2026"
         }
-      ]
+      ],
+      "city_hint": "Siena",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Lecconia beach",
@@ -119,7 +166,13 @@
           "last": "Jun 23, 2026"
         }
       ],
-      "photo_id_from_url": "0000239228"
+      "photo_id_from_url": "0000239228",
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Steam Sauna",
@@ -144,7 +197,13 @@
           "last": "Jul 03, 2026"
         }
       ],
-      "photo_id_from_url": "0000221914"
+      "photo_id_from_url": "0000221914",
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Via Ripa di Meana",
@@ -173,7 +232,13 @@
           "category": "Cruising Areas",
           "last": "1 year ago"
         }
-      ]
+      ],
+      "city_hint": "Perugia",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Parco Ducale, Parma",
@@ -197,7 +262,13 @@
           "category": "Cruising Areas",
           "last": "Jul 30, 2026"
         }
-      ]
+      ],
+      "city_hint": "Parma",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Pineta della Feniglia",
@@ -222,7 +293,13 @@
           "last": "1 year ago"
         }
       ],
-      "photo_id_from_url": "0000133191"
+      "photo_id_from_url": "0000133191",
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Sauna Velluto",
@@ -252,7 +329,13 @@
           "last": "1 year ago"
         }
       ],
-      "photo_id_from_url": "0000221746"
+      "photo_id_from_url": "0000221746",
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Via Lungo Po Europa",
@@ -276,7 +359,13 @@
           "category": "Cruising Areas",
           "last": "2 years ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Via Panoramica",
@@ -305,7 +394,13 @@
           "category": "Parks",
           "last": "2 years ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Liquid Club",
@@ -330,7 +425,13 @@
           "last": "Oct 08, 2026"
         }
       ],
-      "photo_id_from_url": "0000003963"
+      "photo_id_from_url": "0000003963",
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Piazza San Marco",
@@ -360,7 +461,14 @@
           "last": "Apr 26, 2026"
         }
       ],
-      "photo_id_from_url": "0000013627"
+      "photo_id_from_url": "0000013627",
+      "city_hint": "Venice",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Venice — prominent landmark but too broad to accept cruising activity from an index alone.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Punta Sabbioni Forest",
@@ -390,7 +498,23 @@
           "last": "Sep 02, 2026"
         }
       ],
-      "photo_id_from_url": "0000229818"
+      "photo_id_from_url": "0000229818",
+      "city_hint": "Cavallino-Treporti",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Pineta Punta Sabbioni",
+          "id": "GC1-EX-ITALY-CAVALLINO-TREPORTI-PINETA-PUNTA-SABBIONI",
+          "city": "Cavallino-Treporti",
+          "country": "Italy",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "priority_review_note": "Cavallino-Treporti, not Venice — overlaps existing Pineta Punta Sabbioni proposal.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Zona Industriale",
@@ -414,7 +538,13 @@
           "category": "Cruising Areas",
           "last": "2 years ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Via Torrelunga and Via Spalto San Marco",
@@ -438,7 +568,14 @@
           "category": "Cruising Areas",
           "last": "1 year ago"
         }
-      ]
+      ],
+      "city_hint": "Brescia",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Brescia, not Venice — location corroborated by Brescia municipal geography, not cruising activity.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Viale Italia",
@@ -462,7 +599,13 @@
           "category": "Cruising Areas",
           "last": "2 years ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Via Chilesotti",
@@ -492,7 +635,13 @@
           "last": "2 years ago"
         }
       ],
-      "photo_id_from_url": "0000077616"
+      "photo_id_from_url": "0000077616",
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Viale Venezia",
@@ -522,7 +671,13 @@
           "last": "Apr 13, 2026"
         }
       ],
-      "photo_id_from_url": "0000077617"
+      "photo_id_from_url": "0000077617",
+      "city_hint": "Brescia",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Piazzale Del Galoppatoio",
@@ -547,7 +702,23 @@
           "last": "Oct 20, 2026"
         }
       ],
-      "photo_id_from_url": "0000003010"
+      "photo_id_from_url": "0000003010",
+      "city_hint": "Rome",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Villa Borghese",
+          "id": "CRU-ROM-VILBOR-02",
+          "city": "Rome",
+          "country": "Italy",
+          "kind": "existing"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "priority_review_note": "Rome, Italy — part of existing Villa Borghese Hold entry; cannot treat a reply as reason to unflag.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "101 Club",
@@ -572,7 +743,13 @@
           "last": "Oct 19, 2026"
         }
       ],
-      "photo_id_from_url": "0000194534"
+      "photo_id_from_url": "0000194534",
+      "city_hint": "Rome",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Censured Club Roma",
@@ -596,7 +773,13 @@
           "category": "Bars, Clubs",
           "last": "Oct 20, 2026"
         }
-      ]
+      ],
+      "city_hint": "Rome",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Il Diavolo Dentro - Cruising Club",
@@ -621,7 +804,13 @@
           "last": "Oct 16, 2026"
         }
       ],
-      "photo_id_from_url": "0000232598"
+      "photo_id_from_url": "0000232598",
+      "city_hint": "Rome",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Apollion Sauna",
@@ -646,7 +835,13 @@
           "last": "Oct 18, 2026"
         }
       ],
-      "photo_id_from_url": "0000197731"
+      "photo_id_from_url": "0000197731",
+      "city_hint": "Rome",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Villa Gordiani",
@@ -671,7 +866,14 @@
           "last": "Jul 16, 2026"
         }
       ],
-      "photo_id_from_url": "0000083841"
+      "photo_id_from_url": "0000083841",
+      "city_hint": "Rome",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Rome, Italy — new park lead. Request Squirt details or corroboration of reported activity.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Punta Kriz Naturist Beach",
@@ -695,7 +897,13 @@
           "category": "Cruising Areas",
           "last": "Sep 20, 2026"
         }
-      ]
+      ],
+      "city_hint": "Rovinj",
+      "country_hint": "Croatia",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Distributore STOIL",
@@ -719,7 +927,13 @@
           "category": "Truck Stops, Rest Areas",
           "last": "Jul 08, 2026"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Via Lambro (Peschiera Borromeo, MI)",
@@ -743,7 +957,13 @@
           "category": "Cruising Areas",
           "last": "Oct 14, 2026"
         }
-      ]
+      ],
+      "city_hint": "Peschiera Borromeo",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Valalta naturist resort Croatia",
@@ -767,7 +987,13 @@
           "category": "Beaches, Hot Springs",
           "last": "2 years ago"
         }
-      ]
+      ],
+      "city_hint": "Rovinj",
+      "country_hint": "Croatia",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Ottobiano - Sosta Camion SP211 (Vicino Grande Azienda)",
@@ -791,7 +1017,13 @@
           "category": "Truck Stops, Rest Areas",
           "last": "Jul 07, 2026"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Marriott Milan",
@@ -815,7 +1047,13 @@
           "category": "Hotels, Resorts, Campgrounds",
           "last": "Mar 31, 2026"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "private_or_managed_property_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Parco Nord",
@@ -839,7 +1077,14 @@
           "category": "Cruising Areas",
           "last": "Jul 07, 2026"
         }
-      ]
+      ],
+      "city_hint": "Milan",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Milan — large park; exact section and public evidence needed.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Plomin fkk",
@@ -863,7 +1108,13 @@
           "category": "Beaches, Hot Springs",
           "last": "May 28, 2026"
         }
-      ]
+      ],
+      "city_hint": "Plomin",
+      "country_hint": "Croatia",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Via Raffaello",
@@ -887,7 +1138,13 @@
           "category": "Cruising Areas",
           "last": "2 years ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Via Samaden",
@@ -911,7 +1168,13 @@
           "category": "Cruising Areas",
           "last": "5 years ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Tour du Capitello",
@@ -923,7 +1186,13 @@
         1
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Balzi Rossi",
@@ -935,7 +1204,13 @@
         1
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Roseraie Princess Grace",
@@ -947,7 +1222,13 @@
         1
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Monaco",
+      "country_hint": "Monaco",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Villefranche Sur Mer",
@@ -959,7 +1240,13 @@
         1
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Villefranche-sur-Mer",
+      "country_hint": "France",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Parc du mont boron",
@@ -971,7 +1258,14 @@
         1
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Nice",
+      "country_hint": "France",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Nice — new park lead; requires specific corroboration.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "G.I. Sex Shop",
@@ -983,7 +1277,13 @@
         1
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Viale Giosue Carducci",
@@ -1007,7 +1307,13 @@
           "category": "Cruising Areas",
           "last": "2 years ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Princes Street Gardens Ross Bandstand Public Toilets (Edinburgh)",
@@ -1020,7 +1326,23 @@
       ],
       "original_link_column_blank": true,
       "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000051176"
+      "photo_id_from_url": "0000051176",
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "master_matches": [
+        {
+          "name": "Princes Street Gardens",
+          "id": "CG8-GAP-62",
+          "city": "Edinburgh",
+          "country": "United Kingdom",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "priority_review_note": "Edinburgh — subarea within existing Princes Street Gardens proposal, not automatically separate.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Princes Street Gardens West Public Toilets (Edinburgh)",
@@ -1033,7 +1355,23 @@
       ],
       "original_link_column_blank": true,
       "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000074040"
+      "photo_id_from_url": "0000074040",
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "master_matches": [
+        {
+          "name": "Princes Street Gardens",
+          "id": "CG8-GAP-62",
+          "city": "Edinburgh",
+          "country": "United Kingdom",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "priority_review_note": "Edinburgh — subarea within existing Princes Street Gardens proposal, not automatically separate.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "The Royal Scottish Academy",
@@ -1045,7 +1383,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Stockbridge Public Toilets",
@@ -1058,7 +1402,14 @@
       ],
       "original_link_column_blank": true,
       "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000036421"
+      "photo_id_from_url": "0000036421",
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Edinburgh — new named public-facility lead; direct listing URL needed.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "NCP king stables road",
@@ -1070,7 +1421,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Steamworks Sauna (Edinburgh)",
@@ -1082,7 +1439,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Village Apartments (Edinburgh)",
@@ -1094,7 +1457,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "private_or_managed_property_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "The Balmoral Spa (Edinburgh)",
@@ -1106,7 +1475,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Sheraton Grand Hotel & Spa (Edinburgh)",
@@ -1118,7 +1493,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Waverley Train Station Public Toilets (Edinburgh)",
@@ -1130,7 +1511,14 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Edinburgh — new named transit-facility lead; check access and policy.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "PureGym (Edinburgh Exchange Crescent)",
@@ -1142,7 +1530,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "kickass grassmarkets male showers (near room 106)",
@@ -1154,7 +1548,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "The Gym (Edinburgh City)",
@@ -1166,7 +1566,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "St James Quarter Shopping Centre Toilets (Edinburgh)",
@@ -1178,7 +1584,14 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Edinburgh — new managed-facility lead; verify user access and activity independently.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "John Lewis Store Toilets (Edinburgh)",
@@ -1190,7 +1603,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Nuffield Health (Edinburgh Omni)",
@@ -1202,7 +1621,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Radisson Blu Spa (Edinburgh)",
@@ -1214,7 +1639,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Calton Hill",
@@ -1226,7 +1657,23 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "master_matches": [
+        {
+          "name": "Calton Hill",
+          "id": "CG8-GAP-58",
+          "city": "Edinburgh",
+          "country": "United Kingdom",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "priority_review_note": "Edinburgh — matches existing proposal; recent reply prompts source review.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "PureGym (Edinburgh Quartermile)",
@@ -1238,7 +1685,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Britannia Hotel Toilets (Edinburgh)",
@@ -1250,7 +1703,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Potterrow Dome Student Union Toilets",
@@ -1262,7 +1721,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Warriston Cemetery (Edinburgh)",
@@ -1274,7 +1739,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Teviot Row House Student Union Toilets",
@@ -1286,7 +1757,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Canongate Kirkyard (Edinburgh)",
@@ -1298,7 +1775,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "London Road Gardens",
@@ -1310,7 +1793,23 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "master_matches": [
+        {
+          "name": "London Road Gardens",
+          "id": "GC1-GAP-EDINBURG-04",
+          "city": "Edinburgh",
+          "country": "United Kingdom",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "priority_review_note": "Edinburgh — matches existing proposal, useful cross-source reference.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Pleasance Sports Complex & Gym (Dumbiedykes, Edinburgh)",
@@ -1322,7 +1821,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Robert Burns Monument",
@@ -1334,7 +1839,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Edinburgh University Library Toilets",
@@ -1346,7 +1857,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "New Calton Cemetery",
@@ -1358,7 +1875,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Nuffield Health (Edinburgh Fountain Park)",
@@ -1370,7 +1893,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Regent Road Park",
@@ -1382,7 +1911,14 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Edinburgh — possible Calton Hill adjacency; map review needed before separate proposal.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Bruntsfield Links Public Toilets (Edinburgh)",
@@ -1394,7 +1930,14 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Edinburgh — new named facility lead.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Meadows Public Toilets",
@@ -1406,7 +1949,14 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Edinburgh — new named facility lead.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Rosebank cemetery",
@@ -1418,7 +1968,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Dalry Cemetery (Edinburgh)",
@@ -1430,7 +1986,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "The Gym Group (Meadowbank)",
@@ -1442,7 +2004,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "North Merchiston Cemetery (Edinburgh)",
@@ -1454,7 +2022,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Napier University Toilets (Merchiston, Edinburgh)",
@@ -1466,7 +2040,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "PureGym Edinburgh Craigleith",
@@ -1478,7 +2058,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Balantyne Trees (Edinburgh)",
@@ -1490,7 +2076,13 @@
         2
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Edinburgh",
+      "country_hint": "United Kingdom",
+      "geo_basis": "Edinburgh search group; needs spot-specific check",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Erotik Store Reiter",
@@ -1502,7 +2094,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "A10 Lay-by - Northbound",
@@ -1514,7 +2112,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "A10 - Southbound",
@@ -1526,7 +2130,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Haus Romeo Alpine Gay Resort",
@@ -1545,7 +2155,13 @@
           "category": "Hotels, Resorts, Campgrounds",
           "last": "1 year ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "private_or_managed_property_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "An d. Fahre",
@@ -1557,7 +2173,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Erotixx - Rosenheimerstr.",
@@ -1569,7 +2191,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Deutsche Eiche",
@@ -1581,7 +2209,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Munich",
+      "country_hint": "Germany",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Munich Hauptbahnhof",
@@ -1593,7 +2227,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Munich",
+      "country_hint": "Germany",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Erotixx - Theresienstr.",
@@ -1605,7 +2245,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Erotixx - Poccistr",
@@ -1617,7 +2263,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Scheidplatz",
@@ -1629,7 +2281,14 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Munich",
+      "country_hint": "Germany",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Munich — identifiable station area; location details and legal access needed.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Muenchner Loewen Club",
@@ -1641,7 +2300,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Hawaii/FKK",
@@ -1665,7 +2330,13 @@
           "category": "Cruising Areas",
           "last": "2 years ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Ziirl Rest Stop",
@@ -1684,7 +2355,13 @@
           "category": "Cruising Areas",
           "last": "2 years ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Pendlerparkplatz Lappersdorf",
@@ -1696,7 +2373,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Schubert Park - Theatre Park",
@@ -1708,7 +2391,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Wolfzahnau auf der Kiesinsel",
@@ -1720,7 +2409,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Kaisersee",
@@ -1732,7 +2427,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Wertach / Schwimmschulstrabe",
@@ -1744,7 +2445,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Wolfzahnau",
@@ -1756,7 +2463,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Waldparkplatz zwischen A96 und Bad Wörishofen",
@@ -1768,7 +2481,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "District 35",
@@ -1792,7 +2511,13 @@
           "category": "Bathhouses, Saunas",
           "last": "1 year ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "World of Sex",
@@ -1804,7 +2529,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Parkplatz Gründlach A73 (northbound)",
@@ -1816,7 +2547,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "VFR Stadium",
@@ -1828,7 +2565,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Wienerberg Nudist Area",
@@ -1840,7 +2583,22 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Vienna",
+      "country_hint": "Austria",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Wienerberg",
+          "id": "GC1-AUSTRIA-02",
+          "city": "Vienna",
+          "country": "Austria",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Hard On",
@@ -1852,7 +2610,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Romersauna",
@@ -1864,7 +2628,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Rathaus Park",
@@ -1876,7 +2646,22 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Vienna",
+      "country_hint": "Austria",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Rathauspark",
+          "id": "GC1-AUSTRIA-05",
+          "city": "Vienna",
+          "country": "Austria",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Wertheimstein Park",
@@ -1888,7 +2673,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Vienna",
+      "country_hint": "Austria",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Wertheimsteinpark",
@@ -1900,7 +2691,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Vienna",
+      "country_hint": "Austria",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Praterstern, Wien Toilets",
@@ -1912,7 +2709,14 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Vienna",
+      "country_hint": "Austria",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Vienna — new named public-facility lead.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Washroom Near Football Pitch",
@@ -1924,7 +2728,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Toter Grund",
@@ -1936,7 +2746,22 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Vienna",
+      "country_hint": "Austria",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Donauinsel, Toter Grund",
+          "id": "GC1-AUSTRIA-10",
+          "city": "Vienna",
+          "country": "Austria",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Danube Island - Vienna",
@@ -1948,7 +2773,22 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Vienna",
+      "country_hint": "Austria",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Donauinsel, Toter Grund",
+          "id": "GC1-AUSTRIA-10",
+          "city": "Vienna",
+          "country": "Austria",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Seberak Pond",
@@ -1960,7 +2800,13 @@
         3
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Parque de Maria Luisa",
@@ -1972,7 +2818,22 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Seville",
+      "country_hint": "Spain",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Parque de Maria Luisa",
+          "id": "GC1-GAP-SEVILLE-07",
+          "city": "Seville",
+          "country": "Spain",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "El Bunker",
@@ -1984,7 +2845,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "The Cube urban",
@@ -1996,7 +2863,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Santa Justa Train Station",
@@ -2008,7 +2881,23 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Seville",
+      "country_hint": "Spain",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Estación Santa Justa",
+          "id": "CG8-34493",
+          "city": "Seville",
+          "country": "Spain",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "priority_review_note": "Seville — matches existing Estación Santa Justa proposal.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "La Ralla",
@@ -2021,7 +2910,14 @@
       ],
       "original_link_column_blank": true,
       "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000218070"
+      "photo_id_from_url": "0000218070",
+      "city_hint": "Seville",
+      "country_hint": "Spain",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Seville — likely overlaps Scrape 1 raw 'La Raya', but source place definition requires checking.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Nervión Plaza Shopping Mall",
@@ -2033,7 +2929,23 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Seville",
+      "country_hint": "Spain",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "CC Nervión Plaza",
+          "id": "GC1-GAP-SEVILLE-05",
+          "city": "Seville",
+          "country": "Spain",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "priority_review_note": "Seville — matches existing shopping centre proposal.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Chiclana Park / N340",
@@ -2045,7 +2957,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Praia de Monte Gordo",
@@ -2057,7 +2975,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Costa Natura",
@@ -2069,7 +2993,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Los Granados",
@@ -2081,7 +3011,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Barcelo Marbella toilets",
@@ -2093,7 +3029,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Antequera ITV Car Building off A-45",
@@ -2105,7 +3047,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Parque de la Constitucion",
@@ -2117,7 +3065,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Cabo Pino",
@@ -2129,7 +3083,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "John Mackintosh Square, Gibraltar",
@@ -2141,7 +3101,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Praia do Barill (Tavira)",
@@ -2153,7 +3119,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Fuengirola Feria",
@@ -2165,7 +3137,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Paloma Park",
@@ -2177,7 +3155,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Larios Centro Shopping Mall",
@@ -2189,7 +3173,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Cupido Sex Shop",
@@ -2201,7 +3191,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Eagle",
@@ -2213,7 +3209,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Sex Shop Fantasy Benalmadena Sala X",
@@ -2225,7 +3227,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Cuero Cruising Club Torremolinos",
@@ -2237,7 +3245,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Apolo Sauna Torremolinos",
@@ -2249,7 +3263,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Exxxtreme Cruising club",
@@ -2261,7 +3281,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Parque de Malaga",
@@ -2273,7 +3299,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Guadalmar",
@@ -2285,7 +3317,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Pikante sex shop (with cabins)",
@@ -2297,7 +3335,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Jardines de Puerta Oscura",
@@ -2309,7 +3353,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Armona Iskand",
@@ -2321,7 +3371,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Faro Riverside area Portas do Mar",
@@ -2333,7 +3389,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Estadio Algarve",
@@ -2345,7 +3407,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Praia de Faro",
@@ -2357,7 +3425,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Torre del Mar Nudist Beach Gay End",
@@ -2369,7 +3443,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Cavalo Preto Beach",
@@ -2381,7 +3461,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Centro Comercial Modelo de Albufeira",
@@ -2393,7 +3479,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Praia Grande",
@@ -2405,7 +3497,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "La Herradura",
@@ -2417,7 +3515,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "El Corte Ingles Granada",
@@ -2429,7 +3533,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "X Cinema Room",
@@ -2441,7 +3551,13 @@
         4
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Villa Comunale Park",
@@ -2454,7 +3570,22 @@
       ],
       "original_link_column_blank": true,
       "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000090883"
+      "photo_id_from_url": "0000090883",
+      "city_hint": "Naples",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Villa Comunale",
+          "id": "GC1-GAP-NAPLES-09",
+          "city": "Naples",
+          "country": "Italy",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Museo Metro Station",
@@ -2467,7 +3598,14 @@
       ],
       "original_link_column_blank": true,
       "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000245724"
+      "photo_id_from_url": "0000245724",
+      "city_hint": "Naples",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Naples — new named transit station lead.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Via Brin",
@@ -2480,7 +3618,23 @@
       ],
       "original_link_column_blank": true,
       "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000077725"
+      "photo_id_from_url": "0000077725",
+      "city_hint": "Naples",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Parcheggio Brin",
+          "id": "GC1-GAP-NAPLES-11",
+          "city": "Naples",
+          "country": "Italy",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "priority_review_note": "Naples — likely same general Brin parking district as existing proposal.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Baia Regina Giovanna",
@@ -2493,7 +3647,14 @@
       ],
       "original_link_column_blank": true,
       "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000169058"
+      "photo_id_from_url": "0000169058",
+      "city_hint": "Sorrento",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "priority_review_note": "Sorrento, not Naples — public coastal lead requiring seasonal access and current verification.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Viale Carlo III",
@@ -2505,7 +3666,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Caserta",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Caserta Stazione",
@@ -2518,7 +3685,13 @@
       ],
       "original_link_column_blank": true,
       "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000166344"
+      "photo_id_from_url": "0000166344",
+      "city_hint": "Caserta",
+      "country_hint": "Italy",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Ripalta Walk",
@@ -2530,7 +3703,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Viale Virgilio",
@@ -2542,7 +3721,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Ponte Punta Penna",
@@ -2554,7 +3739,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Spiaggia DAyala",
@@ -2566,7 +3757,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Rosarno Rest Stop",
@@ -2578,7 +3775,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Maxximum Time Sauna",
@@ -2590,7 +3793,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Via Lincoln",
@@ -2602,7 +3811,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Viale Regina Margherita",
@@ -2614,7 +3829,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Dunes behind Balestrate Beach",
@@ -2626,7 +3847,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Fondaco Parrino Beach",
@@ -2638,7 +3865,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Kasjuni",
@@ -2650,7 +3883,22 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Split",
+      "country_hint": "Croatia",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Kašjuni Beach",
+          "id": "CRU-SPU-KASBEA-01",
+          "city": "Split",
+          "country": "Croatia",
+          "kind": "existing"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Hotel Split",
@@ -2662,7 +3910,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Split",
+      "country_hint": "Croatia",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Makarska Dog Beach",
@@ -2674,7 +3928,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Krvavica FKK beach",
@@ -2686,7 +3946,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Villa Bellini",
@@ -2698,7 +3964,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Park Gradac",
@@ -2710,7 +3982,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Dubrovnik",
+      "country_hint": "Croatia",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Lokrum Island",
@@ -2722,7 +4000,22 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Dubrovnik",
+      "country_hint": "Croatia",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Lokrum Island",
+          "id": "CRU-DBV-LOKISL-01",
+          "city": "Dubrovnik",
+          "country": "Croatia",
+          "kind": "existing"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Caito Rock Beach",
@@ -2734,7 +4027,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Aereoporto Fontanarossa Catania",
@@ -2746,7 +4045,13 @@
         5
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Central Station",
@@ -2765,7 +4070,13 @@
           "category": "Washrooms, Cottages",
           "last": "1 year ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Giardini Alpini d'Italia",
@@ -2784,7 +4095,13 @@
           "category": "Parks",
           "last": "2 years ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Parco Pellerina entrata laghi",
@@ -2803,7 +4120,13 @@
           "category": "Cruising Areas",
           "last": "2 years ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "A13 Rastplatz Apfelwuhr Zizers",
@@ -2822,7 +4145,13 @@
           "category": "Truck Stops, Rest Areas",
           "last": "1 year ago"
         }
-      ]
+      ],
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Gay Toilette in Zug",
@@ -2834,7 +4163,13 @@
         7
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Zug",
+      "country_hint": "Switzerland",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Toilette Stierenmarkt",
@@ -2846,7 +4181,13 @@
         7
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Zug",
+      "country_hint": "Switzerland",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "candidate_unverified_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Werftsteg",
@@ -2858,7 +4199,13 @@
         7
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Bundesplatz Public Toilets",
@@ -2870,7 +4217,22 @@
         7
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "master_matches": [
+        {
+          "name": "Bundesplatz",
+          "id": "GC1-GAP-LUCERNE-03",
+          "city": "Lucerne",
+          "country": "Switzerland",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Woods",
@@ -2882,7 +4244,13 @@
         7
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Manhattan Biograf",
@@ -2895,7 +4263,13 @@
       ],
       "original_link_column_blank": true,
       "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000219730"
+      "photo_id_from_url": "0000219730",
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Batvagan",
@@ -2907,7 +4281,13 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Dv Population Building 2nd floor washroom",
@@ -2919,7 +4299,13 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Xxx Paradise adult bookstore",
@@ -2931,7 +4317,13 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Yyteri Nudist Beach",
@@ -2944,7 +4336,13 @@
       ],
       "original_link_column_blank": true,
       "last_reply_is_activity_confirmation": false,
-      "photo_id_from_url": "0000075769"
+      "photo_id_from_url": "0000075769",
+      "city_hint": "Pori",
+      "country_hint": "Finland",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "old_or_stale_hold",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Marbäcks Viken",
@@ -2956,7 +4354,13 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "geography_unresolved_needs_detail_url",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Club 69 Sauna",
@@ -2968,7 +4372,13 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "SexMax on Narva Mnt 9",
@@ -2980,7 +4390,13 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Tallinn",
+      "country_hint": "Estonia",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "SexMax - Taillinn",
@@ -2992,7 +4408,13 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Tallinn",
+      "country_hint": "Estonia",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Venus Center",
@@ -3004,7 +4426,13 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "US Video Sex Store",
@@ -3016,7 +4444,13 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Keltainen Ruusu Yellow Rose",
@@ -3028,7 +4462,13 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Kauppakeskus Kamppi",
@@ -3040,7 +4480,23 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Helsinki",
+      "country_hint": "Finland",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Kamppi Shopping Centre WC",
+          "id": "GC1-FINLAND-01",
+          "city": "Helsinki",
+          "country": "Finland",
+          "kind": "proposal"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "priority_review_note": "Helsinki — matches prior Kamppi Shopping Centre WC proposal.",
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Laakso Central Park",
@@ -3052,7 +4508,22 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": "Helsinki",
+      "country_hint": "Finland",
+      "geo_basis": "named place or external geography cross-check; not a source-listed City field",
+      "master_matches": [
+        {
+          "name": "Laakso Central Park",
+          "id": "CRU-HEL-LAACENPAR-02",
+          "city": "Helsinki",
+          "country": "Finland",
+          "kind": "existing"
+        }
+      ],
+      "assessment": "match_or_possible_subarea_existing",
+      "needs_review": true,
+      "observation_date_berlin": "2026-11-06"
     },
     {
       "name": "Sauna Con Hombres",
@@ -3064,7 +4535,13 @@
         8
       ],
       "original_link_column_blank": true,
-      "last_reply_is_activity_confirmation": false
+      "last_reply_is_activity_confirmation": false,
+      "city_hint": null,
+      "country_hint": null,
+      "geo_basis": "unassigned: search-radius result not reliable as city",
+      "assessment": "separate_commercial_venue_not_cruising_area",
+      "needs_review": false,
+      "observation_date_berlin": "2026-11-06"
     }
   ]
 }
