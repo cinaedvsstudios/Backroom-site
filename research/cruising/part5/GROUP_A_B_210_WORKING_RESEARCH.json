@@ -32,8 +32,49 @@
       "flagged_or_duplicate": 8,
       "published_live": 0,
       "updated_berlin": "2026-11-07",
-      "processing_policy": "Single master file; preserve original research; review 25 at a time and commit the same file. No invented data; Hold or Flag unresolved spots."
-    }
+      "processing_policy": "Single master file; preserve original research; review 25 at a time and commit the same file. No invented data; Hold or Flag unresolved spots.",
+      "revised_first_25_geographic_check": true,
+      "geographically_grounded_first_25": 18,
+      "user_manual_location_requests": 7,
+      "notes": "Current review checkpoint 25/210. Place-level GPS established for 18 entries; exact cruising points not implied by pins. Seven genuinely unidentifiable locations separately queued for user clarification. One additional entry is duplicate of live venue CRU-SOF-BORGRA-01."
+    },
+    "manual_location_resolution_queue": [
+      {
+        "queue_index": 163,
+        "problem": "Original directory's 'Forest Logatec' does not identify any particular forest, trail or starting point",
+        "question": "Do you have a pin, photo, road name, or directions to the forest?"
+      },
+      {
+        "queue_index": 189,
+        "problem": "'Istanbul Airport toilets' could mean IST or SAW, terminal and restroom unspecified",
+        "question": "Which airport (IST or SAW), terminal and floor/landside or airside toilet?"
+      },
+      {
+        "queue_index": 222,
+        "problem": "The 'Abandoned WC in Park' in Sofia names no park and describes unsafe/possibly unlawful access",
+        "question": "Do you have a public park name or map landmark that identifies the building without entering fenced property?"
+      },
+      {
+        "queue_index": 241,
+        "problem": "'Parking Area near Big Greek Flag' Paphos is too broad to select a unique carpark",
+        "question": "Can you provide the exact flag viewpoint, a map pin, or street name?"
+      },
+      {
+        "queue_index": 243,
+        "problem": "'Picnic Area near Airport' may refer to Timi picnic forest, but original source does not confirm identity",
+        "question": "Does the directory indicate Timi picnic site on the airport road, or another named picnic area?"
+      },
+      {
+        "queue_index": 281,
+        "problem": "'A1 before Sebeș' lacks motorway direction, service-area name and kilometre marker",
+        "question": "Which carriageway, km marker, or named rest area before Sebeș?"
+      },
+      {
+        "queue_index": 290,
+        "problem": "'Glory hole' in Sibiu region is a generic name and site carpark/restroom is not identified",
+        "question": "Do you know the carpark, business, road, or exact map pin for the restroom?"
+      }
+    ]
   },
   "candidates": [
     {
@@ -216,7 +257,7 @@
         "Longitude": "14.478422",
         "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=46.028805%2C14.478422",
         "Apple_Maps_URL": "https://maps.apple.com/?ll=46.028805,14.478422",
-        "Native_Map_Query": "46.028805, 14.478422",
+        "Native_Map_Query": "Rest area Barje (south area), Ljubljana, Slovenia",
         "Website_URL": "https://www.petrol.si/prodajna-mesta/2343-bs-ljubljana-ac-barje-jug-bencinski-servis",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -260,10 +301,11 @@
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
         "source_urls_count": 6,
-        "coordinate_precision": "named_place_or_operator_reference_not_indoor_cruising_point",
+        "coordinate_precision": "operator_verified_location",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://www.petrol.si/prodajna-mesta/2343-bs-ljubljana-ac-barje-jug-bencinski-servis"
       }
     },
     {
@@ -437,7 +479,7 @@
         "Longitude": "",
         "Google_Maps_URL": "",
         "Apple_Maps_URL": "",
-        "Native_Map_Query": "Forest Logatec Logatec Slovenia",
+        "Native_Map_Query": "",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -479,12 +521,18 @@
       "editorial_completion": {
         "completed": true,
         "completed_date_berlin": "2026-11-07",
-        "outcome": "not_individually_published_insufficient_identity_or_access",
+        "outcome": "manual_location_resolution_required",
         "source_urls_count": 2,
         "coordinate_precision": "intentionally_not_geocoded",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "manual_location_resolution": {
+          "requires_user_input": true,
+          "queue_index": 163,
+          "problem": "Original directory's 'Forest Logatec' does not identify any particular forest, trail or starting point",
+          "question": "Do you have a pin, photo, road name, or directions to the forest?"
+        }
       }
     },
     {
@@ -686,16 +734,16 @@
         "Address": "Mariborski otok, Kamnica, Maribor",
         "Postcode": "",
         "Nearest_Station": "Bus G5 Rotovž (2026 seasonal service)",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "Mariborski otok - Island Maribor Slovenia",
+        "Latitude": "46.56716",
+        "Longitude": "15.61143",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=46.56716%2C15.61143",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=46.56716,15.61143",
+        "Native_Map_Query": "Mariborski otok - Island, Maribor, Slovenia",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/slovenia | https://www.gays-cruising.com/en/cruising/mariborski_otok_island_sentilj_slovenia_5118 | https://www.visitmaribor.si/en/offer/natural-sights/7929-mariborski-otok/ | https://mariborinfo.com/novica/lokalno/po-koncu-kopalne-sezone-mariborski-otok-ponovno-vabi-na-sprehod/445203 | https://www.marprom.si/objava/otok-pripravljen-na-poletje-kopalna-sezona-se-zacne-20-junija/ | https://www.gays-cruising.com/en/cruising/under_lower_plant_mariborski_otok_lower_styria_slovenia_63590",
+        "Source_URLs": "https://www.gays-cruising.com/en/slovenia | https://www.gays-cruising.com/en/cruising/mariborski_otok_island_sentilj_slovenia_5118 | https://www.visitmaribor.si/en/offer/natural-sights/7929-mariborski-otok/ | https://mariborinfo.com/novica/lokalno/po-koncu-kopalne-sezone-mariborski-otok-ponovno-vabi-na-sprehod/445203 | https://www.marprom.si/objava/otok-pripravljen-na-poletje-kopalna-sezona-se-zacne-20-junija/ | https://www.gays-cruising.com/en/cruising/under_lower_plant_mariborski_otok_lower_styria_slovenia_63590 | https://mapcarta.com/18736686",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Mariborski otok is the Drava River island west of central Maribor, reached through the island entrance/bridge near Kamnica. The old reports point towards wooded riverbank areas rather than the managed family swimming pool. The G5 city bus served the island in the 2026 season.\n\nBest times: The older directory connects the area with summer. A March 2026 report says the route to the beach was damaged and activity may have shifted towards Betnava; there is no confirmed present peak.\n\nCrowd: Historically mentioned as a place where gay men gathered, but no reliable current crowd, age range or visitor frequency has been established.\n\nWatch out: It is a protected natural area with a managed pool complex and seasonal access conditions. Do not assume the beach path, pool grounds or riverbank is freely accessible. River hazards and restrictions matter.",
@@ -733,11 +781,12 @@
         "completed": true,
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
-        "source_urls_count": 6,
-        "coordinate_precision": "intentionally_not_geocoded",
+        "source_urls_count": 7,
+        "coordinate_precision": "mapped_island_reference_not_cruising_corner",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://mapcarta.com/18736686"
       }
     },
     {
@@ -908,24 +957,24 @@
       "publication_approved": false,
       "backroom_listing": {
         "Venue_ID": "CRU-AB-0175",
-        "Name": "Mall of Scandinavia",
-        "City": "Stockholm",
+        "Name": "Westfield Mall of Scandinavia",
+        "City": "Solna",
         "Country": "Sweden",
         "Category": "Cruising Area",
         "Status": "Hold",
         "Address": "Stjärntorget 2, 169 79 Solna",
         "Postcode": "169 79",
         "Nearest_Station": "Solna station (commuter rail/tvärbana)",
-        "Latitude": "59.37",
-        "Longitude": "18.00472",
-        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=59.37%2C18.00472",
-        "Apple_Maps_URL": "https://maps.apple.com/?ll=59.37,18.00472",
-        "Native_Map_Query": "59.37, 18.00472",
+        "Latitude": "59.369329",
+        "Longitude": "18.005496",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=59.369329%2C18.005496",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=59.369329,18.005496",
+        "Native_Map_Query": "Westfield Mall of Scandinavia, Solna, Sweden",
         "Website_URL": "https://www.westfield.com/en/sweden/mallofscandinavia/openinghours",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/sweden | https://www.gays-cruising.com/en/cruising/mall_of_scandinavia_stockholm_sweden_45874 | https://www.westfield.com/en/sweden/mallofscandinavia/openinghours",
+        "Source_URLs": "https://www.gays-cruising.com/en/sweden | https://www.gays-cruising.com/en/cruising/mall_of_scandinavia_stockholm_sweden_45874 | https://www.westfield.com/en/sweden/mallofscandinavia/openinghours | https://www.visitnordic.com/en/attraction/mall-of-scandinavia",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Westfield Mall of Scandinavia is at Stjärntorget 2 in Arenastaden, Solna, not Stockholm city centre. An older directory refers to a ground-floor customer toilet near ICA; the present retail layout and that exact WC have not been confirmed.\n\nBest times: Retail opening is normally 10:00–21:00 daily. There is no verified cruising peak. May 2026 comments asked whether anyone was present rather than reporting encounters.\n\nCrowd: A major shopping centre attracting local shoppers and visitors; no evidence supports a specific gay cruising crowd or age range.\n\nWatch out: The site is an ordinary monitored commercial mall. Respect customer privacy, staff directions and the operator's rules; do not treat customer restrooms as designated sexual spaces.",
@@ -963,11 +1012,12 @@
         "completed": true,
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
-        "source_urls_count": 3,
-        "coordinate_precision": "named_place_or_operator_reference_not_indoor_cruising_point",
+        "source_urls_count": 4,
+        "coordinate_precision": "named_mall_reference",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://www.visitnordic.com/en/attraction/mall-of-scandinavia"
       }
     },
     {
@@ -1135,7 +1185,7 @@
         "Longitude": "",
         "Google_Maps_URL": "",
         "Apple_Maps_URL": "",
-        "Native_Map_Query": "Airport toilets Istanbul Turkey",
+        "Native_Map_Query": "",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -1177,12 +1227,18 @@
       "editorial_completion": {
         "completed": true,
         "completed_date_berlin": "2026-11-07",
-        "outcome": "not_individually_published_insufficient_identity_or_access",
+        "outcome": "manual_location_resolution_required",
         "source_urls_count": 2,
         "coordinate_precision": "intentionally_not_geocoded",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "manual_location_resolution": {
+          "requires_user_input": true,
+          "queue_index": 189,
+          "problem": "'Istanbul Airport toilets' could mean IST or SAW, terminal and restroom unspecified",
+          "question": "Which airport (IST or SAW), terminal and floor/landside or airside toilet?"
+        }
       }
     },
     {
@@ -1360,7 +1416,7 @@
       "publication_approved": false,
       "backroom_listing": {
         "Venue_ID": "CRU-AB-0221",
-        "Name": "The Mall",
+        "Name": "The Mall (Tsarigradsko Shose)",
         "City": "Sofia",
         "Country": "Bulgaria",
         "Category": "Cruising Area",
@@ -1368,16 +1424,16 @@
         "Address": "115 Tsarigradsko shose Boulevard, Sofia 1784",
         "Postcode": "1784",
         "Nearest_Station": "",
-        "Latitude": "42.665429",
-        "Longitude": "23.372984",
-        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=42.665429%2C23.372984",
-        "Apple_Maps_URL": "https://maps.apple.com/?ll=42.665429,23.372984",
-        "Native_Map_Query": "42.665429, 23.372984",
+        "Latitude": "42.660517",
+        "Longitude": "23.382172",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=42.660517%2C23.382172",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=42.660517,23.382172",
+        "Native_Map_Query": "The Mall (Tsarigradsko Shose), Sofia, Bulgaria",
         "Website_URL": "https://themall.bg",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/bulgaria | https://www.gays-cruising.com/en/cruising/the_mall_sofia_bulgaria_99651 | https://www.visitsofia.info-sofia.bg/en/cityinfrastructure/shopping/malls-and-shopping-centres/the-mall | https://retailnews.bg/malls-retail-parks/the-mall/ | https://themall.bg",
+        "Source_URLs": "https://www.gays-cruising.com/en/bulgaria | https://www.gays-cruising.com/en/cruising/the_mall_sofia_bulgaria_99651 | https://www.visitsofia.info-sofia.bg/en/cityinfrastructure/shopping/malls-and-shopping-centres/the-mall | https://retailnews.bg/malls-retail-parks/the-mall/ | https://themall.bg | https://teodor.bg/magazin/teodor-sofiya-bultsarigradsko-shose-115-the-mall",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: The Mall is at 115 Tsarigradsko shose Boulevard in Sofia's Mladost area. A directory names an alleged restroom on underground level -2. Do not confuse this complex with Sofia Ring Mall or Mall of Sofia.\n\nBest times: Shops are usually open 10:00–22:00. The 2026 posts are meeting proposals, not reliable reports of a busy cruising period.\n\nCrowd: An ordinary mall with shoppers, cinema patrons and food-court visitors. No substantiated age range or established cruising crowd.\n\nWatch out: The exact restroom's current layout and access have not been confirmed. Security, other patrons and privacy make this unsuitable to treat as an approved sex space.",
@@ -1415,11 +1471,12 @@
         "completed": true,
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
-        "source_urls_count": 5,
-        "coordinate_precision": "named_place_or_operator_reference_not_indoor_cruising_point",
+        "source_urls_count": 6,
+        "coordinate_precision": "named_mall_reference_corrected_wrong_tourism_pin",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://teodor.bg/magazin/teodor-sofiya-bultsarigradsko-shose-115-the-mall"
       }
     },
     {
@@ -1601,7 +1658,7 @@
         "Longitude": "",
         "Google_Maps_URL": "",
         "Apple_Maps_URL": "",
-        "Native_Map_Query": "Abandoned WC in Park Sofia Bulgaria",
+        "Native_Map_Query": "",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -1643,12 +1700,18 @@
       "editorial_completion": {
         "completed": true,
         "completed_date_berlin": "2026-11-07",
-        "outcome": "not_individually_published_insufficient_identity_or_access",
+        "outcome": "manual_location_resolution_required",
         "source_urls_count": 2,
         "coordinate_precision": "intentionally_not_geocoded",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "manual_location_resolution": {
+          "requires_user_input": true,
+          "queue_index": 222,
+          "problem": "The 'Abandoned WC in Park' in Sofia names no park and describes unsafe/possibly unlawful access",
+          "question": "Do you have a public park name or map landmark that identifies the building without entering fenced property?"
+        }
       }
     },
     {
@@ -1824,7 +1887,7 @@
         "Longitude": "23.342171",
         "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=42.680164%2C23.342171",
         "Apple_Maps_URL": "https://maps.apple.com/?ll=42.680164,23.342171",
-        "Native_Map_Query": "42.680164, 23.342171",
+        "Native_Map_Query": "Park Borisova Gradina, Sofia, Bulgaria",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -1868,10 +1931,11 @@
         "completed_date_berlin": "2026-11-07",
         "outcome": "duplicate_existing_listing",
         "source_urls_count": 4,
-        "coordinate_precision": "named_place_or_operator_reference_not_indoor_cruising_point",
+        "coordinate_precision": "named_public_park_reference_duplicate_of_existing",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": "CRU-SOF-BORGRA-01",
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://www.visitsofia.bg/en/places-to-go/museums/index.php?Itemid=2021&lang=en&layer=50000&obektid=2182&option=com_cityinfrastructure&view=objectdetails"
       }
     },
     {
@@ -2057,7 +2121,7 @@
         "Longitude": "23.352417",
         "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=42.624352%2C23.352417",
         "Apple_Maps_URL": "https://maps.apple.com/?ll=42.624352,23.352417",
-        "Native_Map_Query": "42.624352, 23.352417",
+        "Native_Map_Query": "Ring Mall, Sofia, Bulgaria",
         "Website_URL": "https://sofiaring.bg/contact?lang=en",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -2101,10 +2165,11 @@
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
         "source_urls_count": 4,
-        "coordinate_precision": "named_place_or_operator_reference_not_indoor_cruising_point",
+        "coordinate_precision": "official_tourism_named_mall",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://visitsofia.bg/en/cityinfrastructure/shopping/malls-and-shopping-centres/sofia-ring-mall"
       }
     },
     {
@@ -2291,12 +2356,12 @@
         "Longitude": "23.308868",
         "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=42.69816%2C23.308868",
         "Apple_Maps_URL": "https://maps.apple.com/?ll=42.69816,23.308868",
-        "Native_Map_Query": "42.69816, 23.308868",
+        "Native_Map_Query": "Mall of Sofía WC Toilet, Sofia, Bulgaria",
         "Website_URL": "https://mallofsofia.bg/en/information/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/bulgaria | https://www.gays-cruising.com/en/cruising/mall_of_sofia_wc_toilet_sofia_bulgaria_27522 | https://mallofsofia.bg/en/information/",
+        "Source_URLs": "https://www.gays-cruising.com/en/bulgaria | https://www.gays-cruising.com/en/cruising/mall_of_sofia_wc_toilet_sofia_bulgaria_27522 | https://mallofsofia.bg/en/information/ | https://visitsofia.bg/en/cityinfrastructure/shopping/malls-and-shopping-centres/mall-of-sofia",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Mall of Sofia is at 101–103 Aleksandar Stamboliyski Boulevard, near Opalchenska metro. A 2026 forum account places the purported activity around a first-floor customer toilet, but another visitor asked which WC was meant.\n\nBest times: Store opening is 10:00–21:00; there is no dependable cruising timetable. A July 2026 poster claimed a same-day encounter but it has no independent corroboration.\n\nCrowd: The mall serves a general shopping and cinema crowd. Individual anonymous accounts are insufficient to identify a consistent age mix or level of activity.\n\nWatch out: It is not a designated adult venue. The writer raised surveillance concerns, but no specific camera location was verified. Respect other visitors and operator rules.",
@@ -2334,11 +2399,12 @@
         "completed": true,
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
-        "source_urls_count": 3,
-        "coordinate_precision": "named_place_or_operator_reference_not_indoor_cruising_point",
+        "source_urls_count": 4,
+        "coordinate_precision": "official_tourism_named_mall",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://visitsofia.bg/en/cityinfrastructure/shopping/malls-and-shopping-centres/mall-of-sofia"
       }
     },
     {
@@ -2519,7 +2585,7 @@
         "Longitude": "33.96803",
         "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=34.98787%2C33.96803",
         "Apple_Maps_URL": "https://maps.apple.com/?ll=34.98787,33.96803",
-        "Native_Map_Query": "34.98787, 33.96803",
+        "Native_Map_Query": "Nissi Beach, Ayia Napa, Cyprus",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -2563,10 +2629,11 @@
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
         "source_urls_count": 4,
-        "coordinate_precision": "named_place_or_operator_reference_not_indoor_cruising_point",
+        "coordinate_precision": "official_tourism_named_beach",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/nissi-bay-beach-blue-flag/"
       }
     },
     {
@@ -2740,7 +2807,7 @@
         "Longitude": "32.72205",
         "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=34.64974%2C32.72205",
         "Apple_Maps_URL": "https://maps.apple.com/?ll=34.64974,32.72205",
-        "Native_Map_Query": "34.64974, 32.72205",
+        "Native_Map_Query": "Pissouri Beach, Pissouri, Cyprus",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -2784,10 +2851,11 @@
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
         "source_urls_count": 4,
-        "coordinate_precision": "named_place_or_operator_reference_not_indoor_cruising_point",
+        "coordinate_precision": "official_tourism_named_beach",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/pissouri-beach-blue-flag/"
       }
     },
     {
@@ -2961,7 +3029,7 @@
         "Longitude": "",
         "Google_Maps_URL": "",
         "Apple_Maps_URL": "",
-        "Native_Map_Query": "Parking Area near Big Greek Flag Paphos Cyprus",
+        "Native_Map_Query": "",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -3003,12 +3071,18 @@
       "editorial_completion": {
         "completed": true,
         "completed_date_berlin": "2026-11-07",
-        "outcome": "not_individually_published_insufficient_identity_or_access",
+        "outcome": "manual_location_resolution_required",
         "source_urls_count": 2,
         "coordinate_precision": "intentionally_not_geocoded",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "manual_location_resolution": {
+          "requires_user_input": true,
+          "queue_index": 241,
+          "problem": "'Parking Area near Big Greek Flag' Paphos is too broad to select a unique carpark",
+          "question": "Can you provide the exact flag viewpoint, a map pin, or street name?"
+        }
       }
     },
     {
@@ -3190,7 +3264,7 @@
         "Longitude": "",
         "Google_Maps_URL": "",
         "Apple_Maps_URL": "",
-        "Native_Map_Query": "Picnic Area near Airport Paphos Cyprus",
+        "Native_Map_Query": "",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -3232,12 +3306,18 @@
       "editorial_completion": {
         "completed": true,
         "completed_date_berlin": "2026-11-07",
-        "outcome": "not_individually_published_insufficient_identity_or_access",
+        "outcome": "manual_location_resolution_required",
         "source_urls_count": 4,
         "coordinate_precision": "intentionally_not_geocoded",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "manual_location_resolution": {
+          "requires_user_input": true,
+          "queue_index": 243,
+          "problem": "'Picnic Area near Airport' may refer to Timi picnic forest, but original source does not confirm identity",
+          "question": "Does the directory indicate Timi picnic site on the airport road, or another named picnic area?"
+        }
       }
     },
     {
@@ -3402,19 +3482,19 @@
         "Country": "Czechia",
         "Category": "Cruising Area",
         "Status": "Hold",
-        "Address": "Brno hlavní nádraží, Nádražní, 602 00 Brno",
+        "Address": "Nádražní 418/1, 602 00 Brno",
         "Postcode": "602 00",
         "Nearest_Station": "Brno hlavní nádraží",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "WC dole u Rossmana Hlavní Nádraží Brno Czechia",
+        "Latitude": "49.190933",
+        "Longitude": "16.613358",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=49.190933%2C16.613358",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=49.190933,16.613358",
+        "Native_Map_Query": "WC dole u Rossmana Hlavní Nádraží, Brno, Czechia",
         "Website_URL": "https://www.spravazeleznic.cz/en/cestujici/stanice?station=5433295",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/czech_republic | https://www.gays-cruising.com/en/cruising/wc_dole_u_rossmana_hlavni_nadrai_brno_czech_republic_91106 | https://brnensky.denik.cz/zpravy_region/brno-hlavni-nadrazi-vlak-verejne-zachody-wc-test-cena-cistota.html | https://www.spravazeleznic.cz/en/cestujici/stanice?station=5433295",
+        "Source_URLs": "https://www.gays-cruising.com/en/czech_republic | https://www.gays-cruising.com/en/cruising/wc_dole_u_rossmana_hlavni_nadrai_brno_czech_republic_91106 | https://brnensky.denik.cz/zpravy_region/brno-hlavni-nadrazi-vlak-verejne-zachody-wc-test-cena-cistota.html | https://www.spravazeleznic.cz/en/cestujici/stanice?station=5433295 | https://schedules.czech-transport.com/en/5?stop=BRNO_HL.N",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: The directory points to the paid public toilets beside Rossmann in the left-hand wing of Brno hlavní nádraží, as distinct from the other toilets leading towards the platforms.\n\nBest times: The source gives no dependable current peak. A June 2026 poster recalled an incident in the toilets but did not date the encounter itself.\n\nCrowd: The facility is used by railway passengers and shoppers. No reliable current cruising crowd or age profile is established.\n\nWatch out: These are ordinary station toilets with paying customers and staff. A 2024 report describes a 20 Kč fee, not a verified current price. Respect privacy and railway operating rules.",
@@ -3452,11 +3532,12 @@
         "completed": true,
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
-        "source_urls_count": 4,
-        "coordinate_precision": "intentionally_not_geocoded",
+        "source_urls_count": 5,
+        "coordinate_precision": "main_railway_station_reference_not_specific_wc",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://schedules.czech-transport.com/en/5?stop=BRNO_HL.N"
       }
     },
     {
@@ -3634,16 +3715,16 @@
         "Address": "náměstí Republiky 1, 110 00 Praha 1",
         "Postcode": "110 00",
         "Nearest_Station": "Náměstí Republiky (metro B)",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "Palladium Shopping Mall WC Prague Czechia",
+        "Latitude": "50.0891861",
+        "Longitude": "14.4287219",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=50.0891861%2C14.4287219",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=50.0891861,14.4287219",
+        "Native_Map_Query": "Palladium Shopping Mall WC, Prague, Czechia",
         "Website_URL": "https://www.palladiumpraha.cz/en/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/czech_republic | https://www.gays-cruising.com/en/cruising/palladium_shopping_mall_wc_praha_czech_republic_17704 | https://www.palladiumpraha.cz/en/",
+        "Source_URLs": "https://www.gays-cruising.com/en/czech_republic | https://www.gays-cruising.com/en/cruising/palladium_shopping_mall_wc_praha_czech_republic_17704 | https://www.palladiumpraha.cz/en/ | https://www.praguecityline.cz/misto/palladium-praha",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Palladium shopping centre is at náměstí Republiky 1 in Prague 1, directly above/near the Náměstí Republiky metro. The old directory references customer toilets on both level -2 and level +2; these are within the same venue.\n\nBest times: Palladium currently lists +2 toilets 08:00–22:00 and -2 toilets 07:00–21:00. These are access hours, not proven cruising peaks. Late-2025 messages proposed meetings but did not confirm encounters.\n\nCrowd: A general central-city shopping mall serving locals and tourists. No independently substantiated age mix or ongoing cruising crowd.\n\nWatch out: This is a staffed public retail centre, not a sanctioned cruising site. Another Prague municipal listing shows different toilet hours; use operator's published times and verify before travelling.",
@@ -3681,11 +3762,12 @@
         "completed": true,
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
-        "source_urls_count": 3,
-        "coordinate_precision": "intentionally_not_geocoded",
+        "source_urls_count": 4,
+        "coordinate_precision": "named_shopping_centre_reference",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://www.praguecityline.cz/misto/palladium-praha"
       }
     },
     {
@@ -3885,7 +3967,7 @@
         "Longitude": "14.431235",
         "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=50.066773%2C14.431235",
         "Apple_Maps_URL": "https://maps.apple.com/?ll=50.066773,14.431235",
-        "Native_Map_Query": "50.066773, 14.431235",
+        "Native_Map_Query": "Folimanka Park, Prague, Czechia",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -3929,10 +4011,11 @@
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
         "source_urls_count": 5,
-        "coordinate_precision": "named_place_or_operator_reference_not_indoor_cruising_point",
+        "coordinate_precision": "municipal_park_reference",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://encyklopedie.praha2.cz/park/981-folimanka"
       }
     },
     {
@@ -4123,12 +4206,12 @@
         "Longitude": "13.750784",
         "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=50.643025%2C13.750784",
         "Apple_Maps_URL": "https://maps.apple.com/?ll=50.643025,13.750784",
-        "Native_Map_Query": "50.643025, 13.750784",
+        "Native_Map_Query": "Barbora, Jeníkov, Czechia",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/czech_republic | https://www.gays-cruising.com/en/cruising/barbora_teplice_czech_republic_25326 | https://old.khsusti.cz/php/koupani/kv.php?k=1 | https://www.elbelabe.eu/en/poi/s/barbora-beach/",
+        "Source_URLs": "https://www.gays-cruising.com/en/czech_republic | https://www.gays-cruising.com/en/cruising/barbora_teplice_czech_republic_25326 | https://old.khsusti.cz/php/koupani/kv.php?k=1 | https://www.elbelabe.eu/en/poi/s/barbora-beach/ | https://www.branadocech.cz/en/article/jenikov-vodni-nadrz-barbora/344/9/0",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Lake Barbora is the former mining reservoir near Oldřichov/Jeníkov west of Teplice, with beach facilities around Oldřichov 222. The original source does not specify which shore or secluded corner it means.\n\nBest times: The managed beach operates seasonally, reported June–September 08:00–19:00. A May 2026 comment proposed a meetup but no physical encounter was reported.\n\nCrowd: The water is used by swimmers, families, divers and sailors; no independently established gay cruising crowd or age pattern.\n\nWatch out: The former quarry lake is deep and its supervised beach hours differ from access outside the summer season. Do not assume secluded shores are safe or that naturism/cruising is permitted.",
@@ -4166,11 +4249,12 @@
         "completed": true,
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
-        "source_urls_count": 4,
-        "coordinate_precision": "named_place_or_operator_reference_not_indoor_cruising_point",
+        "source_urls_count": 5,
+        "coordinate_precision": "regional_tourism_lake_reference",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://www.branadocech.cz/en/article/jenikov-vodni-nadrz-barbora/344/9/0"
       }
     },
     {
@@ -4384,16 +4468,16 @@
         "Address": "Városliget (City Park), Budapest XIV",
         "Postcode": "",
         "Nearest_Station": "Széchenyi fürdő (metro M1) / Olof Palme sétány (trolley 70)",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "Városliget Budapest Hungary",
+        "Latitude": "47.51458",
+        "Longitude": "19.08353",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=47.51458%2C19.08353",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=47.51458,19.08353",
+        "Native_Map_Query": "Városliget, Budapest, Hungary",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/hungary | https://www.gays-cruising.com/en/budapest/hungary | https://www.gays-cruising.com/en/cruising/varosliget_budapest_hungria_74252 | https://ligetbudapest.hu/en/visitor-information | https://www.budapestinfo.hu/en/city-park | https://www.gays-cruising.com/en/budapest/budapest/hungary | https://zenehaza.hu/en/access",
+        "Source_URLs": "https://www.gays-cruising.com/en/hungary | https://www.gays-cruising.com/en/budapest/hungary | https://www.gays-cruising.com/en/cruising/varosliget_budapest_hungria_74252 | https://ligetbudapest.hu/en/visitor-information | https://www.budapestinfo.hu/en/city-park | https://www.gays-cruising.com/en/budapest/budapest/hungary | https://zenehaza.hu/en/access | https://mapcarta.com/Budapest/V%C3%A1rosliget",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Városliget is Budapest's large City Park, with old directory references around the House of Music and outdoor park paths. These descriptions do not establish an exact current adult meeting spot.\n\nBest times: No dependable peak time. April and July 2026 comments were inquiries or plans, not first-hand completed meetings.\n\nCrowd: An exceptionally busy public park used by families, concertgoers, tourists and residents. No current male cruising group or age pattern is substantiated.\n\nWatch out: The park includes extensive children's spaces and cultural facilities. Avoid treating playgrounds or adjoining Széchenyi Baths as part of a cruising listing; the site is not an authorised sex venue.",
@@ -4431,11 +4515,12 @@
         "completed": true,
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
-        "source_urls_count": 7,
-        "coordinate_precision": "intentionally_not_geocoded",
+        "source_urls_count": 8,
+        "coordinate_precision": "public_park_reference",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://mapcarta.com/Budapest/V%C3%A1rosliget"
       }
     },
     {
@@ -4611,7 +4696,7 @@
       "publication_approved": false,
       "backroom_listing": {
         "Venue_ID": "CRU-AB-0270",
-        "Name": "Metro Station Corbin Negyed",
+        "Name": "Corvin-negyed metro station",
         "City": "Budapest",
         "Country": "Hungary",
         "Category": "Cruising Area",
@@ -4619,16 +4704,16 @@
         "Address": "Corvin-negyed metro station, Budapest VIII/IX",
         "Postcode": "",
         "Nearest_Station": "Corvin-negyed (metro M3)",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "Metro Station Corbin Negyed Budapest Hungary",
+        "Latitude": "47.4856",
+        "Longitude": "19.0697",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=47.4856%2C19.0697",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=47.4856,19.0697",
+        "Native_Map_Query": "Corvin-negyed metro station, Budapest, Hungary",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/hungary | https://www.gays-cruising.com/en/cruising/metro_station_corbin_negyed_budapest_ungarn_34171 | https://bkk.hu/downloads/map/202/ | https://hungaryunlocked.com/public-toilets-budapest/",
+        "Source_URLs": "https://www.gays-cruising.com/en/hungary | https://www.gays-cruising.com/en/cruising/metro_station_corbin_negyed_budapest_ungarn_34171 | https://bkk.hu/downloads/map/202/ | https://hungaryunlocked.com/public-toilets-budapest/ | https://en.wikipedia.org/wiki/Corvin-negyed_metro_station",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: The name is a misspelling of Corvin-negyed station on Budapest's M3 metro line. A directory discusses a station toilet, but does not identify an independently verified current stall or publicly permissible meeting location.\n\nBest times: A December 2025 'now?' exchange is coordination only. The more concrete personal story dates from 2023, so it cannot substantiate current peak hours.\n\nCrowd: A normal public-transport environment. No supported current cruising crowd or age group.\n\nWatch out: Station toilets serve commuters under transport-operator rules. Recent physical activity and layout remain unverified; avoid relying on old cubicle descriptions.",
@@ -4666,11 +4751,12 @@
         "completed": true,
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
-        "source_urls_count": 4,
-        "coordinate_precision": "intentionally_not_geocoded",
+        "source_urls_count": 5,
+        "coordinate_precision": "named_metro_station_reference",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://en.wikipedia.org/wiki/Corvin-negyed_metro_station"
       }
     },
     {
@@ -4853,16 +4939,16 @@
         "Address": "Népliget, Üllői út / Könyves Kálmán körút, Budapest",
         "Postcode": "",
         "Nearest_Station": "Népliget (metro M3)",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "Népliget Budapest Hungary",
+        "Latitude": "47.4753",
+        "Longitude": "19.09995",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=47.4753%2C19.09995",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=47.4753,19.09995",
+        "Native_Map_Query": "Népliget, Budapest, Hungary",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/budapest/hungary | https://www.gays-cruising.com/en/cruising/nepliget_budapest_hungary_75016 | https://budapest.hu/fejlesztesek/varosfejlesztes-es-varosrendezes | https://www.budapest.com/en/news/nepliget-set-for-a-major-renewal-budapests-historic-park-to-become-greener-and-more-accessible | https://mti.hu/hirek/2026/07/26/karacsony-gergely-ismertette-nepliget-fejlesztesi-terveit",
+        "Source_URLs": "https://www.gays-cruising.com/en/budapest/hungary | https://www.gays-cruising.com/en/cruising/nepliget_budapest_hungary_75016 | https://budapest.hu/fejlesztesek/varosfejlesztes-es-varosrendezes | https://www.budapest.com/en/news/nepliget-set-for-a-major-renewal-budapests-historic-park-to-become-greener-and-more-accessible | https://mti.hu/hirek/2026/07/26/karacsony-gergely-ismertette-nepliget-fejlesztesi-terveit | https://mapcarta.com/N5217774770",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Népliget is the large urban park beside Népliget metro/bus station and Üllői út in southern Budapest. Reports refer to the general park, without a reliably identified present subarea.\n\nBest times: An October 2025 commenter claimed a recent encounter, just before the current cutoff; February 2026 posts ask about planned visits only. Do not present either as a verified 2026 peak.\n\nCrowd: Historic gay cruising references exist, but the present visitor mix, ages and regular activity level are unsubstantiated.\n\nWatch out: City authorities have been planning major renewal and improved pathways; access conditions may change. It remains a shared public park, not a designated sex venue.",
@@ -4900,11 +4986,12 @@
         "completed": true,
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
-        "source_urls_count": 5,
-        "coordinate_precision": "intentionally_not_geocoded",
+        "source_urls_count": 6,
+        "coordinate_precision": "marked_public_transport_entrance_to_large_park_not_cruising_corner",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://mapcarta.com/N5217774770"
       }
     },
     {
@@ -5094,7 +5181,7 @@
         "Longitude": "19.03879",
         "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=47.51564%2C19.03879",
         "Apple_Maps_URL": "https://maps.apple.com/?ll=47.51564,19.03879",
-        "Native_Map_Query": "47.51564, 19.03879",
+        "Native_Map_Query": "Germanus Gyula Park, Budapest, Hungary",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -5138,10 +5225,11 @@
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
         "source_urls_count": 5,
-        "coordinate_precision": "named_place_or_operator_reference_not_indoor_cruising_point",
+        "coordinate_precision": "park_near_margit_bridge_reference_not_second_similarly_named_park",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://mapcarta.com/W37126198"
       }
     },
     {
@@ -5333,7 +5421,7 @@
         "Longitude": "",
         "Google_Maps_URL": "",
         "Apple_Maps_URL": "",
-        "Native_Map_Query": "Spatiu Servicii A1 inainte de Sebes Alba Iulia Romania",
+        "Native_Map_Query": "",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -5375,12 +5463,18 @@
       "editorial_completion": {
         "completed": true,
         "completed_date_berlin": "2026-11-07",
-        "outcome": "not_individually_published_insufficient_identity_or_access",
+        "outcome": "manual_location_resolution_required",
         "source_urls_count": 4,
         "coordinate_precision": "intentionally_not_geocoded",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "manual_location_resolution": {
+          "requires_user_input": true,
+          "queue_index": 281,
+          "problem": "'A1 before Sebeș' lacks motorway direction, service-area name and kilometre marker",
+          "question": "Which carriageway, km marker, or named rest area before Sebeș?"
+        }
       }
     },
     {
@@ -5576,16 +5670,16 @@
         "Address": "Piața Unirii 1, 030119 București",
         "Postcode": "030119",
         "Nearest_Station": "Piața Unirii (metro)",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "WC Mall Unirea Bucharest Romania",
+        "Latitude": "44.427958",
+        "Longitude": "26.104713",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=44.427958%2C26.104713",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=44.427958,26.104713",
+        "Native_Map_Query": "WC Mall Unirea, Bucharest, Romania",
         "Website_URL": "https://www.unireashop.ro/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/romania | https://www.gays-cruising.com/en/cruising/wc_mall_unirea_bucuresti_romania_121634 | https://www.unireashop.ro/ | https://www.unireashop.ro/shopping/ | https://www.bvb.ro/FinancialInstruments/SelectedData/NewsItem/SCDM-Colaborare-privind-repozitionarea-centrelor-Unirea-Shopping-Center/F40FC | https://www.unireashop.ro/contact/",
+        "Source_URLs": "https://www.gays-cruising.com/en/romania | https://www.gays-cruising.com/en/cruising/wc_mall_unirea_bucuresti_romania_121634 | https://www.unireashop.ro/ | https://www.unireashop.ro/shopping/ | https://www.bvb.ro/FinancialInstruments/SelectedData/NewsItem/SCDM-Colaborare-privind-repozitionarea-centrelor-Unirea-Shopping-Center/F40FC | https://www.unireashop.ro/contact/ | https://www.findlatitudeandlongitude.com/l/Unirea%2BShopping%2BCenter%2C%2B1%2C%2BPia%C8%9Ba%2BUnirii%2C%2BBucharest%2C%2BBucharest%2C%2BRomania%2C%2B030119/8960284/",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Unirea Shopping Center is at Piața Unirii 1, directly by Bucharest's Piața Unirii transport interchange. An older directory mentions customer toilets inside the mall; these are separate from the nearby metro station WC listing.\n\nBest times: The shopping centre advertises 10:00–22:00 daily. The April 2026 post was a question about meeting rather than an observed visit, and no credible peak is known.\n\nCrowd: A mainstream city-centre shopping mall; no validated regular male cruising crowd or age range.\n\nWatch out: The layout of stores and facilities may change with refurbishment. This is a managed public building; respect staff directions, surveillance, and customer privacy.",
@@ -5623,11 +5717,12 @@
         "completed": true,
         "completed_date_berlin": "2026-11-07",
         "outcome": "structured_listing_prepared_hold_until_publication_approval",
-        "source_urls_count": 6,
-        "coordinate_precision": "intentionally_not_geocoded",
+        "source_urls_count": 7,
+        "coordinate_precision": "named_mall_reference",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "coordinate_source_url": "https://www.findlatitudeandlongitude.com/l/Unirea%2BShopping%2BCenter%2C%2B1%2C%2BPia%C8%9Ba%2BUnirii%2C%2BBucharest%2C%2BBucharest%2C%2BRomania%2C%2B030119/8960284/"
       }
     },
     {
@@ -5824,7 +5919,7 @@
         "Longitude": "",
         "Google_Maps_URL": "",
         "Apple_Maps_URL": "",
-        "Native_Map_Query": "Glory hole Sibiu Romania",
+        "Native_Map_Query": "",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -5866,12 +5961,18 @@
       "editorial_completion": {
         "completed": true,
         "completed_date_berlin": "2026-11-07",
-        "outcome": "not_individually_published_insufficient_identity_or_access",
+        "outcome": "manual_location_resolution_required",
         "source_urls_count": 2,
         "coordinate_precision": "intentionally_not_geocoded",
         "independent_current_activity_verifications": 0,
         "existing_venue_id": null,
-        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments."
+        "notes": "Source-based editorial record completed; Hold/Flag is an evidence-aware decision, not a silent omission. No venue is marked Live solely from a directory listing or uncorroborated comments.",
+        "manual_location_resolution": {
+          "requires_user_input": true,
+          "queue_index": 290,
+          "problem": "'Glory hole' in Sibiu region is a generic name and site carpark/restroom is not identified",
+          "question": "Do you know the carpark, business, road, or exact map pin for the restroom?"
+        }
       }
     },
     {
