@@ -183,6 +183,9 @@ def find_listing_rows(node, prefix="", maxdepth=3):
         return all_rows
     return []
 
+def norm(s):
+    return re.sub(r"[^a-z0-9]+", " ", str(s or "").casefold()).strip()
+
 def rname(x):
     return norm(x.get("Name") or x.get("name") or x.get("VenueName") or x.get("venue_name"))
 
