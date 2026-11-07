@@ -229,7 +229,7 @@ def finish():
             progress["last_completed_id"] = batch["records"][-1]["id"]
             progress["next_index"] = end + 1
             q = read_json(QUEUE)
-            progress["next_id"] = q["candidates"][end]["id"] if end < 1172 else None
+            progress["next_id"] = q["candidates"][end]["id"] if end < 586 else None
             progress["checkpoint_count"] += 1
             progress["batch_files"].append(relative)
             progress["last_checkpoint_berlin"] = berlin_time()
