@@ -1,0 +1,13 @@
+name: Compare next five cruising candidates with live venue IDs
+on:
+  push:
+    paths:
+      - .github/workflows/check-next-cruising-aliases.yml
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check_next_cruising_aliases.py
