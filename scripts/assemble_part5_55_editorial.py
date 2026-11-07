@@ -25,6 +25,8 @@ for i in range(1,12):
     assert pidx==eidx,(i,pidx,eidx)
     packets.extend(packet["records"])
     editorials.extend(editorial["records"])
+corrections=json.loads((work/"FACT_CORRECTIONS.json").read_text(encoding="utf8"))
+corrections_by_index={c["index"]:c["fields"] for c in corrections["corrections"]}
 indices=[x["index"] for x in editorials]
 assert len(indices)==len(set(indices))==55
 classified={r["index"]:r for r in triage["rows"]}
@@ -106,6 +108,12 @@ for packet,e in zip(packets,editorials):
         "Source_URLs":" | ".join(dict.fromkeys(orig["all_source_urls"] + e.get("source_web_verified",[]))),
         "Feature_Cruise_Focused":True if e["decision"]=="ready" else None,
     })
+    if idx in corrections_by_index:
+        for field,value in corrections_by_index[idx].items():
+            if field not in base:raise ValueError(f"Unknown field in correction: {field}")
+            mapped_field={"address":"Address","postcode":"Postcode","nearest_station":"Nearest_Station"}.get(field,field)
+            if mapped_field not in base:raise ValueError(f"Unknown mapped field {mapped_field}")
+            base[mapped_field]=value
     # The old temporary ID remains linked in _Review. New IDs are proposed only.
     matches=find_existing(base,e)
     high=[m for m in matches if m["score"]>=0.82]
