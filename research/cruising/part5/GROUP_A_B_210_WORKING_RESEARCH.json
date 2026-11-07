@@ -4,7 +4,7 @@
     "created_berlin_date": "2026-11-07",
     "status": "BUILD_IN_PROGRESS",
     "target_count": 210,
-    "stored_count": 89,
+    "stored_count": 110,
     "source_priority_file": "research/cruising/part5/remaining_793_priority_groups_2026-11-07.json",
     "source_master_queue": "research/cruising/part5/master_queue.json",
     "source_triage_file": "research/cruising/part5/listing_completeness_triage_2026-11-07.json",
@@ -17048,6 +17048,4138 @@
         "checked_berlin": "2026-11-06"
       },
       "original_research_batch_file": "research/cruising/part5/B/batch_0509_0513.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 521,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-GREECE-02",
+      "name": "Agia fotini",
+      "city": "Athens",
+      "country": "Greece",
+      "priority_assessment": {
+        "queue_index": 521,
+        "candidate_id": "GC1-GREECE-02",
+        "name": "Agia fotini",
+        "city": "Athens",
+        "country": "Greece",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 84,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/B/batch_0519_0523.json"
+      },
+      "original_queue_record": {
+        "index": 521,
+        "section": "B",
+        "id": "GC1-GREECE-02",
+        "name": "Agia fotini",
+        "city": "Athens",
+        "country": "Greece",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 505,
+            "u": "https://www.gays-cruising.com/en/greece"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 521,
+        "candidate_id": "GC1-GREECE-02",
+        "name": "Agia fotini",
+        "city": "Athens",
+        "country": "Greece",
+        "bucket": "quarter_complete",
+        "description_words": 84,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 521,
+        "id": "GC1-GREECE-02",
+        "name": "Agia fotini",
+        "city": "Athens",
+        "country": "Greece",
+        "original_queue_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 505,
+            "u": "https://www.gays-cruising.com/en/greece"
+          }
+        ],
+        "original_spot_url": "https://www.gays-cruising.com/en/cruising/agia_fotini_athens_greece_74115",
+        "eight_source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/cruising/agia_fotini_athens_greece_74115",
+            "notes": "direct_detail_read_old_crawl_2025_04_country_blank_2026_03"
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          }
+        ],
+        "description_rewritten": "Agia Fotini is listed as a small natural-area cruising spot near Zappeion, described only as beneath a bridge and in bushes. The place name might be a religious or neighbourhood landmark but the accessible source does not identify which bridge, so it must not be confused with other Agia Fotini churches in Athens. A 2025 firsthand comment calls it a pleasant place but says nobody was there; the newer March 2026 country-feed activity is blank. No identifiable 2026 visit or confirmed encounter is available.",
+        "location_identity": "Unspecified bridge/bush area in central Athens about 400m from Zappeion in directory proximity list. Exact crossing and public path not independently confirmed.",
+        "access_conditions": "Unknown bridge underpass and vegetated space; accessibility, ownership, flood/traffic safety and any park gates unverified. Do not route users through unmarked traffic infrastructure.",
+        "primary_page_status": "direct_detail_read_old_crawl_2025_04_country_blank_2026_03",
+        "independent_and_secondary_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/greece",
+            "type": "original_source_country_index",
+            "finding": "Original candidate linked on Greece index."
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/agia_fotini_athens_greece_74115",
+            "type": "original_spot_detail",
+            "finding": "Greek description simply beneath bridge in bushes; three visible comments, latest Apr 2025 unsuccessful visit."
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/greece",
+            "type": "original_country_feed",
+            "finding": "Blank Mar 11 2026 user entry for Agia Fotini, no activity testimony."
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/zappion_gardens_athens_grece_29879",
+            "type": "source_proximity",
+            "finding": "Shows Agia fotini 0.4 km away; no exact bridge identity."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2025-04-20",
+            "type": "historical_negative_firsthand_visit",
+            "url": "https://www.gays-cruising.com/en/cruising/agia_fotini_athens_greece_74115",
+            "summary": "User reports attractive place but no movement/persons, before cutoff."
+          },
+          {
+            "date": "2026-03-11",
+            "type": "blank_online_post_not_evidence",
+            "url": "https://www.gays-cruising.com/en/greece",
+            "summary": "Site feed displays username/timestamp but no substantive readable text."
+          }
+        ],
+        "credible_physical_activity_since_2025_11_06": false,
+        "possible_aliases": [],
+        "review_flags": [
+          "generic_religious_place_name",
+          "bridge_not_pinned",
+          "2026_post_blank",
+          "historic_negative_visit"
+        ],
+        "research_decision": "unidentified_bridge_area_historic_only_activity",
+        "publication_approved": false,
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/B/batch_0519_0523.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 522,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-GREECE-03",
+      "name": "Syntagma (constitution Sq) public toilets",
+      "city": "Athens",
+      "country": "Greece",
+      "priority_assessment": {
+        "queue_index": 522,
+        "candidate_id": "GC1-GREECE-03",
+        "name": "Syntagma (constitution Sq) public toilets",
+        "city": "Athens",
+        "country": "Greece",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 80,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/B/batch_0519_0523.json"
+      },
+      "original_queue_record": {
+        "index": 522,
+        "section": "B",
+        "id": "GC1-GREECE-03",
+        "name": "Syntagma (constitution Sq) public toilets",
+        "city": "Athens",
+        "country": "Greece",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 506,
+            "u": "https://www.gays-cruising.com/en/greece"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 522,
+        "candidate_id": "GC1-GREECE-03",
+        "name": "Syntagma (constitution Sq) public toilets",
+        "city": "Athens",
+        "country": "Greece",
+        "bucket": "quarter_complete",
+        "description_words": 80,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 522,
+        "id": "GC1-GREECE-03",
+        "name": "Syntagma (constitution Sq) public toilets",
+        "city": "Athens",
+        "country": "Greece",
+        "original_queue_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 506,
+            "u": "https://www.gays-cruising.com/en/greece"
+          }
+        ],
+        "original_spot_url": "https://www.gays-cruising.com/en/cruising/syntagma_constitution_sq_public_toilets_athens_greece_51754",
+        "eight_source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/cruising/syntagma_constitution_sq_public_toilets_athens_greece_51754",
+            "notes": "direct_detail_read_january_2026_negative_visits"
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No match in cross-source archive; domain not exhaustively examined for this exact place. Do not infer absent."
+          }
+        ],
+        "description_rewritten": "Syntagma Square has municipal public restrooms on its Othonos Street side, distinct from toilets inside Syntagma metro. The Athens tourism office independently identifies public toilets at the square. The cruising directory claims its urinals attract men, but multiple first-person January 2026 commenters describe the site as quiet, with cleaning staff or security nearby, while older comments disagree. This supports recent unsuccessful visits rather than a verified current cruising scene; the undated 'all day' label is not reliable operator opening information.",
+        "location_identity": "Public square restroom on the Othonos Street side of Syntagma Square, central Athens. Do not conflate with station accessible WC requiring staff access.",
+        "access_conditions": "Public municipal restroom; hours, stall/urinal layout and operator access policy not independently checked. Municipal cleaning/security presence reported by visitors. Privacy, consent and nonparticipating members of public must be respected; tourist listing of toilets is not permission for sexual encounters.",
+        "primary_page_status": "direct_detail_read_january_2026_negative_visits",
+        "independent_and_secondary_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/greece",
+            "type": "original_source_country_index",
+            "finding": "Original candidate linked on Greece index."
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/syntagma_constitution_sq_public_toilets_athens_greece_51754",
+            "type": "original_spot_detail",
+            "finding": "14 comments; January 2026 multiple negative first-person visits and outdated busyness claim."
+          },
+          {
+            "url": "https://www.thisisathens.org/useful-tips/public-conveniences",
+            "type": "official_city_tourism",
+            "finding": "Explicitly lists Syntagma Square public restrooms, without hours."
+          },
+          {
+            "url": "https://accessibleroutes.thisisathens.org/en/mobility-national-garden-of-athens-and-surrounding-highlights/syntagma-metro-station-line-2-amp-3/",
+            "type": "official_transit_accessibility_reference",
+            "finding": "Metro-station accessible WC is separate from square toilets; avoid misidentification."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-01-25",
+            "type": "recent_firsthand_repeated_unsuccessful_visits",
+            "url": "https://www.gays-cruising.com/en/cruising/syntagma_constitution_sq_public_toilets_athens_greece_51754",
+            "summary": "Visitor reports several trips without activity, mentions cleaners and security."
+          },
+          {
+            "date": "2026-01-22",
+            "type": "recent_negative_local_observation",
+            "url": "https://www.gays-cruising.com/en/cruising/syntagma_constitution_sq_public_toilets_athens_greece_51754",
+            "summary": "Contributor calls it a good place but not many people."
+          },
+          {
+            "date": "2025-05-08",
+            "type": "historic_positive_directory_claim",
+            "url": "https://www.gays-cruising.com/en/cruising/syntagma_constitution_sq_public_toilets_athens_greece_51754",
+            "summary": "Commenter claims many gay visitors at urinals; predates cutoff and contested by later users."
+          }
+        ],
+        "credible_physical_activity_since_2025_11_06": false,
+        "possible_aliases": [
+          {
+            "name": "Syntagma Metro WC",
+            "relation": "nearby_distinct_facility_not_equivalent"
+          }
+        ],
+        "review_flags": [
+          "2026_negative_firsthand_evidence",
+          "cleaners_and_security_reported",
+          "public_restroom_consent",
+          "opening_hours_unverified"
+        ],
+        "research_decision": "public_restroom_verified_recent_comments_mainly_negative",
+        "publication_approved": false,
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/B/batch_0519_0523.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 534,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-GREECE-06",
+      "name": "FKK beach Mandomata",
+      "city": "Rhodes",
+      "country": "Greece",
+      "priority_assessment": {
+        "queue_index": 534,
+        "candidate_id": "GC1-GREECE-06",
+        "name": "FKK beach Mandomata",
+        "city": "Rhodes",
+        "country": "Greece",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 78,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/B/batch_0534_0538.json"
+      },
+      "original_queue_record": {
+        "index": 534,
+        "section": "B",
+        "id": "GC1-GREECE-06",
+        "name": "FKK beach Mandomata",
+        "city": "Rhodes",
+        "country": "Greece",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 520,
+            "u": "https://www.gays-cruising.com/en/greece"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 534,
+        "candidate_id": "GC1-GREECE-06",
+        "name": "FKK beach Mandomata",
+        "city": "Rhodes",
+        "country": "Greece",
+        "bucket": "quarter_complete",
+        "description_words": 78,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 534,
+        "id": "GC1-GREECE-06",
+        "name": "FKK beach Mandomata",
+        "city": "Rhodes",
+        "country": "Greece",
+        "original_queue_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 520,
+            "u": "https://www.gays-cruising.com/en/greece"
+          }
+        ],
+        "original_spot_url": "https://www.gays-cruising.com/en/cruising/fkk_beach_mandonata_villanova_griechenland_40634",
+        "eight_source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/greece",
+            "notes": "Original source direct detail checked, see primary_page_status."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No original exact cross-source alignment; no exhaustive search for this source. Not evidence of absence."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No original exact cross-source alignment; no exhaustive search for this source. Not evidence of absence."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No original exact cross-source alignment; no exhaustive search for this source. Not evidence of absence."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No original exact cross-source alignment; no exhaustive search for this source. Not evidence of absence."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No original exact cross-source alignment; no exhaustive search for this source. Not evidence of absence."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "not_checked",
+            "url": null,
+            "notes": "No original exact cross-source alignment; no exhaustive search for this source. Not evidence of absence."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "possible_alias_not_confirmed",
+            "url": "https://www.cruisinggays.com/rhodes/areas/31616-faliraki/",
+            "notes": "Faliraki naturist beach geographically plausible same Mandomata, exact pin not verified."
+          }
+        ],
+        "description_rewritten": "Mandomata is the recognised naturist beach beside Faliraki on Rhodes, with rocky edges and seasonal beach facilities. One cruising directory says some men socialise in the bushes beyond the beach, but its high-activity estimates are undated. A 20 April 2026 post solicited a meeting on an upcoming holiday and does not prove it happened; the more specific comments on activity date to July 2025. Independent gay travel guides recognise the nude/gay section without demonstrating a recent specific encounter.",
+        "location_identity": "Mandomata/Paralia Mandomata nudist shore near Faliraki, Rhodes, not a dedicated indoor cruise venue; exact bushes/subarea unpinned.",
+        "access_conditions": "Official/locally recognised clothing-optional beach with mixed visitors; rocky shore and bush areas may be sensitive or privately managed. Beach concessions and safe coastal paths subject to current conditions; naturism does not authorise sexual activity around unconsenting visitors.",
+        "primary_page_status": "original_detail_read_20_comments_most_recent_future_meetup",
+        "independent_and_secondary_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/greece",
+            "type": "original_queue_source",
+            "finding": "Canonical research archive source."
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/fkk_beach_mandonata_villanova_griechenland_40634",
+            "type": "original_source_1_detail",
+            "finding": "20 comments, latest April 2026 future holiday invite, July 2025 opinions on gay section."
+          },
+          {
+            "url": "https://www.rhodes-beaches.com/en/mandomata/",
+            "type": "regional_beach_guide",
+            "finding": "Nudist beach near Faliraki and rocky access."
+          },
+          {
+            "url": "https://www.gayout.com/europe/greece/rhodes/beaches/mandomata-beach-rhodes",
+            "type": "gay_travel_directory",
+            "finding": "Gay popular naturist part and facilities, generic current guide."
+          },
+          {
+            "url": "https://www.cruisinggays.com/rhodes/areas/31616-faliraki/",
+            "type": "original_source_8_potential_same_beach",
+            "finding": "Older Faliraki naturist beach record, geographic overlap but no exact confirmed pin."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-04-20",
+            "type": "online_future_visit_not_encounter",
+            "url": "https://www.gays-cruising.com/en/cruising/fkk_beach_mandonata_villanova_griechenland_40634",
+            "summary": "Poster planned vacation 6–13 May 2026 and asked for contact; no onsite visit or encounter stated."
+          },
+          {
+            "date": "2025-07-26",
+            "type": "historical_activity_description",
+            "url": "https://www.gays-cruising.com/en/cruising/fkk_beach_mandonata_villanova_griechenland_40634",
+            "summary": "A beachgoer describes the gay section and potential meetings in bushes; before cutoff."
+          }
+        ],
+        "credible_physical_activity_since_2025_11_06": false,
+        "possible_aliases": [
+          {
+            "name": "Faliraki naturist shore (CruisingGays)",
+            "relation": "possible_same_beach_unverified_original_pin"
+          }
+        ],
+        "review_flags": [
+          "2026_only_future_intention",
+          "precutoff_onsite_descriptions",
+          "naturist_area_mixed_users",
+          "rocky_coastal_safety"
+        ],
+        "research_decision": "geography_and_nudism_verified_recent_cruising_encounters_not",
+        "publication_approved": false,
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/B/batch_0534_0538.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 593,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-EX-SWITZERLAND-OBFELDEN-AM-FLUSS",
+      "name": "Am Fluss",
+      "city": "Obfelden",
+      "country": "Switzerland",
+      "priority_assessment": {
+        "queue_index": 593,
+        "candidate_id": "GC1-EX-SWITZERLAND-OBFELDEN-AM-FLUSS",
+        "name": "Am Fluss",
+        "city": "Obfelden",
+        "country": "Switzerland",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 48,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0592_0596.json"
+      },
+      "original_queue_record": {
+        "index": 593,
+        "section": "C",
+        "id": "GC1-EX-SWITZERLAND-OBFELDEN-AM-FLUSS",
+        "name": "Am Fluss",
+        "city": "Obfelden",
+        "country": "Switzerland",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 547,
+            "u": "https://www.gays-cruising.com/en/switzerland"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 593,
+        "candidate_id": "GC1-EX-SWITZERLAND-OBFELDEN-AM-FLUSS",
+        "name": "Am Fluss",
+        "city": "Obfelden",
+        "country": "Switzerland",
+        "bucket": "quarter_complete",
+        "description_words": 48,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 593,
+        "id": "GC1-EX-SWITZERLAND-OBFELDEN-AM-FLUSS",
+        "name": "Am Fluss",
+        "city": "Obfelden",
+        "country": "Switzerland",
+        "source_count_original": 1,
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 547,
+            "u": "https://www.gays-cruising.com/en/switzerland"
+          }
+        ],
+        "source_category": "unspecified riverside location",
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://www.gays-cruising.com/en/switzerland",
+              "https://www.gays-cruising.com/en/cruising/am_fluss_obfelden_schweiz_54302"
+            ],
+            "inspection": "Matching directory link/index located; detail retrieval unavailable or uncached.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          }
+        ],
+        "source_description_paraphrase": "The source labels a location simply 'Am Fluss' ('by the river') in Obfelden. This name is too broad to identify a safe, exact access point without additional directions. A site user checked in on 4 July 2026, but a check-in alone cannot verify cruising or a real visit.",
+        "additional_evidence_urls": [],
+        "place_identity_status": "city_and_riverside_reference_only_not_exact_site",
+        "activity_evidence": {
+          "recent_cutoff_inclusive": "2025-11-06",
+          "dated_recent_site_signals": [
+            {
+              "date": "2026-07-04T16:43:50Z",
+              "type": "site_check_in",
+              "source_url": "https://www.gays-cruising.com/en/switzerland",
+              "user_alias": "Samsam1986",
+              "note": "Dated platform check-in attached to named Obfelden place; self-reported signal, not verified visitor evidence."
+            }
+          ],
+          "recent_confirmed_cruising_reports": [],
+          "older_dated_posts": [],
+          "undated_directory_claim": true,
+          "independently_verified_current_activity": false,
+          "verification_note": "Site check-ins and older comments are classified separately; neither is confirmation of ongoing cruising."
+        },
+        "access_information": {
+          "type": "unspecified riverside location",
+          "notes": "Unknown exact riverbank, landowner, walking access and permitted conduct; no route or coordinates should be inferred."
+        },
+        "duplicates_or_aliases": [
+          {
+            "name": "Am Fluss",
+            "relation": "very_generic_name_possible_same_label_elsewhere_review_by_precise_location"
+          }
+        ],
+        "assessment": "retain_for_later_filtering_not_verified_for_publication",
+        "research_checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0592_0596.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 594,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-EX-SWITZERLAND-SEVELEN-RASTPLATZ-WALDCHEN-MIT-TUR-ZU-MEHR",
+      "name": "Rastplatz Wäldchen mit Tür zu mehr",
+      "city": "Sevelen",
+      "country": "Switzerland",
+      "priority_assessment": {
+        "queue_index": 594,
+        "candidate_id": "GC1-EX-SWITZERLAND-SEVELEN-RASTPLATZ-WALDCHEN-MIT-TUR-ZU-MEHR",
+        "name": "Rastplatz Wäldchen mit Tür zu mehr",
+        "city": "Sevelen",
+        "country": "Switzerland",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 44,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0592_0596.json"
+      },
+      "original_queue_record": {
+        "index": 594,
+        "section": "C",
+        "id": "GC1-EX-SWITZERLAND-SEVELEN-RASTPLATZ-WALDCHEN-MIT-TUR-ZU-MEHR",
+        "name": "Rastplatz Wäldchen mit Tür zu mehr",
+        "city": "Sevelen",
+        "country": "Switzerland",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 548,
+            "u": "https://www.gays-cruising.com/en/switzerland"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 594,
+        "candidate_id": "GC1-EX-SWITZERLAND-SEVELEN-RASTPLATZ-WALDCHEN-MIT-TUR-ZU-MEHR",
+        "name": "Rastplatz Wäldchen mit Tür zu mehr",
+        "city": "Sevelen",
+        "country": "Switzerland",
+        "bucket": "quarter_complete",
+        "description_words": 44,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 594,
+        "id": "GC1-EX-SWITZERLAND-SEVELEN-RASTPLATZ-WALDCHEN-MIT-TUR-ZU-MEHR",
+        "name": "Rastplatz Wäldchen mit Tür zu mehr",
+        "city": "Sevelen",
+        "country": "Switzerland",
+        "source_count_original": 1,
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 548,
+            "u": "https://www.gays-cruising.com/en/switzerland"
+          }
+        ],
+        "source_category": "purported roadside rest area / wooded spot",
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://www.gays-cruising.com/en/switzerland",
+              "https://www.gays-cruising.com/en/cruising/rastplatz_waldchen_mit_tur_zu_mehr_sevelen_schweiz_97200"
+            ],
+            "inspection": "Matching directory link/index located; detail retrieval unavailable or uncached.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-place match in retained source archive or targeted name/city indexed search; incomplete archive/index coverage, not categorical absence.",
+            "date_checked_berlin": "2026-11-06"
+          }
+        ],
+        "source_description_paraphrase": "The directory records a vaguely named Sevelen rest-area/woodland location. Its title suggests a wooded section with an entrance, but the exact road, boundary and legal access are unknown. A platform check-in dated 4 July 2026 is recent yet does not establish confirmed cruising activity.",
+        "additional_evidence_urls": [],
+        "place_identity_status": "town_identified_exact_rest_area_not_verified",
+        "activity_evidence": {
+          "recent_cutoff_inclusive": "2025-11-06",
+          "dated_recent_site_signals": [
+            {
+              "date": "2026-07-04T16:45:16Z",
+              "type": "site_check_in",
+              "source_url": "https://www.gays-cruising.com/en/switzerland",
+              "user_alias": "Tarzisius",
+              "note": "Dated platform check-in, not proof of an encounter or continuous activity."
+            }
+          ],
+          "recent_confirmed_cruising_reports": [],
+          "older_dated_posts": [],
+          "undated_directory_claim": true,
+          "independently_verified_current_activity": false,
+          "verification_note": "Site check-ins and older comments are classified separately; neither is confirmation of ongoing cruising."
+        },
+        "access_information": {
+          "type": "purported roadside rest area / wooded spot",
+          "notes": "Road direction and exact rest stop not established; avoid specifying entrances or hidden paths without verified public access."
+        },
+        "duplicates_or_aliases": [],
+        "assessment": "retain_for_later_filtering_not_verified_for_publication",
+        "research_checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0592_0596.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 603,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-NETHERLANDS-03",
+      "name": "Park De Oeverlanden",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "priority_assessment": {
+        "queue_index": 603,
+        "candidate_id": "GC1-NETHERLANDS-03",
+        "name": "Park De Oeverlanden",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": true,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 53,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0602_0606.json"
+      },
+      "original_queue_record": {
+        "index": 603,
+        "section": "C",
+        "id": "GC1-NETHERLANDS-03",
+        "name": "Park De Oeverlanden",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 557,
+            "u": "https://www.gays-cruising.com/en/netherlands"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 603,
+        "candidate_id": "GC1-NETHERLANDS-03",
+        "name": "Park De Oeverlanden",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "bucket": "quarter_complete",
+        "description_words": 53,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 603,
+        "id": "GC1-NETHERLANDS-03",
+        "name": "Park De Oeverlanden",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 557,
+            "u": "https://www.gays-cruising.com/en/netherlands"
+          }
+        ],
+        "original_source_count": 1,
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://www.gays-cruising.com/en/netherlands"
+            ],
+            "checked_date": "2026-11-06",
+            "notes": "Exact named record in source index; undated directory presence not visitor confirmation."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_date": "2026-11-06",
+            "notes": "No named match in cross-source archive and targeted indexed searches; partial site coverage, not proof of absence."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_date": "2026-11-06",
+            "notes": "No named match in cross-source archive and targeted indexed searches; partial site coverage, not proof of absence."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_date": "2026-11-06",
+            "notes": "No named match in cross-source archive and targeted indexed searches; partial site coverage, not proof of absence."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_date": "2026-11-06",
+            "notes": "No named match in cross-source archive and targeted indexed searches; partial site coverage, not proof of absence."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_date": "2026-11-06",
+            "notes": "No named match in cross-source archive and targeted indexed searches; partial site coverage, not proof of absence."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_date": "2026-11-06",
+            "notes": "No named match in cross-source archive and targeted indexed searches; partial site coverage, not proof of absence."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_date": "2026-11-06",
+            "notes": "No named match in cross-source archive and targeted indexed searches; partial site coverage, not proof of absence."
+          }
+        ],
+        "description_paraphrase": "Park De Oeverlanden is an officially designated gay male cruising zone near the Nieuwe Meer in Amsterdam. Amsterdam city authorities in October 2026 described it as currently used and protected. Nine attacks on men at the cruising area were reported in March–April 2026; 11 youth arrested in May, area reported calmer October 2026.",
+        "identity_status": "verified_designated_cruising_area_recent_use",
+        "supplemental_sources": [
+          {
+            "date": "2026-10-21",
+            "url": "https://www.amsterdam.nl/stadsdelen/nieuw-west/nieuws/gerichte-aanpak-brengt-rust-terug/",
+            "note": "City explicitly confirms current meeting area and anti-violence response."
+          },
+          {
+            "date": "2026-05-07",
+            "url": "https://www.politie.nl/nieuws/2026/mei/7/05-toename-geweldsincidenten-cruisegebied-de-oeverlanden.html",
+            "note": "Police confirm 2026 male visitors, nine incidents of attacks."
+          },
+          {
+            "date": "2026-10-23",
+            "url": "https://www.at5.nl/artikelen/240629/elf-jongens-aangehouden-na-geweldsincidenten-bij-cruiseplek-de-oeverlanden-rust-is-terug",
+            "note": "Report on 11 arrests, more peaceful conditions."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_site_use_reports": [
+            {
+              "date": "2026-10-21",
+              "kind": "municipality_current_area_use",
+              "supports": "named cruising zone and visitors, not quantified sex acts"
+            }
+          ],
+          "confirmed_recent_specific_sexual_acts": false,
+          "notes": "An undated directory and old reports are not verified recent cruising. Formal police/municipal reports support recent Oeverlanden visitors."
+        },
+        "access_information": "Only designated zone; do not interpret entire park as permitted. Serious prior anti-gay attacks; caution advised.",
+        "review_flags": [
+          "Possible alternate name 'De Nieuwe Meer' for adjacent lake/area.",
+          "Site-specific 2026 violence and safety warning."
+        ],
+        "disposition": "keep_research_not_live",
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0602_0606.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 608,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-NETHERLANDS-15",
+      "name": "Galderse Meren",
+      "city": "Breda",
+      "country": "Netherlands",
+      "priority_assessment": {
+        "queue_index": 608,
+        "candidate_id": "GC1-NETHERLANDS-15",
+        "name": "Galderse Meren",
+        "city": "Breda",
+        "country": "Netherlands",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": true,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 55,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0607_0611.json"
+      },
+      "original_queue_record": {
+        "index": 608,
+        "section": "C",
+        "id": "GC1-NETHERLANDS-15",
+        "name": "Galderse Meren",
+        "city": "Breda",
+        "country": "Netherlands",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 562,
+            "u": "https://www.gays-cruising.com/en/netherlands"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 608,
+        "candidate_id": "GC1-NETHERLANDS-15",
+        "name": "Galderse Meren",
+        "city": "Breda",
+        "country": "Netherlands",
+        "bucket": "quarter_complete",
+        "description_words": 55,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 608,
+        "id": "GC1-NETHERLANDS-15",
+        "name": "Galderse Meren",
+        "city": "Breda",
+        "country": "Netherlands",
+        "category": "swimming lakes / designated naturist beach",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 562,
+            "u": "https://www.gays-cruising.com/en/netherlands"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://www.gays-cruising.com/en/netherlands"
+            ],
+            "checked_berlin": "2026-11-06",
+            "note": "Matches original directory name; page itself undated."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          }
+        ],
+        "source_description_rewritten": "Galderse Meren is a public swimming area near Breda, including a designated naturist beach. August and July 2026 visitor messages describe men approaching others for contact, but don't establish a sanctioned gay cruising zone or verified sexual encounters. Other visitors report family use and enforcement; 2026 signage for nude activity has been disputed and clarified.",
+        "identity_assessment": "verified_area_2026_independent_visitors_contextual_contact",
+        "supplementary_evidence": [
+          {
+            "date": "2026-08-14",
+            "url": "https://www.naaktstrandje.nl/v2/naaktstrand/galdersemeren/gastenboek/en",
+            "summary": "Visitor reports men approaching people for contacts in 2026; negative view of sexual behaviour, not first-hand observed consensual sex."
+          },
+          {
+            "date": "2026-07-06",
+            "url": "https://www.naaktstrandje.nl/v2/naaktstrand/galdersemeren/gastenboek/en",
+            "summary": "Visitor describes observing men walking as if seeking contacts."
+          },
+          {
+            "date": "2026-07-14",
+            "url": "https://nfn.nl/nieuws/naaktrecreatie-verbieden-dat-mag-wettelijk-helemaal-niet/",
+            "summary": "Naturism advocacy clarifies ongoing rules discussion and restrictions beyond designated nude beach."
+          },
+          {
+            "date": "2026-07-09",
+            "url": "https://nos.nl/artikel/2622306-verwarring-over-verbod-op-naakt-zonnen-bij-breda-pictogram-wordt-aangepast",
+            "summary": "News on local signage: designated naturist section, elsewhere no general nude use."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff_inclusive": "2025-11-06",
+          "recent_dated_evidence": [
+            {
+              "date": "2026-08-14",
+              "kind": "self_reported_visitor_observation_of_contact_seeking",
+              "supports": "some men attempting to meet others, no verified sexual activity"
+            },
+            {
+              "date": "2026-07-06",
+              "kind": "self_reported_visitor_observation",
+              "supports": "some men walking seeking social contact, not acts"
+            }
+          ],
+          "historical_dated_evidence": [],
+          "directory_reference_is_undated": true,
+          "verified_recent_specific_cruising_activity": false
+        },
+        "access_information": "Recreation site with designated naturist section only; naturism not equivalent to permission for public sex. Check current on-site sign rules and enforcement.",
+        "review_flags": [
+          "Mixed/family recreation space.",
+          "Do not infer that nude recreation permits sex.",
+          "2026 management and enforcement guidance controversial."
+        ],
+        "duplicates_or_aliases": [],
+        "publication_approved": false,
+        "retain_for_filtering": true,
+        "research_checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0607_0611.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 609,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-EX-NETHERLANDS-CROMVOIRT-DE-BANKJES",
+      "name": "De Bankjes",
+      "city": "Cromvoirt",
+      "country": "Netherlands",
+      "priority_assessment": {
+        "queue_index": 609,
+        "candidate_id": "GC1-EX-NETHERLANDS-CROMVOIRT-DE-BANKJES",
+        "name": "De Bankjes",
+        "city": "Cromvoirt",
+        "country": "Netherlands",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 42,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0607_0611.json"
+      },
+      "original_queue_record": {
+        "index": 609,
+        "section": "C",
+        "id": "GC1-EX-NETHERLANDS-CROMVOIRT-DE-BANKJES",
+        "name": "De Bankjes",
+        "city": "Cromvoirt",
+        "country": "Netherlands",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 563,
+            "u": "https://www.gays-cruising.com/en/netherlands"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 609,
+        "candidate_id": "GC1-EX-NETHERLANDS-CROMVOIRT-DE-BANKJES",
+        "name": "De Bankjes",
+        "city": "Cromvoirt",
+        "country": "Netherlands",
+        "bucket": "quarter_complete",
+        "description_words": 42,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 609,
+        "id": "GC1-EX-NETHERLANDS-CROMVOIRT-DE-BANKJES",
+        "name": "De Bankjes",
+        "city": "Cromvoirt",
+        "country": "Netherlands",
+        "category": "unresolved benches / outdoors",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 563,
+            "u": "https://www.gays-cruising.com/en/netherlands"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://www.gays-cruising.com/en/netherlands"
+            ],
+            "checked_berlin": "2026-11-06",
+            "note": "Matches original directory name; page itself undated."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          }
+        ],
+        "source_description_rewritten": "A named 'De Bankjes' entry in Cromvoirt has a platform check-in dated 4 July 2026 but the name simply means 'the benches' and is not sufficiently distinctive to locate a particular site. No independent dated cruising report or exact lawful access established.",
+        "identity_assessment": "unresolved_exact_benches",
+        "supplementary_evidence": [
+          {
+            "date": "2026-07-04",
+            "url": "https://www.gays-cruising.com/en/netherlands",
+            "summary": "Dated source check-in attached to De Bankjes in Cromvoirt; no first-person specific visit report."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff_inclusive": "2025-11-06",
+          "recent_dated_evidence": [
+            {
+              "date": "2026-07-04",
+              "kind": "directory_check_in",
+              "supports": "recent platform interaction only, not proven visit"
+            }
+          ],
+          "historical_dated_evidence": [],
+          "directory_reference_is_undated": true,
+          "verified_recent_specific_cruising_activity": false
+        },
+        "access_information": "Exact benches, park, landowner and access status not identified. No route/coordinates should be assigned.",
+        "review_flags": [
+          "Generic place name; unresolved exact location."
+        ],
+        "duplicates_or_aliases": [],
+        "publication_approved": false,
+        "retain_for_filtering": true,
+        "research_checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0607_0611.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 611,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-EX-NETHERLANDS-KAMPERLAND-NEELTJE-JANS",
+      "name": "Neeltje Jans",
+      "city": "Kamperland",
+      "country": "Netherlands",
+      "priority_assessment": {
+        "queue_index": 611,
+        "candidate_id": "GC1-EX-NETHERLANDS-KAMPERLAND-NEELTJE-JANS",
+        "name": "Neeltje Jans",
+        "city": "Kamperland",
+        "country": "Netherlands",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 55,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0607_0611.json"
+      },
+      "original_queue_record": {
+        "index": 611,
+        "section": "C",
+        "id": "GC1-EX-NETHERLANDS-KAMPERLAND-NEELTJE-JANS",
+        "name": "Neeltje Jans",
+        "city": "Kamperland",
+        "country": "Netherlands",
+        "source_count": 2,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 565,
+            "u": "https://www.gays-cruising.com/en/netherlands"
+          }
+        ],
+        "identity_support": "multiple_websites"
+      },
+      "initial_completeness_triage": {
+        "index": 611,
+        "candidate_id": "GC1-EX-NETHERLANDS-KAMPERLAND-NEELTJE-JANS",
+        "name": "Neeltje Jans",
+        "city": "Kamperland",
+        "country": "Netherlands",
+        "bucket": "quarter_complete",
+        "description_words": 55,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 611,
+        "id": "GC1-EX-NETHERLANDS-KAMPERLAND-NEELTJE-JANS",
+        "name": "Neeltje Jans",
+        "city": "Kamperland",
+        "country": "Netherlands",
+        "category": "coastal sand/dune reserve and beach",
+        "original_source_count": 2,
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 565,
+            "u": "https://www.gays-cruising.com/en/netherlands"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://www.gays-cruising.com/en/netherlands"
+            ],
+            "checked_berlin": "2026-11-06",
+            "note": "Matches original directory name; page itself undated."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://www.popcorn.dating/netherlands/zeeland/vrouwenpolder/locations/public-sex/outdoor/neeltje-jans/20308/"
+            ],
+            "checked_berlin": "2026-11-06",
+            "note": "Cached source only mentions beach nudism, not proof of cruising"
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching name-and-locality in archived alignment or targeted indexed source lookups; archive incomplete; absence not established."
+          }
+        ],
+        "source_description_rewritten": "Neeltje Jans near the Oosterschelde barrier island appears on two distinct source websites: Gays-Cruising (Kamperland) and Popcorn.dating (Vrouwenpolder). The latter discusses clothing-optional beach recreation, not a confirmed gay cruising site. A 4 July 2026 source check-in is recent but unverified; 2022 naturist guestbook reports describe men cruising at dune edges, older than this cycle cutoff.",
+        "identity_assessment": "independent_island_exists_two_site_identity_match_not_two_cruising_confirmations",
+        "supplementary_evidence": [
+          {
+            "date": "undated",
+            "url": "https://www.popcorn.dating/netherlands/zeeland/vrouwenpolder/locations/public-sex/outdoor/neeltje-jans/20308/",
+            "summary": "Second directory website gives nearby location Vrouwenpolder, describing naturism without corroborated cruising."
+          },
+          {
+            "date": "2026-07-04",
+            "url": "https://www.gays-cruising.com/en/netherlands",
+            "summary": "Recent check-in attached to Neeltje Jans in source country page, but not proof of an actual visit or cruise."
+          },
+          {
+            "date": "2022-09-24",
+            "url": "https://www.naaktstrandje.nl/v2/naaktstrand/neeltje-jans/gastenboek/en",
+            "summary": "Historical guestbook observer reports men cruising near dunes, not on flat beach."
+          },
+          {
+            "date": "undated",
+            "url": "https://www.natuurmonumenten.nl/natuurgebieden/neeltje-jans",
+            "summary": "Conservation operator confirms location, paths and zoned access."
+          },
+          {
+            "date": "undated",
+            "url": "https://www.hetzeeuwselandschap.nl/natuurgebieden/neeltje-jans",
+            "summary": "Nature conservancy confirms dune reserve and parking, restrictions on night activities."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff_inclusive": "2025-11-06",
+          "recent_dated_evidence": [
+            {
+              "date": "2026-07-04",
+              "kind": "directory_check_in",
+              "supports": "platform signal only, not confirmed cruising visit"
+            }
+          ],
+          "historical_dated_evidence": [
+            {
+              "date": "2022-09-24",
+              "kind": "guestbook_first_person_historical_observation",
+              "supports": "historical report of cruising near dune edges, outside 12-month window"
+            }
+          ],
+          "directory_reference_is_undated": true,
+          "verified_recent_specific_cruising_activity": false
+        },
+        "access_information": "Nature reserve with free marked walking paths and conservation zoning; dune/bird-sensitive sections and night access are restricted. Keep separate from managed Deltapark attractions.",
+        "review_flags": [
+          "Different source cities Kamperland / Vrouwenpolder are geographic aliases for island.",
+          "Second website mentions nudism only, not independently confirmed cruising.",
+          "Conservation restrictions."
+        ],
+        "duplicates_or_aliases": [],
+        "publication_approved": false,
+        "retain_for_filtering": true,
+        "research_checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0607_0611.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 615,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-EX-NETHERLANDS-THE-HAGUE-MEER-EN-BOS-PARK",
+      "name": "Meer en Bos Park",
+      "city": "The Hague",
+      "country": "Netherlands",
+      "priority_assessment": {
+        "queue_index": 615,
+        "candidate_id": "GC1-EX-NETHERLANDS-THE-HAGUE-MEER-EN-BOS-PARK",
+        "name": "Meer en Bos Park",
+        "city": "The Hague",
+        "country": "Netherlands",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 44,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0612_0616.json"
+      },
+      "original_queue_record": {
+        "index": 615,
+        "section": "C",
+        "id": "GC1-EX-NETHERLANDS-THE-HAGUE-MEER-EN-BOS-PARK",
+        "name": "Meer en Bos Park",
+        "city": "The Hague",
+        "country": "Netherlands",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 569,
+            "u": "https://www.gays-cruising.com/en/netherlands"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 615,
+        "candidate_id": "GC1-EX-NETHERLANDS-THE-HAGUE-MEER-EN-BOS-PARK",
+        "name": "Meer en Bos Park",
+        "city": "The Hague",
+        "country": "Netherlands",
+        "bucket": "quarter_complete",
+        "description_words": 44,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 615,
+        "id": "GC1-EX-NETHERLANDS-THE-HAGUE-MEER-EN-BOS-PARK",
+        "name": "Meer en Bos Park",
+        "city": "The Hague",
+        "country": "Netherlands",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 569,
+            "u": "https://www.gays-cruising.com/en/netherlands"
+          }
+        ],
+        "original_source_count": 1,
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://www.gays-cruising.com/en/netherlands"
+            ],
+            "inspection": "Original named record preserved; no individually accessible dated source visit found.",
+            "checked_date_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-location match in retained aligned eight-source archives and targeted indexed lookups; incomplete coverage caveat.",
+            "checked_date_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-location match in retained aligned eight-source archives and targeted indexed lookups; incomplete coverage caveat.",
+            "checked_date_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-location match in retained aligned eight-source archives and targeted indexed lookups; incomplete coverage caveat.",
+            "checked_date_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-location match in retained aligned eight-source archives and targeted indexed lookups; incomplete coverage caveat.",
+            "checked_date_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-location match in retained aligned eight-source archives and targeted indexed lookups; incomplete coverage caveat.",
+            "checked_date_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-location match in retained aligned eight-source archives and targeted indexed lookups; incomplete coverage caveat.",
+            "checked_date_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No same-location match in retained aligned eight-source archives and targeted indexed lookups; incomplete coverage caveat.",
+            "checked_date_berlin": "2026-11-06"
+          }
+        ],
+        "category": "public wooded park / former estate",
+        "description_rewritten": "Meer en Bos is a public park and historic estate in the Loosduinen district of The Hague. The platform contains a check-in dated 4 July 2026, but that only documents user interaction with the listing, not a verified cruise or a sustained meeting pattern.",
+        "identity_verification": "verified_public_estate_and_area",
+        "supplemental_sources": [
+          {
+            "url": "https://www.denhaag.nl/nl/stadsdelen/loosduinen/wijken/bohemen-meer-en-bos/",
+            "note": "Municipal Hague description identifies Landgoed Meer en Bos as the park, separate from the surrounding neighbourhood."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff_inclusive": "2025-11-06",
+          "recent_site_signals": [
+            {
+              "date": "2026-07-04",
+              "kind": "directory_check_in",
+              "supports": "platform action only; no verified cruise or eyewitness report"
+            }
+          ],
+          "confirmed_recent_cruising_encounters": [],
+          "undated_directory_reference": true,
+          "notes": "Place existence and editorial directory updates do not establish current cruising."
+        },
+        "access_information": "Municipal park open to ordinary visitors subject to signs and managed paths; exact activity claims unverified.",
+        "possible_duplicates_or_flags": [
+          "Separate the estate park from the larger Bohemen/Meer en Bos neighbourhood."
+        ],
+        "disposition": "research_only_keep",
+        "research_checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0612_0616.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 641,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-BERLIN-018",
+      "name": "Karlshorst Treskowallee",
+      "city": "Berlin",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 641,
+        "candidate_id": "GS2-DE-BERLIN-018",
+        "name": "Karlshorst Treskowallee",
+        "city": "Berlin",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 80,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0637_0641.json"
+      },
+      "original_queue_record": {
+        "index": 641,
+        "section": "C",
+        "id": "GS2-DE-BERLIN-018",
+        "name": "Karlshorst Treskowallee",
+        "city": "Berlin",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 18,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html"
+          },
+          {
+            "s": "2",
+            "f": "research/cruising/gap_fill_scrape_2.json",
+            "i": 9,
+            "u": "https://gay-szene.net/karlshorst-treskowallee-in-berlin/11594/eintrag.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 641,
+        "candidate_id": "GS2-DE-BERLIN-018",
+        "name": "Karlshorst Treskowallee",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 80,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 641,
+        "id": "GS2-DE-BERLIN-018",
+        "name": "Karlshorst Treskowallee",
+        "city": "Berlin",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 18,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html"
+          },
+          {
+            "s": "2",
+            "f": "research/cruising/gap_fill_scrape_2.json",
+            "i": 9,
+            "u": "https://gay-szene.net/karlshorst-treskowallee-in-berlin/11594/eintrag.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "urls": [],
+            "checked_date_berlin": "2026-11-06",
+            "notes": "No exact place match in collected cross-source archive and targeted site index; incomplete coverage not proof of absence."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "urls": [
+              "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
+              "https://gay-szene.net/karlshorst-treskowallee-in-berlin/11594/eintrag.html"
+            ],
+            "checked_date_berlin": "2026-11-06",
+            "notes": "Matching named source/archived card; recency evaluated separately."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "urls": [],
+            "checked_date_berlin": "2026-11-06",
+            "notes": "No exact place match in collected cross-source archive and targeted site index; incomplete coverage not proof of absence."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "urls": [],
+            "checked_date_berlin": "2026-11-06",
+            "notes": "No exact place match in collected cross-source archive and targeted site index; incomplete coverage not proof of absence."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "urls": [],
+            "checked_date_berlin": "2026-11-06",
+            "notes": "No exact place match in collected cross-source archive and targeted site index; incomplete coverage not proof of absence."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "urls": [],
+            "checked_date_berlin": "2026-11-06",
+            "notes": "No exact place match in collected cross-source archive and targeted site index; incomplete coverage not proof of absence."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "urls": [],
+            "checked_date_berlin": "2026-11-06",
+            "notes": "No exact place match in collected cross-source archive and targeted site index; incomplete coverage not proof of absence."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "urls": [],
+            "checked_date_berlin": "2026-11-06",
+            "notes": "No exact place match in collected cross-source archive and targeted site index; incomplete coverage not proof of absence."
+          }
+        ],
+        "description_rewritten": "A historical cruising entry at Treskowallee 200 points to former institutional land adjoining the Albatros school area in Karlshorst. The source listing itself says the site was sold and closed. On 29 March 2026 a first-person visitor reported both old houses and a storage hall demolished, leaving foundations. An 8 November 2025 forum report described earlier activity before closure but is not proof the site remains usable. Do not suggest entry through holes in a fence or onto private land.",
+        "supplementary_sources": [
+          {
+            "url": "https://gay-szene.net/karlshorst-treskowallee-in-berlin/11594/eintrag.html",
+            "note": "Explicit closed-site description and March 2026 demolition report."
+          },
+          {
+            "url": "https://gay-szene.net/sonnenbad-wuhlheide-in-berlin/13063/eintrag.html",
+            "note": "Nearby separate Sonnenbad Wuhlheide location, not the same property."
+          }
+        ],
+        "activity_evidence": {
+          "recent_cutoff_inclusive": "2025-11-06",
+          "recent_dated_user_reports": [
+            {
+              "date": "2026-03-29",
+              "type": "first_person_current_site_condition_report",
+              "summary": "Visitor reports buildings demolished; no report of cruising."
+            },
+            {
+              "date": "2025-11-08",
+              "type": "historic_activity_claim_very_near_cutoff",
+              "summary": "Forum alleges prior regular cruising, but retrospective and before demolition; not evidence of current access."
+            }
+          ],
+          "historical_or_older_reports": [
+            {
+              "date": "2022-10-22",
+              "type": "first_person_reduced_activity",
+              "summary": "Source user reports low past activity."
+            }
+          ],
+          "confirmed_recent_cruising_encounter": false,
+          "undated_directory_claims_separate": true
+        },
+        "access_information": "Private/former institutional property: reported sold, secured, demolished and inaccessible. Do NOT trespass or recommend entry; even apparent fence gaps do not grant access.",
+        "aliases_risks": [
+          "Site apparently demolished March 2026, closure explicit.",
+          "Dangerous restricted property; hold candidate for research only.",
+          "Nearby Sonnenbad Wuhlheide is distinct area."
+        ],
+        "research_only": true,
+        "retain_candidate": true,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0637_0641.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 648,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-BERLIN-025",
+      "name": "Klappe Tempelhofer Feld",
+      "city": "Berlin",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 648,
+        "candidate_id": "GS2-DE-BERLIN-025",
+        "name": "Klappe Tempelhofer Feld",
+        "city": "Berlin",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 73,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0647_0651.json"
+      },
+      "original_queue_record": {
+        "index": 648,
+        "section": "C",
+        "id": "GS2-DE-BERLIN-025",
+        "name": "Klappe Tempelhofer Feld",
+        "city": "Berlin",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 25,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 648,
+        "candidate_id": "GS2-DE-BERLIN-025",
+        "name": "Klappe Tempelhofer Feld",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 73,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 648,
+        "id": "GS2-DE-BERLIN-025",
+        "name": "Klappe Tempelhofer Feld",
+        "city": "Berlin",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 25,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No same place in aligned archive or targeted site-index query; source coverage incomplete."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html"
+            ],
+            "checked_berlin": "2026-11-06",
+            "notes": "Archived same-name place; this status does not certify 2026 cruising."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No same place in aligned archive or targeted site-index query; source coverage incomplete."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No same place in aligned archive or targeted site-index query; source coverage incomplete."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No same place in aligned archive or targeted site-index query; source coverage incomplete."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No same place in aligned archive or targeted site-index query; source coverage incomplete."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No same place in aligned archive or targeted site-index query; source coverage incomplete."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No same place in aligned archive or targeted site-index query; source coverage incomplete."
+          }
+        ],
+        "description_rewritten": "A former men's public restroom on Tempelhofer Feld near the baseball area is a gay-szene.net lead. One first-person March 13 2026 comment found the toilets open but a former opening between stalls sealed with a steel plate and no activity. Later indexed October 2026 comments report access, with some users seeing no other visitors; these are inconsistent with any assertion of steady cruising. The field's controlled gates and seasonal closing times determine access.",
+        "supplemental_evidence": [
+          {
+            "url": "https://gay-szene.net/klappe-tempelhofer-feld-in-berlin/13070/eintrag.html",
+            "note": "Detailed March 2026 dated forum; indexed October 2026 updates on same page."
+          },
+          {
+            "url": "https://www.tempelhoferfeld.de/",
+            "note": "Official park operating and preservation information; verify hours on official page before using."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_dated_reports": [
+            {
+              "date": "2026-10-28",
+              "type": "first_person_site_visit_no_cruising",
+              "summary": "Visitor says toilet was heated and nearly empty."
+            },
+            {
+              "date": "2026-10-08",
+              "type": "first_person_repeat_visit_without_contacts",
+              "summary": "Source visitor describes a toilet opening but reports multiple solo waits."
+            },
+            {
+              "date": "2026-03-13",
+              "type": "first_person_facility_condition_no_cruising",
+              "summary": "Toilet open; hole reportedly sealed by metal plate; no visitor traffic."
+            }
+          ],
+          "older_reports": [
+            {
+              "date": "2025-09-23",
+              "type": "first_person_reopened_toilet",
+              "summary": "Pre-cutoff report restroom accessible again after earlier closure."
+            }
+          ],
+          "undated_directory_not_current_confirmation": true,
+          "verified_recent_specific_cruising": "not_confirmed_recent_toilet_visits_only"
+        },
+        "access_information": "Tempelhofer Feld has controlled gates and seasonal opening times. Toilet availability is unstable across 2024–26 reports. Public restrooms are not authorised for sex and modifications are not permitted.",
+        "possible_duplicates_warnings": [
+          "2026 accounts conflict about sealed partition; do not promise gloryhole availability.",
+          "Public facilities used by general visitors.",
+          "Park gate hours constrain all access."
+        ],
+        "retain_for_filtering": true,
+        "not_approved_for_publication": true,
+        "checked_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0647_0651.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 655,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GS2-DE-BERLIN-033",
+      "name": "Parkplatz Waldeck Ost an der A 117",
+      "city": "Berlin",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 655,
+        "candidate_id": "GS2-DE-BERLIN-033",
+        "name": "Parkplatz Waldeck Ost an der A 117",
+        "city": "Berlin",
+        "country": "Germany",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 68,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0652_0656.json"
+      },
+      "original_queue_record": {
+        "index": 655,
+        "section": "C",
+        "id": "GS2-DE-BERLIN-033",
+        "name": "Parkplatz Waldeck Ost an der A 117",
+        "city": "Berlin",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 33,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 655,
+        "candidate_id": "GS2-DE-BERLIN-033",
+        "name": "Parkplatz Waldeck Ost an der A 117",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 68,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 655,
+        "id": "GS2-DE-BERLIN-033",
+        "name": "Parkplatz Waldeck Ost an der A 117",
+        "city": "Berlin",
+        "country": "Germany",
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 33,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html"
+          }
+        ],
+        "source_count_original": 1,
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html"
+            ],
+            "inspected": "Archived matched source plus live detail/translated name lookup as available; source statements are not verified recent use.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          }
+        ],
+        "source_description_rewritten": "Waldeck Ost is a real A117 east-side motorway rest area near Schönefeld/Waltersdorf, not central Berlin. First-person forum reports on 1 May, 11 June, and 18 July 2026 repeatedly say the formerly popular parking lot is closed or empty. The June report describes an encounter at a DIFFERENT fallback, P&R Altglienicke. Road traffic data also shows 2026 construction by the A117, but does not establish this individual rest-area reopening.",
+        "place_type": "roadside rest stop / access-restricted",
+        "identity_assessment": "rest area independently verified, current access disputed/likely closed",
+        "independent_and_direct_evidence": [
+          {
+            "url": "https://gay-szene.net/parkplatz-waldeck-ost-an-der-a-117-in-berlin/9269/eintrag.html",
+            "note": "2026 first-person closure and empty-visit reports, distinct from P&R Altglienicke."
+          },
+          {
+            "url": "https://rastplatz.app/parkplatz/waldeck-ost-a117",
+            "note": "Roadside inventory confirms Waldeck Ost east-side rest area in Schönefeld."
+          },
+          {
+            "url": "https://www.verkehr.de/autobahn/a117/",
+            "note": "2026 A117 active construction works: cannot infer reopening."
+          }
+        ],
+        "activity_evidence": {
+          "recent_cutoff_inclusive": "2025-11-06",
+          "recent_dated_reports": [
+            {
+              "date": "2026-07-18",
+              "kind": "first_person_negative_visit",
+              "summary": "Visited site and adjoining area; found nobody."
+            },
+            {
+              "date": "2026-06-11",
+              "kind": "access_closure_statement",
+              "summary": "User says Waldeck lot still closed; sexual encounter was at different P&R Altglienicke."
+            },
+            {
+              "date": "2026-05-01",
+              "kind": "access_closure_statement",
+              "summary": "Reports parking remains closed."
+            },
+            {
+              "date": "2026-01-15",
+              "kind": "access_closure_statement",
+              "summary": "Reports site still closed."
+            }
+          ],
+          "historical_reports": [],
+          "undated_directory_claims_are_not_recent_evidence": true,
+          "confirmed_current_cruising_activity": false
+        },
+        "access_information": "Motorway rest area with recurrent closure reports through July 2026. Do not recommend entering closed parking, woodland or fenced areas; no verified reopening as of November.",
+        "possible_duplicates_or_aliases": [
+          {
+            "name": "Waldeck West",
+            "relation": "opposite direction/other side, keep separate"
+          },
+          {
+            "name": "P&R Altglienicke",
+            "relation": "different site suggested as an alternative, never merge"
+          }
+        ],
+        "assessment": "retain_for_filtering_not_automatically_publication_ready",
+        "research_checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0652_0656.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 656,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-BERLIN-034",
+      "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
+      "city": "Berlin",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 656,
+        "candidate_id": "GS2-DE-BERLIN-034",
+        "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
+        "city": "Berlin",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 89,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0652_0656.json"
+      },
+      "original_queue_record": {
+        "index": 656,
+        "section": "C",
+        "id": "GS2-DE-BERLIN-034",
+        "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
+        "city": "Berlin",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 34,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 656,
+        "candidate_id": "GS2-DE-BERLIN-034",
+        "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 89,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 656,
+        "id": "GS2-DE-BERLIN-034",
+        "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
+        "city": "Berlin",
+        "country": "Germany",
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 34,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html"
+          }
+        ],
+        "source_count_original": 1,
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html"
+            ],
+            "inspected": "Archived matched source plus live detail/translated name lookup as available; source statements are not verified recent use.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspected": "No same-place link in immutable cross-source alignment; targeted index checks limited. No-match is not proof of absence.",
+            "checked_berlin": "2026-11-06"
+          }
+        ],
+        "source_description_rewritten": "The A10 entry covers more than one motorway rest stop between Erkner and Rüdersdorf. Separate sites include Seeberg West and the Kalkberge parking area; neither should be assigned to the entire candidate without directional verification. First-person comments dated 12 March and 20 March 2026 report repeat visits or an unsuccessful visit to Kalkberge, and a 17 June 2026 contributor says vegetation was cut and mentions Seeberg West. These demonstrate contemporary interest and some attempts at cruising, but do not establish access or activity for every site along the stretch.",
+        "place_type": "several motorway parking areas, distinct carriageway sides",
+        "identity_assessment": "multiple real rest areas, generic umbrella record",
+        "independent_and_direct_evidence": [
+          {
+            "url": "https://gay-szene.net/parkplaetze-a10-zwischen-erkner-und-ruedersdorf-in-berlin/11008/eintrag.html",
+            "note": "Source page with March and June 2026 reports."
+          },
+          {
+            "url": "https://www.raststaetten.de/standorte/seeberg-west/",
+            "note": "Operator confirms separate Seeberg West service station."
+          },
+          {
+            "url": "https://www.raststaetten.de/standorte/seeberg-ost/",
+            "note": "Operator confirms separate Seeberg Ost service station."
+          },
+          {
+            "url": "https://www.autobahn-baustellen.de/rastanlage/a10-kalkberge/",
+            "note": "Independent A10 Kalkberge parking listing, distinct from Seeberg West."
+          }
+        ],
+        "activity_evidence": {
+          "recent_cutoff_inclusive": "2025-11-06",
+          "recent_dated_reports": [
+            {
+              "date": "2026-06-17",
+              "kind": "access_and_activity_context",
+              "summary": "User reports vegetation changes, activity reduction; mentions Seeberg West as alternative."
+            },
+            {
+              "date": "2026-03-20",
+              "kind": "first_person_negative_visit",
+              "summary": "User found no other visitors at Kalkberge previous evening."
+            },
+            {
+              "date": "2026-03-12",
+              "kind": "repeated_first_person_activity_claim",
+              "summary": "Forum commenter says repeated positive visits without specific date/time."
+            }
+          ],
+          "historical_reports": [],
+          "undated_directory_claims_are_not_recent_evidence": true,
+          "confirmed_current_cruising_activity": "recent_self_reports_at_some_subsites"
+        },
+        "access_information": "Motorway rest areas reachable only from designated carriageway directions and subject to roadworks; forest paths are not automatically public-access sexual spaces.",
+        "possible_duplicates_or_aliases": [
+          {
+            "name": "Seeberg West",
+            "relation": "a specific rest-area option, distinct from Seeberg Ost"
+          },
+          {
+            "name": "Seeberg Ost",
+            "relation": "opposite/different direction station"
+          },
+          {
+            "name": "Kalkberge",
+            "relation": "separate parking site covered by one broad candidate"
+          }
+        ],
+        "assessment": "retain_for_filtering_not_automatically_publication_ready",
+        "research_checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0652_0656.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 662,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GS2-DE-BERLIN-041",
+      "name": "Sandfläche im Jagen 87 des Grunewalds",
+      "city": "Berlin",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 662,
+        "candidate_id": "GS2-DE-BERLIN-041",
+        "name": "Sandfläche im Jagen 87 des Grunewalds",
+        "city": "Berlin",
+        "country": "Germany",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": true,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 67,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0662_0666.json"
+      },
+      "original_queue_record": {
+        "index": 662,
+        "section": "C",
+        "id": "GS2-DE-BERLIN-041",
+        "name": "Sandfläche im Jagen 87 des Grunewalds",
+        "city": "Berlin",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 41,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 662,
+        "candidate_id": "GS2-DE-BERLIN-041",
+        "name": "Sandfläche im Jagen 87 des Grunewalds",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 67,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 662,
+        "id": "GS2-DE-BERLIN-041",
+        "name": "Sandfläche im Jagen 87 des Grunewalds",
+        "city": "Berlin",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 41,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+            ],
+            "detail_access": "source_index_or_detail_available",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+            "date_checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+            "date_checked_berlin": "2026-11-06"
+          }
+        ],
+        "description_rewritten": "Jagen 87 is a particular sandy clearing and adjoining wooded paths in the Grunewald, distinct from nearby Jagen 86, Jagen 90 and Teufelssee. Multiple first-person source visitors in April–July 2026 report men sunbathing, making contact or walking towards the woods, although two explicitly report no personal encounter. A July 2025 contributor suggests old mapping labels were confusing. The woodland/naturist area is mixed-use and may have conservation constraints.",
+        "identity_assessment": "named_sandy_area_strong_recent_visitor_presence",
+        "extra_evidence": [
+          {
+            "url": "https://gay-szene.net/sandflaeche-im-jagen-87-des-grunewalds-in-berlin/12849/eintrag.html",
+            "note": "Gay-szene detail with April–July 2026 firsthand visit reports."
+          },
+          {
+            "url": "https://www.berlin.de/forsten/walderlebnis/ausflugsziele/grunewald/",
+            "note": "City forest information for Grunewald; forest existence and normal permitted recreation, not cruising."
+          }
+        ],
+        "activity_evidence": {
+          "recent_cutoff": "2025-11-06",
+          "recent_first_person_signals": [
+            {
+              "date": "2026-07-30",
+              "type": "first_person_cruising_area_visit",
+              "note": "Saw multiple men and attempted to make contact, with no confirmed individual encounter."
+            },
+            {
+              "date": "2026-05-26",
+              "type": "first_person_FKK_visit_and_cruising_observation",
+              "note": "Saw men periodically walking to secluded paths; commenter reports no sexual encounter himself."
+            },
+            {
+              "date": "2026-04-26",
+              "type": "visitor_report_of_men_sunbathing",
+              "note": "Saw some men and suggested further contact, not verified specific acts."
+            }
+          ],
+          "older_reports": [
+            {
+              "date": "2025-07-05",
+              "type": "map_name_clarification",
+              "note": "Explains Jagen 86/87 relative location; verify geometry independently."
+            }
+          ],
+          "current_cruising_confirmed_by_independent_authority": false,
+          "undated_directory_reference_not_current_evidence": true
+        },
+        "access_information": "Public forest trails and sandy clearing; avoid protected restoration areas, any enclosure and wildlife habitats. No official sex permission.",
+        "possible_duplicates_or_safety_flags": [
+          "Keep Jagen 87 separate from Jagen 86, Jagen 90, Teufelssee.",
+          "Do not use confusing directory pin as precise location."
+        ],
+        "disposition": "retain_research_only",
+        "reviewed_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0662_0666.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 667,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-BERLIN-046",
+      "name": "Spektepark",
+      "city": "Berlin",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 667,
+        "candidate_id": "GS2-DE-BERLIN-046",
+        "name": "Spektepark",
+        "city": "Berlin",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 65,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0667_0671.json"
+      },
+      "original_queue_record": {
+        "index": 667,
+        "section": "C",
+        "id": "GS2-DE-BERLIN-046",
+        "name": "Spektepark",
+        "city": "Berlin",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 46,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+          },
+          {
+            "s": "2",
+            "f": "research/cruising/gap_fill_scrape_2.json",
+            "i": 11,
+            "u": "https://gay-szene.net/spektepark-in-berlin/12638/eintrag.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 667,
+        "candidate_id": "GS2-DE-BERLIN-046",
+        "name": "Spektepark",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 65,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 667,
+        "id": "GS2-DE-BERLIN-046",
+        "name": "Spektepark",
+        "city": "Berlin",
+        "country": "Germany",
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 46,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+          },
+          {
+            "s": "2",
+            "f": "research/cruising/gap_fill_scrape_2.json",
+            "i": 11,
+            "u": "https://gay-szene.net/spektepark-in-berlin/12638/eintrag.html"
+          }
+        ],
+        "original_source_count": 1,
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
+              "https://gay-szene.net/spektepark-in-berlin/12638/eintrag.html"
+            ],
+            "checked_berlin": "2026-11-06",
+            "note": "Matched original archived index; detail and date claims independently classified."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+          }
+        ],
+        "description_rewritten": "Spektepark is a public recreation area around the Spektesee in Berlin-Spandau. Gay-szene.net's old description asserts night-time cruising near paths by the lake, but its newest dated post (31 July 2026) only asks whether the spot is active, not an actual visit. July 2024 comments give mixed accounts, including two unsuccessful visits. The area is used by ordinary park visitors and exact cruising use remains unverified.",
+        "source_and_supplemental_evidence": [
+          {
+            "url": "https://gay-szene.net/spektepark-in-berlin/12638/eintrag.html",
+            "note": "Archived source, 2026 question and older mixed 2024 firsthand posts."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff_inclusive": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-07-31",
+              "kind": "question_only",
+              "note": "Asks if site is still active, not evidence of a visit."
+            }
+          ],
+          "older_posts": [
+            {
+              "date": "2024-07-10",
+              "kind": "first_person_negative_visits",
+              "note": "Two visits yielded nobody."
+            },
+            {
+              "date": "2024-07-04",
+              "kind": "first_person_mixed_activity_report",
+              "note": "Someone found men by car park but not a matching encounter."
+            }
+          ],
+          "undated_directory_mention_does_not_prove_activity": true
+        },
+        "access_information": "Public lakeside recreation with ordinary path use; do not infer night-time access, private boundaries, sexual permission, or an actual 2026 crowd.",
+        "duplicates_or_flags": [
+          "Separate Großer Spektesee lake, Spektepark paths and car park subarea."
+        ],
+        "disposition": "keep_all_research_only",
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0667_0671.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 674,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GS2-DE-BERLIN-060",
+      "name": "Volkspark Prenzlauer Berg - Judith-Auer-Straße",
+      "city": "Berlin",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 674,
+        "candidate_id": "GS2-DE-BERLIN-060",
+        "name": "Volkspark Prenzlauer Berg - Judith-Auer-Straße",
+        "city": "Berlin",
+        "country": "Germany",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": true,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 75,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0672_0676.json"
+      },
+      "original_queue_record": {
+        "index": 674,
+        "section": "C",
+        "id": "GS2-DE-BERLIN-060",
+        "name": "Volkspark Prenzlauer Berg - Judith-Auer-Straße",
+        "city": "Berlin",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 60,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 674,
+        "candidate_id": "GS2-DE-BERLIN-060",
+        "name": "Volkspark Prenzlauer Berg - Judith-Auer-Straße",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 75,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 674,
+        "id": "GS2-DE-BERLIN-060",
+        "name": "Volkspark Prenzlauer Berg - Judith-Auer-Straße",
+        "city": "Berlin",
+        "country": "Germany",
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 60,
+            "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+          }
+        ],
+        "original_source_count": 1,
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+            ],
+            "checked_berlin": "2026-11-06",
+            "notes": "Name in archived source; not by itself a dated visitor report."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+          }
+        ],
+        "description_rewritten": "This is the wooded slope in Volkspark Prenzlauer Berg reached from Judith-Auer-Straße; it is a named subarea rather than the whole 29-hectare public park. A 11 July 2026 first-person user reports having visited recently and successfully met another person. A different visitor reported having been there on 10 June 2026 without a stated encounter. The reports support recent informal meeting activity but not precise visitor numbers or a guarantee of safe or lawful sexual activity.",
+        "place_identity": "specific_wooded_park_subarea_research_recent_first_person_report",
+        "additional_evidence": [
+          {
+            "url": "https://gay-szene.net/volkspark-prenzlauer-berg-judith-auer-strasse-in-berlin/10234/eintrag.html",
+            "note": "11 July and 10 June 2026 dated firsthand forum posts."
+          },
+          {
+            "url": "https://planet-randy.com/blog/eintrag/volkspark-prenzlauer-berg/",
+            "note": "Independent directory describes same Judith-Auer entrance. Original queue treated Planet Randy's broader park as separate lead; possible duplicate."
+          },
+          {
+            "url": "https://www.qvnia.de/pravention_intro/bewegung/bib/bib-bewegungsprogramm/volkspark-prenzlauer-berg",
+            "note": "2026 exercise programme confirms park and Judith-Auer access, not cruising."
+          }
+        ],
+        "activity_evidence": {
+          "recent_cutoff_inclusive": "2025-11-06",
+          "recent_dated_reports": [
+            {
+              "date": "2026-07-11",
+              "type": "first_person_recent_encounter_claim",
+              "note": "Author says recent visit was successful; exact underlying visit day not given."
+            },
+            {
+              "date": "2026-06-10",
+              "type": "first_person_visit_no_confirmed_encounter",
+              "note": "User says they visited that day and liked area."
+            }
+          ],
+          "older_reports": [],
+          "undated_directory_mention_not_recent_evidence": true,
+          "independent_confirmation_of_actual_current_cruising": false
+        },
+        "access_information": "Public mixed-use forested park; normal forest and park access only. The small grove is not a designated sexual-use site.",
+        "duplicates_and_concerns": [
+          "Probable duplicate/subarea overlap with PR3-DE-BERLIN-02-06 (#684), Volkspark Prenzlauer Berg.",
+          "A 2026 self-report is not independent official confirmation."
+        ],
+        "disposition": "retain_research_only",
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0672_0676.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 696,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-BREMEN-001",
+      "name": "Autobahn Parkplatz Mahndorfer Marsch",
+      "city": "Bremen",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 696,
+        "candidate_id": "GS2-DE-BREMEN-001",
+        "name": "Autobahn Parkplatz Mahndorfer Marsch",
+        "city": "Bremen",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 78,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0692_0696.json"
+      },
+      "original_queue_record": {
+        "index": 696,
+        "section": "C",
+        "id": "GS2-DE-BREMEN-001",
+        "name": "Autobahn Parkplatz Mahndorfer Marsch",
+        "city": "Bremen",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 61,
+            "u": "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 696,
+        "candidate_id": "GS2-DE-BREMEN-001",
+        "name": "Autobahn Parkplatz Mahndorfer Marsch",
+        "city": "Bremen",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 78,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 696,
+        "id": "GS2-DE-BREMEN-001",
+        "name": "Autobahn Parkplatz Mahndorfer Marsch",
+        "city": "Bremen",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 61,
+            "u": "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching archive proposal linked in other source; incompleteness caveat, not evidence of total absence."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+            ],
+            "checked_berlin": "2026-11-06",
+            "note": "Archived source matched; research separable from recent visitor evidence."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching archive proposal linked in other source; incompleteness caveat, not evidence of total absence."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching archive proposal linked in other source; incompleteness caveat, not evidence of total absence."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching archive proposal linked in other source; incompleteness caveat, not evidence of total absence."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching archive proposal linked in other source; incompleteness caveat, not evidence of total absence."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching archive proposal linked in other source; incompleteness caveat, not evidence of total absence."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No matching archive proposal linked in other source; incompleteness caveat, not evidence of total absence."
+          }
+        ],
+        "description_rewritten": "Mahndorfer Marsch is an A1 motorway parking/rest area in Bremen near the Bremer Kreuz, on the direction toward Hemelingen. Gay-szene.net source users gave a dated 2 May 2026 firsthand report of visiting on 1 and 2 May and finding no activity, directly contradicting generic old 'busy' claims. An older 30 April 2023 post describes positive cruising and nearby toilets; this is historical. The original page references openings in fencing, which should not be interpreted as lawful woodland entry.",
+        "identity_verification": "named_A1_rest_stop_recent_first_person_negative_visits",
+        "supplemental_sources": [
+          {
+            "url": "https://gay-szene.net/autobahn-parkplatz-mahndorfer-marsch-in-bremen/12843/eintrag.html",
+            "note": "2 May 2026 two unsuccessful visits; 2023 historical claims."
+          },
+          {
+            "url": "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html",
+            "note": "Original regional index and directional claim."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_dated_reports": [
+            {
+              "date": "2026-05-02",
+              "type": "first_person_two_unsuccessful_visits",
+              "detail": "Visited 1–2 May, saw no cruising despite warm weather."
+            }
+          ],
+          "older_reports": [
+            {
+              "date": "2023-04-30",
+              "type": "first_person_positive_historical_report",
+              "detail": "Describes the rest area and WC, pre-cutoff."
+            }
+          ],
+          "undated_cruise_claim_is_not_recent_evidence": true
+        },
+        "access_information": "A1 parking accessible only from correct motorway carriageway; public routes separate from highway safety and fenced wooded land. No permission to use fence gaps as access.",
+        "review_flags": [
+          "Current negative 2026 visits; no guarantee of other visitors.",
+          "Historic description of gaps through fence is NOT legal or safe entry guidance.",
+          "Near Bremen boundary/arterial roads; do not invent carpark GPS."
+        ],
+        "disposition": "retain_research_only",
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0692_0696.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 699,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-BREMEN-004",
+      "name": "Bürgerpark Bremen 2",
+      "city": "Bremen",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 699,
+        "candidate_id": "GS2-DE-BREMEN-004",
+        "name": "Bürgerpark Bremen 2",
+        "city": "Bremen",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 74,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0697_0701.json"
+      },
+      "original_queue_record": {
+        "index": 699,
+        "section": "C",
+        "id": "GS2-DE-BREMEN-004",
+        "name": "Bürgerpark Bremen 2",
+        "city": "Bremen",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 64,
+            "u": "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 699,
+        "candidate_id": "GS2-DE-BREMEN-004",
+        "name": "Bürgerpark Bremen 2",
+        "city": "Bremen",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 74,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 699,
+        "id": "GS2-DE-BREMEN-004",
+        "name": "Bürgerpark Bremen 2",
+        "city": "Bremen",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 64,
+            "u": "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+            ],
+            "checked_berlin": "2026-11-06",
+            "note": "Matched archived website, date of reporting classified separately."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          }
+        ],
+        "description_rewritten": "The separately numbered Bürgerpark Bremen 2 describes a subarea around Parkallee between Otto-Gildemeister-Straße and Fitgerstraße, potentially part of the same larger Bürgerpark as index 698. The only post within the last 12 months is a 2 May 2026 firsthand account of repeated April visits that found nobody pursuing cruising; the previous positive comment is from May 2019. Park operator's rules prohibit lingering after 22:30, making the old late-night directory claims unreliable as access guidance.",
+        "place_identity": "subarea_of_same_Buergerpark_as_index_698_provisional_duplicate",
+        "additional_sources": [
+          {
+            "url": "https://gay-szene.net/buergerpark-bremen-2-in-bremen/12703/eintrag.html",
+            "note": "2 May 2026 firsthand negative report, earlier 2019 positive."
+          },
+          {
+            "url": "https://www.buergerpark.de/bilder/Parkordnung.pdf?m=1757621813",
+            "note": "Park regulation prohibits remaining after 22:30 except exceptions."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff_inclusive": "2025-11-06",
+          "recent_dated_reports": [
+            {
+              "date": "2026-05-02",
+              "type": "first_person_multiple_2026_negative_visits",
+              "note": "April visits reportedly no cruising or interested men."
+            }
+          ],
+          "older_dated_reports": [
+            {
+              "date": "2019-05-01",
+              "type": "historical_positive_meeting_claim",
+              "note": "Old visitor alleges an encounter."
+            }
+          ],
+          "undated_directory_claim_not_activity_proof": true
+        },
+        "access_information": "Park paths and lawns with managed public access; 22:30 staying restriction. No right to use secluded areas for sex.",
+        "possible_duplicates_or_safety_flags": [
+          "Potential broad-area duplicate of #698, but different specific section.",
+          "No positive 2026 cruiser report."
+        ],
+        "disposition": "retain_for_filtering_not_publication_ready",
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0697_0701.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 700,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-BREMEN-005",
+      "name": "Parkplatz A1 Krumhörens Kuhlen",
+      "city": "Bremen",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 700,
+        "candidate_id": "GS2-DE-BREMEN-005",
+        "name": "Parkplatz A1 Krumhörens Kuhlen",
+        "city": "Bremen",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 73,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0697_0701.json"
+      },
+      "original_queue_record": {
+        "index": 700,
+        "section": "C",
+        "id": "GS2-DE-BREMEN-005",
+        "name": "Parkplatz A1 Krumhörens Kuhlen",
+        "city": "Bremen",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 65,
+            "u": "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 700,
+        "candidate_id": "GS2-DE-BREMEN-005",
+        "name": "Parkplatz A1 Krumhörens Kuhlen",
+        "city": "Bremen",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 73,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 700,
+        "id": "GS2-DE-BREMEN-005",
+        "name": "Parkplatz A1 Krumhörens Kuhlen",
+        "city": "Bremen",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 65,
+            "u": "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+            ],
+            "checked_berlin": "2026-11-06",
+            "note": "Matched archived website, date of reporting classified separately."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          }
+        ],
+        "description_rewritten": "Krumhörens Kuhlen is a roadside A1 parking area toward Hamburg, associated with a nearby lake and woodland. A 30 April 2026 forum contributor says they visited frequently that month and encountered little activity, showing recent negative visitor evidence. The forum's last positive specific details date to September 2023. A 2021 report alleges an armed robbery near its toilets, historical only and not a quantified current crime risk. Do not provide routes through fences.",
+        "place_identity": "named_A1_parking_with_contemporary_negative_visits",
+        "additional_sources": [
+          {
+            "url": "https://gay-szene.net/parkplatz-a1-krumhoerens-kuhlen-in-bremen/6823/eintrag.html",
+            "note": "30 April 2026 negative first-person repeated visits; older 2023 activity and 2021 safety allegations."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff_inclusive": "2025-11-06",
+          "recent_dated_reports": [
+            {
+              "date": "2026-04-30",
+              "type": "first_person_repeated_visits_low_activity",
+              "note": "Frequent April 2026 visits, little interest."
+            }
+          ],
+          "older_dated_reports": [
+            {
+              "date": "2023-09-10",
+              "type": "historic_cruising_positive_report",
+              "note": "Pre-cutoff."
+            },
+            {
+              "date": "2021-10-10",
+              "type": "historical_secondhand_armed_robbery_allegation",
+              "note": "Not established present crime risk."
+            }
+          ],
+          "undated_directory_claim_not_activity_proof": true
+        },
+        "access_information": "A1 rest stop on designated carriageway; lakeside/wetland paths and fences may restrict access. Legal public sex and entry via fence gaps not established.",
+        "possible_duplicates_or_safety_flags": [
+          "Distinct from opposite-direction Ahlken/Alken parking (#697).",
+          "Historic robbery report; current safety unverified."
+        ],
+        "disposition": "retain_for_filtering_not_publication_ready",
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0697_0701.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 701,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GS2-DE-BREMEN-006",
+      "name": "Uni-See",
+      "city": "Bremen",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 701,
+        "candidate_id": "GS2-DE-BREMEN-006",
+        "name": "Uni-See",
+        "city": "Bremen",
+        "country": "Germany",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": true,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 90,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0697_0701.json"
+      },
+      "original_queue_record": {
+        "index": 701,
+        "section": "C",
+        "id": "GS2-DE-BREMEN-006",
+        "name": "Uni-See",
+        "city": "Bremen",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 66,
+            "u": "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 701,
+        "candidate_id": "GS2-DE-BREMEN-006",
+        "name": "Uni-See",
+        "city": "Bremen",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 90,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 701,
+        "id": "GS2-DE-BREMEN-006",
+        "name": "Uni-See",
+        "city": "Bremen",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 66,
+            "u": "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html"
+            ],
+            "checked_berlin": "2026-11-06",
+            "note": "Matched archived website, date of reporting classified separately."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in collected source snapshot or targeted indexed lookups; not exhaustive absence proof."
+          }
+        ],
+        "description_rewritten": "Uni-See (Stadtwaldsee) in Bremen is a recreation lake with a FKK section and neighbouring nature reserve. Three 2026 forum posts document current conditions: September first-person onsite presence and an assertion meetings remain possible, March reports of scrub removed and more visibility and patrols, and June questions about new fencing of former FKK woods. A city-related October 2026 shoreline stabilisation programme creates new fenced edges and warns of life-threatening unstable sand during winter; plans begin in November. These are meaningful recent activity/access signals, but no verified current sexual encounter is documented.",
+        "place_identity": "confirmed_lake_2026_user_presence_and_new_conservation_fencing",
+        "additional_sources": [
+          {
+            "url": "https://gay-szene.net/uni-see-in-bremen/6824/eintrag.html",
+            "note": "March, June, September 2026 firsthand presence/access reports."
+          },
+          {
+            "url": "https://butenunbinnen.qa.gcp.radiobremen.de/nachrichten/bauarbeiten-unisee-bremen-100.html",
+            "note": "21 Oct 2026 reported shoreline works, fencing and winter quicksand danger."
+          },
+          {
+            "url": "https://www.rathaus.bremen.de/sixcms/media.php/13/20250708_top%204_Landschaftsschutzgebiert_Uni_Wildnis_und_Umgebung.pdf",
+            "note": "Official 2025 protected landscape plan around Uni-Wildnis and FKK beach."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff_inclusive": "2025-11-06",
+          "recent_dated_reports": [
+            {
+              "date": "2026-09-08",
+              "type": "first_person_on_site_social_activity_claim",
+              "note": "User says currently there, meetings remain possible despite some hostility."
+            },
+            {
+              "date": "2026-06-25",
+              "type": "first_person_fence_observation",
+              "note": "User reports wood fencing and asks why, not proof of a sex encounter."
+            },
+            {
+              "date": "2026-03-22",
+              "type": "first_person_site_and_patrol_observation",
+              "note": "Reports vegetation removal, visibility from campsite and patrols."
+            }
+          ],
+          "older_dated_reports": [],
+          "undated_directory_claim_not_activity_proof": true
+        },
+        "access_information": "FKK beach and lake public recreation where posted; restricted Uni-Wildnis conservation area and fenced wetland; autumn 2026 shoreline construction plus dangerous fresh sand. Do not cross fences or enter unstable banks.",
+        "possible_duplicates_or_safety_flags": [
+          "October 2026 planned shore works: life-threatening unstable sand in new areas.",
+          "Protected habitats and fenced wooded sections.",
+          "2026 visitors document contact/social possibilities, not reliable sexual encounters."
+        ],
+        "disposition": "retain_for_filtering_not_publication_ready",
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0697_0701.json",
       "research_archive_read_error": null,
       "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
       "publication_approved": false
