@@ -1,0 +1,30 @@
+name: Score Part 5 cruising listing completeness
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/score-part5-listing-completeness.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Classify all 1172 venue records
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/score_part5_listing_completeness.py
+            git add research/cruising/part5/listing_completeness_triage_2026-11-07.json
+            git commit -m "Audit: score 1172 candidates into four completeness categories"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
