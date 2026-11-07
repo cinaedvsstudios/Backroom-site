@@ -13,3 +13,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 scripts/check_first5_cruising_aliases.py
+
+# Rerun against corrected alias-check script.
