@@ -14,7 +14,7 @@ for name,city,aliases in pairs:
  exact=[]; candidates=[]
  for r in rows:
   rn=r.get("Name","");rc=r.get("City","")
-  samecity=(n(rc)==n(city) or (city=="Costa da Caparica" and any(k in n(rc) for k in ("caparica","almada","lisbon"))) or (city=="Riga" and any(k in n(rc) for k in ("riga","kalngale","carnikava")))
+  samecity=(n(rc)==n(city) or (city=="Costa da Caparica" and any(k in n(rc) for k in ("caparica","almada","lisbon"))) or (city=="Riga" and any(k in n(rc) for k in ("riga","kalngale","carnikava"))))
   match=any(n(a) in n(rn) or n(rn) in n(a) for a in aliases if len(n(a))>4 and len(n(rn))>4)
   if match:
    v={"Venue_ID":r.get("Venue_ID"),"Name":rn,"City":rc,"Country":r.get("Country"),"Category":r.get("Category"),"Status":r.get("Status")}
