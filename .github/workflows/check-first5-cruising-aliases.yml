@@ -1,0 +1,15 @@
+name: Check first five cruising candidates against live listings
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/check-first5-cruising-aliases.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check_first5_cruising_aliases.py
