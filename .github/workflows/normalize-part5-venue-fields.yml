@@ -1,0 +1,39 @@
+name: Consolidate Part 5 into venue-template fields
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/normalize-part5-venue-fields.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: normalize-part5-venues
+  cancel-in-progress: false
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+      - name: Map all original worker fields to exact 51-field venue template
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/normalize_part5_into_venue_schema.py
+            git add research/cruising/part5/venues_normalized_1172_RESEARCH_ONLY.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Research: consolidate all 1172 candidates into venue template schema"
+            if git push origin HEAD:main; then
+              echo "CONSOLIDATED_JSON_SAVED"
+              exit 0
+            fi
+            sleep 3
+          done
+          exit 1
