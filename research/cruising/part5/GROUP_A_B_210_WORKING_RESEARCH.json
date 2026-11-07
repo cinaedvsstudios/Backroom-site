@@ -4,7 +4,7 @@
     "created_berlin_date": "2026-11-07",
     "status": "BUILD_IN_PROGRESS",
     "target_count": 210,
-    "stored_count": 161,
+    "stored_count": 185,
     "warnings": [
       "Group A is a heuristic signal, not independently verified activity",
       "Preserved archives are read-only backups; this is the single editable working file",
@@ -30969,6 +30969,4258 @@
         "publication_status": "research_only_unverified"
       },
       "original_research_batch_file": "research/cruising/part5/D/batch_0945_0949.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 954,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-EX-SPAIN-BARCELONA-ASEOS-MERCAT-SANT-ANTONI",
+      "name": "Aseos Mercat Sant Antoni",
+      "city": "Barcelona",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 954,
+        "candidate_id": "GC1-EX-SPAIN-BARCELONA-ASEOS-MERCAT-SANT-ANTONI",
+        "name": "Aseos Mercat Sant Antoni",
+        "city": "Barcelona",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 44,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0950_0954.json"
+      },
+      "original_queue_record": {
+        "index": 954,
+        "section": "D",
+        "id": "GC1-EX-SPAIN-BARCELONA-ASEOS-MERCAT-SANT-ANTONI",
+        "name": "Aseos Mercat Sant Antoni",
+        "city": "Barcelona",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 598,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 954,
+        "candidate_id": "GC1-EX-SPAIN-BARCELONA-ASEOS-MERCAT-SANT-ANTONI",
+        "name": "Aseos Mercat Sant Antoni",
+        "city": "Barcelona",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 44,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 954,
+        "id": "GC1-EX-SPAIN-BARCELONA-ASEOS-MERCAT-SANT-ANTONI",
+        "name": "Aseos Mercat Sant Antoni",
+        "city": "Barcelona",
+        "country": "Spain",
+        "identity_support": "single_website",
+        "source_count": 1,
+        "archive_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 598,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "location": "Mercat de Sant Antoni, Carrer del Comte d'Urgell 1, 08011 Barcelona",
+        "description": "Single source's July 18 2026 comment mentions market toilets as a potential meeting place, but it is only an inquiry. The Barcelona municipal market authority has a 2026 public tender to rebuild/reconfigure toilet facilities, meaning exact accessibility could change. Market operation confirmed; cruising not.",
+        "source_checks": [
+          {
+            "source": "1",
+            "site": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "urls": [
+              "https://www.gays-cruising.com/en/barcelona/spain"
+            ],
+            "method": "Named source archive and live web article"
+          },
+          {
+            "source": "2",
+            "site": "gay-szene.net",
+            "status": "searched_no_match",
+            "urls": [],
+            "method": "Cross-source archive and domain-targeted indexed search; not exhaustive"
+          },
+          {
+            "source": "3",
+            "site": "Planet Randy",
+            "status": "searched_no_match",
+            "urls": [],
+            "method": "Cross-source archive and domain-targeted indexed search; not exhaustive"
+          },
+          {
+            "source": "4",
+            "site": "The Gay Passport",
+            "status": "searched_no_match",
+            "urls": [],
+            "method": "Cross-source archive and domain-targeted indexed search; not exhaustive"
+          },
+          {
+            "source": "5",
+            "site": "Splashd",
+            "status": "searched_no_match",
+            "urls": [],
+            "method": "Cross-source archive and domain-targeted indexed search; not exhaustive"
+          },
+          {
+            "source": "6",
+            "site": "Popcorn.dating",
+            "status": "searched_no_match",
+            "urls": [],
+            "method": "Cross-source archive and domain-targeted indexed search; not exhaustive"
+          },
+          {
+            "source": "7",
+            "site": "Squirt.org",
+            "status": "searched_no_match",
+            "urls": [],
+            "method": "Cross-source archive and domain-targeted indexed search; not exhaustive"
+          },
+          {
+            "source": "8",
+            "site": "CruisingGays",
+            "status": "searched_no_match",
+            "urls": [],
+            "method": "Cross-source archive and domain-targeted indexed search; not exhaustive"
+          }
+        ],
+        "external_evidence": [
+          {
+            "url": "https://licitacions.bcn.cat/site/8/licitacion/licitaciones/detalle?id=16930769",
+            "date": "2026-06-18",
+            "type": "official_market_toilet_renovation_tender",
+            "note": "2026 works proposed to adapt interior space for public toilets; not confirmation project finished."
+          },
+          {
+            "url": "https://guia.barcelona.cat/en/detall/mercat-sant-antoni_92086009452.html",
+            "date": "2026-11-06",
+            "type": "official_market_info",
+            "note": "Market exists and operates, not a sexual activity venue."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-07-18",
+            "source": "gays-cruising.com",
+            "type": "meeting_inquiry",
+            "finding": "Comment asking about meeting, NOT proof of actual activity."
+          }
+        ],
+        "access_and_safety": "Normal food and retail market open to families; public bathrooms may be under redesign/works. No visitor evidence or permission.",
+        "possible_duplicates": [],
+        "recency_cutoff": "2025-11-06",
+        "recent_positive_visitor_evidence": false,
+        "independent_site_activity_reporting": null,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0950_0954.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 960,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-EX-SPAIN-EL-PRAT-DE-LLOBREGAT-PARKING-RIO-LLOBREGAT-EL-PRAT",
+      "name": "Parking río Llobregat El Prat",
+      "city": "El Prat de Llobregat",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 960,
+        "candidate_id": "GC1-EX-SPAIN-EL-PRAT-DE-LLOBREGAT-PARKING-RIO-LLOBREGAT-EL-PRAT",
+        "name": "Parking río Llobregat El Prat",
+        "city": "El Prat de Llobregat",
+        "country": "Spain",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 42,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0960_0964.json"
+      },
+      "original_queue_record": {
+        "index": 960,
+        "section": "D",
+        "id": "GC1-EX-SPAIN-EL-PRAT-DE-LLOBREGAT-PARKING-RIO-LLOBREGAT-EL-PRAT",
+        "name": "Parking río Llobregat El Prat",
+        "city": "El Prat de Llobregat",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 604,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 960,
+        "candidate_id": "GC1-EX-SPAIN-EL-PRAT-DE-LLOBREGAT-PARKING-RIO-LLOBREGAT-EL-PRAT",
+        "name": "Parking río Llobregat El Prat",
+        "city": "El Prat de Llobregat",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 42,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 960,
+        "id": "GC1-EX-SPAIN-EL-PRAT-DE-LLOBREGAT-PARKING-RIO-LLOBREGAT-EL-PRAT",
+        "name": "Parking río Llobregat El Prat",
+        "city": "El Prat de Llobregat",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 604,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "identity_support": "single_website",
+        "location": "Llobregat river access and car parking in El Prat de Llobregat (exact car park and riverbank section unconfirmed)",
+        "description": "One Barcelona regional directory lists a riverside parking area in El Prat. Its August 2026 city-level check-in index shows someone checked in under the location name; this is digital user activity, not observation of cruising or proof the stop was legally accessible.",
+        "sources": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/barcelona/spain",
+            "method": "source site indexed or original archive"
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          }
+        ],
+        "extra_references": [
+          {
+            "url": "https://www.gays-cruising.com/pt/barcelona/espanha",
+            "purpose": "same website snapshot included 2026-08-25 check-in; not second source"
+          }
+        ],
+        "evidence_timeline": [
+          {
+            "date": "2026-08-25",
+            "kind": "on_platform_check_in",
+            "note": "A platform user checked in under this named spot; no actual encounter reported."
+          }
+        ],
+        "access_and_safety": "Llobregat riverside land is mixed pedestrian, cycling and protected ecology; exact road/parking permission and restrictions unverified.",
+        "possible_duplicates": [
+          {
+            "name": "El Prat río Llobregat parking",
+            "relation": "Possible differently worded same riverside access; no independent precise location."
+          }
+        ],
+        "recency_cutoff": "2025-11-06",
+        "positive_recent_cruising_evidence": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0960_0964.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 962,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-SPAIN-02",
+      "name": "Dunas Playa El Rebollo y Els Tossals",
+      "city": "La Marina",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 962,
+        "candidate_id": "GC1-SPAIN-02",
+        "name": "Dunas Playa El Rebollo y Els Tossals",
+        "city": "La Marina",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 47,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0960_0964.json"
+      },
+      "original_queue_record": {
+        "index": 962,
+        "section": "D",
+        "id": "GC1-SPAIN-02",
+        "name": "Dunas Playa El Rebollo y Els Tossals",
+        "city": "La Marina",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 606,
+            "u": "https://www.gays-cruising.com/en/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 962,
+        "candidate_id": "GC1-SPAIN-02",
+        "name": "Dunas Playa El Rebollo y Els Tossals",
+        "city": "La Marina",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 47,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 962,
+        "id": "GC1-SPAIN-02",
+        "name": "Dunas Playa El Rebollo y Els Tossals",
+        "city": "La Marina",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 606,
+            "u": "https://www.gays-cruising.com/en/spain"
+          }
+        ],
+        "identity_support": "single_website",
+        "location": "Les Pesqueres–El Rebollo / Els Tossals dunes and pine woodland between La Marina (Elche) and Guardamar del Segura",
+        "description": "Large public beach, pines and dunes popular with naturists; a heavily commented cruising directory describes historic gay male meetings but site text does not supply validated recent first-person examples. Elche's 2026 municipal report describes an active monitored public beach and extensive visitor safety patrols, not sexual permission.",
+        "sources": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/cruising/playa_de_el_rebollo_la_marina_espana_4439",
+            "method": "source site indexed or original archive"
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          }
+        ],
+        "extra_references": [
+          {
+            "url": "https://www.elche.es/2026/06/un-dispositivo-de-mas-de-40-agentes-garantiza-la-seguridad-en-las-playas-este-verano/",
+            "purpose": "Municipal June 26, 2026 summer coast patrols, not activity"
+          },
+          {
+            "url": "https://www.spain.info/en/beach/rebollo/",
+            "purpose": "Spanish tourism authority beach existence/access"
+          }
+        ],
+        "evidence_timeline": [
+          {
+            "date": "2026-06-26",
+            "kind": "municipal_safety_announcement",
+            "note": "Local police beach patrols operational through September 6; not a cruising visitor report."
+          }
+        ],
+        "access_and_safety": "High-value coastal dunes and pine habitat, swimming, families, official patrols; do not advise leaving marked paths or entering protected vegetation. Nature and public conduct rules require checking.",
+        "possible_duplicates": [
+          {
+            "name": "Els Tossals nudist beach",
+            "relation": "Adjoining Guardamar stretch; distinguish beach and pine-dune habitat when plotting."
+          }
+        ],
+        "recency_cutoff": "2025-11-06",
+        "positive_recent_cruising_evidence": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0960_0964.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 964,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ESP-LPA-02",
+      "name": "Tivoli",
+      "city": "Las Palmas de Gran Canaria",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 964,
+        "candidate_id": "GC1-ESP-LPA-02",
+        "name": "Tivoli",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 40,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0960_0964.json"
+      },
+      "original_queue_record": {
+        "index": 964,
+        "section": "D",
+        "id": "GC1-ESP-LPA-02",
+        "name": "Tivoli",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 608,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 964,
+        "candidate_id": "GC1-ESP-LPA-02",
+        "name": "Tivoli",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 40,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 964,
+        "id": "GC1-ESP-LPA-02",
+        "name": "Tivoli",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 608,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website",
+        "location": "Tívoli / former Tívoli business-park land near Playa de La Laja and GC-1 south of Las Palmas de Gran Canaria",
+        "description": "A single Las Palmas regional directory labels 'Tivoli' an industrial/park candidate. Independent 2025–2026 transport reporting places the former Tivoli land by La Laja and notes planned bus-depot works and GC-1 link resurfacing, but the exact original meeting area is unknown.",
+        "sources": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+            "method": "source site indexed or original archive"
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Cross-source archive and targeted source-name web lookups; no exact second source found, not proof of absence"
+          }
+        ],
+        "extra_references": [
+          {
+            "url": "https://www.atlanticohoy.com/palmas/guaguas-invertira-52-millones-en-terreno-antiguo-tivoli-levantar-sus-nuevas-cocheras_1551657_102.html",
+            "purpose": "2025 bus depot plans, no proof land purchase/construction finished"
+          },
+          {
+            "url": "https://7punto7radio.com/el-cabildo-iniciara-las-hobras-de-asfaltado-de-la-autovia-g-c-1-entre-hoya-de-la-plata-y-la-laja/",
+            "purpose": "Jan 2026 GC-1 project affecting Tívoli link"
+          }
+        ],
+        "evidence_timeline": [
+          {
+            "date": "2025-09-30",
+            "kind": "redevelopment_plan_news",
+            "note": "Budgeted bus-depot project for land thought to be former Tivoli; no cruise activity report."
+          },
+          {
+            "date": "2026-01-27",
+            "kind": "roadworks_news",
+            "note": "GC-1 surface works and Tivoli industrial park access link, not cruising."
+          }
+        ],
+        "access_and_safety": "Road/industrial property possibly being redeveloped, no reliable public access or activity verification.",
+        "possible_duplicates": [
+          {
+            "name": "La Laja beach",
+            "relation": "Nearby coast but distinct from industrial former Tivoli property; do not merge."
+          }
+        ],
+        "recency_cutoff": "2025-11-06",
+        "positive_recent_cruising_evidence": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0960_0964.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 965,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ESP-LPA-03",
+      "name": "Doramas - Las Palmas de Gran Canaria",
+      "city": "Las Palmas de Gran Canaria",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 965,
+        "candidate_id": "GC1-ESP-LPA-03",
+        "name": "Doramas - Las Palmas de Gran Canaria",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 43,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0965_0969.json"
+      },
+      "original_queue_record": {
+        "index": 965,
+        "section": "D",
+        "id": "GC1-ESP-LPA-03",
+        "name": "Doramas - Las Palmas de Gran Canaria",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 609,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 965,
+        "candidate_id": "GC1-ESP-LPA-03",
+        "name": "Doramas - Las Palmas de Gran Canaria",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 43,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 965,
+        "id": "GC1-ESP-LPA-03",
+        "name": "Doramas - Las Palmas de Gran Canaria",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 609,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website",
+        "location": "Parque Doramas, Calle León y Castillo / Emilio Ley, 35005 Las Palmas de Gran Canaria",
+        "description": "Historic local directory marks Doramas park as an informal place; no dated firsthand cruising encounter available. The city is currently holding a public ecology/art installation in the park from 29 October to 29 November 2026, confirming lively public recreation but not sexual activity.",
+        "per_site": [
+          {
+            "source": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+            "search_basis": "Original indexed city listing"
+          },
+          {
+            "source": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          }
+        ],
+        "independent_references": [
+          {
+            "url": "https://www.laspalmasgc.es/es/ayuntamiento/prensa-y-comunicacion/notas-de-prensa/nota-de-prensa/Biotopias-5-regresa-al-Doramas-con-una-propuesta-que-conecta-ecologia-arte-y-espacio-publico/",
+            "type": "official 2026 public park art programme"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-10-22",
+            "type": "municipal_event_announcement",
+            "summary": "City announced Biotopías 5 at park October 29–November 29; not cruising evidence."
+          }
+        ],
+        "access_and_safety": "Regular city park, school and family visitors, exhibits, no permission/confirmation of cruising. A current exhibition guide gives public viewing 07:00–23:00, not validated cruising hours.",
+        "possible_duplicates": [],
+        "cutoff": "2025-11-06",
+        "recent_credible_activity": false,
+        "publication_status": "research_only"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0965_0969.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 968,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ESP-LPA-06",
+      "name": "La Laja-Mercalaspalmas",
+      "city": "Las Palmas de Gran Canaria",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 968,
+        "candidate_id": "GC1-ESP-LPA-06",
+        "name": "La Laja-Mercalaspalmas",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 36,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0965_0969.json"
+      },
+      "original_queue_record": {
+        "index": 968,
+        "section": "D",
+        "id": "GC1-ESP-LPA-06",
+        "name": "La Laja-Mercalaspalmas",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 612,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 968,
+        "candidate_id": "GC1-ESP-LPA-06",
+        "name": "La Laja-Mercalaspalmas",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 36,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 968,
+        "id": "GC1-ESP-LPA-06",
+        "name": "La Laja-Mercalaspalmas",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 612,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website",
+        "location": "La Laja beach / Mercalaspalmas southern approach and GC-1, Las Palmas de Gran Canaria, exact side and facility unknown",
+        "description": "One regional directory combines the La Laja beach and Mercalaspalmas industrial/warehouse area in its name. These are not identical landmarks; current 2026 roadworks affect the southern GC-1 corridor but do not identify the historical meeting site.",
+        "per_site": [
+          {
+            "source": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+            "search_basis": "Original indexed city listing"
+          },
+          {
+            "source": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          }
+        ],
+        "independent_references": [
+          {
+            "url": "https://7punto7radio.com/el-cabildo-iniciara-las-hobras-de-asfaltado-de-la-autovia-g-c-1-entre-hoya-de-la-plata-y-la-laja/",
+            "type": "2026 GC-1 roadworks near La Laja, not cruising"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-01-27",
+            "type": "transport_news",
+            "summary": "Night resurfacing and altered southern access; no independent cruising scene information."
+          }
+        ],
+        "access_and_safety": "Roadside/industrial area near coast, exact motorway/market approaches unknown. Do not assert safe parking, public access, or precise pin.",
+        "possible_duplicates": [
+          {
+            "name": "Tivoli",
+            "id": "GC1-ESP-LPA-02",
+            "relation": "Nearby industrial sector toward La Laja, possible loose geographic overlap, not same specific spot."
+          }
+        ],
+        "cutoff": "2025-11-06",
+        "recent_credible_activity": false,
+        "publication_status": "research_only"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0965_0969.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 969,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ESP-LPA-07",
+      "name": "Centro Comercial La Ballena",
+      "city": "Las Palmas de Gran Canaria",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 969,
+        "candidate_id": "GC1-ESP-LPA-07",
+        "name": "Centro Comercial La Ballena",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 42,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0965_0969.json"
+      },
+      "original_queue_record": {
+        "index": 969,
+        "section": "D",
+        "id": "GC1-ESP-LPA-07",
+        "name": "Centro Comercial La Ballena",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 613,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 969,
+        "candidate_id": "GC1-ESP-LPA-07",
+        "name": "Centro Comercial La Ballena",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 42,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 969,
+        "id": "GC1-ESP-LPA-07",
+        "name": "Centro Comercial La Ballena",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 613,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website",
+        "location": "Centro Comercial La Ballena, Carretera del Norte 112, 35013 Las Palmas de Gran Canaria",
+        "description": "Operating retail and leisure centre named in single regional cruising directory. The operator's 2026 website confirms normal commercial and family programming, including an anniversary event on 6–7 November, not a sex venue. No specific restroom or dated positive cruising visitor account identified.",
+        "per_site": [
+          {
+            "source": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+            "search_basis": "Original indexed city listing"
+          },
+          {
+            "source": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          },
+          {
+            "source": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "search_basis": "Cross-source alignment and indexed domain/spot search found no exact second source; coverage non-exhaustive."
+          }
+        ],
+        "independent_references": [
+          {
+            "url": "https://centrocomerciallaballena.com/contacto/",
+            "type": "official centre location"
+          },
+          {
+            "url": "https://centrocomerciallaballena.com/informacion-util/",
+            "type": "operator hours/parking and store access"
+          },
+          {
+            "url": "https://centrocomerciallaballena.com/cat/eventos/",
+            "type": "2026 family events"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-09-04",
+            "type": "shopping_centre_event",
+            "summary": "Operator announced family-oriented casting; not cruising activity."
+          }
+        ],
+        "access_and_safety": "Mixed-age private shopping centre; staff supervision, operating hours and permissions limit access. No evidence bathrooms may be used for sex.",
+        "possible_duplicates": [],
+        "cutoff": "2025-11-06",
+        "recent_credible_activity": false,
+        "publication_status": "research_only"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0965_0969.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 972,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ESP-LPA-11",
+      "name": "Estación de guaguas de San Telmo",
+      "city": "Las Palmas de Gran Canaria",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 972,
+        "candidate_id": "GC1-ESP-LPA-11",
+        "name": "Estación de guaguas de San Telmo",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 40,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0970_0974.json"
+      },
+      "original_queue_record": {
+        "index": 972,
+        "section": "D",
+        "id": "GC1-ESP-LPA-11",
+        "name": "Estación de guaguas de San Telmo",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 617,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 972,
+        "candidate_id": "GC1-ESP-LPA-11",
+        "name": "Estación de guaguas de San Telmo",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 40,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 972,
+        "id": "GC1-ESP-LPA-11",
+        "name": "Estación de guaguas de San Telmo",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 617,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website",
+        "location": "Estación de guaguas de San Telmo, Parque de San Telmo, 35002 Las Palmas de Gran Canaria",
+        "description": "Busy passenger bus station (Guaguas) identified as an alleged cruising area by a single directory. 2026 procurement covers renovation of its east entrance, gallery and transit areas, but the dates do not confirm that toilets are currently accessible or involved.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+            "notes": "Original archived Gays-Cruising city index matched."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://contratos.gobierto.es/licitaciones/5105404",
+            "type": "2026 station entrance/gallery refurbishment procurement"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-03-09",
+            "type": "tender_announced",
+            "note": "Building/access renovation notice, unrelated to cruising"
+          },
+          {
+            "date": "2026-05-20",
+            "type": "project_award",
+            "note": "Transit-area renovation contract award, completion unknown"
+          }
+        ],
+        "access_notes": "Managed transit station, station users and security; no public sex venue, possible works. Do not confuse with nearby Teatro terminal diversion in 2026.",
+        "possible_duplicates": [],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0970_0974.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 974,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ESP-LPA-13",
+      "name": "CC Las Ramblas",
+      "city": "Las Palmas de Gran Canaria",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 974,
+        "candidate_id": "GC1-ESP-LPA-13",
+        "name": "CC Las Ramblas",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 31,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0970_0974.json"
+      },
+      "original_queue_record": {
+        "index": 974,
+        "section": "D",
+        "id": "GC1-ESP-LPA-13",
+        "name": "CC Las Ramblas",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 619,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 974,
+        "candidate_id": "GC1-ESP-LPA-13",
+        "name": "CC Las Ramblas",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 31,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 974,
+        "id": "GC1-ESP-LPA-13",
+        "name": "CC Las Ramblas",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 619,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website",
+        "location": "Centro Comercial Las Ramblas, Avenida Juan Carlos I 29, 35019 Las Palmas de Gran Canaria",
+        "description": "Active public shopping/leisure centre included in single-source cruising index. Public events in September and November 2026 confirm normal retail, family and restaurant operations but no visitor cruising reports or designated facilities.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+            "notes": "Original archived Gays-Cruising city index matched."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Cross-source alignment and spot-specific indexed search did not establish exact matching second-site page; not exhaustive."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://calendarioeventos.com/en/event/musica-savia-nueva",
+            "type": "public Sep 2026 music event and address"
+          },
+          {
+            "url": "https://concanarias.com/agenda/e/las-ramblas-caso-abierto-cena-con-misterio-y-teatro-interactivo-20ad80.html",
+            "type": "Nov 5 2026 public restaurant theatre event"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-11-05",
+            "type": "ordinary_commercial_event",
+            "note": "Interactive dinner show, not cruising evidence"
+          }
+        ],
+        "access_notes": "Private retail complex, ordinary visitors and staff; no proof any washroom is a permitted sex space.",
+        "possible_duplicates": [],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0970_0974.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 975,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ESP-LPA-14",
+      "name": "Intercambiador Santa Catalina",
+      "city": "Las Palmas de Gran Canaria",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 975,
+        "candidate_id": "GC1-ESP-LPA-14",
+        "name": "Intercambiador Santa Catalina",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 74,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0975_0979.json"
+      },
+      "original_queue_record": {
+        "index": 975,
+        "section": "D",
+        "id": "GC1-ESP-LPA-14",
+        "name": "Intercambiador Santa Catalina",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 620,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 975,
+        "candidate_id": "GC1-ESP-LPA-14",
+        "name": "Intercambiador Santa Catalina",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 74,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 975,
+        "id": "GC1-ESP-LPA-14",
+        "name": "Intercambiador Santa Catalina",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 620,
+            "u": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Intercambiador de Santa Catalina, Parque de Santa Catalina / port district, Las Palmas de Gran Canaria",
+        "description": "The city bus interchange beside Santa Catalina Park is a genuine operating transit facility. Gays-Cruising's Las Palmas index labels the interchange as a cruising candidate, but supplies neither a named toilet nor a verifiable recent encounter. The broader Santa Catalina Park has a documented queer meeting history: Canary Islands government research mentions former public urinals, now a police premises, as historic encounter space. This historical fact must not be transferred to today's bus interchange.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+            "notes": "Original archived Las Palmas city index matched; no dedicated detail-page URL established."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity match in preserved eight-site cross-source alignment; limited spot-specific indexed search did not establish a relevant second site page. This is not an exhaustive live search or evidence of absence."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity match in preserved eight-site cross-source alignment; limited spot-specific indexed search did not establish a relevant second site page. This is not an exhaustive live search or evidence of absence."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity match in preserved eight-site cross-source alignment; limited spot-specific indexed search did not establish a relevant second site page. This is not an exhaustive live search or evidence of absence."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity match in preserved eight-site cross-source alignment; limited spot-specific indexed search did not establish a relevant second site page. This is not an exhaustive live search or evidence of absence."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity match in preserved eight-site cross-source alignment; limited spot-specific indexed search did not establish a relevant second site page. This is not an exhaustive live search or evidence of absence."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity match in preserved eight-site cross-source alignment; limited spot-specific indexed search did not establish a relevant second site page. This is not an exhaustive live search or evidence of absence."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity match in preserved eight-site cross-source alignment; limited spot-specific indexed search did not establish a relevant second site page. This is not an exhaustive live search or evidence of absence."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://guaguasglobal.com/tarifas/puntos-venta/",
+            "type": "Global official current sales desk and opening hours at interchange"
+          },
+          {
+            "url": "https://www.guaguas.com/lineas/41",
+            "type": "Guaguas Municipales operating route via Santa Catalina"
+          },
+          {
+            "url": "https://www.gobiernodecanarias.org/justicia/memoriahistorica/disidenciagenero/lugaressignificativos/grancanaria/parquesantacatalina/index.html",
+            "type": "Canary Islands government historical LGBTQ place research, NOT current interchange cruising"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-11-06",
+            "type": "present_day_facility_source_checked",
+            "note": "Transit operator lists operating Intercambiador Santa Catalina and ticket desk; no recent cruising assertion."
+          }
+        ],
+        "access_notes": "Active public-transport interchange with passenger traffic, regulated areas, staff and security; operator ticket-office hours do not establish toilet hours. Former park urinals are not part of the modern facility.",
+        "possible_duplicates": [
+          {
+            "name": "Parque Santa Catalina historical public urinals",
+            "relation": "Nearby historic area, former urinals now police premises; distinct from the interchange, not a duplicate."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0975_0979.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 985,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ESP-MAS-09",
+      "name": "Holidayworld Maspalomas Center",
+      "city": "Maspalomas",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 985,
+        "candidate_id": "GC1-ESP-MAS-09",
+        "name": "Holidayworld Maspalomas Center",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 42,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0985_0989.json"
+      },
+      "original_queue_record": {
+        "index": 985,
+        "section": "D",
+        "id": "GC1-ESP-MAS-09",
+        "name": "Holidayworld Maspalomas Center",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 635,
+            "u": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 985,
+        "candidate_id": "GC1-ESP-MAS-09",
+        "name": "Holidayworld Maspalomas Center",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 42,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 985,
+        "id": "GC1-ESP-MAS-09",
+        "name": "Holidayworld Maspalomas Center",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 635,
+            "u": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Holiday World Maspalomas Center, Avenida Touroperador Tui 18, 35100 Maspalomas, Gran Canaria",
+        "description": "Operating entertainment centre with family attractions, bowling, a food hall and other leisure businesses. A Gays-Cruising listing uses its generic commercial name, but supplies no specific washroom or dated report of actual cruising. Its current official website validates existence, not sexual activity.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+            "notes": "Exact name and category matched original archived city index; dedicated page not identified."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Exact identity not aligned to another of eight original archives; targeted indexed results yielded no matching page. Limited search, not evidence of complete absence."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Exact identity not aligned to another of eight original archives; targeted indexed results yielded no matching page. Limited search, not evidence of complete absence."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Exact identity not aligned to another of eight original archives; targeted indexed results yielded no matching page. Limited search, not evidence of complete absence."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Exact identity not aligned to another of eight original archives; targeted indexed results yielded no matching page. Limited search, not evidence of complete absence."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Exact identity not aligned to another of eight original archives; targeted indexed results yielded no matching page. Limited search, not evidence of complete absence."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Exact identity not aligned to another of eight original archives; targeted indexed results yielded no matching page. Limited search, not evidence of complete absence."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "Exact identity not aligned to another of eight original archives; targeted indexed results yielded no matching page. Limited search, not evidence of complete absence."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://www.holidayworldmaspalomas.com/en/",
+            "type": "official current facility and exact address"
+          },
+          {
+            "url": "https://www.atrapalo.com/entradas/holidayworld-maspalomas-center-wooland_e4945046/",
+            "type": "2026 ticketed family amusement attraction dates"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-09-12",
+            "type": "ordinary_leisure_commercial_event",
+            "note": "Public amusement attraction tickets available for dates starting 12 September 2026; unrelated to cruising."
+          }
+        ],
+        "access_notes": "Privately managed and staffed family entertainment centre; rides and some activities are ticketed. No confirmed public access to particular bathrooms or adult-use spaces.",
+        "possible_duplicates": [
+          {
+            "name": "Baños Centro Comercial Faro 2",
+            "id": "GC1-ESP-MAS-10",
+            "relation": "Nearby but separate shopping centre; source listing approximates 500m distance."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0985_0989.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 990,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ESP-MAS-14",
+      "name": "Playa Carpinteras",
+      "city": "Maspalomas",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 990,
+        "candidate_id": "GC1-ESP-MAS-14",
+        "name": "Playa Carpinteras",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 65,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0990_0994.json"
+      },
+      "original_queue_record": {
+        "index": 990,
+        "section": "D",
+        "id": "GC1-ESP-MAS-14",
+        "name": "Playa Carpinteras",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 640,
+            "u": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 990,
+        "candidate_id": "GC1-ESP-MAS-14",
+        "name": "Playa Carpinteras",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 65,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 990,
+        "id": "GC1-ESP-MAS-14",
+        "name": "Playa Carpinteras",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 640,
+            "u": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Playa de Las Carpinteras, by GC-500 between El Pajar and Pasito Blanco, San Bartolomé de Tirajana, Gran Canaria",
+        "description": "Rock-and-pebble shoreline on Gran Canaria's southern coast, officially documented by the municipality as Playa de Las Carpinteras. Independent naturist and beach guides also identify this as a nude bathing beach and sometimes call it Las Mujeres. Its Gays-Cruising entry is a standalone cruising directory reference, but no date-specific firsthand cruising reports at this beach were verified. Nudist use does not automatically mean people are cruising.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+            "notes": "Exact matching primary archive source and/or indexed guide confirmed."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://www.maspalomas.com/playas",
+            "type": "official municipal beach location, shore terrain and access"
+          },
+          {
+            "url": "https://naturismo.org/playas-nudistas/canarias/gran-canaria/carpinteras/",
+            "type": "Spanish Naturist Federation separate beach identification"
+          },
+          {
+            "url": "https://guiaislascanarias.com/gran-canaria/playa-de-las-carpinteras//",
+            "type": "17 Sep 2026 updated beach access and landscape report"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-09-17",
+            "type": "beach_information_updated",
+            "note": "Recent independent shoreline visitor guide; no mention establishing recent gay cruising."
+          }
+        ],
+        "access_notes": "Unserviced beach with rocks, pebbles, changing tides and no verified lifeguards; municipal site notes parking and beach cleaning. Naturism not equivalent to permission for sexual activity.",
+        "possible_duplicates": [
+          {
+            "name": "Playa Las Mujeres",
+            "relation": "Alternative name for same Carpinteras beach according to an independent beach directory."
+          },
+          {
+            "name": "Playa El Cardón",
+            "relation": "Different beach on the GC-500 coast despite proximity; do not merge solely on regional context."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0990_0994.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 991,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GP4-SPAIN-MASPALOMAS-02",
+      "name": "Maspalomas gay beach — Kiosk 7",
+      "city": "Maspalomas",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 991,
+        "candidate_id": "GP4-SPAIN-MASPALOMAS-02",
+        "name": "Maspalomas gay beach — Kiosk 7",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": true,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 95,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0990_0994.json"
+      },
+      "original_queue_record": {
+        "index": 991,
+        "section": "D",
+        "id": "GP4-SPAIN-MASPALOMAS-02",
+        "name": "Maspalomas gay beach — Kiosk 7",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "4",
+            "f": "research/cruising/scrape_4.json",
+            "i": 23,
+            "u": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 991,
+        "candidate_id": "GP4-SPAIN-MASPALOMAS-02",
+        "name": "Maspalomas gay beach — Kiosk 7",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 95,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 991,
+        "id": "GP4-SPAIN-MASPALOMAS-02",
+        "name": "Maspalomas gay beach — Kiosk 7",
+        "city": "Maspalomas",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "4",
+            "f": "research/cruising/scrape_4.json",
+            "i": 23,
+            "u": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Well-established LGBTQ/gay naturist beach area on Playa de Maspalomas near the Atlantic shoreline at the edge of the protected Maspalomas Dunes. Traditional 'Kiosk 7' name; contemporary visitor guides differ on exact kiosk placement, with some naming 5 and 6.",
+        "description": "The Gay Passport's 2026 Gran Canaria guide identifies the gay beach historically known as Kiosk 7. Recent local guides explain kiosk numbers and the social centre have moved or expanded; some locate gay men mainly between kiosks 5 and 6, while others still treat kiosk 7 itself as a gay beach bar. These conflicting labels do not undermine the established beach-area identity, but make a precisely numbered kiosk pin unreliable. 2026 first-person TripAdvisor reviews document actual naturist/gay-friendly beach visits, not necessarily cruising encounters. Do not conflate open public beach with protected dune areas and bushes.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "linked_page_matched",
+            "url": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/",
+            "notes": "Exact matching primary archive source and/or indexed guide confirmed."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://thegaypassport.com/venue/kiosk-7/",
+            "type": "The Gay Passport older June 2025 venue profile (same publishing site, not independent)"
+          },
+          {
+            "url": "https://gaycation.eu/spain/maspalomas/beaches/maspalomas-gay-beach",
+            "type": "independent current guide describing modern kiosk 5–6 and former K7 name"
+          },
+          {
+            "url": "https://www.gaygrancanarias.com/cruising-gran-canaria/",
+            "type": "current island LGBT guide distinguishing beach and dune trails"
+          },
+          {
+            "url": "https://maspalomas.paradisr.com/gran-canaria-island/gay-men-beach-kiosk-7-maspalomas/",
+            "type": "local gay guide describes K5/K6 men and K7 as mixed or family, contradictory to older materials"
+          },
+          {
+            "url": "https://www.tripadvisor.de/Attraction_Review-g230095-d10324892-Reviews-Kiosco_Beach_No_7-Maspalomas_San_Bartolome_de_Tirajana_Gran_Canaria_Canary_Islan.html",
+            "type": "dated July and August 2026 firsthand reviews of beach/kiosk atmosphere; not eyewitness cruising reports"
+          },
+          {
+            "url": "https://www.maspalomas.com/notmedioambiente/992-senalizaciondunas",
+            "type": "municipal protected-dunes permitted-path signage and conservation warning"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-07-21",
+            "type": "dated_firsthand_beach_visit",
+            "note": "TripAdvisor visitor says kiosk 7 has mixed international naturist crowd; not a firsthand cruising encounter."
+          },
+          {
+            "date": "2026-08-21",
+            "type": "dated_firsthand_beach_visit",
+            "note": "TripAdvisor visitor describes quiet naturist beach and journey across dunes; not a sexual encounter."
+          },
+          {
+            "date": "2026-11-06",
+            "type": "current_guide_comparison",
+            "note": "Independent 2026 online guides conflict about whether popular gay men occupy kiosks 5/6 or 7; kiosk number must be validated before publishing."
+          }
+        ],
+        "access_notes": "Public naturist-friendly beach, relatively long walk across sand from shoreline access; no guarantee of amenities/hours for any particular kiosk. Adjacent dunes are environmentally protected; use only authorised routes and never treat the protected area as unrestricted.",
+        "possible_duplicates": [
+          {
+            "name": "Playa del Inglés",
+            "id": "GC1-ESP-MAS-05",
+            "relation": "Nearby resort beach; user-facing broad location may overlap eastern beach approach but not identical named stretch."
+          },
+          {
+            "name": "Dunas de Maspalomas",
+            "id": "CRU-LPA-MASDUN-01",
+            "relation": "Existing adjacent Backroom protected dunes candidate; different geographical/environmental area and regulatory access."
+          },
+          {
+            "name": "Gay beach",
+            "relation": "Other undifferentiated Maspalomas 'gay beach' directory record could refer to exactly this sector; review for duplicate."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0990_0994.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 993,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-SPAIN-14",
+      "name": "Área de bomberos Mollet",
+      "city": "Mollet",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 993,
+        "candidate_id": "GC1-SPAIN-14",
+        "name": "Área de bomberos Mollet",
+        "city": "Mollet",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 65,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0990_0994.json"
+      },
+      "original_queue_record": {
+        "index": 993,
+        "section": "D",
+        "id": "GC1-SPAIN-14",
+        "name": "Área de bomberos Mollet",
+        "city": "Mollet",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 643,
+            "u": "https://www.gays-cruising.com/en/spain"
+          },
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 644,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 993,
+        "candidate_id": "GC1-SPAIN-14",
+        "name": "Área de bomberos Mollet",
+        "city": "Mollet",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 65,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 993,
+        "id": "GC1-SPAIN-14",
+        "name": "Área de bomberos Mollet",
+        "city": "Mollet",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 643,
+            "u": "https://www.gays-cruising.com/en/spain"
+          },
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 644,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Small roadside resting or waiting area between Mollet fire station and Alstom rail factory on route from Mollet del Vallès toward Santa Perpètua de Mogoda, Barcelona province",
+        "description": "Original source describes a pullout or stopping place between the fire service building and Alstom train factory, toward Santa Perpètua. Its dedicated page displays hundreds of comments and large recent monthly check-in aggregate, suggesting ongoing interest on that platform, but public snapshots hide message dates and text; neither number independently verifies a 2026 witnessed encounter. Verify exact boundaries and traffic safety before any map recommendation.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/es/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296",
+            "notes": "Exact dedicated detail page found and original archive source URLs retained."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://www.gays-cruising.com/fr/mollet/barcelona/espagne",
+            "type": "same-source city index lists recent check-ins, not independent on-site verification"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-11-06",
+            "type": "undated_dynamic_usage_metric_checked",
+            "note": "Public directory page displayed 110 check-ins 'last month' and 917 comments in a crawled snapshot, without accessible dates or independent confirmation. This cannot be treated as verified physical activity."
+          }
+        ],
+        "access_notes": "Traffic and industrial/service-adjacent rest area; avoid blocking access for emergency response or railway/factory traffic. Ownership, safe stopping and legal access unresolved.",
+        "possible_duplicates": [
+          {
+            "name": "Bomberos Parque Mollet",
+            "relation": "Another named directory location ~0.7km away, potentially part of one broad fire-station complex, not established duplicate."
+          },
+          {
+            "name": "Bomberos Mollet",
+            "relation": "Another directory natural-area listing ~0.8km away, possible overlap needing maps."
+          },
+          {
+            "name": "Farinera Parque Mollet",
+            "relation": "Nearby separate park candidate ~0.5km, not same named parcel."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0990_0994.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 994,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-SPAIN-06",
+      "name": "Zona Saltoki",
+      "city": "Reus",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 994,
+        "candidate_id": "GC1-SPAIN-06",
+        "name": "Zona Saltoki",
+        "city": "Reus",
+        "country": "Spain",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 90,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0990_0994.json"
+      },
+      "original_queue_record": {
+        "index": 994,
+        "section": "D",
+        "id": "GC1-SPAIN-06",
+        "name": "Zona Saltoki",
+        "city": "Reus",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 645,
+            "u": "https://www.gays-cruising.com/en/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 994,
+        "candidate_id": "GC1-SPAIN-06",
+        "name": "Zona Saltoki",
+        "city": "Reus",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 90,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 994,
+        "id": "GC1-SPAIN-06",
+        "name": "Zona Saltoki",
+        "city": "Reus",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 645,
+            "u": "https://www.gays-cruising.com/en/spain"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Industrial/commercial surroundings identified as Saltoki Reus in Reus, Tarragona province; precise public road versus Saltoki business parcel unconfirmed",
+        "description": "A locally named industrial cruising area appears in Gays-Cruising and a second independent cruisingmap listing, which dates its directory creation to March 2022. A Tarragona cruising forum named Saltoki as an existing recognised area in January 2023, and the forum homepage displayed a Saltoki-specific live discussion started and replied to on 19 July 2026. The latter proves dated active online interest in the named location but neither post's text nor firsthand on-site sex is confirmed. Do not mistake activity in surrounding public roads for operations within the Saltoki commercial business.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/spain",
+            "notes": "Exact matching primary archive source and/or indexed guide confirmed."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No explicit exact identity in eight-site archived alignment or retrieved spot-specific index. Limited search, not exhaustive or proof of absence."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://cruisingmap.com/35481-saltoki-reus",
+            "type": "independent named cruising-area listing, created 22 March 2022"
+          },
+          {
+            "url": "https://forocruising.com/viewtopic.php?f=51&start=0&t=99200",
+            "type": "independent forum 7 January 2023 names Saltoki; later 2026 messages about other places not evidence for Saltoki"
+          },
+          {
+            "url": "https://forocruising.com/index.php?sid=db9d4871b15fcf6c2bca0a34780b250a",
+            "type": "cached 19 July 2026 forum homepage shows Saltoki-specific discussion at 14:06 and response at 14:22; messages not individually retrieved"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2022-03-22",
+            "type": "independent_older_directory_creation",
+            "note": "Cruisingmap Saltoki Reus listing created."
+          },
+          {
+            "date": "2023-01-07",
+            "type": "historic_online_location_reference",
+            "note": "Tarragona forum visitor references Saltoki as a recognised place but does not report their visit."
+          },
+          {
+            "date": "2026-07-19",
+            "type": "dated_named_forum_discussion",
+            "note": "Forocruising index displays 'Polla negra en Saltoki' posted 14:06 and reply 14:22, not a confirmed completed encounter at site."
+          }
+        ],
+        "access_notes": "Industrial/retail district; active delivery trucks and privately managed business parcels. Exact public access and conditions not verified.",
+        "possible_duplicates": [
+          {
+            "name": "SALTOKI REUS",
+            "relation": "Cruisingmap same named industrial area; direct cross-site identity match despite differing category as 'park'."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0990_0994.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 996,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-EX-SPAIN-SABADELL-BOSC-CANDEU",
+      "name": "Bosc CanDeu",
+      "city": "Sabadell",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 996,
+        "candidate_id": "GC1-EX-SPAIN-SABADELL-BOSC-CANDEU",
+        "name": "Bosc CanDeu",
+        "city": "Sabadell",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 78,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0995_0999.json"
+      },
+      "original_queue_record": {
+        "index": 996,
+        "section": "D",
+        "id": "GC1-EX-SPAIN-SABADELL-BOSC-CANDEU",
+        "name": "Bosc CanDeu",
+        "city": "Sabadell",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 647,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 996,
+        "candidate_id": "GC1-EX-SPAIN-SABADELL-BOSC-CANDEU",
+        "name": "Bosc CanDeu",
+        "city": "Sabadell",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 78,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 996,
+        "id": "GC1-EX-SPAIN-SABADELL-BOSC-CANDEU",
+        "name": "Bosc CanDeu",
+        "city": "Sabadell",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 647,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Bosc de Can Deu, Sabadell, Catalonia, forest around Masia de Can Deu and its approach paths",
+        "description": "A large wooded natural area north of Sabadell has an archived cruising entry describing paths near the masia. Directory platform check-in aggregates may show recent interest, but independent official reporting is decisive: Sabadell's 2026 African swine fever measures still prohibit access to natural areas, explicitly including Bosc de Can Deu. The municipal council sought a review of the restrictions in October 2026; a request to reopen does not mean access is permitted. No recent witnessed cruising is verified.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/pl/cruising/bosc_candeu_sabadell_espana_57473",
+            "notes": "Dedicated site page independently located on same Gays-Cruising website and original archive references retained."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No direct name/identity alignment in other seven original archives after index and indexed-search review; other independent directories listed separately. Not exhaustive."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No direct name/identity alignment in other seven original archives after index and indexed-search review; other independent directories listed separately. Not exhaustive."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No direct name/identity alignment in other seven original archives after index and indexed-search review; other independent directories listed separately. Not exhaustive."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No direct name/identity alignment in other seven original archives after index and indexed-search review; other independent directories listed separately. Not exhaustive."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No direct name/identity alignment in other seven original archives after index and indexed-search review; other independent directories listed separately. Not exhaustive."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No direct name/identity alignment in other seven original archives after index and indexed-search review; other independent directories listed separately. Not exhaustive."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No direct name/identity alignment in other seven original archives after index and indexed-search review; other independent directories listed separately. Not exhaustive."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://web.sabadell.cat/index.php?id=107264&option=com_content&view=article",
+            "type": "official municipal prohibition explicitly names Bosc Can Deu"
+          },
+          {
+            "url": "https://agricultura.gencat.cat/ca/ambits/ramaderia/sanitat-animal/programes-sanitaris/programes-sanitaris-porci/pesta-porcina-africana/",
+            "type": "Catalan government current outbreak restrictions and high-risk municipality list"
+          },
+          {
+            "url": "https://www.isabadell.cat/politica/la-junta-de-portaveus-demana-revisar-les-restriccions-de-la-pesta-porcina-339299/",
+            "type": "25 Oct 2026 council motion seeks phased reopening, proving it was still closed"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-02-20",
+            "type": "municipal_official_access_closure_notice",
+            "note": "Sabadell municipal advisory explicitly says Bosc de Can Deu cannot be used for recreation."
+          },
+          {
+            "date": "2026-10-25",
+            "type": "independent_recent_access_update",
+            "note": "Council is requesting changes to continuing restrictions; not a reopening authorization."
+          },
+          {
+            "date": "2026-11-05",
+            "type": "region_current_disease_control",
+            "note": "Current Catalan information still lists Sabadell as high-risk with access restrictions."
+          }
+        ],
+        "access_notes": "ACCESS HOLD: prohibited recreational entry to forest under ongoing African swine fever controls; fines/enforcement specifics not confirmed. Do not direct visitors there unless official rules have changed and reopening is verified.",
+        "possible_duplicates": [
+          {
+            "name": "Castellarnau",
+            "id": "GC1-SPAIN-07",
+            "relation": "Different Sabadell woodland; both potentially affected by regional controls, not duplicate."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_access_hold"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0995_0999.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 1002,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-GAP-SEVILLE-01",
+      "name": "Carrefour Macarena",
+      "city": "Seville",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 1002,
+        "candidate_id": "GC1-GAP-SEVILLE-01",
+        "name": "Carrefour Macarena",
+        "city": "Seville",
+        "country": "Spain",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 58,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_1000_1004.json"
+      },
+      "original_queue_record": {
+        "index": 1002,
+        "section": "D",
+        "id": "GC1-GAP-SEVILLE-01",
+        "name": "Carrefour Macarena",
+        "city": "Seville",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/gap_fill_scrape_1.json",
+            "i": 53,
+            "u": "https://www.gays-cruising.com/en/sevilla/sevilla/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 1002,
+        "candidate_id": "GC1-GAP-SEVILLE-01",
+        "name": "Carrefour Macarena",
+        "city": "Seville",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 58,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 1002,
+        "id": "GC1-GAP-SEVILLE-01",
+        "name": "Carrefour Macarena",
+        "city": "Seville",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/gap_fill_scrape_1.json",
+            "i": 53,
+            "u": "https://www.gays-cruising.com/en/sevilla/sevilla/spain"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Carrefour Macarena hypermarket and shopping complex, Ronda Urbana Norte s/n, 41015 Sevilla",
+        "description": "Operating Carrefour retail centre with car parking and stores. A 2018 local cruising blog specifically describes historic cruising claims about first-floor car-park toilets; the original Gays-Cruising list matches the mall. The precise toilets, their layout, any modern access restrictions and whether the practice persists are unverified. A business listing published November 2026 confirms usual retail operations, not cruising.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+            "notes": "Original Gays-Cruising archive exact named record matched; live access varies."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://www.carrefour.es/tiendas-carrefour/hipermercados/carrefour/macarena_sevilla.aspx",
+            "type": "official current Carrefour Macarena address and retail hours"
+          },
+          {
+            "url": "https://www.carrefourproperty.es/centre-commercial/carrefour-macarena/",
+            "type": "Carrefour Property owner: shopping complex and substantial parking"
+          },
+          {
+            "url": "https://guiacruising.wordpress.com/2018/03/30/sevilla-zonas/",
+            "type": "independent dated 2018 description of alleged first-floor parking toilets"
+          },
+          {
+            "url": "https://radarsuper.com/c/sevilla/sevilla/carrefour-macarena-sevilla",
+            "type": "independent 1 November 2026 retail operation update"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2018-03-30",
+            "type": "historical_cruising_directory_reference",
+            "note": "Separate blog asserted restroom cruising; no dated firsthand witness and well before cutoff."
+          },
+          {
+            "date": "2026-11-01",
+            "type": "current_independent_retail_verification",
+            "note": "Retail tracker confirms Carrefour operations; not sexual activity."
+          }
+        ],
+        "access_notes": "Family hypermarket and attached commercial complex with managed private parking. Published Mon–Sat shopping hours 09:00–22:00, not toilet hours. No evidence mall management permits sexual use.",
+        "possible_duplicates": [
+          {
+            "name": "Carrefour Macarena parking toilets",
+            "relation": "2018 blog refers to a more specific restroom within same retail complex; potential alias, not duplicate entry in queue."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_1000_1004.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 1003,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-GAP-SEVILLE-04",
+      "name": "Jardines del Guadalquivir",
+      "city": "Seville",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 1003,
+        "candidate_id": "GC1-GAP-SEVILLE-04",
+        "name": "Jardines del Guadalquivir",
+        "city": "Seville",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 82,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_1000_1004.json"
+      },
+      "original_queue_record": {
+        "index": 1003,
+        "section": "D",
+        "id": "GC1-GAP-SEVILLE-04",
+        "name": "Jardines del Guadalquivir",
+        "city": "Seville",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/gap_fill_scrape_1.json",
+            "i": 56,
+            "u": "https://www.gays-cruising.com/en/cruising/jardines_del_guadalquivir_sevilla_espana_24963"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 1003,
+        "candidate_id": "GC1-GAP-SEVILLE-04",
+        "name": "Jardines del Guadalquivir",
+        "city": "Seville",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 82,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 1003,
+        "id": "GC1-GAP-SEVILLE-04",
+        "name": "Jardines del Guadalquivir",
+        "city": "Seville",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/gap_fill_scrape_1.json",
+            "i": 56,
+            "u": "https://www.gays-cruising.com/en/cruising/jardines_del_guadalquivir_sevilla_espana_24963"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Jardines del Guadalquivir, Calle Matemáticos Rey Pastor y Castro, Isla de la Cartuja, Sevilla (by Expo 92 canal, Puente de la Barqueta and Jardín Americano)",
+        "description": "Post-Expo landscaped gardens on La Cartuja with a documented history of cruising. Gays-Cruising details former maze and several garden sections; independent Cruisingmap has an exact named record created in 2022. A July 2025 press investigation explicitly identified historic sexual encounters there, vandalism, and more than €90,000 of rehabilitation to improve pathways and safety. The directory's visible March 2026 comments mostly arrange or ask about visits, not completed observed encounters. Grounds may have changed with refurbishment; access/ownership differs from a general riverside stroll.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/cruising/jardines_del_guadalquivir_sevilla_espana_24963",
+            "notes": "Original Gays-Cruising archive exact named record matched; live access varies."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact match in preserved eight original archives or targeted indexed search; limited review and not an assertion of no presence."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://cruisingmap.com/34981-jardines-del-guadalquivir",
+            "type": "independent same-place cruising directory identity, created 20 Feb 2022"
+          },
+          {
+            "url": "https://www.elespanol.com/sevilla/20250730/zona-cruising-pulmon-verde-quiere-ayuntamiento-recuperar-jardines-guadalquivir/1003743867424_0.html",
+            "type": "30 Jul 2025 local news identifies historical cruising plus municipal rehabilitation"
+          },
+          {
+            "url": "https://www.diariodesevilla.es/sevilla/Jardines-Guadalquivir-nueva-oportunidad-joya-destrozada-Sevilla_0_1912009178.html",
+            "type": "2024 on-site journalism describing historic place and deterioration"
+          },
+          {
+            "url": "https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/espacios/isla-de-la-cartuja",
+            "type": "regional cultural administration confirms Cartuja garden location"
+          },
+          {
+            "url": "https://www.waze.com/es-419/live-map/directions/es/an/sevilla/jardines-del-guadalquivir?to=place.ChIJKwlSsPVrEg0RaI_00dE35wI",
+            "type": "commercial mapping suggests 10:00–22:00 hours, NOT authoritative current closure or access guarantee"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2025-07-30",
+            "type": "independent_historic_cruising_report",
+            "note": "El Español reports cruising historically practised here and garden rehabilitation; before 2025-11-06 cutoff."
+          },
+          {
+            "date": "2026-03-18",
+            "type": "dated_online_visit_question",
+            "note": "Directory user asks if area can be reached on foot; no actual experience."
+          },
+          {
+            "date": "2026-03-29",
+            "type": "dated_online_presence_question",
+            "note": "Directory user asks who is around in afternoon; no confirmed firsthand encounter."
+          }
+        ],
+        "access_notes": "Municipally maintained but legally regional-owned former Expo gardens, subject to rehabilitation works, paths and lighting changes. Do not imply unrestricted night access; park hours from independent mapping not verified by park manager. No authorised public sex use.",
+        "possible_duplicates": [
+          {
+            "name": "Ribera del Guadalquivir",
+            "relation": "Broader riverbank candidate ~1.5 km away, different physical parcel."
+          },
+          {
+            "name": "Parque del Alamillo",
+            "relation": "Larger separate La Cartuja park north of gardens, not same location."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_1000_1004.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 1007,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-GAP-SEVILLE-10",
+      "name": "Wc Estación de autobuses del Prado de San Sebastián",
+      "city": "Seville",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 1007,
+        "candidate_id": "GC1-GAP-SEVILLE-10",
+        "name": "Wc Estación de autobuses del Prado de San Sebastián",
+        "city": "Seville",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 83,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_1005_1009.json"
+      },
+      "original_queue_record": {
+        "index": 1007,
+        "section": "D",
+        "id": "GC1-GAP-SEVILLE-10",
+        "name": "Wc Estación de autobuses del Prado de San Sebastián",
+        "city": "Seville",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/gap_fill_scrape_1.json",
+            "i": 62,
+            "u": "https://www.gays-cruising.com/en/cruising/wc_estacion_sevilla_espana_17568"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 1007,
+        "candidate_id": "GC1-GAP-SEVILLE-10",
+        "name": "Wc Estación de autobuses del Prado de San Sebastián",
+        "city": "Seville",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 83,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 1007,
+        "id": "GC1-GAP-SEVILLE-10",
+        "name": "Wc Estación de autobuses del Prado de San Sebastián",
+        "city": "Seville",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/gap_fill_scrape_1.json",
+            "i": 62,
+            "u": "https://www.gays-cruising.com/en/cruising/wc_estacion_sevilla_espana_17568"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Restroom at Estación de Autobuses Prado de San Sebastián, Calle Manuel Vázquez Sagastizábal s/n, 41004 Sevilla",
+        "description": "A restroom listing inside the operating Prado de San Sebastián bus terminal. An independent 2018 guide also singles out hall and platform toilets as historic cruising spots; this is dated directory background rather than proof of 2026 encounters. Current metropolitan transport operator confirms station services and address, and some bus routes were transferred here from Plaza de Armas in July 2026. The stop also connects with Metro/tram and city buses, so the source must not be confused with unrelated facilities at adjacent stops.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/cruising/wc_estacion_sevilla_espana_17568",
+            "notes": "Exact original source archive reference retained."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact cross-site identity in eight-site archive and spot-specific index searches; limited, not exhaustive."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact cross-site identity in eight-site archive and spot-specific index searches; limited, not exhaustive."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact cross-site identity in eight-site archive and spot-specific index searches; limited, not exhaustive."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact cross-site identity in eight-site archive and spot-specific index searches; limited, not exhaustive."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact cross-site identity in eight-site archive and spot-specific index searches; limited, not exhaustive."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact cross-site identity in eight-site archive and spot-specific index searches; limited, not exhaustive."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact cross-site identity in eight-site archive and spot-specific index searches; limited, not exhaustive."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://ctas.es/lineas-y-horarios/estaciones-y-aeropuerto",
+            "type": "official transport consortium names station and address"
+          },
+          {
+            "url": "https://www.autobusesplazadearmas.es/alertas/",
+            "type": "official route notice July 2026 transferred some lines to Prado terminal"
+          },
+          {
+            "url": "https://guiacruising.wordpress.com/2018/03/30/sevilla-zonas/",
+            "type": "independent 2018 historic write-up of restroom use"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2018-03-30",
+            "type": "historic_separate_directory_reference",
+            "note": "Independent blog described hall and platform toilets; no date-specific encounter."
+          },
+          {
+            "date": "2026-07-01",
+            "type": "transport_operations_change",
+            "note": "Official bus operator transferred some service destinations to Prado; no relation to cruising."
+          }
+        ],
+        "access_notes": "Managed bus terminal with travellers, security, cleaners; opening and WC availability not independently verified. No public sexual activity permission.",
+        "possible_duplicates": [
+          {
+            "name": "Prado San Sebastián Metro station",
+            "relation": "Nearby separate Metro facility; not same toilet without explicit source detail."
+          },
+          {
+            "name": "Plaza de Armas Bus Station",
+            "id": "CG8-35061",
+            "relation": "Entirely different city bus terminal; not a duplicate."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_1005_1009.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 1011,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-GAP-SEVILLE-14",
+      "name": "Alcampo Tamarguillo",
+      "city": "Seville",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 1011,
+        "candidate_id": "GC1-GAP-SEVILLE-14",
+        "name": "Alcampo Tamarguillo",
+        "city": "Seville",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 56,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_1010_1014.json"
+      },
+      "original_queue_record": {
+        "index": 1011,
+        "section": "D",
+        "id": "GC1-GAP-SEVILLE-14",
+        "name": "Alcampo Tamarguillo",
+        "city": "Seville",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/gap_fill_scrape_1.json",
+            "i": 66,
+            "u": "https://www.gays-cruising.com/en/sevilla/sevilla/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 1011,
+        "candidate_id": "GC1-GAP-SEVILLE-14",
+        "name": "Alcampo Tamarguillo",
+        "city": "Seville",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 56,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 1011,
+        "id": "GC1-GAP-SEVILLE-14",
+        "name": "Alcampo Tamarguillo",
+        "city": "Seville",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/gap_fill_scrape_1.json",
+            "i": 66,
+            "u": "https://www.gays-cruising.com/en/sevilla/sevilla/spain"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Centro Comercial Alcampo Tamarguillo, Ronda del Tamarguillo 27, 41006 Sevilla",
+        "description": "Original cruising-city index lists Alcampo Tamarguillo as an unspecified shopping-area candidate. The independently operating official shopping centre site verifies a staffed mall, hypermarket, services and event programme; it does not mention a cruising place, floor or bathroom. Different sections advertise slightly different schedules, so only their general retail hours are dependable and no washroom hours established.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+            "notes": "Original site index and source archive directly matched. Individual page was not independently recovered; no invented live encounter."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://ccalcampotamarguillo.es/",
+            "type": "official centre address, businesses and hours"
+          },
+          {
+            "url": "https://ccalcampotamarguillo.es/horario",
+            "type": "official extended schedule and separate gym/hypermarket operations"
+          },
+          {
+            "url": "https://ccalcampotamarguillo.es/evento/festivos-apertura-2026",
+            "type": "official 2026 Sunday/holiday openings and garage schedule"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-11-06",
+            "type": "current_2026_business_verification",
+            "note": "Mall's own 2026 schedules confirm operation, not cruising activity."
+          }
+        ],
+        "access_notes": "Managed commercial shopping centre. Normal commercial hall around 10:00–22:00 and hypermarket 09:00–22:00 with exceptions. The official schedule page quotes 22:30 for some sections; check on day. Public toilets and sexual activity not verified or endorsed.",
+        "possible_duplicates": [
+          {
+            "name": "CC Los Arcos",
+            "id": "GC1-GAP-SEVILLE-13",
+            "relation": "Another commercial centre in Sevilla, not same location."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_1010_1014.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 1012,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-EX-SPAIN-TERRASSA-CARREFOUR-TERRASSA",
+      "name": "Carrefour Terrassa",
+      "city": "Terrassa",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 1012,
+        "candidate_id": "GC1-EX-SPAIN-TERRASSA-CARREFOUR-TERRASSA",
+        "name": "Carrefour Terrassa",
+        "city": "Terrassa",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 66,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_1010_1014.json"
+      },
+      "original_queue_record": {
+        "index": 1012,
+        "section": "D",
+        "id": "GC1-EX-SPAIN-TERRASSA-CARREFOUR-TERRASSA",
+        "name": "Carrefour Terrassa",
+        "city": "Terrassa",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 652,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 1012,
+        "candidate_id": "GC1-EX-SPAIN-TERRASSA-CARREFOUR-TERRASSA",
+        "name": "Carrefour Terrassa",
+        "city": "Terrassa",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 66,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 1012,
+        "id": "GC1-EX-SPAIN-TERRASSA-CARREFOUR-TERRASSA",
+        "name": "Carrefour Terrassa",
+        "city": "Terrassa",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 652,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Unspecified Carrefour business in Terrassa, Barcelona province; possible Carrefour Vallès (C-58 km 17.8) or Carrefour Montserrat (Avenida Extremadura, Sector Montserrat) among multiple branches",
+        "description": "2026 Gays-Cruising Barcelona province activity index mentions a 'Carrefour Terrassa' shopping area and dates an online comment to 18 July 2026. The comment text, identity of the branch, exact restroom and whether it reports a visit are not accessible. Carrefour maintains more than one hypermarket and several smaller stores in Terrassa. Both official Vallès and Montserrat addresses exist; assigning one by guess would misplace the candidate.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/barcelona/spain",
+            "notes": "Original site index and source archive directly matched. Individual page was not independently recovered; no invented live encounter."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://www.carrefour.es/tiendas-carrefour/hipermercados/carrefour/valles_terrassa.aspx",
+            "type": "official Carrefour Vallès hypermarket location, potential but UNCONFIRMED match"
+          },
+          {
+            "url": "https://www.carrefour.es/tiendas-carrefour/hipermercados/outlet/montserrat.aspx",
+            "type": "official separate Montserrat centre location, potential but UNCONFIRMED match"
+          },
+          {
+            "url": "https://radarsuper.com/c/barcelona/terrassa",
+            "type": "2026 independent retail index enumerates six Carrefour stores, corroborates naming ambiguity"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-07-18",
+            "type": "archived_source_online_comment_date",
+            "note": "Scrape_1 labels location as from July 2026 comment on original site; comment content and firsthand observation unknown."
+          }
+        ],
+        "access_notes": "Exact branch unresolved, so cannot name a specific toilet, address, entrance or hours. All possible stores are managed retail premises, not approved public sex facilities.",
+        "possible_duplicates": [
+          {
+            "name": "Carrefour Vallès Terrassa",
+            "relation": "Possible target due large hypermarket, not verified."
+          },
+          {
+            "name": "Carrefour Montserrat Terrassa",
+            "relation": "Second possible hypermarket branch; not same as Vallès."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_geography_review"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_1010_1014.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 1013,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-EX-SPAIN-TORDERA-POLIGONO-INDUSTRIAL-MAS-PUIGVERT",
+      "name": "Polígono Industrial Mas Puigvert",
+      "city": "Tordera",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 1013,
+        "candidate_id": "GC1-EX-SPAIN-TORDERA-POLIGONO-INDUSTRIAL-MAS-PUIGVERT",
+        "name": "Polígono Industrial Mas Puigvert",
+        "city": "Tordera",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 82,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_1010_1014.json"
+      },
+      "original_queue_record": {
+        "index": 1013,
+        "section": "D",
+        "id": "GC1-EX-SPAIN-TORDERA-POLIGONO-INDUSTRIAL-MAS-PUIGVERT",
+        "name": "Polígono Industrial Mas Puigvert",
+        "city": "Tordera",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 653,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 1013,
+        "candidate_id": "GC1-EX-SPAIN-TORDERA-POLIGONO-INDUSTRIAL-MAS-PUIGVERT",
+        "name": "Polígono Industrial Mas Puigvert",
+        "city": "Tordera",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 82,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 1013,
+        "id": "GC1-EX-SPAIN-TORDERA-POLIGONO-INDUSTRIAL-MAS-PUIGVERT",
+        "name": "Polígono Industrial Mas Puigvert",
+        "city": "Tordera",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 653,
+            "u": "https://www.gays-cruising.com/en/barcelona/spain"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Polígon Industrial Mas Puigvert, Antic Camí de Tordera, 08389 Palafolls, Barcelona province; adjoining Tordera, but municipal jurisdiction PALAFOLLS",
+        "description": "The original Gays-Cruising Barcelona province activity list assigns Mas Puigvert industrial estate to Tordera and dates an online comment 18 July 2026, but no comment content or firsthand encounter is visible. Independent municipal, government and actual business sources consistently place the physical industrial estate in adjacent Palafolls, near the N-II and road toward Tordera. Keep source city in research metadata, but flag corrected probable municipality for later geocoding rather than publishing under Tordera. Industrial-zone boundaries and precise alleged meeting point remain unknown.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/barcelona/spain",
+            "notes": "Original site index and source archive directly matched. Individual page was not independently recovered; no invented live encounter."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://www.robama.com/es/aviso-legal/",
+            "type": "industrial business's own address explicitly places Mas Puigvert in Palafolls"
+          },
+          {
+            "url": "https://patrimonicultural.diba.cat/index.php/element/forns-de-can-puigvert-o-forns-del-moli-den-puigverd",
+            "type": "Barcelona provincial cultural register locates Polígon Mas Puigvert in Palafolls near Tordera road"
+          },
+          {
+            "url": "https://www.blanes.cat/docweb/2017-06-06-canonada",
+            "type": "municipal 2017 industrial project describes estate as Palafolls jurisdiction"
+          },
+          {
+            "url": "https://nausmar.com/property/nau-industrial-a-palafolls-3/",
+            "type": "current industrial property offer identifies estate in Palafolls"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-07-18",
+            "type": "archived_source_online_comment_date",
+            "note": "Gays-Cruising scrape records comment date but no message text; cannot classify as witnessed activity."
+          }
+        ],
+        "access_notes": "Commercial/industrial estate with factories, truck access, service roads and private parcels. Never direct visitors onto factory property. Municipality mismatch needs review; no specific safe/authorised meeting point or permitted access verified.",
+        "possible_duplicates": [
+          {
+            "name": "Polígono Industrial Mas Puigvert, Palafolls",
+            "relation": "SAME named industrial park, source town appears miscategorised as Tordera. Do not create a second location in Palafolls; correct during review."
+          },
+          {
+            "name": "Mas Puigvert / Mas Puigverd",
+            "relation": "Spelling variation in Catalan government heritage sources, likely same locality but not exact claimed site."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_geography_review"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_1010_1014.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 1014,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-SPAIN-12",
+      "name": "Calle Miguel Servet",
+      "city": "Valdemoro",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 1014,
+        "candidate_id": "GC1-SPAIN-12",
+        "name": "Calle Miguel Servet",
+        "city": "Valdemoro",
+        "country": "Spain",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 76,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_1010_1014.json"
+      },
+      "original_queue_record": {
+        "index": 1014,
+        "section": "D",
+        "id": "GC1-SPAIN-12",
+        "name": "Calle Miguel Servet",
+        "city": "Valdemoro",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 654,
+            "u": "https://www.gays-cruising.com/en/spain"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 1014,
+        "candidate_id": "GC1-SPAIN-12",
+        "name": "Calle Miguel Servet",
+        "city": "Valdemoro",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 76,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 1014,
+        "id": "GC1-SPAIN-12",
+        "name": "Calle Miguel Servet",
+        "city": "Valdemoro",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 654,
+            "u": "https://www.gays-cruising.com/en/spain"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Industrial roadside / woodland behind a Volvo business on Calle Miguel Servet, Valdemoro, Madrid region (specific pin and street section unresolved)",
+        "description": "Gays-Cruising lists Calle Miguel Servet as a natural-area cruising candidate. A distinct independent Cruisingmap record 'Pinar de la VOLVO' created 3 October 2026 describes vehicles or people approaching the pine wood from Calle Miguel Servet near a Volvo business. This closely corroborates the likely site identity but is a recently created directory claim with zero firsthand forum messages, not a dated encounter report. It also notes abandoned structures; these are not confirmed as accessible or safe.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/spain",
+            "notes": "Original site index and source archive directly matched. Individual page was not independently recovered; no invented live encounter."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No exact identity linkage in original eight-website alignment or spot-specific indexed research. This is a limited search, not proof the site has no record."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://cruisingmap.com/57933-pinar-de-la-volvo",
+            "type": "independent matching neighbourhood/site directory created 3 Oct 2026, no comments"
+          },
+          {
+            "url": "https://mispicaderos.com/57933-pinar-de-la-volvo",
+            "type": "mirror of same entry ID, NOT independent second witness"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-10-03",
+            "type": "independent_directory_record_created",
+            "note": "Cruisingmap listing created 03.10.2026, identifies woodland behind Volvo business near Calle Miguel Servet. Zero messages; not verified physical encounter."
+          }
+        ],
+        "access_notes": "Industrial-roadside pine wood; private property boundaries, derelict buildings, lighting, traffic and legal access unresolved. Do not suggest entry into abandoned structures.",
+        "possible_duplicates": [
+          {
+            "name": "Pinar de la VOLVO",
+            "relation": "Very likely same area as Calle Miguel Servet according to detailed independent place description; confirm exact entrance/land boundaries."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_1010_1014.json",
+      "research_archive_read_error": null,
+      "publication_approved": false
+    },
+    {
+      "queue_index": 1019,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "PC6-ES-PLATJA-TORN",
+      "name": "Platja del Torn",
+      "city": "L'Infant",
+      "country": "Spain",
+      "priority_assessment": {
+        "queue_index": 1019,
+        "candidate_id": "PC6-ES-PLATJA-TORN",
+        "name": "Platja del Torn",
+        "city": "L'Infant",
+        "country": "Spain",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 96,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_1015_1019.json"
+      },
+      "original_queue_record": {
+        "index": 1019,
+        "section": "D",
+        "id": "PC6-ES-PLATJA-TORN",
+        "name": "Platja del Torn",
+        "city": "L'Infant",
+        "country": "Spain",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "6",
+            "f": "research/cruising/scrape_6.json",
+            "i": 15,
+            "u": "https://www.popcorn.dating/spain/tarragona/l%27infant/locations/public-sex/outdoor/platja-del-torn/18421/"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 1019,
+        "candidate_id": "PC6-ES-PLATJA-TORN",
+        "name": "Platja del Torn",
+        "city": "L'Infant",
+        "country": "Spain",
+        "bucket": "quarter_complete",
+        "description_words": 96,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 1019,
+        "id": "PC6-ES-PLATJA-TORN",
+        "name": "Platja del Torn",
+        "city": "L'Infant",
+        "country": "Spain",
+        "source_refs": [
+          {
+            "s": "6",
+            "f": "research/cruising/scrape_6.json",
+            "i": 15,
+            "u": "https://www.popcorn.dating/spain/tarragona/l%27infant/locations/public-sex/outdoor/platja-del-torn/18421/"
+          }
+        ],
+        "identity_support": "single_website_in_archived_alignment",
+        "location": "Platja del Torn in protected natural area La Rojala, L'Hospitalet de l'Infant (Vandellòs municipality), Tarragona, Catalonia; original source calls city L'Infant",
+        "description": "An internationally known naturist beach set in protected La Rojala; the municipal tourism office confirms a long beach with N-340 access and protected dunes/vegetation. Popcorn.dating classifies a particular woodland near the southern beach edge as a public-sex location, but the detail page is inaccessible and its audience includes mixed orientations. Independent naturist federation confirms beach use; this is not corroboration of gay cruising. Official regional MIDIT commissioned regulation of road access and car parks in February–May 2026, so historic descriptions of easy uncontrolled vehicle parking may already be stale. No verified recent firsthand cruising encounter found.",
+        "source_checks": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No matching ID/linkage in preserved other original eight-site alignment or targeted indexed result; review not exhaustive."
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No matching ID/linkage in preserved other original eight-site alignment or targeted indexed result; review not exhaustive."
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No matching ID/linkage in preserved other original eight-site alignment or targeted indexed result; review not exhaustive."
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No matching ID/linkage in preserved other original eight-site alignment or targeted indexed result; review not exhaustive."
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No matching ID/linkage in preserved other original eight-site alignment or targeted indexed result; review not exhaustive."
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "archive_only_match_detail_unavailable",
+            "url": "https://www.popcorn.dating/spain/tarragona/l%27infant/locations/public-sex/outdoor/platja-del-torn/18421/",
+            "notes": "Original Popcorn index cached; individual detail page currently unavailable, and site's audience mixed orientation. Do NOT claim direct detail checked."
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No matching ID/linkage in preserved other original eight-site alignment or targeted indexed result; review not exhaustive."
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "notes": "No matching ID/linkage in preserved other original eight-site alignment or targeted indexed result; review not exhaustive."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://www.hospitalet-valldellors.cat/en/the-sea/beaches/%40%40beach_view/platja-del-torn",
+            "type": "municipal tourism beach and conservation description; lifeguard seasonal hours"
+          },
+          {
+            "url": "https://naturismo.org/playas-nudistas/catalunya/tarragona/el-torn/",
+            "type": "Spanish Naturist Federation confirms destination and adjacent naturist camping"
+          },
+          {
+            "url": "https://www.midit2020.com/es/actualidad/la-midit-treu-a-licitacio-les-d-obres-de-l-actuacio-de-regulacio-d-accessos-rodats-als-aparcaments-del-sector-sud-de-l-ein-la-rojala-platja-del-torn-emmarcat-al-pstd-financat-en-el-marc-del-prtr-next-generation-eu",
+            "type": "official 30 March 2026 announcement to regulate southern parking road accesses"
+          },
+          {
+            "url": "https://opendatalicit.com/licitaciones/19352423-es-objecte-d-aquest-el-contracte-l-execucio-de-les-obres-incloses-al-projecte",
+            "type": "independent procurement record confirms 4 May 2026 access works contract signed"
+          }
+        ],
+        "dated_evidence": [
+          {
+            "date": "2026-03-30",
+            "type": "official_parking_access_project",
+            "note": "MIDIT announced competition for regulation of motor access to southern La Rojala-Platja del Torn parking; not confirmed final works state."
+          },
+          {
+            "date": "2026-05-04",
+            "type": "independent_contract_award_report",
+            "note": "Works contract signed 4 May 2026 for parking access regulation, not cruising."
+          }
+        ],
+        "access_notes": "Natural protected zone and genuine naturist beach; beach access generally public but adjacent camping/private property separate. Parking road access subject to change following 2026 works, and naturism is not sex permission. Avoid dune vegetation and non-authorised trails.",
+        "possible_duplicates": [
+          {
+            "name": "Platja del Torn naturist beach",
+            "relation": "Exactly the physical beach, separate Popcorn public-sex allegation by wooded edge; do not create unrelated duplicate."
+          },
+          {
+            "name": "Camping El Templo del Sol",
+            "relation": "Adjacent naturist campground, private/ticketed accommodation rather than public beach."
+          }
+        ],
+        "activity_cutoff": "2025-11-06",
+        "credible_recent_activity": false,
+        "publication_status": "research_only_protected_area_hold"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_1015_1019.json",
       "research_archive_read_error": null,
       "publication_approved": false
     }
