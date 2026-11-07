@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/normalize-part5-venue-fields.yml
+      - research/cruising/part5/review55/geocoding_55_2026-11-07.json
   workflow_dispatch:
 permissions:
   contents: write
