@@ -37,3 +37,5 @@ jobs:
             sleep 3
           done
           exit 1
+
+# Updated to use canonical queue identity fallback for worker-record gaps.
