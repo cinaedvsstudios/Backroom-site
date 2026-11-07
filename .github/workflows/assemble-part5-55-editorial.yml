@@ -1,0 +1,41 @@
+name: Assemble all 55 reviewed cruising venue drafts
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/assemble-part5-55-editorial.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: assemble-part5-55
+  cancel-in-progress: false
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Assemble 55 reviews as venue schema and preserve scope routing
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/assemble_part5_55_editorial.py
+            git add research/cruising/part5/review55/ALL_55_REVIEWED.json
+            git add research/cruising/part5/review55/READY_VENUE_DRAFTS.json
+            git add research/cruising/part5/review55/HELD_VENUE_DRAFTS.json
+            git add research/cruising/part5/review55/ACTIVE_SCOPE_ROUTING_1172.json
+            git add research/cruising/part5/review55/REPORT_55.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Review 55: produce 51-field ready and held drafts and scope manifest"
+            if git push origin HEAD:main; then
+              echo "REVIEW_55_ALL_FILES_SAVED"
+              exit 0
+            fi
+            sleep 4
+          done
+          exit 1
