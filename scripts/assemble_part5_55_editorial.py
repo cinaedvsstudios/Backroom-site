@@ -110,7 +110,6 @@ for packet,e in zip(packets,editorials):
     })
     if idx in corrections_by_index:
         for field,value in corrections_by_index[idx].items():
-            if field not in base:raise ValueError(f"Unknown field in correction: {field}")
             mapped_field={"address":"Address","postcode":"Postcode","nearest_station":"Nearest_Station"}.get(field,field)
             if mapped_field not in base:raise ValueError(f"Unknown mapped field {mapped_field}")
             base[mapped_field]=value
