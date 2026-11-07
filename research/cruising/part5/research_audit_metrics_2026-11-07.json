@@ -1,0 +1,5528 @@
+{
+  "as_of_berlin": "2026-11-07T03:09:45+01:00",
+  "data_source": "research/cruising/part5/combined_research_snapshot.json",
+  "records": 1172,
+  "missing_index_count": 0,
+  "workers": {
+    "A": {
+      "count": 293,
+      "range": [
+        1,
+        293
+      ]
+    },
+    "B": {
+      "count": 293,
+      "range": [
+        294,
+        586
+      ]
+    },
+    "C": {
+      "count": 293,
+      "range": [
+        587,
+        879
+      ]
+    },
+    "D": {
+      "count": 293,
+      "range": [
+        880,
+        1172
+      ]
+    }
+  },
+  "countries": 41,
+  "cities": 386,
+  "top_countries": [
+    [
+      "Germany",
+      325
+    ],
+    [
+      "United Kingdom",
+      161
+    ],
+    [
+      "Spain",
+      85
+    ],
+    [
+      "Italy",
+      66
+    ],
+    [
+      "Belgium",
+      29
+    ],
+    [
+      "Switzerland",
+      27
+    ],
+    [
+      "Austria",
+      25
+    ],
+    [
+      "Hungary",
+      21
+    ],
+    [
+      "Netherlands",
+      21
+    ],
+    [
+      "Poland",
+      20
+    ],
+    [
+      "Finland",
+      18
+    ],
+    [
+      "France",
+      18
+    ],
+    [
+      "Israel",
+      17
+    ],
+    [
+      "Greece",
+      17
+    ],
+    [
+      "United States",
+      16
+    ],
+    [
+      "Estonia",
+      15
+    ],
+    [
+      "Luxembourg",
+      15
+    ],
+    [
+      "Montenegro",
+      15
+    ],
+    [
+      "Sweden",
+      15
+    ],
+    [
+      "Czechia",
+      15
+    ],
+    [
+      "Malta",
+      15
+    ],
+    [
+      "Latvia",
+      15
+    ],
+    [
+      "Georgia",
+      14
+    ],
+    [
+      "Lithuania",
+      14
+    ],
+    [
+      "Slovakia",
+      14
+    ],
+    [
+      "Cyprus",
+      14
+    ],
+    [
+      "Romania",
+      14
+    ],
+    [
+      "Denmark",
+      14
+    ],
+    [
+      "Andorra",
+      13
+    ],
+    [
+      "Bulgaria",
+      13
+    ],
+    [
+      "Ireland",
+      13
+    ],
+    [
+      "Serbia",
+      13
+    ],
+    [
+      "Norway",
+      13
+    ],
+    [
+      "Slovenia",
+      12
+    ],
+    [
+      "Bosnia and Herzegovina",
+      12
+    ],
+    [
+      "Portugal",
+      12
+    ],
+    [
+      "Turkey",
+      8
+    ],
+    [
+      "Iceland",
+      4
+    ],
+    [
+      "Kosovo",
+      2
+    ],
+    [
+      "Armenia",
+      1
+    ],
+    [
+      "Liechtenstein",
+      1
+    ]
+  ],
+  "top_cities": [
+    {
+      "city": "London",
+      "country": "United Kingdom",
+      "count": 142
+    },
+    {
+      "city": "Berlin",
+      "country": "Germany",
+      "count": 70
+    },
+    {
+      "city": "Hamburg",
+      "country": "Germany",
+      "count": 35
+    },
+    {
+      "city": "Cologne",
+      "country": "Germany",
+      "count": 25
+    },
+    {
+      "city": "Munich",
+      "country": "Germany",
+      "count": 24
+    },
+    {
+      "city": "Stuttgart",
+      "country": "Germany",
+      "count": 17
+    },
+    {
+      "city": "Budapest",
+      "country": "Hungary",
+      "count": 15
+    },
+    {
+      "city": "Hannover",
+      "country": "Germany",
+      "count": 14
+    },
+    {
+      "city": "Las Palmas de Gran Canaria",
+      "country": "Spain",
+      "count": 14
+    },
+    {
+      "city": "Belgrade",
+      "country": "Serbia",
+      "count": 13
+    },
+    {
+      "city": "Riga",
+      "country": "Latvia",
+      "count": 13
+    },
+    {
+      "city": "Düsseldorf",
+      "country": "Germany",
+      "count": 13
+    },
+    {
+      "city": "Frankfurt am Main",
+      "country": "Germany",
+      "count": 13
+    },
+    {
+      "city": "Dortmund",
+      "country": "Germany",
+      "count": 12
+    },
+    {
+      "city": "Seville",
+      "country": "Spain",
+      "count": 12
+    },
+    {
+      "city": "Tallinn",
+      "country": "Estonia",
+      "count": 11
+    },
+    {
+      "city": "Tbilisi",
+      "country": "Georgia",
+      "count": 11
+    },
+    {
+      "city": "Verona",
+      "country": "Italy",
+      "count": 11
+    },
+    {
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "count": 11
+    },
+    {
+      "city": "Maspalomas",
+      "country": "Spain",
+      "count": 11
+    },
+    {
+      "city": "Bratislava",
+      "country": "Slovakia",
+      "count": 10
+    },
+    {
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "count": 10
+    },
+    {
+      "city": "Salzburg",
+      "country": "Austria",
+      "count": 10
+    },
+    {
+      "city": "Duisburg",
+      "country": "Germany",
+      "count": 10
+    },
+    {
+      "city": null,
+      "country": "Germany",
+      "count": 10
+    },
+    {
+      "city": "Bruges",
+      "country": "Belgium",
+      "count": 9
+    },
+    {
+      "city": "Milan",
+      "country": "Italy",
+      "count": 9
+    },
+    {
+      "city": "Lucerne",
+      "country": "Switzerland",
+      "count": 9
+    },
+    {
+      "city": "Dresden",
+      "country": "Germany",
+      "count": 9
+    },
+    {
+      "city": "Ljubljana",
+      "country": "Slovenia",
+      "count": 8
+    },
+    {
+      "city": "Vienna",
+      "country": "Austria",
+      "count": 8
+    },
+    {
+      "city": "Bologna",
+      "country": "Italy",
+      "count": 8
+    },
+    {
+      "city": "Florence",
+      "country": "Italy",
+      "count": 8
+    },
+    {
+      "city": "Karlsruhe",
+      "country": "Germany",
+      "count": 8
+    },
+    {
+      "city": "Mannheim",
+      "country": "Germany",
+      "count": 8
+    }
+  ],
+  "candidate_source_count_histogram": {
+    "1": 1081,
+    "2": 83,
+    "3": 8
+  },
+  "candidate_source_frequency": {
+    "1": 689,
+    "8": 47,
+    "4": 19,
+    "6": 8,
+    "5": 135,
+    "7": 15,
+    "3": 115,
+    "2": 243
+  },
+  "top_level_fields_by_worker": {
+    "A": {
+      "index": 293,
+      "proposal_id": 293,
+      "name": 293,
+      "city": 293,
+      "country": 293,
+      "original_source_refs": 293,
+      "publish_approved": 263,
+      "source_checks": 238,
+      "review_flags": 238,
+      "recent_activity": 130,
+      "verification_sources": 125,
+      "recent_activity_since_2025_11_06": 118,
+      "dated_reports": 98,
+      "place_summary": 90,
+      "research_phase": 90,
+      "phase": 75,
+      "identity_and_access": 73,
+      "research_status": 65,
+      "primary_url": 63,
+      "research_stage": 53,
+      "flags": 50,
+      "evidence_sources": 43,
+      "site_checks": 35,
+      "place_identity_and_access": 35,
+      "publication_approved": 30,
+      "place_assessment": 25,
+      "recency": 20,
+      "evidence": 15,
+      "primary_spot_url": 15,
+      "original_archive_records": 15,
+      "original_source_count": 10,
+      "per_source_checks": 10,
+      "primary_source": 10,
+      "location_identity_and_access": 10,
+      "primary_directory": 10,
+      "primary_site": 10,
+      "extra_sources": 10,
+      "activity_window": 10,
+      "dated_comments": 10,
+      "source_evidence": 10,
+      "source_pages": 10,
+      "source_documents": 10,
+      "postcutoff_activity": 10,
+      "status": 10,
+      "site_evidence": 5,
+      "place_kind": 5,
+      "identity_assessment": 5,
+      "access_and_activity_notes": 5,
+      "identity_summary": 5,
+      "identity_spot_precision_confirmed": 5,
+      "independent_evidence": 5,
+      "supplemental_sources": 5,
+      "independent_sources": 5,
+      "other_evidence": 5,
+      "place_identity_access_assessment": 5,
+      "dated_source_reports": 5,
+      "spot_url": 5,
+      "identity_access_and_cruising_history": 5,
+      "independent_and_related_sources": 5,
+      "original_source_page": 5,
+      "supplemental_evidence": 5,
+      "dated_user_reports": 5,
+      "original_specific_page": 5,
+      "place_identity_access_and_claims": 5,
+      "original_specific_url": 5,
+      "supporting_pages": 5,
+      "primary_directory_spot_url": 5,
+      "additional_sources": 5,
+      "evidence_links": 5,
+      "verification_urls": 5
+    },
+    "B": {
+      "index": 293,
+      "id": 293,
+      "name": 293,
+      "city": 293,
+      "country": 293,
+      "description_rewritten": 293,
+      "eight_source_checks": 288,
+      "research_decision": 273,
+      "checked_berlin": 273,
+      "review_flags": 268,
+      "publication_approved": 250,
+      "independent_and_secondary_sources": 238,
+      "dated_reports": 235,
+      "access_conditions": 220,
+      "possible_aliases": 210,
+      "original_queue_refs": 195,
+      "location_identity": 195,
+      "primary_page_status": 195,
+      "credible_physical_activity_since_2025_11_06": 195,
+      "original_archive": 150,
+      "original_primary_page": 125,
+      "original_source_refs": 88,
+      "research_only": 78,
+      "original_spot_url": 70,
+      "possible_duplicates_or_aliases": 53,
+      "primary_detail_url": 45,
+      "identity_and_access": 43,
+      "approved_for_publication": 43,
+      "source_count_original": 38,
+      "original_source_extracts": 38,
+      "recent_online_reports_not_physical_activity": 38,
+      "older_historical_evidence": 38,
+      "dated_physical_activity_reports_since_2025_11_06": 38,
+      "credible_recent_physical_cruising_activity_verified": 38,
+      "activity_cutoff": 38,
+      "operational_status": 38,
+      "source_website_limitations": 38,
+      "secondary_sources": 25,
+      "possible_duplicates": 25,
+      "archive_record": 25,
+      "flags": 25,
+      "primary_page_access": 20,
+      "access_notes": 20,
+      "independent_sources": 15,
+      "place_identity": 15,
+      "independent_recent_physical_cruising_verified": 15,
+      "original_source_url": 15,
+      "primary_detail_access": 10,
+      "queue_source_count": 10,
+      "geography": 10,
+      "primary_detail_status": 10,
+      "source_detail_url": 10,
+      "researched_berlin": 10,
+      "squirt_archive": 8,
+      "latest_physical_activity_2025_11_06_or_later_verified": 5,
+      "archive_source_refs": 5,
+      "archive_records": 5,
+      "area_and_access": 5,
+      "source_checks": 5,
+      "other_sources": 5,
+      "physical_activity_since_2025_11_06_independently_confirmed": 5,
+      "location_and_access": 5,
+      "access_hours_or_conditions": 5,
+      "primary_source_url": 5,
+      "credible_recent_physical_cruising_report": 5,
+      "duplicate_candidates": 5,
+      "queue_identity_support": 5,
+      "original_refs": 5,
+      "primary_access": 5,
+      "location": 5
+    },
+    "C": {
+      "index": 293,
+      "id": 293,
+      "name": 293,
+      "city": 293,
+      "country": 293,
+      "original_source_refs": 293,
+      "source_checks": 293,
+      "activity_evidence": 293,
+      "access_information": 293,
+      "description_rewritten": 258,
+      "original_source_count": 248,
+      "research_date_berlin": 113,
+      "place_identity": 103,
+      "disposition": 100,
+      "source_detail_url": 95,
+      "possible_duplicates_and_flags": 93,
+      "research_checked_berlin": 85,
+      "retain_research_candidate": 73,
+      "approved_for_live_publication": 73,
+      "identity_assessment": 55,
+      "supplementary_sources": 50,
+      "source_count_original": 45,
+      "place_identity_status": 35,
+      "checked_berlin": 35,
+      "assessment": 30,
+      "review_flags": 30,
+      "supplemental_sources": 30,
+      "publication_approved": 30,
+      "identity_verification": 30,
+      "additional_evidence": 30,
+      "research_only": 30,
+      "source_record": 30,
+      "identity_status": 25,
+      "possible_duplicates_or_flags": 25,
+      "retain_candidate": 25,
+      "researched_berlin": 25,
+      "duplicates_or_aliases": 20,
+      "supplementary_evidence": 20,
+      "duplicate_and_safety_flags": 20,
+      "source_description_paraphrase": 15,
+      "additional_evidence_urls": 15,
+      "category": 15,
+      "supplemental_evidence": 15,
+      "checked_date_berlin": 15,
+      "place_type": 15,
+      "source_category": 10,
+      "extra_evidence_urls": 10,
+      "description_paraphrase": 10,
+      "source_description_rewritten": 10,
+      "retain_for_filtering": 10,
+      "possible_aliases_and_flags": 10,
+      "extra_sources": 10,
+      "ready_for_publication": 10,
+      "possible_duplicates_or_aliases": 10,
+      "additional_source_evidence": 10,
+      "extra_evidence": 10,
+      "possible_duplicates_or_safety_flags": 10,
+      "reviewed_berlin": 10,
+      "duplicates_and_concerns": 10,
+      "supplemental_source_evidence": 10,
+      "publication_ready": 10,
+      "additional_sources": 10,
+      "original_detail_url": 10,
+      "keep_for_later_filtering": 10,
+      "detail_url": 10,
+      "primary_detail_url": 10,
+      "limitations": 5,
+      "possible_aliases_or_flags": 5,
+      "possible_aliases_or_duplicates": 5,
+      "aliases_risks": 5
+    },
+    "D": {
+      "index": 293,
+      "id": 293,
+      "name": 293,
+      "country": 293,
+      "identity_support": 293,
+      "possible_duplicates": 293,
+      "publication_status": 288,
+      "city": 283,
+      "description": 283,
+      "location": 283,
+      "access_notes": 228,
+      "source_refs": 228,
+      "source_checks": 228,
+      "dated_evidence": 218,
+      "activity_cutoff": 208,
+      "other_sources": 203,
+      "credible_recent_activity": 203,
+      "source_count": 133,
+      "section": 128,
+      "original_source_description": 123,
+      "original_source_age_label": 123,
+      "original_source_category": 123,
+      "original_access_review_flags": 115,
+      "dated_reports": 45,
+      "archive_refs": 40,
+      "sources": 40,
+      "access": 30,
+      "cutoff": 30,
+      "access_and_safety": 25,
+      "original_source_refs": 25,
+      "freshness_cutoff": 20,
+      "original_assessment": 18,
+      "activity_freshness": 15,
+      "source_count_from_alignment": 10,
+      "research_description": 10,
+      "evidence_timeline": 10,
+      "activity_assessment": 10,
+      "eight_source_checks": 10,
+      "recency_cutoff": 10,
+      "original_description": 5,
+      "location_type": 5,
+      "primary_direct_url": 5,
+      "additional_external_references": 5,
+      "research_note": 5,
+      "publication_decision": 5,
+      "original_notes": 5,
+      "source_evidence": 5,
+      "official_urls": 5,
+      "current_activity_independently_confirmed": 5,
+      "source_original_record": 5,
+      "reports": 5,
+      "official_url": 5,
+      "activity": 5,
+      "recent_verified": 5,
+      "original_source_count": 5,
+      "site_checks": 5,
+      "other_urls": 5,
+      "verified_recent_activity": 5,
+      "evidence": 5,
+      "credible_recent_cruising_claim": 5,
+      "activity_recent_assessment": 5,
+      "verified_recent": 5,
+      "archive_city": 5,
+      "corrected_location_city": 5,
+      "access_and_restrictions": 5,
+      "external_url_evidence": 5,
+      "activity_status": 5,
+      "fresh_activity_since_2025_11_06": 5,
+      "access_and_legal_review": 5,
+      "activity_evidence_since_2025_11_06": 5
+    }
+  },
+  "source_statuses_by_worker": {
+    "A": {
+      "not_individually_checked_this_batch": 521,
+      "unknown": 304,
+      "not_individually_checked_this_first_pass": 209,
+      "not_individually_checked_this_pass": 104,
+      "not_individually_checked_in_first_pass": 70,
+      "targeted_indexed_search_no_matching_page_found": 35,
+      "no_spot_specific_result_in_batch_index_search": 35,
+      "no_spot_specific_match_returned_in_indexed_search": 35,
+      "not_individually_verified_on_site_in_this_batch": 35,
+      "not_individually_verified_in_this_pass": 35,
+      "not_individually_verified_on_this_site": 35,
+      "not_individually_checked": 35,
+      "not_individually_verified_at_this_site": 35,
+      "not_individually_checked_on_site_this_batch": 35,
+      "not_individually_checked_in_batch": 35,
+      "not_checked_on_site_this_batch": 35,
+      "no_exact_spot_match_in_public_search": 34,
+      "not_confirmed_in_public_search": 34,
+      "not_individually_verified_on_site": 34,
+      "not_individually_checked_for_this_candidate": 34,
+      "direct_spot_page_read": 9,
+      "directory_listed_undated": 5,
+      "location_listed_city_index": 5,
+      "public_directory_location_seen": 5,
+      "cruising_directory_location_listed": 5,
+      "name_verified_in_public_city_index": 5,
+      "named_directory_listing_observed": 5,
+      "source_listing_and_detail_link_confirmed": 5,
+      "named_source_directory_location_checked": 5,
+      "original_country_index_verified": 5,
+      "primary_named_spot_and_public_comments_checked": 5,
+      "primary_source_checked": 5,
+      "source_directory_and_available_detail_checked": 5,
+      "indexed_primary_directory_or_detail_checked": 5,
+      "primary_spot_directory_checked": 5,
+      "source_spot_or_country_listing_checked": 5,
+      "primary_directory_source_checked": 5,
+      "primary_country_and_spot_directory_checked": 5,
+      "primary_source_country_or_spot_checked": 5,
+      "source_location_confirmed_in_country_index": 4,
+      "source_city_index_checked_detail_unavailable": 4,
+      "directory_listed": 3,
+      "primary_spot_page_checked": 3,
+      "original_spot_page_opened": 3,
+      "spot_page_read": 3,
+      "independently_listed_spot_or_nearby_alias": 2,
+      "primary_spot_url_unavailable_related_index_confirmed": 2,
+      "source_index_checked_detail_unavailable": 2,
+      "specific_spot_url_known_but_page_cache_miss": 2,
+      "spot_page_read_historic_snapshot": 2,
+      "public_spot_page_read": 2,
+      "original_guide_spot_specific_2026_editorial": 2,
+      "nearby_compatible_spot_found_not_same_place": 1,
+      "spot_page_verified": 1,
+      "independent_named_directory_match": 1,
+      "independent_current_listing_checked_not_activity": 1,
+      "original_gaypassport_lead": 1,
+      "independent_historic_source_matched": 1,
+      "original_hotel_page_not_spot_specific": 1,
+      "no_match_in_gayscruising_checked_country_index": 1,
+      "original_popcorn_page_unavailable": 1,
+      "original_spot_page_read": 1,
+      "regional_page_no_spots_archive_mismatch": 1,
+      "listed_in_source_region_index_detail_not_fetched": 1,
+      "spot_page_read_snapshot_and_italian_current_index": 1,
+      "archive_country_listed_spot_specific_page_not_found": 1,
+      "source_index_confirmed_spot_page_cache_miss": 1,
+      "direct_spot_page_opened": 1,
+      "primary_source_city_index_lists_Forest_spot_detail_unavailable": 1,
+      "public_spot_page_read_plus_country_index_recent_comments": 1,
+      "public_spot_page_read_plus_country_index_2026_comment": 1,
+      "specific_page_read": 1,
+      "spot_page_http_451_region_comments_read": 1,
+      "city_directory_listing_only_specific_spot_url_not_found": 1,
+      "country_index_checkin_record_spot_url_cache_miss": 1,
+      "HTTP_451_unavailable_spot_page": 1,
+      "HTTP_451_spot_page_but_country_dated_comments": 1,
+      "spot_page_cache_miss": 1,
+      "spot_page_HTTP_451": 1,
+      "spot_page_cache_miss_country_index_has_dated_comments": 1,
+      "spot_page_cache_miss_country_index_identifies": 1,
+      "spot_link_from_country_page; direct_open_cache_miss": 1,
+      "source_spot_link_resolved_from_index_direct_open_cache_miss": 1,
+      "original_page_link_resolved_direct_open_cache_miss": 1,
+      "matched_spot_page_undated": 1,
+      "spot_page_read_historic_comments": 1,
+      "spot_page_read_and_second_site_legacy_listing": 1,
+      "related_specialist_spot_candidate_needs_geo_matching": 1,
+      "source_spot_url_cache_miss_country_index_verified": 1,
+      "original_specialist_guide_ref_matched": 1,
+      "source_country_index_Cullen_Park_named_specific_spot_url_not_opened": 1,
+      "original_page_fetch_error_US_index_named": 1,
+      "original_spot_page_cache_miss": 1,
+      "original_spot_page_fetch_error_country_index_named": 1,
+      "original_gay_guide_spot_claim_but_current_access_obsolete": 1,
+      "source_detail_page_cache_miss_US_index_named": 1,
+      "source_spot_page_HTTP_451_source_country_list_named": 1,
+      "source_spot_page_failed_US_index_named": 1,
+      "original_spot_cache_miss_index_confirms": 1,
+      "source_detail_cache_miss_country_index_names_park": 1,
+      "source_detail_cache_miss_country_index_names_toilet": 1,
+      "source_detail_cache_miss_country_index_names_river": 1,
+      "original_source_spot_page_read_zero_comments": 1,
+      "spot_link_known_cache_miss_index_named_II_sprat": 1,
+      "original_specific_url_cache_miss_source_city_index": 1,
+      "spot_url_cache_miss_primary_country_index": 1,
+      "spot_url_cache_miss_country_index_named": 1,
+      "specific_spot_page_read_31_comments": 1,
+      "source_spot_cache_miss_original_index_named": 1,
+      "source_spot_page_read_9_comments": 1,
+      "spot_page_40_comments_latest_2026_08_04": 1,
+      "primary_page_older_snapshot_no_2026_comments_country_spot_checkin_2026": 1,
+      "primary_spot_page_14_comments_recent_positive_firsthand_2026": 1,
+      "primary_spot_page_21_comments_recent_2026_firsthand": 1,
+      "public_spot_page_read_crawled_old_2025_no_recent_comments": 1,
+      "source_spot_page_read_2026_firsthand_access_reports": 1,
+      "source_specific_link_found_but_page_cache_miss": 1,
+      "original_country_link_current_title_park_slaviya_not_ovcha_kupel_detail_miss": 1,
+      "source_spot_page_read_2025_12_to_2026_04_inquiries": 1,
+      "spot_specific_page_read_historical_comments": 1,
+      "original_spot_page_HTTP_451_unavailable": 1,
+      "spot_page_cache_miss_country_index_2026_meeting_questions": 1,
+      "original_spot_page_cache_miss_country_index_named": 1,
+      "primary_spot_page_read_2025_07_and_2024_05_older_reports": 1,
+      "specific_spot_page_HTTP_451_country_index_recent_2026_inquiry": 1,
+      "source_spot_page_read_older_comments": 1,
+      "primary_page_cache_miss_country_index_named": 1,
+      "primary_spot_page_fetch_error_country_index_Livadia": 1,
+      "primary_page_fetch_error_country_index_Nicosia": 1,
+      "city_index_named_nudaplaz_bolevak_spot_detail_not_found": 1,
+      "original_country_archive_lists_podoli_cliffs_spot_page_not_located": 1,
+      "specific_spot_page_read_118_comments_crawl_old": 1,
+      "specific_spot_page_read_comments_last_2025_09": 1,
+      "primary_archive_only_spot_specific_url_not_retrieved": 1
+    },
+    "B": {
+      "searched_no_match": 1404,
+      "not_checked": 336,
+      "no_original_cross_source_alignment_match_not_exhaustive": 258,
+      "linked_page_matched": 249,
+      "linked_original_archive_not_recent_visit_proof": 46,
+      "unavailable_blocked": 25,
+      "linked_page_matched_archived_detail_unavailable": 7,
+      "linked_page_matched_archived_live_blocked": 6,
+      "possible_alias_not_confirmed": 5,
+      "possible_area_alias_only": 2,
+      "linked_archive_index_current_entry_not_visible": 1,
+      "linked_page_matched_archived_detail_live_unavailable": 1,
+      "possible_related_subspots_not_identity_proven": 1,
+      "linked_page_matched_archived_detail_not_checked": 1,
+      "possible_related_closed_restroom_not_same_park": 1,
+      "same_name_probable_alias_no_pin": 1
+    },
+    "C": {
+      "searched_no_match": 1978,
+      "linked_page_matched": 365,
+      "linked_page_possible_alias_not_confirmed_exact": 1
+    },
+    "D": {
+      "not_checked_directly": 872,
+      "searched_no_match": 760,
+      "linked_page_matched": 213,
+      "archived_source_record": 53,
+      "archive_only_match_detail_unavailable": 3,
+      "archive_only_match": 1,
+      "archive_only_detail_unavailable": 1,
+      "possible_match_not_confirmed": 1
+    }
+  },
+  "source_statuses_total": {
+    "searched_no_match": 4142,
+    "not_checked_directly": 872,
+    "linked_page_matched": 827,
+    "not_individually_checked_this_batch": 521,
+    "not_checked": 336,
+    "unknown": 304,
+    "no_original_cross_source_alignment_match_not_exhaustive": 258,
+    "not_individually_checked_this_first_pass": 209,
+    "not_individually_checked_this_pass": 104,
+    "not_individually_checked_in_first_pass": 70,
+    "archived_source_record": 53,
+    "linked_original_archive_not_recent_visit_proof": 46,
+    "targeted_indexed_search_no_matching_page_found": 35,
+    "no_spot_specific_result_in_batch_index_search": 35,
+    "no_spot_specific_match_returned_in_indexed_search": 35,
+    "not_individually_verified_on_site_in_this_batch": 35,
+    "not_individually_verified_in_this_pass": 35,
+    "not_individually_verified_on_this_site": 35,
+    "not_individually_checked": 35,
+    "not_individually_verified_at_this_site": 35,
+    "not_individually_checked_on_site_this_batch": 35,
+    "not_individually_checked_in_batch": 35,
+    "not_checked_on_site_this_batch": 35,
+    "no_exact_spot_match_in_public_search": 34,
+    "not_confirmed_in_public_search": 34,
+    "not_individually_verified_on_site": 34,
+    "not_individually_checked_for_this_candidate": 34,
+    "unavailable_blocked": 25,
+    "direct_spot_page_read": 9,
+    "linked_page_matched_archived_detail_unavailable": 7,
+    "linked_page_matched_archived_live_blocked": 6,
+    "directory_listed_undated": 5,
+    "location_listed_city_index": 5,
+    "public_directory_location_seen": 5,
+    "cruising_directory_location_listed": 5,
+    "name_verified_in_public_city_index": 5,
+    "named_directory_listing_observed": 5,
+    "source_listing_and_detail_link_confirmed": 5,
+    "named_source_directory_location_checked": 5,
+    "original_country_index_verified": 5,
+    "primary_named_spot_and_public_comments_checked": 5,
+    "primary_source_checked": 5,
+    "source_directory_and_available_detail_checked": 5,
+    "indexed_primary_directory_or_detail_checked": 5,
+    "primary_spot_directory_checked": 5,
+    "source_spot_or_country_listing_checked": 5,
+    "primary_directory_source_checked": 5,
+    "primary_country_and_spot_directory_checked": 5,
+    "primary_source_country_or_spot_checked": 5,
+    "possible_alias_not_confirmed": 5,
+    "source_location_confirmed_in_country_index": 4,
+    "source_city_index_checked_detail_unavailable": 4,
+    "directory_listed": 3,
+    "primary_spot_page_checked": 3,
+    "original_spot_page_opened": 3,
+    "spot_page_read": 3,
+    "archive_only_match_detail_unavailable": 3,
+    "independently_listed_spot_or_nearby_alias": 2,
+    "primary_spot_url_unavailable_related_index_confirmed": 2,
+    "source_index_checked_detail_unavailable": 2,
+    "specific_spot_url_known_but_page_cache_miss": 2,
+    "spot_page_read_historic_snapshot": 2,
+    "public_spot_page_read": 2,
+    "original_guide_spot_specific_2026_editorial": 2,
+    "possible_area_alias_only": 2,
+    "nearby_compatible_spot_found_not_same_place": 1,
+    "spot_page_verified": 1,
+    "independent_named_directory_match": 1,
+    "independent_current_listing_checked_not_activity": 1,
+    "original_gaypassport_lead": 1,
+    "independent_historic_source_matched": 1,
+    "original_hotel_page_not_spot_specific": 1,
+    "no_match_in_gayscruising_checked_country_index": 1,
+    "original_popcorn_page_unavailable": 1,
+    "original_spot_page_read": 1,
+    "regional_page_no_spots_archive_mismatch": 1,
+    "listed_in_source_region_index_detail_not_fetched": 1,
+    "spot_page_read_snapshot_and_italian_current_index": 1,
+    "archive_country_listed_spot_specific_page_not_found": 1,
+    "source_index_confirmed_spot_page_cache_miss": 1,
+    "direct_spot_page_opened": 1,
+    "primary_source_city_index_lists_Forest_spot_detail_unavailable": 1,
+    "public_spot_page_read_plus_country_index_recent_comments": 1,
+    "public_spot_page_read_plus_country_index_2026_comment": 1,
+    "specific_page_read": 1,
+    "spot_page_http_451_region_comments_read": 1,
+    "city_directory_listing_only_specific_spot_url_not_found": 1,
+    "country_index_checkin_record_spot_url_cache_miss": 1,
+    "HTTP_451_unavailable_spot_page": 1,
+    "HTTP_451_spot_page_but_country_dated_comments": 1,
+    "spot_page_cache_miss": 1,
+    "spot_page_HTTP_451": 1,
+    "spot_page_cache_miss_country_index_has_dated_comments": 1,
+    "spot_page_cache_miss_country_index_identifies": 1,
+    "spot_link_from_country_page; direct_open_cache_miss": 1,
+    "source_spot_link_resolved_from_index_direct_open_cache_miss": 1,
+    "original_page_link_resolved_direct_open_cache_miss": 1,
+    "matched_spot_page_undated": 1,
+    "spot_page_read_historic_comments": 1,
+    "spot_page_read_and_second_site_legacy_listing": 1,
+    "related_specialist_spot_candidate_needs_geo_matching": 1,
+    "source_spot_url_cache_miss_country_index_verified": 1,
+    "original_specialist_guide_ref_matched": 1,
+    "source_country_index_Cullen_Park_named_specific_spot_url_not_opened": 1,
+    "original_page_fetch_error_US_index_named": 1,
+    "original_spot_page_cache_miss": 1,
+    "original_spot_page_fetch_error_country_index_named": 1,
+    "original_gay_guide_spot_claim_but_current_access_obsolete": 1,
+    "source_detail_page_cache_miss_US_index_named": 1,
+    "source_spot_page_HTTP_451_source_country_list_named": 1,
+    "source_spot_page_failed_US_index_named": 1,
+    "original_spot_cache_miss_index_confirms": 1,
+    "source_detail_cache_miss_country_index_names_park": 1,
+    "source_detail_cache_miss_country_index_names_toilet": 1,
+    "source_detail_cache_miss_country_index_names_river": 1,
+    "original_source_spot_page_read_zero_comments": 1,
+    "spot_link_known_cache_miss_index_named_II_sprat": 1,
+    "original_specific_url_cache_miss_source_city_index": 1,
+    "spot_url_cache_miss_primary_country_index": 1,
+    "spot_url_cache_miss_country_index_named": 1,
+    "specific_spot_page_read_31_comments": 1,
+    "source_spot_cache_miss_original_index_named": 1,
+    "source_spot_page_read_9_comments": 1,
+    "spot_page_40_comments_latest_2026_08_04": 1,
+    "primary_page_older_snapshot_no_2026_comments_country_spot_checkin_2026": 1,
+    "primary_spot_page_14_comments_recent_positive_firsthand_2026": 1,
+    "primary_spot_page_21_comments_recent_2026_firsthand": 1,
+    "public_spot_page_read_crawled_old_2025_no_recent_comments": 1,
+    "source_spot_page_read_2026_firsthand_access_reports": 1,
+    "source_specific_link_found_but_page_cache_miss": 1,
+    "original_country_link_current_title_park_slaviya_not_ovcha_kupel_detail_miss": 1,
+    "source_spot_page_read_2025_12_to_2026_04_inquiries": 1,
+    "spot_specific_page_read_historical_comments": 1,
+    "original_spot_page_HTTP_451_unavailable": 1,
+    "spot_page_cache_miss_country_index_2026_meeting_questions": 1,
+    "original_spot_page_cache_miss_country_index_named": 1,
+    "primary_spot_page_read_2025_07_and_2024_05_older_reports": 1,
+    "specific_spot_page_HTTP_451_country_index_recent_2026_inquiry": 1,
+    "source_spot_page_read_older_comments": 1,
+    "primary_page_cache_miss_country_index_named": 1,
+    "primary_spot_page_fetch_error_country_index_Livadia": 1,
+    "primary_page_fetch_error_country_index_Nicosia": 1,
+    "city_index_named_nudaplaz_bolevak_spot_detail_not_found": 1,
+    "original_country_archive_lists_podoli_cliffs_spot_page_not_located": 1,
+    "specific_spot_page_read_118_comments_crawl_old": 1,
+    "specific_spot_page_read_comments_last_2025_09": 1,
+    "primary_archive_only_spot_specific_url_not_retrieved": 1,
+    "linked_archive_index_current_entry_not_visible": 1,
+    "linked_page_matched_archived_detail_live_unavailable": 1,
+    "possible_related_subspots_not_identity_proven": 1,
+    "linked_page_matched_archived_detail_not_checked": 1,
+    "possible_related_closed_restroom_not_same_park": 1,
+    "same_name_probable_alias_no_pin": 1,
+    "linked_page_possible_alias_not_confirmed_exact": 1,
+    "archive_only_match": 1,
+    "archive_only_detail_unavailable": 1,
+    "possible_match_not_confirmed": 1
+  },
+  "source_status_details_by_worker": {
+    "A": {
+      "entries_per_candidate": {
+        "8": 243,
+        "0": 50
+      },
+      "top_status_per_site": {
+        "gay-szene.net|not_individually_checked_this_batch": 75,
+        "Planet Randy|not_individually_checked_this_batch": 75,
+        "Splashd|not_individually_checked_this_batch": 75,
+        "Popcorn.dating|not_individually_checked_this_batch": 75,
+        "Squirt.org|not_individually_checked_this_batch": 75,
+        "The Gay Passport|not_individually_checked_this_batch": 73,
+        "CruisingGays|not_individually_checked_this_batch": 73,
+        "Gays-Cruising.com|unknown": 38,
+        "gay-szene.net|unknown": 38,
+        "Planet Randy|unknown": 38,
+        "The Gay Passport|unknown": 38,
+        "Splashd|unknown": 38,
+        "Popcorn.dating|unknown": 38,
+        "Squirt.org|unknown": 38,
+        "CruisingGays|unknown": 38,
+        "gay-szene.net|not_individually_checked_this_first_pass": 30,
+        "Planet Randy|not_individually_checked_this_first_pass": 30,
+        "Splashd|not_individually_checked_this_first_pass": 30,
+        "Popcorn.dating|not_individually_checked_this_first_pass": 30,
+        "CruisingGays|not_individually_checked_this_first_pass": 30,
+        "Squirt.org|not_individually_checked_this_first_pass": 29,
+        "The Gay Passport|not_individually_checked_this_first_pass": 27,
+        "gay-szene.net|not_individually_checked_this_pass": 15,
+        "Planet Randy|not_individually_checked_this_pass": 15,
+        "The Gay Passport|not_individually_checked_this_pass": 15,
+        "Splashd|not_individually_checked_this_pass": 15,
+        "Popcorn.dating|not_individually_checked_this_pass": 15,
+        "Squirt.org|not_individually_checked_this_pass": 15,
+        "CruisingGays|not_individually_checked_this_pass": 14,
+        "gay-szene.net|not_individually_checked_in_first_pass": 10
+      }
+    },
+    "B": {
+      "entries_per_candidate": {
+        "8": 293
+      },
+      "top_status_per_site": {
+        "Gays-Cruising.com|linked_page_matched": 214,
+        "Planet Randy|searched_no_match": 205,
+        "The Gay Passport|searched_no_match": 205,
+        "Popcorn.dating|searched_no_match": 203,
+        "Splashd|searched_no_match": 202,
+        "gay-szene.net|searched_no_match": 200,
+        "Squirt.org|searched_no_match": 197,
+        "CruisingGays|searched_no_match": 185,
+        "gay-szene.net|not_checked": 50,
+        "Planet Randy|not_checked": 50,
+        "Splashd|not_checked": 50,
+        "Popcorn.dating|not_checked": 50,
+        "The Gay Passport|not_checked": 48,
+        "Squirt.org|not_checked": 44,
+        "CruisingGays|not_checked": 38,
+        "gay-szene.net|no_original_cross_source_alignment_match_not_exhaustive": 38,
+        "Planet Randy|no_original_cross_source_alignment_match_not_exhaustive": 38,
+        "Popcorn.dating|no_original_cross_source_alignment_match_not_exhaustive": 38,
+        "Splashd|no_original_cross_source_alignment_match_not_exhaustive": 36,
+        "Squirt.org|no_original_cross_source_alignment_match_not_exhaustive": 36,
+        "The Gay Passport|no_original_cross_source_alignment_match_not_exhaustive": 32,
+        "Gays-Cruising.com|unavailable_blocked": 25,
+        "CruisingGays|no_original_cross_source_alignment_match_not_exhaustive": 24,
+        "Gays-Cruising.com|linked_original_archive_not_recent_visit_proof": 22,
+        "CruisingGays|linked_page_matched": 20,
+        "Gays-Cruising.com|no_original_cross_source_alignment_match_not_exhaustive": 16,
+        "CruisingGays|linked_original_archive_not_recent_visit_proof": 14,
+        "Squirt.org|linked_page_matched": 8,
+        "Gays-Cruising.com|searched_no_match": 7,
+        "CruisingGays|linked_page_matched_archived_detail_unavailable": 7
+      }
+    },
+    "C": {
+      "entries_per_candidate": {
+        "8": 293
+      },
+      "top_status_per_site": {
+        "Squirt.org|searched_no_match": 293,
+        "The Gay Passport|searched_no_match": 291,
+        "Splashd|searched_no_match": 289,
+        "Popcorn.dating|searched_no_match": 289,
+        "CruisingGays|searched_no_match": 288,
+        "Gays-Cruising.com|searched_no_match": 247,
+        "gay-szene.net|linked_page_matched": 202,
+        "Planet Randy|searched_no_match": 191,
+        "Planet Randy|linked_page_matched": 102,
+        "gay-szene.net|searched_no_match": 90,
+        "Gays-Cruising.com|linked_page_matched": 46,
+        "CruisingGays|linked_page_matched": 5,
+        "Popcorn.dating|linked_page_matched": 4,
+        "Splashd|linked_page_matched": 4,
+        "The Gay Passport|linked_page_matched": 2,
+        "gay-szene.net|linked_page_possible_alias_not_confirmed_exact": 1
+      }
+    },
+    "D": {
+      "entries_per_candidate": {
+        "0": 55,
+        "8": 238
+      },
+      "top_status_per_site": {
+        "Planet Randy|not_checked_directly": 128,
+        "Squirt.org|not_checked_directly": 128,
+        "Gays-Cruising.com|not_checked_directly": 127,
+        "gay-szene.net|not_checked_directly": 127,
+        "The Gay Passport|not_checked_directly": 127,
+        "Popcorn.dating|not_checked_directly": 127,
+        "Splashd|searched_no_match": 110,
+        "Squirt.org|searched_no_match": 109,
+        "Popcorn.dating|searched_no_match": 107,
+        "The Gay Passport|searched_no_match": 106,
+        "Planet Randy|searched_no_match": 105,
+        "CruisingGays|not_checked_directly": 105,
+        "CruisingGays|searched_no_match": 102,
+        "gay-szene.net|searched_no_match": 91,
+        "Gays-Cruising.com|linked_page_matched": 81,
+        "Splashd|linked_page_matched": 72,
+        "Splashd|archived_source_record": 53,
+        "Gays-Cruising.com|searched_no_match": 30,
+        "CruisingGays|linked_page_matched": 30,
+        "gay-szene.net|linked_page_matched": 20,
+        "Planet Randy|linked_page_matched": 5,
+        "The Gay Passport|linked_page_matched": 5,
+        "Popcorn.dating|archive_only_match_detail_unavailable": 3,
+        "Splashd|not_checked_directly": 3,
+        "Squirt.org|archive_only_match": 1,
+        "Popcorn.dating|archive_only_detail_unavailable": 1,
+        "CruisingGays|possible_match_not_confirmed": 1
+      }
+    }
+  },
+  "recency_related_boolean_fields": {
+    "activity_evidence.undated_source_editorial_is_not_recent_activity": {
+      "true": 68,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 812,
+          "name": "Stadtpark - Blindengarten",
+          "city": "Hamburg"
+        },
+        {
+          "index": 813,
+          "name": "Strand bei Wedel",
+          "city": "Hamburg"
+        },
+        {
+          "index": 814,
+          "name": "Volkspark II",
+          "city": "Hamburg"
+        },
+        {
+          "index": 815,
+          "name": "Lake Neuland",
+          "city": "Hamburg"
+        },
+        {
+          "index": 816,
+          "name": "Hohendeich Lake",
+          "city": "Hamburg"
+        },
+        {
+          "index": 817,
+          "name": "Copper Pond",
+          "city": "Hamburg"
+        },
+        {
+          "index": 818,
+          "name": "Dove Elbe",
+          "city": "Hamburg"
+        },
+        {
+          "index": 819,
+          "name": "Eppendorf Park",
+          "city": "Hamburg"
+        },
+        {
+          "index": 820,
+          "name": "Jenfelder Moor",
+          "city": "Hamburg"
+        },
+        {
+          "index": 821,
+          "name": "Lake Bahrenfeld",
+          "city": "Hamburg"
+        },
+        {
+          "index": 822,
+          "name": "Powder Yard Park",
+          "city": "Hamburg"
+        },
+        {
+          "index": 823,
+          "name": "Eilbekpark",
+          "city": "Hamburg"
+        }
+      ]
+    },
+    "source_checks[].source_status_not_recent_activity": {
+      "true": 40,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 91,
+          "name": "Azrieli Mall Washroom",
+          "city": "Tel Aviv"
+        },
+        {
+          "index": 91,
+          "name": "Azrieli Mall Washroom",
+          "city": "Tel Aviv"
+        },
+        {
+          "index": 91,
+          "name": "Azrieli Mall Washroom",
+          "city": "Tel Aviv"
+        },
+        {
+          "index": 91,
+          "name": "Azrieli Mall Washroom",
+          "city": "Tel Aviv"
+        },
+        {
+          "index": 91,
+          "name": "Azrieli Mall Washroom",
+          "city": "Tel Aviv"
+        },
+        {
+          "index": 91,
+          "name": "Azrieli Mall Washroom",
+          "city": "Tel Aviv"
+        },
+        {
+          "index": 91,
+          "name": "Azrieli Mall Washroom",
+          "city": "Tel Aviv"
+        },
+        {
+          "index": 91,
+          "name": "Azrieli Mall Washroom",
+          "city": "Tel Aviv"
+        },
+        {
+          "index": 92,
+          "name": "Independence Park (Gan HaAtzmaut)",
+          "city": "Tel Aviv"
+        },
+        {
+          "index": 92,
+          "name": "Independence Park (Gan HaAtzmaut)",
+          "city": "Tel Aviv"
+        },
+        {
+          "index": 92,
+          "name": "Independence Park (Gan HaAtzmaut)",
+          "city": "Tel Aviv"
+        },
+        {
+          "index": 92,
+          "name": "Independence Park (Gan HaAtzmaut)",
+          "city": "Tel Aviv"
+        }
+      ]
+    },
+    "dated_reports[].firsthand_unverified": {
+      "true": 21,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 895,
+          "name": "Birkensee",
+          "city": "Nuremberg"
+        },
+        {
+          "index": 895,
+          "name": "Birkensee",
+          "city": "Nuremberg"
+        },
+        {
+          "index": 896,
+          "name": "Hafenparkplatz Nürnberg Süd",
+          "city": "Nuremberg"
+        },
+        {
+          "index": 896,
+          "name": "Hafenparkplatz Nürnberg Süd",
+          "city": "Nuremberg"
+        },
+        {
+          "index": 896,
+          "name": "Hafenparkplatz Nürnberg Süd",
+          "city": "Nuremberg"
+        },
+        {
+          "index": 896,
+          "name": "Hafenparkplatz Nürnberg Süd",
+          "city": "Nuremberg"
+        },
+        {
+          "index": 896,
+          "name": "Hafenparkplatz Nürnberg Süd",
+          "city": "Nuremberg"
+        },
+        {
+          "index": 896,
+          "name": "Hafenparkplatz Nürnberg Süd",
+          "city": "Nuremberg"
+        },
+        {
+          "index": 897,
+          "name": "Öffentliche Toilette Weißer Turm",
+          "city": "Nuremberg"
+        },
+        {
+          "index": 897,
+          "name": "Öffentliche Toilette Weißer Turm",
+          "city": "Nuremberg"
+        },
+        {
+          "index": 897,
+          "name": "Öffentliche Toilette Weißer Turm",
+          "city": "Nuremberg"
+        },
+        {
+          "index": 897,
+          "name": "Öffentliche Toilette Weißer Turm",
+          "city": "Nuremberg"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_claims_are_not_recent_evidence": {
+      "true": 10,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 652,
+          "name": "Park am Buschkrug",
+          "city": "Berlin"
+        },
+        {
+          "index": 653,
+          "name": "Park Thomasstraße",
+          "city": "Berlin"
+        },
+        {
+          "index": 654,
+          "name": "Parkplatz A24 Berlin Richtung Hamburg hinter Linumer Bruch",
+          "city": "Berlin"
+        },
+        {
+          "index": 655,
+          "name": "Parkplatz Waldeck Ost an der A 117",
+          "city": "Berlin"
+        },
+        {
+          "index": 656,
+          "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
+          "city": "Berlin"
+        },
+        {
+          "index": 702,
+          "name": "Rastplatz Alten Hau",
+          "city": "Brühl"
+        },
+        {
+          "index": 703,
+          "name": "Bleibtreusee",
+          "city": "Brühl"
+        },
+        {
+          "index": 704,
+          "name": "Cranachwald",
+          "city": "Cologne"
+        },
+        {
+          "index": 705,
+          "name": "Car Park Weiler/A57",
+          "city": "Cologne"
+        },
+        {
+          "index": 706,
+          "name": "A4 Parkplatz Refrath",
+          "city": "Cologne"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_not_recent_visitor_evidence": {
+      "true": 10,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 777,
+          "name": "Helbingbrücken",
+          "city": "Essen"
+        },
+        {
+          "index": 778,
+          "name": "Segeroth Park",
+          "city": "Essen"
+        },
+        {
+          "index": 779,
+          "name": "Linumer Bruch parking lot A24",
+          "city": "Fehrbellin"
+        },
+        {
+          "index": 780,
+          "name": "Alte Oper",
+          "city": "Frankfurt am Main"
+        },
+        {
+          "index": 781,
+          "name": "Bethmannpark",
+          "city": "Frankfurt am Main"
+        },
+        {
+          "index": 797,
+          "name": "Brücke des 17. Juni",
+          "city": "Hamburg"
+        },
+        {
+          "index": 798,
+          "name": "Friedhof Ohlsdorf",
+          "city": "Hamburg"
+        },
+        {
+          "index": 799,
+          "name": "Hammer Park",
+          "city": "Hamburg"
+        },
+        {
+          "index": 800,
+          "name": "Hummelsee zwischen Hamburg und Norderstedt",
+          "city": "Hamburg"
+        },
+        {
+          "index": 801,
+          "name": "Jacobi Park",
+          "city": "Hamburg"
+        }
+      ]
+    },
+    "credible_physical_activity_since_2025_11_06": {
+      "true": 5,
+      "false": 190,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 396,
+          "name": "Parco delle Cascine (Cascine Park)",
+          "city": "Florence"
+        },
+        {
+          "index": 444,
+          "name": "Centro Commerciale Verona Uno",
+          "city": "Verona"
+        },
+        {
+          "index": 449,
+          "name": "Kalngale Nudist Beach",
+          "city": "Riga"
+        },
+        {
+          "index": 465,
+          "name": "Aquadrom Pool",
+          "city": "Katowice"
+        },
+        {
+          "index": 509,
+          "name": "Praia 19",
+          "city": "Costa de Caparica"
+        }
+      ]
+    },
+    "recent_activity_since_2025_11_06.activity_questions_not_visits": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 61,
+          "name": "Railway station of Kutaisi",
+          "city": "Kutaisi"
+        },
+        {
+          "index": 62,
+          "name": "Dighomi",
+          "city": "Tbilisi"
+        },
+        {
+          "index": 63,
+          "name": "Circus",
+          "city": "Tbilisi"
+        },
+        {
+          "index": 64,
+          "name": "Toilet near Top Sport in City Mall",
+          "city": "Tbilisi"
+        },
+        {
+          "index": 65,
+          "name": "Didube Railway Station (railway behind the bus terminal)",
+          "city": "Tbilisi"
+        }
+      ]
+    },
+    "recent_activity_since_2025_11_06.recent_contact_queries_are_not_attendance": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 231,
+          "name": "Adams/Landa Beach",
+          "city": "Ayia Napa"
+        },
+        {
+          "index": 232,
+          "name": "Parking Area",
+          "city": "Ayia Napa"
+        },
+        {
+          "index": 233,
+          "name": "Nissi Beach",
+          "city": "Ayia Napa"
+        },
+        {
+          "index": 234,
+          "name": "Sculpture Park Toilets",
+          "city": "Ayia Napa"
+        },
+        {
+          "index": 235,
+          "name": "Tekke Park",
+          "city": "Dromolaxia"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_not_current_confirmation": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 647,
+          "name": "Klappe Pekinger Platz",
+          "city": "Berlin"
+        },
+        {
+          "index": 648,
+          "name": "Klappe Tempelhofer Feld",
+          "city": "Berlin"
+        },
+        {
+          "index": 649,
+          "name": "Kleiner Tiergarten",
+          "city": "Berlin"
+        },
+        {
+          "index": 650,
+          "name": "Kynastteich und Garten der Blumen und Wasserspiele",
+          "city": "Berlin"
+        },
+        {
+          "index": 651,
+          "name": "Landschaftspark Herzberge",
+          "city": "Berlin"
+        }
+      ]
+    },
+    "not_approved_for_publication": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 647,
+          "name": "Klappe Pekinger Platz",
+          "city": "Berlin"
+        },
+        {
+          "index": 648,
+          "name": "Klappe Tempelhofer Feld",
+          "city": "Berlin"
+        },
+        {
+          "index": 649,
+          "name": "Kleiner Tiergarten",
+          "city": "Berlin"
+        },
+        {
+          "index": 650,
+          "name": "Kynastteich und Garten der Blumen und Wasserspiele",
+          "city": "Berlin"
+        },
+        {
+          "index": 651,
+          "name": "Landschaftspark Herzberge",
+          "city": "Berlin"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_reference_not_current_evidence": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 662,
+          "name": "Sandfläche im Jagen 87 des Grunewalds",
+          "city": "Berlin"
+        },
+        {
+          "index": 663,
+          "name": "Schillerpark (Wedding/Reinickendorf)",
+          "city": "Berlin"
+        },
+        {
+          "index": 664,
+          "name": "Sickingenbrücke",
+          "city": "Berlin"
+        },
+        {
+          "index": 665,
+          "name": "Siegessäule",
+          "city": "Berlin"
+        },
+        {
+          "index": 666,
+          "name": "Sonnenbad Wuhlheide",
+          "city": "Berlin"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_mention_does_not_prove_activity": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 667,
+          "name": "Spektepark",
+          "city": "Berlin"
+        },
+        {
+          "index": 668,
+          "name": "Stadtpark Steglitz - Goebenteich Areal",
+          "city": "Berlin"
+        },
+        {
+          "index": 669,
+          "name": "Strandbad Müggelsee",
+          "city": "Berlin"
+        },
+        {
+          "index": 670,
+          "name": "Theodor-Heuss Platz Klappe",
+          "city": "Berlin"
+        },
+        {
+          "index": 671,
+          "name": "Treptower Park",
+          "city": "Berlin"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_mention_not_recent_evidence": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 672,
+          "name": "Victoriapark",
+          "city": "Berlin"
+        },
+        {
+          "index": 673,
+          "name": "Volkspark Mariendorf - Südberlin!",
+          "city": "Berlin"
+        },
+        {
+          "index": 674,
+          "name": "Volkspark Prenzlauer Berg - Judith-Auer-Straße",
+          "city": "Berlin"
+        },
+        {
+          "index": 675,
+          "name": "Parking lot Schorfheide",
+          "city": "Berlin"
+        },
+        {
+          "index": 676,
+          "name": "Austria Park",
+          "city": "Berlin"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_claim_not_recent_activity": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 677,
+          "name": "Lietzenseepark",
+          "city": "Berlin"
+        },
+        {
+          "index": 678,
+          "name": "Quiet park",
+          "city": "Berlin"
+        },
+        {
+          "index": 679,
+          "name": "Lake Tegel",
+          "city": "Berlin"
+        },
+        {
+          "index": 680,
+          "name": "Schlachtensee",
+          "city": "Berlin"
+        },
+        {
+          "index": 681,
+          "name": "Goethepark",
+          "city": "Berlin"
+        }
+      ]
+    },
+    "activity_evidence.undated_editorial_claims_not_verified_activity": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 682,
+          "name": "Britz Garden",
+          "city": "Berlin"
+        },
+        {
+          "index": 683,
+          "name": "Arkenberg quarry pond",
+          "city": "Berlin"
+        },
+        {
+          "index": 684,
+          "name": "People's Park Prenzlauer Berg",
+          "city": "Berlin"
+        },
+        {
+          "index": 685,
+          "name": "Flap at Leuthener Platz",
+          "city": "Berlin"
+        },
+        {
+          "index": 686,
+          "name": "Thomashöhe",
+          "city": "Berlin"
+        }
+      ]
+    },
+    "activity_evidence.undated_cruise_claim_is_not_recent_evidence": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 692,
+          "name": "Prater Berlin",
+          "city": "Berlin"
+        },
+        {
+          "index": 693,
+          "name": "Stadtbad Mitte - Gemeinschaftsdusche",
+          "city": "Berlin"
+        },
+        {
+          "index": 694,
+          "name": "Stadtbad Neukölln",
+          "city": "Berlin"
+        },
+        {
+          "index": 695,
+          "name": "Berlin Carre",
+          "city": "Berlin"
+        },
+        {
+          "index": 696,
+          "name": "Autobahn Parkplatz Mahndorfer Marsch",
+          "city": "Bremen"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_claim_not_activity_proof": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 697,
+          "name": "Autobahnparkplatz Alken",
+          "city": "Bremen"
+        },
+        {
+          "index": 698,
+          "name": "Bürgerpark Bremen",
+          "city": "Bremen"
+        },
+        {
+          "index": 699,
+          "name": "Bürgerpark Bremen 2",
+          "city": "Bremen"
+        },
+        {
+          "index": 700,
+          "name": "Parkplatz A1 Krumhörens Kuhlen",
+          "city": "Bremen"
+        },
+        {
+          "index": 701,
+          "name": "Uni-See",
+          "city": "Bremen"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_is_not_recent_visitation": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 707,
+          "name": "Alberti See",
+          "city": "Cologne"
+        },
+        {
+          "index": 708,
+          "name": "Fort X",
+          "city": "Cologne"
+        },
+        {
+          "index": 709,
+          "name": "Grüngürtel an der Hitzelerstraße",
+          "city": "Cologne"
+        },
+        {
+          "index": 710,
+          "name": "Mülheimer Stadtpark",
+          "city": "Cologne"
+        },
+        {
+          "index": 711,
+          "name": "Rheinbraun Wiese - Lindenthal",
+          "city": "Cologne"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_claims_separate_from_recent_activity": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 712,
+          "name": "Rosengarten im Volksgarten",
+          "city": "Cologne"
+        },
+        {
+          "index": 713,
+          "name": "Lake Escher",
+          "city": "Cologne"
+        },
+        {
+          "index": 714,
+          "name": "Decksteiner pond",
+          "city": "Cologne"
+        },
+        {
+          "index": 715,
+          "name": "Foothills Park",
+          "city": "Cologne"
+        },
+        {
+          "index": 716,
+          "name": "Roman Park",
+          "city": "Cologne"
+        }
+      ]
+    },
+    "activity_evidence.undated_editorial_claims_not_recent_evidence": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 722,
+          "name": "Beethoven Park",
+          "city": "Cologne"
+        },
+        {
+          "index": 723,
+          "name": "Blücherpark",
+          "city": "Cologne"
+        },
+        {
+          "index": 724,
+          "name": "Volksgarten Cologne",
+          "city": "Cologne"
+        },
+        {
+          "index": 725,
+          "name": "Gravel pit lake Gremberghoven",
+          "city": "Cologne"
+        },
+        {
+          "index": 726,
+          "name": "Parking lot Lustheide",
+          "city": "Cologne"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_claims_not_recent_activity": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 727,
+          "name": "Rest area hamlet",
+          "city": "Cologne"
+        },
+        {
+          "index": 728,
+          "name": "Agrippabad",
+          "city": "Cologne"
+        },
+        {
+          "index": 729,
+          "name": "A45 Parkplatz - Flöz Mausegatt und Johannes Erbstollen",
+          "city": "Dortmund"
+        },
+        {
+          "index": 730,
+          "name": "Hengsteysee",
+          "city": "Dortmund"
+        },
+        {
+          "index": 731,
+          "name": "Klappe am Hoeschpark",
+          "city": "Dortmund"
+        }
+      ]
+    },
+    "activity_evidence.undated_claim_not_recent_evidence": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 737,
+          "name": "Rosenterrassen",
+          "city": "Dortmund"
+        },
+        {
+          "index": 738,
+          "name": "Westpark Eingang Möllerstraße",
+          "city": "Dortmund"
+        },
+        {
+          "index": 739,
+          "name": "Solebad Wischlingen",
+          "city": "Dortmund"
+        },
+        {
+          "index": 740,
+          "name": "Technische Universität Dortmund",
+          "city": "Dortmund"
+        },
+        {
+          "index": 741,
+          "name": "Formsandgrube Steinbach",
+          "city": "Dresden"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_statement_not_current_proof": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 742,
+          "name": "Kiesgrube Dresden-Zschieren",
+          "city": "Dresden"
+        },
+        {
+          "index": 743,
+          "name": "Kiesgrube Leuben",
+          "city": "Dresden"
+        },
+        {
+          "index": 744,
+          "name": "Klappe Straßburger Platz",
+          "city": "Dresden"
+        },
+        {
+          "index": 745,
+          "name": "Rastplatz Nöthnitzgrund",
+          "city": "Dresden"
+        },
+        {
+          "index": 746,
+          "name": "Stausee Oberwartha",
+          "city": "Dresden"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_claims_are_not_current_evidence": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 752,
+          "name": "Kantpark",
+          "city": "Duisburg"
+        },
+        {
+          "index": 753,
+          "name": "Landschaftspark Nord, ehemalige Stahlhütte",
+          "city": "Duisburg"
+        },
+        {
+          "index": 754,
+          "name": "Loheidesee",
+          "city": "Duisburg"
+        },
+        {
+          "index": 755,
+          "name": "Parkplatz A3 Abfahrt Kaiserberg",
+          "city": "Duisburg"
+        },
+        {
+          "index": 756,
+          "name": "Parkplatz A3 Stockweg",
+          "city": "Duisburg"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_mention_not_current_activity": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 767,
+          "name": "Parkplatz an der Autobahn-Abfahrt Düsseldorff-Eller",
+          "city": "Düsseldorf"
+        },
+        {
+          "index": 768,
+          "name": "Parkplatz, Kalkumer Schlossallee",
+          "city": "Düsseldorf"
+        },
+        {
+          "index": 769,
+          "name": "Schwanenspiegel am K21",
+          "city": "Düsseldorf"
+        },
+        {
+          "index": 770,
+          "name": "Toilette am Südfriedhof",
+          "city": "Düsseldorf"
+        },
+        {
+          "index": 771,
+          "name": "Unterbacher See",
+          "city": "Düsseldorf"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_claims_are_not_verified_2026_activity": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 772,
+          "name": "Freizeitbad Düsselstrand",
+          "city": "Düsseldorf"
+        },
+        {
+          "index": 773,
+          "name": "Baggersee am Hart",
+          "city": "Eching"
+        },
+        {
+          "index": 774,
+          "name": "Fkk am alten Rhein",
+          "city": "Efringen-Kirchen"
+        },
+        {
+          "index": 775,
+          "name": "Sortie efringen",
+          "city": "Efringen-Kirchen"
+        },
+        {
+          "index": 776,
+          "name": "Parkplatz Efringen-Kirchen",
+          "city": "Efringen-Kirchen"
+        }
+      ]
+    },
+    "activity_evidence.undated_directory_claim_not_current_evidence": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 782,
+          "name": "Friedberger Anlage",
+          "city": "Frankfurt am Main"
+        },
+        {
+          "index": 783,
+          "name": "Klappe an der U-Bahn Leipziger Straße",
+          "city": "Frankfurt am Main"
+        },
+        {
+          "index": 784,
+          "name": "Klappe U-Bahnhof Bockenheimer Warte",
+          "city": "Frankfurt am Main"
+        },
+        {
+          "index": 785,
+          "name": "Klappe U-Bahnhof Schweizer Platz",
+          "city": "Frankfurt am Main"
+        },
+        {
+          "index": 786,
+          "name": "Klappe U-Bahnstation Messe",
+          "city": "Frankfurt am Main"
+        }
+      ]
+    },
+    "activity_evidence.undated_editorial_reference_not_current_activity": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 792,
+          "name": "Stadtpark Höchst",
+          "city": "Frankfurt am Main"
+        },
+        {
+          "index": 793,
+          "name": "Parkplatz Ausschauplattform",
+          "city": "Gronau (Westfalen)"
+        },
+        {
+          "index": 794,
+          "name": "A7 - Parkplatz Bönningstedt",
+          "city": "Hamburg"
+        },
+        {
+          "index": 795,
+          "name": "BAT-Park",
+          "city": "Hamburg"
+        },
+        {
+          "index": 796,
+          "name": "Boberger Dünen",
+          "city": "Hamburg"
+        }
+      ]
+    },
+    "activity_evidence.editorial_undated_is_not_current_activity": {
+      "true": 5,
+      "false": 0,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 802,
+          "name": "Kennedybrücke / Lombardsbrücke",
+          "city": "Hamburg"
+        },
+        {
+          "index": 803,
+          "name": "Lise-Meitner-Park",
+          "city": "Hamburg"
+        },
+        {
+          "index": 804,
+          "name": "Park am Weiher - Eimsbüttel",
+          "city": "Hamburg"
+        },
+        {
+          "index": 805,
+          "name": "Parkplatz A1 zwischen Hittfeld und Dibbersen",
+          "city": "Hamburg"
+        },
+        {
+          "index": 806,
+          "name": "Parkplatz A1-Stillhorn",
+          "city": "Hamburg"
+        }
+      ]
+    },
+    "recent_activity_self_report_present": {
+      "true": 2,
+      "false": 3,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 316,
+          "name": "Donauinsel Nordstrand",
+          "city": "Vienna"
+        },
+        {
+          "index": 318,
+          "name": "FKK und Gay Cruising",
+          "city": "Vienna"
+        }
+      ]
+    },
+    "recent_positive_first_person_report_present": {
+      "true": 2,
+      "false": 3,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 349,
+          "name": "Zeleni Venac market toilet",
+          "city": "Belgrade"
+        },
+        {
+          "index": 350,
+          "name": "Terazije public toilet",
+          "city": "Belgrade"
+        }
+      ]
+    },
+    "credible_recent_activity": {
+      "true": 1,
+      "false": 201,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 1033,
+          "name": "A5 Ausfahrt Efringen-Kirchen",
+          "city": "Kembs"
+        }
+      ]
+    },
+    "identity_spot_precision_confirmed": {
+      "true": 1,
+      "false": 4,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 10,
+          "name": "Parc de la Anita",
+          "city": "La Massana"
+        }
+      ]
+    },
+    "postcutoff_activity.reported_recent_negative_safety_or_access": {
+      "true": 1,
+      "false": 4,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 227,
+          "name": "Poduene Railway Station",
+          "city": "Sofia"
+        }
+      ]
+    },
+    "activity_evidence.verified_recent_specific_activity": {
+      "true": 1,
+      "false": 4,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 627,
+          "name": "Bahnhofsklappe Südkreuz",
+          "city": "Berlin"
+        }
+      ]
+    },
+    "activity_evidence.duplicate_earlier_candidate_may_have_separate_recent_evidence": {
+      "true": 1,
+      "false": 4,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 684,
+          "name": "People's Park Prenzlauer Berg",
+          "city": "Berlin"
+        }
+      ]
+    },
+    "activity_freshness.has_recent_claim": {
+      "true": 1,
+      "false": 4,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 884,
+          "name": "Parkplatz an der B 471",
+          "city": "Munich"
+        }
+      ]
+    },
+    "recent_dated_community_report_present": {
+      "true": 1,
+      "false": 2,
+      "nonbool": 0,
+      "true_samples": [
+        {
+          "index": 1170,
+          "name": "Scheidplatz",
+          "city": "Munich"
+        }
+      ]
+    },
+    "publication_approved": {
+      "true": 0,
+      "false": 310,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "publish_approved": {
+      "true": 0,
+      "false": 263,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].recent_activity_established": {
+      "true": 0,
+      "false": 120,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "approved_for_live_publication": {
+      "true": 0,
+      "false": 73,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.independently_confirmed_2026_cruising": {
+      "true": 0,
+      "false": 68,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "approved_for_publication": {
+      "true": 0,
+      "false": 48,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity_since_2025_11_06.confirmed_dated_positive_firsthand_visit": {
+      "true": 0,
+      "false": 43,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "site_evidence[].counted_as_independent_activity": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].independent_2026_attendance_verified": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].current_onsite_activity_verified": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].recent_onsite_activity_confirmed": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].activity_since_cutoff_confirmed": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].date_specific_2026_onsite_activity_verified": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].source_specific_visit_after_cutoff_verified": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].positive_activity_since_2025_11_06_verified": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].qualifying_current_activity_confirmed": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].last12month_activity_verified": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].last12_month_activity_confirmed": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].activity_recent_confirmed": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].current_cruising_firsthand_verified": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].recency_qualifying_on_site_visit_verified": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].recent_onsite_activity_verified": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].credibly_recent_physical_activity_verified": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].current_activity_verified": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].current_activity_confirmed": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "source_checks[].verified_current_spot_activity": {
+      "true": 0,
+      "false": 40,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "credible_recent_physical_cruising_activity_verified": {
+      "true": 0,
+      "false": 38,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "dated_reports[].independently_verified": {
+      "true": 0,
+      "false": 37,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "report_timeline[].verified": {
+      "true": 0,
+      "false": 17,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "independent_recent_physical_cruising_verified": {
+      "true": 0,
+      "false": 15,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.independently_verified_current_activity": {
+      "true": 0,
+      "false": 15,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "dated_reports[].credible_current_positive": {
+      "true": 0,
+      "false": 15,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "original_source_extracts[].matching_original_source_records[].source_verified_current": {
+      "true": 0,
+      "false": 13,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.confirmed_current_cruising": {
+      "true": 0,
+      "false": 10,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "dated_evidence[].independently_verified": {
+      "true": 0,
+      "false": 9,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity_since_2025_11_06.confirmed": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.verified_positive_site_use": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity_since_2025_11_06.confirmed_recent_activity": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.verified_firsthand_physical_visit": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.affirmative_recent_cruising_verified": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.firsthand_visit_within_window_verified": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity_since_2025_11_06.positive_gay_male_firsthand_visit_confirmed": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity_since_2025_11_06.confirmed_recent_firsthand_onsite_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_window.positive_spot_specific_firsthand_visit_verified": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.confirmed_positive_dated_firsthand_report": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.confirmed_postcutoff_physical_cruising_visit": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.verified_dated_cruising_visit": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity_since_2025_11_06.firsthand_visit_confirmed": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.confirmed_recent_positive_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity_since_2025_11_06.verified_positive_firsthand_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.confirmed_dated_recent_on_site_gay_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.firsthand_positive_cruising_2025_2026_verified": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity_since_2025_11_06.verified_positive_firsthand_visit": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.positive_firsthand_on_site_gay_cruising_confirmed": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "postcutoff_activity.confirmed_positive_on_site_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity_since_2025_11_06.verified_positive_firsthand_gay_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.qualifying_dated_firsthand_current_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_activity.dated_positive_firsthand_visit_verified": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "postcutoff_activity.verified_positive_dated_firsthand_postcutoff": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "latest_physical_activity_2025_11_06_or_later_verified": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "physical_activity_since_2025_11_06_independently_confirmed": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "credible_recent_physical_cruising_report": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "confirmed_physical_cruising_since_2025_11_06": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "independently_verified_recent_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "independently_verified_physical_cruising_since_2025_11_06": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "physical_cruising_since_2025_11_06_verified": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "independent_recent_physical_cruising_since_2025_11_06": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "independently_verified_physical_activity_in_last_12_months": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.crowd_or_hours_claims_verified": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.confirmed_recent_specific_sexual_acts": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.verified_recent_specific_cruising_activity": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.recent_verified_specific_sex_acts": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.verified_2026_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.specific_sexual_activity_confirmed_2026": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.confirmed_recent_cruising_encounter": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.verified_current_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.current_cruising_confirmed_by_independent_authority": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.independent_confirmation_of_actual_current_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.independent_current_cruising_verification": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.confirmed_recent_sexual_encounters": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.confirmed_recent_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.confirmed_specific_recent_sexual_encounters": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.independent_verified_current_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.verified_recent_specific_sexual_acts": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.verified_independent_current_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.recent_verified_specific_sexual_acts": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.independent_current_cruising_confirmed": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.independent_confirmation_of_current_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.independent_confirmed_current_cruising": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.official_current_cruising_endorsement": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "live_publication_approved": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_freshness.independently_verified_current_activity": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "current_activity_independently_confirmed": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_verified": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_freshness.independently_confirmed": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "verified_recent_activity": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "credible_recent_cruising_claim": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "verified_recent": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "fresh_activity_since_2025_11_06": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "contemporary_activity_confirmed": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "positive_recent_evidence": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_positive_visitor_evidence": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "independently_verified_activity": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "positive_recent_cruising_evidence": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "recent_credible_activity": {
+      "true": 0,
+      "false": 5,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "activity_evidence.confirmed_current_cruising_activity": {
+      "true": 0,
+      "false": 4,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "original_source_extracts[].matching_original_source_records[].independent_2026_activity_verified": {
+      "true": 0,
+      "false": 2,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "original_source_extracts[].matching_original_source_records[].exact_gps_verified": {
+      "true": 0,
+      "false": 2,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "original_source_extracts[].matching_original_source_records[].independent_activity_verified": {
+      "true": 0,
+      "false": 2,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "dated_activity_and_documentary_reports[].physical_activity_verified": {
+      "true": 0,
+      "false": 1,
+      "nonbool": 0,
+      "true_samples": []
+    },
+    "dated_reports[].physical_cruising_confirmed": {
+      "true": 0,
+      "false": 1,
+      "nonbool": 0,
+      "true_samples": []
+    }
+  },
+  "recent_activity_explicit_positive_records": [
+    {
+      "index": 396,
+      "name": "Parco delle Cascine (Cascine Park)",
+      "city": "Florence",
+      "worker": "B",
+      "true_fields": [
+        "credible_physical_activity_since_2025_11_06"
+      ]
+    },
+    {
+      "index": 444,
+      "name": "Centro Commerciale Verona Uno",
+      "city": "Verona",
+      "worker": "B",
+      "true_fields": [
+        "credible_physical_activity_since_2025_11_06"
+      ]
+    },
+    {
+      "index": 449,
+      "name": "Kalngale Nudist Beach",
+      "city": "Riga",
+      "worker": "B",
+      "true_fields": [
+        "credible_physical_activity_since_2025_11_06"
+      ]
+    },
+    {
+      "index": 465,
+      "name": "Aquadrom Pool",
+      "city": "Katowice",
+      "worker": "B",
+      "true_fields": [
+        "credible_physical_activity_since_2025_11_06"
+      ]
+    },
+    {
+      "index": 509,
+      "name": "Praia 19",
+      "city": "Costa de Caparica",
+      "worker": "B",
+      "true_fields": [
+        "credible_physical_activity_since_2025_11_06"
+      ]
+    },
+    {
+      "index": 1033,
+      "name": "A5 Ausfahrt Efringen-Kirchen",
+      "city": "Kembs",
+      "worker": "D",
+      "true_fields": [
+        "credible_recent_activity"
+      ]
+    }
+  ],
+  "recent_activity_explicit_positive_count": 6,
+  "records_with_dated_evidence_fields": {
+    "recent_activity_since_2025_11_06.dated_postcutoff_user_messages": 2,
+    "dated_reports": 218,
+    "dated_evidence": 91,
+    "older_historical_evidence": 2,
+    "recent_online_reports_not_physical_activity": 2,
+    "activity_evidence.older_dated_posts": 16,
+    "activity_evidence.dated_recent_site_signals": 4,
+    "activity_evidence.older_or_historical_reports": 3,
+    "activity_evidence.recent_site_use_reports": 1,
+    "activity_evidence.recent_dated_evidence": 3,
+    "activity_evidence.historical_dated_evidence": 1,
+    "activity_evidence.recent_site_signals": 1,
+    "activity_evidence.dated_recent_visitor_signals": 1,
+    "activity_evidence.historical_posts": 6,
+    "activity_evidence.dated_recent_reports_or_questions": 2,
+    "activity_evidence.older_or_historic_posts": 4,
+    "activity_evidence.recent_dated_first_person_or_questions": 2,
+    "activity_evidence.historical_dated": 5,
+    "activity_evidence.recent_dated_user_reports": 2,
+    "activity_evidence.historical_or_older_reports": 5,
+    "activity_evidence.recent_dated_reports": 17,
+    "activity_evidence.older_dated_reports": 17,
+    "activity_evidence.older_reports": 81,
+    "activity_evidence.historical_reports": 8,
+    "activity_evidence.historical_dated_posts": 7,
+    "activity_evidence.recent_first_person_reports": 2,
+    "activity_evidence.recent_first_person_signals": 3,
+    "activity_evidence.recent_reports": 23,
+    "activity_evidence.older_posts": 32,
+    "activity_evidence.recent_dated_visitors_or_access": 1,
+    "activity_evidence.recent_access_signals": 1,
+    "activity_evidence.dated_recent_reports": 3,
+    "activity_evidence.recent_dated_signals": 7,
+    "activity_evidence.historical_or_older_posts": 5,
+    "activity_evidence.recent_posts": 3,
+    "activity_evidence.older_evidence": 5,
+    "activity_evidence.recent_claims": 2,
+    "activity_evidence.recent_visit_or_access_reports": 1,
+    "activity_evidence.dated_recent_posts": 3,
+    "activity_evidence.recent_2026_reports": 1,
+    "activity_evidence.historical_dated_reports": 5,
+    "activity_evidence.older_and_historical_reports": 5
+  },
+  "dated_evidence_samples": {
+    "recent_activity_since_2025_11_06.dated_postcutoff_user_messages": [
+      {
+        "index": 148,
+        "name": "Central",
+        "examples": [
+          "2026-03-02 proposed meetup + facility location update"
+        ]
+      },
+      {
+        "index": 150,
+        "name": "Eurovea",
+        "examples": [
+          "2026-03-07 question only"
+        ]
+      }
+    ],
+    "dated_reports": [
+      {
+        "index": 151,
+        "name": "Cunovo Nudist Beach",
+        "examples": [
+          {
+            "published": "2026-06-29T16:57:52",
+            "type": "meeting_inquiry_not_observed_visit",
+            "paraphrase": "User asks whether anyone will be there tomorrow."
+          }
+        ]
+      },
+      {
+        "index": 152,
+        "name": "3 studne",
+        "examples": [
+          {
+            "published": "2025-06-10T22:26:09",
+            "type": "historical_inquiry_pre_cutoff",
+            "paraphrase": "User asks if anyone still goes there."
+          }
+        ]
+      },
+      {
+        "index": 154,
+        "name": "Glory Hole",
+        "examples": [
+          {
+            "published": "2020-07-09T19:52:31",
+            "type": "historical_negative_firsthand_or_user_report",
+            "paraphrase": "User reports no holes remain after restroom renovations and mentions a different shopping mall as last unconfirmed information."
+          }
+        ]
+      },
+      {
+        "index": 155,
+        "name": "Sava",
+        "examples": [
+          {
+            "published": "2026-05-07T21:45:19Z",
+            "type": "spot_specific_platform_checkin_not_confirmed_attendance",
+            "paraphrase": "Directory lists a user check-in on Sava entry; may be remotely generated."
+          }
+        ]
+      },
+      {
+        "index": 174,
+        "name": "Frescati - Stockholm",
+        "examples": [
+          {
+            "date": "2026-05-27",
+            "kind": "meeting_intention_not_observed_visit",
+            "summary": "User asks if anyone plans to be there at 13:00."
+          }
+        ]
+      },
+      {
+        "index": 175,
+        "name": "Mall of Scandinavia",
+        "examples": [
+          {
+            "date": "2026-05-25",
+            "kind": "meeting_question_only",
+            "summary": "User asks if anyone currently there."
+          }
+        ]
+      }
+    ],
+    "dated_evidence": [
+      {
+        "index": 319,
+        "name": "Figurteich",
+        "examples": [
+          {
+            "date": "2026-04-17",
+            "kind": "directory_checkin",
+            "note": "Online check-in timestamp on country index; physical presence unconfirmed."
+          }
+        ]
+      },
+      {
+        "index": 320,
+        "name": "Swiss cottage - Cahir woods",
+        "examples": [
+          {
+            "date": "2026-11-06",
+            "kind": "official_facility_status_not_cruising",
+            "note": "Visitor building listed closed until 2027; woodland trail status not proven."
+          }
+        ]
+      },
+      {
+        "index": 321,
+        "name": "Seapoint-Western Cape-Sudáfrica",
+        "examples": [
+          {
+            "date": "2026-06-18",
+            "kind": "meeting_question_about_daytime",
+            "note": "User asks whether site can be visited in daylight; no attendance claim."
+          }
+        ]
+      },
+      {
+        "index": 322,
+        "name": "Phoenix Park Military Road",
+        "examples": [
+          {
+            "date": "2026-06-18",
+            "kind": "forum_reply_without_visit_proof",
+            "note": "Country index shows conversation at this listing; no evidence of physical attendance."
+          }
+        ]
+      },
+      {
+        "index": 900,
+        "name": "Toilette an der Theodor Heuss Brücke",
+        "examples": [
+          {
+            "date": "2024-05-07",
+            "source": "gay-szene.net",
+            "summary": "Visitor described occasional presence in nearby park rather than a specific encounter inside the restroom."
+          }
+        ]
+      },
+      {
+        "index": 901,
+        "name": "U-Bahn Toilette Röthenbach",
+        "examples": [
+          {
+            "date": "2025-03-13",
+            "source": "gay-szene.net",
+            "summary": "Visitor asks whether any activity remains; not confirmation."
+          }
+        ]
+      }
+    ],
+    "older_historical_evidence": [
+      {
+        "index": 549,
+        "name": "Cranford Park",
+        "examples": [
+          {
+            "date": "2008-01-15",
+            "kind": "news_report_on_2007_robberies",
+            "url": "https://www.thepinknews.com/2008/01/15/jail-for-thief-who-targeted-cruising-area/"
+          }
+        ]
+      },
+      {
+        "index": 550,
+        "name": "McKees Dam",
+        "examples": [
+          {
+            "date": "2016-02-16",
+            "kind": "news_report_of_historical_cruising_complaints",
+            "url": "https://www.northernirelandworld.com/news/complaints-over-sex-encounters-at-mckees-dam-2176836"
+          }
+        ]
+      }
+    ],
+    "recent_online_reports_not_physical_activity": [
+      {
+        "index": 550,
+        "name": "McKees Dam",
+        "examples": [
+          {
+            "date": "2026-06-22",
+            "type": "question_not_visitation",
+            "description": "An online directory commenter asked whether anyone still visits; the question is not an encounter report."
+          }
+        ]
+      },
+      {
+        "index": 576,
+        "name": "Parkplatz Arlesheim",
+        "examples": [
+          {
+            "date": "2026-07",
+            "type": "unverified_directory_checkin",
+            "description": "Archive flags a July 2026 check-in but no verifiable physical encounter."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.older_dated_posts": [
+      {
+        "index": 587,
+        "name": "Eichwald",
+        "examples": [
+          {
+            "date": "2025-08-04",
+            "type": "visitor_question_not_visit_confirmation",
+            "note": "A commenter asked whether anyone was there on the day."
+          }
+        ]
+      },
+      {
+        "index": 596,
+        "name": "Rastplatz Hexentobel",
+        "examples": [
+          {
+            "date": "2025-09-13",
+            "type": "first_person_presence_claim",
+            "note": "Directory commenter wrote that they were there; older than 12-month cutoff."
+          }
+        ]
+      },
+      {
+        "index": 689,
+        "name": "Parking lot Grunewald",
+        "examples": [
+          {
+            "date": "2025-04-13",
+            "kind": "unverified_elaborate_first_person_claim",
+            "note": "Long sexual anecdote with no independent corroboration; pre-cutoff."
+          }
+        ]
+      },
+      {
+        "index": 722,
+        "name": "Beethoven Park",
+        "examples": [
+          {
+            "date": "2023-08-20",
+            "kind": "first_person_negative_visit",
+            "note": "Reports little activity despite source's everyday popularity claim."
+          }
+        ]
+      },
+      {
+        "index": 723,
+        "name": "Blücherpark",
+        "examples": [
+          {
+            "date": "2025-10-01",
+            "kind": "personal_meeting_interest_only",
+            "note": "Poster lives near park and wants contacts; pre-cutoff."
+          }
+        ]
+      },
+      {
+        "index": 725,
+        "name": "Gravel pit lake Gremberghoven",
+        "examples": [
+          {
+            "date": "2025-07-02",
+            "kind": "first_person_negative_visitor_opinion",
+            "note": "Commenter denies that lake is a gay cruising area."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.dated_recent_site_signals": [
+      {
+        "index": 593,
+        "name": "Am Fluss",
+        "examples": [
+          {
+            "date": "2026-07-04T16:43:50Z",
+            "type": "site_check_in",
+            "source_url": "https://www.gays-cruising.com/en/switzerland",
+            "user_alias": "Samsam1986",
+            "note": "Dated platform check-in attached to named Obfelden place; self-reported signal, not verified visitor evidence."
+          }
+        ]
+      },
+      {
+        "index": 594,
+        "name": "Rastplatz Wäldchen mit Tür zu mehr",
+        "examples": [
+          {
+            "date": "2026-07-04T16:45:16Z",
+            "type": "site_check_in",
+            "source_url": "https://www.gays-cruising.com/en/switzerland",
+            "user_alias": "Tarzisius",
+            "note": "Dated platform check-in, not proof of an encounter or continuous activity."
+          }
+        ]
+      },
+      {
+        "index": 728,
+        "name": "Agrippabad",
+        "examples": [
+          {
+            "date": "2026-07-17",
+            "kind": "official_operational_reopening",
+            "note": "Physical pool/sauna reopening, NOT cruising activity."
+          }
+        ]
+      },
+      {
+        "index": 731,
+        "name": "Klappe am Hoeschpark",
+        "examples": [
+          {
+            "date": "2026-03-16",
+            "kind": "meetup_solicitation_and_subjective_site_assessment",
+            "note": "Not a verified visit or encounter."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.older_or_historical_reports": [
+      {
+        "index": 597,
+        "name": "Rastplatz Stegen",
+        "examples": [
+          {
+            "date": "2025-09-08",
+            "type": "question_about_visitors",
+            "note": "User asked about night activity."
+          }
+        ]
+      },
+      {
+        "index": 600,
+        "name": "Europaallee",
+        "examples": [
+          {
+            "date": "2025-07-07",
+            "type": "first_person_presence_claim",
+            "note": "One user said they were present; older than cutoff."
+          }
+        ]
+      },
+      {
+        "index": 601,
+        "name": "Friedhof Sihlfeld WC",
+        "examples": [
+          {
+            "date": "2025-01",
+            "type": "historical_secondhand_neighbourhood_reporting",
+            "note": "Neighbourhood association describes reported cruising and anti-cruising restrictions; not a verified visitor report."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_site_use_reports": [
+      {
+        "index": 603,
+        "name": "Park De Oeverlanden",
+        "examples": [
+          {
+            "date": "2026-10-21",
+            "kind": "municipality_current_area_use",
+            "supports": "named cruising zone and visitors, not quantified sex acts"
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_dated_evidence": [
+      {
+        "index": 608,
+        "name": "Galderse Meren",
+        "examples": [
+          {
+            "date": "2026-08-14",
+            "kind": "self_reported_visitor_observation_of_contact_seeking",
+            "supports": "some men attempting to meet others, no verified sexual activity"
+          }
+        ]
+      },
+      {
+        "index": 609,
+        "name": "De Bankjes",
+        "examples": [
+          {
+            "date": "2026-07-04",
+            "kind": "directory_check_in",
+            "supports": "recent platform interaction only, not proven visit"
+          }
+        ]
+      },
+      {
+        "index": 611,
+        "name": "Neeltje Jans",
+        "examples": [
+          {
+            "date": "2026-07-04",
+            "kind": "directory_check_in",
+            "supports": "platform signal only, not confirmed cruising visit"
+          }
+        ]
+      }
+    ],
+    "activity_evidence.historical_dated_evidence": [
+      {
+        "index": 611,
+        "name": "Neeltje Jans",
+        "examples": [
+          {
+            "date": "2022-09-24",
+            "kind": "guestbook_first_person_historical_observation",
+            "supports": "historical report of cruising near dune edges, outside 12-month window"
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_site_signals": [
+      {
+        "index": 615,
+        "name": "Meer en Bos Park",
+        "examples": [
+          {
+            "date": "2026-07-04",
+            "kind": "directory_check_in",
+            "supports": "platform action only; no verified cruise or eyewitness report"
+          }
+        ]
+      }
+    ],
+    "activity_evidence.dated_recent_visitor_signals": [
+      {
+        "index": 620,
+        "name": "Noord Aa - Homo Ontmoetingplaats (HOP)",
+        "examples": [
+          {
+            "date": "2026-07-12",
+            "type": "first_person_visited_HOP_section",
+            "strength": "recent visitor presence confirmed by self-report, no proved sexual act"
+          }
+        ]
+      }
+    ],
+    "activity_evidence.historical_posts": [
+      {
+        "index": 625,
+        "name": "Parking lot Borker Heide",
+        "examples": [
+          {
+            "date": "2021-07-20",
+            "kind": "forum_visitor_says_present_no_success"
+          }
+        ]
+      },
+      {
+        "index": 626,
+        "name": "Arkenberge Baggersee",
+        "examples": [
+          {
+            "date": "2025-07-01",
+            "kind": "directory_comment_on_water_quality"
+          }
+        ]
+      },
+      {
+        "index": 787,
+        "name": "Konstablerwache",
+        "examples": [
+          {
+            "date": "2021-04-22",
+            "kind": "question_only",
+            "note": "Asks whether cruising remains, not visit."
+          }
+        ]
+      },
+      {
+        "index": 788,
+        "name": "Mainufer",
+        "examples": [
+          {
+            "date": "2018-04-09",
+            "kind": "location_question",
+            "note": "Asks which side is intended."
+          }
+        ]
+      },
+      {
+        "index": 789,
+        "name": "Parkplatz A3 unmittelbar nach dem Frankfurter Kreuz",
+        "examples": [
+          {
+            "date": "2019-05-19",
+            "kind": "historical_woodland_fence_and_trucks",
+            "note": "Source says forest fenced, weekends truck congestion."
+          }
+        ]
+      },
+      {
+        "index": 790,
+        "name": "Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring",
+        "examples": [
+          {
+            "date": "2025-04-11",
+            "kind": "older_activity_report",
+            "note": "Reported earlier mixed activity on one direction, pre-cutoff."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.dated_recent_reports_or_questions": [
+      {
+        "index": 627,
+        "name": "Bahnhofsklappe Südkreuz",
+        "examples": [
+          {
+            "date": "2026-02-23",
+            "kind": "first_person_cruising_visitor_report",
+            "supports": "visitor presence and alleged encounters; self-report"
+          }
+        ]
+      },
+      {
+        "index": 631,
+        "name": "Fennpfuhl Park",
+        "examples": [
+          {
+            "date": "2026-03-05",
+            "kind": "activity_question_only",
+            "supports": "question about whether active; no corroboration"
+          }
+        ]
+      }
+    ],
+    "activity_evidence.older_or_historic_posts": [
+      {
+        "index": 628,
+        "name": "Café Achteck an der U Alt Mariendorf",
+        "examples": [
+          {
+            "date": "2022-04-02",
+            "kind": "forum_visitor_negative_activity_observation"
+          }
+        ]
+      },
+      {
+        "index": 629,
+        "name": "Cruising am Teltowkanal",
+        "examples": [
+          {
+            "date": "2025-06-26",
+            "kind": "first_person_presence_no_other_visitors"
+          }
+        ]
+      },
+      {
+        "index": 630,
+        "name": "Ernst-Thälmann-Park",
+        "examples": [
+          {
+            "date": "2025-10-26",
+            "kind": "first_person_encounter_claim_pre_cutoff"
+          }
+        ]
+      },
+      {
+        "index": 631,
+        "name": "Fennpfuhl Park",
+        "examples": [
+          {
+            "date": "2024-11-27",
+            "kind": "first_person_harassment_and_low_activity_report"
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_dated_first_person_or_questions": [
+      {
+        "index": 632,
+        "name": "Flughafensee Tegel",
+        "examples": [
+          {
+            "date": "2026-07-31",
+            "type": "first_person_access_report",
+            "summary": "Reports FKK beach re-opened, not cruising."
+          }
+        ]
+      },
+      {
+        "index": 636,
+        "name": "Grunewald",
+        "examples": [
+          {
+            "date": "2026-08-04",
+            "type": "first_person_site_visitor_observation",
+            "summary": "Observed some men walking / looking in Pappelplatz-area paths; explicitly no confirmed sex or successful meeting."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.historical_dated": [
+      {
+        "index": 632,
+        "name": "Flughafensee Tegel",
+        "examples": [
+          {
+            "date": "2023-06-14",
+            "type": "first_person_activity_claim",
+            "summary": "Reported encounter in woodland near bathing zone."
+          }
+        ]
+      },
+      {
+        "index": 633,
+        "name": "Freizeitpark Marienfelde",
+        "examples": [
+          {
+            "date": "2019-02-18",
+            "type": "first_person_encounter_claim",
+            "summary": "Reported meeting another visitor the previous evening."
+          }
+        ]
+      },
+      {
+        "index": 634,
+        "name": "Fritz-Schloß-Park",
+        "examples": [
+          {
+            "date": "2022-05-23",
+            "type": "first_person_negative_activity",
+            "summary": "Frequent visitor says no activity observed."
+          }
+        ]
+      },
+      {
+        "index": 635,
+        "name": "Goldfischteich im Tiergarten",
+        "examples": [
+          {
+            "date": "2019-06-11",
+            "type": "first_person_rare_meeting_observation",
+            "summary": "Saw occasional men near bench; cannot establish current use."
+          }
+        ]
+      },
+      {
+        "index": 636,
+        "name": "Grunewald",
+        "examples": [
+          {
+            "date": "2024-05-09",
+            "type": "first_person_negative_activity",
+            "summary": "Reported many families and naturists but no cruising mood."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_dated_user_reports": [
+      {
+        "index": 637,
+        "name": "Grunewald im Jagen 90",
+        "examples": [
+          {
+            "date": "2026-05-26",
+            "type": "visitor_location_correction",
+            "summary": "States map pin wrong; says some people occasionally present on nearby clearing, no verified encounter."
+          }
+        ]
+      },
+      {
+        "index": 641,
+        "name": "Karlshorst Treskowallee",
+        "examples": [
+          {
+            "date": "2026-03-29",
+            "type": "first_person_current_site_condition_report",
+            "summary": "Visitor reports buildings demolished; no report of cruising."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.historical_or_older_reports": [
+      {
+        "index": 637,
+        "name": "Grunewald im Jagen 90",
+        "examples": [
+          {
+            "date": "2023-05-30",
+            "type": "first_person_historical_cruising",
+            "summary": "Reports past positive encounters, before cutoff."
+          }
+        ]
+      },
+      {
+        "index": 638,
+        "name": "Humboldthain",
+        "examples": [
+          {
+            "date": "2025-10-23",
+            "type": "first_person_observation",
+            "summary": "Reported few men and discouraging current situation, pre-cutoff."
+          }
+        ]
+      },
+      {
+        "index": 639,
+        "name": "Innsbrucker Platz - Drei Brunnen Säulen Park",
+        "examples": [
+          {
+            "date": "2023-05-25",
+            "type": "first_person_positive_encounter_claim",
+            "summary": "Occasional encounters when weather is good, no recent verification."
+          }
+        ]
+      },
+      {
+        "index": 640,
+        "name": "Insulaner",
+        "examples": [
+          {
+            "date": "2025-08-25",
+            "type": "commentary_on_visitor_groups",
+            "summary": "General forum response; pre-cutoff."
+          }
+        ]
+      },
+      {
+        "index": 641,
+        "name": "Karlshorst Treskowallee",
+        "examples": [
+          {
+            "date": "2022-10-22",
+            "type": "first_person_reduced_activity",
+            "summary": "Source user reports low past activity."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_dated_reports": [
+      {
+        "index": 642,
+        "name": "Kaulsdorfer Seen - Habermannsee",
+        "examples": [
+          {
+            "date": "2026-06-19",
+            "type": "first_person_no_cruising_observation",
+            "note": "Visited with another person; crowded mixed visitors but found no cruising."
+          }
+        ]
+      },
+      {
+        "index": 648,
+        "name": "Klappe Tempelhofer Feld",
+        "examples": [
+          {
+            "date": "2026-10-28",
+            "type": "first_person_site_visit_no_cruising",
+            "summary": "Visitor says toilet was heated and nearly empty."
+          }
+        ]
+      },
+      {
+        "index": 655,
+        "name": "Parkplatz Waldeck Ost an der A 117",
+        "examples": [
+          {
+            "date": "2026-07-18",
+            "kind": "first_person_negative_visit",
+            "summary": "Visited site and adjoining area; found nobody."
+          }
+        ]
+      },
+      {
+        "index": 656,
+        "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
+        "examples": [
+          {
+            "date": "2026-06-17",
+            "kind": "access_and_activity_context",
+            "summary": "User reports vegetation changes, activity reduction; mentions Seeberg West as alternative."
+          }
+        ]
+      },
+      {
+        "index": 673,
+        "name": "Volkspark Mariendorf - Südberlin!",
+        "examples": [
+          {
+            "date": "2026-04-03",
+            "type": "retrospective_first_person_encounter_and_visitor_report",
+            "note": "Post is dated; dates of claimed previous Friday and later personal encounter are unspecified."
+          }
+        ]
+      },
+      {
+        "index": 674,
+        "name": "Volkspark Prenzlauer Berg - Judith-Auer-Straße",
+        "examples": [
+          {
+            "date": "2026-07-11",
+            "type": "first_person_recent_encounter_claim",
+            "note": "Author says recent visit was successful; exact underlying visit day not given."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.older_dated_reports": [
+      {
+        "index": 643,
+        "name": "Klappe Am Schäfersee",
+        "examples": [
+          {
+            "date": "2024-07-18",
+            "type": "first_person_activity_claim",
+            "note": "Visitor says met two men in 2024."
+          }
+        ]
+      },
+      {
+        "index": 644,
+        "name": "Klappe Elbestraße",
+        "examples": [
+          {
+            "date": "2018-01-27",
+            "type": "first_person_no_activity_observed",
+            "note": "Visitor found no cruising on a day visit."
+          }
+        ]
+      },
+      {
+        "index": 645,
+        "name": "Klappe Geschichtsgebäude FU",
+        "examples": [
+          {
+            "date": "2024-03-22",
+            "type": "first_person_negative_activity_and_changed_facility",
+            "note": "Metal partitions installed, perceived no cruising."
+          }
+        ]
+      },
+      {
+        "index": 646,
+        "name": "Klappe Leuthener Platz",
+        "examples": [
+          {
+            "date": "2021-01-17",
+            "type": "first_person_no_activity",
+            "note": "User visited, no other cruisers."
+          }
+        ]
+      },
+      {
+        "index": 697,
+        "name": "Autobahnparkplatz Alken",
+        "examples": [
+          {
+            "date": "2020-07-12",
+            "type": "reported_reopening",
+            "note": "Six years before research; not current confirmation."
+          }
+        ]
+      },
+      {
+        "index": 698,
+        "name": "Bürgerpark Bremen",
+        "examples": [
+          {
+            "date": "2025-06-23",
+            "type": "question_about_venue",
+            "note": "Question is older than cutoff and not a recent visit."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.older_reports": [
+      {
+        "index": 647,
+        "name": "Klappe Pekinger Platz",
+        "examples": [
+          {
+            "date": "2024-01-25",
+            "type": "retrospective_encounter_claim",
+            "summary": "Poster recalled two previous toilet meetings; date of encounters unspecified."
+          }
+        ]
+      },
+      {
+        "index": 648,
+        "name": "Klappe Tempelhofer Feld",
+        "examples": [
+          {
+            "date": "2025-09-23",
+            "type": "first_person_reopened_toilet",
+            "summary": "Pre-cutoff report restroom accessible again after earlier closure."
+          }
+        ]
+      },
+      {
+        "index": 649,
+        "name": "Kleiner Tiergarten",
+        "examples": [
+          {
+            "date": "2024-01-10",
+            "type": "first_person_rare_activity",
+            "summary": "Reported sporadic meetings by eastern WC."
+          }
+        ]
+      },
+      {
+        "index": 650,
+        "name": "Kynastteich und Garten der Blumen und Wasserspiele",
+        "examples": [
+          {
+            "date": "2024-12-05",
+            "type": "first_person_low_attendance",
+            "summary": "Visited park at evening, saw only about two people and no evidence of cruising."
+          }
+        ]
+      },
+      {
+        "index": 651,
+        "name": "Landschaftspark Herzberge",
+        "examples": [
+          {
+            "date": "2021-02-23",
+            "type": "first_person_fencing_observation",
+            "summary": "Describes substantial new fence."
+          }
+        ]
+      },
+      {
+        "index": 662,
+        "name": "Sandfläche im Jagen 87 des Grunewalds",
+        "examples": [
+          {
+            "date": "2025-07-05",
+            "type": "map_name_clarification",
+            "note": "Explains Jagen 86/87 relative location; verify geometry independently."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.historical_reports": [
+      {
+        "index": 652,
+        "name": "Park am Buschkrug",
+        "examples": [
+          {
+            "date": "2025-06-28",
+            "kind": "visitor_activity_claim",
+            "summary": "Forum states area still used after dark, before freshness cutoff."
+          }
+        ]
+      },
+      {
+        "index": 653,
+        "name": "Park Thomasstraße",
+        "examples": [
+          {
+            "date": "2024-10-06",
+            "kind": "historical_venue_revival_request",
+            "summary": "Contributor recalls earlier encounters and calls for renewed attendance, not contemporary activity."
+          }
+        ]
+      },
+      {
+        "index": 654,
+        "name": "Parkplatz A24 Berlin Richtung Hamburg hinter Linumer Bruch",
+        "examples": [
+          {
+            "date": "2021-06-05",
+            "kind": "forum_mentions_other_location",
+            "summary": "Comment mainly suggests an unrelated FKK site near Neuruppin."
+          }
+        ]
+      },
+      {
+        "index": 707,
+        "name": "Alberti See",
+        "examples": [
+          {
+            "date": "2024-06-13",
+            "kind": "older_first_person_observation",
+            "note": "Source criticizes high visibility, mixes FKK and potential cruising."
+          }
+        ]
+      },
+      {
+        "index": 708,
+        "name": "Fort X",
+        "examples": [
+          {
+            "date": "2010-07-10",
+            "kind": "historical_first_person_negative_report",
+            "note": "Repeated park visits without seeing cruising."
+          }
+        ]
+      },
+      {
+        "index": 709,
+        "name": "Grüngürtel an der Hitzelerstraße",
+        "examples": [
+          {
+            "date": "2025-05-05",
+            "kind": "historic_first_person_passby_observation",
+            "note": "Cyclist saw people exiting shrubs, not confirmation of sexual encounters."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.historical_dated_posts": [
+      {
+        "index": 657,
+        "name": "Plänterwald",
+        "examples": [
+          {
+            "date": "2024-08-03",
+            "type": "first_person_site_opinion",
+            "note": "Poster says people sometimes meet in woodland, not post-cutoff."
+          }
+        ]
+      },
+      {
+        "index": 658,
+        "name": "Plötzensee",
+        "examples": [
+          {
+            "date": "2024-08-25",
+            "type": "historical_positive_claim",
+            "note": "User describes activity in that year."
+          }
+        ]
+      },
+      {
+        "index": 659,
+        "name": "Preußenpark",
+        "examples": [
+          {
+            "date": "2025-04-13",
+            "type": "older_first_person_encounter_claim",
+            "note": "A meeting occurred but was interrupted."
+          }
+        ]
+      },
+      {
+        "index": 660,
+        "name": "Rehberge Park",
+        "examples": [
+          {
+            "date": "2025-06-26",
+            "type": "first_person_positive_visitor_claim",
+            "note": "Older than required 2025-11-06 cutoff."
+          }
+        ]
+      },
+      {
+        "index": 661,
+        "name": "Rudolph Wilde Park",
+        "examples": [
+          {
+            "date": "2025-08-14",
+            "type": "historical_positive_recollection",
+            "note": "Contributor recalls past encounters, no date for those meetings."
+          }
+        ]
+      },
+      {
+        "index": 677,
+        "name": "Lietzenseepark",
+        "examples": [
+          {
+            "date": "2022-12-08",
+            "type": "first_person_long_term_resident_negative",
+            "detail": "Local says no cruising observed after years living in the area."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_first_person_reports": [
+      {
+        "index": 658,
+        "name": "Plötzensee",
+        "examples": [
+          {
+            "date": "2026-07-13",
+            "type": "recent_negative_activity_post",
+            "note": "Source commenter says no activity; no evidence of successful cruise."
+          }
+        ]
+      },
+      {
+        "index": 659,
+        "name": "Preußenpark",
+        "examples": [
+          {
+            "date": "2026-03-10",
+            "type": "first_person_multiple_visits_negative",
+            "note": "Reports 3 visits during March with very little activity."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_first_person_signals": [
+      {
+        "index": 662,
+        "name": "Sandfläche im Jagen 87 des Grunewalds",
+        "examples": [
+          {
+            "date": "2026-07-30",
+            "type": "first_person_cruising_area_visit",
+            "note": "Saw multiple men and attempted to make contact, with no confirmed individual encounter."
+          }
+        ]
+      },
+      {
+        "index": 663,
+        "name": "Schillerpark (Wedding/Reinickendorf)",
+        "examples": [
+          {
+            "date": "2026-06-24",
+            "type": "first_person_negative_visit",
+            "note": "About two hours in park, no visible interested men or activity."
+          }
+        ]
+      },
+      {
+        "index": 666,
+        "name": "Sonnenbad Wuhlheide",
+        "examples": [
+          {
+            "date": "2026-06-25",
+            "type": "first_person_violence_safety_report",
+            "note": "Commenter alleges being threatened with a knife approximately three weeks before post; self-reported, unverified by police in this pass."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_reports": [
+      {
+        "index": 667,
+        "name": "Spektepark",
+        "examples": [
+          {
+            "date": "2026-07-31",
+            "kind": "question_only",
+            "note": "Asks if site is still active, not evidence of a visit."
+          }
+        ]
+      },
+      {
+        "index": 670,
+        "name": "Theodor-Heuss Platz Klappe",
+        "examples": [
+          {
+            "date": "2026-07-21",
+            "kind": "first_person_negative_visits",
+            "note": "Two entries say no one was there."
+          }
+        ]
+      },
+      {
+        "index": 757,
+        "name": "Rahmer See",
+        "examples": [
+          {
+            "date": "2026-07-27",
+            "kind": "first_person_repeated_visits_low_or_no_activity",
+            "detail": "Frequent recent visits, no other cruisers observed."
+          }
+        ]
+      },
+      {
+        "index": 761,
+        "name": "Angermunder Baggerloch",
+        "examples": [
+          {
+            "date": "2026-07-13",
+            "kind": "first_person_naturist_and_cruising_area_visit",
+            "detail": "Observed gay area and woodland paths; did not report successful contact."
+          }
+        ]
+      },
+      {
+        "index": 798,
+        "name": "Friedhof Ohlsdorf",
+        "examples": [
+          {
+            "date": "2026-07-10",
+            "kind": "first_person_negative_and_WC_closed",
+            "note": "Forum visitor reported Chapel 4 toilets locked and no activity elsewhere, does not confirm all other WC open."
+          }
+        ]
+      },
+      {
+        "index": 800,
+        "name": "Hummelsee zwischen Hamburg und Norderstedt",
+        "examples": [
+          {
+            "date": "2026-08-18",
+            "kind": "first_person_repeated_visit_male_presence",
+            "note": "Reports one or two men after work and mixed naturist use, no encounter."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.older_posts": [
+      {
+        "index": 667,
+        "name": "Spektepark",
+        "examples": [
+          {
+            "date": "2024-07-10",
+            "kind": "first_person_negative_visits",
+            "note": "Two visits yielded nobody."
+          }
+        ]
+      },
+      {
+        "index": 668,
+        "name": "Stadtpark Steglitz - Goebenteich Areal",
+        "examples": [
+          {
+            "date": "2024-07-14",
+            "kind": "first_person_visit_not_activity_confirmation",
+            "note": "Saw site and hoped it would become active."
+          }
+        ]
+      },
+      {
+        "index": 669,
+        "name": "Strandbad Müggelsee",
+        "examples": [
+          {
+            "date": "2025-07-02",
+            "kind": "place_boundary_correction",
+            "note": "Claims cruising is on Nordufer, not managed Strandbad or FKK facility."
+          }
+        ]
+      },
+      {
+        "index": 671,
+        "name": "Treptower Park",
+        "examples": [
+          {
+            "date": "2024-08-03",
+            "kind": "first_person_observation",
+            "note": "Saw men at a meadow weeks earlier."
+          }
+        ]
+      },
+      {
+        "index": 682,
+        "name": "Britz Garden",
+        "examples": [
+          {
+            "date": "2023-06-08",
+            "kind": "question_about_night_meeting",
+            "note": "No report of completed visit or cruising."
+          }
+        ]
+      },
+      {
+        "index": 702,
+        "name": "Rastplatz Alten Hau",
+        "examples": [
+          {
+            "date": "2024-11-19",
+            "kind": "comment_about_visit_on_2024-10-30",
+            "description": "Positive visitor account, predates 2025-11-06."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_dated_visitors_or_access": [
+      {
+        "index": 707,
+        "name": "Alberti See",
+        "examples": [
+          {
+            "date": "2026-03-21",
+            "kind": "first_person_access_question",
+            "note": "Pedestrian bridge no longer exists; exact alternative not verified; not proof recent encounter."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_access_signals": [
+      {
+        "index": 726,
+        "name": "Parking lot Lustheide",
+        "examples": [
+          {
+            "date": "2026-04-27",
+            "kind": "source_user_Lustheide_reopening_report",
+            "note": "Independent traveller user claims side toward Cologne reopened; not independent official confirmation."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.dated_recent_reports": [
+      {
+        "index": 732,
+        "name": "P & R Eichlinghofen",
+        "examples": [
+          {
+            "date": "2026-07-22",
+            "kind": "contemporaneous_activity_claim",
+            "note": "Forum user says place is still frequented, with mixed ages; no specific dated encounter described."
+          }
+        ]
+      },
+      {
+        "index": 733,
+        "name": "Parkplatz A45 Dortmund Westerfilde beidseitig",
+        "examples": [
+          {
+            "date": "2026-06-06",
+            "kind": "current_activity_shift_claim",
+            "note": "Visitor reports more men at Westerfilde because Lusebrink closed; no specific encounter."
+          }
+        ]
+      },
+      {
+        "index": 734,
+        "name": "Rastplatz Beverbach an der A 40 (Ruhrschnellweg)",
+        "examples": [
+          {
+            "date": "2026-06-06",
+            "kind": "current_location_failure",
+            "note": "User could not find rest area; not cruising confirmation."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_dated_signals": [
+      {
+        "index": 739,
+        "name": "Solebad Wischlingen",
+        "examples": [
+          {
+            "date": "2026-07-17",
+            "kind": "question_about_gay_activities",
+            "note": "Question around event, not an eyewitness cruising report."
+          }
+        ]
+      },
+      {
+        "index": 740,
+        "name": "Technische Universität Dortmund",
+        "examples": [
+          {
+            "date": "2026-01-05",
+            "kind": "question_only",
+            "note": "Asks whether university cruising exists; not a visitor report."
+          }
+        ]
+      },
+      {
+        "index": 741,
+        "name": "Formsandgrube Steinbach",
+        "examples": [
+          {
+            "date": "2026-08-05",
+            "kind": "question_about_other_visitors",
+            "note": "Question only; does not corroborate encounter."
+          }
+        ]
+      },
+      {
+        "index": 742,
+        "name": "Kiesgrube Dresden-Zschieren",
+        "examples": [
+          {
+            "date": "2026-07-09",
+            "kind": "retrospective_first_person_recent_visit_and_cruising_possibility",
+            "note": "User reports having visited late June 2026 and says men can still meet, self-reported."
+          }
+        ]
+      },
+      {
+        "index": 743,
+        "name": "Kiesgrube Leuben",
+        "examples": [
+          {
+            "date": "2026-05-11",
+            "kind": "first_person_negative_condition_and_activity_report",
+            "note": "Visitor describes inaccessible overgrown hill and no cruising."
+          }
+        ]
+      },
+      {
+        "index": 744,
+        "name": "Klappe Straßburger Platz",
+        "examples": [
+          {
+            "date": "2026-03-13",
+            "kind": "first_person_repeated_negative_visits",
+            "note": "Visitor says repeated trips found no encounters."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.historical_or_older_posts": [
+      {
+        "index": 762,
+        "name": "Düsseldorf Südpark (ehemalige BUGA)",
+        "examples": [
+          {
+            "date": "2025-06-29",
+            "kind": "first_person_ordinary_park_visit",
+            "finding": "Visitor enjoyed benches and quiet evening areas but describes no cruising."
+          }
+        ]
+      },
+      {
+        "index": 763,
+        "name": "FKK Strand Himmelgeist am km 727",
+        "examples": [
+          {
+            "date": "2025-03-22",
+            "kind": "forum_map_location_correction",
+            "finding": "Claims the actual km727 is farther south than page pin; not independently located."
+          }
+        ]
+      },
+      {
+        "index": 764,
+        "name": "Hofgarten",
+        "examples": [
+          {
+            "date": "2025-06-15",
+            "kind": "older_first_person_presence_no_success",
+            "finding": "Visitor says present, many passersby, no matching contact."
+          }
+        ]
+      },
+      {
+        "index": 765,
+        "name": "Klappe Altstadt",
+        "examples": [
+          {
+            "date": "2025-04-18",
+            "kind": "question_only",
+            "finding": "Asks current toilet hours and crowd."
+          }
+        ]
+      },
+      {
+        "index": 766,
+        "name": "Nordpark - Aquazoo",
+        "examples": [
+          {
+            "date": "2023-05-01",
+            "kind": "on_site_general_male_presence",
+            "finding": "Saw men moving in shrubs near dog meadow, asks if cruising."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_posts": [
+      {
+        "index": 768,
+        "name": "Parkplatz, Kalkumer Schlossallee",
+        "examples": [
+          {
+            "date": "2026-07-19",
+            "kind": "self_report_of_ongoing_cruising",
+            "note": "User says ongoing mixed-age activity, not independently verified."
+          }
+        ]
+      },
+      {
+        "index": 770,
+        "name": "Toilette am Südfriedhof",
+        "examples": [
+          {
+            "date": "2026-07-13",
+            "kind": "first_person_recent_visit_no_activity_and_restricted_wc",
+            "note": "Visited prior day; reports accessible WC locked, poor conditions, no cruising success."
+          }
+        ]
+      },
+      {
+        "index": 771,
+        "name": "Unterbacher See",
+        "examples": [
+          {
+            "date": "2026-03-01",
+            "kind": "recently_posted_historical_cruising_recollection",
+            "note": "Post refers specifically to an August 2025 encounter, which predates 2025-11-06; NOT recent activity evidence."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.older_evidence": [
+      {
+        "index": 772,
+        "name": "Freizeitbad Düsselstrand",
+        "examples": [
+          {
+            "date": "2017-02-19",
+            "kind": "historical_sauna_and_shower_cruising_claim",
+            "note": "Describes 2017 renovation and claimed continued discreet activity, not current."
+          }
+        ]
+      },
+      {
+        "index": 773,
+        "name": "Baggersee am Hart",
+        "examples": [
+          {
+            "date": "2019-02-05",
+            "kind": "historical_naturist_review_not_cruising",
+            "note": "Visitor describes informal FKK and says small pond is not suitable for bathing."
+          }
+        ]
+      },
+      {
+        "index": 774,
+        "name": "Fkk am alten Rhein",
+        "examples": [
+          {
+            "date": "2018-04-21",
+            "kind": "old_directory_user_location",
+            "note": "French directory entry, no verified recent site visit."
+          }
+        ]
+      },
+      {
+        "index": 775,
+        "name": "Sortie efringen",
+        "examples": [
+          {
+            "date": "2025-07-01",
+            "kind": "first_person_parking_fence_report",
+            "note": "Poster found car park fenced/blocked in June 2025, current state unknown."
+          }
+        ]
+      },
+      {
+        "index": 776,
+        "name": "Parkplatz Efringen-Kirchen",
+        "examples": [
+          {
+            "date": "2025-07-01",
+            "kind": "car_park_fenced_first_person",
+            "note": "Said car park blocked by construction fence, exact continuation unknown."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_claims": [
+      {
+        "index": 775,
+        "name": "Sortie efringen",
+        "examples": [
+          {
+            "date": "2026-06-25",
+            "kind": "first_person_cruising_visitor_at_probable_alias",
+            "note": "Gay-szene Efringen car park post says diverse men and activity; alias attribution provisional."
+          }
+        ]
+      },
+      {
+        "index": 776,
+        "name": "Parkplatz Efringen-Kirchen",
+        "examples": [
+          {
+            "date": "2026-06-25",
+            "kind": "first_person_report_of_men_and_cruising",
+            "note": "Claims broad age/crowd activity, not independently corroborated."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_visit_or_access_reports": [
+      {
+        "index": 780,
+        "name": "Alte Oper",
+        "examples": [
+          {
+            "date": "2025-12-18",
+            "kind": "first_person_wc_closed_on_visit",
+            "note": "Observed closed restroom; hoped for meetings at separate Lucae fountain; no actual encounter."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.dated_recent_posts": [
+      {
+        "index": 782,
+        "name": "Friedberger Anlage",
+        "examples": [
+          {
+            "date": "2026-05-20",
+            "kind": "first_person_access_reopening_report",
+            "note": "Former closed sections open; conservation fences in place; author speculates about future cruising."
+          }
+        ]
+      },
+      {
+        "index": 784,
+        "name": "Klappe U-Bahnhof Bockenheimer Warte",
+        "examples": [
+          {
+            "date": "2026-01-15",
+            "kind": "first_person_operational_reopening_and_security_report",
+            "note": "States open again and frequent security checks."
+          }
+        ]
+      },
+      {
+        "index": 785,
+        "name": "Klappe U-Bahnhof Schweizer Platz",
+        "examples": [
+          {
+            "date": "2026-06-21",
+            "kind": "WC_closed_recent_user_report",
+            "note": "Poster says locked for some time; does not know why."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.recent_2026_reports": [
+      {
+        "index": 790,
+        "name": "Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring",
+        "examples": [
+          {
+            "date": "2026-05-30",
+            "kind": "first_person_or_local_closure_and_storage_report",
+            "note": "Poster says parking now construction depot and closed, unsure scene future."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.historical_dated_reports": [
+      {
+        "index": 802,
+        "name": "Kennedybrücke / Lombardsbrücke",
+        "examples": [
+          {
+            "date": "2021-05-06",
+            "kind": "first_person_low_activity",
+            "note": "Multiple recent 2021 visits, little success."
+          }
+        ]
+      },
+      {
+        "index": 803,
+        "name": "Lise-Meitner-Park",
+        "examples": [
+          {
+            "date": "2020-11-21",
+            "kind": "alternative_location_suggestion",
+            "note": "Comment redirects readers to other places, not firsthand success."
+          }
+        ]
+      },
+      {
+        "index": 804,
+        "name": "Park am Weiher - Eimsbüttel",
+        "examples": [
+          {
+            "date": "2022-08-18",
+            "kind": "historical_speculative_activity",
+            "note": "Claims possibilities behind old café, not firsthand current."
+          }
+        ]
+      },
+      {
+        "index": 805,
+        "name": "Parkplatz A1 zwischen Hittfeld und Dibbersen",
+        "examples": [
+          {
+            "date": "2017-03-31",
+            "kind": "reported_no_activity",
+            "note": "States no cruising, suggests different Rosengarten/A39 lot."
+          }
+        ]
+      },
+      {
+        "index": 806,
+        "name": "Parkplatz A1-Stillhorn",
+        "examples": [
+          {
+            "date": "2024-02-14",
+            "kind": "historical_positive_first_person_claim",
+            "note": "Early-morning meetings reported, pre-cutoff."
+          }
+        ]
+      }
+    ],
+    "activity_evidence.older_and_historical_reports": [
+      {
+        "index": 807,
+        "name": "Parkplatz Forst Rantzau am der A 23",
+        "examples": [
+          {
+            "date": "2025-09-17",
+            "kind": "historical_first_person_activity_claim",
+            "note": "Claims occasional activity, just before 12-month cutoff."
+          }
+        ]
+      },
+      {
+        "index": 808,
+        "name": "Planten un Blomen",
+        "examples": [
+          {
+            "date": "2020-12-21",
+            "kind": "forum_statement_no_cruising",
+            "note": "Only dated comment says the place is inactive."
+          }
+        ]
+      },
+      {
+        "index": 809,
+        "name": "Rastplatz Rosengarten und Parkplatz an der A 261",
+        "examples": [
+          {
+            "date": "2023-04-19",
+            "kind": "historic_temporary_worksite_closure",
+            "note": "Bremen direction said closed only through June 2023; current status unknown."
+          }
+        ]
+      },
+      {
+        "index": 810,
+        "name": "Rollschuhbahn Schlosspark Bergedorf",
+        "examples": [
+          {
+            "date": "2024-09-28",
+            "kind": "first_person_claim_no_activity",
+            "note": "Comment says location inactive, requests deletion."
+          }
+        ]
+      },
+      {
+        "index": 811,
+        "name": "See im Maschener Moor",
+        "examples": [
+          {
+            "date": "2023-05-09",
+            "kind": "first_person_recent_for_2023_negative",
+            "note": "Unsure if any men seeking contacts after several visits."
+          }
+        ]
+      }
+    ]
+  },
+  "duplicate_or_alias_flags_count": 384,
+  "duplicate_or_alias_samples": [
+    {
+      "index": 296,
+      "name": "Parkplatz und Ufer - Hawaii",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "names": [
+            "Hawaii-Paradiesweg",
+            "Hawaii Nudist Beach"
+          ],
+          "confidence": "possible_alias_broad_area"
+        }
+      ]
+    },
+    {
+      "index": 303,
+      "name": "Rosenhügel Mirabellgarten",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "name": "Rosenhügel (Mirabellgarten)",
+          "relation": "same_named_public_garden"
+        }
+      ]
+    },
+    {
+      "index": 312,
+      "name": "Wienerberg",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "name": "Wienerberg Nudist Area",
+          "status": "strong_place_identity_match_distinct_cruising_vs_FKK_areas"
+        }
+      ]
+    },
+    {
+      "index": 313,
+      "name": "Rathauspark",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "name": "Rathaus Park",
+          "status": "same_park_name"
+        }
+      ]
+    },
+    {
+      "index": 314,
+      "name": "Lobau",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "name": "Dechantlacke",
+          "relationship": "possible_subarea_not_confirmed"
+        }
+      ]
+    },
+    {
+      "index": 315,
+      "name": "Donauinsel, Toter Grund",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "name": "Toter Grund (Squirt.org)",
+          "relationship": "name_identity_match_needs_detail_id"
+        },
+        {
+          "name": "Donauinsel FKK South",
+          "relationship": "possible_geographic_subset"
+        }
+      ]
+    },
+    {
+      "index": 316,
+      "name": "Donauinsel Nordstrand",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "name": "FKK und Gay Cruising",
+          "id": "GC1-AUSTRIA-14",
+          "relationship": "very_likely_overlapping_nordstrand_area"
+        }
+      ]
+    },
+    {
+      "index": 317,
+      "name": "Konstantinteich",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "name": "Prater Hauptallee–Konstantinhügel",
+          "relationship": "possible_adjacent_site_not_confirmed"
+        }
+      ]
+    },
+    {
+      "index": 318,
+      "name": "FKK und Gay Cruising",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "name": "Donauinsel Nordstrand",
+          "id": "GC1-AUSTRIA-12",
+          "relationship": "likely_same_broad_site_0_2km_away"
+        }
+      ]
+    },
+    {
+      "index": 319,
+      "name": "Figurteich",
+      "worker": "B",
+      "field": "possible_duplicates_or_aliases",
+      "samples": [
+        {
+          "name": "Figurenteich / Brown-Boveri-Teich",
+          "relationship": "same_named_geographic_pond"
+        }
+      ]
+    },
+    {
+      "index": 320,
+      "name": "Swiss cottage - Cahir woods",
+      "worker": "B",
+      "field": "possible_duplicates_or_aliases",
+      "samples": [
+        {
+          "name": "Swiss Cottage Coronation Walk",
+          "relationship": "possible_adjacent_footpath"
+        }
+      ]
+    },
+    {
+      "index": 321,
+      "name": "Seapoint-Western Cape-Sudáfrica",
+      "worker": "B",
+      "field": "possible_duplicates_or_aliases",
+      "samples": [
+        {
+          "name": "Seapoint Beach / Martello Tower",
+          "relationship": "likely_same_Dublin_location"
+        },
+        {
+          "name": "Western Cape, South Africa",
+          "relationship": "erroneous_name_suffix_not_a_location_match"
+        }
+      ]
+    },
+    {
+      "index": 322,
+      "name": "Phoenix Park Military Road",
+      "worker": "B",
+      "field": "possible_duplicates_or_aliases",
+      "samples": [
+        {
+          "name": "Phoenix Park in night",
+          "relationship": "nearby_different_directory_spot_1_4km_away"
+        },
+        {
+          "name": "Memorial Gardens – Island Bridge",
+          "relationship": "nearby_different_site_not_merge_without_location"
+        }
+      ]
+    },
+    {
+      "index": 331,
+      "name": "Truck stop toilets",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "name": "Truck Stop Applegreen",
+          "relation": "nearby_separate_directory_entry_2_5km_do_not_merge"
+        }
+      ]
+    },
+    {
+      "index": 334,
+      "name": "Public Toilet",
+      "worker": "B",
+      "field": "possible_duplicates_or_aliases",
+      "samples": [
+        {
+          "id": "GC1-MALTA-13",
+          "name": "Public toilets",
+          "relation": "same_town_generic_name_possible_duplicate_not_proven"
+        }
+      ]
+    },
+    {
+      "index": 335,
+      "name": "Public toilets",
+      "worker": "B",
+      "field": "possible_duplicates_or_aliases",
+      "samples": [
+        {
+          "id": "GC1-MALTA-10",
+          "name": "Public Toilet",
+          "relation": "possible_duplicate_same_town_generic_names_unconfirmed"
+        }
+      ]
+    },
+    {
+      "index": 338,
+      "name": "Toilet near abandond hotel",
+      "worker": "B",
+      "field": "possible_duplicates_or_aliases",
+      "samples": [
+        {
+          "id": "GC1-MALTA-12",
+          "name": "Jerma Palace Glory Hole",
+          "relation": "possible_nearby_hotel_alias_not_proven_same_toilet"
+        }
+      ]
+    },
+    {
+      "index": 339,
+      "name": "Jerma Palace Glory Hole",
+      "worker": "B",
+      "field": "possible_duplicates_or_aliases",
+      "samples": [
+        {
+          "id": "GC1-MALTA-05",
+          "name": "Toilet near abandond hotel",
+          "relation": "could_be_near_same_jerma_site_but_no_specific_toilet_match"
+        }
+      ]
+    },
+    {
+      "index": 343,
+      "name": "Public Toilets, Garden of Serenity",
+      "worker": "B",
+      "field": "possible_duplicates_or_aliases",
+      "samples": [
+        {
+          "name": "Chinese Garden of Serenity",
+          "relation": "name_identity_garden_not_exact_WC"
+        }
+      ]
+    },
+    {
+      "index": 344,
+      "name": "Torri - Sliema",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "id": "GC1-MALTA-06",
+          "name": "Fortizza Public Toilets",
+          "relation": "possible_nearby_promendade_overlap_not_proven_same_WC"
+        }
+      ]
+    },
+    {
+      "index": 345,
+      "name": "Fortizza Public Toilets",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "id": "GC1-MALTA-04",
+          "name": "Torri - Sliema",
+          "relation": "possibly_adjacent_promendade_facilities_not_same_identity_proven"
+        }
+      ]
+    },
+    {
+      "index": 348,
+      "name": "Ada Ciganlija lake",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "name": "Ada Parking",
+          "relation": "nearby_separate_park_car_access_0_4km_not_same_cruising_subarea"
+        }
+      ]
+    },
+    {
+      "index": 349,
+      "name": "Zeleni Venac market toilet",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "name": "Zeleni Venac WC (Squirt)",
+          "relation": "strong_identity_match_under_market"
+        },
+        {
+          "name": "Zeleni venac bus terminus municipal WC",
+          "relation": "nearby_possible_different_facility_do_not_merge"
+        }
+      ]
+    },
+    {
+      "index": 350,
+      "name": "Terazije public toilet",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "name": "Palata Albanija public WC",
+          "relation": "probable_exact_municipal_place_identity"
+        },
+        {
+          "name": "Underground toilet 2",
+          "id": "GC1-SERBIA-06",
+          "relation": "nearby_distinct_underground_passage_0_2km_no_merge"
+        }
+      ]
+    },
+    {
+      "index": 351,
+      "name": "Usce Park",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "name": "Usce Park (Squirt)",
+          "relation": "probable_same_large_park_cross_source_match"
+        },
+        {
+          "name": "Ušće Shopping Center underground WC",
+          "relation": "different_venue_nearby_not_merge"
+        }
+      ]
+    },
+    {
+      "index": 352,
+      "name": "Underground toilet 2",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "name": "Nušićeva Passage – Dragstor public WC",
+          "relation": "probable_municipal_identity"
+        },
+        {
+          "name": "Terazije / Palata Albanija WC",
+          "id": "GC1-SERBIA-03",
+          "relation": "nearby_different_passage_do_not_merge"
+        }
+      ]
+    },
+    {
+      "index": 353,
+      "name": "Public toilet at Vracar",
+      "worker": "B",
+      "field": "possible_duplicates",
+      "samples": [
+        {
+          "name": "Hram (Temple of Saint Sava) public WC",
+          "relation": "likely_same_city_restroom"
+        }
+      ]
+    },
+    {
+      "index": 354,
+      "name": "Karađorđev Park",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "name": "Karadjordjev park",
+          "relation": "strong_same_named_park",
+          "source": "CruisingGays"
+        }
+      ]
+    },
+    {
+      "index": 355,
+      "name": "Zemun Toilet",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "name": "Zemun quay toilets",
+          "relation": "possible_different_public_WC"
+        },
+        {
+          "name": "Gradski Park Zemun",
+          "relation": "possible_different_public_WC"
+        }
+      ]
+    },
+    {
+      "index": 356,
+      "name": "Undeground Toilet Near the National Theater",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "name": "Narodno pozorište public WC",
+          "relation": "likely_exact_municipal_restroom"
+        }
+      ]
+    },
+    {
+      "index": 357,
+      "name": "Ada Parking",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "id": "GC1-SERBIA-01",
+          "name": "Ada Ciganlija Lake",
+          "relation": "nearby_same_recreation_area_not_same_spot"
+        }
+      ]
+    },
+    {
+      "index": 358,
+      "name": "Banjica",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "name": "Byford's / Banjička Forest",
+          "relation": "possible_geographic_candidate_not_same_exact_place"
+        }
+      ]
+    },
+    {
+      "index": 359,
+      "name": "Meadow Near to Faculty of Drama Arts",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "name": "Meadow in front of the Faculty of Dramatic Arts",
+          "relation": "very_likely_same_meadow",
+          "source": "Faculty of Dramatic Arts"
+        }
+      ]
+    },
+    {
+      "index": 360,
+      "name": "Košutnjak Park",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "name": "Šuma Košutnjak",
+          "relation": "same_forest",
+          "source": "spd.rs"
+        }
+      ]
+    },
+    {
+      "index": 362,
+      "name": "Park Laakso - Helsinki",
+      "worker": "B",
+      "field": "possible_aliases",
+      "samples": [
+        {
+          "name": "Laakso, Central Park",
+          "relation": "strong_same_area",
+          "source": "https://www.cruisinggays.com/helsinki/areas/13435-laakso-central-park/"
+        },
+        {
+          "name": "Park Laakso",
+          "relation": "same_named_park",
+          "source": "GayMapper"
+        }
+      ]
+    }
+  ],
+  "top_review_flags": [
+    [
+      "managed_facility_or_toilet_access_review",
+      48
+    ],
+    [
+      "verify_access_rules_and_suitability",
+      27
+    ],
+    [
+      "no_recent_activity_confirmation",
+      22
+    ],
+    [
+      "no_recent_activity",
+      17
+    ],
+    [
+      "NO_RECENT_VISIT",
+      14
+    ],
+    [
+      "NO_RECENT_ACTIVITY",
+      13
+    ],
+    [
+      "no_recent_cruising_evidence",
+      11
+    ],
+    [
+      "no_recent_cruising_confirmation",
+      8
+    ],
+    [
+      "no_recent_activity_evidence",
+      8
+    ],
+    [
+      "generic_name",
+      5
+    ],
+    [
+      "PUBLIC_RESTROOM_PRIVACY",
+      5
+    ],
+    [
+      "NO_CURRENT_ACTIVITY",
+      5
+    ],
+    [
+      "NO_RECENT_FIRSTHAND_VISIT",
+      5
+    ],
+    [
+      "no_recent_report",
+      4
+    ],
+    [
+      "NO_CURRENT_VISIT",
+      4
+    ],
+    [
+      "PUBLIC_TOILET_PRIVACY",
+      4
+    ],
+    [
+      "NO_RECENT_REPORT",
+      4
+    ],
+    [
+      "naturism_not_cruising_proof",
+      4
+    ],
+    [
+      "no_recent_onsite_activity",
+      4
+    ],
+    [
+      "NO_EXACT_SUBAREA",
+      3
+    ],
+    [
+      "recent_cruising_unverified",
+      3
+    ],
+    [
+      "no_recent_evidence",
+      3
+    ],
+    [
+      "no_dated_activity",
+      3
+    ],
+    [
+      "PUBLIC_MALL_RESTROOM_PRIVACY",
+      3
+    ],
+    [
+      "PUBLIC_MALL_WC_PRIVACY",
+      3
+    ],
+    [
+      "NO_POSTCUTOFF_ACTIVITY",
+      3
+    ],
+    [
+      "public_restroom_privacy",
+      3
+    ],
+    [
+      "NO_POSTCUTOFF_REPORT",
+      3
+    ],
+    [
+      "PUBLIC_MALL_RESTROOM_PRIVACY_AND_CONSENT",
+      3
+    ],
+    [
+      "DETAIL_CACHE_MISS",
+      3
+    ],
+    [
+      "NO_RECENT_FIRSTHAND",
+      3
+    ],
+    [
+      "no_dated_cruising_report",
+      3
+    ],
+    [
+      "no_recent_cruising_report",
+      3
+    ],
+    [
+      "direct_detail_unavailable",
+      3
+    ],
+    [
+      "public_family_park",
+      3
+    ],
+    [
+      "managed_station",
+      3
+    ],
+    [
+      "broad_area",
+      2
+    ],
+    [
+      "exact_subarea_unverified",
+      2
+    ],
+    [
+      "recent_activity_unverified",
+      2
+    ],
+    [
+      "no_current_cruising_report",
+      2
+    ]
+  ],
+  "distinct_url_count_per_record_distribution": {
+    "4": 282,
+    "5": 125,
+    "3": 296,
+    "2": 345,
+    "6": 34,
+    "7": 11,
+    "1": 78,
+    "8": 1
+  },
+  "blank_names": [],
+  "addenda": 4,
+  "cautions": [
+    "Candidates are not equivalent to active venues or independently confirmed cruising",
+    "Source coverage fields are heterogeneously named across workers; statuses must be interpreted literally",
+    "Multiple directory references are not necessarily independent current activity",
+    "Positive booleans are reported as the source research asserted, not independent verification by this report",
+    "Avoid adding unverified public toilets, schools, nature reserves or transport sites to the live directory"
+  ]
+}
