@@ -4,7 +4,7 @@
     "created_berlin_date": "2026-11-07",
     "status": "BUILD_IN_PROGRESS",
     "target_count": 210,
-    "stored_count": 16,
+    "stored_count": 33,
     "source_priority_file": "research/cruising/part5/remaining_793_priority_groups_2026-11-07.json",
     "source_master_queue": "research/cruising/part5/master_queue.json",
     "source_triage_file": "research/cruising/part5/listing_completeness_triage_2026-11-07.json",
@@ -2677,6 +2677,3177 @@
       "original_research_batch_file": "research/cruising/part5/A/batch_0251_0255.json",
       "research_archive_read_error": null,
       "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 257,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-CZECHIA-14",
+      "name": "Folimanka Park",
+      "city": "Prague",
+      "country": "Czechia",
+      "priority_assessment": {
+        "queue_index": 257,
+        "candidate_id": "GC1-CZECHIA-14",
+        "name": "Folimanka Park",
+        "city": "Prague",
+        "country": "Czechia",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 43,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0256_0260.json"
+      },
+      "original_queue_record": {
+        "index": 257,
+        "section": "A",
+        "id": "GC1-CZECHIA-14",
+        "name": "Folimanka Park",
+        "city": "Prague",
+        "country": "Czechia",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 268,
+            "u": "https://www.gays-cruising.com/en/czech_republic"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 257,
+        "candidate_id": "GC1-CZECHIA-14",
+        "name": "Folimanka Park",
+        "city": "Prague",
+        "country": "Czechia",
+        "bucket": "quarter_complete",
+        "description_words": 43,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 257,
+        "proposal_id": "GC1-CZECHIA-14",
+        "name": "Folimanka Park",
+        "city": "Prague",
+        "country": "Czechia",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 268,
+            "u": "https://www.gays-cruising.com/en/czech_republic"
+          }
+        ],
+        "primary_url": "https://www.gays-cruising.com/en/cruising/folimanka_park_praha_czech_republic_61200",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "archive_state": "linked_page_or_archived_named_record",
+            "current_web_state": "exact_spot_page_read",
+            "no_match_not_inferred": false
+          },
+          {
+            "site": "gay-szene.net",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Planet Randy",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "The Gay Passport",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Splashd",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Squirt.org",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "CruisingGays",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          }
+        ],
+        "original_archive_records": [
+          {
+            "category": "Park",
+            "detail_url": null,
+            "assessment": "candidate_unverified",
+            "source_country_url": "https://www.gays-cruising.com/en/czech_republic"
+          }
+        ],
+        "identity_and_access": "City of Prague describes Folimanka as public municipal park with children's play areas and sports courts. Directory suggests adult cruising by workout space; 2026-05-29 and 2026-05-30 comments are proposals/coordination, NOT confirmation of a visit or sexual activity. No exact recent activity independently established.",
+        "evidence_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/folimanka_park_praha_czech_republic_61200",
+            "kind": "primary_spot_directory"
+          },
+          {
+            "url": "https://prague.eu/en/objevujte/folimanka-park/",
+            "kind": "official_tourism_park_and_family_use"
+          },
+          {
+            "url": "https://www.praha2.cz/folimanka/ms-101625",
+            "kind": "city_district_public_park"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-05-29",
+            "kind": "meeting_proposal_not_firsthand",
+            "summary": "User asks for meeting that evening."
+          },
+          {
+            "date": "2026-05-30",
+            "kind": "reply_arrangement_not_firsthand",
+            "summary": "User asks when another person will go again."
+          },
+          {
+            "date": "2025-06-06",
+            "kind": "historic_query",
+            "summary": "User asks whether anything happens; pre-cutoff."
+          }
+        ],
+        "review_flags": [
+          "PARK_SHARED_WITH_CHILDREN",
+          "RECENT_COORDINATION_NOT_VISIT_PROOF",
+          "NO_RECENT_FIRSTHAND_VISIT"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "confirmed_dated_positive_firsthand_visit": false,
+          "post_cutoff_meeting_messages": 1
+        },
+        "research_stage": "first_pass_eight_source_archive_alignment_and_targeted_live_verification",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0256_0260.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 259,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-CZECHIA-07",
+      "name": "Barbora",
+      "city": "Teplice",
+      "country": "Czechia",
+      "priority_assessment": {
+        "queue_index": 259,
+        "candidate_id": "GC1-CZECHIA-07",
+        "name": "Barbora",
+        "city": "Teplice",
+        "country": "Czechia",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 52,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0256_0260.json"
+      },
+      "original_queue_record": {
+        "index": 259,
+        "section": "A",
+        "id": "GC1-CZECHIA-07",
+        "name": "Barbora",
+        "city": "Teplice",
+        "country": "Czechia",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 270,
+            "u": "https://www.gays-cruising.com/en/czech_republic"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 259,
+        "candidate_id": "GC1-CZECHIA-07",
+        "name": "Barbora",
+        "city": "Teplice",
+        "country": "Czechia",
+        "bucket": "quarter_complete",
+        "description_words": 52,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 259,
+        "proposal_id": "GC1-CZECHIA-07",
+        "name": "Barbora",
+        "city": "Teplice",
+        "country": "Czechia",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 270,
+            "u": "https://www.gays-cruising.com/en/czech_republic"
+          }
+        ],
+        "primary_url": "https://www.gays-cruising.com/en/cruising/barbora_teplice_czech_republic_25326",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "archive_state": "linked_page_or_archived_named_record",
+            "current_web_state": "exact_spot_page_read",
+            "no_match_not_inferred": false
+          },
+          {
+            "site": "gay-szene.net",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Planet Randy",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "The Gay Passport",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Splashd",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Squirt.org",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "CruisingGays",
+            "archive_state": "no_aligned_record_in_2026_11_06_archive",
+            "current_web_state": "no_individual_spot_page_verified",
+            "no_match_not_inferred": true
+          }
+        ],
+        "original_archive_records": [
+          {
+            "category": "Natural area",
+            "detail_url": null,
+            "assessment": "candidate_unverified",
+            "source_country_url": "https://www.gays-cruising.com/en/czech_republic"
+          }
+        ],
+        "identity_and_access": "Gays-Cruising describes Barbora as meeting point; Czech Ústí nad Labem regional public health authority confirms Lake Barbora is managed bathing water on former mine land near Jeníkov/Teplice (2026 seasonal monitoring). 2026-05-22 comment is a future meeting proposal, not proof of an actual visit. 2025 comments predate cutoff. No independent recent firsthand confirmation.",
+        "evidence_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/barbora_teplice_czech_republic_25326",
+            "kind": "primary_spot_directory"
+          },
+          {
+            "url": "https://old.khsusti.cz/php/koupani/kv.php?k=1",
+            "kind": "regional_public_health_lake_bathing_2026"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-05-22",
+            "kind": "future_meeting_advertisement_not_firsthand",
+            "summary": "User advertises a meetup later that day; no completed visit shown."
+          },
+          {
+            "date": "2025-07-06",
+            "kind": "historic_meeting_proposal",
+            "summary": "User posts intended time; before cutoff."
+          }
+        ],
+        "review_flags": [
+          "PUBLIC_BATHING_FAMILY_AREA",
+          "NO_RECENT_FIRSTHAND_VISIT",
+          "DO_NOT_INFER_SAFE_SWIMMING_BEYOND_SEASON"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "confirmed_dated_positive_firsthand_visit": false,
+          "post_cutoff_meeting_messages": 1
+        },
+        "research_stage": "first_pass_eight_source_archive_alignment_and_targeted_live_verification",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0256_0260.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 265,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-HUNGARY-08",
+      "name": "Városliget",
+      "city": "Budapest",
+      "country": "Hungary",
+      "priority_assessment": {
+        "queue_index": 265,
+        "candidate_id": "GC1-HUNGARY-08",
+        "name": "Városliget",
+        "city": "Budapest",
+        "country": "Hungary",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 58,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0261_0265.json"
+      },
+      "original_queue_record": {
+        "index": 265,
+        "section": "A",
+        "id": "GC1-HUNGARY-08",
+        "name": "Városliget",
+        "city": "Budapest",
+        "country": "Hungary",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 280,
+            "u": "https://www.gays-cruising.com/en/hungary"
+          },
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 289,
+            "u": "https://www.gays-cruising.com/en/budapest/hungary"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 265,
+        "candidate_id": "GC1-HUNGARY-08",
+        "name": "Városliget",
+        "city": "Budapest",
+        "country": "Hungary",
+        "bucket": "quarter_complete",
+        "description_words": 58,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 265,
+        "proposal_id": "GC1-HUNGARY-08",
+        "name": "Városliget",
+        "city": "Budapest",
+        "country": "Hungary",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 280,
+            "u": "https://www.gays-cruising.com/en/hungary"
+          },
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 289,
+            "u": "https://www.gays-cruising.com/en/budapest/hungary"
+          }
+        ],
+        "primary_url": "https://www.gays-cruising.com/en/cruising/varosliget_budapest_hungria_74252",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "archive_state": "linked_in_archived_alignment",
+            "additional_live_crossmatch": null,
+            "spot_url_status": "exact_spot_page_found",
+            "no_match_not_inferred": false
+          },
+          {
+            "site": "gay-szene.net",
+            "archive_state": "not_aligned_in_archived_sources",
+            "additional_live_crossmatch": null,
+            "spot_url_status": "archived_no_match_not_equivalent_to_live_no_match",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Planet Randy",
+            "archive_state": "not_aligned_in_archived_sources",
+            "additional_live_crossmatch": null,
+            "spot_url_status": "archived_no_match_not_equivalent_to_live_no_match",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "The Gay Passport",
+            "archive_state": "not_aligned_in_archived_sources",
+            "additional_live_crossmatch": null,
+            "spot_url_status": "archived_no_match_not_equivalent_to_live_no_match",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Splashd",
+            "archive_state": "not_aligned_in_archived_sources",
+            "additional_live_crossmatch": null,
+            "spot_url_status": "archived_no_match_not_equivalent_to_live_no_match",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "archive_state": "not_aligned_in_archived_sources",
+            "additional_live_crossmatch": null,
+            "spot_url_status": "archived_no_match_not_equivalent_to_live_no_match",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Squirt.org",
+            "archive_state": "not_aligned_in_archived_sources",
+            "additional_live_crossmatch": null,
+            "spot_url_status": "archived_no_match_not_equivalent_to_live_no_match",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "CruisingGays",
+            "archive_state": "not_aligned_in_archived_sources",
+            "additional_live_crossmatch": null,
+            "spot_url_status": "archived_no_match_not_equivalent_to_live_no_match",
+            "no_match_not_inferred": true
+          }
+        ],
+        "identity_and_access": "Budapest tourist office and Liget operator verify busy public City Park, including protected children's play spaces. Directory claims cruising near House of Music and playground but lacks a confirmed encounter; several 2026 comments ask for meetups or times. User-reported intention to visit and site check-in counters are not proof of sexual activity. Distinguish park from adjacent Széchenyi baths.",
+        "evidence_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/varosliget_budapest_hungria_74252",
+            "kind": "primary_source"
+          },
+          {
+            "url": "https://ligetbudapest.hu/en/visitor-information",
+            "kind": "official_park_multiuse_family"
+          },
+          {
+            "url": "https://www.budapestinfo.hu/en/city-park",
+            "kind": "city_tourism_location"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/budapest/budapest/hungary",
+            "kind": "city_index_2026_meeting_messages"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-07-08",
+            "kind": "future_intention",
+            "summary": "City index shows possible visit tomorrow."
+          },
+          {
+            "date": "2026-04-16",
+            "kind": "meeting_query",
+            "summary": "Asks if anyone around this evening."
+          },
+          {
+            "date": "2026-04-13",
+            "kind": "opening_question",
+            "summary": "Asks when worthwhile visiting."
+          }
+        ],
+        "review_flags": [
+          "CHILD_PLAYGROUND_ADJACENT",
+          "PUBLIC_PARK_MULTIUSE",
+          "CHECKIN_COUNTS_UNVERIFIED",
+          "NO_RECENT_POSITIVE_FIRSTHAND_VISIT"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "confirmed_dated_positive_firsthand_visit": false,
+          "dated_presence_without_positive_report": false,
+          "post_cutoff_meeting_messages": 1
+        },
+        "research_stage": "first_pass_eight_source_archive_alignment_targeted_live_2026",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0261_0265.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 270,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-HUNGARY-14",
+      "name": "Metro Station Corbin Negyed",
+      "city": "Budapest",
+      "country": "Hungary",
+      "priority_assessment": {
+        "queue_index": 270,
+        "candidate_id": "GC1-HUNGARY-14",
+        "name": "Metro Station Corbin Negyed",
+        "city": "Budapest",
+        "country": "Hungary",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 48,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0266_0270.json"
+      },
+      "original_queue_record": {
+        "index": 270,
+        "section": "A",
+        "id": "GC1-HUNGARY-14",
+        "name": "Metro Station Corbin Negyed",
+        "city": "Budapest",
+        "country": "Hungary",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 285,
+            "u": "https://www.gays-cruising.com/en/hungary"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 270,
+        "candidate_id": "GC1-HUNGARY-14",
+        "name": "Metro Station Corbin Negyed",
+        "city": "Budapest",
+        "country": "Hungary",
+        "bucket": "quarter_complete",
+        "description_words": 48,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 270,
+        "proposal_id": "GC1-HUNGARY-14",
+        "name": "Metro Station Corbin Negyed",
+        "city": "Budapest",
+        "country": "Hungary",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 285,
+            "u": "https://www.gays-cruising.com/en/hungary"
+          }
+        ],
+        "primary_url": "https://www.gays-cruising.com/en/cruising/metro_station_corbin_negyed_budapest_ungarn_34171",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "archived_alignment_status": "matched_archived_record",
+            "live_spot_state": "exact_spot_page_read",
+            "no_match_not_inferred": false
+          },
+          {
+            "site": "gay-szene.net",
+            "archived_alignment_status": "no_linked_archived_record",
+            "live_spot_state": "not_individually_confirmed_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Planet Randy",
+            "archived_alignment_status": "no_linked_archived_record",
+            "live_spot_state": "not_individually_confirmed_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "The Gay Passport",
+            "archived_alignment_status": "no_linked_archived_record",
+            "live_spot_state": "not_individually_confirmed_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Splashd",
+            "archived_alignment_status": "no_linked_archived_record",
+            "live_spot_state": "not_individually_confirmed_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "archived_alignment_status": "no_linked_archived_record",
+            "live_spot_state": "not_individually_confirmed_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Squirt.org",
+            "archived_alignment_status": "no_linked_archived_record",
+            "live_spot_state": "not_individually_confirmed_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "CruisingGays",
+            "archived_alignment_status": "no_linked_archived_record",
+            "live_spot_state": "not_individually_confirmed_live",
+            "no_match_not_inferred": true
+          }
+        ],
+        "identity_and_access": "Directory misspells Corvin-negyed as Corbin Negyed; Budapest BKK Feb 2026 metro-area plan confirms Corvin-negyed station and toilets, but specific source page gives no confirmed lawful meeting permission. 2025-12-10 exchanges consist of short 'now?'/'yes' coordination without evidence of an actual encounter. Older 2023 user describes past cruising, outside cutoff.",
+        "evidence_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/metro_station_corbin_negyed_budapest_ungarn_34171",
+            "kind": "gays_cruising_spot_page"
+          },
+          {
+            "url": "https://bkk.hu/downloads/map/202/",
+            "kind": "bkk_official_station_map_dated_2026_02_19"
+          },
+          {
+            "url": "https://hungaryunlocked.com/public-toilets-budapest/",
+            "kind": "general_corvin_negyed_underpass_public_wc"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2025-12-10",
+            "kind": "recent_meeting_arrangement_not_visit",
+            "summary": "Two brief location-coordination replies, no completed encounter."
+          },
+          {
+            "date": "2023-04-08",
+            "kind": "historic_positive_claim",
+            "summary": "A user describes earlier encounters in general terms; older than cutoff."
+          }
+        ],
+        "review_flags": [
+          "MISSPELLED_CORBIN_CORVIN",
+          "TRANSPORT_PUBLIC_TOILET",
+          "2025_12_MEETING_ONLY",
+          "NO_RECENT_CONFIRMED_ENCOUNTER"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "confirmed_dated_positive_firsthand_visit": false,
+          "post_cutoff_meeting_messages": 1
+        },
+        "research_stage": "first_pass_eight_source_archive_alignment_and_targeted_web",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0266_0270.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 274,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-EX-HUNGARY-BUDAPEST-NEPLIGET",
+      "name": "Népliget",
+      "city": "Budapest",
+      "country": "Hungary",
+      "priority_assessment": {
+        "queue_index": 274,
+        "candidate_id": "GC1-EX-HUNGARY-BUDAPEST-NEPLIGET",
+        "name": "Népliget",
+        "city": "Budapest",
+        "country": "Hungary",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 61,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0271_0275.json"
+      },
+      "original_queue_record": {
+        "index": 274,
+        "section": "A",
+        "id": "GC1-EX-HUNGARY-BUDAPEST-NEPLIGET",
+        "name": "Népliget",
+        "city": "Budapest",
+        "country": "Hungary",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 294,
+            "u": "https://www.gays-cruising.com/en/budapest/hungary"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 274,
+        "candidate_id": "GC1-EX-HUNGARY-BUDAPEST-NEPLIGET",
+        "name": "Népliget",
+        "city": "Budapest",
+        "country": "Hungary",
+        "bucket": "quarter_complete",
+        "description_words": 61,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 274,
+        "proposal_id": "GC1-EX-HUNGARY-BUDAPEST-NEPLIGET",
+        "name": "Népliget",
+        "city": "Budapest",
+        "country": "Hungary",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 294,
+            "u": "https://www.gays-cruising.com/en/budapest/hungary"
+          }
+        ],
+        "primary_url": "https://www.gays-cruising.com/en/cruising/nepliget_budapest_hungary_75016",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "archive_state": "archived_named_record",
+            "spot_page_state": "read_exact_spot_page",
+            "no_match_not_inferred": false
+          },
+          {
+            "site": "gay-szene.net",
+            "archive_state": "no_aligned_archived_record",
+            "spot_page_state": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Planet Randy",
+            "archive_state": "no_aligned_archived_record",
+            "spot_page_state": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "The Gay Passport",
+            "archive_state": "no_aligned_archived_record",
+            "spot_page_state": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Splashd",
+            "archive_state": "no_aligned_archived_record",
+            "spot_page_state": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "archive_state": "no_aligned_archived_record",
+            "spot_page_state": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Squirt.org",
+            "archive_state": "no_aligned_archived_record",
+            "spot_page_state": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "CruisingGays",
+            "archive_state": "no_aligned_archived_record",
+            "spot_page_state": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          }
+        ],
+        "identity_and_access": "Népliget is a major historic public park with current city redevelopment plans. Primary directory claims old cruising tradition and notes police presence. 2025-10-08 commenter describes an actual encounter the previous Thursday, BUT that is before the 2025-11-06 cutoff. The most recent 2026-02-25 comment merely asks if people plan to visit. Thus historical firsthand claim exists but no post-cutoff positive firsthand evidence.",
+        "evidence_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/nepliget_budapest_hungary_75016",
+            "kind": "original_spot_url"
+          },
+          {
+            "url": "https://budapest.hu/fejlesztesek/varosfejlesztes-es-varosrendezes",
+            "kind": "official_city_park_redevelopment"
+          },
+          {
+            "url": "https://www.budapest.com/en/news/nepliget-set-for-a-major-renewal-budapests-historic-park-to-become-greener-and-more-accessible",
+            "kind": "2026_08_28_park_context"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2025-10-08",
+            "kind": "precutoff_firsthand_positive",
+            "summary": "User reports recent-in-October visit and activity with other adults."
+          },
+          {
+            "date": "2026-02-25",
+            "kind": "postcutoff_meeting_query",
+            "summary": "User asks if anyone plans to go this week, no visit described."
+          }
+        ],
+        "review_flags": [
+          "HISTORICAL_FIRSTHAND_PRE_CUTOFF",
+          "NO_RECENT_FIRSTHAND",
+          "PUBLIC_PARK_PLANNED_REDEVELOPMENT"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "confirmed_dated_positive_firsthand_visit": false,
+          "post_cutoff_meeting_messages": 1
+        },
+        "research_stage": "first_pass_archived_cross_source_plus_targeted_current_references",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0271_0275.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 276,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-EX-HUNGARY-BUDAPEST-GERMANUS-GYULA-PARK",
+      "name": "Germanus Gyula Park",
+      "city": "Budapest",
+      "country": "Hungary",
+      "priority_assessment": {
+        "queue_index": 276,
+        "candidate_id": "GC1-EX-HUNGARY-BUDAPEST-GERMANUS-GYULA-PARK",
+        "name": "Germanus Gyula Park",
+        "city": "Budapest",
+        "country": "Hungary",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 49,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0276_0280.json"
+      },
+      "original_queue_record": {
+        "index": 276,
+        "section": "A",
+        "id": "GC1-EX-HUNGARY-BUDAPEST-GERMANUS-GYULA-PARK",
+        "name": "Germanus Gyula Park",
+        "city": "Budapest",
+        "country": "Hungary",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 296,
+            "u": "https://www.gays-cruising.com/en/budapest/hungary"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 276,
+        "candidate_id": "GC1-EX-HUNGARY-BUDAPEST-GERMANUS-GYULA-PARK",
+        "name": "Germanus Gyula Park",
+        "city": "Budapest",
+        "country": "Hungary",
+        "bucket": "quarter_complete",
+        "description_words": 49,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 276,
+        "proposal_id": "GC1-EX-HUNGARY-BUDAPEST-GERMANUS-GYULA-PARK",
+        "name": "Germanus Gyula Park",
+        "city": "Budapest",
+        "country": "Hungary",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 296,
+            "u": "https://www.gays-cruising.com/en/budapest/hungary"
+          }
+        ],
+        "primary_url": "https://www.gays-cruising.com/en/cruising/germanus_gyula_park_budapest_hungary_59091",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "archived_state": "linked_archived_page",
+            "spot_specific_recheck": "spot_detail_url_resolved_but_cache_miss",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "gay-szene.net",
+            "archived_state": "no_cross_aligned_archived_record",
+            "spot_specific_recheck": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Planet Randy",
+            "archived_state": "no_cross_aligned_archived_record",
+            "spot_specific_recheck": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "The Gay Passport",
+            "archived_state": "no_cross_aligned_archived_record",
+            "spot_specific_recheck": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Splashd",
+            "archived_state": "no_cross_aligned_archived_record",
+            "spot_specific_recheck": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "archived_state": "no_cross_aligned_archived_record",
+            "spot_specific_recheck": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Squirt.org",
+            "archived_state": "no_cross_aligned_archived_record",
+            "spot_specific_recheck": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "CruisingGays",
+            "archived_state": "no_cross_aligned_archived_record",
+            "spot_specific_recheck": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          }
+        ],
+        "source_archived_descriptions": [
+          {
+            "category": "Park",
+            "archive_assessment": "candidate_unverified",
+            "detail_url": null,
+            "original_page": "https://www.gays-cruising.com/en/budapest/hungary"
+          }
+        ],
+        "identity_and_access": "Named public park is independently attested in Budapest District II administrative documents near Margaret Bridge; Gays-Cruising city directory carries a 2026-07-05 first-person comment stating the writer is in the park. Presence alone proves neither a meeting nor consensual adult activity. Exact claimed cruising subarea and access permissions remain unverified.",
+        "evidence_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/germanus_gyula_park_budapest_hungary_59091",
+            "kind": "primary_directory"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/budapest/budapest/hungary",
+            "kind": "2026_07_05_dated_presence_comment"
+          },
+          {
+            "url": "https://masodikkerulet.hu/sites/default/files/attachments/files/masodikkerulethu/2025_04/i_467_2_2025_kozt._terf._kam._adatk._szab._pdf.pdf",
+            "kind": "local_government_place_name_geographic_context"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-07-05",
+            "kind": "self_reported_presence_only",
+            "summary": "A poster wrote in Hungarian that they were in the park; no encounter or activity described."
+          }
+        ],
+        "review_flags": [
+          "PUBLIC_PARK",
+          "SELF_REPORTED_PRESENCE_NOT_ACTIVITY",
+          "SPECIFIC_CRUISING_AREA_UNVERIFIED"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "confirmed_dated_positive_firsthand_visit": false,
+          "post_cutoff_meeting_messages": 0
+        },
+        "research_stage": "eight_source_archival_crosscheck_and_targeted_live_page_verification",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0276_0280.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 281,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ROMANIA-05",
+      "name": "Spatiu Servicii A1 inainte de Sebes",
+      "city": "Alba Iulia",
+      "country": "Romania",
+      "priority_assessment": {
+        "queue_index": 281,
+        "candidate_id": "GC1-ROMANIA-05",
+        "name": "Spatiu Servicii A1 inainte de Sebes",
+        "city": "Alba Iulia",
+        "country": "Romania",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 60,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0281_0285.json"
+      },
+      "original_queue_record": {
+        "index": 281,
+        "section": "A",
+        "id": "GC1-ROMANIA-05",
+        "name": "Spatiu Servicii A1 inainte de Sebes",
+        "city": "Alba Iulia",
+        "country": "Romania",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 304,
+            "u": "https://www.gays-cruising.com/en/romania"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 281,
+        "candidate_id": "GC1-ROMANIA-05",
+        "name": "Spatiu Servicii A1 inainte de Sebes",
+        "city": "Alba Iulia",
+        "country": "Romania",
+        "bucket": "quarter_complete",
+        "description_words": 60,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 281,
+        "proposal_id": "GC1-ROMANIA-05",
+        "name": "Spatiu Servicii A1 inainte de Sebes",
+        "city": "Alba Iulia",
+        "country": "Romania",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 304,
+            "u": "https://www.gays-cruising.com/en/romania"
+          }
+        ],
+        "primary_url": "https://www.gays-cruising.com/en/cruising/spatiu_servicii_a1_inainte_de_sebes_alba_iulia_romania_51509",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "archived_alignment": "linked_archived_record",
+            "individually_verified_live": "detail_url_resolved_but_cache_miss",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "gay-szene.net",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Planet Randy",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "The Gay Passport",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Splashd",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Squirt.org",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "CruisingGays",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          }
+        ],
+        "original_archive_records": [
+          {
+            "source_category": "Rest area",
+            "source_country_url": "https://www.gays-cruising.com/en/romania",
+            "detail_url": null,
+            "assessment": "candidate_unverified"
+          }
+        ],
+        "identity_and_access": "Original Gays-Cruising Romania directory calls this an A1 highway service area before Sebeș, but city tag Alba Iulia is broad and neither direction of travel, exact km marker nor service facility is confirmed. Primary country index records a user check-in at 2026-04-08T14:48:15Z; a check-in means claimed presence, not a verified sexual encounter. Service/parking safety and local access rules require investigation.",
+        "evidence_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/spatiu_servicii_a1_inainte_de_sebes_alba_iulia_romania_51509",
+            "kind": "original_directory_spot_link"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/romania",
+            "kind": "dated_checkin_2026_04_08"
+          },
+          {
+            "url": "https://distanta.eoo.ro/ro/autostrada/a1/",
+            "kind": "general_2026_a1_service_station_context_not_specific_site"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-04-08",
+            "kind": "dated_checkin_presence_not_activity",
+            "summary": "One user checked in at 14:48Z; independent onsite corroboration absent."
+          }
+        ],
+        "review_flags": [
+          "REST_AREA_EXACT_PIN_UNKNOWN",
+          "CHECKIN_NOT_PROOF_OF_ACTIVITY",
+          "MOTORWAY_SAFETY",
+          "CURRENT_ACCESS_UNKNOWN"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "confirmed_dated_positive_firsthand_visit": false,
+          "recorded_postcutoff_self_reported_presence": true,
+          "postcutoff_meeting_messages": 0
+        },
+        "research_stage": "archived_8_source_alignment_plus_spot_page_and_official_operator_verification",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0281_0285.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 285,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ROMANIA-10",
+      "name": "WC Mall Unirea",
+      "city": "Bucharest",
+      "country": "Romania",
+      "priority_assessment": {
+        "queue_index": 285,
+        "candidate_id": "GC1-ROMANIA-10",
+        "name": "WC Mall Unirea",
+        "city": "Bucharest",
+        "country": "Romania",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 66,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0281_0285.json"
+      },
+      "original_queue_record": {
+        "index": 285,
+        "section": "A",
+        "id": "GC1-ROMANIA-10",
+        "name": "WC Mall Unirea",
+        "city": "Bucharest",
+        "country": "Romania",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 308,
+            "u": "https://www.gays-cruising.com/en/romania"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 285,
+        "candidate_id": "GC1-ROMANIA-10",
+        "name": "WC Mall Unirea",
+        "city": "Bucharest",
+        "country": "Romania",
+        "bucket": "quarter_complete",
+        "description_words": 66,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 285,
+        "proposal_id": "GC1-ROMANIA-10",
+        "name": "WC Mall Unirea",
+        "city": "Bucharest",
+        "country": "Romania",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 308,
+            "u": "https://www.gays-cruising.com/en/romania"
+          }
+        ],
+        "primary_url": "https://www.gays-cruising.com/en/cruising/wc_mall_unirea_bucuresti_romania_121634",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "archived_alignment": "linked_archived_record",
+            "individually_verified_live": "detail_url_resolved_but_cache_miss",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "gay-szene.net",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Planet Randy",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "The Gay Passport",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Splashd",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Squirt.org",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "CruisingGays",
+            "archived_alignment": "no_cross_source_alignment_record",
+            "individually_verified_live": "not_checked_live_spot_by_spot",
+            "no_match_not_inferred": true
+          }
+        ],
+        "original_archive_records": [
+          {
+            "source_category": "Other",
+            "source_country_url": "https://www.gays-cruising.com/en/romania",
+            "detail_url": null,
+            "assessment": "needs_category_and_access_review"
+          }
+        ],
+        "identity_and_access": "Unirea Shopping Center continues to advertise shop tenants and hours via its operator website, but retail occupancy and renovation may vary; the centre is distinct from the adjacent Piața Unirii metro toilets indexed separately. Gays-Cruising Romania country index shows 2026-04-07 user asking whether anyone is around, not a verified encounter. No accessible detailed onsite recent reports, and any claimed mall-restroom activity has managed-access and consent concerns.",
+        "evidence_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/wc_mall_unirea_bucuresti_romania_121634",
+            "kind": "original_directory_spot_link"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/romania",
+            "kind": "dated_2026_04_07_query"
+          },
+          {
+            "url": "https://www.unireashop.ro/",
+            "kind": "official_centre_identity_hours"
+          },
+          {
+            "url": "https://www.unireashop.ro/shopping/",
+            "kind": "operator_current_store_directory"
+          },
+          {
+            "url": "https://www.bvb.ro/FinancialInstruments/SelectedData/NewsItem/SCDM-Colaborare-privind-repozitionarea-centrelor-Unirea-Shopping-Center/F40FC",
+            "kind": "2025_repositioning_project_context_not_closure"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-04-07",
+            "kind": "recent_meeting_query",
+            "summary": "User asks if anyone is there."
+          }
+        ],
+        "review_flags": [
+          "RETAIL_CUSTOMER_RESTROOM",
+          "DO_NOT_MERGE_WITH_UNIRII_METRO_TOILET",
+          "RENOVATION_ACCESS_SUBAREAS_MAY_CHANGE",
+          "NO_RECENT_FIRSTHAND_VISIT"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "confirmed_dated_positive_firsthand_visit": false,
+          "recorded_postcutoff_self_reported_presence": false,
+          "postcutoff_meeting_messages": 1
+        },
+        "research_stage": "archived_8_source_alignment_plus_spot_page_and_official_operator_verification",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0281_0285.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 290,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-ROMANIA-01",
+      "name": "Glory hole",
+      "city": "Sibiu",
+      "country": "Romania",
+      "priority_assessment": {
+        "queue_index": 290,
+        "candidate_id": "GC1-ROMANIA-01",
+        "name": "Glory hole",
+        "city": "Sibiu",
+        "country": "Romania",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 83,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0286_0290.json"
+      },
+      "original_queue_record": {
+        "index": 290,
+        "section": "A",
+        "id": "GC1-ROMANIA-01",
+        "name": "Glory hole",
+        "city": "Sibiu",
+        "country": "Romania",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 314,
+            "u": "https://www.gays-cruising.com/en/romania"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 290,
+        "candidate_id": "GC1-ROMANIA-01",
+        "name": "Glory hole",
+        "city": "Sibiu",
+        "country": "Romania",
+        "bucket": "quarter_complete",
+        "description_words": 83,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 290,
+        "proposal_id": "GC1-ROMANIA-01",
+        "name": "Glory hole",
+        "city": "Sibiu",
+        "country": "Romania",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 314,
+            "u": "https://www.gays-cruising.com/en/romania"
+          }
+        ],
+        "primary_url": "https://www.gays-cruising.com/en/cruising/glory_hole_sibiu_romania_71017",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "archived_alignment": "linked_archived_record",
+            "individual_live_lookup": "exact_spot_page_read_2026_meeting_posts",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "gay-szene.net",
+            "archived_alignment": "not_linked_in_2026_alignment",
+            "individual_live_lookup": "not_verified_live_at_spot_level",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Planet Randy",
+            "archived_alignment": "not_linked_in_2026_alignment",
+            "individual_live_lookup": "not_verified_live_at_spot_level",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "The Gay Passport",
+            "archived_alignment": "not_linked_in_2026_alignment",
+            "individual_live_lookup": "not_verified_live_at_spot_level",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Splashd",
+            "archived_alignment": "not_linked_in_2026_alignment",
+            "individual_live_lookup": "not_verified_live_at_spot_level",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "archived_alignment": "not_linked_in_2026_alignment",
+            "individual_live_lookup": "not_verified_live_at_spot_level",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Squirt.org",
+            "archived_alignment": "not_linked_in_2026_alignment",
+            "individual_live_lookup": "not_verified_live_at_spot_level",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "CruisingGays",
+            "archived_alignment": "not_linked_in_2026_alignment",
+            "individual_live_lookup": "not_verified_live_at_spot_level",
+            "no_match_not_inferred": true
+          }
+        ],
+        "original_archive_records": [
+          {
+            "category": "Other",
+            "assessment": "needs_category_and_access_review",
+            "detail_url": null,
+            "original_country_page": "https://www.gays-cruising.com/en/romania"
+          }
+        ],
+        "identity_and_access": "Primary directory describes a toilet in an unidentified car-park area under generic 'Glory hole' name. Place is tagged Sibiu but nearby suggested A1 highway service area 0.9km away raises possible geocoding ambiguity; must not assume it is in Sibiu town centre or an identifiable commercial facility. 2026-07-13/14/20 comments express intended visits or ask if others are there. No cited completed adult encounter is shown in the accessible latest ten comments; 130 cumulative and 10 'last month' check-ins are not dated evidence of action.",
+        "evidence_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/glory_hole_sibiu_romania_71017",
+            "kind": "original_cruising_directory_spot"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/romania",
+            "kind": "original_country_site_ranked_listing"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-07-20",
+            "kind": "recent_meeting_question",
+            "summary": "Asks whether anyone is around."
+          },
+          {
+            "date": "2026-07-14",
+            "kind": "recent_intended_visit",
+            "summary": "Says planning to arrive that evening."
+          },
+          {
+            "date": "2026-07-13",
+            "kind": "recent_intended_visit",
+            "summary": "Says planning to be there around midnight."
+          }
+        ],
+        "review_flags": [
+          "CAR_PARK_RESTROOM_PRECISE_SITE_UNKNOWN",
+          "MAY_BE_GEOLOCATED_NEAR_SEBES_A1_NOT_SIBIU_CENTER",
+          "CUMULATIVE_CHECKINS_NOT_ENCOUNTERS",
+          "RECENT_MEETUP_POSTS_ONLY"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "confirmed_dated_positive_firsthand_visit": false,
+          "post_cutoff_meeting_messages": 3
+        },
+        "research_stage": "eight_source_archive_alignment_targeted_original_page_and_operator_checks",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0286_0290.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 293,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-ROMANIA-09",
+      "name": "Pădure Dumbravita-Timisoara",
+      "city": "Timișoara",
+      "country": "Romania",
+      "priority_assessment": {
+        "queue_index": 293,
+        "candidate_id": "GC1-ROMANIA-09",
+        "name": "Pădure Dumbravita-Timisoara",
+        "city": "Timișoara",
+        "country": "Romania",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 78,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0291_0293.json"
+      },
+      "original_queue_record": {
+        "index": 293,
+        "section": "A",
+        "id": "GC1-ROMANIA-09",
+        "name": "Pădure Dumbravita-Timisoara",
+        "city": "Timișoara",
+        "country": "Romania",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 317,
+            "u": "https://www.gays-cruising.com/en/romania"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 293,
+        "candidate_id": "GC1-ROMANIA-09",
+        "name": "Pădure Dumbravita-Timisoara",
+        "city": "Timișoara",
+        "country": "Romania",
+        "bucket": "quarter_complete",
+        "description_words": 78,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 293,
+        "proposal_id": "GC1-ROMANIA-09",
+        "name": "Pădure Dumbravita-Timisoara",
+        "city": "Timișoara",
+        "country": "Romania",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 317,
+            "u": "https://www.gays-cruising.com/en/romania"
+          }
+        ],
+        "primary_url": "https://www.gays-cruising.com/en/cruising/pdure_dumbravita_timisoara_timisoara_romania_67752",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "archive_alignment_status": "matching_archived_entry",
+            "individually_checked_live": "spot_url_resolved_but_detail_cache_miss",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "gay-szene.net",
+            "archive_alignment_status": "no_aligned_archived_entry",
+            "individually_checked_live": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Planet Randy",
+            "archive_alignment_status": "no_aligned_archived_entry",
+            "individually_checked_live": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "The Gay Passport",
+            "archive_alignment_status": "no_aligned_archived_entry",
+            "individually_checked_live": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Splashd",
+            "archive_alignment_status": "no_aligned_archived_entry",
+            "individually_checked_live": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "archive_alignment_status": "no_aligned_archived_entry",
+            "individually_checked_live": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Squirt.org",
+            "archive_alignment_status": "no_aligned_archived_entry",
+            "individually_checked_live": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "CruisingGays",
+            "archive_alignment_status": "no_aligned_archived_entry",
+            "individually_checked_live": "not_individually_verified_live",
+            "no_match_not_inferred": true
+          }
+        ],
+        "source_archive_details": [
+          {
+            "category": "Park",
+            "original_url": "https://www.gays-cruising.com/en/romania",
+            "detail_url": null,
+            "assessment": "candidate_unverified"
+          }
+        ],
+        "identity_and_access": "Gays-Cruising national index lists a forest near Dumbrăvița/Timișoara and on 2026-04-08 displays a user comment offering immediate oral/anal adult contact; this is a solicitation, NOT a confirmed observed meeting. Municipal October 2026 Pădurea Verde forest management documents independently describe forest land adjoining Dumbrăvița and walking/cycling access, with motor vehicles generally prohibited on paths. However, exact listed cruising subarea/forest identity is not confirmed. Existing walking trails and ecosystem restrictions should be verified before visits; no recent witnessed contact established.",
+        "evidence_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/pdure_dumbravita_timisoara_timisoara_romania_67752",
+            "kind": "primary_directory_spot_url"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/romania",
+            "kind": "source_country_2026_04_08_solicitation"
+          },
+          {
+            "url": "https://hcl.usr.ro/timisoara/2026/h510",
+            "kind": "2026_forest_park_landscape_management_access_rules"
+          },
+          {
+            "url": "https://visitromania.ro/en/attraction/dumbravita/padurea-verde",
+            "kind": "independent_nearby_park_identity_context"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-04-08",
+            "kind": "recent_immediate_sexual_solicitation_not_meeting_proof",
+            "summary": "Poster advertises sexual activity 'now'; no independent report of an actual encounter."
+          }
+        ],
+        "review_flags": [
+          "FOREST_SUBAREA_UNCONFIRMED",
+          "POSSIBLE_PADUREA_VERDE_REQUIRES_VERIFICATION",
+          "FOREST_ACCESS_AND_ENVIRONMENTAL_RULES",
+          "RECENT_SUGGESTION_NOT_PROVEN_CRUISING"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "confirmed_dated_positive_firsthand_visit": false,
+          "post_cutoff_meeting_messages": 1
+        },
+        "research_stage": "eight_source_archival_crosscheck_and_targeted_independent_place_context",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0291_0293.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 297,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-AUSTRIA-06",
+      "name": "A9 Rastplatz bei Spielfeld",
+      "city": "Leibnitz",
+      "country": "Austria",
+      "priority_assessment": {
+        "queue_index": 297,
+        "candidate_id": "GC1-AUSTRIA-06",
+        "name": "A9 Rastplatz bei Spielfeld",
+        "city": "Leibnitz",
+        "country": "Austria",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 33,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/B/batch_0294_0298.json"
+      },
+      "original_queue_record": {
+        "index": 297,
+        "section": "B",
+        "id": "GC1-AUSTRIA-06",
+        "name": "A9 Rastplatz bei Spielfeld",
+        "city": "Leibnitz",
+        "country": "Austria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 321,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 297,
+        "candidate_id": "GC1-AUSTRIA-06",
+        "name": "A9 Rastplatz bei Spielfeld",
+        "city": "Leibnitz",
+        "country": "Austria",
+        "bucket": "quarter_complete",
+        "description_words": 33,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 297,
+        "id": "GC1-AUSTRIA-06",
+        "name": "A9 Rastplatz bei Spielfeld",
+        "city": "Leibnitz",
+        "country": "Austria",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 321,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "original_archive": {
+          "file": "research/cruising/scrape_1.json",
+          "record_i": 321,
+          "category": "Rest area",
+          "assessment": "candidate_unverified",
+          "original_country_url": "https://www.gays-cruising.com/en/austria",
+          "original_detail_url": null
+        },
+        "primary_detail_url": "https://www.gays-cruising.com/en/cruising/a9_rastplatz_bei_spielfeld_leibnitz_osterreich_5116",
+        "primary_detail_access": "accessible",
+        "description_rewritten": "Directory says the A9 motorway rest areas near Spielfeld are used for encounters and mentions washrooms on both sides. The precise rest stop on each side and current operating layout are not established.",
+        "identity_and_access": "A9 around Spielfeld/Leibnitz, possibly multiple sites and road directions.",
+        "eight_source_checks": [
+          {
+            "source_id": "1",
+            "source": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/cruising/a9_rastplatz_bei_spielfeld_leibnitz_osterreich_5116",
+            "note": "accessible"
+          },
+          {
+            "source_id": "2",
+            "source": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "3",
+            "source": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "4",
+            "source": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "5",
+            "source": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "6",
+            "source": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "7",
+            "source": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "8",
+            "source": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          }
+        ],
+        "secondary_sources": [
+          {
+            "url": "https://www.pundk.at/verkehr/Generalplanung_PDF/119620_A9-Rastplatz-Ortnerhof-Sued.pdf",
+            "note": "Historical A9 rest-area engineering project toward Spielfeld; unconfirmed match to directory spot."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-04-17",
+            "kind": "meeting_query_not_activity",
+            "note": "Austrian directory country index shows 'Jetzt?' for this listing; no proof someone visited."
+          },
+          {
+            "date": "2025-07-17",
+            "kind": "meeting_query_not_activity",
+            "note": "Primary-detail comment proposes tomorrow's meeting, older than cutoff."
+          }
+        ],
+        "latest_physical_activity_2025_11_06_or_later_verified": false,
+        "possible_duplicates": [],
+        "review_flags": [
+          "road_direction_unverified",
+          "managed_transport_premises",
+          "toilet_facility_claim_unverified"
+        ],
+        "research_decision": "hold_exact_site_access",
+        "research_only": true,
+        "approved_for_publication": false,
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/B/batch_0294_0298.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 298,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-AUSTRIA-03",
+      "name": "Weikerlsee",
+      "city": "Linz",
+      "country": "Austria",
+      "priority_assessment": {
+        "queue_index": 298,
+        "candidate_id": "GC1-AUSTRIA-03",
+        "name": "Weikerlsee",
+        "city": "Linz",
+        "country": "Austria",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 30,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/B/batch_0294_0298.json"
+      },
+      "original_queue_record": {
+        "index": 298,
+        "section": "B",
+        "id": "GC1-AUSTRIA-03",
+        "name": "Weikerlsee",
+        "city": "Linz",
+        "country": "Austria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 322,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 298,
+        "candidate_id": "GC1-AUSTRIA-03",
+        "name": "Weikerlsee",
+        "city": "Linz",
+        "country": "Austria",
+        "bucket": "quarter_complete",
+        "description_words": 30,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 298,
+        "id": "GC1-AUSTRIA-03",
+        "name": "Weikerlsee",
+        "city": "Linz",
+        "country": "Austria",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 322,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "original_archive": {
+          "file": "research/cruising/scrape_1.json",
+          "record_i": 322,
+          "category": "Natural area",
+          "assessment": "candidate_unverified",
+          "original_country_url": "https://www.gays-cruising.com/en/austria",
+          "original_detail_url": null
+        },
+        "primary_detail_url": "https://www.gays-cruising.com/en/cruising/weikerlsee_linz_osterreich_12066",
+        "primary_detail_access": "unavailable_fetch_error",
+        "description_rewritten": "Weikerlsee recreation lakes south of Linz; the Kleine Weikerlsee has a designated northern naturist area and a southern clothed-bathing area. The official lake information proves public access, not current cruising.",
+        "identity_and_access": "Weikerlseestraße, 4030 Linz; do not equate Große Weikerlsee with public bathing site.",
+        "eight_source_checks": [
+          {
+            "source_id": "1",
+            "source": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/cruising/weikerlsee_linz_osterreich_12066",
+            "note": "unavailable_fetch_error"
+          },
+          {
+            "source_id": "2",
+            "source": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "3",
+            "source": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "4",
+            "source": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "5",
+            "source": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "6",
+            "source": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "7",
+            "source": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          },
+          {
+            "source_id": "8",
+            "source": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identity in accessible source archives or targeted indexed results; search not exhaustive."
+          }
+        ],
+        "secondary_sources": [
+          {
+            "url": "https://www.linztourismus.at/freizeit/linz-entdecken/aktivitaeten/natur/seen-und-baeder/weikerlsee",
+            "note": "Tourism service confirms north FKK and south textile zones."
+          },
+          {
+            "url": "https://www.land-oberoesterreich.gv.at/13077.htm",
+            "note": "Regional authority confirms FKK at Kleiner Weikerlsee and swimming prohibition at Großer Weikerlsee."
+          },
+          {
+            "url": "https://www.donauregion.at/ausflugstipps-mit-den-oeffis/radspass-mit-den-oeffis/oesterreich-poi/detail/201757/weikerlsee.html",
+            "note": "Visitor information with location and public access."
+          },
+          {
+            "url": "https://www.linza.at/sexwc/",
+            "note": "2025-04-27 local story contains unverified claim of sex meetings at lake."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-04-17",
+            "kind": "directory_checkin_not_activity_proof",
+            "note": "Austria index shows a check-in for Weikerlsee; not independent proof of a physical visit."
+          },
+          {
+            "date": "2025-04-27",
+            "kind": "local_press_allegation",
+            "note": "Local press alleges cruising around the lake, outside cutoff."
+          }
+        ],
+        "latest_physical_activity_2025_11_06_or_later_verified": false,
+        "possible_duplicates": [],
+        "review_flags": [
+          "naturism_not_cruising_proof",
+          "no_recent_confirmed_physical_activity"
+        ],
+        "research_decision": "needs_recent_activity_verification",
+        "research_only": true,
+        "approved_for_publication": false,
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/B/batch_0294_0298.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 299,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-AUSTRIA-04",
+      "name": "WC Unionkreuzung",
+      "city": "Linz",
+      "country": "Austria",
+      "priority_assessment": {
+        "queue_index": 299,
+        "candidate_id": "GC1-AUSTRIA-04",
+        "name": "WC Unionkreuzung",
+        "city": "Linz",
+        "country": "Austria",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 31,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/B/batch_0299_0303.json"
+      },
+      "original_queue_record": {
+        "index": 299,
+        "section": "B",
+        "id": "GC1-AUSTRIA-04",
+        "name": "WC Unionkreuzung",
+        "city": "Linz",
+        "country": "Austria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 323,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 299,
+        "candidate_id": "GC1-AUSTRIA-04",
+        "name": "WC Unionkreuzung",
+        "city": "Linz",
+        "country": "Austria",
+        "bucket": "quarter_complete",
+        "description_words": 31,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 299,
+        "id": "GC1-AUSTRIA-04",
+        "name": "WC Unionkreuzung",
+        "city": "Linz",
+        "country": "Austria",
+        "archive_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 323,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "archive_records": [
+          {
+            "name": "WC Unionkreuzung",
+            "original_category": "Transport station",
+            "original_assessment": "needs_category_and_access_review",
+            "source_index": "https://www.gays-cruising.com/en/austria",
+            "original_detail_url": null,
+            "archive_note": null
+          }
+        ],
+        "primary_detail_url": "https://www.gays-cruising.com/en/cruising/wc_unionkreuzung_linz_osterreich_12178",
+        "primary_detail_access": "direct_detail_unavailable",
+        "description_rewritten": "Public toilets in the level above the underground tram platforms at Unionkreuzung, Linz. The city lists their daily 05:00–21:00 hours, which supersede the generic all-day wording sometimes used in cruising directories.",
+        "area_and_access": "Underground public WC, Unionkreuzung tram station, first underground level, Linz.",
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "page_url": "https://www.gays-cruising.com/en/cruising/wc_unionkreuzung_linz_osterreich_12178",
+            "scope_note": "Directory page or cross-source category record, not recent physical activity."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "page_url": null,
+            "scope_note": "No exact listing found in supplied archives and targeted public indexed search; non-exhaustive."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "page_url": null,
+            "scope_note": "No exact listing found in supplied archives and targeted public indexed search; non-exhaustive."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "page_url": null,
+            "scope_note": "No exact listing found in supplied archives and targeted public indexed search; non-exhaustive."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "page_url": null,
+            "scope_note": "No exact listing found in supplied archives and targeted public indexed search; non-exhaustive."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "page_url": null,
+            "scope_note": "No exact listing found in supplied archives and targeted public indexed search; non-exhaustive."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "page_url": null,
+            "scope_note": "No exact listing found in supplied archives and targeted public indexed search; non-exhaustive."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "page_url": null,
+            "scope_note": "No exact listing found in supplied archives and targeted public indexed search; non-exhaustive."
+          }
+        ],
+        "other_sources": [
+          {
+            "url": "https://www.linz.at/stadtentwicklung/wc-anlagen-liste.php",
+            "note": "City-operated WC list confirms location and 05:00–21:00 access hours."
+          },
+          {
+            "url": "https://www.hilfsgemeinschaft.at/kontakt/standorte",
+            "note": "Independent accessibility organization confirms public WC in first underground level."
+          },
+          {
+            "url": "https://www.erotikforum.at/themen/linz-unionkreuzung.1040164/",
+            "note": "Undated historical user report mentioning men waiting inside; cannot date current activity."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-04-17",
+            "type": "meeting_query",
+            "detail": "Austria Gays-Cruising landing-page comment asking whether anyone was there; not a visit report."
+          }
+        ],
+        "physical_activity_since_2025_11_06_independently_confirmed": false,
+        "possible_aliases": [],
+        "review_flags": [
+          "public_transport_toilets",
+          "hours_and_access_rules_apply",
+          "no_verified_recent_visit"
+        ],
+        "research_decision": "needs_recent_activity_and_access_verification",
+        "publication_approved": false,
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/B/batch_0299_0303.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 304,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-GAP-SALZBURG-05",
+      "name": "Paracelsusbad",
+      "city": "Salzburg",
+      "country": "Austria",
+      "priority_assessment": {
+        "queue_index": 304,
+        "candidate_id": "GC1-GAP-SALZBURG-05",
+        "name": "Paracelsusbad",
+        "city": "Salzburg",
+        "country": "Austria",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 36,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/B/batch_0304_0308.json"
+      },
+      "original_queue_record": {
+        "index": 304,
+        "section": "B",
+        "id": "GC1-GAP-SALZBURG-05",
+        "name": "Paracelsusbad",
+        "city": "Salzburg",
+        "country": "Austria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/gap_fill_scrape_1.json",
+            "i": 42,
+            "u": "https://www.gays-cruising.com/de/cruising/paracelsusbad_salzburg_osterreich_94994"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 304,
+        "candidate_id": "GC1-GAP-SALZBURG-05",
+        "name": "Paracelsusbad",
+        "city": "Salzburg",
+        "country": "Austria",
+        "bucket": "quarter_complete",
+        "description_words": 36,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 304,
+        "id": "GC1-GAP-SALZBURG-05",
+        "name": "Paracelsusbad",
+        "city": "Salzburg",
+        "country": "Austria",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/gap_fill_scrape_1.json",
+            "i": 42,
+            "u": "https://www.gays-cruising.com/de/cruising/paracelsusbad_salzburg_osterreich_94994"
+          }
+        ],
+        "archive_record": {
+          "file": "research/cruising/gap_fill_scrape_1.json",
+          "category": "Other",
+          "assessment": "candidate_unverified",
+          "original_source_index": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "original_detail_url": "https://www.gays-cruising.com/de/cruising/paracelsusbad_salzburg_osterreich_94994",
+          "detail_access": "detail_link_found_not_accessible",
+          "review_note": "Index source only: current cruising, exact access, recent attendance, timing and permission remain unverified."
+        },
+        "description_rewritten": "Municipal bath and sauna complex in central Salzburg, with a separate spa area. A cruising website describes communal shower and sauna facilities, but its directory listing does not independently verify cruising and falsely suggests all-day availability.",
+        "location_and_access": "Salzburg Paracelsus Bad & Kurhaus, operated bathing/sauna premises; not a dedicated gay cruise venue.",
+        "access_hours_or_conditions": "Official pool and sauna opening hours daily 10:00–21:00; admission applies, operator rules must be respected.",
+        "primary_source_url": "https://www.gays-cruising.com/en/cruising/paracelsusbad_salzburg_osterreich_94994",
+        "primary_page_access": "indexed_primary_detail",
+        "eight_source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/cruising/paracelsusbad_salzburg_osterreich_94994",
+            "scope_note": "Source archive with web-indexed follow-up if available; directory listing only."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "scope_note": "No exact name match located in consulted archived material or targeted web index; non-exhaustive."
+          }
+        ],
+        "independent_sources": [
+          {
+            "url": "https://www.paracelsusbad.at/de/service/preise-oeffnungszeiten",
+            "note": "Operator: bath/sauna hours, ticket prices and access."
+          },
+          {
+            "url": "https://www.stadt-salzburg.at/presseaussendungen-2025/paracelsus-bad-wasser-marsch",
+            "note": "Municipality confirms 14 November 2025 reopening."
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/paracelsusbad_salzburg_osterreich_94994",
+            "note": "Original directory's undated reference to showers and sauna."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2025-11-14",
+            "kind": "facility_reopening_not_cruising",
+            "note": "Municipality confirms reopening after renovation."
+          },
+          {
+            "date": "2026-04",
+            "kind": "municipal_year_report_not_cruising",
+            "note": "Municipal tourism update describes attendance after reopening, no cruising claim."
+          }
+        ],
+        "credible_recent_physical_cruising_report": false,
+        "duplicate_candidates": [],
+        "flags": [
+          "managed_bath_sauna",
+          "no_current_cruising_evidence",
+          "not_24_hour_access"
+        ],
+        "research_decision": "hold_non_dedicated_bath_and_activity",
+        "publication_approved": false,
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/B/batch_0304_0308.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 314,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-AUSTRIA-09",
+      "name": "Lobau",
+      "city": "Vienna",
+      "country": "Austria",
+      "priority_assessment": {
+        "queue_index": 314,
+        "candidate_id": "GC1-AUSTRIA-09",
+        "name": "Lobau",
+        "city": "Vienna",
+        "country": "Austria",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 42,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/B/batch_0314_0318.json"
+      },
+      "original_queue_record": {
+        "index": 314,
+        "section": "B",
+        "id": "GC1-AUSTRIA-09",
+        "name": "Lobau",
+        "city": "Vienna",
+        "country": "Austria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 328,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 314,
+        "candidate_id": "GC1-AUSTRIA-09",
+        "name": "Lobau",
+        "city": "Vienna",
+        "country": "Austria",
+        "bucket": "quarter_complete",
+        "description_words": 42,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 314,
+        "id": "GC1-AUSTRIA-09",
+        "name": "Lobau",
+        "city": "Vienna",
+        "country": "Austria",
+        "queue_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 328,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "archive_record": {
+          "file": "research/cruising/scrape_1.json",
+          "original_name": "Lobau",
+          "category": "Other",
+          "source_index_url": "https://www.gays-cruising.com/en/austria",
+          "assessment": "needs_category_and_access_review"
+        },
+        "description_rewritten": "A large Danube floodplain/national-park region east of Vienna. This directory name is too broad to pinpoint a cruising site; Vienna's Dechantlacke is a recognised clothing-optional bathing place, but its existence cannot be used as proof that all Lobau is a cruising area.",
+        "geography": "Lobau in Donaustadt, Vienna, with possible reference to Dechantlacke; exact site unverified.",
+        "access_conditions": "Nationalpark Donau-Auen has nature-protection rules. Bathing permitted only in designated areas; stay on approved tracks, no general assumption of access to protected banks.",
+        "primary_detail_url": "https://www.gays-cruising.com/en/cruising/lobau_wien_osterreich_62934",
+        "primary_detail_status": "unavailable_fetch_error",
+        "eight_source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/cruising/lobau_wien_osterreich_62934",
+            "note": "Original cruising directory listing."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          }
+        ],
+        "secondary_sources": [
+          {
+            "url": "https://www.wien.gv.at/freizeit/lobau-naturbadeplaetze",
+            "note": "City lists designated permitted bathing sites, not cruising."
+          },
+          {
+            "url": "https://www.wien.gv.at/freizeit/dechantlacke",
+            "note": "Dechantlacke allows FKK; this does not prove proposed spot is there."
+          },
+          {
+            "url": "https://www.rainbow.at/guide/1",
+            "note": "LGBT directory has historic Lobau/Dechantlacke naturism entry, not dated cruising report."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-04-17",
+            "kind": "directory_checkin",
+            "note": "Primary Austria landing page shows Lobau check-in; no independent proof of real visit or encounter.",
+            "physical_cruising_confirmed": false
+          }
+        ],
+        "recent_activity_self_report_present": false,
+        "independently_verified_recent_cruising": false,
+        "possible_duplicates": [
+          {
+            "name": "Dechantlacke",
+            "relationship": "possible_subarea_not_confirmed"
+          }
+        ],
+        "review_flags": [
+          "broad_area",
+          "nature_protection",
+          "FKK_not_same_as_cruising",
+          "specific_section_unconfirmed"
+        ],
+        "research_only": true,
+        "publication_approved": false,
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/B/batch_0314_0318.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 315,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-AUSTRIA-10",
+      "name": "Donauinsel, Toter Grund",
+      "city": "Vienna",
+      "country": "Austria",
+      "priority_assessment": {
+        "queue_index": 315,
+        "candidate_id": "GC1-AUSTRIA-10",
+        "name": "Donauinsel, Toter Grund",
+        "city": "Vienna",
+        "country": "Austria",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 52,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/B/batch_0314_0318.json"
+      },
+      "original_queue_record": {
+        "index": 315,
+        "section": "B",
+        "id": "GC1-AUSTRIA-10",
+        "name": "Donauinsel, Toter Grund",
+        "city": "Vienna",
+        "country": "Austria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 329,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 315,
+        "candidate_id": "GC1-AUSTRIA-10",
+        "name": "Donauinsel, Toter Grund",
+        "city": "Vienna",
+        "country": "Austria",
+        "bucket": "quarter_complete",
+        "description_words": 52,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 315,
+        "id": "GC1-AUSTRIA-10",
+        "name": "Donauinsel, Toter Grund",
+        "city": "Vienna",
+        "country": "Austria",
+        "queue_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 329,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "archive_record": {
+          "file": "research/cruising/scrape_1.json",
+          "original_name": "Donauinsel, Toter Grund",
+          "category": "Natural area",
+          "source_index_url": "https://www.gays-cruising.com/en/austria",
+          "assessment": "candidate_unverified"
+        },
+        "description_rewritten": "A long-recognized summer gathering area called Toter Grund along Vienna's Donauinsel, described in a cruising directory and named in an archived Squirt search result. 2026 directory comments contain plans to visit, while a 2026 gay guide acknowledges the site as a gay-frequented FKK beach; actual activity on any particular date remains uncertain.",
+        "geography": "Toter Grund near the southern Danube Island FKK zones, Vienna 22nd district; needs exact boundary match to numbered official FKK area.",
+        "access_conditions": "Danube Island has three marked FKK sectors; designated naturist bathing allowed, public sexual activity not automatically permitted.",
+        "primary_detail_url": "https://www.gays-cruising.com/en/cruising/donauinsel_toter_grund_wien_austria_1909",
+        "primary_detail_status": "accessible_detail",
+        "eight_source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/cruising/donauinsel_toter_grund_wien_austria_1909",
+            "note": "Original cruising directory listing."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "possible_area_alias_only",
+            "url": "https://gay-szene.net/gay-cruising-in-wien/287/17/rubrik.html",
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "linked_page_matched",
+            "url": null,
+            "note": "Squirt name-only match, detail URL not available; no recent visit verified."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          }
+        ],
+        "secondary_sources": [
+          {
+            "url": "https://www.gayout.com/de/europe/austria/vienna/cruising/donauinsel-der-tote-grund-vienna",
+            "note": "2026 gay guide calls the area a longstanding summer naturist and gay meeting location, editorial claim not firsthand dated cruising report."
+          },
+          {
+            "url": "https://www.wien.gv.at/freizeit/fkk-donauinsel",
+            "note": "City marks and defines FKK zones; see numbered km and access."
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/donauinsel_toter_grund_wien_austria_1909",
+            "note": "Original indexed site has recent discussion messages; not verified visits."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-06-26",
+            "kind": "future_arrival_announcement",
+            "note": "User states they will be on location at 14:00; no on-site confirmation."
+          },
+          {
+            "date": "2026-06-20",
+            "kind": "meeting_question",
+            "note": "Asks whether anyone will visit."
+          },
+          {
+            "date": "2026-06-01",
+            "kind": "meeting_query",
+            "note": "Seeks future meeting; no physical proof."
+          },
+          {
+            "date": "2026-07-20",
+            "kind": "Squirt_latest_reply_date_only",
+            "note": "Name-only archive reports this as most recent reply date, not confirmed physical cruising."
+          }
+        ],
+        "recent_activity_self_report_present": false,
+        "independently_verified_recent_cruising": false,
+        "possible_duplicates": [
+          {
+            "name": "Toter Grund (Squirt.org)",
+            "relationship": "name_identity_match_needs_detail_id"
+          },
+          {
+            "name": "Donauinsel FKK South",
+            "relationship": "possible_geographic_subset"
+          }
+        ],
+        "review_flags": [
+          "recent_online_discussion_not_onsite_proof",
+          "summer_seasonality",
+          "FKK_not_permission_for_public_sex"
+        ],
+        "research_only": true,
+        "publication_approved": false,
+        "checked_berlin": "2026-11-06",
+        "squirt_archive": {
+          "name": "Toter Grund",
+          "latest_reply_as_shown": "Jul 20, 2026",
+          "source_url": null,
+          "detail_url_missing": true
+        }
+      },
+      "original_research_batch_file": "research/cruising/part5/B/batch_0314_0318.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 316,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-AUSTRIA-12",
+      "name": "Donauinsel Nordstrand",
+      "city": "Vienna",
+      "country": "Austria",
+      "priority_assessment": {
+        "queue_index": 316,
+        "candidate_id": "GC1-AUSTRIA-12",
+        "name": "Donauinsel Nordstrand",
+        "city": "Vienna",
+        "country": "Austria",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": true,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 58,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/B/batch_0314_0318.json"
+      },
+      "original_queue_record": {
+        "index": 316,
+        "section": "B",
+        "id": "GC1-AUSTRIA-12",
+        "name": "Donauinsel Nordstrand",
+        "city": "Vienna",
+        "country": "Austria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 330,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 316,
+        "candidate_id": "GC1-AUSTRIA-12",
+        "name": "Donauinsel Nordstrand",
+        "city": "Vienna",
+        "country": "Austria",
+        "bucket": "quarter_complete",
+        "description_words": 58,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 316,
+        "id": "GC1-AUSTRIA-12",
+        "name": "Donauinsel Nordstrand",
+        "city": "Vienna",
+        "country": "Austria",
+        "queue_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 330,
+            "u": "https://www.gays-cruising.com/en/austria"
+          }
+        ],
+        "archive_record": {
+          "file": "research/cruising/scrape_1.json",
+          "original_name": "Donauinsel Nordstrand",
+          "category": "Natural area",
+          "source_index_url": "https://www.gays-cruising.com/en/austria",
+          "assessment": "candidate_unverified"
+        },
+        "description_rewritten": "The northern Danube Island riverside/naturist zone is described in a gay cruising directory, which includes June 2026 reports about being at or intending to visit the area. Separately, Vienna officially designates an FKK zone at the island's northern end. The name appears very close to another separately listed lead 'FKK und Gay Cruising', perhaps the same woodland section.",
+        "geography": "Northern Donauinsel FKK zone, city-approved km 17.7–19.5; exact directory subarea and opposite shores not independently confirmed.",
+        "access_conditions": "Outdoor riverside public area; official marked FKK bathing allowed; respect wildlife, site rules and other visitors.",
+        "primary_detail_url": "https://www.gays-cruising.com/en/cruising/donauinsel_nordstrand_wien_austria_1910",
+        "primary_detail_status": "accessible_detail",
+        "eight_source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/en/cruising/donauinsel_nordstrand_wien_austria_1910",
+            "note": "Original cruising directory listing."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "note": "No exact identified match in eight archived sources and web index; negative results not exhaustive."
+          }
+        ],
+        "secondary_sources": [
+          {
+            "url": "https://www.wien.gv.at/freizeit/fkk-donauinsel",
+            "note": "Official city map/description of northern FKK sector km 17.7–19.5."
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/fkk_und_gay_cruising_wien_osterreich_52116",
+            "note": "Separate primary-directory entry explicitly calls itself Donauinsel Nordstrand and lists the current Nordstrand spot 0.2km away."
+          },
+          {
+            "url": "https://www.rainbow.at/guide/1",
+            "note": "Historic LGBT directory references FKK Gelände Nord on Donauinsel."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-06-15",
+            "kind": "self_report_claims_current_presence",
+            "note": "Commenter says they are at the location; single-source unverified statement, not independent confirmation of cruising."
+          },
+          {
+            "date": "2026-05-31",
+            "kind": "planned_arrival",
+            "note": "Comment says intending to go at 13:00 today; not a confirmed encounter."
+          },
+          {
+            "date": "2026-04-28",
+            "kind": "self_report_claims_current_presence",
+            "note": "Short comment 'Bin dort' claims to be there; not independently verified."
+          }
+        ],
+        "recent_activity_self_report_present": true,
+        "independently_verified_recent_cruising": false,
+        "possible_duplicates": [
+          {
+            "name": "FKK und Gay Cruising",
+            "id": "GC1-AUSTRIA-14",
+            "relationship": "very_likely_overlapping_nordstrand_area"
+          }
+        ],
+        "review_flags": [
+          "possible_duplicate_318",
+          "public_naturist_site",
+          "self_reports_not_independent_verification"
+        ],
+        "research_only": true,
+        "publication_approved": false,
+        "checked_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/B/batch_0314_0318.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact geolocation, public access, possible duplicates and publication eligibility",
       "publication_approved": false
     }
   ]
