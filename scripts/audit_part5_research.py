@@ -167,6 +167,51 @@ out={
     "addenda":len(source.get("addenda",[])),
     "cautions":["Candidates are not equivalent to active venues or independently confirmed cruising","Source coverage fields are heterogeneously named across workers; statuses must be interpreted literally","Multiple directory references are not necessarily independent current activity","Positive booleans are reported as the source research asserted, not independent verification by this report","Avoid adding unverified public toilets, schools, nature reserves or transport sites to the live directory"],
 }
+
+def find_listing_rows(node, prefix="", maxdepth=3):
+    if maxdepth < 0:
+        return []
+    if isinstance(node,list):
+        if node and isinstance(node[0],dict) and any(k in node[0] for k in ("Name","name","Venue_ID","venue_id","VenueName")):
+            return [(prefix,node)]
+        return []
+    if isinstance(node,dict):
+        all_rows=[]
+        for k,v in node.items():
+            if isinstance(v,(dict,list)):
+                all_rows+=find_listing_rows(v,prefix+"."+k,maxdepth-1)
+        return all_rows
+    return []
+
+def rname(x):
+    return norm(x.get("Name") or x.get("name") or x.get("VenueName") or x.get("venue_name"))
+
+def rcity(x):
+    return norm(x.get("City") or x.get("city") or x.get("Location_City") or x.get("location_city"))
+
+live_docs={}
+for file in ["listings.json","cruising_research.json"]:
+    raw=read=json.loads((root/file).read_text(encoding="utf8"))
+    groups=find_listing_rows(raw)
+    live_docs[file]={
+        "root_type":type(raw).__name__,
+        "root_keys":list(raw.keys())[:25] if isinstance(raw,dict) else None,
+        "candidate_list_groups":[{"path":k,"count":len(v),"sample_keys":list(v[0])[:25]} for k,v in groups[:10]]
+    }
+    if file=="listings.json":
+        listings=max(groups,key=lambda x:len(x[1]))[1] if groups else []
+        indexed=collections.defaultdict(list)
+        for v in listings:indexed[(rname(v),rcity(v))].append(v)
+        exact=[]
+        for item in rows:
+            key=(norm(item["data"].get("name")),norm(item["data"].get("city")))
+            if key in indexed:
+                exact.append({"index":item["index"],"name":item["data"].get("name"),"city":item["data"].get("city"),"matches":[{"name":a.get("Name") or a.get("name"),"id":a.get("Venue_ID") or a.get("venue_id"),"category":a.get("Category") or a.get("category")} for a in indexed[key][:2]]})
+        live_docs[file]["exact_name_city_matched_candidates"]=len(exact)
+        live_docs[file]["exact_match_samples"]=exact[:35]
+        live_docs[file]["entries_count"]=len(listings)
+out["current_site_file_comparison"]=live_docs
+
 p=base / "research_audit_metrics_2026-11-07.json"
 p.write_text(json.dumps(out,indent=2,ensure_ascii=False)+"\n",encoding="utf8")
 print(json.dumps({"records":len(rows),"countries":len(country),"cities":len(city),"source_counts":dict(source_count_counter),"source_statuses":dict(status_overall.most_common(15)),"recent_positive":recent_positive[:10],"recent_positive_count":len(recent_positive),"duplicate_candidates":out["duplicate_or_alias_flags_count"],"top_flags":flags.most_common(12),"dated_fields":dict(dated_field_counts)},ensure_ascii=False))
