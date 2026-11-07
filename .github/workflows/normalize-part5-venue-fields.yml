@@ -27,6 +27,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python3 scripts/normalize_part5_into_venue_schema.py
+            python3 scripts/apply_part5_geocoding_overlay.py
             git add research/cruising/part5/venues_normalized_1172_RESEARCH_ONLY.json
             if git diff --cached --quiet; then exit 0; fi
             git commit -m "Research: consolidate all 1172 candidates into venue template schema"
