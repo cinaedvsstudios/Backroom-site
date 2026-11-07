@@ -1,0 +1,33 @@
+name: Screen Part 5 source completeness and recency
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/screen-part5-research.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+      - name: Analyse the 1172 records and save reviewed count report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/screen_part5_source_activity.py
+            git add research/cruising/part5/research_screening_counts_2026-11-07.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Audit: record explicit unsearched counts and dated-evidence categories"
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
