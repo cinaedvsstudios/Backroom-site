@@ -1,0 +1,46 @@
+name: Audit Part 5 cruising research
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/audit-part5-research.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audit-part5-research
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+      - name: Run descriptive source audit safely
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/audit_part5_research.py
+            git add -- research/cruising/part5/research_audit_metrics_2026-11-07.json
+            if git diff --cached --quiet; then
+              echo "Audit already current"
+              exit 0
+            fi
+            git commit -m "Research: save read-only Part 5 quality audit"
+            if git push origin HEAD:main; then
+              echo "Audit committed"
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "Unable to commit audit" >&2
+          exit 1
