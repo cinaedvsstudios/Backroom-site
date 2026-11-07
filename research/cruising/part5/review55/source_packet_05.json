@@ -1,0 +1,1835 @@
+{
+  "_meta": {
+    "batch_number": 5,
+    "of": 11,
+    "type": "SOURCE_PACKET_TO_RESEARCH_NOT_A_COMPLETE_LISTING",
+    "note": "Original research, original source URLs, original queue index and all standard venue fields are retained. Read the URLs and validate first."
+  },
+  "records": [
+    {
+      "triage": {
+        "index": 541,
+        "candidate_id": "CG8-GAP-62",
+        "name": "Princes Street Gardens",
+        "city": "Edinburgh",
+        "country": "United Kingdom",
+        "bucket": "half_complete",
+        "description_words": 124,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 2,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Substantive description and access; at least two additional supported evidence dimensions."
+      },
+      "research_venue": {
+        "Venue_ID": "RESEARCH-CG8-GAP-62",
+        "Name": "Princes Street Gardens",
+        "City": "Edinburgh",
+        "Country": "United Kingdom",
+        "Category": "Cruising Area",
+        "Status": "Research",
+        "Address": "",
+        "Postcode": "",
+        "Nearest_Station": "",
+        "Latitude": "",
+        "Longitude": "",
+        "Google_Maps_URL": "",
+        "Apple_Maps_URL": "",
+        "Native_Map_Query": "Princes Street Gardens, Edinburgh, United Kingdom",
+        "Website_URL": "",
+        "Instagram_URL": "",
+        "Facebook_URL": "",
+        "Other_URL": "",
+        "Source_URLs": "https://www.cruisinggays.com/edinburgh/c/areas/4/ | https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom | https://mobile.squirt.org/cruise/display/51176/detail | https://mobile.squirt.org/cruise/display/74040/detail | https://www.edinburghoutdoors.org.uk/directory-record/112/princes-street-gardens?recordID=112 | https://www.edinburgh.gov.uk/publictoilets",
+        "Share_URL": "",
+        "Image_URL": "",
+        "Description": "Princes Street Gardens is Edinburgh's central historic park directly below the Castle, with different eastern and western sections and several public restrooms. CruisingGays records the gardens generally; Gays-Cruising indexes 'Toilets Prince's Street Garden', and two separate Squirt records identify Ross Bandstand and West public toilets. These may be facilities within the same gardens but should not be collapsed into a single exact pin. The City Council says the gardens open at 07:00 and close at 18:00 from 26 October to 31 December, with west gates starting to close at 17:00 and east at 17:15. Squirt's list showed a recent relative reply for Ross Bandstand as of 6 November 2026, but its detail page was inaccessible and the reply is not proof of an encounter.",
+        "Vibe_Tags": "",
+        "Last_Updated": "2026-11-06T00:00:00Z",
+        "Opening_Days": "",
+        "Opening_Open_Time": "",
+        "Opening_Close_Time": "",
+        "Opening_Notes": "Gardens open 07:00–18:00 during current Oct26–Dec31 season; entry closure begins west 17:00, east 17:15. Council lists winter toilet Ross Bandstand 10:00–19:00 and West 10:00–20:00; this divergence from park gate hours needs confirmation of after-gate routes, not assumption of entry. Public restrooms under operator supervision and consent/privacy constraints.",
+        "Event_Date": "",
+        "Event_Time": "",
+        "Feature_Darkroom": null,
+        "Feature_Dresscode": null,
+        "Feature_Men_Only": null,
+        "Feature_Dancefloor": null,
+        "Feature_Smoking_Area": null,
+        "Feature_Cocktails": null,
+        "Feature_Cruise_Focused": null,
+        "Feature_Sauna": null,
+        "Feature_Playroom": null,
+        "Public_Rating": "",
+        "Rating_General": null,
+        "Rating_Darkroom": null,
+        "Rating_Age_Range": null,
+        "Rating_Cost": null,
+        "Rating_Size": null,
+        "Rating_Location": null,
+        "Rating_Busyness": null,
+        "Views": 0,
+        "Emoji_Override": "",
+        "Created_At": "",
+        "Flag_Reason": "seasonal_gates_close_early; subsites_distinct_toilets; recent_reply_contents_unavailable; garden_not_adult_venue",
+        "_Research": {
+          "queue_index": 541,
+          "original_candidate_id": "CG8-GAP-62",
+          "temporary_research_venue_id": true,
+          "assigned_worker": "B",
+          "original_batch_file": "research/cruising/part5/B/batch_0539_0543.json",
+          "original_source_count": 2,
+          "original_source_ids": [
+            "8",
+            "1"
+          ],
+          "all_source_urls": [
+            "https://www.cruisinggays.com/edinburgh/c/areas/4/",
+            "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+            "https://mobile.squirt.org/cruise/display/51176/detail",
+            "https://mobile.squirt.org/cruise/display/74040/detail",
+            "https://www.edinburghoutdoors.org.uk/directory-record/112/princes-street-gardens?recordID=112",
+            "https://www.edinburgh.gov.uk/publictoilets"
+          ],
+          "research_last_saved_date": "2026-11-06",
+          "source_check_field": "eight_source_checks",
+          "source_checks": [
+            {
+              "source_id": "1",
+              "website": "Gays-Cruising.com",
+              "status": "linked_page_matched",
+              "url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+              "notes": "Original cross-source archived match; latest primary detail not read for source8, see evidence details."
+            },
+            {
+              "source_id": "2",
+              "website": "gay-szene.net",
+              "status": "not_checked",
+              "url": null,
+              "notes": "No exact same-location match in source alignment; site not exhaustively checked, so not no-match."
+            },
+            {
+              "source_id": "3",
+              "website": "Planet Randy",
+              "status": "not_checked",
+              "url": null,
+              "notes": "No exact same-location match in source alignment; site not exhaustively checked, so not no-match."
+            },
+            {
+              "source_id": "4",
+              "website": "The Gay Passport",
+              "status": "not_checked",
+              "url": null,
+              "notes": "No exact same-location match in source alignment; site not exhaustively checked, so not no-match."
+            },
+            {
+              "source_id": "5",
+              "website": "Splashd",
+              "status": "not_checked",
+              "url": null,
+              "notes": "No exact same-location match in source alignment; site not exhaustively checked, so not no-match."
+            },
+            {
+              "source_id": "6",
+              "website": "Popcorn.dating",
+              "status": "not_checked",
+              "url": null,
+              "notes": "No exact same-location match in source alignment; site not exhaustively checked, so not no-match."
+            },
+            {
+              "source_id": "7",
+              "website": "Squirt.org",
+              "status": "possible_related_subspots_not_identity_proven",
+              "url": "https://mobile.squirt.org/cruise/display/51176/detail",
+              "notes": "Squirt lists Ross Bandstand and West toilets; separate specific restroom records; reply content inaccessible."
+            },
+            {
+              "source_id": "8",
+              "website": "CruisingGays",
+              "status": "linked_page_matched_archived_detail_unavailable",
+              "url": "https://www.cruisinggays.com/edinburgh/c/areas/4/",
+              "notes": "Original cross-source archived match; latest primary detail not read for source8, see evidence details."
+            }
+          ],
+          "original_descriptions": {
+            "description_rewritten": "Princes Street Gardens is Edinburgh's central historic park directly below the Castle, with different eastern and western sections and several public restrooms. CruisingGays records the gardens generally; Gays-Cruising indexes 'Toilets Prince's Street Garden', and two separate Squirt records identify Ross Bandstand and West public toilets. These may be facilities within the same gardens but should not be collapsed into a single exact pin. The City Council says the gardens open at 07:00 and close at 18:00 from 26 October to 31 December, with west gates starting to close at 17:00 and east at 17:15. Squirt's list showed a recent relative reply for Ross Bandstand as of 6 November 2026, but its detail page was inaccessible and the reply is not proof of an encounter."
+          },
+          "directions_access_notes": {
+            "access_conditions": "Gardens open 07:00–18:00 during current Oct26–Dec31 season; entry closure begins west 17:00, east 17:15. Council lists winter toilet Ross Bandstand 10:00–19:00 and West 10:00–20:00; this divergence from park gate hours needs confirmation of after-gate routes, not assumption of entry. Public restrooms under operator supervision and consent/privacy constraints."
+          },
+          "time_information": {},
+          "crowd_age_information": {},
+          "safety_information": {
+            "review_flags": [
+              "seasonal_gates_close_early",
+              "subsites_distinct_toilets",
+              "recent_reply_contents_unavailable",
+              "garden_not_adult_venue"
+            ]
+          },
+          "dated_comments_and_activity": {
+            "dated_reports": [
+              {
+                "date": null,
+                "type": "recent_relative_reply_unread_content",
+                "url": "https://mobile.squirt.org/cruise/display/51176/detail",
+                "summary": "Squirt listing displayed '5 days ago' as of Nov6, 2026 for Ross Bandstand WC, but direct reply contents not accessible; no encounter confirmed."
+              },
+              {
+                "date": "2026-10-05",
+                "type": "recent_listing_reply_unread_content",
+                "url": "https://mobile.squirt.org/cruise/display/74040/detail",
+                "summary": "Squirt West WC listing showed most recent reply Oct5, 2026; reply not readable, no physical activity proof."
+              }
+            ]
+          },
+          "duplicates_and_aliases": {
+            "possible_aliases": [
+              {
+                "name": "Toilets Prince's Street Garden",
+                "relation": "source1_subsite_potentially_overlaps_source7_toilets_not_pin_proved"
+              },
+              {
+                "name": "Ross Bandstand Public Toilets",
+                "relation": "source7_different_specific_toilet_facility"
+              },
+              {
+                "name": "Princes Street Gardens West Toilets",
+                "relation": "source7_second_different_facility"
+              }
+            ]
+          },
+          "field_coverage": {
+            "description_available": true,
+            "detailed_description_90_plus_words": true,
+            "address_explicit": false,
+            "coordinates_explicit": false,
+            "source_url_available": true,
+            "access_notes_available": true,
+            "best_visiting_time_explicit": false,
+            "crowd_or_age_info_explicit": false,
+            "safety_info_explicit": false,
+            "dated_evidence_recorded": true,
+            "source_check_statuses_recorded": true,
+            "eight_distinct_source_check_rows": true
+          },
+          "not_yet_checked_for_import": true,
+          "publication_approved": false,
+          "original_research_record": {
+            "index": 541,
+            "id": "CG8-GAP-62",
+            "name": "Princes Street Gardens",
+            "city": "Edinburgh",
+            "country": "United Kingdom",
+            "original_queue_refs": [
+              {
+                "s": "8",
+                "f": "research/cruising/scrape_8.json",
+                "i": 53,
+                "u": "https://www.cruisinggays.com/edinburgh/c/areas/4/"
+              },
+              {
+                "s": "1",
+                "f": "research/cruising/gap_fill_scrape_1.json",
+                "i": 14,
+                "u": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom"
+              }
+            ],
+            "original_spot_url": "https://www.cruisinggays.com/edinburgh/c/areas/4/",
+            "eight_source_checks": [
+              {
+                "source_id": "1",
+                "website": "Gays-Cruising.com",
+                "status": "linked_page_matched",
+                "url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+                "notes": "Original cross-source archived match; latest primary detail not read for source8, see evidence details."
+              },
+              {
+                "source_id": "2",
+                "website": "gay-szene.net",
+                "status": "not_checked",
+                "url": null,
+                "notes": "No exact same-location match in source alignment; site not exhaustively checked, so not no-match."
+              },
+              {
+                "source_id": "3",
+                "website": "Planet Randy",
+                "status": "not_checked",
+                "url": null,
+                "notes": "No exact same-location match in source alignment; site not exhaustively checked, so not no-match."
+              },
+              {
+                "source_id": "4",
+                "website": "The Gay Passport",
+                "status": "not_checked",
+                "url": null,
+                "notes": "No exact same-location match in source alignment; site not exhaustively checked, so not no-match."
+              },
+              {
+                "source_id": "5",
+                "website": "Splashd",
+                "status": "not_checked",
+                "url": null,
+                "notes": "No exact same-location match in source alignment; site not exhaustively checked, so not no-match."
+              },
+              {
+                "source_id": "6",
+                "website": "Popcorn.dating",
+                "status": "not_checked",
+                "url": null,
+                "notes": "No exact same-location match in source alignment; site not exhaustively checked, so not no-match."
+              },
+              {
+                "source_id": "7",
+                "website": "Squirt.org",
+                "status": "possible_related_subspots_not_identity_proven",
+                "url": "https://mobile.squirt.org/cruise/display/51176/detail",
+                "notes": "Squirt lists Ross Bandstand and West toilets; separate specific restroom records; reply content inaccessible."
+              },
+              {
+                "source_id": "8",
+                "website": "CruisingGays",
+                "status": "linked_page_matched_archived_detail_unavailable",
+                "url": "https://www.cruisinggays.com/edinburgh/c/areas/4/",
+                "notes": "Original cross-source archived match; latest primary detail not read for source8, see evidence details."
+              }
+            ],
+            "description_rewritten": "Princes Street Gardens is Edinburgh's central historic park directly below the Castle, with different eastern and western sections and several public restrooms. CruisingGays records the gardens generally; Gays-Cruising indexes 'Toilets Prince's Street Garden', and two separate Squirt records identify Ross Bandstand and West public toilets. These may be facilities within the same gardens but should not be collapsed into a single exact pin. The City Council says the gardens open at 07:00 and close at 18:00 from 26 October to 31 December, with west gates starting to close at 17:00 and east at 17:15. Squirt's list showed a recent relative reply for Ross Bandstand as of 6 November 2026, but its detail page was inaccessible and the reply is not proof of an encounter.",
+            "location_identity": "East and West Princes Street Gardens on Princes Street EH2 2HG; Ross Bandstand toilets (source7 Squirt 51176) and West toilets (74040) different physical facilities, cannot treat as equivalent source records.",
+            "access_conditions": "Gardens open 07:00–18:00 during current Oct26–Dec31 season; entry closure begins west 17:00, east 17:15. Council lists winter toilet Ross Bandstand 10:00–19:00 and West 10:00–20:00; this divergence from park gate hours needs confirmation of after-gate routes, not assumption of entry. Public restrooms under operator supervision and consent/privacy constraints.",
+            "primary_page_status": "source8_entry_original_source1_park_toilet_related",
+            "independent_and_secondary_sources": [
+              {
+                "url": "https://www.cruisinggays.com/edinburgh/c/areas/4/",
+                "type": "original_source_archive",
+                "finding": "Original source from queue."
+              },
+              {
+                "url": "https://www.cruisinggays.com/edinburgh/c/areas/4/",
+                "type": "original_source8",
+                "finding": "CruisingGays garden general listing, no dated eyewitness confirmation."
+              },
+              {
+                "url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+                "type": "original_source1_related_toilet",
+                "finding": "Gays-Cruising lists Toilets Prince's Street Garden as separate potential subsite."
+              },
+              {
+                "url": "https://mobile.squirt.org/cruise/display/51176/detail",
+                "type": "source7_subsite_archived_live_unavailable",
+                "finding": "Ross Bandstand public toilets, UK list captured Nov6 2026, last reply displayed as 5 days ago, full context inaccessible."
+              },
+              {
+                "url": "https://mobile.squirt.org/cruise/display/74040/detail",
+                "type": "source7_subsite_archived_live_unavailable",
+                "finding": "West Princes Street Gardens public toilets, list relative latest reply Oct 5 2026; not an onsite encounter verification."
+              },
+              {
+                "url": "https://www.edinburghoutdoors.org.uk/directory-record/112/princes-street-gardens?recordID=112",
+                "type": "official_city_park",
+                "finding": "Gated seasonal opening 07:00–18:00 now with early gate clearing."
+              },
+              {
+                "url": "https://www.edinburgh.gov.uk/publictoilets",
+                "type": "official_city_toilets",
+                "finding": "Separate council winter opening times Ross Bandstand 10:00–19:00, West 10:00–20:00."
+              }
+            ],
+            "dated_reports": [
+              {
+                "date": null,
+                "type": "recent_relative_reply_unread_content",
+                "url": "https://mobile.squirt.org/cruise/display/51176/detail",
+                "summary": "Squirt listing displayed '5 days ago' as of Nov6, 2026 for Ross Bandstand WC, but direct reply contents not accessible; no encounter confirmed."
+              },
+              {
+                "date": "2026-10-05",
+                "type": "recent_listing_reply_unread_content",
+                "url": "https://mobile.squirt.org/cruise/display/74040/detail",
+                "summary": "Squirt West WC listing showed most recent reply Oct5, 2026; reply not readable, no physical activity proof."
+              }
+            ],
+            "credible_physical_activity_since_2025_11_06": false,
+            "possible_aliases": [
+              {
+                "name": "Toilets Prince's Street Garden",
+                "relation": "source1_subsite_potentially_overlaps_source7_toilets_not_pin_proved"
+              },
+              {
+                "name": "Ross Bandstand Public Toilets",
+                "relation": "source7_different_specific_toilet_facility"
+              },
+              {
+                "name": "Princes Street Gardens West Toilets",
+                "relation": "source7_second_different_facility"
+              }
+            ],
+            "review_flags": [
+              "seasonal_gates_close_early",
+              "subsites_distinct_toilets",
+              "recent_reply_contents_unavailable",
+              "garden_not_adult_venue"
+            ],
+            "research_decision": "gated_park_identified_multiple_directory_facility_mentions_without_verified_recent_encounter",
+            "publication_approved": false,
+            "checked_berlin": "2026-11-06"
+          }
+        }
+      }
+    },
+    {
+      "triage": {
+        "index": 545,
+        "candidate_id": "GC1-GAP-EDINBURG-04",
+        "name": "London Road Gardens",
+        "city": "Edinburgh",
+        "country": "United Kingdom",
+        "bucket": "half_complete",
+        "description_words": 103,
+        "dimensions": {
+          "access": true,
+          "when": true,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 2,
+        "has_recent_dated_report": false,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Substantive description and access; at least two additional supported evidence dimensions."
+      },
+      "research_venue": {
+        "Venue_ID": "RESEARCH-GC1-GAP-EDINBURG-04",
+        "Name": "London Road Gardens",
+        "City": "Edinburgh",
+        "Country": "United Kingdom",
+        "Category": "Cruising Area",
+        "Status": "Research",
+        "Address": "",
+        "Postcode": "",
+        "Nearest_Station": "",
+        "Latitude": "",
+        "Longitude": "",
+        "Google_Maps_URL": "",
+        "Apple_Maps_URL": "",
+        "Native_Map_Query": "London Road Gardens, Edinburgh, United Kingdom",
+        "Website_URL": "",
+        "Instagram_URL": "",
+        "Facebook_URL": "",
+        "Other_URL": "",
+        "Source_URLs": "https://www.gays-cruising.com/en/cruising/london_road_gardens_edinburgh_reino_unido_32692 | https://mobile.squirt.org/cruise/display/241933/detail | https://www.edinburghoutdoors.org.uk/directory-record/83/london-road-gardens | https://www.woodlandtrust.org.uk/visiting-woods/woods/london-road-gardens/ | https://www.thecottageedinburgh.com/reservations-and-faq",
+        "Share_URL": "",
+        "Image_URL": "",
+        "Description": "London Road Gardens is the wooded city park on the eastern side of Calton Hill, reached from London Road. The original directory claims paths behind a 'Cottage' are visited late at night but supplies zero dated comments. A council park page and Woodland Trust both identify London Road Gardens; crucially the Woodland Trust explains it was historically named Royal Terrace Gardens, and the newly opened Cottage restaurant occupies the old gardener's cottage in Royal Terrace Gardens. This makes the queued Royal Terrace Gardens #540 a high-confidence possible duplicate or overlapping garden, not a separate cruising location by default. No current sex-meeting activity verified.",
+        "Vibe_Tags": "",
+        "Last_Updated": "2026-11-06T00:00:00Z",
+        "Opening_Days": "",
+        "Opening_Open_Time": "",
+        "Opening_Close_Time": "",
+        "Opening_Notes": "Public wooded city park, with active walking and restaurant path. Exact garden gate/night access unknown; restaurant operating times do not apply to all park paths. Do not infer after-midnight entry from undated adult directory suggestion. Public recreation and consenting behaviour rules.",
+        "Event_Date": "",
+        "Event_Time": "",
+        "Feature_Darkroom": null,
+        "Feature_Dresscode": null,
+        "Feature_Men_Only": null,
+        "Feature_Dancefloor": null,
+        "Feature_Smoking_Area": null,
+        "Feature_Cocktails": null,
+        "Feature_Cruise_Focused": null,
+        "Feature_Sauna": null,
+        "Feature_Playroom": null,
+        "Public_Rating": "",
+        "Rating_General": null,
+        "Rating_Darkroom": null,
+        "Rating_Age_Range": null,
+        "Rating_Cost": null,
+        "Rating_Size": null,
+        "Rating_Location": null,
+        "Rating_Busyness": null,
+        "Views": 0,
+        "Emoji_Override": "",
+        "Created_At": "",
+        "Flag_Reason": "strong_overlap_with_540; source1_zero_comments; squirt_gated; undated_night_access_claim",
+        "_Research": {
+          "queue_index": 545,
+          "original_candidate_id": "GC1-GAP-EDINBURG-04",
+          "temporary_research_venue_id": true,
+          "assigned_worker": "B",
+          "original_batch_file": "research/cruising/part5/B/batch_0544_0548.json",
+          "original_source_count": 2,
+          "original_source_ids": [
+            "1",
+            "7"
+          ],
+          "all_source_urls": [
+            "https://www.gays-cruising.com/en/cruising/london_road_gardens_edinburgh_reino_unido_32692",
+            "https://mobile.squirt.org/cruise/display/241933/detail",
+            "https://www.edinburghoutdoors.org.uk/directory-record/83/london-road-gardens",
+            "https://www.woodlandtrust.org.uk/visiting-woods/woods/london-road-gardens/",
+            "https://www.thecottageedinburgh.com/reservations-and-faq"
+          ],
+          "research_last_saved_date": "2026-11-06",
+          "source_check_field": "eight_source_checks",
+          "source_checks": [
+            {
+              "source_id": "1",
+              "website": "Gays-Cruising.com",
+              "status": "linked_page_matched",
+              "url": "https://www.gays-cruising.com/en/cruising/london_road_gardens_edinburgh_reino_unido_32692",
+              "notes": "Original source archived; primary detail accessibility described in primary_page_status."
+            },
+            {
+              "source_id": "2",
+              "website": "gay-szene.net",
+              "status": "not_checked",
+              "url": null,
+              "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+            },
+            {
+              "source_id": "3",
+              "website": "Planet Randy",
+              "status": "not_checked",
+              "url": null,
+              "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+            },
+            {
+              "source_id": "4",
+              "website": "The Gay Passport",
+              "status": "not_checked",
+              "url": null,
+              "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+            },
+            {
+              "source_id": "5",
+              "website": "Splashd",
+              "status": "not_checked",
+              "url": null,
+              "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+            },
+            {
+              "source_id": "6",
+              "website": "Popcorn.dating",
+              "status": "not_checked",
+              "url": null,
+              "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+            },
+            {
+              "source_id": "7",
+              "website": "Squirt.org",
+              "status": "linked_page_matched_archived_live_blocked",
+              "url": null,
+              "notes": "Original source archived; primary detail accessibility described in primary_page_status."
+            },
+            {
+              "source_id": "8",
+              "website": "CruisingGays",
+              "status": "not_checked",
+              "url": null,
+              "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+            }
+          ],
+          "original_descriptions": {
+            "description_rewritten": "London Road Gardens is the wooded city park on the eastern side of Calton Hill, reached from London Road. The original directory claims paths behind a 'Cottage' are visited late at night but supplies zero dated comments. A council park page and Woodland Trust both identify London Road Gardens; crucially the Woodland Trust explains it was historically named Royal Terrace Gardens, and the newly opened Cottage restaurant occupies the old gardener's cottage in Royal Terrace Gardens. This makes the queued Royal Terrace Gardens #540 a high-confidence possible duplicate or overlapping garden, not a separate cruising location by default. No current sex-meeting activity verified."
+          },
+          "directions_access_notes": {
+            "access_conditions": "Public wooded city park, with active walking and restaurant path. Exact garden gate/night access unknown; restaurant operating times do not apply to all park paths. Do not infer after-midnight entry from undated adult directory suggestion. Public recreation and consenting behaviour rules."
+          },
+          "time_information": {},
+          "crowd_age_information": {},
+          "safety_information": {
+            "review_flags": [
+              "strong_overlap_with_540",
+              "source1_zero_comments",
+              "squirt_gated",
+              "undated_night_access_claim"
+            ]
+          },
+          "dated_comments_and_activity": {},
+          "duplicates_and_aliases": {
+            "possible_aliases": [
+              {
+                "name": "Royal Terrace Gardens #540",
+                "relation": "high_confidence_geographic_overlap_or_duplicate_same_historic_landscape"
+              },
+              {
+                "name": "The Cottage Royal Terrace Gardens",
+                "relation": "historic_building_landmark_not_adult_venue"
+              }
+            ]
+          },
+          "field_coverage": {
+            "description_available": true,
+            "detailed_description_90_plus_words": true,
+            "address_explicit": false,
+            "coordinates_explicit": false,
+            "source_url_available": true,
+            "access_notes_available": true,
+            "best_visiting_time_explicit": false,
+            "crowd_or_age_info_explicit": false,
+            "safety_info_explicit": false,
+            "dated_evidence_recorded": false,
+            "source_check_statuses_recorded": true,
+            "eight_distinct_source_check_rows": true
+          },
+          "not_yet_checked_for_import": true,
+          "publication_approved": false,
+          "original_research_record": {
+            "index": 545,
+            "id": "GC1-GAP-EDINBURG-04",
+            "name": "London Road Gardens",
+            "city": "Edinburgh",
+            "country": "United Kingdom",
+            "original_queue_refs": [
+              {
+                "s": "1",
+                "f": "research/cruising/gap_fill_scrape_1.json",
+                "i": 15,
+                "u": "https://www.gays-cruising.com/en/cruising/london_road_gardens_edinburgh_reino_unido_32692"
+              },
+              {
+                "s": "7",
+                "f": "research/cruising/scrape_7.json",
+                "i": 48,
+                "u": null
+              },
+              {
+                "s": "7",
+                "f": "research/cruising/scrape_7_uk_list_2026-11-06.json",
+                "i": 17,
+                "u": "https://mobile.squirt.org/cruise/display/241933/detail"
+              }
+            ],
+            "original_spot_url": "https://www.gays-cruising.com/en/cruising/london_road_gardens_edinburgh_reino_unido_32692",
+            "eight_source_checks": [
+              {
+                "source_id": "1",
+                "website": "Gays-Cruising.com",
+                "status": "linked_page_matched",
+                "url": "https://www.gays-cruising.com/en/cruising/london_road_gardens_edinburgh_reino_unido_32692",
+                "notes": "Original source archived; primary detail accessibility described in primary_page_status."
+              },
+              {
+                "source_id": "2",
+                "website": "gay-szene.net",
+                "status": "not_checked",
+                "url": null,
+                "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+              },
+              {
+                "source_id": "3",
+                "website": "Planet Randy",
+                "status": "not_checked",
+                "url": null,
+                "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+              },
+              {
+                "source_id": "4",
+                "website": "The Gay Passport",
+                "status": "not_checked",
+                "url": null,
+                "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+              },
+              {
+                "source_id": "5",
+                "website": "Splashd",
+                "status": "not_checked",
+                "url": null,
+                "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+              },
+              {
+                "source_id": "6",
+                "website": "Popcorn.dating",
+                "status": "not_checked",
+                "url": null,
+                "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+              },
+              {
+                "source_id": "7",
+                "website": "Squirt.org",
+                "status": "linked_page_matched_archived_live_blocked",
+                "url": null,
+                "notes": "Original source archived; primary detail accessibility described in primary_page_status."
+              },
+              {
+                "source_id": "8",
+                "website": "CruisingGays",
+                "status": "not_checked",
+                "url": null,
+                "notes": "Original cross-source archive not an exact match; not exhaustively checked; no absent claims."
+              }
+            ],
+            "description_rewritten": "London Road Gardens is the wooded city park on the eastern side of Calton Hill, reached from London Road. The original directory claims paths behind a 'Cottage' are visited late at night but supplies zero dated comments. A council park page and Woodland Trust both identify London Road Gardens; crucially the Woodland Trust explains it was historically named Royal Terrace Gardens, and the newly opened Cottage restaurant occupies the old gardener's cottage in Royal Terrace Gardens. This makes the queued Royal Terrace Gardens #540 a high-confidence possible duplicate or overlapping garden, not a separate cruising location by default. No current sex-meeting activity verified.",
+            "location_identity": "London Road Gardens at London Road EH7 5AA, near historic 1 Royal Terrace Gardens / gardener's cottage EH7 5DX. Strong overlapping-site match to #540.",
+            "access_conditions": "Public wooded city park, with active walking and restaurant path. Exact garden gate/night access unknown; restaurant operating times do not apply to all park paths. Do not infer after-midnight entry from undated adult directory suggestion. Public recreation and consenting behaviour rules.",
+            "primary_page_status": "direct_detail_read_zero_comments_squirt_archive_gated",
+            "independent_and_secondary_sources": [
+              {
+                "url": "https://www.gays-cruising.com/en/cruising/london_road_gardens_edinburgh_reino_unido_32692",
+                "type": "original_archive",
+                "finding": "Original queue provenance."
+              },
+              {
+                "url": "https://www.gays-cruising.com/en/cruising/london_road_gardens_edinburgh_reino_unido_32692",
+                "type": "original_source1_spot_detail",
+                "finding": "Claims paths behind cottage after midnight; zero comments, no date or recent encounters."
+              },
+              {
+                "url": "https://mobile.squirt.org/cruise/display/241933/detail",
+                "type": "original_source7_archived_detail",
+                "finding": "UK Squirt indexed London Road Gardens, current detail access blocked; no posts verified."
+              },
+              {
+                "url": "https://www.edinburghoutdoors.org.uk/directory-record/83/london-road-gardens",
+                "type": "official_city_park",
+                "finding": "London Road Gardens London Road EH7 5AA, Playfair design and public park use."
+              },
+              {
+                "url": "https://www.woodlandtrust.org.uk/visiting-woods/woods/london-road-gardens/",
+                "type": "independent_woodland_reference",
+                "finding": "States London Road Gardens originally called Royal Terrace Gardens, 1829 landscape."
+              },
+              {
+                "url": "https://www.thecottageedinburgh.com/reservations-and-faq",
+                "type": "2026_current_cottage_operator",
+                "finding": "Cottage is in old gardener's building at 1 Royal Terrace Gardens, reached from London Road; geographic context for directory reference."
+              }
+            ],
+            "dated_reports": [],
+            "credible_physical_activity_since_2025_11_06": false,
+            "possible_aliases": [
+              {
+                "name": "Royal Terrace Gardens #540",
+                "relation": "high_confidence_geographic_overlap_or_duplicate_same_historic_landscape"
+              },
+              {
+                "name": "The Cottage Royal Terrace Gardens",
+                "relation": "historic_building_landmark_not_adult_venue"
+              }
+            ],
+            "review_flags": [
+              "strong_overlap_with_540",
+              "source1_zero_comments",
+              "squirt_gated",
+              "undated_night_access_claim"
+            ],
+            "research_decision": "geographic_site_verified_high_confidence_duplicate_review_no_recent_activity",
+            "publication_approved": false,
+            "checked_berlin": "2026-11-06"
+          }
+        }
+      }
+    },
+    {
+      "triage": {
+        "index": 620,
+        "candidate_id": "GC1-NETHERLANDS-11",
+        "name": "Noord Aa - Homo Ontmoetingplaats (HOP)",
+        "city": "Zoetermeer",
+        "country": "Netherlands",
+        "bucket": "half_complete",
+        "description_words": 64,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Substantive description and access; at least two additional supported evidence dimensions."
+      },
+      "research_venue": {
+        "Venue_ID": "RESEARCH-GC1-NETHERLANDS-11",
+        "Name": "Noord Aa - Homo Ontmoetingplaats (HOP)",
+        "City": "Zoetermeer",
+        "Country": "Netherlands",
+        "Category": "Cruising Area",
+        "Status": "Research",
+        "Address": "",
+        "Postcode": "",
+        "Nearest_Station": "",
+        "Latitude": "",
+        "Longitude": "",
+        "Google_Maps_URL": "",
+        "Apple_Maps_URL": "",
+        "Native_Map_Query": "Noord Aa - Homo Ontmoetingplaats (HOP), Zoetermeer, Netherlands",
+        "Website_URL": "",
+        "Instagram_URL": "",
+        "Facebook_URL": "",
+        "Other_URL": "",
+        "Source_URLs": "https://www.gays-cruising.com/en/netherlands | https://www.naaktstrandje.nl/v2/naaktstrand/noordaa/gastenboek/de | https://www.naaktstrandje.nl/v2/naaktstrand/noordaa/algemeen/nl | https://cdn.groenlinkspvda.nl/wp-content/uploads/2026/01/436/Een-nieuwe-start-voor-Zoetermeer-verkiezingsprogramma-GRV26-definitief.pdf",
+        "Share_URL": "",
+        "Image_URL": "",
+        "Description": "Noord Aa has a separately signed official gay male meeting section adjoining naturist recreation near Zoetermeer. Independent 2026 visitor guestbook posts describe recent firsthand trips to the HOP section (including 12 July and 31 July 2026); those observations support active presence of visitors, not verified public sex. A 2026 local election programme proposes preserving its privacy. The adjacent beach serves families and is distinct.",
+        "Vibe_Tags": "",
+        "Last_Updated": "",
+        "Opening_Days": "",
+        "Opening_Open_Time": "",
+        "Opening_Close_Time": "",
+        "Opening_Notes": "Public recreation/lakeside area with signed gay/HOP and naturist section. Check on-site zoning; signage does not automatically authorise visible public sex and other park users must be respected.",
+        "Event_Date": "",
+        "Event_Time": "",
+        "Feature_Darkroom": null,
+        "Feature_Dresscode": null,
+        "Feature_Men_Only": null,
+        "Feature_Dancefloor": null,
+        "Feature_Smoking_Area": null,
+        "Feature_Cocktails": null,
+        "Feature_Cruise_Focused": null,
+        "Feature_Sauna": null,
+        "Feature_Playroom": null,
+        "Public_Rating": "",
+        "Rating_General": null,
+        "Rating_Darkroom": null,
+        "Rating_Age_Range": null,
+        "Rating_Cost": null,
+        "Rating_Size": null,
+        "Rating_Location": null,
+        "Rating_Busyness": null,
+        "Views": 0,
+        "Emoji_Override": "",
+        "Created_At": "",
+        "Flag_Reason": "Separate family beach and signed HOP zone.; HOP area includes naturist use but not blanket sex permission.; 2026 algae warning posted for swimming; verify current water advisories.",
+        "_Research": {
+          "queue_index": 620,
+          "original_candidate_id": "GC1-NETHERLANDS-11",
+          "temporary_research_venue_id": true,
+          "assigned_worker": "C",
+          "original_batch_file": "research/cruising/part5/C/batch_0617_0621.json",
+          "original_source_count": 1,
+          "original_source_ids": [
+            "1"
+          ],
+          "all_source_urls": [
+            "https://www.gays-cruising.com/en/netherlands",
+            "https://www.naaktstrandje.nl/v2/naaktstrand/noordaa/gastenboek/de",
+            "https://www.naaktstrandje.nl/v2/naaktstrand/noordaa/algemeen/nl",
+            "https://cdn.groenlinkspvda.nl/wp-content/uploads/2026/01/436/Een-nieuwe-start-voor-Zoetermeer-verkiezingsprogramma-GRV26-definitief.pdf"
+          ],
+          "research_last_saved_date": null,
+          "source_check_field": "source_checks",
+          "source_checks": [
+            {
+              "source_id": "1",
+              "website": "Gays-Cruising.com",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://www.gays-cruising.com/en/netherlands"
+              ],
+              "date_checked": "2026-11-06",
+              "notes": "Original archive carries matching site; no presumption of recent activity."
+            },
+            {
+              "source_id": "2",
+              "website": "gay-szene.net",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+            },
+            {
+              "source_id": "3",
+              "website": "Planet Randy",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+            },
+            {
+              "source_id": "4",
+              "website": "The Gay Passport",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+            },
+            {
+              "source_id": "5",
+              "website": "Splashd",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+            },
+            {
+              "source_id": "6",
+              "website": "Popcorn.dating",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+            },
+            {
+              "source_id": "7",
+              "website": "Squirt.org",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+            },
+            {
+              "source_id": "8",
+              "website": "CruisingGays",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+            }
+          ],
+          "original_descriptions": {
+            "description_paraphrase": "Noord Aa has a separately signed official gay male meeting section adjoining naturist recreation near Zoetermeer. Independent 2026 visitor guestbook posts describe recent firsthand trips to the HOP section (including 12 July and 31 July 2026); those observations support active presence of visitors, not verified public sex. A 2026 local election programme proposes preserving its privacy. The adjacent beach serves families and is distinct."
+          },
+          "directions_access_notes": {
+            "access_information": "Public recreation/lakeside area with signed gay/HOP and naturist section. Check on-site zoning; signage does not automatically authorise visible public sex and other park users must be respected."
+          },
+          "time_information": {},
+          "crowd_age_information": {},
+          "safety_information": {
+            "review_flags": [
+              "Separate family beach and signed HOP zone.",
+              "HOP area includes naturist use but not blanket sex permission.",
+              "2026 algae warning posted for swimming; verify current water advisories."
+            ]
+          },
+          "dated_comments_and_activity": {
+            "activity_evidence": {
+              "recent_cutoff": "2025-11-06",
+              "dated_recent_visitor_signals": [
+                {
+                  "date": "2026-07-12",
+                  "type": "first_person_visited_HOP_section",
+                  "strength": "recent visitor presence confirmed by self-report, no proved sexual act"
+                },
+                {
+                  "date": "2026-07-31",
+                  "type": "first_person_gay_section_visit",
+                  "strength": "recent visitor observation, no explicit sex proof"
+                }
+              ],
+              "recent_verified_specific_sex_acts": false,
+              "undated_directory_claims": true,
+              "assessment": "2026_first_person_visitors_to_HOP"
+            }
+          },
+          "duplicates_and_aliases": {},
+          "field_coverage": {
+            "description_available": true,
+            "detailed_description_90_plus_words": false,
+            "address_explicit": false,
+            "coordinates_explicit": false,
+            "source_url_available": true,
+            "access_notes_available": true,
+            "best_visiting_time_explicit": false,
+            "crowd_or_age_info_explicit": false,
+            "safety_info_explicit": false,
+            "dated_evidence_recorded": true,
+            "source_check_statuses_recorded": true,
+            "eight_distinct_source_check_rows": true
+          },
+          "not_yet_checked_for_import": true,
+          "publication_approved": false,
+          "original_research_record": {
+            "index": 620,
+            "id": "GC1-NETHERLANDS-11",
+            "name": "Noord Aa - Homo Ontmoetingplaats (HOP)",
+            "city": "Zoetermeer",
+            "country": "Netherlands",
+            "original_source_refs": [
+              {
+                "s": "1",
+                "f": "research/cruising/scrape_1.json",
+                "i": 574,
+                "u": "https://www.gays-cruising.com/en/netherlands"
+              }
+            ],
+            "original_source_count": 1,
+            "description_paraphrase": "Noord Aa has a separately signed official gay male meeting section adjoining naturist recreation near Zoetermeer. Independent 2026 visitor guestbook posts describe recent firsthand trips to the HOP section (including 12 July and 31 July 2026); those observations support active presence of visitors, not verified public sex. A 2026 local election programme proposes preserving its privacy. The adjacent beach serves families and is distinct.",
+            "identity_status": "specifically_designated_HOP_and_recent_guest_visit",
+            "source_checks": [
+              {
+                "source_id": "1",
+                "website": "Gays-Cruising.com",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://www.gays-cruising.com/en/netherlands"
+                ],
+                "date_checked": "2026-11-06",
+                "notes": "Original archive carries matching site; no presumption of recent activity."
+              },
+              {
+                "source_id": "2",
+                "website": "gay-szene.net",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+              },
+              {
+                "source_id": "3",
+                "website": "Planet Randy",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+              },
+              {
+                "source_id": "4",
+                "website": "The Gay Passport",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+              },
+              {
+                "source_id": "5",
+                "website": "Splashd",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+              },
+              {
+                "source_id": "6",
+                "website": "Popcorn.dating",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+              },
+              {
+                "source_id": "7",
+                "website": "Squirt.org",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+              },
+              {
+                "source_id": "8",
+                "website": "CruisingGays",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No same-place match in archived cross-source alignment or targeted site-index query; source coverage partial."
+              }
+            ],
+            "supplemental_evidence": [
+              {
+                "date": "2026-07-12",
+                "url": "https://www.naaktstrandje.nl/v2/naaktstrand/noordaa/gastenboek/de",
+                "note": "2026 visitor writes about personally visiting separate HOP area on 11 July and observing men socializing there."
+              },
+              {
+                "date": "2026-07-31",
+                "url": "https://www.naaktstrandje.nl/v2/naaktstrand/noordaa/gastenboek/de",
+                "note": "Another visitor describes the gay section, still in active use in July."
+              },
+              {
+                "date": "2026",
+                "url": "https://www.naaktstrandje.nl/v2/naaktstrand/noordaa/algemeen/nl",
+                "note": "Independent site describes one officially marked men-only gay meeting/naturist section distinct from other park recreation."
+              },
+              {
+                "date": "2026-01",
+                "url": "https://cdn.groenlinkspvda.nl/wp-content/uploads/2026/01/436/Een-nieuwe-start-voor-Zoetermeer-verkiezingsprogramma-GRV26-definitief.pdf",
+                "note": "Political party programme specifically describes designated HOP's need for privacy/security; not formal legal authorisation."
+              }
+            ],
+            "activity_evidence": {
+              "recent_cutoff": "2025-11-06",
+              "dated_recent_visitor_signals": [
+                {
+                  "date": "2026-07-12",
+                  "type": "first_person_visited_HOP_section",
+                  "strength": "recent visitor presence confirmed by self-report, no proved sexual act"
+                },
+                {
+                  "date": "2026-07-31",
+                  "type": "first_person_gay_section_visit",
+                  "strength": "recent visitor observation, no explicit sex proof"
+                }
+              ],
+              "recent_verified_specific_sex_acts": false,
+              "undated_directory_claims": true,
+              "assessment": "2026_first_person_visitors_to_HOP"
+            },
+            "access_information": "Public recreation/lakeside area with signed gay/HOP and naturist section. Check on-site zoning; signage does not automatically authorise visible public sex and other park users must be respected.",
+            "review_flags": [
+              "Separate family beach and signed HOP zone.",
+              "HOP area includes naturist use but not blanket sex permission.",
+              "2026 algae warning posted for swimming; verify current water advisories."
+            ],
+            "disposition": "retain_unfiltered_research",
+            "research_checked_berlin": "2026-11-06"
+          }
+        }
+      }
+    },
+    {
+      "triage": {
+        "index": 627,
+        "candidate_id": "GS2-DE-BERLIN-003",
+        "name": "Bahnhofsklappe Südkreuz",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "half_complete",
+        "description_words": 67,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 2,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Substantive description and access; at least two additional supported evidence dimensions."
+      },
+      "research_venue": {
+        "Venue_ID": "RESEARCH-GS2-DE-BERLIN-003",
+        "Name": "Bahnhofsklappe Südkreuz",
+        "City": "Berlin",
+        "Country": "Germany",
+        "Category": "Cruising Area",
+        "Status": "Research",
+        "Address": "",
+        "Postcode": "",
+        "Nearest_Station": "",
+        "Latitude": "",
+        "Longitude": "",
+        "Google_Maps_URL": "",
+        "Apple_Maps_URL": "",
+        "Native_Map_Query": "Bahnhofsklappe Südkreuz, Berlin, Germany",
+        "Website_URL": "",
+        "Instagram_URL": "",
+        "Facebook_URL": "",
+        "Other_URL": "",
+        "Source_URLs": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html | https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/ | https://gay-szene.net/bahnhofsklappe-suedkreuz-in-berlin/12394/eintrag.html | https://www.bahnhof.de/berlin-suedkreuz/einkaufen-und-essen/rail-fresh-wc | https://www.bahnhof.de/berlin-suedkreuz/einkaufen-und-essen/burger-king",
+        "Share_URL": "",
+        "Image_URL": "",
+        "Description": "Südkreuz station has two separate Deutsche Bahn rail & fresh WC sites, and an active gay-szene.net forum specifically discusses cruising in one of the station toilets. Multiple first-person posts from January–February 2026 report visits, activity and renovation/reopening, followed by an October 2026 question about which side is meant. This is substantive recent activity evidence, but later 2026 operating specifics and identification of which WC are not settled.",
+        "Vibe_Tags": "",
+        "Last_Updated": "",
+        "Opening_Days": "",
+        "Opening_Open_Time": "",
+        "Opening_Close_Time": "",
+        "Opening_Notes": "Managed, paid, 24-hour station public toilets per DB, subject to changing facilities/security and rail operator rules. Not official sex venues; other users need toilet access.",
+        "Event_Date": "",
+        "Event_Time": "",
+        "Feature_Darkroom": null,
+        "Feature_Dresscode": null,
+        "Feature_Men_Only": null,
+        "Feature_Dancefloor": null,
+        "Feature_Smoking_Area": null,
+        "Feature_Cocktails": null,
+        "Feature_Cruise_Focused": null,
+        "Feature_Sauna": null,
+        "Feature_Playroom": null,
+        "Public_Rating": "",
+        "Rating_General": null,
+        "Rating_Darkroom": null,
+        "Rating_Age_Range": null,
+        "Rating_Cost": null,
+        "Rating_Size": null,
+        "Rating_Location": null,
+        "Rating_Busyness": null,
+        "Views": 0,
+        "Emoji_Override": "",
+        "Created_At": "",
+        "Flag_Reason": "",
+        "_Research": {
+          "queue_index": 627,
+          "original_candidate_id": "GS2-DE-BERLIN-003",
+          "temporary_research_venue_id": true,
+          "assigned_worker": "C",
+          "original_batch_file": "research/cruising/part5/C/batch_0627_0631.json",
+          "original_source_count": 2,
+          "original_source_ids": [
+            "2",
+            "3"
+          ],
+          "all_source_urls": [
+            "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
+            "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/",
+            "https://gay-szene.net/bahnhofsklappe-suedkreuz-in-berlin/12394/eintrag.html",
+            "https://www.bahnhof.de/berlin-suedkreuz/einkaufen-und-essen/rail-fresh-wc",
+            "https://www.bahnhof.de/berlin-suedkreuz/einkaufen-und-essen/burger-king"
+          ],
+          "research_last_saved_date": null,
+          "source_check_field": "source_checks",
+          "source_checks": [
+            {
+              "source_id": "1",
+              "website": "Gays-Cruising.com",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "2",
+              "website": "gay-szene.net",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html"
+              ],
+              "inspection": "Matching named directory entry; classify published comments by dates, not just index.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "3",
+              "website": "Planet Randy",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/"
+              ],
+              "inspection": "Matching named directory entry; classify published comments by dates, not just index.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "4",
+              "website": "The Gay Passport",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "5",
+              "website": "Splashd",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "6",
+              "website": "Popcorn.dating",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "7",
+              "website": "Squirt.org",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "8",
+              "website": "CruisingGays",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            }
+          ],
+          "original_descriptions": {
+            "description_rewritten": "Südkreuz station has two separate Deutsche Bahn rail & fresh WC sites, and an active gay-szene.net forum specifically discusses cruising in one of the station toilets. Multiple first-person posts from January–February 2026 report visits, activity and renovation/reopening, followed by an October 2026 question about which side is meant. This is substantive recent activity evidence, but later 2026 operating specifics and identification of which WC are not settled."
+          },
+          "directions_access_notes": {
+            "access_information": "Managed, paid, 24-hour station public toilets per DB, subject to changing facilities/security and rail operator rules. Not official sex venues; other users need toilet access."
+          },
+          "time_information": {},
+          "crowd_age_information": {},
+          "safety_information": {},
+          "dated_comments_and_activity": {
+            "activity_evidence": {
+              "recent_cutoff": "2025-11-06",
+              "dated_recent_reports_or_questions": [
+                {
+                  "date": "2026-02-23",
+                  "kind": "first_person_cruising_visitor_report",
+                  "supports": "visitor presence and alleged encounters; self-report"
+                },
+                {
+                  "date": "2026-02-20",
+                  "kind": "source_visitor_general_activity_report",
+                  "supports": "current forum users report renewed activity"
+                },
+                {
+                  "date": "2026-01-03",
+                  "kind": "first_person_visitor_report",
+                  "supports": "cruising after renovation"
+                },
+                {
+                  "date": "2026-10-23",
+                  "kind": "site_identification_question",
+                  "supports": "contemporary interest, not visit proof"
+                }
+              ],
+              "older_or_historic_posts": [],
+              "verified_recent_specific_activity": true,
+              "undated_directory_claim": true
+            }
+          },
+          "duplicates_and_aliases": {
+            "possible_aliases_and_flags": [
+              "Deutsche Bahn lists two toilet facilities on opposite sides; exact reported 'Klappe' not always identifiable.",
+              "Recent renovation/closures and onsite security reported.",
+              "No permission for sexual activity inferred; public transport facility."
+            ]
+          },
+          "field_coverage": {
+            "description_available": true,
+            "detailed_description_90_plus_words": false,
+            "address_explicit": false,
+            "coordinates_explicit": false,
+            "source_url_available": true,
+            "access_notes_available": true,
+            "best_visiting_time_explicit": false,
+            "crowd_or_age_info_explicit": false,
+            "safety_info_explicit": false,
+            "dated_evidence_recorded": true,
+            "source_check_statuses_recorded": true,
+            "eight_distinct_source_check_rows": true
+          },
+          "not_yet_checked_for_import": true,
+          "publication_approved": false,
+          "original_research_record": {
+            "index": 627,
+            "id": "GS2-DE-BERLIN-003",
+            "name": "Bahnhofsklappe Südkreuz",
+            "city": "Berlin",
+            "country": "Germany",
+            "original_source_count": 2,
+            "original_source_refs": [
+              {
+                "s": "2",
+                "f": "research/cruising/scrape_2.json",
+                "i": 3,
+                "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html"
+              },
+              {
+                "s": "3",
+                "f": "research/cruising/scrape_3.json",
+                "i": 50,
+                "u": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/"
+              }
+            ],
+            "source_checks": [
+              {
+                "source_id": "1",
+                "website": "Gays-Cruising.com",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "2",
+                "website": "gay-szene.net",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html"
+                ],
+                "inspection": "Matching named directory entry; classify published comments by dates, not just index.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "3",
+                "website": "Planet Randy",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/"
+                ],
+                "inspection": "Matching named directory entry; classify published comments by dates, not just index.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "4",
+                "website": "The Gay Passport",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "5",
+                "website": "Splashd",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "6",
+                "website": "Popcorn.dating",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "7",
+                "website": "Squirt.org",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "8",
+                "website": "CruisingGays",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              }
+            ],
+            "description_rewritten": "Südkreuz station has two separate Deutsche Bahn rail & fresh WC sites, and an active gay-szene.net forum specifically discusses cruising in one of the station toilets. Multiple first-person posts from January–February 2026 report visits, activity and renovation/reopening, followed by an October 2026 question about which side is meant. This is substantive recent activity evidence, but later 2026 operating specifics and identification of which WC are not settled.",
+            "identity_assessment": "real_transport_WCs_2026_first_person_activity_multiple_subsites",
+            "additional_evidence": [
+              {
+                "date": "2026-10-23",
+                "url": "https://gay-szene.net/bahnhofsklappe-suedkreuz-in-berlin/12394/eintrag.html",
+                "note": "Forum asks which side's WC is correct; unresolved site identity."
+              },
+              {
+                "date": "2026-02-23",
+                "url": "https://gay-szene.net/bahnhofsklappe-suedkreuz-in-berlin/12394/eintrag.html",
+                "note": "First-person daytime visit reports mixed-age visitors and social/sexual use."
+              },
+              {
+                "date": "2026-02-04",
+                "url": "https://gay-szene.net/bahnhofsklappe-suedkreuz-in-berlin/12394/eintrag.html",
+                "note": "User reports sudden closure; contradicted by later reopening signals."
+              },
+              {
+                "date": "2026-01-03",
+                "url": "https://gay-szene.net/bahnhofsklappe-suedkreuz-in-berlin/12394/eintrag.html",
+                "note": "First-person report says facility was renovated and activity still took place."
+              },
+              {
+                "date": "undated",
+                "url": "https://www.bahnhof.de/berlin-suedkreuz/einkaufen-und-essen/rail-fresh-wc",
+                "note": "Deutsche Bahn officially lists East and West hall toilets and 24/7 service, no cruising endorsement."
+              },
+              {
+                "date": "undated",
+                "url": "https://www.bahnhof.de/berlin-suedkreuz/einkaufen-und-essen/burger-king",
+                "note": "DB business listing confirms Burger King on Westhalle/Hildegard-Knef-Platz, while page directions differ; identify WC carefully."
+              }
+            ],
+            "activity_evidence": {
+              "recent_cutoff": "2025-11-06",
+              "dated_recent_reports_or_questions": [
+                {
+                  "date": "2026-02-23",
+                  "kind": "first_person_cruising_visitor_report",
+                  "supports": "visitor presence and alleged encounters; self-report"
+                },
+                {
+                  "date": "2026-02-20",
+                  "kind": "source_visitor_general_activity_report",
+                  "supports": "current forum users report renewed activity"
+                },
+                {
+                  "date": "2026-01-03",
+                  "kind": "first_person_visitor_report",
+                  "supports": "cruising after renovation"
+                },
+                {
+                  "date": "2026-10-23",
+                  "kind": "site_identification_question",
+                  "supports": "contemporary interest, not visit proof"
+                }
+              ],
+              "older_or_historic_posts": [],
+              "verified_recent_specific_activity": true,
+              "undated_directory_claim": true
+            },
+            "access_information": "Managed, paid, 24-hour station public toilets per DB, subject to changing facilities/security and rail operator rules. Not official sex venues; other users need toilet access.",
+            "possible_aliases_and_flags": [
+              "Deutsche Bahn lists two toilet facilities on opposite sides; exact reported 'Klappe' not always identifiable.",
+              "Recent renovation/closures and onsite security reported.",
+              "No permission for sexual activity inferred; public transport facility."
+            ],
+            "retain_candidate": true,
+            "publication_approved": false,
+            "research_checked_berlin": "2026-11-06"
+          }
+        }
+      }
+    },
+    {
+      "triage": {
+        "index": 631,
+        "candidate_id": "GS2-DE-BERLIN-007",
+        "name": "Fennpfuhl Park",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "half_complete",
+        "description_words": 60,
+        "dimensions": {
+          "access": true,
+          "when": true,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 2,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Substantive description and access; at least two additional supported evidence dimensions."
+      },
+      "research_venue": {
+        "Venue_ID": "RESEARCH-GS2-DE-BERLIN-007",
+        "Name": "Fennpfuhl Park",
+        "City": "Berlin",
+        "Country": "Germany",
+        "Category": "Cruising Area",
+        "Status": "Research",
+        "Address": "",
+        "Postcode": "",
+        "Nearest_Station": "",
+        "Latitude": "",
+        "Longitude": "",
+        "Google_Maps_URL": "",
+        "Apple_Maps_URL": "",
+        "Native_Map_Query": "Fennpfuhl Park, Berlin, Germany",
+        "Website_URL": "",
+        "Instagram_URL": "",
+        "Facebook_URL": "",
+        "Other_URL": "",
+        "Source_URLs": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html | https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/ | https://planet-randy.com/blog/eintrag/fennpfuhlpark/ | https://gay-szene.net/fennpfuhl-park-in-berlin/12528/eintrag.html",
+        "Share_URL": "",
+        "Image_URL": "",
+        "Description": "Fennpfuhl Park in Lichtenberg has a wind sculpture and lake near which gay-szene.net and Planet Randy claim evening cruising. The most recent source-specific post dated 5 March 2026 merely asks whether the area is still active, not a report. A November 2024 first-person Planet Randy review complained of harassment and difficulty finding partners; other dated 2024 visitors found no activity.",
+        "Vibe_Tags": "",
+        "Last_Updated": "",
+        "Opening_Days": "",
+        "Opening_Open_Time": "",
+        "Opening_Close_Time": "",
+        "Opening_Notes": "Ordinary public park trails with mixed family/pedestrian use; no official cruising authorisation or confirmed safe secluded area.",
+        "Event_Date": "",
+        "Event_Time": "",
+        "Feature_Darkroom": null,
+        "Feature_Dresscode": null,
+        "Feature_Men_Only": null,
+        "Feature_Dancefloor": null,
+        "Feature_Smoking_Area": null,
+        "Feature_Cocktails": null,
+        "Feature_Cruise_Focused": null,
+        "Feature_Sauna": null,
+        "Feature_Playroom": null,
+        "Public_Rating": "",
+        "Rating_General": null,
+        "Rating_Darkroom": null,
+        "Rating_Age_Range": null,
+        "Rating_Cost": null,
+        "Rating_Size": null,
+        "Rating_Location": null,
+        "Rating_Busyness": null,
+        "Views": 0,
+        "Emoji_Override": "",
+        "Created_At": "",
+        "Flag_Reason": "",
+        "_Research": {
+          "queue_index": 631,
+          "original_candidate_id": "GS2-DE-BERLIN-007",
+          "temporary_research_venue_id": true,
+          "assigned_worker": "C",
+          "original_batch_file": "research/cruising/part5/C/batch_0627_0631.json",
+          "original_source_count": 2,
+          "original_source_ids": [
+            "2",
+            "3"
+          ],
+          "all_source_urls": [
+            "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
+            "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/",
+            "https://planet-randy.com/blog/eintrag/fennpfuhlpark/",
+            "https://gay-szene.net/fennpfuhl-park-in-berlin/12528/eintrag.html"
+          ],
+          "research_last_saved_date": null,
+          "source_check_field": "source_checks",
+          "source_checks": [
+            {
+              "source_id": "1",
+              "website": "Gays-Cruising.com",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "2",
+              "website": "gay-szene.net",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html"
+              ],
+              "inspection": "Matching named directory entry; classify published comments by dates, not just index.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "3",
+              "website": "Planet Randy",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://planet-randy.com/blog/eintrag/fennpfuhlpark/"
+              ],
+              "inspection": "Matching named directory entry; classify published comments by dates, not just index.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "4",
+              "website": "The Gay Passport",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "5",
+              "website": "Splashd",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "6",
+              "website": "Popcorn.dating",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "7",
+              "website": "Squirt.org",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            },
+            {
+              "source_id": "8",
+              "website": "CruisingGays",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+              "date_checked": "2026-11-06"
+            }
+          ],
+          "original_descriptions": {
+            "description_rewritten": "Fennpfuhl Park in Lichtenberg has a wind sculpture and lake near which gay-szene.net and Planet Randy claim evening cruising. The most recent source-specific post dated 5 March 2026 merely asks whether the area is still active, not a report. A November 2024 first-person Planet Randy review complained of harassment and difficulty finding partners; other dated 2024 visitors found no activity."
+          },
+          "directions_access_notes": {
+            "access_information": "Ordinary public park trails with mixed family/pedestrian use; no official cruising authorisation or confirmed safe secluded area."
+          },
+          "time_information": {},
+          "crowd_age_information": {},
+          "safety_information": {},
+          "dated_comments_and_activity": {
+            "activity_evidence": {
+              "recent_cutoff": "2025-11-06",
+              "dated_recent_reports_or_questions": [
+                {
+                  "date": "2026-03-05",
+                  "kind": "activity_question_only",
+                  "supports": "question about whether active; no corroboration"
+                }
+              ],
+              "older_or_historic_posts": [
+                {
+                  "date": "2024-11-27",
+                  "kind": "first_person_harassment_and_low_activity_report"
+                },
+                {
+                  "date": "2024-05-05",
+                  "kind": "first_person_park_visit_no_cruising"
+                }
+              ],
+              "verified_recent_specific_activity": false,
+              "undated_directory_claim": true
+            }
+          },
+          "duplicates_and_aliases": {
+            "possible_aliases_and_flags": [
+              "Recent March 2026 forum post is a question only.",
+              "Historic harassment reports; current safety unverified."
+            ]
+          },
+          "field_coverage": {
+            "description_available": true,
+            "detailed_description_90_plus_words": false,
+            "address_explicit": false,
+            "coordinates_explicit": false,
+            "source_url_available": true,
+            "access_notes_available": true,
+            "best_visiting_time_explicit": false,
+            "crowd_or_age_info_explicit": false,
+            "safety_info_explicit": false,
+            "dated_evidence_recorded": true,
+            "source_check_statuses_recorded": true,
+            "eight_distinct_source_check_rows": true
+          },
+          "not_yet_checked_for_import": true,
+          "publication_approved": false,
+          "original_research_record": {
+            "index": 631,
+            "id": "GS2-DE-BERLIN-007",
+            "name": "Fennpfuhl Park",
+            "city": "Berlin",
+            "country": "Germany",
+            "original_source_count": 2,
+            "original_source_refs": [
+              {
+                "s": "2",
+                "f": "research/cruising/scrape_2.json",
+                "i": 7,
+                "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html"
+              },
+              {
+                "s": "3",
+                "f": "research/cruising/scrape_3.json",
+                "i": 44,
+                "u": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/"
+              }
+            ],
+            "source_checks": [
+              {
+                "source_id": "1",
+                "website": "Gays-Cruising.com",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "2",
+                "website": "gay-szene.net",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html"
+                ],
+                "inspection": "Matching named directory entry; classify published comments by dates, not just index.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "3",
+                "website": "Planet Randy",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://planet-randy.com/blog/eintrag/fennpfuhlpark/"
+                ],
+                "inspection": "Matching named directory entry; classify published comments by dates, not just index.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "4",
+                "website": "The Gay Passport",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "5",
+                "website": "Splashd",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "6",
+                "website": "Popcorn.dating",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "7",
+                "website": "Squirt.org",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              },
+              {
+                "source_id": "8",
+                "website": "CruisingGays",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No same-location match in archived alignment / targeted indexed site searches; not comprehensive absence proof.",
+                "date_checked": "2026-11-06"
+              }
+            ],
+            "description_rewritten": "Fennpfuhl Park in Lichtenberg has a wind sculpture and lake near which gay-szene.net and Planet Randy claim evening cruising. The most recent source-specific post dated 5 March 2026 merely asks whether the area is still active, not a report. A November 2024 first-person Planet Randy review complained of harassment and difficulty finding partners; other dated 2024 visitors found no activity.",
+            "identity_assessment": "park_and_wind_sculpture_confirmed_two_directories",
+            "additional_evidence": [
+              {
+                "date": "2026-03-05",
+                "url": "https://gay-szene.net/fennpfuhl-park-in-berlin/12528/eintrag.html",
+                "note": "Forum user explicitly asks whether any cruising remains, not a confirming visit."
+              },
+              {
+                "date": "2024-11-27",
+                "url": "https://planet-randy.com/blog/eintrag/fennpfuhlpark/",
+                "note": "First-person review alleges harassment and difficulty finding any encounters; older than cutoff."
+              },
+              {
+                "date": "2024-05-05",
+                "url": "https://planet-randy.com/blog/eintrag/fennpfuhlpark/",
+                "note": "Visitor reported seeing people but no cruising activity."
+              },
+              {
+                "date": "undated",
+                "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
+                "note": "Original park index mentions wind sculpture."
+              }
+            ],
+            "activity_evidence": {
+              "recent_cutoff": "2025-11-06",
+              "dated_recent_reports_or_questions": [
+                {
+                  "date": "2026-03-05",
+                  "kind": "activity_question_only",
+                  "supports": "question about whether active; no corroboration"
+                }
+              ],
+              "older_or_historic_posts": [
+                {
+                  "date": "2024-11-27",
+                  "kind": "first_person_harassment_and_low_activity_report"
+                },
+                {
+                  "date": "2024-05-05",
+                  "kind": "first_person_park_visit_no_cruising"
+                }
+              ],
+              "verified_recent_specific_activity": false,
+              "undated_directory_claim": true
+            },
+            "access_information": "Ordinary public park trails with mixed family/pedestrian use; no official cruising authorisation or confirmed safe secluded area.",
+            "possible_aliases_and_flags": [
+              "Recent March 2026 forum post is a question only.",
+              "Historic harassment reports; current safety unverified."
+            ],
+            "retain_candidate": true,
+            "publication_approved": false,
+            "research_checked_berlin": "2026-11-06"
+          }
+        }
+      }
+    }
+  ]
+}

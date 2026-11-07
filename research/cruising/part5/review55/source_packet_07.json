@@ -1,0 +1,1722 @@
+{
+  "_meta": {
+    "batch_number": 7,
+    "of": 11,
+    "type": "SOURCE_PACKET_TO_RESEARCH_NOT_A_COMPLETE_LISTING",
+    "note": "Original research, original source URLs, original queue index and all standard venue fields are retained. Read the URLs and validate first."
+  },
+  "records": [
+    {
+      "triage": {
+        "index": 664,
+        "candidate_id": "GS2-DE-BERLIN-043",
+        "name": "Sickingenbrücke",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "half_complete",
+        "description_words": 59,
+        "dimensions": {
+          "access": true,
+          "when": true,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 2,
+        "has_recent_dated_report": false,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Substantive description and access; at least two additional supported evidence dimensions."
+      },
+      "research_venue": {
+        "Venue_ID": "RESEARCH-GS2-DE-BERLIN-043",
+        "Name": "Sickingenbrücke",
+        "City": "Berlin",
+        "Country": "Germany",
+        "Category": "Cruising Area",
+        "Status": "Research",
+        "Address": "",
+        "Postcode": "",
+        "Nearest_Station": "",
+        "Latitude": "",
+        "Longitude": "",
+        "Google_Maps_URL": "",
+        "Apple_Maps_URL": "",
+        "Native_Map_Query": "Sickingenbrücke, Berlin, Germany",
+        "Website_URL": "",
+        "Instagram_URL": "",
+        "Facebook_URL": "",
+        "Other_URL": "",
+        "Source_URLs": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html | https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/5/ | https://gay-szene.net/sickingenbruecke-in-berlin/5441/eintrag.html",
+        "Share_URL": "",
+        "Image_URL": "",
+        "Description": "Sickingenbrücke crosses the water in Moabit near Neues Ufer and the industrial area towards Mierendorffplatz. Gay-szene and Planet Randy both carry historical named bridge/underpass cruising references, including a claim about late evenings, without any dated recent report. The original gay-szene detail was unavailable during the current research, so its missing content must not be treated as evidence of inactivity.",
+        "Vibe_Tags": "",
+        "Last_Updated": "2026-11-06T00:00:00Z",
+        "Opening_Days": "",
+        "Opening_Open_Time": "",
+        "Opening_Close_Time": "",
+        "Opening_Notes": "Public urban canal/industrial bridge area, but underbridge and waterside paths may be owned/closed. No authorization to enter fenced industrial land or engage in sex.",
+        "Event_Date": "",
+        "Event_Time": "",
+        "Feature_Darkroom": null,
+        "Feature_Dresscode": null,
+        "Feature_Men_Only": null,
+        "Feature_Dancefloor": null,
+        "Feature_Smoking_Area": null,
+        "Feature_Cocktails": null,
+        "Feature_Cruise_Focused": null,
+        "Feature_Sauna": null,
+        "Feature_Playroom": null,
+        "Public_Rating": "",
+        "Rating_General": null,
+        "Rating_Darkroom": null,
+        "Rating_Age_Range": null,
+        "Rating_Cost": null,
+        "Rating_Size": null,
+        "Rating_Location": null,
+        "Rating_Busyness": null,
+        "Views": 0,
+        "Emoji_Override": "",
+        "Created_At": "",
+        "Flag_Reason": "Detail page unavailable, not no-match.; Distinguish Sickingenbrücke bridge from other bridges along Neues Ufer.",
+        "_Research": {
+          "queue_index": 664,
+          "original_candidate_id": "GS2-DE-BERLIN-043",
+          "temporary_research_venue_id": true,
+          "assigned_worker": "C",
+          "original_batch_file": "research/cruising/part5/C/batch_0662_0666.json",
+          "original_source_count": 2,
+          "original_source_ids": [
+            "2",
+            "3"
+          ],
+          "all_source_urls": [
+            "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
+            "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/5/",
+            "https://gay-szene.net/sickingenbruecke-in-berlin/5441/eintrag.html"
+          ],
+          "research_last_saved_date": "2026-11-06",
+          "source_check_field": "source_checks",
+          "source_checks": [
+            {
+              "source_id": "1",
+              "website": "Gays-Cruising.com",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+              "date_checked_berlin": "2026-11-06"
+            },
+            {
+              "source_id": "2",
+              "website": "gay-szene.net",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
+                "https://gay-szene.net/sickingenbruecke-in-berlin/5441/eintrag.html"
+              ],
+              "detail_access": "detail_unavailable_city_index_matched",
+              "date_checked_berlin": "2026-11-06"
+            },
+            {
+              "source_id": "3",
+              "website": "Planet Randy",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/5/"
+              ],
+              "detail_access": "source_index_or_detail_available",
+              "date_checked_berlin": "2026-11-06"
+            },
+            {
+              "source_id": "4",
+              "website": "The Gay Passport",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+              "date_checked_berlin": "2026-11-06"
+            },
+            {
+              "source_id": "5",
+              "website": "Splashd",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+              "date_checked_berlin": "2026-11-06"
+            },
+            {
+              "source_id": "6",
+              "website": "Popcorn.dating",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+              "date_checked_berlin": "2026-11-06"
+            },
+            {
+              "source_id": "7",
+              "website": "Squirt.org",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+              "date_checked_berlin": "2026-11-06"
+            },
+            {
+              "source_id": "8",
+              "website": "CruisingGays",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+              "date_checked_berlin": "2026-11-06"
+            }
+          ],
+          "original_descriptions": {
+            "description_rewritten": "Sickingenbrücke crosses the water in Moabit near Neues Ufer and the industrial area towards Mierendorffplatz. Gay-szene and Planet Randy both carry historical named bridge/underpass cruising references, including a claim about late evenings, without any dated recent report. The original gay-szene detail was unavailable during the current research, so its missing content must not be treated as evidence of inactivity."
+          },
+          "directions_access_notes": {
+            "access_information": "Public urban canal/industrial bridge area, but underbridge and waterside paths may be owned/closed. No authorization to enter fenced industrial land or engage in sex."
+          },
+          "time_information": {},
+          "crowd_age_information": {},
+          "safety_information": {},
+          "dated_comments_and_activity": {
+            "activity_evidence": {
+              "recent_cutoff": "2025-11-06",
+              "recent_first_person_signals": [],
+              "older_reports": [],
+              "current_cruising_confirmed_by_independent_authority": false,
+              "undated_directory_reference_not_current_evidence": true
+            }
+          },
+          "duplicates_and_aliases": {},
+          "field_coverage": {
+            "description_available": true,
+            "detailed_description_90_plus_words": false,
+            "address_explicit": false,
+            "coordinates_explicit": false,
+            "source_url_available": true,
+            "access_notes_available": true,
+            "best_visiting_time_explicit": false,
+            "crowd_or_age_info_explicit": false,
+            "safety_info_explicit": false,
+            "dated_evidence_recorded": true,
+            "source_check_statuses_recorded": true,
+            "eight_distinct_source_check_rows": true
+          },
+          "not_yet_checked_for_import": true,
+          "publication_approved": false,
+          "original_research_record": {
+            "index": 664,
+            "id": "GS2-DE-BERLIN-043",
+            "name": "Sickingenbrücke",
+            "city": "Berlin",
+            "country": "Germany",
+            "original_source_count": 2,
+            "original_source_refs": [
+              {
+                "s": "2",
+                "f": "research/cruising/scrape_2.json",
+                "i": 43,
+                "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+              },
+              {
+                "s": "3",
+                "f": "research/cruising/scrape_3.json",
+                "i": 36,
+                "u": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/5/"
+              },
+              {
+                "s": "2",
+                "f": "research/cruising/gap_fill_scrape_2.json",
+                "i": 10,
+                "u": "https://gay-szene.net/sickingenbruecke-in-berlin/5441/eintrag.html"
+              }
+            ],
+            "source_checks": [
+              {
+                "source_id": "1",
+                "website": "Gays-Cruising.com",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+                "date_checked_berlin": "2026-11-06"
+              },
+              {
+                "source_id": "2",
+                "website": "gay-szene.net",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
+                  "https://gay-szene.net/sickingenbruecke-in-berlin/5441/eintrag.html"
+                ],
+                "detail_access": "detail_unavailable_city_index_matched",
+                "date_checked_berlin": "2026-11-06"
+              },
+              {
+                "source_id": "3",
+                "website": "Planet Randy",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/5/"
+                ],
+                "detail_access": "source_index_or_detail_available",
+                "date_checked_berlin": "2026-11-06"
+              },
+              {
+                "source_id": "4",
+                "website": "The Gay Passport",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+                "date_checked_berlin": "2026-11-06"
+              },
+              {
+                "source_id": "5",
+                "website": "Splashd",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+                "date_checked_berlin": "2026-11-06"
+              },
+              {
+                "source_id": "6",
+                "website": "Popcorn.dating",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+                "date_checked_berlin": "2026-11-06"
+              },
+              {
+                "source_id": "7",
+                "website": "Squirt.org",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+                "date_checked_berlin": "2026-11-06"
+              },
+              {
+                "source_id": "8",
+                "website": "CruisingGays",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "inspection": "No matched location in eight-source archive and selected indexed site queries; incomplete coverage, not proof of absence.",
+                "date_checked_berlin": "2026-11-06"
+              }
+            ],
+            "description_rewritten": "Sickingenbrücke crosses the water in Moabit near Neues Ufer and the industrial area towards Mierendorffplatz. Gay-szene and Planet Randy both carry historical named bridge/underpass cruising references, including a claim about late evenings, without any dated recent report. The original gay-szene detail was unavailable during the current research, so its missing content must not be treated as evidence of inactivity.",
+            "identity_assessment": "bridge_exists_specific_underbridge_subarea_unverified",
+            "extra_evidence": [
+              {
+                "url": "https://gay-szene.net/sickingenbruecke-in-berlin/5441/eintrag.html",
+                "note": "Original page URL archived, live detail cache miss; city index still carries named entry."
+              },
+              {
+                "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/5/",
+                "note": "Second-source tag index identifies Sickingen Bridge."
+              },
+              {
+                "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
+                "note": "Original city index; undated scene description."
+              }
+            ],
+            "activity_evidence": {
+              "recent_cutoff": "2025-11-06",
+              "recent_first_person_signals": [],
+              "older_reports": [],
+              "current_cruising_confirmed_by_independent_authority": false,
+              "undated_directory_reference_not_current_evidence": true
+            },
+            "access_information": "Public urban canal/industrial bridge area, but underbridge and waterside paths may be owned/closed. No authorization to enter fenced industrial land or engage in sex.",
+            "possible_duplicates_or_safety_flags": [
+              "Detail page unavailable, not no-match.",
+              "Distinguish Sickingenbrücke bridge from other bridges along Neues Ufer."
+            ],
+            "disposition": "retain_research_only",
+            "reviewed_berlin": "2026-11-06"
+          }
+        }
+      }
+    },
+    {
+      "triage": {
+        "index": 670,
+        "candidate_id": "GS2-DE-BERLIN-053",
+        "name": "Theodor-Heuss Platz Klappe",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "half_complete",
+        "description_words": 84,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 2,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Substantive description and access; at least two additional supported evidence dimensions."
+      },
+      "research_venue": {
+        "Venue_ID": "RESEARCH-GS2-DE-BERLIN-053",
+        "Name": "Theodor-Heuss Platz Klappe",
+        "City": "Berlin",
+        "Country": "Germany",
+        "Category": "Cruising Area",
+        "Status": "Research",
+        "Address": "",
+        "Postcode": "",
+        "Nearest_Station": "",
+        "Latitude": "",
+        "Longitude": "",
+        "Google_Maps_URL": "",
+        "Apple_Maps_URL": "",
+        "Native_Map_Query": "Theodor-Heuss Platz Klappe, Berlin, Germany",
+        "Website_URL": "",
+        "Instagram_URL": "",
+        "Facebook_URL": "",
+        "Other_URL": "",
+        "Source_URLs": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html | https://planet-randy.com/blog/en/eintrag/klappe-am-theodor-heuss-platz/ | https://gay-szene.net/theodor-heuss-platz-klappe-in-berlin/11261/eintrag.html",
+        "Share_URL": "",
+        "Image_URL": "",
+        "Description": "An older underground men's public toilet at Theodor-Heuss-Platz in Westend is the subject of two gay directories. May 2026 visitors describe encounters but one dated 17 May firsthand report alleges aggressive homophobic verbal abuse and a door kick while another man was present. July 2026 forum includes both a successful self-report and several separate unsuccessful visitors. This supports mixed recent real-world use and an important harassment warning, not a guarantee of crowds or fixed hours. Older posts refer to periodic closures and strong odours.",
+        "Vibe_Tags": "",
+        "Last_Updated": "2026-11-06T00:00:00Z",
+        "Opening_Days": "",
+        "Opening_Open_Time": "",
+        "Opening_Close_Time": "",
+        "Opening_Notes": "Shared municipal public toilet, not a commercial darkroom; toilet opening can change. No permission to harass other toilet users, behave without consent or rely on older reported hours. Confirm operational status on arrival.",
+        "Event_Date": "",
+        "Event_Time": "",
+        "Feature_Darkroom": null,
+        "Feature_Dresscode": null,
+        "Feature_Men_Only": null,
+        "Feature_Dancefloor": null,
+        "Feature_Smoking_Area": null,
+        "Feature_Cocktails": null,
+        "Feature_Cruise_Focused": null,
+        "Feature_Sauna": null,
+        "Feature_Playroom": null,
+        "Public_Rating": "",
+        "Rating_General": null,
+        "Rating_Darkroom": null,
+        "Rating_Age_Range": null,
+        "Rating_Cost": null,
+        "Rating_Size": null,
+        "Rating_Location": null,
+        "Rating_Busyness": null,
+        "Views": 0,
+        "Emoji_Override": "",
+        "Created_At": "",
+        "Flag_Reason": "",
+        "_Research": {
+          "queue_index": 670,
+          "original_candidate_id": "GS2-DE-BERLIN-053",
+          "temporary_research_venue_id": true,
+          "assigned_worker": "C",
+          "original_batch_file": "research/cruising/part5/C/batch_0667_0671.json",
+          "original_source_count": 2,
+          "original_source_ids": [
+            "2",
+            "3"
+          ],
+          "all_source_urls": [
+            "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
+            "https://planet-randy.com/blog/en/eintrag/klappe-am-theodor-heuss-platz/",
+            "https://gay-szene.net/theodor-heuss-platz-klappe-in-berlin/11261/eintrag.html"
+          ],
+          "research_last_saved_date": "2026-11-06",
+          "source_check_field": "source_checks",
+          "source_checks": [
+            {
+              "source_id": "1",
+              "website": "Gays-Cruising.com",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+            },
+            {
+              "source_id": "2",
+              "website": "gay-szene.net",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+              ],
+              "checked_berlin": "2026-11-06",
+              "note": "Matched original archived index; detail and date claims independently classified."
+            },
+            {
+              "source_id": "3",
+              "website": "Planet Randy",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://planet-randy.com/blog/en/eintrag/klappe-am-theodor-heuss-platz/"
+              ],
+              "checked_berlin": "2026-11-06",
+              "note": "Matched original archived index; detail and date claims independently classified."
+            },
+            {
+              "source_id": "4",
+              "website": "The Gay Passport",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+            },
+            {
+              "source_id": "5",
+              "website": "Splashd",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+            },
+            {
+              "source_id": "6",
+              "website": "Popcorn.dating",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+            },
+            {
+              "source_id": "7",
+              "website": "Squirt.org",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+            },
+            {
+              "source_id": "8",
+              "website": "CruisingGays",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+            }
+          ],
+          "original_descriptions": {
+            "description_rewritten": "An older underground men's public toilet at Theodor-Heuss-Platz in Westend is the subject of two gay directories. May 2026 visitors describe encounters but one dated 17 May firsthand report alleges aggressive homophobic verbal abuse and a door kick while another man was present. July 2026 forum includes both a successful self-report and several separate unsuccessful visitors. This supports mixed recent real-world use and an important harassment warning, not a guarantee of crowds or fixed hours. Older posts refer to periodic closures and strong odours."
+          },
+          "directions_access_notes": {
+            "access_information": "Shared municipal public toilet, not a commercial darkroom; toilet opening can change. No permission to harass other toilet users, behave without consent or rely on older reported hours. Confirm operational status on arrival."
+          },
+          "time_information": {},
+          "crowd_age_information": {},
+          "safety_information": {},
+          "dated_comments_and_activity": {
+            "activity_evidence": {
+              "cutoff_inclusive": "2025-11-06",
+              "recent_reports": [
+                {
+                  "date": "2026-07-21",
+                  "kind": "first_person_negative_visits",
+                  "note": "Two entries say no one was there."
+                },
+                {
+                  "date": "2026-07-14",
+                  "kind": "first_person_negative_visit",
+                  "note": "Another user visited, found no activity."
+                },
+                {
+                  "date": "2026-07-05",
+                  "kind": "self_reported_encounter",
+                  "note": "Reports a successful visit later than 1 AM, unverified."
+                },
+                {
+                  "date": "2026-05-17",
+                  "kind": "first_person_encounter_and_harassment_report",
+                  "note": "Reports a sexual interaction disrupted by aggressive homophobic abuse; uncorroborated firsthand report."
+                }
+              ],
+              "older_posts": [],
+              "undated_directory_mention_does_not_prove_activity": true
+            }
+          },
+          "duplicates_and_aliases": {},
+          "field_coverage": {
+            "description_available": true,
+            "detailed_description_90_plus_words": false,
+            "address_explicit": false,
+            "coordinates_explicit": false,
+            "source_url_available": true,
+            "access_notes_available": true,
+            "best_visiting_time_explicit": false,
+            "crowd_or_age_info_explicit": false,
+            "safety_info_explicit": false,
+            "dated_evidence_recorded": true,
+            "source_check_statuses_recorded": true,
+            "eight_distinct_source_check_rows": true
+          },
+          "not_yet_checked_for_import": true,
+          "publication_approved": false,
+          "original_research_record": {
+            "index": 670,
+            "id": "GS2-DE-BERLIN-053",
+            "name": "Theodor-Heuss Platz Klappe",
+            "city": "Berlin",
+            "country": "Germany",
+            "original_source_refs": [
+              {
+                "s": "2",
+                "f": "research/cruising/scrape_2.json",
+                "i": 53,
+                "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+              },
+              {
+                "s": "3",
+                "f": "research/cruising/scrape_3.json",
+                "i": 43,
+                "u": "https://planet-randy.com/blog/en/eintrag/klappe-am-theodor-heuss-platz/"
+              }
+            ],
+            "original_source_count": 2,
+            "source_checks": [
+              {
+                "source_id": "1",
+                "website": "Gays-Cruising.com",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+              },
+              {
+                "source_id": "2",
+                "website": "gay-szene.net",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+                ],
+                "checked_berlin": "2026-11-06",
+                "note": "Matched original archived index; detail and date claims independently classified."
+              },
+              {
+                "source_id": "3",
+                "website": "Planet Randy",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://planet-randy.com/blog/en/eintrag/klappe-am-theodor-heuss-platz/"
+                ],
+                "checked_berlin": "2026-11-06",
+                "note": "Matched original archived index; detail and date claims independently classified."
+              },
+              {
+                "source_id": "4",
+                "website": "The Gay Passport",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+              },
+              {
+                "source_id": "5",
+                "website": "Splashd",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+              },
+              {
+                "source_id": "6",
+                "website": "Popcorn.dating",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+              },
+              {
+                "source_id": "7",
+                "website": "Squirt.org",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+              },
+              {
+                "source_id": "8",
+                "website": "CruisingGays",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No linked identity in aligned eight-source collected archive plus targeted index checks; incomplete coverage not categorical absence."
+              }
+            ],
+            "description_rewritten": "An older underground men's public toilet at Theodor-Heuss-Platz in Westend is the subject of two gay directories. May 2026 visitors describe encounters but one dated 17 May firsthand report alleges aggressive homophobic verbal abuse and a door kick while another man was present. July 2026 forum includes both a successful self-report and several separate unsuccessful visitors. This supports mixed recent real-world use and an important harassment warning, not a guarantee of crowds or fixed hours. Older posts refer to periodic closures and strong odours.",
+            "source_and_supplemental_evidence": [
+              {
+                "url": "https://gay-szene.net/theodor-heuss-platz-klappe-in-berlin/11261/eintrag.html",
+                "note": "Detailed July and May 2026 visitor reports, including alleged harassment."
+              },
+              {
+                "url": "https://planet-randy.com/blog/en/eintrag/klappe-am-theodor-heuss-platz/",
+                "note": "Second directory listing."
+              }
+            ],
+            "activity_evidence": {
+              "cutoff_inclusive": "2025-11-06",
+              "recent_reports": [
+                {
+                  "date": "2026-07-21",
+                  "kind": "first_person_negative_visits",
+                  "note": "Two entries say no one was there."
+                },
+                {
+                  "date": "2026-07-14",
+                  "kind": "first_person_negative_visit",
+                  "note": "Another user visited, found no activity."
+                },
+                {
+                  "date": "2026-07-05",
+                  "kind": "self_reported_encounter",
+                  "note": "Reports a successful visit later than 1 AM, unverified."
+                },
+                {
+                  "date": "2026-05-17",
+                  "kind": "first_person_encounter_and_harassment_report",
+                  "note": "Reports a sexual interaction disrupted by aggressive homophobic abuse; uncorroborated firsthand report."
+                }
+              ],
+              "older_posts": [],
+              "undated_directory_mention_does_not_prove_activity": true
+            },
+            "access_information": "Shared municipal public toilet, not a commercial darkroom; toilet opening can change. No permission to harass other toilet users, behave without consent or rely on older reported hours. Confirm operational status on arrival.",
+            "duplicates_or_flags": [
+              "Serious homophobic harassment allegation May 2026.",
+              "Frequent mixed access and anecdotal opening-hour changes; no fixed schedule verified."
+            ],
+            "disposition": "keep_all_research_only",
+            "checked_berlin": "2026-11-06"
+          }
+        }
+      }
+    },
+    {
+      "triage": {
+        "index": 673,
+        "candidate_id": "GS2-DE-BERLIN-059",
+        "name": "Volkspark Mariendorf - Südberlin!",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "half_complete",
+        "description_words": 77,
+        "dimensions": {
+          "access": true,
+          "when": true,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 2,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Substantive description and access; at least two additional supported evidence dimensions."
+      },
+      "research_venue": {
+        "Venue_ID": "RESEARCH-GS2-DE-BERLIN-059",
+        "Name": "Volkspark Mariendorf - Südberlin!",
+        "City": "Berlin",
+        "Country": "Germany",
+        "Category": "Cruising Area",
+        "Status": "Research",
+        "Address": "",
+        "Postcode": "",
+        "Nearest_Station": "",
+        "Latitude": "",
+        "Longitude": "",
+        "Google_Maps_URL": "",
+        "Apple_Maps_URL": "",
+        "Native_Map_Query": "Volkspark Mariendorf - Südberlin!, Berlin, Germany",
+        "Website_URL": "",
+        "Instagram_URL": "",
+        "Facebook_URL": "",
+        "Other_URL": "",
+        "Source_URLs": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html | https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/ | https://gay-szene.net/volkspark-mariendorf-suedberlin%2521-in-berlin/11005/eintrag.html",
+        "Share_URL": "",
+        "Image_URL": "",
+        "Description": "Volkspark Mariendorf in southern Berlin contains woodland, rises and a duck pond. A post dated 3 April 2026 describes the author's first-person sightings of two men and a later claimed meeting near Ententeich, but the actual evenings are described retrospectively rather than dated to 3 April. An 11 April 2026 regular park user reported no cruising on the hill. The comments therefore give recent discussion and plausible visitor evidence, not reliable schedules or a fixed meeting point.",
+        "Vibe_Tags": "",
+        "Last_Updated": "2026-11-06T00:00:00Z",
+        "Opening_Days": "",
+        "Opening_Open_Time": "",
+        "Opening_Close_Time": "",
+        "Opening_Notes": "Ordinary urban park with walkers and families; no official cruising authorisation; exact locations vary in recollections.",
+        "Event_Date": "",
+        "Event_Time": "",
+        "Feature_Darkroom": null,
+        "Feature_Dresscode": null,
+        "Feature_Men_Only": null,
+        "Feature_Dancefloor": null,
+        "Feature_Smoking_Area": null,
+        "Feature_Cocktails": null,
+        "Feature_Cruise_Focused": null,
+        "Feature_Sauna": null,
+        "Feature_Playroom": null,
+        "Public_Rating": "",
+        "Rating_General": null,
+        "Rating_Darkroom": null,
+        "Rating_Age_Range": null,
+        "Rating_Cost": null,
+        "Rating_Size": null,
+        "Rating_Location": null,
+        "Rating_Busyness": null,
+        "Views": 0,
+        "Emoji_Override": "",
+        "Created_At": "",
+        "Flag_Reason": "",
+        "_Research": {
+          "queue_index": 673,
+          "original_candidate_id": "GS2-DE-BERLIN-059",
+          "temporary_research_venue_id": true,
+          "assigned_worker": "C",
+          "original_batch_file": "research/cruising/part5/C/batch_0672_0676.json",
+          "original_source_count": 2,
+          "original_source_ids": [
+            "2",
+            "3"
+          ],
+          "all_source_urls": [
+            "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
+            "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/",
+            "https://gay-szene.net/volkspark-mariendorf-suedberlin%2521-in-berlin/11005/eintrag.html"
+          ],
+          "research_last_saved_date": "2026-11-06",
+          "source_check_field": "source_checks",
+          "source_checks": [
+            {
+              "source_id": "1",
+              "website": "Gays-Cruising.com",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+            },
+            {
+              "source_id": "2",
+              "website": "gay-szene.net",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+              ],
+              "checked_berlin": "2026-11-06",
+              "notes": "Name in archived source; not by itself a dated visitor report."
+            },
+            {
+              "source_id": "3",
+              "website": "Planet Randy",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/"
+              ],
+              "checked_berlin": "2026-11-06",
+              "notes": "Name in archived source; not by itself a dated visitor report."
+            },
+            {
+              "source_id": "4",
+              "website": "The Gay Passport",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+            },
+            {
+              "source_id": "5",
+              "website": "Splashd",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+            },
+            {
+              "source_id": "6",
+              "website": "Popcorn.dating",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+            },
+            {
+              "source_id": "7",
+              "website": "Squirt.org",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+            },
+            {
+              "source_id": "8",
+              "website": "CruisingGays",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+            }
+          ],
+          "original_descriptions": {
+            "description_rewritten": "Volkspark Mariendorf in southern Berlin contains woodland, rises and a duck pond. A post dated 3 April 2026 describes the author's first-person sightings of two men and a later claimed meeting near Ententeich, but the actual evenings are described retrospectively rather than dated to 3 April. An 11 April 2026 regular park user reported no cruising on the hill. The comments therefore give recent discussion and plausible visitor evidence, not reliable schedules or a fixed meeting point."
+          },
+          "directions_access_notes": {
+            "access_information": "Ordinary urban park with walkers and families; no official cruising authorisation; exact locations vary in recollections.",
+            "place_identity": "public_park_recent_retrospective_first_person_activity_claim"
+          },
+          "time_information": {},
+          "crowd_age_information": {},
+          "safety_information": {},
+          "dated_comments_and_activity": {
+            "activity_evidence": {
+              "recent_cutoff_inclusive": "2025-11-06",
+              "recent_dated_reports": [
+                {
+                  "date": "2026-04-03",
+                  "type": "retrospective_first_person_encounter_and_visitor_report",
+                  "note": "Post is dated; dates of claimed previous Friday and later personal encounter are unspecified."
+                },
+                {
+                  "date": "2026-04-11",
+                  "type": "regular_visitor_negative_observation",
+                  "note": "User reports little or no activity while visiting park."
+                }
+              ],
+              "older_reports": [],
+              "undated_directory_mention_not_recent_evidence": true,
+              "independent_confirmation_of_actual_current_cruising": false
+            }
+          },
+          "duplicates_and_aliases": {
+            "duplicates_and_concerns": [
+              "Retrospective event dates unspecified despite 2026 posting.",
+              "Distinguish Volkspark Mariendorf from Freizeitpark Marienfelde."
+            ]
+          },
+          "field_coverage": {
+            "description_available": true,
+            "detailed_description_90_plus_words": false,
+            "address_explicit": false,
+            "coordinates_explicit": false,
+            "source_url_available": true,
+            "access_notes_available": true,
+            "best_visiting_time_explicit": false,
+            "crowd_or_age_info_explicit": false,
+            "safety_info_explicit": false,
+            "dated_evidence_recorded": true,
+            "source_check_statuses_recorded": true,
+            "eight_distinct_source_check_rows": true
+          },
+          "not_yet_checked_for_import": true,
+          "publication_approved": false,
+          "original_research_record": {
+            "index": 673,
+            "id": "GS2-DE-BERLIN-059",
+            "name": "Volkspark Mariendorf - Südberlin!",
+            "city": "Berlin",
+            "country": "Germany",
+            "original_source_refs": [
+              {
+                "s": "2",
+                "f": "research/cruising/scrape_2.json",
+                "i": 59,
+                "u": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+              },
+              {
+                "s": "3",
+                "f": "research/cruising/scrape_3.json",
+                "i": 52,
+                "u": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/"
+              }
+            ],
+            "original_source_count": 2,
+            "source_checks": [
+              {
+                "source_id": "1",
+                "website": "Gays-Cruising.com",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+              },
+              {
+                "source_id": "2",
+                "website": "gay-szene.net",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html"
+                ],
+                "checked_berlin": "2026-11-06",
+                "notes": "Name in archived source; not by itself a dated visitor report."
+              },
+              {
+                "source_id": "3",
+                "website": "Planet Randy",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/"
+                ],
+                "checked_berlin": "2026-11-06",
+                "notes": "Name in archived source; not by itself a dated visitor report."
+              },
+              {
+                "source_id": "4",
+                "website": "The Gay Passport",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+              },
+              {
+                "source_id": "5",
+                "website": "Splashd",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+              },
+              {
+                "source_id": "6",
+                "website": "Popcorn.dating",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+              },
+              {
+                "source_id": "7",
+                "website": "Squirt.org",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+              },
+              {
+                "source_id": "8",
+                "website": "CruisingGays",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "notes": "No matching identity in the collected eight-source cross-alignment and targeted indexed checks; incomplete coverage, not proof absent."
+              }
+            ],
+            "description_rewritten": "Volkspark Mariendorf in southern Berlin contains woodland, rises and a duck pond. A post dated 3 April 2026 describes the author's first-person sightings of two men and a later claimed meeting near Ententeich, but the actual evenings are described retrospectively rather than dated to 3 April. An 11 April 2026 regular park user reported no cruising on the hill. The comments therefore give recent discussion and plausible visitor evidence, not reliable schedules or a fixed meeting point.",
+            "place_identity": "public_park_recent_retrospective_first_person_activity_claim",
+            "additional_evidence": [
+              {
+                "url": "https://gay-szene.net/volkspark-mariendorf-suedberlin%2521-in-berlin/11005/eintrag.html",
+                "note": "3 April 2026 detailed retrospective first-person encounter; 11 April 2026 contrasting regular visitor observation."
+              },
+              {
+                "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/",
+                "note": "Second gay directory matches Mariendorf park."
+              }
+            ],
+            "activity_evidence": {
+              "recent_cutoff_inclusive": "2025-11-06",
+              "recent_dated_reports": [
+                {
+                  "date": "2026-04-03",
+                  "type": "retrospective_first_person_encounter_and_visitor_report",
+                  "note": "Post is dated; dates of claimed previous Friday and later personal encounter are unspecified."
+                },
+                {
+                  "date": "2026-04-11",
+                  "type": "regular_visitor_negative_observation",
+                  "note": "User reports little or no activity while visiting park."
+                }
+              ],
+              "older_reports": [],
+              "undated_directory_mention_not_recent_evidence": true,
+              "independent_confirmation_of_actual_current_cruising": false
+            },
+            "access_information": "Ordinary urban park with walkers and families; no official cruising authorisation; exact locations vary in recollections.",
+            "duplicates_and_concerns": [
+              "Retrospective event dates unspecified despite 2026 posting.",
+              "Distinguish Volkspark Mariendorf from Freizeitpark Marienfelde."
+            ],
+            "disposition": "retain_research_only",
+            "checked_berlin": "2026-11-06"
+          }
+        }
+      }
+    },
+    {
+      "triage": {
+        "index": 687,
+        "candidate_id": "PR3-DE-BERLIN-04-08",
+        "name": "Flap at the Volkspark Wilmersdorf",
+        "city": "Berlin",
+        "country": "Germany",
+        "bucket": "half_complete",
+        "description_words": 76,
+        "dimensions": {
+          "access": true,
+          "when": true,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 2,
+        "has_recent_dated_report": false,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Substantive description and access; at least two additional supported evidence dimensions."
+      },
+      "research_venue": {
+        "Venue_ID": "RESEARCH-PR3-DE-BERLIN-04-08",
+        "Name": "Flap at the Volkspark Wilmersdorf",
+        "City": "Berlin",
+        "Country": "Germany",
+        "Category": "Cruising Area",
+        "Status": "Research",
+        "Address": "",
+        "Postcode": "",
+        "Nearest_Station": "",
+        "Latitude": "",
+        "Longitude": "",
+        "Google_Maps_URL": "",
+        "Apple_Maps_URL": "",
+        "Native_Map_Query": "Flap at the Volkspark Wilmersdorf, Berlin, Germany",
+        "Website_URL": "",
+        "Instagram_URL": "",
+        "Facebook_URL": "",
+        "Other_URL": "",
+        "Source_URLs": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/ | https://www.cruisinggays.com/berlin/areas/30265-stadtpark-willmersdorf/ | https://planet-randy.com/blog/eintrag/klappe-am-volkspark-wilmersdorf/ | https://gay-szene.net/suche-nach-d-10715/D-10715/suche.html",
+        "Share_URL": "",
+        "Image_URL": "",
+        "Description": "An old public toilet at the edge of Volkspark Wilmersdorf is carried by Planet Randy and CruisingGays. Planet Randy names Am Volkspark while CruisingGays gives Uhlandstraße 110 near U Blissestraße and Schoelerpark, plausibly an adjacent or alternate toilet site within the larger area; confirm they refer to the same facility before importing coordinates. CruisingGays says toilets are locked late at night, contradicting Planet Randy's undated claim of 24-hour activity. Neither website provides a dated 2026 visit.",
+        "Vibe_Tags": "",
+        "Last_Updated": "",
+        "Opening_Days": "",
+        "Opening_Open_Time": "",
+        "Opening_Close_Time": "",
+        "Opening_Notes": "Managed public WC subject to unknown maintenance and closures; CruisingGays describes nighttime closure. Public park paths are separate.",
+        "Event_Date": "",
+        "Event_Time": "",
+        "Feature_Darkroom": null,
+        "Feature_Dresscode": null,
+        "Feature_Men_Only": null,
+        "Feature_Dancefloor": null,
+        "Feature_Smoking_Area": null,
+        "Feature_Cocktails": null,
+        "Feature_Cruise_Focused": null,
+        "Feature_Sauna": null,
+        "Feature_Playroom": null,
+        "Public_Rating": "",
+        "Rating_General": null,
+        "Rating_Darkroom": null,
+        "Rating_Age_Range": null,
+        "Rating_Cost": null,
+        "Rating_Size": null,
+        "Rating_Location": null,
+        "Rating_Busyness": null,
+        "Views": 0,
+        "Emoji_Override": "",
+        "Created_At": "",
+        "Flag_Reason": "",
+        "_Research": {
+          "queue_index": 687,
+          "original_candidate_id": "PR3-DE-BERLIN-04-08",
+          "temporary_research_venue_id": true,
+          "assigned_worker": "C",
+          "original_batch_file": "research/cruising/part5/C/batch_0687_0691.json",
+          "original_source_count": 2,
+          "original_source_ids": [
+            "3",
+            "8"
+          ],
+          "all_source_urls": [
+            "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/",
+            "https://www.cruisinggays.com/berlin/areas/30265-stadtpark-willmersdorf/",
+            "https://planet-randy.com/blog/eintrag/klappe-am-volkspark-wilmersdorf/",
+            "https://gay-szene.net/suche-nach-d-10715/D-10715/suche.html"
+          ],
+          "research_last_saved_date": null,
+          "source_check_field": "source_checks",
+          "source_checks": [
+            {
+              "source_id": "1",
+              "website": "Gays-Cruising.com",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+            },
+            {
+              "source_id": "2",
+              "website": "gay-szene.net",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+            },
+            {
+              "source_id": "3",
+              "website": "Planet Randy",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/"
+              ],
+              "checked_berlin": "2026-11-06",
+              "note": "Original eight-source archive matched; access and age of comments assessed separately."
+            },
+            {
+              "source_id": "4",
+              "website": "The Gay Passport",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+            },
+            {
+              "source_id": "5",
+              "website": "Splashd",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+            },
+            {
+              "source_id": "6",
+              "website": "Popcorn.dating",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+            },
+            {
+              "source_id": "7",
+              "website": "Squirt.org",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "checked_berlin": "2026-11-06",
+              "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+            },
+            {
+              "source_id": "8",
+              "website": "CruisingGays",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://www.cruisinggays.com/berlin/areas/30265-stadtpark-willmersdorf/"
+              ],
+              "checked_berlin": "2026-11-06",
+              "note": "Original eight-source archive matched; access and age of comments assessed separately."
+            }
+          ],
+          "original_descriptions": {
+            "description_rewritten": "An old public toilet at the edge of Volkspark Wilmersdorf is carried by Planet Randy and CruisingGays. Planet Randy names Am Volkspark while CruisingGays gives Uhlandstraße 110 near U Blissestraße and Schoelerpark, plausibly an adjacent or alternate toilet site within the larger area; confirm they refer to the same facility before importing coordinates. CruisingGays says toilets are locked late at night, contradicting Planet Randy's undated claim of 24-hour activity. Neither website provides a dated 2026 visit."
+          },
+          "directions_access_notes": {
+            "access_information": "Managed public WC subject to unknown maintenance and closures; CruisingGays describes nighttime closure. Public park paths are separate."
+          },
+          "time_information": {},
+          "crowd_age_information": {},
+          "safety_information": {},
+          "dated_comments_and_activity": {
+            "activity_evidence": {
+              "cutoff_inclusive": "2025-11-06",
+              "recent_dated_cruising_reports": [],
+              "older_dated_posts": [],
+              "editorial_undated_claim_is_not_visitor_evidence": true,
+              "current_operational_status": "not_verified"
+            }
+          },
+          "duplicates_and_aliases": {
+            "possible_duplicates_and_flags": [
+              "Potential two separate WC sites on Volkspark Wilmersdorf boundary; verify addresses.",
+              "Planet Randy 24-hour wording conflicts with CruisingGays closing warning.",
+              "No dated recent activity."
+            ]
+          },
+          "field_coverage": {
+            "description_available": true,
+            "detailed_description_90_plus_words": false,
+            "address_explicit": false,
+            "coordinates_explicit": false,
+            "source_url_available": true,
+            "access_notes_available": true,
+            "best_visiting_time_explicit": false,
+            "crowd_or_age_info_explicit": false,
+            "safety_info_explicit": false,
+            "dated_evidence_recorded": true,
+            "source_check_statuses_recorded": true,
+            "eight_distinct_source_check_rows": true
+          },
+          "not_yet_checked_for_import": true,
+          "publication_approved": false,
+          "original_research_record": {
+            "index": 687,
+            "id": "PR3-DE-BERLIN-04-08",
+            "name": "Flap at the Volkspark Wilmersdorf",
+            "city": "Berlin",
+            "country": "Germany",
+            "original_source_refs": [
+              {
+                "s": "3",
+                "f": "research/cruising/scrape_3.json",
+                "i": 31,
+                "u": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/"
+              },
+              {
+                "s": "8",
+                "f": "research/cruising/scrape_8.json",
+                "i": 12,
+                "u": "https://www.cruisinggays.com/berlin/areas/30265-stadtpark-willmersdorf/"
+              }
+            ],
+            "original_source_count": 2,
+            "source_checks": [
+              {
+                "source_id": "1",
+                "website": "Gays-Cruising.com",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+              },
+              {
+                "source_id": "2",
+                "website": "gay-szene.net",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+              },
+              {
+                "source_id": "3",
+                "website": "Planet Randy",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/"
+                ],
+                "checked_berlin": "2026-11-06",
+                "note": "Original eight-source archive matched; access and age of comments assessed separately."
+              },
+              {
+                "source_id": "4",
+                "website": "The Gay Passport",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+              },
+              {
+                "source_id": "5",
+                "website": "Splashd",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+              },
+              {
+                "source_id": "6",
+                "website": "Popcorn.dating",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+              },
+              {
+                "source_id": "7",
+                "website": "Squirt.org",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "checked_berlin": "2026-11-06",
+                "note": "No exact match in source alignment; further independent references, if found, are preserved under supplemental evidence; incomplete coverage."
+              },
+              {
+                "source_id": "8",
+                "website": "CruisingGays",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://www.cruisinggays.com/berlin/areas/30265-stadtpark-willmersdorf/"
+                ],
+                "checked_berlin": "2026-11-06",
+                "note": "Original eight-source archive matched; access and age of comments assessed separately."
+              }
+            ],
+            "description_rewritten": "An old public toilet at the edge of Volkspark Wilmersdorf is carried by Planet Randy and CruisingGays. Planet Randy names Am Volkspark while CruisingGays gives Uhlandstraße 110 near U Blissestraße and Schoelerpark, plausibly an adjacent or alternate toilet site within the larger area; confirm they refer to the same facility before importing coordinates. CruisingGays says toilets are locked late at night, contradicting Planet Randy's undated claim of 24-hour activity. Neither website provides a dated 2026 visit.",
+            "place_identity_status": "two_directory_public_toilet_refs_possible_distinct_facilities",
+            "supplemental_source_evidence": [
+              {
+                "url": "https://planet-randy.com/blog/eintrag/klappe-am-volkspark-wilmersdorf/",
+                "note": "Original named public WC; editorial undated crowd and 24-hour claims."
+              },
+              {
+                "url": "https://www.cruisinggays.com/berlin/areas/30265-stadtpark-willmersdorf/",
+                "note": "Second directory; Uhlandstraße 110, notes locked overnight, but no dated current report."
+              },
+              {
+                "url": "https://gay-szene.net/suche-nach-d-10715/D-10715/suche.html",
+                "note": "Third gay-directory archive references Volkspark Wilmersdorf toilet at Am Volkspark/Ecke Livländische Straße; exact match uncertain."
+              }
+            ],
+            "activity_evidence": {
+              "cutoff_inclusive": "2025-11-06",
+              "recent_dated_cruising_reports": [],
+              "older_dated_posts": [],
+              "editorial_undated_claim_is_not_visitor_evidence": true,
+              "current_operational_status": "not_verified"
+            },
+            "access_information": "Managed public WC subject to unknown maintenance and closures; CruisingGays describes nighttime closure. Public park paths are separate.",
+            "possible_duplicates_and_flags": [
+              "Potential two separate WC sites on Volkspark Wilmersdorf boundary; verify addresses.",
+              "Planet Randy 24-hour wording conflicts with CruisingGays closing warning.",
+              "No dated recent activity."
+            ],
+            "retain_candidate_for_filter": true,
+            "publication_ready": false,
+            "research_checked_berlin": "2026-11-06"
+          }
+        }
+      }
+    },
+    {
+      "triage": {
+        "index": 705,
+        "candidate_id": "GC1-GERMANY-07",
+        "name": "Car Park Weiler/A57",
+        "city": "Cologne",
+        "country": "Germany",
+        "bucket": "half_complete",
+        "description_words": 69,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 2,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Substantive description and access; at least two additional supported evidence dimensions."
+      },
+      "research_venue": {
+        "Venue_ID": "RESEARCH-GC1-GERMANY-07",
+        "Name": "Car Park Weiler/A57",
+        "City": "Cologne",
+        "Country": "Germany",
+        "Category": "Cruising Area",
+        "Status": "Research",
+        "Address": "",
+        "Postcode": "",
+        "Nearest_Station": "",
+        "Latitude": "",
+        "Longitude": "",
+        "Google_Maps_URL": "",
+        "Apple_Maps_URL": "",
+        "Native_Map_Query": "Car Park Weiler/A57, Cologne, Germany",
+        "Website_URL": "",
+        "Instagram_URL": "",
+        "Facebook_URL": "",
+        "Other_URL": "",
+        "Source_URLs": "https://www.gays-cruising.com/en/germany | https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html | https://gay-szene.net/a-57-autobahn-parkplaetze-esch-und-weiler-in-chorweiler-in-koeln/5658/eintrag.html",
+        "Share_URL": "",
+        "Image_URL": "",
+        "Description": "Car Park Weiler is the west A57 motorway parking area in Cologne-Chorweiler; east counterpart is Esch. Gay-szene.net describes both under one listing. A 9 May 2026 user reports heavy clearance of bushes since the previous autumn, leaving the stops visible to passing traffic. A September 2025 positive first-person visit is older than the current evidence cutoff, and the 2026 visibility warning does not independently establish a recent sexual encounter.",
+        "Vibe_Tags": "",
+        "Last_Updated": "2026-11-06T00:00:00Z",
+        "Opening_Days": "",
+        "Opening_Open_Time": "",
+        "Opening_Close_Time": "",
+        "Opening_Notes": "Motorway-only access by designated driving direction. No crossing A57 or unauthorized paths, no assumption that remaining shrubs provide privacy or public sex permission.",
+        "Event_Date": "",
+        "Event_Time": "",
+        "Feature_Darkroom": null,
+        "Feature_Dresscode": null,
+        "Feature_Men_Only": null,
+        "Feature_Dancefloor": null,
+        "Feature_Smoking_Area": null,
+        "Feature_Cocktails": null,
+        "Feature_Cruise_Focused": null,
+        "Feature_Sauna": null,
+        "Feature_Playroom": null,
+        "Public_Rating": "",
+        "Rating_General": null,
+        "Rating_Darkroom": null,
+        "Rating_Age_Range": null,
+        "Rating_Cost": null,
+        "Rating_Size": null,
+        "Rating_Location": null,
+        "Rating_Busyness": null,
+        "Views": 0,
+        "Emoji_Override": "",
+        "Created_At": "",
+        "Flag_Reason": "",
+        "_Research": {
+          "queue_index": 705,
+          "original_candidate_id": "GC1-GERMANY-07",
+          "temporary_research_venue_id": true,
+          "assigned_worker": "C",
+          "original_batch_file": "research/cruising/part5/C/batch_0702_0706.json",
+          "original_source_count": 2,
+          "original_source_ids": [
+            "1",
+            "2"
+          ],
+          "all_source_urls": [
+            "https://www.gays-cruising.com/en/germany",
+            "https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html",
+            "https://gay-szene.net/a-57-autobahn-parkplaetze-esch-und-weiler-in-chorweiler-in-koeln/5658/eintrag.html"
+          ],
+          "research_last_saved_date": "2026-11-06",
+          "source_check_field": "source_checks",
+          "source_checks": [
+            {
+              "source_id": "1",
+              "website": "Gays-Cruising.com",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://www.gays-cruising.com/en/germany"
+              ],
+              "date_checked": "2026-11-06",
+              "notes": "Named source match, including Cranachwald/Cranachwäldchen alias; dated reports assessed separately."
+            },
+            {
+              "source_id": "2",
+              "website": "gay-szene.net",
+              "status": "linked_page_matched",
+              "source_urls": [
+                "https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html"
+              ],
+              "date_checked": "2026-11-06",
+              "notes": "Named source match, including Cranachwald/Cranachwäldchen alias; dated reports assessed separately."
+            },
+            {
+              "source_id": "3",
+              "website": "Planet Randy",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+            },
+            {
+              "source_id": "4",
+              "website": "The Gay Passport",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+            },
+            {
+              "source_id": "5",
+              "website": "Splashd",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+            },
+            {
+              "source_id": "6",
+              "website": "Popcorn.dating",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+            },
+            {
+              "source_id": "7",
+              "website": "Squirt.org",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+            },
+            {
+              "source_id": "8",
+              "website": "CruisingGays",
+              "status": "searched_no_match",
+              "source_urls": [],
+              "date_checked": "2026-11-06",
+              "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+            }
+          ],
+          "original_descriptions": {
+            "description_rewritten": "Car Park Weiler is the west A57 motorway parking area in Cologne-Chorweiler; east counterpart is Esch. Gay-szene.net describes both under one listing. A 9 May 2026 user reports heavy clearance of bushes since the previous autumn, leaving the stops visible to passing traffic. A September 2025 positive first-person visit is older than the current evidence cutoff, and the 2026 visibility warning does not independently establish a recent sexual encounter."
+          },
+          "directions_access_notes": {
+            "access_information": "Motorway-only access by designated driving direction. No crossing A57 or unauthorized paths, no assumption that remaining shrubs provide privacy or public sex permission."
+          },
+          "time_information": {},
+          "crowd_age_information": {},
+          "safety_information": {},
+          "dated_comments_and_activity": {
+            "activity_evidence": {
+              "cutoff_inclusive": "2025-11-06",
+              "recent_dated_reports": [
+                {
+                  "date": "2026-05-09",
+                  "kind": "first_person_site_condition_report",
+                  "description": "Vegetation cleared on both sides and reduced privacy."
+                }
+              ],
+              "older_posts": [
+                {
+                  "date": "2025-09-13",
+                  "kind": "first_person_report_on_2025-09-10",
+                  "description": "Old positive encounter report before cutoff."
+                },
+                {
+                  "date": "2024-05-19",
+                  "kind": "older_first_person_report_in_other_rest_area_forum",
+                  "description": "Another A4 forum's user reported encounters at Esch and Weiler."
+                }
+              ],
+              "undated_directory_claims_are_not_recent_evidence": true,
+              "confirmed_recent_sexual_encounters": false
+            }
+          },
+          "duplicates_and_aliases": {},
+          "field_coverage": {
+            "description_available": true,
+            "detailed_description_90_plus_words": false,
+            "address_explicit": false,
+            "coordinates_explicit": false,
+            "source_url_available": true,
+            "access_notes_available": true,
+            "best_visiting_time_explicit": false,
+            "crowd_or_age_info_explicit": false,
+            "safety_info_explicit": false,
+            "dated_evidence_recorded": true,
+            "source_check_statuses_recorded": true,
+            "eight_distinct_source_check_rows": true
+          },
+          "not_yet_checked_for_import": true,
+          "publication_approved": false,
+          "original_research_record": {
+            "index": 705,
+            "id": "GC1-GERMANY-07",
+            "name": "Car Park Weiler/A57",
+            "city": "Cologne",
+            "country": "Germany",
+            "original_source_count": 2,
+            "original_source_refs": [
+              {
+                "s": "1",
+                "f": "research/cruising/scrape_1.json",
+                "i": 578,
+                "u": "https://www.gays-cruising.com/en/germany"
+              },
+              {
+                "s": "2",
+                "f": "research/cruising/scrape_2.json",
+                "i": 70,
+                "u": "https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html"
+              }
+            ],
+            "source_checks": [
+              {
+                "source_id": "1",
+                "website": "Gays-Cruising.com",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://www.gays-cruising.com/en/germany"
+                ],
+                "date_checked": "2026-11-06",
+                "notes": "Named source match, including Cranachwald/Cranachwäldchen alias; dated reports assessed separately."
+              },
+              {
+                "source_id": "2",
+                "website": "gay-szene.net",
+                "status": "linked_page_matched",
+                "source_urls": [
+                  "https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html"
+                ],
+                "date_checked": "2026-11-06",
+                "notes": "Named source match, including Cranachwald/Cranachwäldchen alias; dated reports assessed separately."
+              },
+              {
+                "source_id": "3",
+                "website": "Planet Randy",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+              },
+              {
+                "source_id": "4",
+                "website": "The Gay Passport",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+              },
+              {
+                "source_id": "5",
+                "website": "Splashd",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+              },
+              {
+                "source_id": "6",
+                "website": "Popcorn.dating",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+              },
+              {
+                "source_id": "7",
+                "website": "Squirt.org",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+              },
+              {
+                "source_id": "8",
+                "website": "CruisingGays",
+                "status": "searched_no_match",
+                "source_urls": [],
+                "date_checked": "2026-11-06",
+                "notes": "No exact name/location match in collected eight-source archive and targeted indexed checks; website coverage incomplete."
+              }
+            ],
+            "description_rewritten": "Car Park Weiler is the west A57 motorway parking area in Cologne-Chorweiler; east counterpart is Esch. Gay-szene.net describes both under one listing. A 9 May 2026 user reports heavy clearance of bushes since the previous autumn, leaving the stops visible to passing traffic. A September 2025 positive first-person visit is older than the current evidence cutoff, and the 2026 visibility warning does not independently establish a recent sexual encounter.",
+            "identity_assessment": "Weiler west A57 and Esch east are counterpart stops, not one physical lot",
+            "supplemental_sources": [
+              {
+                "url": "https://gay-szene.net/a-57-autobahn-parkplaetze-esch-und-weiler-in-chorweiler-in-koeln/5658/eintrag.html",
+                "note": "Both rest areas; 2026 visibility report; older activity anecdotes."
+              },
+              {
+                "url": "https://www.gays-cruising.com/en/germany",
+                "note": "Original Gays-Cruising candidate."
+              }
+            ],
+            "activity_evidence": {
+              "cutoff_inclusive": "2025-11-06",
+              "recent_dated_reports": [
+                {
+                  "date": "2026-05-09",
+                  "kind": "first_person_site_condition_report",
+                  "description": "Vegetation cleared on both sides and reduced privacy."
+                }
+              ],
+              "older_posts": [
+                {
+                  "date": "2025-09-13",
+                  "kind": "first_person_report_on_2025-09-10",
+                  "description": "Old positive encounter report before cutoff."
+                },
+                {
+                  "date": "2024-05-19",
+                  "kind": "older_first_person_report_in_other_rest_area_forum",
+                  "description": "Another A4 forum's user reported encounters at Esch and Weiler."
+                }
+              ],
+              "undated_directory_claims_are_not_recent_evidence": true,
+              "confirmed_recent_sexual_encounters": false
+            },
+            "access_information": "Motorway-only access by designated driving direction. No crossing A57 or unauthorized paths, no assumption that remaining shrubs provide privacy or public sex permission.",
+            "possible_duplicates_or_flags": [
+              "Two separate direction-dependent sites Weiler and Esch.",
+              "2026 substantial vegetation clearance.",
+              "Past harassment concerns and heavy truck use in older comments."
+            ],
+            "disposition": "retain_research_candidate_not_public_listing",
+            "research_date_berlin": "2026-11-06"
+          }
+        }
+      }
+    }
+  ]
+}
