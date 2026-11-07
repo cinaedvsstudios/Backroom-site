@@ -1,0 +1,15 @@
+name: Validate 5 cruising venue candidates against existing JSON
+on:
+  push:
+    paths:
+      - .github/workflows/check-first5-cruising-aliases-v2.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Find existing listing duplicates
+        run: python3 scripts/check_first5_cruising_aliases.py
