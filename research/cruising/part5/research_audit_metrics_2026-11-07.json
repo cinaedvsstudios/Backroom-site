@@ -1,5 +1,5 @@
 {
-  "as_of_berlin": "2026-11-07T03:09:45+01:00",
+  "as_of_berlin": "2026-11-07T03:13:12+01:00",
   "data_source": "research/cruising/part5/combined_research_snapshot.json",
   "records": 1172,
   "missing_index_count": 0,
@@ -5524,5 +5524,60 @@
     "Multiple directory references are not necessarily independent current activity",
     "Positive booleans are reported as the source research asserted, not independent verification by this report",
     "Avoid adding unverified public toilets, schools, nature reserves or transport sites to the live directory"
-  ]
+  ],
+  "current_site_file_comparison": {
+    "listings.json": {
+      "root_type": "list",
+      "root_keys": null,
+      "candidate_list_groups": [
+        {
+          "path": "",
+          "count": 1273,
+          "sample_keys": [
+            "Venue_ID",
+            "Name",
+            "City",
+            "Country",
+            "Unspecified01",
+            "Status",
+            "Address",
+            "Postcode",
+            "Nearest_Station",
+            "Latitude",
+            "Longitude",
+            "Google_Maps_URL",
+            "Apple_Maps_URL",
+            "Native_Map_Query",
+            "Website_URL",
+            "Instagram_URL",
+            "Facebook_URL",
+            "Other_URL",
+            "Source_URLs",
+            "Share_URL",
+            "Image_URL",
+            "Description",
+            "Vibe_Tags",
+            "Last_Updated",
+            "Opening_Days"
+          ]
+        }
+      ],
+      "exact_name_city_matched_candidates": 0,
+      "exact_match_samples": [],
+      "entries_count": 1273
+    },
+    "cruising_research.json": {
+      "root_type": "dict",
+      "root_keys": [
+        "_meta",
+        "sources",
+        "countries",
+        "verification_reference_sites",
+        "priority_city_research",
+        "cruising_listing_editorial_guidelines",
+        "source_gap_audits"
+      ],
+      "candidate_list_groups": []
+    }
+  }
 }
