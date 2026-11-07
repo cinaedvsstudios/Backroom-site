@@ -36,7 +36,7 @@
       "revised_first_25_geographic_check": true,
       "geographically_grounded_first_25": 18,
       "user_manual_location_requests": 49,
-      "notes": "Full first-pass enrichment of all 210 source candidates saved in one master JSON. Hold/Flag are editorial decisions not live publication. Definitively obsolete sites excluded. Manual location-resolution questions preserved. Review all map pins, duplicates, statuses and editorial metadata before creating any public listings.",
+      "notes": "All 210 candidate records enriched, and 25 named-place map omissions corrected. Remaining missing GPS recorded as manual-location problems, duplicates/closures, or map-geometry exceptions; no falsely precise coordinates assigned. Editorial second pass remains necessary before publication.",
       "geographically_grounded_first_50": 37,
       "geographically_grounded_first_75": 54,
       "geographically_grounded_first_100": 68,
@@ -44,7 +44,10 @@
       "geographically_grounded_first_150": 93,
       "geographically_grounded_first_175": 101,
       "geographically_grounded_first_200": 105,
-      "geographically_grounded_all_210": 110
+      "geographically_grounded_all_210": 135,
+      "geocoding_followup_added": 25,
+      "missing_gps_with_manual_queue": 49,
+      "missing_gps_nonmanual_explained": 26
     },
     "manual_location_resolution_queue": [
       {
@@ -301,9 +304,12 @@
       "all_source_research_preserved": true,
       "publication_approved_count": 0,
       "public_listings_json_unchanged": true,
-      "geographically_grounded_count": 110,
+      "geographically_grounded_count": 135,
       "manual_location_questions": 49,
-      "needs_second_pass_review": true
+      "needs_second_pass_review": true,
+      "missing_gps_count": 75,
+      "missing_gps_nonmanual_exception_count": 26,
+      "final_geolocation_audit_completed": true
     }
   },
   "candidates": [
@@ -17259,7 +17265,9 @@
         "source_urls_count": 4,
         "coordinate_precision": "not_established",
         "coordinate_source_url": null,
-        "notes": "Research, URLs, uncertainty, and possible duplicates preserved. No assertion that the directory verifies current cruising activity."
+        "notes": "Research, URLs, uncertainty, and possible duplicates preserved. No assertion that the directory verifies current cruising activity.",
+        "location_pin_exception_reason": "EXACT_MEETING_SECTION_UNCONFIRMED;SOME_WALLS_RESTRICTED",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -25833,7 +25841,9 @@
         "source_urls_count": 3,
         "coordinate_precision": "no_defensible_geographical_pin",
         "coordinate_source_url": null,
-        "notes": "Source archive retained. Map pins refer to documented public places, not unverified private internal areas. Dated comments differentiated from check-ins and visit proof."
+        "notes": "Source archive retained. Map pins refer to documented public places, not unverified private internal areas. Dated comments differentiated from check-ins and visit proof.",
+        "location_pin_exception_reason": "2026_FIRSTHAND_DEMOLISHED_AND_CLOSED;UNSAFE_TRESPASS",
+        "location_pin_exception_category": "unsafe_or_closed_site_reference"
       }
     },
     {
@@ -27936,7 +27946,9 @@
         "source_urls_count": 3,
         "coordinate_precision": "requires_verified_entrance_or_side",
         "coordinate_source_url": null,
-        "notes": "Archive retained and 2026 reports distinguished from old claims; no live publication approval."
+        "notes": "Archive retained and 2026 reports distinguished from old claims; no live publication approval.",
+        "location_pin_exception_reason": "POSSIBLE_DUPLICATE_MASTER_CANDIDATE_698;RECENT_NEGATIVE_REPORT",
+        "location_pin_exception_category": "duplicate_do_not_create_another_pin"
       }
     },
     {
@@ -28962,7 +28974,9 @@
         "source_urls_count": 2,
         "coordinate_precision": "requires_verified_entrance_or_side",
         "coordinate_source_url": null,
-        "notes": "Archive retained and 2026 reports distinguished from old claims; no live publication approval."
+        "notes": "Archive retained and 2026 reports distinguished from old claims; no live publication approval.",
+        "location_pin_exception_reason": "REFRATH_REOPENING_UNCONFIRMED;DO_NOT_COPY_LUSTHEIDE_PIN",
+        "location_pin_exception_category": "unsafe_or_closed_site_reference"
       }
     },
     {
@@ -29980,7 +29994,9 @@
         "source_urls_count": 2,
         "coordinate_precision": "requires_verified_entrance_or_side",
         "coordinate_source_url": null,
-        "notes": "Archive retained and 2026 reports distinguished from old claims; no live publication approval."
+        "notes": "Archive retained and 2026 reports distinguished from old claims; no live publication approval.",
+        "location_pin_exception_reason": "EXACT_PARKING_ROW_NOT_MATCHED;2026_VISIT_CLAIM_UNCORROBORATED",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -31017,7 +31033,9 @@
         "source_urls_count": 2,
         "coordinate_precision": "requires_verified_entrance_or_side",
         "coordinate_source_url": null,
-        "notes": "Archive retained and 2026 reports distinguished from old claims; no live publication approval."
+        "notes": "Archive retained and 2026 reports distinguished from old claims; no live publication approval.",
+        "location_pin_exception_reason": "S81_PARKING_PULLIN_NOT_GEOREFERENCED;FENCE_ACCESS_UNKNOWN",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -32590,7 +32608,9 @@
         "source_urls_count": 5,
         "coordinate_precision": "pin_not_assigned_due_to_uncertain_or_closed_site",
         "coordinate_source_url": null,
-        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access."
+        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access.",
+        "location_pin_exception_reason": "2026_MALE_VISITORS_OBSERVED;SWIMMING_PROHIBITED;SHORE_ACCESS_RESTRICTED",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -33670,7 +33690,9 @@
         "source_urls_count": 4,
         "coordinate_precision": "pin_not_assigned_due_to_uncertain_or_closed_site",
         "coordinate_source_url": null,
-        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access."
+        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access.",
+        "location_pin_exception_reason": "DUPLICATE_OR_ALIAS_RESEARCH_INDEX_776;DO_NOT_PUBLISH_SEPARATE",
+        "location_pin_exception_category": "duplicate_do_not_create_another_pin"
       }
     },
     {
@@ -33951,7 +33973,9 @@
         "source_urls_count": 5,
         "coordinate_precision": "pin_not_assigned_due_to_uncertain_or_closed_site",
         "coordinate_source_url": null,
-        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access."
+        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access.",
+        "location_pin_exception_reason": "2026_FIRSTHAND_POSITIVE;EXACT_PARKING_GATE_UNVERIFIED",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -34420,16 +34444,16 @@
         "Address": "Friedberger Anlage, Friedberger Landstraße, Frankfurt am Main",
         "Postcode": "",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "50.1168",
+        "Longitude": "8.69199",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=50.1168%2C8.69199",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=50.1168,8.69199",
+        "Native_Map_Query": "Friedberger Anlage, Frankfurt am Main, Germany",
         "Website_URL": "https://frankfurt.de/themen/umwelt-und-gruen/orte/parks/parks-von-a-bis-z/friedberger-anlage",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://gay-szene.net/gay-cruising-in-frankfurt-am-main/734/17/rubrik.html | https://gay-szene.net/friedberger-anlage-in-frankfurt-am-main/10095/eintrag.html | https://frankfurt.de/themen/umwelt-und-gruen/orte/parks/parks-von-a-bis-z/friedberger-anlage",
+        "Source_URLs": "https://gay-szene.net/gay-cruising-in-frankfurt-am-main/734/17/rubrik.html | https://gay-szene.net/friedberger-anlage-in-frankfurt-am-main/10095/eintrag.html | https://frankfurt.de/themen/umwelt-und-gruen/orte/parks/parks-von-a-bis-z/friedberger-anlage | https://mapcarta.com/26638198",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Friedberger Anlage is the green strip at Friedberger Landstraße and the northern section of Frankfurt's Wallanlagen. It was reopened after extended landscape works by May 2026, with some parts still fenced.\n\nBest times: A May 2026 forum visitor observed the reopening but only speculated that men might return. There is no observed contemporary cruising peak.\n\nCrowd: Park walkers and residents; no verified regularly meeting adult male crowd since the works.\n\nWatch out: Stay out of fenced planting and adjacent playgrounds. Older descriptions of secluded paths may no longer match the replanted park.",
@@ -34467,10 +34491,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_or_flag_for_editorial_review",
-        "source_urls_count": 3,
-        "coordinate_precision": "pin_not_assigned_due_to_uncertain_or_closed_site",
-        "coordinate_source_url": null,
-        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access."
+        "source_urls_count": 4,
+        "coordinate_precision": "public_park_area_reference",
+        "coordinate_source_url": "https://mapcarta.com/26638198",
+        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -35261,7 +35286,9 @@
         "source_urls_count": 2,
         "coordinate_precision": "pin_not_assigned_due_to_uncertain_or_closed_site",
         "coordinate_source_url": null,
-        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access."
+        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access.",
+        "location_pin_exception_reason": "2026_CLOSED_CONSTRUCTION_STORAGE;MULTIPLE_UNIDENTIFIED_STOPS",
+        "location_pin_exception_category": "unsafe_or_closed_site_reference"
       }
     },
     {
@@ -36043,16 +36070,16 @@
         "Address": "Stadtfriedhof Stöcken main entrance, Stöckener Straße 68, 30419 Hannover",
         "Postcode": "30419",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "52.405471",
+        "Longitude": "9.667563",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=52.405471%2C9.667563",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=52.405471,9.667563",
+        "Native_Map_Query": "Klappe am Stadtfriedhof Stöcken, Hannover, Germany",
         "Website_URL": "https://stadtfriedhof-stoecken.de/adresse-anfahrt",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html | https://gay-szene.net/klappe-am-stadtfriedhof-stoecken-in-hannover/8174/eintrag.html | https://stadtfriedhof-stoecken.de/adresse-anfahrt",
+        "Source_URLs": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html | https://gay-szene.net/klappe-am-stadtfriedhof-stoecken-in-hannover/8174/eintrag.html | https://stadtfriedhof-stoecken.de/adresse-anfahrt | https://www.outdooractive.com/de/poi/hannover-und-umgebung/stadtfriedhof-stoecken/2710952/",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: The source specifies public toilets by the main entrance to Stadtfriedhof Stöcken on Stöckener Straße/Fuhsestraße, not a chapel or the cemetery interior.\n\nBest times: A 22 July 2026 first-person poster claimed several encounters during the year. An older municipal schedule lists daytime access but must not be assumed current.\n\nCrowd: Adults using a public cemetery approach; an individual forum report describes male encounters, with no verified age range or regular group size.\n\nWatch out: Respect mourners and privacy, and check the restroom's current access. This is a municipal WC, not a managed sexual venue.",
@@ -36090,10 +36117,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_or_flag_for_editorial_review",
-        "source_urls_count": 3,
-        "coordinate_precision": "pin_not_assigned_due_to_uncertain_or_closed_site",
-        "coordinate_source_url": null,
-        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access."
+        "source_urls_count": 4,
+        "coordinate_precision": "Stadtfriedhof_Stoecken_public_cemetery_landmark_not_toilet",
+        "coordinate_source_url": "https://www.outdooractive.com/de/poi/hannover-und-umgebung/stadtfriedhof-stoecken/2710952/",
+        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -36357,7 +36385,9 @@
         "source_urls_count": 3,
         "coordinate_precision": "pin_not_assigned_due_to_uncertain_or_closed_site",
         "coordinate_source_url": "https://rastplatz.app/parkplatz/vahrenheide-sued-a2",
-        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access."
+        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access.",
+        "location_pin_exception_reason": "SOURCE_IDENTIFIES_VAHRENHEIDE_SUD;PRECISE_GPS_NOT_IN_SOURCE",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -36627,7 +36657,9 @@
         "source_urls_count": 3,
         "coordinate_precision": "pin_not_assigned_due_to_uncertain_or_closed_site",
         "coordinate_source_url": null,
-        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access."
+        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access.",
+        "location_pin_exception_reason": "EXACT_ZAUBERWALD_GROVE_NOT_PINNED;NO_RECENT_ENCOUNTER",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -37646,7 +37678,9 @@
         "source_urls_count": 2,
         "coordinate_precision": "pin_not_assigned_due_to_uncertain_or_closed_site",
         "coordinate_source_url": null,
-        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access."
+        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access.",
+        "location_pin_exception_reason": "EXACT_CANAL_PATH_NOT_MAPPED;CURRENT_ACTIVITY_NEGATIVE",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -37903,7 +37937,9 @@
         "source_urls_count": 3,
         "coordinate_precision": "pin_not_assigned_due_to_uncertain_or_closed_site",
         "coordinate_source_url": null,
-        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access."
+        "notes": "Historic source evidence preserved; dated visitor posts distinguished from plans, platform check-ins, and operator access.",
+        "location_pin_exception_reason": "2026_WARM_WEATHER_CLAIM_NO_SPECIFIC_ENCOUNTER",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -39983,7 +40019,9 @@
         "source_urls_count": 3,
         "coordinate_precision": "source_does_not_support_single_precise_pin",
         "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "location_pin_exception_reason": "PARKING_LIKELY_DEMOLISHED_OR_REPURPOSED;NO_VERIFIED_REOPENING",
+        "location_pin_exception_category": "unsafe_or_closed_site_reference"
       }
     },
     {
@@ -40214,7 +40252,9 @@
         "source_urls_count": 4,
         "coordinate_precision": "source_does_not_support_single_precise_pin",
         "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "location_pin_exception_reason": "PROMOTIONAL_SOURCE_ONLY;OPEN_ACCESS_NEEDS_CONFIRMATION",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -40412,16 +40452,16 @@
         "Address": "Hohenheimer Gärten, Garbenstraße 30, 70593 Stuttgart",
         "Postcode": "70593",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "48.7118",
+        "Longitude": "9.2113",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=48.7118%2C9.2113",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=48.7118,9.2113",
+        "Native_Map_Query": "Botanischer Garten der Uni Hohenheim, Stuttgart, Germany",
         "Website_URL": "https://gaerten.uni-hohenheim.de/einrichtung/hohenheimer-gaerten",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html | https://gay-szene.net/botanischer-garten-der-uni-hohenheim-in-stuttgart/6689/eintrag.html | https://gaerten.uni-hohenheim.de/einrichtung/hohenheimer-gaerten",
+        "Source_URLs": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html | https://gay-szene.net/botanischer-garten-der-uni-hohenheim-in-stuttgart/6689/eintrag.html | https://gaerten.uni-hohenheim.de/einrichtung/hohenheimer-gaerten | https://mapcarta.com/de/26242724",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: The Hohenheimer Gärten are Stuttgart University's botanical/exotic gardens around Garbenstraße. Their older cruising directory entry names general garden paths but no specific present meeting corner.\n\nBest times: The outdoor garden grounds are open for ordinary visiting, while the latest positive cruiser comments date from 2023 or earlier. No 2026 peak is established.\n\nCrowd: Students, researchers, garden enthusiasts and visitors; no verified current gay cruising demographic.\n\nWatch out: This is a university collection, where planted beds, conservation zones and visitors must be respected. The public garden is not a dedicated play area.",
@@ -40459,10 +40499,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_for_editorial_review",
-        "source_urls_count": 3,
-        "coordinate_precision": "source_does_not_support_single_precise_pin",
-        "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "source_urls_count": 4,
+        "coordinate_precision": "university_botanical_garden_landmark",
+        "coordinate_source_url": "https://mapcarta.com/de/26242724",
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -40653,16 +40694,16 @@
         "Address": "Public WC, Bismarckplatz, 70197 Stuttgart",
         "Postcode": "70197",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "48.77383",
+        "Longitude": "9.15563",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=48.77383%2C9.15563",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=48.77383,9.15563",
+        "Native_Map_Query": "Klappe am Bismarckplatz, Stuttgart, Germany",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html | https://gay-szene.net/klappe-am-bismarckplatz-in-stuttgart/4352/eintrag.html",
+        "Source_URLs": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html | https://gay-szene.net/klappe-am-bismarckplatz-in-stuttgart/4352/eintrag.html | https://mapcarta.com/de/N8118410166",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: The Bismarckplatz public toilet in Stuttgart-West is near the square's bus stops and small park rather than within a gay nightlife venue.\n\nBest times: One June 2026 commenter claimed a midday encounter, but other visits found doors locked unpredictably. No stable opening or cruising period can be assured.\n\nCrowd: Local residents and bus users, with individual reports of men meeting; no verified attendance level.\n\nWatch out: Municipal toilets serve the general public. Don't assume an unlocked door or tolerate unwanted approaches to other users.",
@@ -40700,10 +40741,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_for_editorial_review",
-        "source_urls_count": 2,
-        "coordinate_precision": "source_does_not_support_single_precise_pin",
-        "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "source_urls_count": 3,
+        "coordinate_precision": "Bismarckplatz_square_not_specific_toilet",
+        "coordinate_source_url": "https://mapcarta.com/de/N8118410166",
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -40901,16 +40943,16 @@
         "Address": "Schillerplatz underpass, Herrenberger Straße, 70563 Stuttgart-Vaihingen",
         "Postcode": "70563",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "48.73014",
+        "Longitude": "9.11296",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=48.73014%2C9.11296",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=48.73014,9.11296",
+        "Native_Map_Query": "Klappe am Schillerplatz, Stuttgart, Germany",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html | https://gay-szene.net/klappe-am-schillerplatz-in-stuttgart/6461/eintrag.html",
+        "Source_URLs": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html | https://gay-szene.net/klappe-am-schillerplatz-in-stuttgart/6461/eintrag.html | https://mapcarta.com/de/N9775741114",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: The old Schillerplatz 'Klappe' is a public WC around the underpass on Herrenberger Straße in Stuttgart-Vaihingen, not Stuttgart's more famous central Schillerplatz.\n\nBest times: A June 2026 visitor reported attending without an encounter. A November 2025 question asked if it remained closed; no credible current peak.\n\nCrowd: Commuters and local square users; no supported cruising demographic in 2026.\n\nWatch out: Transit-side public toilet access may be locked, and the exact doorway must be checked. Do not route to central Stuttgart's unrelated square.",
@@ -40948,10 +40990,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_for_editorial_review",
-        "source_urls_count": 2,
-        "coordinate_precision": "source_does_not_support_single_precise_pin",
-        "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "source_urls_count": 3,
+        "coordinate_precision": "Vaihingen_Schillerplatz_surface_not_indoor_WC",
+        "coordinate_source_url": "https://mapcarta.com/de/N9775741114",
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -41181,7 +41224,9 @@
         "source_urls_count": 1,
         "coordinate_precision": "source_does_not_support_single_precise_pin",
         "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "location_pin_exception_reason": "2025_ONLINE_INVITATIONS_NOT_ONSITE_PROOF",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -41678,7 +41723,9 @@
         "source_urls_count": 4,
         "coordinate_precision": "source_does_not_support_single_precise_pin",
         "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "location_pin_exception_reason": "2026_RESTORATION_CHANGES_LANDSCAPE;NO_RECENT_ACTIVITY",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -42330,16 +42377,16 @@
         "Address": "Playa El Rebollo / Els Tossals, La Marina, Elche, Alicante",
         "Postcode": "",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "38.1325",
+        "Longitude": "-0.63823",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=38.1325%2C-0.63823",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=38.1325,-0.63823",
+        "Native_Map_Query": "Dunas Playa El Rebollo y Els Tossals, La Marina, Spain",
         "Website_URL": "https://www.spain.info/en/beach/rebollo/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/spain | https://www.gays-cruising.com/en/cruising/playa_de_el_rebollo_la_marina_espana_4439 | https://www.elche.es/2026/06/un-dispositivo-de-mas-de-40-agentes-garantiza-la-seguridad-en-las-playas-este-verano/ | https://www.spain.info/en/beach/rebollo/",
+        "Source_URLs": "https://www.gays-cruising.com/en/spain | https://www.gays-cruising.com/en/cruising/playa_de_el_rebollo_la_marina_espana_4439 | https://www.elche.es/2026/06/un-dispositivo-de-mas-de-40-agentes-garantiza-la-seguridad-en-las-playas-este-verano/ | https://www.spain.info/en/beach/rebollo/ | https://mapcarta.com/es/W684945299",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Playa El Rebollo is the broad Mediterranean sandy shore with dune and pine belts near La Marina and Els Tossals south of Alicante. The source refers to older cruising use among the dunes, not a sanctioned meeting area.\n\nBest times: Warm summer beachgoing attracts naturists, but no sufficiently dated 2026 firsthand cruising encounter was recorded.\n\nCrowd: Mixed beach and naturist visitors; older gay-cruising references do not establish current numbers or a fixed age profile.\n\nWatch out: Elche patrols the public beach during season and dunes are protected. Stick to approved paths, protect fragile vegetation and respect other beach users.",
@@ -42377,10 +42424,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_for_editorial_review",
-        "source_urls_count": 4,
-        "coordinate_precision": "source_does_not_support_single_precise_pin",
-        "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "source_urls_count": 5,
+        "coordinate_precision": "Playa_El_Rebollo_public_beach_not_dunes_corner",
+        "coordinate_source_url": "https://mapcarta.com/es/W684945299",
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -43262,16 +43310,16 @@
         "Address": "Carretera del Norte 112, 35013 Las Palmas de Gran Canaria",
         "Postcode": "35013",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "28.10134",
+        "Longitude": "-15.4426",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=28.10134%2C-15.4426",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=28.10134,-15.4426",
+        "Native_Map_Query": "Centro Comercial La Ballena, Las Palmas de Gran Canaria, Spain",
         "Website_URL": "https://centrocomerciallaballena.com/contacto/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain | https://centrocomerciallaballena.com/contacto/ | https://centrocomerciallaballena.com/informacion-util/ | https://centrocomerciallaballena.com/cat/eventos/",
+        "Source_URLs": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain | https://centrocomerciallaballena.com/contacto/ | https://centrocomerciallaballena.com/informacion-util/ | https://centrocomerciallaballena.com/cat/eventos/ | https://mapcarta.com/es/W179074351",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: La Ballena is an operating shopping centre at Carretera del Norte 112 in Las Palmas. Its older directory entry does not name an identifiable toilet or adult facility.\n\nBest times: The operator lists ordinary retail activity including events in November 2026; no dated cruising visitor report establishes a busy time.\n\nCrowd: Shoppers, tenants and visitors of all ages; no documented active adult male cruising group.\n\nWatch out: This is a privately managed shopping centre, with staff and ordinary customer toilets. The centre pin is not evidence of a sex venue.",
@@ -43309,10 +43357,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_for_editorial_review",
-        "source_urls_count": 4,
-        "coordinate_precision": "source_does_not_support_single_precise_pin",
-        "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "source_urls_count": 5,
+        "coordinate_precision": "shopping_centre_building",
+        "coordinate_source_url": "https://mapcarta.com/es/W179074351",
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -44186,16 +44235,16 @@
         "Address": "Av. Touroperador Tui 18, 35100 Maspalomas",
         "Postcode": "35100",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "27.76102",
+        "Longitude": "-15.59382",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=27.76102%2C-15.59382",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=27.76102,-15.59382",
+        "Native_Map_Query": "Holidayworld Maspalomas Center, Maspalomas, Spain",
         "Website_URL": "https://www.holidayworldmaspalomas.com/en/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain | https://www.holidayworldmaspalomas.com/en/ | https://www.atrapalo.com/entradas/holidayworld-maspalomas-center-wooland_e4945046/",
+        "Source_URLs": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain | https://www.holidayworldmaspalomas.com/en/ | https://www.atrapalo.com/entradas/holidayworld-maspalomas-center-wooland_e4945046/ | https://mapcarta.com/W218738804",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Holiday World Maspalomas Center is the amusement, bowling and restaurant complex at Avenida Touroperador Tui 18. The generic directory name doesn't identify a particular WC or adult meeting space.\n\nBest times: The centre runs varied family activities, but no reported 2026 cruising encounter or recurring male meeting time was verified.\n\nCrowd: Families, holidaymakers and leisure visitors; no substantiated gay cruising scene within the property.\n\nWatch out: Ticketed attractions and private supervised premises are not authorised sex spaces. The map should identify only the entertainment centre.",
@@ -44233,10 +44282,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_for_editorial_review",
-        "source_urls_count": 3,
-        "coordinate_precision": "source_does_not_support_single_precise_pin",
-        "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "source_urls_count": 4,
+        "coordinate_precision": "Holiday_World_Maspalomas_theme_park",
+        "coordinate_source_url": "https://mapcarta.com/W218738804",
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -44426,16 +44476,16 @@
         "Address": "Playa de Las Carpinteras, GC-500, San Bartolomé de Tirajana, Gran Canaria",
         "Postcode": "",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "27.75417",
+        "Longitude": "-15.65078",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=27.75417%2C-15.65078",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=27.75417,-15.65078",
+        "Native_Map_Query": "Playa Carpinteras, Maspalomas, Spain",
         "Website_URL": "https://www.maspalomas.com/playas",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain | https://www.maspalomas.com/playas | https://naturismo.org/playas-nudistas/canarias/gran-canaria/carpinteras/ | https://guiaislascanarias.com/gran-canaria/playa-de-las-carpinteras//",
+        "Source_URLs": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain | https://www.maspalomas.com/playas | https://naturismo.org/playas-nudistas/canarias/gran-canaria/carpinteras/ | https://guiaislascanarias.com/gran-canaria/playa-de-las-carpinteras// | https://mapcarta.com/es/25742652",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Playa de las Carpinteras is an informal naturist beach along the GC-500 west of Pasito Blanco on southern Gran Canaria, also referred to as Las Mujeres. The source does not pinpoint any separate cruising nook.\n\nBest times: Sunny weather draws beach visitors, but no date-specific recent first-person cruising visit is archived.\n\nCrowd: Naturists and mixed beachgoers, no reliable adult male cruising age profile.\n\nWatch out: Rocky/pebbled access, currents and limited facilities make this more remote than managed beaches. Naturist use is not a licence for public sex.",
@@ -44473,10 +44523,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_for_editorial_review",
-        "source_urls_count": 4,
-        "coordinate_precision": "source_does_not_support_single_precise_pin",
-        "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "source_urls_count": 5,
+        "coordinate_precision": "Playa_Carpinteras_named_beach",
+        "coordinate_source_url": "https://mapcarta.com/es/25742652",
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -44694,16 +44745,16 @@
         "Address": "Maspalomas Gay Beach, Playa de Maspalomas, 35100 Gran Canaria",
         "Postcode": "35100",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "27.73612",
+        "Longitude": "-15.58425",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=27.73612%2C-15.58425",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=27.73612,-15.58425",
+        "Native_Map_Query": "Maspalomas gay beach — Kiosk 7, Maspalomas, Spain",
         "Website_URL": "https://gaycation.eu/spain/maspalomas/beaches/maspalomas-gay-beach",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/ | https://thegaypassport.com/venue/kiosk-7/ | https://gaycation.eu/spain/maspalomas/beaches/maspalomas-gay-beach | https://www.gaygrancanarias.com/cruising-gran-canaria/ | https://maspalomas.paradisr.com/gran-canaria-island/gay-men-beach-kiosk-7-maspalomas/ | https://www.tripadvisor.de/Attraction_Review-g230095-d10324892-Reviews-Kiosco_Beach_No_7-Maspalomas_San_Bartolome_de_Tirajana_Gran_Canaria_Canary_Islan.html | https://www.maspalomas.com/notmedioambiente/992-senalizaciondunas | https://www.gaygrancanarias.com/gay-beach/",
+        "Source_URLs": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/ | https://thegaypassport.com/venue/kiosk-7/ | https://gaycation.eu/spain/maspalomas/beaches/maspalomas-gay-beach | https://www.gaygrancanarias.com/cruising-gran-canaria/ | https://maspalomas.paradisr.com/gran-canaria-island/gay-men-beach-kiosk-7-maspalomas/ | https://www.tripadvisor.de/Attraction_Review-g230095-d10324892-Reviews-Kiosco_Beach_No_7-Maspalomas_San_Bartolome_de_Tirajana_Gran_Canaria_Canary_Islan.html | https://www.maspalomas.com/notmedioambiente/992-senalizaciondunas | https://www.gaygrancanarias.com/gay-beach/ | https://mapcarta.com/W701885552",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: The famous Maspalomas gay beach lies between Playa del Inglés and the lighthouse, traditionally identified by Kiosk 7. Recent gay guides disagree about numbered kiosks and place much of the male crowd between kiosks 5 and 6.\n\nBest times: Usually warm all year, with more men on weekends and in daytime. The gay-friendly naturist beach identity is independently supported, unlike most single-directory candidates.\n\nCrowd: Predominantly gay adult men and naturists, with a mix of residents and visitors from abroad; no fixed ages.\n\nWatch out: Kiosk labels have shifted, so use the actual gay beach shoreline rather than promising the current number 7. The dunes behind are protected; follow marked paths or the beach, carry sun protection and water.",
@@ -44741,10 +44792,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_for_editorial_review",
-        "source_urls_count": 8,
-        "coordinate_precision": "source_does_not_support_single_precise_pin",
-        "coordinate_source_url": null,
-        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release."
+        "source_urls_count": 9,
+        "coordinate_precision": "Maspalomas_Gay_Beach_current_named_shore_not_historic_Kiosk7",
+        "coordinate_source_url": "https://mapcarta.com/W701885552",
+        "notes": "Research retained, historical claims distinguished from confirmed 2026 visits and official facts. No public release.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -45244,7 +45296,9 @@
         "source_urls_count": 4,
         "coordinate_precision": "no_defensible_pin_for_unidentified_site",
         "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "location_pin_exception_reason": "EXACT_PUBLIC_MEETING_ROAD_UNVERIFIED",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -45441,16 +45495,16 @@
         "Address": "Bosc de Can Deu, Sabadell, Catalonia",
         "Postcode": "",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "41.57859",
+        "Longitude": "2.07446",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=41.57859%2C2.07446",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=41.57859,2.07446",
+        "Native_Map_Query": "Bosc CanDeu, Sabadell, Spain",
         "Website_URL": "https://web.sabadell.cat/index.php?id=107264&option=com_content&view=article",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/barcelona/spain | https://www.gays-cruising.com/pl/cruising/bosc_candeu_sabadell_espana_57473 | https://web.sabadell.cat/index.php?id=107264&option=com_content&view=article | https://agricultura.gencat.cat/ca/ambits/ramaderia/sanitat-animal/programes-sanitaris/programes-sanitaris-porci/pesta-porcina-africana/ | https://www.isabadell.cat/politica/la-junta-de-portaveus-demana-revisar-les-restriccions-de-la-pesta-porcina-339299/",
+        "Source_URLs": "https://www.gays-cruising.com/en/barcelona/spain | https://www.gays-cruising.com/pl/cruising/bosc_candeu_sabadell_espana_57473 | https://web.sabadell.cat/index.php?id=107264&option=com_content&view=article | https://agricultura.gencat.cat/ca/ambits/ramaderia/sanitat-animal/programes-sanitaris/programes-sanitaris-porci/pesta-porcina-africana/ | https://www.isabadell.cat/politica/la-junta-de-portaveus-demana-revisar-les-restriccions-de-la-pesta-porcina-339299/ | https://mapcarta.com/W148893568",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Bosc de Can Deu is the woodland around Masia de Can Deu north of Sabadell. Its historical directories refer to forest paths, but public recreational entry remains restricted under African swine fever controls.\n\nBest times: No valid cruising peak can be recommended while the natural area is restricted. Site check-ins are not physical encounters.\n\nCrowd: Former forest walkers and historical cruising references; the access ban supersedes older visitor descriptions.\n\nWatch out: The Catalan authorities restrict access to high-risk natural areas, and Sabadell explicitly names Can Deu. Do not enter closed tracks; reopening must be verified by officials.",
@@ -45488,10 +45542,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "flag_or_exclusion_pending_review",
-        "source_urls_count": 5,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 6,
+        "coordinate_precision": "Bosc_Can_Deu_public_orientation_only_ACCESS_PROHIBITED",
+        "coordinate_source_url": "https://mapcarta.com/W148893568",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -45686,16 +45741,16 @@
         "Address": "Carrefour Macarena, Ronda Urbana Norte s/n, 41015 Sevilla",
         "Postcode": "41015",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "37.41815",
+        "Longitude": "-5.97412",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=37.41815%2C-5.97412",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=37.41815,-5.97412",
+        "Native_Map_Query": "Carrefour Macarena, Seville, Spain",
         "Website_URL": "https://www.carrefour.es/tiendas-carrefour/hipermercados/carrefour/macarena_sevilla.aspx",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/sevilla/sevilla/spain | https://www.carrefour.es/tiendas-carrefour/hipermercados/carrefour/macarena_sevilla.aspx | https://www.carrefourproperty.es/centre-commercial/carrefour-macarena/ | https://guiacruising.wordpress.com/2018/03/30/sevilla-zonas/ | https://radarsuper.com/c/sevilla/sevilla/carrefour-macarena-sevilla",
+        "Source_URLs": "https://www.gays-cruising.com/en/sevilla/sevilla/spain | https://www.carrefour.es/tiendas-carrefour/hipermercados/carrefour/macarena_sevilla.aspx | https://www.carrefourproperty.es/centre-commercial/carrefour-macarena/ | https://guiacruising.wordpress.com/2018/03/30/sevilla-zonas/ | https://radarsuper.com/c/sevilla/sevilla/carrefour-macarena-sevilla | https://mapcarta.com/es/W39730485",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Carrefour Macarena is the hypermarket and commercial complex on Ronda Urbana Norte in Seville. A 2018 local guide named first-floor car-park toilets as a historic meeting area, not the whole mall.\n\nBest times: The hypermarket trades on normal retail days; there are no trustworthy 2026 cruising visitor reports or busy periods.\n\nCrowd: Shoppers and retail staff; former gay cruising stories are dated and not evidence of a current male crowd.\n\nWatch out: The toilet layout and access may have changed. It is private family retail space, not a designated adult facility.",
@@ -45733,10 +45788,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
-        "source_urls_count": 5,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 6,
+        "coordinate_precision": "Carrefour_Macarena_shopping_centre_not_toilet",
+        "coordinate_source_url": "https://mapcarta.com/es/W39730485",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -45944,16 +46000,16 @@
         "Address": "Jardines del Guadalquivir, Calle Matemáticos Rey Pastor y Castro, Isla de la Cartuja, Sevilla",
         "Postcode": "",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "37.39815",
+        "Longitude": "-6.00432",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=37.39815%2C-6.00432",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=37.39815,-6.00432",
+        "Native_Map_Query": "Jardines del Guadalquivir, Seville, Spain",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/cruising/jardines_del_guadalquivir_sevilla_espana_24963 | https://cruisingmap.com/34981-jardines-del-guadalquivir | https://www.elespanol.com/sevilla/20250730/zona-cruising-pulmon-verde-quiere-ayuntamiento-recuperar-jardines-guadalquivir/1003743867424_0.html | https://www.diariodesevilla.es/sevilla/Jardines-Guadalquivir-nueva-oportunidad-joya-destrozada-Sevilla_0_1912009178.html | https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/espacios/isla-de-la-cartuja | https://www.waze.com/es-419/live-map/directions/es/an/sevilla/jardines-del-guadalquivir?to=place.ChIJKwlSsPVrEg0RaI_00dE35wI",
+        "Source_URLs": "https://www.gays-cruising.com/en/cruising/jardines_del_guadalquivir_sevilla_espana_24963 | https://cruisingmap.com/34981-jardines-del-guadalquivir | https://www.elespanol.com/sevilla/20250730/zona-cruising-pulmon-verde-quiere-ayuntamiento-recuperar-jardines-guadalquivir/1003743867424_0.html | https://www.diariodesevilla.es/sevilla/Jardines-Guadalquivir-nueva-oportunidad-joya-destrozada-Sevilla_0_1912009178.html | https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/espacios/isla-de-la-cartuja | https://www.waze.com/es-419/live-map/directions/es/an/sevilla/jardines-del-guadalquivir?to=place.ChIJKwlSsPVrEg0RaI_00dE35wI | https://mapcarta.com/es/W530743837",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Jardines del Guadalquivir occupy a former Expo 92 garden landscape on Seville's Isla de la Cartuja by Puente de la Barqueta and Jardín Americano. Two cruising directories and a 2025 local investigation describe an older cruising reputation.\n\nBest times: There are no well-supported current encounter times. Restoration of landscaping and paths may have changed the old secluded sections.\n\nCrowd: Walkers, park users and historic reports of male meetings; present counts and age range are unverified.\n\nWatch out: The park has undergone costly rehabilitation, with uncertain nighttime gate access. Respect the upgraded gardens and avoid entering fenced work areas.",
@@ -45991,10 +46047,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
-        "source_urls_count": 6,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 7,
+        "coordinate_precision": "Jardines_del_Guadalquivir_Seville_south_garden_reference",
+        "coordinate_source_url": "https://mapcarta.com/es/W530743837",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -46190,16 +46247,16 @@
         "Address": "Estación de Autobuses Prado de San Sebastián, C. Manuel Vázquez Sagastizábal, 41004 Sevilla",
         "Postcode": "41004",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "37.38125",
+        "Longitude": "-5.9854",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=37.38125%2C-5.9854",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=37.38125,-5.9854",
+        "Native_Map_Query": "Wc Estación de autobuses del Prado de San Sebastián, Seville, Spain",
         "Website_URL": "https://ctas.es/lineas-y-horarios/estaciones-y-aeropuerto",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/cruising/wc_estacion_sevilla_espana_17568 | https://ctas.es/lineas-y-horarios/estaciones-y-aeropuerto | https://www.autobusesplazadearmas.es/alertas/ | https://guiacruising.wordpress.com/2018/03/30/sevilla-zonas/",
+        "Source_URLs": "https://www.gays-cruising.com/en/cruising/wc_estacion_sevilla_espana_17568 | https://ctas.es/lineas-y-horarios/estaciones-y-aeropuerto | https://www.autobusesplazadearmas.es/alertas/ | https://guiacruising.wordpress.com/2018/03/30/sevilla-zonas/ | https://mapcarta.com/W70081023",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: The listing refers to visitor toilets at Prado de San Sebastián bus terminal on Calle Manuel Vázquez Sagastizábal in central Seville, not a separate gay venue.\n\nBest times: A 2018 local guide listed station toilets, but there are no reliable 2026 cruising reports or specific opening hours for the WC.\n\nCrowd: Travellers, bus staff and commuters; no verified contemporary male cruising scene.\n\nWatch out: The operating terminal has security and normal public facilities. Don't assume a restroom is available after the last bus service.",
@@ -46237,10 +46294,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
-        "source_urls_count": 4,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 5,
+        "coordinate_precision": "Seville_Prado_bus_station_not_bathroom",
+        "coordinate_source_url": "https://mapcarta.com/W70081023",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -46427,16 +46485,16 @@
         "Address": "Ronda del Tamarguillo 27, 41006 Sevilla",
         "Postcode": "41006",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "37.3764481",
+        "Longitude": "-5.9614767",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=37.3764481%2C-5.9614767",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=37.3764481,-5.9614767",
+        "Native_Map_Query": "Alcampo Tamarguillo, Seville, Spain",
         "Website_URL": "https://ccalcampotamarguillo.es/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/sevilla/sevilla/spain | https://ccalcampotamarguillo.es/ | https://ccalcampotamarguillo.es/horario | https://ccalcampotamarguillo.es/evento/festivos-apertura-2026",
+        "Source_URLs": "https://www.gays-cruising.com/en/sevilla/sevilla/spain | https://ccalcampotamarguillo.es/ | https://ccalcampotamarguillo.es/horario | https://ccalcampotamarguillo.es/evento/festivos-apertura-2026 | https://www.123coordenadas.com/coordinates/862341-ronda-del-tamarguillo-27-sevilla",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Alcampo Tamarguillo is the busy shopping centre and hypermarket on Ronda del Tamarguillo 27 in Seville. The original directory names only the centre, not a specific restroom or parking facility.\n\nBest times: Commercial spaces generally trade around 10:00–22:00, but that is not a cruising timetable. No 2026 encounter is documented.\n\nCrowd: Shoppers, staff and families, not a proven gay male cruising group.\n\nWatch out: It is private managed retail property with different shop hours and staff. Don't invent a toilet location or present it as a sex venue.",
@@ -46474,10 +46532,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
-        "source_urls_count": 4,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 5,
+        "coordinate_precision": "Alcampo_Tamarguillo_27_street_address_geocode",
+        "coordinate_source_url": "https://www.123coordenadas.com/coordinates/862341-ronda-del-tamarguillo-27-sevilla",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -46967,7 +47026,9 @@
         "source_urls_count": 5,
         "coordinate_precision": "no_defensible_pin_for_unidentified_site",
         "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "location_pin_exception_reason": "SOURCE_CITY_TORDERA_CORRECTED_PALAFOLLS;EXACT_SPOT_UNVERIFIED",
+        "location_pin_exception_category": "named_place_pending_map_geometry"
       }
     },
     {
@@ -47199,7 +47260,9 @@
         "source_urls_count": 3,
         "coordinate_precision": "no_defensible_pin_for_unidentified_site",
         "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "location_pin_exception_reason": "INDEPENDENT_OCTOBER_2026_ALIAS;EXACT_LEGAL_ENTRANCE_UNKNOWN",
+        "location_pin_exception_category": "duplicate_do_not_create_another_pin"
       }
     },
     {
@@ -47398,16 +47461,16 @@
         "Address": "Platja del Torn, L'Hospitalet de l'Infant, Tarragona",
         "Postcode": "",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "40.9709",
+        "Longitude": "0.8937",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=40.9709%2C0.8937",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=40.9709,0.8937",
+        "Native_Map_Query": "Platja del Torn, L'Infant, Spain",
         "Website_URL": "https://www.hospitalet-valldellors.cat/en/the-sea/beaches/%40%40beach_view/platja-del-torn",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.popcorn.dating/spain/tarragona/l%27infant/locations/public-sex/outdoor/platja-del-torn/18421/ | https://www.hospitalet-valldellors.cat/en/the-sea/beaches/%40%40beach_view/platja-del-torn | https://naturismo.org/playas-nudistas/catalunya/tarragona/el-torn/ | https://www.midit2020.com/es/actualidad/la-midit-treu-a-licitacio-les-d-obres-de-l-actuacio-de-regulacio-d-accessos-rodats-als-aparcaments-del-sector-sud-de-l-ein-la-rojala-platja-del-torn-emmarcat-al-pstd-financat-en-el-marc-del-prtr-next-generation-eu | https://opendatalicit.com/licitaciones/19352423-es-objecte-d-aquest-el-contracte-l-execucio-de-les-obres-incloses-al-projecte",
+        "Source_URLs": "https://www.popcorn.dating/spain/tarragona/l%27infant/locations/public-sex/outdoor/platja-del-torn/18421/ | https://www.hospitalet-valldellors.cat/en/the-sea/beaches/%40%40beach_view/platja-del-torn | https://naturismo.org/playas-nudistas/catalunya/tarragona/el-torn/ | https://www.midit2020.com/es/actualidad/la-midit-treu-a-licitacio-les-d-obres-de-l-actuacio-de-regulacio-d-accessos-rodats-als-aparcaments-del-sector-sud-de-l-ein-la-rojala-platja-del-torn-emmarcat-al-pstd-financat-en-el-marc-del-prtr-next-generation-eu | https://opendatalicit.com/licitaciones/19352423-es-objecte-d-aquest-el-contracte-l-execucio-de-les-obres-incloses-al-projecte | https://nudistcompass.com/place/559",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Platja del Torn is the well-known clothing-optional beach at L'Hospitalet de l'Infant, protected by the La Rojala nature area. The historic report mentions woodland toward the southern end, not an official adult play area.\n\nBest times: Naturist visitors are common in summer, but the Popcorn listing does not give verified recent firsthand male cruising encounters.\n\nCrowd: Mixed naturists and beachgoers, not reliably a men-only cruising crowd.\n\nWatch out: A natural protected coastal zone with regulated vehicle entrances and fragile dunes. Follow marked paths, and don't imply naturism allows sex in public.",
@@ -47445,10 +47508,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
-        "source_urls_count": 5,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 6,
+        "coordinate_precision": "Platja_del_Torn_naturist_beach_main_place_not_specific_southern_woods",
+        "coordinate_source_url": "https://nudistcompass.com/place/559",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -47890,16 +47954,16 @@
         "Address": "Centro Comercial Neptuno, Calle Arabial 45, 18004 Granada",
         "Postcode": "18004",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "37.16817",
+        "Longitude": "-3.60734",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=37.16817%2C-3.60734",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=37.16817,-3.60734",
+        "Native_Map_Query": "Aseos Neptuno, Granada, Spain",
         "Website_URL": "https://webneptuno.com/centro-comercial-neptuno/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/cruising/aseos_neptuno_granada_espana_9731 | https://webneptuno.com/centro-comercial-neptuno/ | https://webneptuno.com/parking/ | https://carta.menu/restaurants/granada-4/centro-comercial-neptuno",
+        "Source_URLs": "https://www.gays-cruising.com/en/cruising/aseos_neptuno_granada_espana_9731 | https://webneptuno.com/centro-comercial-neptuno/ | https://webneptuno.com/parking/ | https://carta.menu/restaurants/granada-4/centro-comercial-neptuno | https://mapcarta.com/es/33031046",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Aseos Neptuno refers to customer toilets at Centro Comercial Neptuno on Calle Arabial in Granada. The centre operates with shops, cinema and parking, but its source doesn't identify the relevant toilet bank.\n\nBest times: No recent 2026 firsthand cruising encounters. Reviews of a sparsely occupied mall concern retail experience rather than activity.\n\nCrowd: Retail and cinema customers; no verified regular gay male cruising mix.\n\nWatch out: The 24-hour car park is separate from mall restroom access; empty shops do not make toilets a permitted adult venue.",
@@ -47937,10 +48001,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
-        "source_urls_count": 4,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 5,
+        "coordinate_precision": "Centro_Comercial_Neptuno_Granada_not_restroom",
+        "coordinate_source_url": "https://mapcarta.com/es/33031046",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -48127,16 +48192,16 @@
         "Address": "Estación de Autobuses Granada, Avenida Juan Pablo II s/n, 18014 Granada",
         "Postcode": "18014",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "37.19949405",
+        "Longitude": "-3.6137972349169",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=37.19949405%2C-3.6137972349169",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=37.19949405,-3.6137972349169",
+        "Native_Map_Query": "Baños Estación Buses, Granada, Spain",
         "Website_URL": "https://www.alsa.es/es/estaciones/estacion-granada",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/cruising/banos_estacion_buses_granada_espana_22808 | https://www.alsa.es/es/estaciones/estacion-granada | https://www.spain.info/es/transporte/estacion-autobuses-granada/",
+        "Source_URLs": "https://www.gays-cruising.com/en/cruising/banos_estacion_buses_granada_espana_22808 | https://www.alsa.es/es/estaciones/estacion-granada | https://www.spain.info/es/transporte/estacion-autobuses-granada/ | https://www.semtayr.es/es/estacion-de-autobuses-de-granada",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Granada's main coach station is at Avenida Juan Pablo II, with public facilities for travellers. The source names bathrooms but does not identify a specific floor or section.\n\nBest times: Alsa advertises station operations around the clock, but this does not prove WC access 24 hours or cruising activity at any time.\n\nCrowd: Bus passengers, cleaners and station staff; no verified adult male cruising audience.\n\nWatch out: Managed transport terminal with security. Staff and other users' privacy take precedence over old online listings.",
@@ -48174,10 +48239,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
-        "source_urls_count": 3,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 4,
+        "coordinate_precision": "Granada_bus_station_officially_published_coordinates",
+        "coordinate_source_url": "https://www.semtayr.es/es/estacion-de-autobuses-de-granada",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -48368,16 +48434,16 @@
         "Address": "Centro Comercial Alcampo Granada, Avenida Juan Pablo II 88, 18013 Granada",
         "Postcode": "18013",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "37.19853",
+        "Longitude": "-3.60897",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=37.19853%2C-3.60897",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=37.19853,-3.60897",
+        "Native_Map_Query": "Baños 1ª Planta Parking Alcampo, Granada, Spain",
         "Website_URL": "https://ccalcampogranada.es/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/granada/granada/spain | https://www.granada.org/inet/wpim.nsf/e91b363812a3a3f2c1256fb2003edf38/2cf23ececfbba9e2c12572ba0038eefe%21OpenDocument | https://ccalcampogranada.es/ | https://ccalcampogranada.es/horario",
+        "Source_URLs": "https://www.gays-cruising.com/en/granada/granada/spain | https://www.granada.org/inet/wpim.nsf/e91b363812a3a3f2c1256fb2003edf38/2cf23ececfbba9e2c12572ba0038eefe%21OpenDocument | https://ccalcampogranada.es/ | https://ccalcampogranada.es/horario | https://mapcarta.com/es/W40435560",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: The old claim concerns a first-floor parking-level toilet at Centro Comercial Alcampo Granada on Avenida Juan Pablo II 88. The municipality confirms the car park exists but cannot validate the former toilet layout.\n\nBest times: The shopping centre has regular daytime and evening commercial hours. No proven cruising peak or 2026 firsthand encounter.\n\nCrowd: Retail customers, drivers and staff; no supported recurring male audience.\n\nWatch out: Parking floor access and restroom positions may differ; the private centre is not a licensed sex venue.",
@@ -48415,10 +48481,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
-        "source_urls_count": 4,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 5,
+        "coordinate_precision": "Alcampo_Granada_mall_not_specific_first_floor_WC",
+        "coordinate_source_url": "https://mapcarta.com/es/W40435560",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -48623,16 +48690,16 @@
         "Address": "Parque Comercial Granaita, Calle Luis Buñuel 6, 18197 Pulianas",
         "Postcode": "18197",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "37.21308",
+        "Longitude": "-3.61947",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=37.21308%2C-3.61947",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=37.21308,-3.61947",
+        "Native_Map_Query": "Baños Parking Granaita, Pulianas, Spain",
         "Website_URL": "https://granaita.com/info-para-tu-visita/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/granada/granada/spain | https://granaita.com/info-para-tu-visita/ | https://granaita.com/como-llegar/ | https://granaita.com/noticias/el-pasaje-del-terror-de-granaita-se-amplia/ | https://www.parkito.es/es/Spain/parking/pulianas/parking-parque-comercial-granaita-7751",
+        "Source_URLs": "https://www.gays-cruising.com/en/granada/granada/spain | https://granaita.com/info-para-tu-visita/ | https://granaita.com/como-llegar/ | https://granaita.com/noticias/el-pasaje-del-terror-de-granaita-se-amplia/ | https://www.parkito.es/es/Spain/parking/pulianas/parking-parque-comercial-granaita-7751 | https://mapcarta.com/W679205476",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Granaita shopping park in Pulianas, north of Granada, has managed customer parking and toilets. The directory's claimed meeting place is an unidentified bathroom near parking, not the whole leisure centre.\n\nBest times: No confirmed recent encounters. An organised ticketed Halloween event uses the basement car park in early November 2026, changing ordinary parking flows.\n\nCrowd: Shoppers, diners, cinema/leisure visitors, not a documented gay cruising crowd.\n\nWatch out: This is distinct from Alcampo Granada and Nevada Shopping. Event closures and venue security can restrict parking levels; don't treat ticketed zones as public toilets.",
@@ -48670,10 +48737,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
-        "source_urls_count": 5,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 6,
+        "coordinate_precision": "Granaita_Pulianas_mall_not_parking_WC",
+        "coordinate_source_url": "https://mapcarta.com/W679205476",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -48869,16 +48937,16 @@
         "Address": "Nevada Shopping, Av. de las Palmeras 75, 18100 Armilla",
         "Postcode": "18100",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "37.14644",
+        "Longitude": "-3.61373",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=37.14644%2C-3.61373",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=37.14644,-3.61373",
+        "Native_Map_Query": "Aseos parking cubierto Nevada Shopping, Armilla, Spain",
         "Website_URL": "https://nevada.shopping/servicios/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/granada/granada/spain | https://nevada.shopping/servicios/ | https://nevada.shopping/horario-comercial/ | https://www.espainfo.com/nevada-shopping-F110DC5001AD840 | https://tempoparkings.com/parkings/aparcamiento-subterraneo-de-nevada-shopping-armilla",
+        "Source_URLs": "https://www.gays-cruising.com/en/granada/granada/spain | https://nevada.shopping/servicios/ | https://nevada.shopping/horario-comercial/ | https://www.espainfo.com/nevada-shopping-F110DC5001AD840 | https://tempoparkings.com/parkings/aparcamiento-subterraneo-de-nevada-shopping-armilla | https://mapcarta.com/W129842113",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Nevada Shopping is a large shopping and entertainment mall on Avenida de las Palmeras 75 in Armilla, south of Granada. The operator confirms both covered parking and customer toilets, but not a WC inside the car park.\n\nBest times: Standard mall trading hours are published, with no verified male cruising activity in 2026.\n\nCrowd: Customers, families and centre workers; no supported gay cruising scene.\n\nWatch out: Restroom and car park access may differ from the general mall timetable; private managed commercial premises are not approved adult play spaces.",
@@ -48916,10 +48984,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
-        "source_urls_count": 5,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 6,
+        "coordinate_precision": "Nevada_Shopping_Armilla_mall_not_parking_WC",
+        "coordinate_source_url": "https://mapcarta.com/W129842113",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -49188,7 +49257,9 @@
         "source_urls_count": 6,
         "coordinate_precision": "no_defensible_pin_for_unidentified_site",
         "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "location_pin_exception_reason": "A31_2026_WC_DEMOLITION_AND_REBUILD;REOPENING_NOT_VERIFIED",
+        "location_pin_exception_category": "unsafe_or_closed_site_reference"
       }
     },
     {
@@ -49382,16 +49453,16 @@
         "Address": "Domaine d'Abbadia, Corniche Basque, Hendaye",
         "Postcode": "",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "43.37998",
+        "Longitude": "-1.75031",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=43.37998%2C-1.75031",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=43.37998,-1.75031",
+        "Native_Map_Query": "Abadia, Hendaye, France",
         "Website_URL": "https://www.hendaye.fr/fr/hendaye-decouverte/patrimoine-histoire/domaine-dabbadia/",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/france | https://www.hendaye.fr/fr/hendaye-decouverte/patrimoine-histoire/domaine-dabbadia/ | https://www.hendaye-tourisme.fr/nature-et-eco-tourisme/parc-naturel-abbadia/ | https://www.hendaye-tourisme.fr/activites/activites-culturelles/chateau-abbadia/ | https://cpie-euskal-itsasbazterra.eu/eu/agenda/1582-route_de_la_corniche_partiellement_fermee_acces_a_asporotsttipi_possible_par_hendaye/autre/2026-07-10",
+        "Source_URLs": "https://www.gays-cruising.com/en/france | https://www.hendaye.fr/fr/hendaye-decouverte/patrimoine-histoire/domaine-dabbadia/ | https://www.hendaye-tourisme.fr/nature-et-eco-tourisme/parc-naturel-abbadia/ | https://www.hendaye-tourisme.fr/activites/activites-culturelles/chateau-abbadia/ | https://cpie-euskal-itsasbazterra.eu/eu/agenda/1582-route_de_la_corniche_partiellement_fermee_acces_a_asporotsttipi_possible_par_hendaye/autre/2026-07-10 | https://mapcarta.com/W32940595",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Domaine d'Abbadia is the protected grassy and woodland coastal land between Hendaye and Urrugne, west of the town. The generic 'Abadia' entry doesn't identify a specific cruising trail or cliff viewpoint.\n\nBest times: There are no trustworthy recent firsthand cruising encounters or busy hours.\n\nCrowd: Hikers, nature visitors and families; no verified adult male cruising scene.\n\nWatch out: Some cliff-base paths are strictly closed due to rockfall risk. This is protected Conservatoire du littoral land, separate from ticketed château grounds.",
@@ -49429,10 +49500,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
-        "source_urls_count": 5,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "source_urls_count": 6,
+        "coordinate_precision": "Domaine_Abbadia_public_nature_park",
+        "coordinate_source_url": "https://mapcarta.com/W32940595",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -49681,7 +49753,9 @@
         "possible_duplicate_of_indices": [
           775,
           776
-        ]
+        ],
+        "location_pin_exception_reason": "DUPLICATE_OF_776_AND_775;SOURCE_FRANCE_CITY_KEMBS_WRONG",
+        "location_pin_exception_category": "duplicate_do_not_create_another_pin"
       }
     },
     {
@@ -50431,7 +50505,9 @@
         "source_urls_count": 4,
         "coordinate_precision": "no_defensible_pin_for_unidentified_site",
         "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "location_pin_exception_reason": "COMMUNITY_GAY_SOCIAL_SPOT_NOT_VALIDATED_AS_SEX_CRUISING",
+        "location_pin_exception_category": "ambiguous_or_broad_site"
       }
     },
     {
@@ -50879,11 +50955,11 @@
         "Address": "A35 Aire de Fronholz southbound, 68127 Sainte-Croix-en-Plaine",
         "Postcode": "68127",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "48.025515",
+        "Longitude": "7.37146",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=48.025515%2C7.37146",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=48.025515,7.37146",
+        "Native_Map_Query": "Aire de Fronholz, Sainte-Croix-en-Plaine, France",
         "Website_URL": "",
         "Instagram_URL": "",
         "Facebook_URL": "",
@@ -50927,9 +51003,10 @@
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_pending_review",
         "source_urls_count": 5,
-        "coordinate_precision": "no_defensible_pin_for_unidentified_site",
-        "coordinate_source_url": null,
-        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated."
+        "coordinate_precision": "A35_Fronholz_southbound_source_published_coordinates_not_woods",
+        "coordinate_source_url": "https://gatlass.com/place/1045/airedefronholza35/saintecroixenplaine",
+        "notes": "Archived country classifications kept intact, geographical corrections in proposed Backroom fields only. Source reports and official access separated.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -51614,16 +51691,16 @@
         "Address": "Nunhead Cemetery, Linden Grove, London SE15",
         "Postcode": "SE15",
         "Nearest_Station": "",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "51.46271",
+        "Longitude": "-0.05154",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=51.46271%2C-0.05154",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=51.46271,-0.05154",
+        "Native_Map_Query": "Nunhead Cemetery, London, United Kingdom",
         "Website_URL": "https://www.southwark.gov.uk/life-events/funerals/cemeteries/nunhead-cemetery",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.splashd.app/map/gb/eng/london | https://www.cruisinggays.com/map/?cityid=7615&filter=4 | https://www.thegayuk.com/listings/business-listing/uk/london/lewisham/nunhead-cemetery/ | https://www.southwark.gov.uk/life-events/funerals/cemeteries/nunhead-cemetery | https://www.southwark.gov.uk/culture-and-sport/parks-and-open-spaces/park-opening-times",
+        "Source_URLs": "https://www.splashd.app/map/gb/eng/london | https://www.cruisinggays.com/map/?cityid=7615&filter=4 | https://www.thegayuk.com/listings/business-listing/uk/london/lewisham/nunhead-cemetery/ | https://www.southwark.gov.uk/life-events/funerals/cemeteries/nunhead-cemetery | https://www.southwark.gov.uk/culture-and-sport/parks-and-open-spaces/park-opening-times | https://mapcarta.com/W4993995",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Nunhead Cemetery is a working historic Victorian cemetery around Linden Grove and Limesford Road in Southwark. Older gay-site directories name its wooded paths without recent corroborated encounters.\n\nBest times: Southwark lists November–February gates as 08:30–16:00. Old suggestions of nocturnal visits are incompatible with current site access.\n\nCrowd: Mourners, walkers and heritage visitors; no reliable recent cruising attendance or age mix.\n\nWatch out: Respect graves and burials, obey locked-gate times, and don't advertise the active cemetery as an after-dark sex venue.",
@@ -51661,10 +51738,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "flag_for_access_or_current_use",
-        "source_urls_count": 5,
-        "coordinate_precision": "no_defensible_subarea_pin",
-        "coordinate_source_url": null,
-        "notes": "Site records and old-source claims preserved. Current operator access and closures distinguish historical and working locations."
+        "source_urls_count": 6,
+        "coordinate_precision": "historic_cemetery_landmark_locked_at_night",
+        "coordinate_source_url": "https://mapcarta.com/W4993995",
+        "notes": "Site records and old-source claims preserved. Current operator access and closures distinguish historical and working locations.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
@@ -52148,7 +52226,9 @@
         "source_urls_count": 2,
         "coordinate_precision": "no_defensible_subarea_pin",
         "coordinate_source_url": null,
-        "notes": "Site records and old-source claims preserved. Current operator access and closures distinguish historical and working locations."
+        "notes": "Site records and old-source claims preserved. Current operator access and closures distinguish historical and working locations.",
+        "location_pin_exception_reason": "2026_2028_SECTION_CLOSED;SOURCE_UNSPECIFIED_PATH_PIN",
+        "location_pin_exception_category": "unsafe_or_closed_site_reference"
       }
     },
     {
@@ -52846,7 +52926,9 @@
         "source_urls_count": 3,
         "coordinate_precision": "no_defensible_subarea_pin",
         "coordinate_source_url": null,
-        "notes": "Site records and old-source claims preserved. Current operator access and closures distinguish historical and working locations."
+        "notes": "Site records and old-source claims preserved. Current operator access and closures distinguish historical and working locations.",
+        "location_pin_exception_reason": "PUB_CLOSED_2023;CONVERTED_CHILDRENS_SOFTPLAY_2026;DO_NOT_PUBLISH",
+        "location_pin_exception_category": "unsafe_or_closed_site_reference"
       }
     },
     {
@@ -53058,16 +53140,16 @@
         "Address": "Luitpoldpark, south edge near Scheidplatz, 80804 München",
         "Postcode": "80804",
         "Nearest_Station": "Scheidplatz (U2/U3)",
-        "Latitude": "",
-        "Longitude": "",
-        "Google_Maps_URL": "",
-        "Apple_Maps_URL": "",
-        "Native_Map_Query": "",
+        "Latitude": "48.17262",
+        "Longitude": "11.56985",
+        "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=48.17262%2C11.56985",
+        "Apple_Maps_URL": "https://maps.apple.com/?ll=48.17262,11.56985",
+        "Native_Map_Query": "Scheidplatz, Munich, Germany",
         "Website_URL": "https://gay-szene.net/luitpoldpark-in-muenchen/6222/eintrag.html",
         "Instagram_URL": "",
         "Facebook_URL": "",
         "Other_URL": "",
-        "Source_URLs": "https://www.gays-cruising.com/en/cruising/scheidplatz_munchen_deutschland_13147 | https://gay-szene.net/luitpoldpark-in-muenchen/6222/eintrag.html | https://www.cruisinggays.com/munchen/areas/76875-luitpoldpark/ | https://gaycation.eu/germany/munich/cruising-areas/luitpoldpark",
+        "Source_URLs": "https://www.gays-cruising.com/en/cruising/scheidplatz_munchen_deutschland_13147 | https://gay-szene.net/luitpoldpark-in-muenchen/6222/eintrag.html | https://www.cruisinggays.com/munchen/areas/76875-luitpoldpark/ | https://gaycation.eu/germany/munich/cruising-areas/luitpoldpark | https://mapcarta.com/36269974",
         "Share_URL": "",
         "Image_URL": "",
         "Description": "Where: Scheidplatz is the U-Bahn junction beside Luitpoldpark in Munich-Schwabing. The old Splashd claim refers to wooded park paths, not the former station toilet, and the latter should not be promoted by mistake.\n\nBest times: A 6 June 2026 forum post describes a group of men meeting in Luitpoldpark, while other directory comments remain anecdotal. Warm evenings are plausible but no repeat peak has been proven.\n\nCrowd: Some adult gay men are mentioned in contemporary comments, alongside park walkers and families.\n\nWatch out: The south-central Luitpoldpark slope and Scheidplatz transit station have different access rules. Stay on public park paths and respect other users.",
@@ -53105,10 +53187,11 @@
         "completed": true,
         "completed_date_berlin": "2026-11-08",
         "outcome": "structured_candidate_prepared_hold_for_review",
-        "source_urls_count": 4,
-        "coordinate_precision": "no_defensible_subarea_pin",
-        "coordinate_source_url": null,
-        "notes": "Site records and old-source claims preserved. Current operator access and closures distinguish historical and working locations."
+        "source_urls_count": 5,
+        "coordinate_precision": "Luitpoldpark_Munich_park_not_station_WC",
+        "coordinate_source_url": "https://mapcarta.com/36269974",
+        "notes": "Site records and old-source claims preserved. Current operator access and closures distinguish historical and working locations.",
+        "post_processing_note": "Follow-up GPS audit applied named real-world place/point only. Not verified exact sexual activity point. Restrictions remain in place."
       }
     },
     {
