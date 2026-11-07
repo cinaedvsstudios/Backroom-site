@@ -1,0 +1,2683 @@
+{
+  "_meta": {
+    "title": "Backroom Cruising — Group A and B working research set",
+    "created_berlin_date": "2026-11-07",
+    "status": "BUILD_IN_PROGRESS",
+    "target_count": 210,
+    "stored_count": 16,
+    "source_priority_file": "research/cruising/part5/remaining_793_priority_groups_2026-11-07.json",
+    "source_master_queue": "research/cruising/part5/master_queue.json",
+    "source_triage_file": "research/cruising/part5/listing_completeness_triage_2026-11-07.json",
+    "source_archives": "research/cruising/part5/{A,B,C,D}/batch_*.json",
+    "scope": "64 group A and 146 group B; priority labels are preliminary",
+    "warnings": [
+      "Directory entries do not verify activity.",
+      "Group A recent-positive indication is heuristic, not confirmation.",
+      "All previously saved research retained verbatim.",
+      "Research only, not a production venue import."
+    ],
+    "missing_archive_rows": []
+  },
+  "candidates": [
+    {
+      "queue_index": 157,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-SLOVENIA-03",
+      "name": "Rest area Barje (south area)",
+      "city": "Ljubljana",
+      "country": "Slovenia",
+      "priority_assessment": {
+        "queue_index": 157,
+        "candidate_id": "GC1-SLOVENIA-03",
+        "name": "Rest area Barje (south area)",
+        "city": "Ljubljana",
+        "country": "Slovenia",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 50,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0156_0160.json"
+      },
+      "original_queue_record": {
+        "index": 157,
+        "section": "A",
+        "id": "GC1-SLOVENIA-03",
+        "name": "Rest area Barje (south area)",
+        "city": "Ljubljana",
+        "country": "Slovenia",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 154,
+            "u": "https://www.gays-cruising.com/en/slovenia"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 157,
+        "candidate_id": "GC1-SLOVENIA-03",
+        "name": "Rest area Barje (south area)",
+        "city": "Ljubljana",
+        "country": "Slovenia",
+        "bucket": "quarter_complete",
+        "description_words": 50,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 157,
+        "proposal_id": "GC1-SLOVENIA-03",
+        "name": "Rest area Barje (south area)",
+        "city": "Ljubljana",
+        "country": "Slovenia",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 154,
+            "u": "https://www.gays-cruising.com/en/slovenia"
+          }
+        ],
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "HTTP_451_spot_page_but_country_dated_comments",
+            "caution": "Original primary site page/index"
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_batch",
+            "caution": "Not checked, do not interpret as no match"
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_batch",
+            "caution": "Not checked, do not interpret as no match"
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_batch",
+            "caution": "Not checked, do not interpret as no match"
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_batch",
+            "caution": "Not checked, do not interpret as no match"
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_batch",
+            "caution": "Not checked, do not interpret as no match"
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_batch",
+            "caution": "Not checked, do not interpret as no match"
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_batch",
+            "caution": "Not checked, do not interpret as no match"
+          }
+        ],
+        "primary_spot_url": "https://www.gays-cruising.com/en/cruising/rest_area_barje_south_area_ljubljana_eslovenia_3652",
+        "place_identity_access_assessment": "Barje South / Barje jug is distinct from Barje Sever on opposing Ljubljana ring motorway sides, accessible via motorway. Operator confirms both were demolished and rebuilt in 2023; restaurants were changed in 2026. Primary country page records April 29 and May 2 2026 proposals to meet, not actual observed encounters.",
+        "verification_sources": [
+          {
+            "url": "https://www.petrol.si/prodajno-mesto-barje",
+            "kind": "operator_rebuild_2023_south_north"
+          },
+          {
+            "url": "https://nap.si/en/dataset_code?data=codesample&id=4282641a-6cef-25c4-465b-51abd517d90d",
+            "kind": "official_motorway_facilities_distinct"
+          },
+          {
+            "url": "https://www.zurnal24.si/amp/slovenija/marche-zaprl-vrata-prihaja-ta-priljubljena-restavracija-454356",
+            "kind": "2026_restaurant_change"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/slovenia",
+            "kind": "primary_dated_messages"
+          }
+        ],
+        "dated_source_reports": [
+          {
+            "date": "2026-05-02",
+            "kind": "meeting_inquiry_only"
+          },
+          {
+            "date": "2026-04-29",
+            "kind": "meeting_inquiry_only"
+          }
+        ],
+        "review_flags": [
+          "south_vs_north_distinct",
+          "rebuilt_2023",
+          "recent_messages_not_visits",
+          "public_restroom_privacy"
+        ],
+        "recent_activity": {
+          "since": "2025-11-06",
+          "confirmed_positive_dated_firsthand_report": false,
+          "assessment": "Not established; dated meeting messages are not witnessed visits"
+        },
+        "research_status": "first_pass_original_site_and_place_identity_completed; other_seven_sites_pending",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0156_0160.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 163,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-SLOVENIA-10",
+      "name": "Forest Logatec",
+      "city": "Logatec",
+      "country": "Slovenia",
+      "priority_assessment": {
+        "queue_index": 163,
+        "candidate_id": "GC1-SLOVENIA-10",
+        "name": "Forest Logatec",
+        "city": "Logatec",
+        "country": "Slovenia",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 50,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0161_0165.json"
+      },
+      "original_queue_record": {
+        "index": 163,
+        "section": "A",
+        "id": "GC1-SLOVENIA-10",
+        "name": "Forest Logatec",
+        "city": "Logatec",
+        "country": "Slovenia",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 162,
+            "u": "https://www.gays-cruising.com/en/slovenia"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 163,
+        "candidate_id": "GC1-SLOVENIA-10",
+        "name": "Forest Logatec",
+        "city": "Logatec",
+        "country": "Slovenia",
+        "bucket": "quarter_complete",
+        "description_words": 50,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 163,
+        "proposal_id": "GC1-SLOVENIA-10",
+        "name": "Forest Logatec",
+        "city": "Logatec",
+        "country": "Slovenia",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 162,
+            "u": "https://www.gays-cruising.com/en/slovenia"
+          }
+        ],
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "spot_page_cache_miss_country_index_has_dated_comments",
+            "note": "Original spot and country page where accessible"
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          }
+        ],
+        "spot_url": "https://www.gays-cruising.com/en/cruising/forest_logatec_inner_carniola_slovenia_14979",
+        "identity_access_and_cruising_history": "Named Forest Logatec as a nature area; source gives no exact forest, road or protected area subarea in publicly accessible record. Slovenia country index includes a 12 April 2026 commenter asking where it is and whether anything happens, indicating place-location uncertainty, not observed visits. Logatec is separate town from Ljubljana.",
+        "independent_and_related_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/slovenia",
+            "type": "2026_04_12_spot_specific_question",
+            "notes": "Question asks exact location/activity and offers to meet; not firsthand use"
+          }
+        ],
+        "dated_comments": [
+          {
+            "date": "2026-04-12T22:14:31",
+            "kind": "location_question_and_meeting_intent_not_visit",
+            "note": "User cannot locate exact spot and asks whether anything happens."
+          }
+        ],
+        "review_flags": [
+          "FOREST_NOT_GEOLOCATABLE",
+          "RECENT_QUERY_NOT_VISIT",
+          "DO_NOT_MAP_AN_ARBITRARY_LOGATEC_WOODLAND"
+        ],
+        "recent_activity": {
+          "cutoff": "2025-11-06",
+          "confirmed_postcutoff_physical_cruising_visit": false,
+          "dated_signals_in_comments": [
+            {
+              "date": "2026-04-12T22:14:31",
+              "kind": "location_question_and_meeting_intent_not_visit",
+              "note": "User cannot locate exact spot and asks whether anything happens."
+            }
+          ]
+        },
+        "research_status": "first_pass_primary_site_verified_where_accessible_other_seven_pending",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0161_0165.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 164,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-SLOVENIA-09",
+      "name": "Mariborski otok - Island",
+      "city": "Maribor",
+      "country": "Slovenia",
+      "priority_assessment": {
+        "queue_index": 164,
+        "candidate_id": "GC1-SLOVENIA-09",
+        "name": "Mariborski otok - Island",
+        "city": "Maribor",
+        "country": "Slovenia",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 94,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0161_0165.json"
+      },
+      "original_queue_record": {
+        "index": 164,
+        "section": "A",
+        "id": "GC1-SLOVENIA-09",
+        "name": "Mariborski otok - Island",
+        "city": "Maribor",
+        "country": "Slovenia",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 163,
+            "u": "https://www.gays-cruising.com/en/slovenia"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 164,
+        "candidate_id": "GC1-SLOVENIA-09",
+        "name": "Mariborski otok - Island",
+        "city": "Maribor",
+        "country": "Slovenia",
+        "bucket": "quarter_complete",
+        "description_words": 94,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 164,
+        "proposal_id": "GC1-SLOVENIA-09",
+        "name": "Mariborski otok - Island",
+        "city": "Maribor",
+        "country": "Slovenia",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 163,
+            "u": "https://www.gays-cruising.com/en/slovenia"
+          }
+        ],
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "spot_page_read",
+            "note": "Original spot and country page where accessible"
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_batch",
+            "note": "No negative evidence implied, further manual check needed"
+          }
+        ],
+        "spot_url": "https://www.gays-cruising.com/en/cruising/mariborski_otok_island_sentilj_slovenia_5118",
+        "identity_access_and_cruising_history": "Mariborski otok is natural island in Drava River near Kamnica, protected nature monument with managed public swimming complex and woods. Primary source's older text alleges summer gay cruising on/near wooded riverbank; 21 March 2026 spot-specific user reports path to beach devastated and many men shifting to Betnava. This is a dated firsthand/knowledge-of-change claim, not a confirmed physical encounter at the original location. Official Maribor operator says island now reopened for walkers after September 2026 summer season but asks visitors to avoid swimming-pool deck during cleanup. Distinct near-power-plant source spot 0.5km away, potential separate subarea.",
+        "independent_and_related_sources": [
+          {
+            "url": "https://www.visitmaribor.si/en/offer/natural-sights/7929-mariborski-otok/",
+            "type": "official_island_nature_monument",
+            "notes": "River island natural monument, public bathing complex and recreation"
+          },
+          {
+            "url": "https://mariborinfo.com/novica/lokalno/po-koncu-kopalne-sezone-mariborski-otok-ponovno-vabi-na-sprehod/445203",
+            "type": "2026_09_public_reopening_access",
+            "notes": "Island reopened to walkers but pool deck restricted during cleanup"
+          },
+          {
+            "url": "https://www.marprom.si/objava/otok-pripravljen-na-poletje-kopalna-sezona-se-zacne-20-junija/",
+            "type": "2026_operator_summer_access",
+            "notes": "June 2026 seasonal hours and renovations; public complex, not permission for sex"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/under_lower_plant_mariborski_otok_lower_styria_slovenia_63590",
+            "type": "adjacent_separate_spot_possible_alias",
+            "notes": "Separate source record 0.5km away, do not merge without coordinates"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/slovenia",
+            "type": "country_index_May_2026_meeting_question",
+            "notes": "Mariborski otok May 5 user asks if anyone is there at night"
+          }
+        ],
+        "dated_comments": [
+          {
+            "date": "2026-03-21T14:35:06",
+            "kind": "dated_site_change_report_not_confirmed_cruising_visit",
+            "note": "User says beach path damaged; cruising relocated toward Betnava."
+          },
+          {
+            "date": "2026-05-05T15:38:01",
+            "kind": "inquiry_only",
+            "note": "Another user asks whether anybody will attend tonight."
+          }
+        ],
+        "review_flags": [
+          "2026_REPORTED_BEACH_PATH_DAMAGE",
+          "2026_ACTIVITY_MOVED_BETNAVA_NOT_SAME_SITE",
+          "PROTECTED_ISLAND_AND_MANAGED_SWIM_COMPLEX",
+          "MAY_2026_MEETING_QUERY_ONLY",
+          "POTENTIAL_SUBAREA_DUPLICATE"
+        ],
+        "recent_activity": {
+          "cutoff": "2025-11-06",
+          "confirmed_postcutoff_physical_cruising_visit": false,
+          "dated_signals_in_comments": [
+            {
+              "date": "2026-03-21T14:35:06",
+              "kind": "dated_site_change_report_not_confirmed_cruising_visit",
+              "note": "User says beach path damaged; cruising relocated toward Betnava."
+            },
+            {
+              "date": "2026-05-05T15:38:01",
+              "kind": "inquiry_only",
+              "note": "Another user asks whether anybody will attend tonight."
+            }
+          ]
+        },
+        "research_status": "first_pass_primary_site_verified_where_accessible_other_seven_pending",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0161_0165.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 175,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-SWEDEN-10",
+      "name": "Mall of Scandinavia",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "priority_assessment": {
+        "queue_index": 175,
+        "candidate_id": "GC1-SWEDEN-10",
+        "name": "Mall of Scandinavia",
+        "city": "Stockholm",
+        "country": "Sweden",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 0,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0171_0175.json"
+      },
+      "original_queue_record": {
+        "index": 175,
+        "section": "A",
+        "id": "GC1-SWEDEN-10",
+        "name": "Mall of Scandinavia",
+        "city": "Stockholm",
+        "country": "Sweden",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 174,
+            "u": "https://www.gays-cruising.com/en/sweden"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 175,
+        "candidate_id": "GC1-SWEDEN-10",
+        "name": "Mall of Scandinavia",
+        "city": "Stockholm",
+        "country": "Sweden",
+        "bucket": "quarter_complete",
+        "description_words": 0,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 175,
+        "proposal_id": "GC1-SWEDEN-10",
+        "name": "Mall of Scandinavia",
+        "city": "Stockholm",
+        "country": "Sweden",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 174,
+            "u": "https://www.gays-cruising.com/en/sweden"
+          }
+        ],
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "direct_spot_page_read",
+            "exhaustive": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_pass",
+            "exhaustive": false
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_pass",
+            "exhaustive": false
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_pass",
+            "exhaustive": false
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_pass",
+            "exhaustive": false
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_pass",
+            "exhaustive": false
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_pass",
+            "exhaustive": false
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_pass",
+            "exhaustive": false
+          }
+        ],
+        "original_specific_page": "https://www.gays-cruising.com/en/cruising/mall_of_scandinavia_stockholm_sweden_45874",
+        "place_identity_access_and_claims": "Mall of Scandinavia (Westfield Mall of Scandinavia) is in Solna's Arenastaden rather than central Stockholm. Primary source alleges activity in ground-floor toilets by former/current ICA retailer; retail configurations can change. Last directly visible comments on individual spot page date 14 Aug 2025 and earlier, all before cutoff. Two May 2026 comments in the Sweden country index ask if anyone is there, not verified 2026 use. No evidence mall consents to sexual activity in public toilets; do not confuse with Frescati 3km away.",
+        "source_evidence": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/mall_of_scandinavia_stockholm_sweden_45874",
+            "type": "2025_historic_spot_comments",
+            "notes": "Original card describes public mall WC near ICA, older public user comments only."
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/sweden",
+            "type": "2026_05_index_meeting_questions",
+            "notes": "May 23 and May 25 2026 users ask if anyone present (not observed visits)."
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-05-25",
+            "kind": "meeting_question_only",
+            "summary": "User asks if anyone currently there."
+          },
+          {
+            "date": "2026-05-23",
+            "kind": "meeting_question_only",
+            "summary": "User asks if someone is present."
+          },
+          {
+            "date": "2025-08-14",
+            "kind": "planned_future_visit_before_cutoff",
+            "summary": "User says they will be there in coming days."
+          }
+        ],
+        "review_flags": [
+          "MALL_IN_SOLNA_ARENSTADEN_NOT_STOCKHOLM_CITY",
+          "PUBLIC_RESTROOM_PRIVACY_AND_CONSENT",
+          "NEW_RETAIL_LAYOUT_NEEDS_CHECK",
+          "NO_VERIFIED_CRUISING_REPORT_POSTCUTOFF"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "firsthand_visit_confirmed": false,
+          "note": "2026 editorial/directories or meetup questions do not prove on-site attendance"
+        },
+        "research_status": "first_pass_original_directory_and_selected_independent_sources",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0171_0175.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 189,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-TURKEY-06",
+      "name": "Airport toilets",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "priority_assessment": {
+        "queue_index": 189,
+        "candidate_id": "GC1-TURKEY-06",
+        "name": "Airport toilets",
+        "city": "Istanbul",
+        "country": "Turkey",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 63,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0186_0190.json"
+      },
+      "original_queue_record": {
+        "index": 189,
+        "section": "A",
+        "id": "GC1-TURKEY-06",
+        "name": "Airport toilets",
+        "city": "Istanbul",
+        "country": "Turkey",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 192,
+            "u": "https://www.gays-cruising.com/en/turkey"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 189,
+        "candidate_id": "GC1-TURKEY-06",
+        "name": "Airport toilets",
+        "city": "Istanbul",
+        "country": "Turkey",
+        "bucket": "quarter_complete",
+        "description_words": 63,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 189,
+        "proposal_id": "GC1-TURKEY-06",
+        "name": "Airport toilets",
+        "city": "Istanbul",
+        "country": "Turkey",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 192,
+            "u": "https://www.gays-cruising.com/en/turkey"
+          }
+        ],
+        "primary_spot_url": "https://www.gays-cruising.com/en/cruising/airport_toilets_istanbul_turkije_117044",
+        "site_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "specific_spot_page_cache_miss_country_index_recent_inquiry",
+            "absence_not_claimed": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "absence_not_claimed": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "absence_not_claimed": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "absence_not_claimed": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "absence_not_claimed": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "absence_not_claimed": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "absence_not_claimed": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "absence_not_claimed": true
+          }
+        ],
+        "place_identity_and_access": "The original source's Airport toilets entry does not identify whether the facility is at Istanbul Airport (IST) or Sabiha Gökçen Airport (SAW), nor any terminal or floor. Turkey directory shows April 26 2026 visitor inquiry about meeting others, but that does not prove actual use. Airport restrooms are security-managed spaces and cannot be given a guessed pin or described as approved sex facilities.",
+        "evidence_links": [
+          {
+            "url": "https://www.gays-cruising.com/en/turkey",
+            "type": "2026_04_26_airport_toilet_meeting_inquiry"
+          }
+        ],
+        "dated_comments": [
+          {
+            "date": "2026-04-26",
+            "type": "meeting_solicitation_only",
+            "description": "Question seeking someone at airport toilets; airport not specified."
+          }
+        ],
+        "review_flags": [
+          "IST_VS_SAW_UNRESOLVED",
+          "AIRPORT_SECURE_ACCESS",
+          "PUBLIC_RESTROOM_PRIVACY",
+          "NO_VERIFIED_CURRENT_VISIT"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "qualified_firsthand_onsite_cruising": false,
+          "dated_discussion_present": true,
+          "status": "unverified_recent_physical_activity"
+        },
+        "research_status": "first_pass_primary_and_selected_contextual_sources_seven_primary_sites_pending",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0186_0190.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 221,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-BULGARIA-01",
+      "name": "The Mall",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "priority_assessment": {
+        "queue_index": 221,
+        "candidate_id": "GC1-BULGARIA-01",
+        "name": "The Mall",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 0,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0221_0225.json"
+      },
+      "original_queue_record": {
+        "index": 221,
+        "section": "A",
+        "id": "GC1-BULGARIA-01",
+        "name": "The Mall",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 229,
+            "u": "https://www.gays-cruising.com/en/bulgaria"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 221,
+        "candidate_id": "GC1-BULGARIA-01",
+        "name": "The Mall",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "bucket": "quarter_complete",
+        "description_words": 0,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 221,
+        "proposal_id": "GC1-BULGARIA-01",
+        "name": "The Mall",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 229,
+            "u": "https://www.gays-cruising.com/en/bulgaria"
+          }
+        ],
+        "primary_original_page": "https://www.gays-cruising.com/en/cruising/the_mall_sofia_bulgaria_99651",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "source_spot_page_read_9_comments",
+            "no_negative_result_implied": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          }
+        ],
+        "source_place_access_and_claims": "The Mall is the ordinary shopping centre at 115 Tsarigradsko shose Blvd Sofia/Mladost, distinct from Sofia Ring Mall and Mall of Sofia. Primary source claims an alleged cruising WC at underground level -2, but retail operating hours 10:00-22:00 are not restroom or sex-permission hours. Dated 2026-02-07, 2026-05-14, 2026-06-09, 2026-07-01, 2026-07-05 and 2026-07-09 site messages propose meetings/contact or say they wish to try, not that an encounter occurred. Source spot description and self-ratings not independently verified.",
+        "source_pages": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/the_mall_sofia_bulgaria_99651",
+            "kind": "primary_dated_user_messages_2026"
+          },
+          {
+            "url": "https://www.visitsofia.info-sofia.bg/en/cityinfrastructure/shopping/malls-and-shopping-centres/the-mall",
+            "kind": "official_city_tourism_mall_identity_hours"
+          },
+          {
+            "url": "https://retailnews.bg/malls-retail-parks/the-mall/",
+            "kind": "2026_08_24_business_identity"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/bulgaria",
+            "kind": "2026_06_09_meeting_inquiry"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-07-09",
+            "kind": "sexual_contact_proposal_not_visit",
+            "summary": "Commenter asks others to write, not physical visit"
+          },
+          {
+            "date": "2026-07-01",
+            "kind": "same_day_invitation_not_visited",
+            "summary": "Comment asks others for restroom meetup"
+          },
+          {
+            "date": "2026-06-09",
+            "kind": "meeting_question_not_visit",
+            "summary": "Comment asks anyone there today"
+          }
+        ],
+        "review_flags": [
+          "THREE_DISTINCT_SOFIA_MALLS",
+          "ORIGINAL_MINUS_2_WC_ACCESS_UNVERIFIED",
+          "PUBLIC_RESTROOM_PRIVACY",
+          "RECENT_MEETING_REQUESTS_NOT_CONFIRMED_ACTIVITY"
+        ],
+        "postcutoff_activity_assessment": {
+          "window_start": "2025-11-06",
+          "firsthand_on_site_cruising_evidence": null,
+          "qualification": "none_confirmed"
+        },
+        "research_stage": "first_pass_primary_source_plus_official_place",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0221_0225.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 222,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-BULGARIA-02",
+      "name": "Abandoned WC in Park",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "priority_assessment": {
+        "queue_index": 222,
+        "candidate_id": "GC1-BULGARIA-02",
+        "name": "Abandoned WC in Park",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 0,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0221_0225.json"
+      },
+      "original_queue_record": {
+        "index": 222,
+        "section": "A",
+        "id": "GC1-BULGARIA-02",
+        "name": "Abandoned WC in Park",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 230,
+            "u": "https://www.gays-cruising.com/en/bulgaria"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 222,
+        "candidate_id": "GC1-BULGARIA-02",
+        "name": "Abandoned WC in Park",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "bucket": "quarter_complete",
+        "description_words": 0,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 222,
+        "proposal_id": "GC1-BULGARIA-02",
+        "name": "Abandoned WC in Park",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 230,
+            "u": "https://www.gays-cruising.com/en/bulgaria"
+          }
+        ],
+        "primary_original_page": "https://www.gays-cruising.com/en/cruising/abandoned_wc_in_park_sofia_bulgaria_83800",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "spot_page_40_comments_latest_2026_08_04",
+            "no_negative_result_implied": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          }
+        ],
+        "source_place_access_and_claims": "Original directory alleges an abandoned WC structure within a Sofia green area, but public name and map of the park not independently confirmed. Source claims getting beyond a damaged fence, which raises clear potential trespass and structural-safety concerns: do not reproduce access directions. July 16, 2026 commenter says they actually noticed one older visitor, but that is not an observed sexual encounter; July 2026 users ask precise whereabouts and one says they never went. A 2026 country-index discussion concerns potentially LOCKED toilet or different nearby WC, so do not assert current public accessibility. No independent corroborated safe access.",
+        "source_pages": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/abandoned_wc_in_park_sofia_bulgaria_83800",
+            "kind": "2026_dated_on_site_person_sighting_and_questions"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/bulgaria",
+            "kind": "2026_park_WC_access_conflicting_discussion"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-07-16",
+            "kind": "self_reported_person_seen_not_cruising",
+            "summary": "Poster says they noticed one older male in the vicinity that day; not confirmed as cruising"
+          },
+          {
+            "date": "2026-07-08",
+            "kind": "did_not_visit",
+            "summary": "A commenter explicitly says they never went there"
+          },
+          {
+            "date": "2026-08-04",
+            "kind": "activity_and_safety_question",
+            "summary": "Another person asks whether there is activity, where and if safe"
+          }
+        ],
+        "review_flags": [
+          "DAMAGED_FENCE_POSSIBLE_TRESPASS",
+          "ABANDONED_BUILDING_STRUCTURAL_RISK",
+          "UNKNOWN_SPECIFIC_PARK_AND_ACCESS",
+          "RECENT_POSTS_MOSTLY_QUESTIONS_NOT_CRUISING"
+        ],
+        "postcutoff_activity_assessment": {
+          "window_start": "2025-11-06",
+          "firsthand_on_site_cruising_evidence": null,
+          "qualification": "none_confirmed"
+        },
+        "research_stage": "first_pass_primary_source_plus_official_place",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0221_0225.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 223,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-BULGARIA-04",
+      "name": "Park Borisova Gradina",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "priority_assessment": {
+        "queue_index": 223,
+        "candidate_id": "GC1-BULGARIA-04",
+        "name": "Park Borisova Gradina",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 0,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0221_0225.json"
+      },
+      "original_queue_record": {
+        "index": 223,
+        "section": "A",
+        "id": "GC1-BULGARIA-04",
+        "name": "Park Borisova Gradina",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 231,
+            "u": "https://www.gays-cruising.com/en/bulgaria"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 223,
+        "candidate_id": "GC1-BULGARIA-04",
+        "name": "Park Borisova Gradina",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "bucket": "quarter_complete",
+        "description_words": 0,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 223,
+        "proposal_id": "GC1-BULGARIA-04",
+        "name": "Park Borisova Gradina",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 231,
+            "u": "https://www.gays-cruising.com/en/bulgaria"
+          }
+        ],
+        "primary_original_page": "https://www.gays-cruising.com/en/cruising/park_borisova_gradina_sofia_bulgaria_7519",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "primary_page_older_snapshot_no_2026_comments_country_spot_checkin_2026",
+            "no_negative_result_implied": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          }
+        ],
+        "source_place_access_and_claims": "Borisova Gradina is a large public park/green network in Sofia, and a Backroom baseline live listing exists as CRU-SOF-BORGRA-01 'Borisova Gradina'. This proposal is very likely same place but exact claimed subarea must be checked before merging. Primary spot page is old and says only 'park near the city center' while the country index captures a June 10 2026 self-directed platform check-in; not an independently observed physical visit or sexual activity. Do not re-import duplicate before resolving against baseline.",
+        "source_pages": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/park_borisova_gradina_sofia_bulgaria_7519",
+            "kind": "original_old_directory_spot"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/bulgaria",
+            "kind": "2026_06_10_platform_checkin_relative"
+          },
+          {
+            "url": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/cross_source_alignment_2026-11-06.json",
+            "kind": "baseline_explicit_duplicate_alias_alignment"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-06-10",
+            "kind": "platform_checkin_only_not_independently_verified_visit",
+            "summary": "Country-index listed user check-in to park name"
+          }
+        ],
+        "review_flags": [
+          "VERY_LIKELY_BASELINE_DUPLICATE_CRU_SOF_BORGRA_01",
+          "PARK_SUBAREA_UNDEFINED",
+          "DIRECTIONS_UNVERIFIED",
+          "NO_QUALIFYING_2026_FIRSTHAND_CRUISING_REPORT"
+        ],
+        "postcutoff_activity_assessment": {
+          "window_start": "2025-11-06",
+          "firsthand_on_site_cruising_evidence": null,
+          "qualification": "none_confirmed"
+        },
+        "research_stage": "first_pass_primary_source_plus_official_place",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0221_0225.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 224,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-BULGARIA-05",
+      "name": "Ring Mall",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "priority_assessment": {
+        "queue_index": 224,
+        "candidate_id": "GC1-BULGARIA-05",
+        "name": "Ring Mall",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 0,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0221_0225.json"
+      },
+      "original_queue_record": {
+        "index": 224,
+        "section": "A",
+        "id": "GC1-BULGARIA-05",
+        "name": "Ring Mall",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 232,
+            "u": "https://www.gays-cruising.com/en/bulgaria"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 224,
+        "candidate_id": "GC1-BULGARIA-05",
+        "name": "Ring Mall",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "bucket": "quarter_complete",
+        "description_words": 0,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 224,
+        "proposal_id": "GC1-BULGARIA-05",
+        "name": "Ring Mall",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 232,
+            "u": "https://www.gays-cruising.com/en/bulgaria"
+          }
+        ],
+        "primary_original_page": "https://www.gays-cruising.com/en/cruising/ring_mall_sofia_bulgaria_70315",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "primary_spot_page_14_comments_recent_positive_firsthand_2026",
+            "no_negative_result_implied": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          }
+        ],
+        "source_place_access_and_claims": "Sofia Ring Mall is at 214 Ring Road in Vitosha district, distinct from The Mall and Mall of Sofia. Source names a restroom on first floor near phone shops, but a July 19 2026 comment disputes that a small opening permits any action and criticizes lack of privacy. July 3 2026 FIRSTHAND person says they visited, saw another man engaged in sexual activity in adjacent stall, but frequent unrelated public WC users limited further interaction; this is dated positive firsthand evidence of sexualized use, NOT an independently corroborated ongoing gay cruising crowd, commercial permission, or safe use. Operator provides different hours for shops/cinema/parking. No instruction to exploit public toilets should be used in production.",
+        "source_pages": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/ring_mall_sofia_bulgaria_70315",
+            "kind": "firsthand_2026_07_03_specific_report"
+          },
+          {
+            "url": "https://sofiaring.bg/contact?lang=en",
+            "kind": "current_operator_address_facilities_hours"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/bulgaria",
+            "kind": "2026_06_09_meeting_question"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-07-03",
+            "kind": "firsthand_self_reported_presence_and_observed_sexual_activity_onsite",
+            "summary": "User says visited WC and witnessed another male masturbating, though ordinary visitors interrupted"
+          },
+          {
+            "date": "2026-07-19",
+            "kind": "self_reported_access_and_privacy_caution",
+            "summary": "Comment says restroom is quiet with little privacy and old glory-hole-like opening ineffective"
+          },
+          {
+            "date": "2026-08-03",
+            "kind": "same_day_plan_only",
+            "summary": "Poster says they will go later, not proof attended"
+          }
+        ],
+        "review_flags": [
+          "RECENT_FIRSTHAND_SELF_REPORTED_2026_NOT_INDEPENDENTLY_CORROBORATED",
+          "PUBLIC_MALL_RESTROOM_PRIVACY_AND_CONSENT",
+          "OPERATOR_MALL_HOURS_NOT_WC_HOURS",
+          "DISTINCT_FROM_OTHER_SOFIA_MALLS"
+        ],
+        "postcutoff_activity_assessment": {
+          "window_start": "2025-11-06",
+          "firsthand_on_site_cruising_evidence": "2026-07-03 firsthand observed sexual behavior in WC",
+          "qualification": "self_reported_dated_firsthand_activity_requires_independent_corroboration_before_publication"
+        },
+        "research_stage": "first_pass_primary_source_plus_official_place",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0221_0225.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 225,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-BULGARIA-07",
+      "name": "Mall of Sofía WC Toilet",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "priority_assessment": {
+        "queue_index": 225,
+        "candidate_id": "GC1-BULGARIA-07",
+        "name": "Mall of Sofía WC Toilet",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 0,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0221_0225.json"
+      },
+      "original_queue_record": {
+        "index": 225,
+        "section": "A",
+        "id": "GC1-BULGARIA-07",
+        "name": "Mall of Sofía WC Toilet",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 234,
+            "u": "https://www.gays-cruising.com/en/bulgaria"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 225,
+        "candidate_id": "GC1-BULGARIA-07",
+        "name": "Mall of Sofía WC Toilet",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "bucket": "quarter_complete",
+        "description_words": 0,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 225,
+        "proposal_id": "GC1-BULGARIA-07",
+        "name": "Mall of Sofía WC Toilet",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 234,
+            "u": "https://www.gays-cruising.com/en/bulgaria"
+          }
+        ],
+        "primary_original_page": "https://www.gays-cruising.com/en/cruising/mall_of_sofia_wc_toilet_sofia_bulgaria_27522",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "primary_spot_page_21_comments_recent_2026_firsthand",
+            "no_negative_result_implied": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_result_implied": true
+          }
+        ],
+        "source_place_access_and_claims": "Mall of Sofia is a commercial mall at Aleksandar Stamboliyski Blvd 101-103 near Opalchenska metro, distinct from The Mall and Ring Mall. Primary source's July 8 2026 poster explicitly says he visited that same day and had sex/fun with three men, while fearing CCTV surveillance and being observed entering/leaving toilets. This is an uncorroborated firsthand report dated WITHIN 12-month cutoff. A July 9 message says the poster was masturbating at first-floor WC, which is a self-reported same-day presence but does not verify any encounter. Another Aug 4 user asks which toilet, showing directions uncertain. Mall operator says retail 10:00-21:00, supermarket 08:00-22:00, cinema to 01:00; these times are not WC access or permission.",
+        "source_pages": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/mall_of_sofia_wc_toilet_sofia_bulgaria_27522",
+            "kind": "2026_07_08_firsthand_encounter_claim_and_CCTV_warning"
+          },
+          {
+            "url": "https://mallofsofia.bg/en/information/",
+            "kind": "operator_address_opening_hours_by_business"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/bulgaria",
+            "kind": "country_index_recent_activity_context"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-07-08",
+            "kind": "FIRSTHAND_SELF_REPORTED_ONSITE_SEXUAL_ENCOUNTER_NOT_INDEPENDENTLY_CORROBORATED",
+            "summary": "Author claims attended that day and had sexual activity with three men; mentions surveillance concern"
+          },
+          {
+            "date": "2026-07-09",
+            "kind": "self_reported_contemporaneous_presence_not_confirmed_encounter",
+            "summary": "User said was masturbating at first-floor toilet"
+          },
+          {
+            "date": "2026-08-04",
+            "kind": "inquiry_not_visit",
+            "summary": "Poster asks which restroom purportedly has action"
+          }
+        ],
+        "review_flags": [
+          "RECENT_FIRSTHAND_2026_REPORT_UNCORROBORATED",
+          "PUBLIC_RESTROOM_PRIVACY_CONSENT_AND_SECURITY",
+          "CCTV_USER_REPORTED_CONCERN_NOT_VERIFIED_CAMERA_PLACEMENT",
+          "RETAIL_OPEN_HOURS_NOT_WC_ACCESS",
+          "DISTINCT_FROM_RING_AND_THE_MALL"
+        ],
+        "postcutoff_activity_assessment": {
+          "window_start": "2025-11-06",
+          "firsthand_on_site_cruising_evidence": "2026-07-08 firsthand claimed sexual encounter onsite",
+          "qualification": "self_reported_dated_firsthand_activity_requires_independent_corroboration_before_publication"
+        },
+        "research_stage": "first_pass_primary_source_plus_official_place",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0221_0225.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 233,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-CYPRUS-06",
+      "name": "Nissi Beach",
+      "city": "Ayia Napa",
+      "country": "Cyprus",
+      "priority_assessment": {
+        "queue_index": 233,
+        "candidate_id": "GC1-CYPRUS-06",
+        "name": "Nissi Beach",
+        "city": "Ayia Napa",
+        "country": "Cyprus",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 0,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0231_0235.json"
+      },
+      "original_queue_record": {
+        "index": 233,
+        "section": "A",
+        "id": "GC1-CYPRUS-06",
+        "name": "Nissi Beach",
+        "city": "Ayia Napa",
+        "country": "Cyprus",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 244,
+            "u": "https://www.gays-cruising.com/en/cyprus"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 233,
+        "candidate_id": "GC1-CYPRUS-06",
+        "name": "Nissi Beach",
+        "city": "Ayia Napa",
+        "country": "Cyprus",
+        "bucket": "quarter_complete",
+        "description_words": 0,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 233,
+        "proposal_id": "GC1-CYPRUS-06",
+        "name": "Nissi Beach",
+        "city": "Ayia Napa",
+        "country": "Cyprus",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 244,
+            "u": "https://www.gays-cruising.com/en/cyprus"
+          }
+        ],
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "spot_page_cache_miss_country_index_2026_meeting_questions",
+            "unchecked_not_no_match": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_no_match": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_no_match": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_no_match": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_no_match": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_no_match": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_no_match": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_no_match": true
+          }
+        ],
+        "original_source_url": "https://www.gays-cruising.com/en/cruising/nissi_beach_ayia_napa_cyprus_90659",
+        "assessment": "Nissi Beach is mainstream 600m managed bathing beach west of Ayia Napa (not a dedicated gay beach). Cyprus Ministry of Tourism confirms a public Blue Flag beach with toilets, lifeguards Apr-Oct and family/tourist crowds. Original named cruising card is inaccessible; country index has June 15, 18, 22, 25 2026 meeting questions/requests, NOT observed first-person cruising encounters. Distinct from Landa and Adams beach, and nudity/public sex permission not proven.",
+        "evidence": [
+          {
+            "url": "https://www.gays-cruising.com/en/cyprus",
+            "type": "2026_06_15_to_25_several_meeting_questions"
+          },
+          {
+            "url": "https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/nissi-beach-blue-flag/",
+            "type": "official_managed_beach_access_identity"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/nissi_beach_ayia_napa_cyprus_90659",
+            "type": "source_direct_page_cache_miss"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-06-25",
+            "kind": "is_anyone_here_question"
+          },
+          {
+            "date": "2026-06-22",
+            "kind": "sexual_meetup_invitation_not_visit"
+          },
+          {
+            "date": "2026-06-15",
+            "kind": "plans_to_visit_query"
+          }
+        ],
+        "flags": [
+          "NISSI_MAINSTREAM_BEACH_NOT_EXCLUSIVE_GAY",
+          "RECENT_DISCUSSION_NOT_CONFIRMED_CRUISING",
+          "LIFEGUARDED_FAMILY_PUBLIC_BEACH"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "verified_positive_firsthand_gay_cruising": false,
+          "recent_contact_queries_are_not_attendance": true
+        },
+        "phase": "first_pass",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0231_0235.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 236,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-CYPRUS-03",
+      "name": "Pissouri Beach",
+      "city": "Limassol",
+      "country": "Cyprus",
+      "priority_assessment": {
+        "queue_index": 236,
+        "candidate_id": "GC1-CYPRUS-03",
+        "name": "Pissouri Beach",
+        "city": "Limassol",
+        "country": "Cyprus",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 0,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0236_0240.json"
+      },
+      "original_queue_record": {
+        "index": 236,
+        "section": "A",
+        "id": "GC1-CYPRUS-03",
+        "name": "Pissouri Beach",
+        "city": "Limassol",
+        "country": "Cyprus",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 247,
+            "u": "https://www.gays-cruising.com/en/cyprus"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 236,
+        "candidate_id": "GC1-CYPRUS-03",
+        "name": "Pissouri Beach",
+        "city": "Limassol",
+        "country": "Cyprus",
+        "bucket": "quarter_complete",
+        "description_words": 0,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 236,
+        "proposal_id": "GC1-CYPRUS-03",
+        "name": "Pissouri Beach",
+        "city": "Limassol",
+        "country": "Cyprus",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 247,
+            "u": "https://www.gays-cruising.com/en/cyprus"
+          }
+        ],
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "specific_spot_page_HTTP_451_country_index_recent_2026_inquiry",
+            "no_negative_conclusion_if_unchecked": true
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_conclusion_if_unchecked": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_conclusion_if_unchecked": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_conclusion_if_unchecked": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_conclusion_if_unchecked": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_conclusion_if_unchecked": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_conclusion_if_unchecked": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "no_negative_conclusion_if_unchecked": true
+          }
+        ],
+        "specific_original_url": "https://www.gays-cruising.com/en/cruising/pissouri_beach_limassol_cyprus_55014",
+        "place_identity_access_activity": "Pissouri Beach/Blue Flag bay is in Pissouri village about 30 km WEST of central Limassol, not in Limassol city; administrative district is Limassol. Official municipality/tourism confirms Pissouri Bay, swimming beach toilet and lifeguard amenities, plus a separate secluded nudist beach to east that is NOT necessarily the original spot. Country source 24 June 2026 user asks who will be there tomorrow, not observed cruising. No postcutoff positive first-person report.",
+        "verification_pages": [
+          {
+            "url": "https://www.gays-cruising.com/en/cyprus",
+            "kind": "2026_06_24_meeting_question"
+          },
+          {
+            "url": "https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/pissouri-beach-blue-flag/",
+            "kind": "official_beach_identity_distance"
+          },
+          {
+            "url": "https://www.pissouri.org.cy/en/visitors/1",
+            "kind": "municipal_blue_flag_and_separate_nudist_beach"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-06-24",
+            "type": "future_meetup_question_not_onsite_visit"
+          }
+        ],
+        "review_flags": [
+          "CITY_PISSOURI_VS_LIMASSOL_GEO_MISLABEL",
+          "PISSOURI_NUDIST_BEACH_DISTINCT_FROM_MAIN_BAY",
+          "PUBLIC_LIFEGUARDED_FAMILY_BEACH"
+        ],
+        "recent_activity": {
+          "cutoff": "2025-11-06",
+          "qualifying_dated_firsthand_current_cruising": false,
+          "notes": "Recent questions or official place identity are not sexual activity"
+        },
+        "status": "first_pass",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0236_0240.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 241,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-CYPRUS-07",
+      "name": "Parking Area near Big Greek Flag",
+      "city": "Paphos",
+      "country": "Cyprus",
+      "priority_assessment": {
+        "queue_index": 241,
+        "candidate_id": "GC1-CYPRUS-07",
+        "name": "Parking Area near Big Greek Flag",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 66,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0241_0245.json"
+      },
+      "original_queue_record": {
+        "index": 241,
+        "section": "A",
+        "id": "GC1-CYPRUS-07",
+        "name": "Parking Area near Big Greek Flag",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 252,
+            "u": "https://www.gays-cruising.com/en/cyprus"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 241,
+        "candidate_id": "GC1-CYPRUS-07",
+        "name": "Parking Area near Big Greek Flag",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "bucket": "quarter_complete",
+        "description_words": 66,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 241,
+        "proposal_id": "GC1-CYPRUS-07",
+        "name": "Parking Area near Big Greek Flag",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 252,
+            "u": "https://www.gays-cruising.com/en/cyprus"
+          }
+        ],
+        "primary_spot_url": "https://www.gays-cruising.com/en/cruising/parking_area_near_big_greek_flag_paphos_cyprus_83677",
+        "site_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "spot_page_read_old_snapshot_country_index_2026_inquiries",
+            "not_evidence_of_no_match": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          }
+        ],
+        "place_identity_and_access": "Source names an outdoor carpark near a big Greek flag in Paphos but lacks a verified current exact carpark address, GPS or legal parking status in readable text. Current country index records June 16 and 17 2026 offers to meet there; these are sexual invitations not dated confirmed visits. Do not substitute any general Cyprus flag viewpoint or give unverified directions. No recent verified sexual activity.",
+        "source_evidence": [
+          {
+            "url": "https://www.gays-cruising.com/en/cyprus",
+            "kind": "2026_06_16_to_17_meeting_offers"
+          },
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/parking_area_near_big_greek_flag_paphos_cyprus_83677",
+            "kind": "original_specific_source"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-06-16",
+            "type": "meeting_inquiry"
+          },
+          {
+            "date": "2026-06-17",
+            "type": "meeting_offer"
+          }
+        ],
+        "flags": [
+          "SPECIFIC_CARPARK_UNKNOWN",
+          "POLITICAL_FLAG_LANDMARK_NOT_GEO_VERIFICATION",
+          "2026_USER_CONTACT_NOT_VISIT"
+        ],
+        "recent_activity": {
+          "from": "2025-11-06",
+          "dated_positive_firsthand_visit_verified": false,
+          "notes": "Meeting invitations and construction details do not qualify"
+        },
+        "research_phase": "first_pass",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0241_0245.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 243,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-CYPRUS-11",
+      "name": "Picnic Area near Airport",
+      "city": "Paphos",
+      "country": "Cyprus",
+      "priority_assessment": {
+        "queue_index": 243,
+        "candidate_id": "GC1-CYPRUS-11",
+        "name": "Picnic Area near Airport",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 72,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0241_0245.json"
+      },
+      "original_queue_record": {
+        "index": 243,
+        "section": "A",
+        "id": "GC1-CYPRUS-11",
+        "name": "Picnic Area near Airport",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 254,
+            "u": "https://www.gays-cruising.com/en/cyprus"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 243,
+        "candidate_id": "GC1-CYPRUS-11",
+        "name": "Picnic Area near Airport",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "bucket": "quarter_complete",
+        "description_words": 72,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 243,
+        "proposal_id": "GC1-CYPRUS-11",
+        "name": "Picnic Area near Airport",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 254,
+            "u": "https://www.gays-cruising.com/en/cyprus"
+          }
+        ],
+        "primary_spot_url": "https://www.gays-cruising.com/en/cruising/picnic_area_near_airport_paphos_cyprus_55627",
+        "site_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "original_spot_page_cache_miss_country_index_2026_requests",
+            "not_evidence_of_no_match": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "not_evidence_of_no_match": true
+          }
+        ],
+        "place_identity_and_access": "'Picnic Area near Airport' is a credible geographical lead for Timi coastal eucalyptus forest picnic area on Timi–Paphos airport road about 1 km before airport, independently named by Cyprus Forestry Department and regional tourism. However no original pin confirms that the source listing is exactly Timi. Source has June 14/18/26 2026 meeting proposals but no verified physical meetup. Public forest picnic area used by families; access and opening rules must be checked.",
+        "source_evidence": [
+          {
+            "url": "https://www.gays-cruising.com/en/cyprus",
+            "kind": "2026_june_picnic_user_messages"
+          },
+          {
+            "url": "https://data.gov.cy/index.php/en/resource/689",
+            "kind": "official_Cyprus_state_forest_Timi_picnic_geography_possible_match"
+          },
+          {
+            "url": "https://www.visitpafos.org.cy/off-the-beaten-track/where-to-stay/",
+            "kind": "Pafos_tourism_Picnic_Timi_airport_road"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-06-26",
+            "type": "looking_for_afternoon_activity_not_visit"
+          },
+          {
+            "date": "2026-06-18",
+            "type": "plans_overnight_meetup_not_visited"
+          },
+          {
+            "date": "2026-06-14",
+            "type": "planned_future_escort_contact_not_visit"
+          }
+        ],
+        "flags": [
+          "POSSIBLE_TIMI_PICNIC_ALIAS_NOT_PROVEN_SOURCE_PIN",
+          "FAMILY_STATE_FOREST",
+          "2026_PROPOSALS_NOT_DATED_VISIT"
+        ],
+        "recent_activity": {
+          "from": "2025-11-06",
+          "dated_positive_firsthand_visit_verified": false,
+          "notes": "Meeting invitations and construction details do not qualify"
+        },
+        "research_phase": "first_pass",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0241_0245.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 246,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GC1-CZECHIA-04",
+      "name": "WC dole u Rossmana Hlavní Nádraží",
+      "city": "Brno",
+      "country": "Czechia",
+      "priority_assessment": {
+        "queue_index": 246,
+        "candidate_id": "GC1-CZECHIA-04",
+        "name": "WC dole u Rossmana Hlavní Nádraží",
+        "city": "Brno",
+        "country": "Czechia",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 0,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": false,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0246_0250.json"
+      },
+      "original_queue_record": {
+        "index": 246,
+        "section": "A",
+        "id": "GC1-CZECHIA-04",
+        "name": "WC dole u Rossmana Hlavní Nádraží",
+        "city": "Brno",
+        "country": "Czechia",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 257,
+            "u": "https://www.gays-cruising.com/en/czech_republic"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 246,
+        "candidate_id": "GC1-CZECHIA-04",
+        "name": "WC dole u Rossmana Hlavní Nádraží",
+        "city": "Brno",
+        "country": "Czechia",
+        "bucket": "quarter_complete",
+        "description_words": 0,
+        "dimensions": {
+          "access": false,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 246,
+        "proposal_id": "GC1-CZECHIA-04",
+        "name": "WC dole u Rossmana Hlavní Nádraží",
+        "city": "Brno",
+        "country": "Czechia",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 257,
+            "u": "https://www.gays-cruising.com/en/czech_republic"
+          }
+        ],
+        "primary_source_url": "https://www.gays-cruising.com/en/cruising/wc_dole_u_rossmana_hlavni_nadrai_brno_czech_republic_91106",
+        "per_site_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "public_specific_spot_page_read_2026_comments",
+            "unchecked_not_a_negative_result": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_a_negative_result": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_a_negative_result": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_a_negative_result": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_a_negative_result": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_a_negative_result": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_a_negative_result": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "unchecked_not_a_negative_result": true
+          }
+        ],
+        "place_identity_access_and_evidence": "The source identifies a paid public WC by Rossmann in Brno main railway station. Its 2026-06-05 commenter recounts being reported by another toilet customer during a loud sexual encounter, but the date of the encounter is NOT specified: a 2026 post is not a proven 2026 encounter. The listing describes modified cubicles but current condition, private consent/permissions and present facility price were not verified. Source recorded 12 check-ins 'last month' on a crawled snapshot; these are platform actions, not independent physical visits.",
+        "urls": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/wc_dole_u_rossmana_hlavni_nadrai_brno_czech_republic_91106",
+            "type": "2026-06-05_retrospective_comment"
+          },
+          {
+            "url": "https://brnensky.denik.cz/zpravy_region/brno-hlavni-nadrazi-vlak-verejne-zachody-wc-test-cena-cistota.html",
+            "type": "2024_comparison_of_station_toilet_facilities"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2026-06-05",
+            "type": "postcutoff_retrospective_firsthand_claim_encounter_date_unknown",
+            "note": "User recalls being reported to staff by a customer; encounter not dated."
+          }
+        ],
+        "review_flags": [
+          "PUBLIC_RAIL_STATION_RESTROOM_PRIVACY",
+          "RECENT_RETROSPECTIVE_NOT_DATED_VISIT",
+          "PLATFORM_CHECKIN_NOT_INDEPENDENT",
+          "NEEDS_OPERATOR_ACCESS_RULES"
+        ],
+        "postcutoff_activity": {
+          "cutoff": "2025-11-06",
+          "verified_positive_dated_firsthand_postcutoff": false,
+          "qualification": "Recent retrospective discussion, undated encounter"
+        },
+        "research_stage": "first_pass_primary_site_and_official_place_checks_other_seven_pending",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0246_0250.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 253,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-CZECHIA-06",
+      "name": "Palladium Shopping Mall WC",
+      "city": "Prague",
+      "country": "Czechia",
+      "priority_assessment": {
+        "queue_index": 253,
+        "candidate_id": "GC1-CZECHIA-06",
+        "name": "Palladium Shopping Mall WC",
+        "city": "Prague",
+        "country": "Czechia",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 81,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/A/batch_0251_0255.json"
+      },
+      "original_queue_record": {
+        "index": 253,
+        "section": "A",
+        "id": "GC1-CZECHIA-06",
+        "name": "Palladium Shopping Mall WC",
+        "city": "Prague",
+        "country": "Czechia",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 264,
+            "u": "https://www.gays-cruising.com/en/czech_republic"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 253,
+        "candidate_id": "GC1-CZECHIA-06",
+        "name": "Palladium Shopping Mall WC",
+        "city": "Prague",
+        "country": "Czechia",
+        "bucket": "quarter_complete",
+        "description_words": 81,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 253,
+        "proposal_id": "GC1-CZECHIA-06",
+        "name": "Palladium Shopping Mall WC",
+        "city": "Prague",
+        "country": "Czechia",
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 264,
+            "u": "https://www.gays-cruising.com/en/czech_republic"
+          }
+        ],
+        "primary_url": "https://www.gays-cruising.com/en/cruising/palladium_shopping_mall_wc_praha_czech_republic_17704",
+        "source_checks": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "specific_spot_page_read_118_comments_crawl_old",
+            "no_match_not_inferred": false
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "not_individually_checked_this_first_pass",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Planet Randy",
+            "status": "not_individually_checked_this_first_pass",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "not_individually_checked_this_first_pass",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Splashd",
+            "status": "not_individually_checked_this_first_pass",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "not_individually_checked_this_first_pass",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "Squirt.org",
+            "status": "not_individually_checked_this_first_pass",
+            "no_match_not_inferred": true
+          },
+          {
+            "site": "CruisingGays",
+            "status": "not_individually_checked_this_first_pass",
+            "no_match_not_inferred": true
+          }
+        ],
+        "identity_and_access": "Palladium is a mainstream shopping mall at náměstí Republiky 1. Primary source names two restrooms on floors -2 and +2. Operator currently CONFIRMS toilets on -2 open 07:00–21:00 and +2 open 08:00–22:00, distinct from retail shops and overnight carpark; neither facility is an authorized adult cruising site. Comments 2025-11-06, 09, 12, 15 concern proposed future hookups, questions and intent, not a confirmed physical encounter. Last accessible public detail page stops Nov 15 2025; no 2026 firsthand report visible in captured source.",
+        "evidence_sources": [
+          {
+            "url": "https://www.gays-cruising.com/en/cruising/palladium_shopping_mall_wc_praha_czech_republic_17704",
+            "kind": "spot_page_dated_Nov_2025_meeting_messages"
+          },
+          {
+            "url": "https://www.palladiumpraha.cz/en/",
+            "kind": "official_current_two_toilet_floor_hours_and_mall_address"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2025-11-15",
+            "type": "future_visit_invitation_not_attendance"
+          },
+          {
+            "date": "2025-11-12",
+            "type": "plan_to_visit_not_observed"
+          },
+          {
+            "date": "2025-11-09",
+            "type": "meeting_question_not_observed"
+          },
+          {
+            "date": "2025-11-06",
+            "type": "same_evening_question_only"
+          }
+        ],
+        "review_flags": [
+          "PUBLIC_SHOPPING_CENTRE_WC_PRIVACY_AND_PERMISSION",
+          "CURRENT_OPERATOR_TOILET_HOURS_DISTINCT",
+          "RECENT_POSTCUTOFF_MESSAGES_NOT_VISITS",
+          "TWO_DIFFERENT_RESTROOM_LEVELS_SOURCE_NOT_TWO_VENUES"
+        ],
+        "recent_activity_since_2025_11_06": {
+          "confirmed_dated_positive_firsthand_visit": false,
+          "post_cutoff_meeting_messages": "Nov 2025 source discussions without confirmed encounter"
+        },
+        "research_stage": "first_pass_original_and_independent_place_context",
+        "publish_approved": false
+      },
+      "original_research_batch_file": "research/cruising/part5/A/batch_0251_0255.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, exact map location, access/current operation, duplicate status and publication eligibility; retain uncertain evidence.",
+      "publication_approved": false
+    }
+  ]
+}
