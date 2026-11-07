@@ -1,0 +1,45 @@
+name: Finish cruising research Worker B recovery
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/finish-part5-worker-b.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: finish-part5-worker-b-recovery
+  cancel-in-progress: false
+
+jobs:
+  finish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Save batches every five and reconcile B tracker
+        run: python3 scripts/finish_part5_worker_B.py
+
+      - name: Verify B finished
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path("research/cruising/part5")
+          t = json.loads((root/"tracker_B.json").read_text())
+          p = t["progress"]
+          assert p["complete"] == 293 and p["remaining"] == 0 and p["next_index"] == 587
+          assert len(p["batch_files"]) == 59
+          assert p["batch_files"][-1].endswith("batch_0584_0586.json")
+          print("Worker B complete and 59 batches present")
+          PY
