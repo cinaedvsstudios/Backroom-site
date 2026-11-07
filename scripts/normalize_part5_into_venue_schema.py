@@ -208,6 +208,7 @@ def default_row():
 def main():
     obj=json.loads(SOURCE.read_text(encoding="utf-8"))
     raw=obj.get("records")
+    queue={q["index"]:q for q in json.loads((ROOT/"master_queue.json").read_text(encoding="utf-8"))["candidates"]}
     if not isinstance(raw,list):raise ValueError("combined snapshot lacks records")
     if len(raw)!=1172:raise ValueError(f"expected 1172 original candidates, got {len(raw)}")
     now=datetime.now(ZoneInfo("Europe/Berlin")).isoformat(timespec="seconds")
@@ -218,7 +219,7 @@ def main():
     source_stats=collections.Counter()
     workers=collections.Counter()
     for entry in sorted(raw,key=lambda r:r["index"]):
-        idx=entry["index"];orig=entry["data"]
+        idx=entry["index"];orig=entry["data"];q=queue[idx]
         original_id=entry["id"]
         if idx in seen:raise ValueError(f"duplicate index {idx}")
         seen.add(idx)
@@ -229,9 +230,9 @@ def main():
         row=default_row()
         row.update({
             "Venue_ID":"RESEARCH-"+original_id,
-            "Name":str(orig.get("name") or "").strip(),
-            "City":str(orig.get("city") or "").strip(),
-            "Country":str(orig.get("country") or "").strip(),
+            "Name":str(orig.get("name") or q.get("name") or "").strip(),
+            "City":str(orig.get("city") or q.get("city") or "").strip(),
+            "Country":str(orig.get("country") or q.get("country") or "").strip(),
             "Category":"Cruising Area",
             "Status":"Research",
             "Native_Map_Query":", ".join(x for x in [str(orig.get("name") or "").strip(),str(orig.get("city") or "").strip(),str(orig.get("country") or "").strip()] if x),
