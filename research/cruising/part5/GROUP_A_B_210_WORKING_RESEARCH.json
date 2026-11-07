@@ -2,7 +2,7 @@
   "_meta": {
     "title": "Backroom Cruising Group A+B — consolidated working file",
     "created_berlin_date": "2026-11-07",
-    "status": "BUILD_IN_PROGRESS",
+    "status": "COMPLETE_210_CANDIDATES__1_ORIGINAL_BATCH_MISSING",
     "target_count": 210,
     "stored_count": 210,
     "warnings": [
@@ -12,6 +12,17 @@
     ],
     "missing_archive_rows": [
       856
+    ],
+    "count_group_A": 64,
+    "count_group_B": 146,
+    "fallback_evidence_source": "research/cruising/eight_source_evidence_table_2026-11-06.json",
+    "original_queue_source": "research/cruising/part5/master_queue.json",
+    "priority_source": "research/cruising/part5/remaining_793_priority_groups_2026-11-07.json",
+    "notes": [
+      "All 210 Group A/B candidates included, with full existing saved research where available.",
+      "One batch archive covering index 856 is missing; original archive and evidence-table data retained on that candidate.",
+      "Group A/B indicators are research prioritisation signals, not claims of activity.",
+      "No external websites accessed in this consolidation and no publication/live listings modified."
     ]
   },
   "candidates": [
@@ -27748,8 +27759,121 @@
       },
       "saved_research": null,
       "original_research_batch_file": "research/cruising/part5/C/batch_0852_0856.json",
-      "research_archive_read_error": "NOT_FOUND: Error code: NOT_FOUND; Error: GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}",
-      "publication_approved": false
+      "research_archive_read_error": "Original research batch research/cruising/part5/C/batch_0852_0856.json not present in GitHub; reconstructed original-source metadata from archived scrape_2 and evidence table; no deep-research report invented.",
+      "publication_approved": false,
+      "original_archive_record": {
+        "rank": 2,
+        "name": "Die Nonne im Clara Zetkin Park",
+        "source_category": "Cruising",
+        "source_city_url": "https://gay-szene.net/gay-cruising-in-leipzig/157/17/rubrik.html",
+        "source_country": "Germany",
+        "detail_url": null,
+        "existing_venue_id": null,
+        "proposal_id": "GS2-DE-LEIPZIG-002",
+        "assessment": "candidate_unverified",
+        "review_note": ""
+      },
+      "original_eight_source_evidence": {
+        "location_id": "GS2-DE-LEIPZIG-002",
+        "name": "Die Nonne im Clara Zetkin Park",
+        "city": "Leipzig",
+        "country": "Germany",
+        "row_type": "proposal",
+        "current_site_status": null,
+        "archived_source_count": 1,
+        "known_websites": [
+          "gay-szene.net"
+        ],
+        "site_1": {
+          "website": "Gays-Cruising.com",
+          "status": "NOT_SEARCHED_INDIVIDUALLY__no_archive_match",
+          "mentions": []
+        },
+        "site_2": {
+          "website": "Gay-Szene.net",
+          "status": "ARCHIVE_LINKED__INDIVIDUAL_PAGE_REVIEW_PENDING",
+          "mentions": [
+            {
+              "original_file": "research/cruising/scrape_2.json",
+              "original_index": 186,
+              "match_basis": "id",
+              "source_url": "https://gay-szene.net/gay-cruising-in-leipzig/157/17/rubrik.html",
+              "original_record": {
+                "rank": 2,
+                "name": "Die Nonne im Clara Zetkin Park",
+                "source_category": "Cruising",
+                "source_city_url": "https://gay-szene.net/gay-cruising-in-leipzig/157/17/rubrik.html",
+                "source_country": "Germany",
+                "detail_url": null,
+                "existing_venue_id": null,
+                "proposal_id": "GS2-DE-LEIPZIG-002",
+                "assessment": "candidate_unverified",
+                "review_note": ""
+              },
+              "description_text": null,
+              "last_updated_at": null,
+              "most_recent_report_date": null,
+              "latest_reply_label": null,
+              "comment_count": null,
+              "comments": [],
+              "last_checked_at": null,
+              "missing_fields": [
+                "explicit_source_last_updated_date_if_not_present",
+                "visitor_comment_dates_and_text_if_not_present",
+                "recent_onsite_activity_since_2025-11-06_if_not_documented"
+              ],
+              "source_description": null,
+              "archived_paraphrase_or_note": null,
+              "source_where": null,
+              "source_directions": null,
+              "source_best_times": null,
+              "source_crowd": null,
+              "source_warnings": null,
+              "source_last_updated_at": null,
+              "most_recent_comment_date": null,
+              "visitor_comment_research_status": "NOT_COLLECTED__DO_NOT_TREAT_AS_NO_COMMENTS",
+              "user_report_status": "NOT_CHECKED_FOR_CURRENT_VALID_ACTIVITY",
+              "source_card_added_age": null,
+              "source_last_reply_label": null,
+              "description_provenance": "no_description_in_archive"
+            }
+          ]
+        },
+        "site_3": {
+          "website": "Planet-Randy",
+          "status": "NOT_SEARCHED_INDIVIDUALLY__no_archive_match",
+          "mentions": []
+        },
+        "site_4": {
+          "website": "The Gay Passport",
+          "status": "NOT_SEARCHED_INDIVIDUALLY__no_archive_match",
+          "mentions": []
+        },
+        "site_5": {
+          "website": "Splashd",
+          "status": "NOT_SEARCHED_INDIVIDUALLY__no_archive_match",
+          "mentions": []
+        },
+        "site_6": {
+          "website": "Popcorn.dating",
+          "status": "NOT_SEARCHED_INDIVIDUALLY__no_archive_match",
+          "mentions": []
+        },
+        "site_7": {
+          "website": "Squirt.org",
+          "status": "NOT_SEARCHED_INDIVIDUALLY__no_archive_match",
+          "mentions": []
+        },
+        "site_8": {
+          "website": "CruisingGays",
+          "status": "NOT_SEARCHED_INDIVIDUALLY__no_archive_match",
+          "mentions": []
+        },
+        "comparison_status": "source_extraction_in_progress__no_filtering",
+        "combined_description": null,
+        "decision": null
+      },
+      "activity_verification_note": "Archive batch C/batch_0852_0856.json is absent. Original source archive links the place, but the eight-source evidence table says individual page and recent visitor comments were not collected. Group A's heuristic indicator is NOT verified activity."
     },
     {
       "queue_index": 858,
