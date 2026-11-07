@@ -4,7 +4,7 @@
     "created_berlin_date": "2026-11-07",
     "status": "BUILD_IN_PROGRESS",
     "target_count": 210,
-    "stored_count": 135,
+    "stored_count": 152,
     "source_priority_file": "research/cruising/part5/remaining_793_priority_groups_2026-11-07.json",
     "source_master_queue": "research/cruising/part5/master_queue.json",
     "source_triage_file": "research/cruising/part5/listing_completeness_triage_2026-11-07.json",
@@ -16,7 +16,9 @@
       "All previously saved research retained verbatim.",
       "Research only, not a production venue import."
     ],
-    "missing_archive_rows": []
+    "missing_archive_rows": [
+      856
+    ]
   },
   "candidates": [
     {
@@ -26167,6 +26169,3313 @@
         "research_checked_berlin": "2026-11-06"
       },
       "original_research_batch_file": "research/cruising/part5/C/batch_0782_0786.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 790,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-FRANKFURT-AM-MAIN-011",
+      "name": "Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring",
+      "city": "Frankfurt am Main",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 790,
+        "candidate_id": "GS2-DE-FRANKFURT-AM-MAIN-011",
+        "name": "Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring",
+        "city": "Frankfurt am Main",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 89,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0787_0791.json"
+      },
+      "original_queue_record": {
+        "index": 790,
+        "section": "C",
+        "id": "GS2-DE-FRANKFURT-AM-MAIN-011",
+        "name": "Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring",
+        "city": "Frankfurt am Main",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 138,
+            "u": "https://gay-szene.net/gay-cruising-in-frankfurt-am-main/734/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 790,
+        "candidate_id": "GS2-DE-FRANKFURT-AM-MAIN-011",
+        "name": "Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring",
+        "city": "Frankfurt am Main",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 89,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 790,
+        "id": "GS2-DE-FRANKFURT-AM-MAIN-011",
+        "name": "Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring",
+        "city": "Frankfurt am Main",
+        "country": "Germany",
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 138,
+            "u": "https://gay-szene.net/gay-cruising-in-frankfurt-am-main/734/17/rubrik.html"
+          }
+        ],
+        "original_source_count": 1,
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "stored_cross_source_alignment_and_archive",
+            "note": "No matched identity in archival collected data; incomplete coverage of live site.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-frankfurt-am-main/734/17/rubrik.html",
+              "https://gay-szene.net/parkplaetze-a-661-zwischen-offenbacher-kreuz-und-ausfahrt-taunusring-in-frankfurt-am-main/5161/eintrag.html"
+            ],
+            "access_note": "forum_page_read",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "stored_cross_source_alignment_and_archive",
+            "note": "No matched identity in archival collected data; incomplete coverage of live site.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "stored_cross_source_alignment_and_archive",
+            "note": "No matched identity in archival collected data; incomplete coverage of live site.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "stored_cross_source_alignment_and_archive",
+            "note": "No matched identity in archival collected data; incomplete coverage of live site.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "stored_cross_source_alignment_and_archive",
+            "note": "No matched identity in archival collected data; incomplete coverage of live site.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "stored_cross_source_alignment_and_archive",
+            "note": "No matched identity in archival collected data; incomplete coverage of live site.",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "stored_cross_source_alignment_and_archive",
+            "note": "No matched identity in archival collected data; incomplete coverage of live site.",
+            "checked_berlin": "2026-11-06"
+          }
+        ],
+        "description_rewritten": "This historical gay cruising lead encompasses distinct A661 parking areas in both directions between Offenbacher Kreuz and Taunusring, including the Buchrain vicinity. Multiple user posts dated 13 January, 4 April and 30 May 2026 say the car parks were fully closed and used as Riederwaldtunnel construction storage, with a proposed new service station. The April post suggests entering adjacent woods from the back, which must not be treated as authorised access. The exact closure status of each direction requires confirmation from autobahn operator; current cruising activity is NOT verified.",
+        "place_identity": "multiple_carriageway_parking_areas_recent_closure_and_construction_claims",
+        "primary_detail_url": "https://gay-szene.net/parkplaetze-a-661-zwischen-offenbacher-kreuz-und-ausfahrt-taunusring-in-frankfurt-am-main/5161/eintrag.html",
+        "additional_evidence": [
+          {
+            "url": "https://gay-szene.net/parkplaetze-a-661-zwischen-offenbacher-kreuz-und-ausfahrt-taunusring-in-frankfurt-am-main/5161/eintrag.html",
+            "kind": "dated_user_site_access",
+            "note": "Jan-May 2026 multiple closure reports and storage use for Riederwaldtunnel; not independently official."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_2026_reports": [
+            {
+              "date": "2026-05-30",
+              "kind": "first_person_or_local_closure_and_storage_report",
+              "note": "Poster says parking now construction depot and closed, unsure scene future."
+            },
+            {
+              "date": "2026-04-04",
+              "kind": "closure_report",
+              "note": "User says both lots still blocked and suggests backwoods access; not permission."
+            },
+            {
+              "date": "2026-01-13",
+              "kind": "closure_report",
+              "note": "Says fully closed."
+            },
+            {
+              "date": "2026-05-19",
+              "kind": "request_for_alternate_spot",
+              "note": "Not an activity report."
+            }
+          ],
+          "historical_posts": [
+            {
+              "date": "2025-04-11",
+              "kind": "older_activity_report",
+              "note": "Reported earlier mixed activity on one direction, pre-cutoff."
+            }
+          ],
+          "independent_confirmation_of_current_cruising": false,
+          "undated_directory_reference_not_fresh_evidence": true
+        },
+        "access_information": "Motorway parking reportedly CLOSED during 2026 public works; do not promote unapproved rear access via woodland, road shoulders or fences. East/west carriageway and service redevelopment require official verification.",
+        "possible_duplicates_and_flags": [
+          "High-priority 2026 parking closure reports.",
+          "Source bundles separate road directions into one candidate; split by carriageway at filtering.",
+          "Possible adjacent A661 Buchrain area, don't merge to A3 Stadtwald."
+        ],
+        "disposition": "retain_candidate_research_only",
+        "researched_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0787_0791.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 798,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GS2-DE-HAMBURG-005",
+      "name": "Friedhof Ohlsdorf",
+      "city": "Hamburg",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 798,
+        "candidate_id": "GS2-DE-HAMBURG-005",
+        "name": "Friedhof Ohlsdorf",
+        "city": "Hamburg",
+        "country": "Germany",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 94,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0797_0801.json"
+      },
+      "original_queue_record": {
+        "index": 798,
+        "section": "C",
+        "id": "GS2-DE-HAMBURG-005",
+        "name": "Friedhof Ohlsdorf",
+        "city": "Hamburg",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 145,
+            "u": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html"
+          },
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 146,
+            "u": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 798,
+        "candidate_id": "GS2-DE-HAMBURG-005",
+        "name": "Friedhof Ohlsdorf",
+        "city": "Hamburg",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 94,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 798,
+        "id": "GS2-DE-HAMBURG-005",
+        "name": "Friedhof Ohlsdorf",
+        "city": "Hamburg",
+        "country": "Germany",
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 145,
+            "u": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html"
+          },
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 146,
+            "u": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html"
+          }
+        ],
+        "original_source_count": 1,
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "method": "archive_and_alignment_name_match",
+            "notes": "No match in collected source snapshots; not proof entire website has no listing."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
+              "https://gay-szene.net/friedhof-ohlsdorf-in-hamburg/12574/eintrag.html"
+            ],
+            "checked_berlin": "2026-11-06",
+            "method": "archived_source_alignment_and_public_dated_detail"
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "method": "archive_and_alignment_name_match",
+            "notes": "No match in collected source snapshots; not proof entire website has no listing."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "method": "archive_and_alignment_name_match",
+            "notes": "No match in collected source snapshots; not proof entire website has no listing."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "method": "archive_and_alignment_name_match",
+            "notes": "No match in collected source snapshots; not proof entire website has no listing."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "method": "archive_and_alignment_name_match",
+            "notes": "No match in collected source snapshots; not proof entire website has no listing."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "method": "archive_and_alignment_name_match",
+            "notes": "No match in collected source snapshots; not proof entire website has no listing."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "checked_berlin": "2026-11-06",
+            "method": "archive_and_alignment_name_match",
+            "notes": "No match in collected source snapshots; not proof entire website has no listing."
+          }
+        ],
+        "description_rewritten": "Friedhof Ohlsdorf is a working cemetery/heritage park. The original two source2 records concern two distinct sublocations: a public restroom by the Bestattungsforum and restrooms by Kapellen 3/4. A 10 July 2026 firsthand visitor said Chapel 4 WC was locked and usable only for events, while Chapel 3/others had no encounters that day. A separate Kapelle 3 forum has a 12 February 2026 post mentioning an unpleasant regular visitor, but not a confirmed sexual encounter. The official cemetery operator publishes 07:00–21:00 pedestrian/cycle entrance and November–March 09:00–18:00 vehicle access; individual toilet and chapel hours can differ.",
+        "identity_assessment": "two_archived_subspots_forum_wc_vs_chapels_3_4_need_separate_review",
+        "original_detail_url": "https://gay-szene.net/friedhof-ohlsdorf-in-hamburg/12574/eintrag.html",
+        "supplementary_sources": [
+          {
+            "url": "https://gay-szene.net/friedhof-ohlsdorf-kapelle-3-in-hamburg/12730/eintrag.html",
+            "kind": "parallel_source_record_on_same_website",
+            "note": "Chapel 3 forum and Chapel 4/7/8/13 discussions; within same large cemetery not exact match to forum WC."
+          },
+          {
+            "url": "https://friedhof-ohlsdorf-hamburg.de/oeffnungszeiten",
+            "kind": "official_operator_current_access",
+            "note": "Pedestrians/cyclists 07–21 daily; vehicles Nov–Mar 09–18; individual facilities variable."
+          }
+        ],
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-07-10",
+              "kind": "first_person_negative_and_WC_closed",
+              "note": "Forum visitor reported Chapel 4 toilets locked and no activity elsewhere, does not confirm all other WC open."
+            },
+            {
+              "date": "2026-02-12",
+              "kind": "visitor_comment_no_confirmed_cruising",
+              "note": "Kapelle 3 thread mentions another visitor, no specific sexual meeting."
+            }
+          ],
+          "older_posts": [
+            {
+              "date": "2024-06-24",
+              "kind": "historical_positive_report",
+              "note": "Another source says past encounters by Kapelle 4/7."
+            },
+            {
+              "date": "2024-06-10",
+              "kind": "old_chapel_3_closed_report",
+              "note": "Forum says chapel 3 closed and others quiet."
+            }
+          ],
+          "undated_directory_not_recent_visitor_evidence": true,
+          "official_current_cruising_endorsement": false
+        },
+        "access_information": "Active cemetery, family mourners and sacred gravestones. Strict respect and no public sexual activity. Pedestrian gates are scheduled, individual chapels and WC have independent access hours and may be locked.",
+        "possible_duplicates_and_safety": [
+          "Source archive contains TWO cemetery subrecords, keep Chapel 3 distinct from funeral forum toilet.",
+          "July 2026 report: Kapelle 4 WC locked.",
+          "Do not advertise as accessible sex site or recommend bypassing gates."
+        ],
+        "retain_candidate_for_later_filter": true,
+        "publication_approved": false,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0797_0801.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 830,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-HANNOVER-002",
+      "name": "Cruising neben Parkplatz Silbersee Ost",
+      "city": "Hannover",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 830,
+        "candidate_id": "GS2-DE-HANNOVER-002",
+        "name": "Cruising neben Parkplatz Silbersee Ost",
+        "city": "Hannover",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 73,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0827_0831.json"
+      },
+      "original_queue_record": {
+        "index": 830,
+        "section": "C",
+        "id": "GS2-DE-HANNOVER-002",
+        "name": "Cruising neben Parkplatz Silbersee Ost",
+        "city": "Hannover",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 164,
+            "u": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 830,
+        "candidate_id": "GS2-DE-HANNOVER-002",
+        "name": "Cruising neben Parkplatz Silbersee Ost",
+        "city": "Hannover",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 73,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 830,
+        "id": "GS2-DE-HANNOVER-002",
+        "name": "Cruising neben Parkplatz Silbersee Ost",
+        "city": "Hannover",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 164,
+            "u": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_source_alignment_and_public_site_detail_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned matching identity in available archived coverage; not an exhaustive negative web finding."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html",
+              "https://gay-szene.net/cruising-neben-parkplatz-silbersee-ost-in-hannover/12378/eintrag.html"
+            ],
+            "method": "archived_source_alignment_and_public_site_detail_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "Original directory record matched; dated visitor evidence evaluated separately."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_source_alignment_and_public_site_detail_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned matching identity in available archived coverage; not an exhaustive negative web finding."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_source_alignment_and_public_site_detail_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned matching identity in available archived coverage; not an exhaustive negative web finding."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_source_alignment_and_public_site_detail_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned matching identity in available archived coverage; not an exhaustive negative web finding."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_source_alignment_and_public_site_detail_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned matching identity in available archived coverage; not an exhaustive negative web finding."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_source_alignment_and_public_site_detail_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned matching identity in available archived coverage; not an exhaustive negative web finding."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_source_alignment_and_public_site_detail_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned matching identity in available archived coverage; not an exhaustive negative web finding."
+          }
+        ],
+        "source_record": {
+          "rank": 2,
+          "name": "Cruising neben Parkplatz Silbersee Ost",
+          "source_category": "Cruising",
+          "source_city_url": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html",
+          "source_country": "Germany",
+          "detail_url": null,
+          "existing_venue_id": null,
+          "proposal_id": "GS2-DE-HANNOVER-002",
+          "assessment": "candidate_unverified",
+          "review_note": ""
+        },
+        "description_rewritten": "This is the wooded waterside area next to Silbersee Ost parking near Langenhagen's A2, rather than the main lake shoreline. Two 2026 posts raise a serious access issue: a 7 May visitor says the parking area had been closed since early May, and a 24 July commenter asks whether it will reopen. A 2025 user recounts a cruising encounter but that is before the current evidence cutoff. Treat access as unresolved, not open.",
+        "place_identity": "https://gay-szene.net/cruising-neben-parkplatz-silbersee-ost-in-hannover/12378/eintrag.html",
+        "supplementary_sources": [],
+        "source_detail_url": "https://gay-szene.net/cruising-neben-parkplatz-silbersee-ost-in-hannover/12378/eintrag.html",
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-07-24",
+              "type": "access_query",
+              "note": "Commenter asks whether the parking area is permanently closed; not an activity report."
+            },
+            {
+              "date": "2026-05-07",
+              "type": "first_person_closure_claim",
+              "note": "Parking area reportedly blocked from early May 2026; not independently corroborated."
+            }
+          ],
+          "older_reports": [
+            {
+              "date": "2025-10-14",
+              "type": "precutoff_positive_claim_and_privacy_warning",
+              "note": "Poster reports incident during encounter and alleged drone observation."
+            },
+            {
+              "date": "2025-09-16",
+              "type": "precutoff_visit_report",
+              "note": "Describes interactions near parking area."
+            }
+          ],
+          "undated_source_editorial_is_not_recent_activity": true,
+          "independently_confirmed_2026_cruising": false
+        },
+        "access_information": "Public or shared-use area; dated access reports and posted restrictions take precedence over undated directory directions. No evidence of authorized public sexual activity.",
+        "possible_duplicates_and_flags": [
+          "Parking access potentially closed from May 2026.",
+          "Possible overlap with Vahrenheide A2 rest area; source also references a pedestrian bridge.",
+          "No trespass into blocked parking or across motorway."
+        ],
+        "retain_research_candidate": true,
+        "approved_for_live_publication": false,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0827_0831.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 833,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-HANNOVER-005",
+      "name": "Klappe am Stadtfriedhof Stöcken",
+      "city": "Hannover",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 833,
+        "candidate_id": "GS2-DE-HANNOVER-005",
+        "name": "Klappe am Stadtfriedhof Stöcken",
+        "city": "Hannover",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 51,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0832_0836.json"
+      },
+      "original_queue_record": {
+        "index": 833,
+        "section": "C",
+        "id": "GS2-DE-HANNOVER-005",
+        "name": "Klappe am Stadtfriedhof Stöcken",
+        "city": "Hannover",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 167,
+            "u": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 833,
+        "candidate_id": "GS2-DE-HANNOVER-005",
+        "name": "Klappe am Stadtfriedhof Stöcken",
+        "city": "Hannover",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 51,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 833,
+        "id": "GS2-DE-HANNOVER-005",
+        "name": "Klappe am Stadtfriedhof Stöcken",
+        "city": "Hannover",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 167,
+            "u": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_source_archived_alignment_and_current_public_detail_page_with_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archived source; not proof of no page on live site."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html",
+              "https://gay-szene.net/klappe-am-stadtfriedhof-stoecken-in-hannover/8174/eintrag.html"
+            ],
+            "method": "eight_source_archived_alignment_and_current_public_detail_page_with_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "Matched in original source; dated reports separated from editorial text."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_source_archived_alignment_and_current_public_detail_page_with_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archived source; not proof of no page on live site."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_source_archived_alignment_and_current_public_detail_page_with_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archived source; not proof of no page on live site."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_source_archived_alignment_and_current_public_detail_page_with_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archived source; not proof of no page on live site."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_source_archived_alignment_and_current_public_detail_page_with_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archived source; not proof of no page on live site."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_source_archived_alignment_and_current_public_detail_page_with_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archived source; not proof of no page on live site."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_source_archived_alignment_and_current_public_detail_page_with_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archived source; not proof of no page on live site."
+          }
+        ],
+        "source_record": {
+          "rank": 5,
+          "name": "Klappe am Stadtfriedhof Stöcken",
+          "source_category": "Cruising",
+          "source_city_url": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html",
+          "source_country": "Germany",
+          "detail_url": null,
+          "existing_venue_id": null,
+          "proposal_id": "GS2-DE-HANNOVER-005",
+          "assessment": "restricted_or_private_space_review",
+          "review_note": ""
+        },
+        "source_detail_url": "https://gay-szene.net/klappe-am-stadtfriedhof-stoecken-in-hannover/8174/eintrag.html",
+        "description_rewritten": "A public toilet by the Stöcken cemetery at Stöckener Straße and Fuhsestraße is listed in Hannover's long-running cruising directory. Unlike most nearby places, a 22 July 2026 first-person post explicitly reports several encounters during 2026. It is one uncorroborated self-report, not independent confirmation or permission to use the toilet for sex.",
+        "place_identity": "https://gay-szene.net/klappe-am-stadtfriedhof-stoecken-in-hannover/8174/eintrag.html",
+        "supplementary_sources": [],
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-07-22",
+              "type": "positive_first_person_repeated_claim",
+              "note": "Poster says they found contacts on multiple occasions during 2026."
+            }
+          ],
+          "older_reports": [
+            {
+              "date": "2025-04-03",
+              "type": "negative_visitor_report",
+              "note": "Visitor says often alone."
+            },
+            {
+              "date": "2023-02-08",
+              "type": "security_presence_claim",
+              "note": "Mentions nearby police presence; not confirmation of current policing."
+            }
+          ],
+          "undated_source_editorial_is_not_recent_activity": true,
+          "independently_confirmed_2026_cruising": false
+        },
+        "access_information": "Public/shared or potentially restricted access; review current signage and hours. No official permission for sexual activity on site.",
+        "possible_duplicates_and_flags": [
+          "Ordinary cemetery-side public toilet, not a sanctioned venue.",
+          "One in-window positive firsthand post only."
+        ],
+        "retain_research_candidate": true,
+        "approved_for_live_publication": false,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0832_0836.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 838,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GS2-DE-HANNOVER-010",
+      "name": "Rastplatz Vahrenheide an der A 2",
+      "city": "Hannover",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 838,
+        "candidate_id": "GS2-DE-HANNOVER-010",
+        "name": "Rastplatz Vahrenheide an der A 2",
+        "city": "Hannover",
+        "country": "Germany",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 61,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0837_0841.json"
+      },
+      "original_queue_record": {
+        "index": 838,
+        "section": "C",
+        "id": "GS2-DE-HANNOVER-010",
+        "name": "Rastplatz Vahrenheide an der A 2",
+        "city": "Hannover",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 172,
+            "u": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 838,
+        "candidate_id": "GS2-DE-HANNOVER-010",
+        "name": "Rastplatz Vahrenheide an der A 2",
+        "city": "Hannover",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 61,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 838,
+        "id": "GS2-DE-HANNOVER-010",
+        "name": "Rastplatz Vahrenheide an der A 2",
+        "city": "Hannover",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 172,
+            "u": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_cross_alignment_and_individual_public_page",
+            "checked_berlin": "2026-11-06",
+            "note": "No matching identity in archival index; not an exhaustive check of entire live website."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html",
+              "https://gay-szene.net/rastplatz-vahrenheide-an-der-a-2-in-hannover/13056/eintrag.html"
+            ],
+            "method": "eight_original_archives_cross_alignment_and_individual_public_page",
+            "checked_berlin": "2026-11-06",
+            "note": "Historical directory match; specific dated comments checked."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_cross_alignment_and_individual_public_page",
+            "checked_berlin": "2026-11-06",
+            "note": "No matching identity in archival index; not an exhaustive check of entire live website."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_cross_alignment_and_individual_public_page",
+            "checked_berlin": "2026-11-06",
+            "note": "No matching identity in archival index; not an exhaustive check of entire live website."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_cross_alignment_and_individual_public_page",
+            "checked_berlin": "2026-11-06",
+            "note": "No matching identity in archival index; not an exhaustive check of entire live website."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_cross_alignment_and_individual_public_page",
+            "checked_berlin": "2026-11-06",
+            "note": "No matching identity in archival index; not an exhaustive check of entire live website."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_cross_alignment_and_individual_public_page",
+            "checked_berlin": "2026-11-06",
+            "note": "No matching identity in archival index; not an exhaustive check of entire live website."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_cross_alignment_and_individual_public_page",
+            "checked_berlin": "2026-11-06",
+            "note": "No matching identity in archival index; not an exhaustive check of entire live website."
+          }
+        ],
+        "source_record": {
+          "rank": 10,
+          "name": "Rastplatz Vahrenheide an der A 2",
+          "source_category": "Cruising",
+          "source_city_url": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html",
+          "source_country": "Germany",
+          "detail_url": null,
+          "existing_venue_id": null,
+          "proposal_id": "GS2-DE-HANNOVER-010",
+          "assessment": "candidate_unverified",
+          "review_note": ""
+        },
+        "source_detail_url": "https://gay-szene.net/rastplatz-vahrenheide-an-der-a-2-in-hannover/13056/eintrag.html",
+        "description_rewritten": "The Vahrenheide rest area on the A2 towards Berlin is referenced near Hannover-Langenhagen. A dated 17 June 2026 forum comment describes people stopping and heading into adjacent greenery, while a 8 March 2026 comment only asks about activity. The June post indicates recent use but does not independently document a sexual encounter. Distinguish it from the nearby Silbersee and Klusriede entries.",
+        "place_identity": "https://gay-szene.net/rastplatz-vahrenheide-an-der-a-2-in-hannover/13056/eintrag.html",
+        "supplementary_sources": [],
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-06-17",
+              "type": "recent_use_observation_claim",
+              "note": "Visitor describes people stopping and going toward the bushes; no explicit direct encounter."
+            },
+            {
+              "date": "2026-03-08",
+              "type": "question_only",
+              "note": "Asks whether cruising still occurs."
+            }
+          ],
+          "older_reports": [],
+          "undated_source_editorial_is_not_recent_activity": true,
+          "independently_confirmed_2026_cruising": false
+        },
+        "access_information": "Public or possibly restricted roadside/park setting; verify lawful access and current signs. No public-sex authorization inferred.",
+        "possible_duplicates_and_flags": [
+          "Potential overlap with Silbersee Ost paths but not identical motorway stop.",
+          "Stay clear of motorway carriageways and restricted roadsides."
+        ],
+        "retain_research_candidate": true,
+        "approved_for_live_publication": false,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0837_0841.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 842,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GS2-DE-HANNOVER-014",
+      "name": "Zauberwald beim Zoo",
+      "city": "Hannover",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 842,
+        "candidate_id": "GS2-DE-HANNOVER-014",
+        "name": "Zauberwald beim Zoo",
+        "city": "Hannover",
+        "country": "Germany",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 52,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0842_0846.json"
+      },
+      "original_queue_record": {
+        "index": 842,
+        "section": "C",
+        "id": "GS2-DE-HANNOVER-014",
+        "name": "Zauberwald beim Zoo",
+        "city": "Hannover",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 176,
+            "u": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 842,
+        "candidate_id": "GS2-DE-HANNOVER-014",
+        "name": "Zauberwald beim Zoo",
+        "city": "Hannover",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 52,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 842,
+        "id": "GS2-DE-HANNOVER-014",
+        "name": "Zauberwald beim Zoo",
+        "city": "Hannover",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 176,
+            "u": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_and_public_directory/detail_source_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No source-alignment match in saved research sources; not proof of web absence."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html",
+              "https://gay-szene.net/zauberwald-beim-zoo-in-hannover/3305/eintrag.html"
+            ],
+            "method": "eight_original_archives_and_public_directory/detail_source_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "Archived original reference matched; dated content assessed separately."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_and_public_directory/detail_source_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No source-alignment match in saved research sources; not proof of web absence."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_and_public_directory/detail_source_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No source-alignment match in saved research sources; not proof of web absence."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_and_public_directory/detail_source_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No source-alignment match in saved research sources; not proof of web absence."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_and_public_directory/detail_source_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No source-alignment match in saved research sources; not proof of web absence."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_and_public_directory/detail_source_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No source-alignment match in saved research sources; not proof of web absence."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_original_archives_and_public_directory/detail_source_recheck",
+            "checked_berlin": "2026-11-06",
+            "note": "No source-alignment match in saved research sources; not proof of web absence."
+          }
+        ],
+        "source_record": {
+          "rank": 14,
+          "name": "Zauberwald beim Zoo",
+          "source_category": "Cruising",
+          "source_city_url": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html",
+          "source_country": "Germany",
+          "detail_url": null,
+          "existing_venue_id": null,
+          "proposal_id": "GS2-DE-HANNOVER-014",
+          "assessment": "candidate_unverified",
+          "review_note": ""
+        },
+        "source_detail_url": "https://gay-szene.net/zauberwald-beim-zoo-in-hannover/3305/eintrag.html",
+        "description_rewritten": "Zauberwald refers to a wooded section of Hannover's Eilenriede near the zoo, not the zoo itself. Dated 17 June 2026 comment recommends the site, and a 3 May 2026 firsthand observer reports people walking past repeatedly without interaction. This is recent presence and site-use information, but no independently confirmed 2026 sexual encounter.",
+        "place_identity": "https://gay-szene.net/zauberwald-beim-zoo-in-hannover/3305/eintrag.html",
+        "supplementary_sources": [],
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-06-17",
+              "type": "positive_site_recommendation",
+              "note": "Commenter describes forest as a good meeting place, not explicit personal encounter."
+            },
+            {
+              "date": "2026-05-03",
+              "type": "first_person_negative_visit",
+              "note": "One-hour bench visit, passing walkers but no interaction."
+            }
+          ],
+          "older_reports": [
+            {
+              "date": "2025-10-13",
+              "type": "precutoff_mixed_historic_experiences",
+              "note": "Commenter recalls successful evenings and unsuccessful visits."
+            }
+          ],
+          "undated_source_editorial_is_not_recent_activity": true,
+          "independently_confirmed_2026_cruising": false
+        },
+        "access_information": "Public road/park/beach area or potentially restricted bank. Access, hours and permissions are not established beyond public directory descriptions.",
+        "possible_duplicates_and_flags": [
+          "Wooded public park next to a zoo; mixed-use visitors and wildlife.",
+          "Not the zoo premises or neighboring public toilet."
+        ],
+        "retain_research_candidate": true,
+        "approved_for_live_publication": false,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0842_0846.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 849,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-KARLSRUHE-005",
+      "name": "Nymphengarten",
+      "city": "Karlsruhe",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 849,
+        "candidate_id": "GS2-DE-KARLSRUHE-005",
+        "name": "Nymphengarten",
+        "city": "Karlsruhe",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 49,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0847_0851.json"
+      },
+      "original_queue_record": {
+        "index": 849,
+        "section": "C",
+        "id": "GS2-DE-KARLSRUHE-005",
+        "name": "Nymphengarten",
+        "city": "Karlsruhe",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 181,
+            "u": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 849,
+        "candidate_id": "GS2-DE-KARLSRUHE-005",
+        "name": "Nymphengarten",
+        "city": "Karlsruhe",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 49,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 849,
+        "id": "GS2-DE-KARLSRUHE-005",
+        "name": "Nymphengarten",
+        "city": "Karlsruhe",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 181,
+            "u": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+              "https://gay-szene.net/nymphengarten-in-karlsruhe/2283/eintrag.html"
+            ],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "Source listing matched; recent visit evidence assessed separately."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          }
+        ],
+        "source_detail_url": "https://gay-szene.net/nymphengarten-in-karlsruhe/2283/eintrag.html",
+        "description_rewritten": "Nymphengarten is a city-centre garden at Kriegsstraße and Lammstraße. The March 2026 post recounts a police clothing warning during the previous year, not a sexual encounter in 2026. A December 2024 comment describes an earlier encounter. It is an ordinary public park; no contemporary independent evidence establishes cruising activity.",
+        "place_identity": "https://gay-szene.net/nymphengarten-in-karlsruhe/2283/eintrag.html",
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-03-20",
+              "type": "retrospective_police_contact",
+              "note": "Post recounts being warned by police about clothing in 2025; no 2026 sexual activity."
+            }
+          ],
+          "older_reports": [
+            {
+              "date": "2024-12-17",
+              "type": "precutoff_positive_claim",
+              "note": "Poster described earlier intimate encounter with another man."
+            }
+          ],
+          "undated_source_editorial_is_not_recent_activity": true,
+          "independently_confirmed_2026_cruising": false
+        },
+        "access_information": "Public recreation or shared-access area. Respect posted restrictions and ordinary public use; public sex is not authorized by a directory listing.",
+        "possible_duplicates_and_flags": [
+          "Public park; police and third-party concerns, not an authorized play area."
+        ],
+        "retain_research_candidate": true,
+        "approved_for_live_publication": false,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0847_0851.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 850,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-KARLSRUHE-006",
+      "name": "Rastplatz Birkenwäldle an der A 8",
+      "city": "Karlsruhe",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 850,
+        "candidate_id": "GS2-DE-KARLSRUHE-006",
+        "name": "Rastplatz Birkenwäldle an der A 8",
+        "city": "Karlsruhe",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 50,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0847_0851.json"
+      },
+      "original_queue_record": {
+        "index": 850,
+        "section": "C",
+        "id": "GS2-DE-KARLSRUHE-006",
+        "name": "Rastplatz Birkenwäldle an der A 8",
+        "city": "Karlsruhe",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 182,
+            "u": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 850,
+        "candidate_id": "GS2-DE-KARLSRUHE-006",
+        "name": "Rastplatz Birkenwäldle an der A 8",
+        "city": "Karlsruhe",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 50,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 850,
+        "id": "GS2-DE-KARLSRUHE-006",
+        "name": "Rastplatz Birkenwäldle an der A 8",
+        "city": "Karlsruhe",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 182,
+            "u": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+              "https://gay-szene.net/rastplatz-birkenwaeldle-an-der-a-8-in-karlsruhe/10528/eintrag.html"
+            ],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "Source listing matched; recent visit evidence assessed separately."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_archives_cross_alignment_plus_public_detail_page_and_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in original archive; not proof of absence from full site."
+          }
+        ],
+        "source_detail_url": "https://gay-szene.net/rastplatz-birkenwaeldle-an-der-a-8-in-karlsruhe/10528/eintrag.html",
+        "description_rewritten": "Birkenwäldle is an A8 rest area near Grünwettersbach and Karlsbad. Its June 2026 commenter reports little or no activity. Older visitors say fencing had restricted access behind the parking area; a 2023 report describes surveillance concerns. The directory's undated claims of constant activity are not supported by recent visitor testimony.",
+        "place_identity": "https://gay-szene.net/rastplatz-birkenwaeldle-an-der-a-8-in-karlsruhe/10528/eintrag.html",
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-06-04",
+              "type": "recent_negative_activity_report",
+              "note": "Commenter says nothing happening at the rest area anymore."
+            }
+          ],
+          "older_reports": [
+            {
+              "date": "2023-12-26",
+              "type": "historic_fence_access_warning",
+              "note": "Visitor says fenced enclosure prevents the previous route; surveillance suspected."
+            },
+            {
+              "date": "2021-07-14",
+              "type": "fenced_access_report",
+              "note": "Visitor says woodland fenced and no activity."
+            }
+          ],
+          "undated_source_editorial_is_not_recent_activity": true,
+          "independently_confirmed_2026_cruising": false
+        },
+        "access_information": "Public recreation or shared-access area. Respect posted restrictions and ordinary public use; public sex is not authorized by a directory listing.",
+        "possible_duplicates_and_flags": [
+          "Fences and retention basin: no crossing restricted boundaries.",
+          "Not equivalent to Epplesee's 'Birkenwäldle' wooded section."
+        ],
+        "retain_research_candidate": true,
+        "approved_for_live_publication": false,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0847_0851.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 856,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GS2-DE-LEIPZIG-002",
+      "name": "Die Nonne im Clara Zetkin Park",
+      "city": "Leipzig",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 856,
+        "candidate_id": "GS2-DE-LEIPZIG-002",
+        "name": "Die Nonne im Clara Zetkin Park",
+        "city": "Leipzig",
+        "country": "Germany",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 58,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0852_0856.json"
+      },
+      "original_queue_record": {
+        "index": 856,
+        "section": "C",
+        "id": "GS2-DE-LEIPZIG-002",
+        "name": "Die Nonne im Clara Zetkin Park",
+        "city": "Leipzig",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 186,
+            "u": "https://gay-szene.net/gay-cruising-in-leipzig/157/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 856,
+        "candidate_id": "GS2-DE-LEIPZIG-002",
+        "name": "Die Nonne im Clara Zetkin Park",
+        "city": "Leipzig",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 58,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": null,
+      "original_research_batch_file": "research/cruising/part5/C/batch_0852_0856.json",
+      "research_archive_read_error": "NOT_FOUND: Error code: NOT_FOUND; Error: GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}",
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 858,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GS2-DE-LEIPZIG-004",
+      "name": "Kanal in Dölzig",
+      "city": "Leipzig",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 858,
+        "candidate_id": "GS2-DE-LEIPZIG-004",
+        "name": "Kanal in Dölzig",
+        "city": "Leipzig",
+        "country": "Germany",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": true,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 59,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0857_0861.json"
+      },
+      "original_queue_record": {
+        "index": 858,
+        "section": "C",
+        "id": "GS2-DE-LEIPZIG-004",
+        "name": "Kanal in Dölzig",
+        "city": "Leipzig",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 188,
+            "u": "https://gay-szene.net/gay-cruising-in-leipzig/157/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 858,
+        "candidate_id": "GS2-DE-LEIPZIG-004",
+        "name": "Kanal in Dölzig",
+        "city": "Leipzig",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 59,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 858,
+        "id": "GS2-DE-LEIPZIG-004",
+        "name": "Kanal in Dölzig",
+        "city": "Leipzig",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 188,
+            "u": "https://gay-szene.net/gay-cruising-in-leipzig/157/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-leipzig/157/17/rubrik.html",
+              "https://gay-szene.net/kanal-in-doelzig-in-leipzig/6741/eintrag.html"
+            ],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "Linked archival listing with contemporary details assessed."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          }
+        ],
+        "source_detail_url": "https://gay-szene.net/kanal-in-doelzig-in-leipzig/6741/eintrag.html",
+        "description_rewritten": "The canal-side woodland opposite Dölzig and Kleindölzig is a longstanding meeting-area directory entry west of Leipzig. Recent posts conflict: a 17 May 2026 visitor tried three different days without seeing activity, while an August 2026 commenter observed litter during a visit but reported no encounter. A September 2025 visitor discussed contacts and poor consent boundaries, before this cycle's cutoff.",
+        "place_identity": "https://gay-szene.net/kanal-in-doelzig-in-leipzig/6741/eintrag.html",
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-08-06",
+              "type": "recent_place_visit_litter_observation",
+              "note": "A visitor notes litter and ordinary swimming; no encounter reported."
+            },
+            {
+              "date": "2026-07-24",
+              "type": "question_only",
+              "note": "Asks whether site is still worth visiting."
+            },
+            {
+              "date": "2026-05-17",
+              "type": "repeated_negative_first_person_visits",
+              "note": "Three days of walking paths and no cruising activity seen."
+            }
+          ],
+          "older_reports": [
+            {
+              "date": "2025-09-27",
+              "type": "precutoff_positive_cruising_context",
+              "note": "Visitor describes on-site cruising, intrusive behaviour and consent problems."
+            },
+            {
+              "date": "2024-06-30",
+              "type": "old_two_subareas_access_reassessment",
+              "note": "Describes two historically different meeting areas; old roadside bay removed."
+            }
+          ],
+          "undated_source_editorial_is_not_recent_activity": true,
+          "independently_confirmed_2026_cruising": false
+        },
+        "access_information": "Ordinary mixed-use public lake or canal side. Observe rules for bathing, nature protection and personal consent; no legal authorization for public sex confirmed.",
+        "possible_duplicates_and_flags": [
+          "Potential two sublocations, old west-of-B186 and eastern woodland; avoid conflating.",
+          "Public canal and water safety, litter and consent problems."
+        ],
+        "retain_research_candidate": true,
+        "approved_for_live_publication": false,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0857_0861.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 861,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GS2-DE-LEIPZIG-007",
+      "name": "Kulkwitzer See Westufer",
+      "city": "Leipzig",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 861,
+        "candidate_id": "GS2-DE-LEIPZIG-007",
+        "name": "Kulkwitzer See Westufer",
+        "city": "Leipzig",
+        "country": "Germany",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": true,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 49,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0857_0861.json"
+      },
+      "original_queue_record": {
+        "index": 861,
+        "section": "C",
+        "id": "GS2-DE-LEIPZIG-007",
+        "name": "Kulkwitzer See Westufer",
+        "city": "Leipzig",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 191,
+            "u": "https://gay-szene.net/gay-cruising-in-leipzig/157/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 861,
+        "candidate_id": "GS2-DE-LEIPZIG-007",
+        "name": "Kulkwitzer See Westufer",
+        "city": "Leipzig",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 49,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 861,
+        "id": "GS2-DE-LEIPZIG-007",
+        "name": "Kulkwitzer See Westufer",
+        "city": "Leipzig",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 191,
+            "u": "https://gay-szene.net/gay-cruising-in-leipzig/157/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-leipzig/157/17/rubrik.html",
+              "https://gay-szene.net/kulkwitzer-see-westufer-in-leipzig/13000/eintrag.html"
+            ],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "Linked archival listing with contemporary details assessed."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "original_eight_source_cross_alignment_with_individual_directory_and_dated_reports",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned identity in available archive; not exhaustive current-site exclusion."
+          }
+        ],
+        "source_detail_url": "https://gay-szene.net/kulkwitzer-see-westufer-in-leipzig/13000/eintrag.html",
+        "description_rewritten": "Kulkwitzer See's west bank near Salzstraße/Markranstädt is a separately named site from Ostufer. A 27 May 2026 commenter says there is still some activity in fine weather but provides no specific first-person encounter; that's a recent self-reported activity claim, not independent verification. Older comments are questions or ambiguous sightings.",
+        "place_identity": "https://gay-szene.net/kulkwitzer-see-westufer-in-leipzig/13000/eintrag.html",
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-05-27",
+              "type": "recent_generic_positive_activity_claim",
+              "note": "Commenter claims site still has activity in good weather; no direct sexual encounter described."
+            }
+          ],
+          "older_reports": [
+            {
+              "date": "2025-06-17",
+              "type": "precutoff_location_question",
+              "note": "Asks whether contacts happen at parking area or shore."
+            },
+            {
+              "date": "2022-09-21",
+              "type": "historic_ambiguous_visit",
+              "note": "Visitor saw people but could not assess whether cruising."
+            }
+          ],
+          "undated_source_editorial_is_not_recent_activity": true,
+          "independently_confirmed_2026_cruising": false
+        },
+        "access_information": "Ordinary mixed-use public lake or canal side. Observe rules for bathing, nature protection and personal consent; no legal authorization for public sex confirmed.",
+        "possible_duplicates_and_flags": [
+          "East and West Kulkwitzer See are two distinct sides; preserve both research candidates.",
+          "Public bathing area, no sanctioned sex facilities."
+        ],
+        "retain_research_candidate": true,
+        "approved_for_live_publication": false,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0857_0861.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 866,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-MANNHEIM-005",
+      "name": "Parkplatz A6 in Höhe Mannheim Sandhofen",
+      "city": "Mannheim",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 866,
+        "candidate_id": "GS2-DE-MANNHEIM-005",
+        "name": "Parkplatz A6 in Höhe Mannheim Sandhofen",
+        "city": "Mannheim",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 62,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0862_0866.json"
+      },
+      "original_queue_record": {
+        "index": 866,
+        "section": "C",
+        "id": "GS2-DE-MANNHEIM-005",
+        "name": "Parkplatz A6 in Höhe Mannheim Sandhofen",
+        "city": "Mannheim",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 196,
+            "u": "https://gay-szene.net/gay-cruising-in-mannheim/174/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 866,
+        "candidate_id": "GS2-DE-MANNHEIM-005",
+        "name": "Parkplatz A6 in Höhe Mannheim Sandhofen",
+        "city": "Mannheim",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 62,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 866,
+        "id": "GS2-DE-MANNHEIM-005",
+        "name": "Parkplatz A6 in Höhe Mannheim Sandhofen",
+        "city": "Mannheim",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 196,
+            "u": "https://gay-szene.net/gay-cruising-in-mannheim/174/17/rubrik.html"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_archived_sources_cross_alignment_plus_live_detail_and_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned match in original archives; full website not exhaustively indexed."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://gay-szene.net/gay-cruising-in-mannheim/174/17/rubrik.html",
+              "https://gay-szene.net/parkplatz-a6-in-hoehe-mannheim-sandhofen-in-mannheim/7298/eintrag.html"
+            ],
+            "method": "eight_archived_sources_cross_alignment_plus_live_detail_and_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "Original source matched; dates and visitor evidence reviewed."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_archived_sources_cross_alignment_plus_live_detail_and_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned match in original archives; full website not exhaustively indexed."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_archived_sources_cross_alignment_plus_live_detail_and_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned match in original archives; full website not exhaustively indexed."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_archived_sources_cross_alignment_plus_live_detail_and_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned match in original archives; full website not exhaustively indexed."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_archived_sources_cross_alignment_plus_live_detail_and_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned match in original archives; full website not exhaustively indexed."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_archived_sources_cross_alignment_plus_live_detail_and_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned match in original archives; full website not exhaustively indexed."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "eight_archived_sources_cross_alignment_plus_live_detail_and_dated_forum",
+            "checked_berlin": "2026-11-06",
+            "note": "No aligned match in original archives; full website not exhaustively indexed."
+          }
+        ],
+        "source_detail_url": "https://gay-szene.net/parkplatz-a6-in-hoehe-mannheim-sandhofen-in-mannheim/7298/eintrag.html",
+        "description_rewritten": "This A6 rest stop near Mannheim-Sandhofen has extensive historic forum activity. In February and March 2026 one regular describes men circulating without direct contact and mentions occasional bicycle visits; a July 2026 visitor says it was quiet during the day and asks about other times. These are in-window observations of cruising interest, but they do not independently prove a 2026 sexual encounter.",
+        "place_identity": "https://gay-szene.net/parkplatz-a6-in-hoehe-mannheim-sandhofen-in-mannheim/7298/eintrag.html",
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-07-31",
+              "type": "recent_negative_or_quiet_visit",
+              "note": "Poster found it quiet by day, asked about other times."
+            },
+            {
+              "date": "2026-03-11",
+              "type": "recent_site_user_comment",
+              "note": "General preference comment from a self-described cruiser; no event."
+            },
+            {
+              "date": "2026-02-26",
+              "type": "recent_first_person_social_observation",
+              "note": "Reports occasional visits and men walking/waiting, with few interactions."
+            }
+          ],
+          "older_reports": [
+            {
+              "date": "2025-07-21",
+              "type": "precutoff_litter_and_meeting_claim",
+              "note": "Regular describes activity and substantial litter."
+            },
+            {
+              "date": "2024-03-26",
+              "type": "historic_reopening_after_works",
+              "note": "Poster says motorway parking reopened after works."
+            }
+          ],
+          "undated_source_editorial_is_not_recent_activity": true,
+          "independently_confirmed_2026_cruising": false
+        },
+        "access_information": "Ordinary shared-access facilities, riverside space or motorway rest area. No confirmed legal permission for sexual activities; respect privacy and posted access restrictions.",
+        "possible_duplicates_and_flags": [
+          "Motorway rest area; access only via lawful roadway.",
+          "Previous closure and persistent litter concerns."
+        ],
+        "retain_research_candidate": true,
+        "approved_for_live_publication": false,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0862_0866.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 870,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GC1-GERMANY-05",
+      "name": "A94 Ende in Marktl - unter der Alzbrücke",
+      "city": "Marktl",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 870,
+        "candidate_id": "GC1-GERMANY-05",
+        "name": "A94 Ende in Marktl - unter der Alzbrücke",
+        "city": "Marktl",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 43,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/C/batch_0867_0871.json"
+      },
+      "original_queue_record": {
+        "index": 870,
+        "section": "C",
+        "id": "GC1-GERMANY-05",
+        "name": "A94 Ende in Marktl - unter der Alzbrücke",
+        "city": "Marktl",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 585,
+            "u": "https://www.gays-cruising.com/en/germany"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 870,
+        "candidate_id": "GC1-GERMANY-05",
+        "name": "A94 Ende in Marktl - unter der Alzbrücke",
+        "city": "Marktl",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 43,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 870,
+        "id": "GC1-GERMANY-05",
+        "name": "A94 Ende in Marktl - unter der Alzbrücke",
+        "city": "Marktl",
+        "country": "Germany",
+        "original_source_count": 1,
+        "original_source_refs": [
+          {
+            "s": "1",
+            "f": "research/cruising/scrape_1.json",
+            "i": 585,
+            "u": "https://www.gays-cruising.com/en/germany"
+          }
+        ],
+        "source_checks": [
+          {
+            "source_id": "1",
+            "website": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "source_urls": [
+              "https://www.gays-cruising.com/en/germany",
+              "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635"
+            ],
+            "method": "archived_eight_source_cross_alignment_and_current_public_detail_with_dated_comments",
+            "checked_berlin": "2026-11-06",
+            "note": "Matched source, visitor dates assessed."
+          },
+          {
+            "source_id": "2",
+            "website": "gay-szene.net",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_eight_source_cross_alignment_and_current_public_detail_with_dated_comments",
+            "checked_berlin": "2026-11-06",
+            "note": "No identity aligned in archived extract; not complete search of website."
+          },
+          {
+            "source_id": "3",
+            "website": "Planet Randy",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_eight_source_cross_alignment_and_current_public_detail_with_dated_comments",
+            "checked_berlin": "2026-11-06",
+            "note": "No identity aligned in archived extract; not complete search of website."
+          },
+          {
+            "source_id": "4",
+            "website": "The Gay Passport",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_eight_source_cross_alignment_and_current_public_detail_with_dated_comments",
+            "checked_berlin": "2026-11-06",
+            "note": "No identity aligned in archived extract; not complete search of website."
+          },
+          {
+            "source_id": "5",
+            "website": "Splashd",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_eight_source_cross_alignment_and_current_public_detail_with_dated_comments",
+            "checked_berlin": "2026-11-06",
+            "note": "No identity aligned in archived extract; not complete search of website."
+          },
+          {
+            "source_id": "6",
+            "website": "Popcorn.dating",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_eight_source_cross_alignment_and_current_public_detail_with_dated_comments",
+            "checked_berlin": "2026-11-06",
+            "note": "No identity aligned in archived extract; not complete search of website."
+          },
+          {
+            "source_id": "7",
+            "website": "Squirt.org",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_eight_source_cross_alignment_and_current_public_detail_with_dated_comments",
+            "checked_berlin": "2026-11-06",
+            "note": "No identity aligned in archived extract; not complete search of website."
+          },
+          {
+            "source_id": "8",
+            "website": "CruisingGays",
+            "status": "searched_no_match",
+            "source_urls": [],
+            "method": "archived_eight_source_cross_alignment_and_current_public_detail_with_dated_comments",
+            "checked_berlin": "2026-11-06",
+            "note": "No identity aligned in archived extract; not complete search of website."
+          }
+        ],
+        "source_detail_url": "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635",
+        "description_rewritten": "The area beneath the A94 Alz bridge at Marktl is listed with parking areas on both sides. Gays-Cruising has dated April and May 2026 invitations and intended arrival messages, but none verifies a completed encounter. Displayed check-in counts do not demonstrate actual cruising.",
+        "place_identity": "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635",
+        "activity_evidence": {
+          "cutoff": "2025-11-06",
+          "recent_reports": [
+            {
+              "date": "2026-05-01",
+              "type": "planned_attendance",
+              "note": "Users posted intent to attend, not verified activity."
+            },
+            {
+              "date": "2026-04-28",
+              "type": "solicitation_only",
+              "note": "User asked about a potential contact."
+            }
+          ],
+          "older_reports": [],
+          "undated_source_editorial_is_not_recent_activity": true,
+          "independently_confirmed_2026_cruising": false
+        },
+        "access_information": "Public/shared-access space or motorway rest area with access and wildlife restrictions; no permission for public sex established.",
+        "possible_duplicates_and_flags": [
+          "Potential multiple sides of river/road, check exact location and lawful access.",
+          "Site check-in statistics not independently validated."
+        ],
+        "retain_research_candidate": true,
+        "approved_for_live_publication": false,
+        "research_date_berlin": "2026-11-06"
+      },
+      "original_research_batch_file": "research/cruising/part5/C/batch_0867_0871.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 884,
+      "priority_tier": "A_recent_positive_signal",
+      "candidate_id": "GS2-DE-MUENCHEN-016",
+      "name": "Parkplatz an der B 471",
+      "city": "Munich",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 884,
+        "candidate_id": "GS2-DE-MUENCHEN-016",
+        "name": "Parkplatz an der B 471",
+        "city": "Munich",
+        "country": "Germany",
+        "priority_tier": "A_recent_positive_signal",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 37,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": true,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": true,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0880_0884.json"
+      },
+      "original_queue_record": {
+        "index": 884,
+        "section": "D",
+        "id": "GS2-DE-MUENCHEN-016",
+        "name": "Parkplatz an der B 471",
+        "city": "Munich",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 217,
+            "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 884,
+        "candidate_id": "GS2-DE-MUENCHEN-016",
+        "name": "Parkplatz an der B 471",
+        "city": "Munich",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 37,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": true
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": true,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 884,
+        "id": "GS2-DE-MUENCHEN-016",
+        "name": "Parkplatz an der B 471",
+        "city": "Munich",
+        "country": "Germany",
+        "source_count_from_alignment": 1,
+        "archive_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 217,
+            "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+          }
+        ],
+        "original_assessment": "candidate_unverified",
+        "original_description": "",
+        "identity_support": "single_website",
+        "location_type": "riverside_woodland_parking",
+        "research_description": "B471 forest car park near Isar bridge between Garching and Ismaning; source describes entrance by the bridge. Planet Randy's Isar-Kiesbank describes a car park over the Isar bank nearby; geographic overlap is plausible but not independently pinned.",
+        "primary_direct_url": "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
+        "sources": [
+          {
+            "s": "1",
+            "site": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "source_archive_alignment_and_indexed_search",
+            "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+          },
+          {
+            "s": "2",
+            "site": "gay-szene.net",
+            "status": "linked_page_matched",
+            "url": "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
+            "method": "live_detail_and_archive",
+            "limitation": null
+          },
+          {
+            "s": "3",
+            "site": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "source_archive_alignment_and_indexed_search",
+            "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+          },
+          {
+            "s": "4",
+            "site": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "source_archive_alignment_and_indexed_search",
+            "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+          },
+          {
+            "s": "5",
+            "site": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "Munich_2026-11-06_archive_and_indexed_search",
+            "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+          },
+          {
+            "s": "6",
+            "site": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "source_archive_alignment_and_indexed_search",
+            "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+          },
+          {
+            "s": "7",
+            "site": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "source_archive_alignment_and_indexed_search",
+            "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+          },
+          {
+            "s": "8",
+            "site": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "source_archive_alignment_and_indexed_search",
+            "limitation": "No exact spot-matching page established; search and archive coverage is not exhaustive. For tentative name/area similarities see possible_duplicates."
+          }
+        ],
+        "evidence_timeline": [
+          {
+            "date": "2026-06-08",
+            "source": "gay-szene.net",
+            "type": "positive_firsthand_claim",
+            "finding": "Visitor described men using woodland area on dry days, providing a contemporary but unverified first-person activity account."
+          },
+          {
+            "date": "2026-06-07",
+            "source": "gay-szene.net",
+            "type": "negative_firsthand_claim",
+            "finding": "Another visitor said they had visited twice, on Thursday and Saturday, without meeting anyone."
+          },
+          {
+            "date": "2024-06-02",
+            "source": "gay-szene.net",
+            "type": "historic_activity_report",
+            "finding": "Contributor described informal encounters in woodland and asked visitors to respect others and take rubbish away."
+          }
+        ],
+        "access_and_safety": "Open woodland and Isar riverbank; mixed recreational users, possible restrictions/complaints/police checks mentioned in older comments. Public sexual activity is not assumed lawful; avoid unverified route or water-access guidance.",
+        "activity_freshness": {
+          "cutoff": "2025-11-06",
+          "assessment": "Yes: two conflicting dated June 2026 firsthand claims, one positive and one negative; neither independently corroborated.",
+          "has_recent_claim": true,
+          "independently_verified_current_activity": false
+        },
+        "possible_duplicates": [
+          {
+            "name": "Isar-Kiesbank",
+            "source_url": "https://planet-randy.com/blog/eintrag/isar-kiesbank/",
+            "relation": "potentially same riverside B471 parking/woodland area",
+            "confidence": "probable_but_unconfirmed"
+          }
+        ],
+        "additional_external_references": [
+          {
+            "url": "https://www.sueddeutsche.de/muenchen/toter-aus-ismaning-vermisster-81-jaehriger-wurde-ermordet-1.1176927",
+            "role": "2011 historical site identity, not recent activity"
+          }
+        ],
+        "research_note": "Nearby area independently discussed in 2011 news coverage; that establishes historic reputation only, not current activity.",
+        "publication_decision": "RESEARCH_ONLY_NO_PUBLICATION_APPROVAL"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0880_0884.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 885,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-MUENCHEN-017",
+      "name": "Parkplatz und FKK Gelände Eching am Ammersee",
+      "city": "Munich",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 885,
+        "candidate_id": "GS2-DE-MUENCHEN-017",
+        "name": "Parkplatz und FKK Gelände Eching am Ammersee",
+        "city": "Munich",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 28,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0885_0889.json"
+      },
+      "original_queue_record": {
+        "index": 885,
+        "section": "D",
+        "id": "GS2-DE-MUENCHEN-017",
+        "name": "Parkplatz und FKK Gelände Eching am Ammersee",
+        "city": "Munich",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 218,
+            "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+          },
+          {
+            "s": "2",
+            "f": "research/cruising/gap_fill_scrape_2.json",
+            "i": 24,
+            "u": "https://gay-szene.net/parkplatz-und-fkk-gelaende-eching-am-ammersee-in-muenchen/12671/eintrag.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 885,
+        "candidate_id": "GS2-DE-MUENCHEN-017",
+        "name": "Parkplatz und FKK Gelände Eching am Ammersee",
+        "city": "Munich",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 28,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 885,
+        "id": "GS2-DE-MUENCHEN-017",
+        "name": "Parkplatz und FKK Gelände Eching am Ammersee",
+        "city": "Munich",
+        "country": "Germany",
+        "archive_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 218,
+            "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+          },
+          {
+            "s": "2",
+            "f": "research/cruising/gap_fill_scrape_2.json",
+            "i": 24,
+            "u": "https://gay-szene.net/parkplatz-und-fkk-gelaende-eching-am-ammersee-in-muenchen/12671/eintrag.html"
+          }
+        ],
+        "identity_support": "single_website",
+        "original_assessment": "candidate_unverified",
+        "original_notes": "",
+        "description": "Lakeside recreation and FKK area with parking separated by hedges and nearby reeds/woods. The sources refer to several potential meeting subareas; do not infer one universal map pin.",
+        "location": "Seestraße, 82279 Eching am Ammersee. Archive city of Munich is misleading: the place is in the separate Eching municipality.",
+        "source_evidence": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "linked_page_matched",
+            "url": "https://www.gays-cruising.com/it/eching_am_ammersee/bayern/germania",
+            "quality": "town-level page lists Parkplatz vom Freizeitgelände and Insel; specific spot detail inaccessible",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "linked_page_matched",
+            "url": "https://gay-szene.net/parkplatz-und-fkk-gelaende-eching-am-ammersee-in-muenchen/12671/eintrag.html",
+            "quality": "direct spot page",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "linked_page_matched",
+            "url": "https://planet-randy.com/blog/eintrag/ammersee/",
+            "quality": "same Eching FKK island area, not confirmed identical parking location",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2019-11-14",
+            "source": "gay-szene.net",
+            "summary": "user stated occasional visits at car park; undated frequency, historical",
+            "credible_current_positive": false
+          },
+          {
+            "date": "2025-04-15",
+            "source": "Planet Randy (Ammersee)",
+            "summary": "visitor reported having found no interested men at parking area and reeds; negative site-adjacent report",
+            "credible_current_positive": false
+          },
+          {
+            "date": "2026-08-31",
+            "source": "Landkreis Landsberg am Lech",
+            "summary": "2026 monitored bathing-water sample confirms recreational facility operation, not cruising activity",
+            "credible_current_positive": false
+          }
+        ],
+        "official_urls": [
+          "https://www.landkreis-landsberg.de/soziales-gesundheit/gesundheitsamt/eu-badegewaesser/eching-freizeitgelaende/"
+        ],
+        "access_notes": "Lake, public swimming and protected nature environs. County confirms recreation area next to Naturschutzgebiet and a family playground; do not assume sexual access or privacy. Distinguish designated FKK zones.",
+        "possible_duplicates": [
+          {
+            "name": "Ammersee FKK island",
+            "relation": "potential same subarea, parking and island should be distinguished"
+          },
+          {
+            "name": "Parkplatz vom Freizeitgelände",
+            "relation": "likely same named parking, precise pin unconfirmed"
+          }
+        ],
+        "activity_assessment": "No qualifying positive encounter report within 12 months. 2025 negative comment is outside window.",
+        "freshness_cutoff": "2025-11-06",
+        "current_activity_independently_confirmed": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0885_0889.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 889,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-MUENCHEN-012",
+      "name": "Naturbad Maria Einsiedel",
+      "city": "Munich",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 889,
+        "candidate_id": "GS2-DE-MUENCHEN-012",
+        "name": "Naturbad Maria Einsiedel",
+        "city": "Munich",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 38,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0885_0889.json"
+      },
+      "original_queue_record": {
+        "index": 889,
+        "section": "D",
+        "id": "GS2-DE-MUENCHEN-012",
+        "name": "Naturbad Maria Einsiedel",
+        "city": "Munich",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 213,
+            "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+          },
+          {
+            "s": "2",
+            "f": "research/cruising/gap_fill_scrape_2.json",
+            "i": 23,
+            "u": "https://gay-szene.net/naturbad-maria-einsiedel-in-muenchen/12007/eintrag.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 889,
+        "candidate_id": "GS2-DE-MUENCHEN-012",
+        "name": "Naturbad Maria Einsiedel",
+        "city": "Munich",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 38,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 889,
+        "id": "GS2-DE-MUENCHEN-012",
+        "name": "Naturbad Maria Einsiedel",
+        "city": "Munich",
+        "country": "Germany",
+        "archive_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 213,
+            "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+          },
+          {
+            "s": "2",
+            "f": "research/cruising/gap_fill_scrape_2.json",
+            "i": 23,
+            "u": "https://gay-szene.net/naturbad-maria-einsiedel-in-muenchen/12007/eintrag.html"
+          }
+        ],
+        "identity_support": "single_website",
+        "original_assessment": "candidate_unverified_scope_restored",
+        "original_notes": "Restored to research after clarifying scope: ordinary gyms, pools, malls, hammams, cinemas and similar spaces are eligible for investigation. Verify location, public access, and evidence of cruising before publication.",
+        "description": "Municipal natural outdoor pool; original directory described gay sunbathers around the Isar canal footbridge rather than proof of a sex-focused area. Official site confirms public family pool with mixed and women-only FKK sections, child facilities and paid parking.",
+        "location": "Zentralländstraße 28, 81379 Munich (Thalkirchen).",
+        "source_evidence": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "linked_page_matched",
+            "url": "https://gay-szene.net/naturbad-maria-einsiedel-in-muenchen/12007/eintrag.html",
+            "quality": "direct spot page",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "quality": "No exact spot-matching indexed result/archived association; not proof of absence",
+            "reviewed_berlin": "2026-11-06"
+          }
+        ],
+        "dated_reports": [
+          {
+            "date": "2021-06-28",
+            "source": "gay-szene.net",
+            "summary": "visitor reported venue suitable for families but not a cruising area",
+            "credible_current_positive": false
+          },
+          {
+            "date": "2026-11-06",
+            "source": "Stadtwerke München",
+            "summary": "official notice says 2026 outdoor season has ended; 2027 reopening expected in spring",
+            "credible_current_positive": false
+          }
+        ],
+        "official_urls": [
+          "https://www.swm.de/baeder/freibaeder-muenchen/maria-einsiedel",
+          "https://www.muenchen.de/freizeit/freibaeder/naturbad-maria-einsiedel"
+        ],
+        "access_notes": "Ticketed seasonal public bath with families, children and explicit pool rules; presently closed for season. Do not interpret FKK as permission for sexual activity.",
+        "possible_duplicates": [
+          {
+            "name": "Flaucherinseln",
+            "relation": "separate Isar outdoor recreation area nearby"
+          }
+        ],
+        "activity_assessment": "No recent positive cruising evidence; 2021 first-person report specifically disputes cruising relevance.",
+        "freshness_cutoff": "2025-11-06",
+        "current_activity_independently_confirmed": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0885_0889.json",
+      "research_archive_read_error": null,
+      "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
+      "publication_approved": false
+    },
+    {
+      "queue_index": 890,
+      "priority_tier": "B_recent_report_other",
+      "candidate_id": "GS2-DE-MUENCHEN-013",
+      "name": "Olympiabad",
+      "city": "Munich",
+      "country": "Germany",
+      "priority_assessment": {
+        "queue_index": 890,
+        "candidate_id": "GS2-DE-MUENCHEN-013",
+        "name": "Olympiabad",
+        "city": "Munich",
+        "country": "Germany",
+        "priority_tier": "B_recent_report_other",
+        "pilot_next_15": false,
+        "source_websites_in_original_alignment": 1,
+        "description_words_in_initial_queue": 46,
+        "has_recent_dated_report_in_saved_triage": true,
+        "recent_positive_indicator_heuristic": false,
+        "access_information_in_initial_queue": true,
+        "safety_information_in_initial_queue": false,
+        "when_information_in_initial_queue": false,
+        "crowd_information_in_initial_queue": false,
+        "research_batch_file": "research/cruising/part5/D/batch_0890_0894.json"
+      },
+      "original_queue_record": {
+        "index": 890,
+        "section": "D",
+        "id": "GS2-DE-MUENCHEN-013",
+        "name": "Olympiabad",
+        "city": "Munich",
+        "country": "Germany",
+        "source_count": 1,
+        "source_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 214,
+            "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website"
+      },
+      "initial_completeness_triage": {
+        "index": 890,
+        "candidate_id": "GS2-DE-MUENCHEN-013",
+        "name": "Olympiabad",
+        "city": "Munich",
+        "country": "Germany",
+        "bucket": "quarter_complete",
+        "description_words": 46,
+        "dimensions": {
+          "access": true,
+          "when": false,
+          "crowd": false,
+          "safety": false
+        },
+        "source_sites": 1,
+        "has_recent_dated_report": true,
+        "recent_positive_indicator_heuristic": false,
+        "dated_reports_old_only": false,
+        "reason": "Original location and sources present, but still lacks enough of the requested who/when/where/safety detail."
+      },
+      "saved_research": {
+        "index": 890,
+        "id": "GS2-DE-MUENCHEN-013",
+        "name": "Olympiabad",
+        "city": "Munich",
+        "country": "Germany",
+        "archive_refs": [
+          {
+            "s": "2",
+            "f": "research/cruising/scrape_2.json",
+            "i": 214,
+            "u": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html"
+          }
+        ],
+        "identity_support": "single_website",
+        "original_assessment": "candidate_unverified_scope_restored",
+        "location": "Coubertinplatz 1, 80809 Munich",
+        "description": "Municipal indoor swimming facility at Coubertinplatz 1. Historical forum comments refer to shower-room social activity, but a recent 9 October 2026 question does not establish an actual encounter. 2025 reports describe heightened staff supervision. This is a family and sports pool, not a licensed sex venue.",
+        "sources": [
+          {
+            "source": "1",
+            "name": "Gays-Cruising.com",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "archived alignment and indexed domain-specific search; no exact match established",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source": "2",
+            "name": "gay-szene.net",
+            "status": "linked_page_matched",
+            "url": "https://gay-szene.net/olympiabad-in-muenchen/10322/eintrag.html",
+            "method": "direct live page plus original archive",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source": "3",
+            "name": "Planet Randy",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "archived alignment and indexed domain-specific search; no exact match established",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source": "4",
+            "name": "The Gay Passport",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "archived alignment and indexed domain-specific search; no exact match established",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source": "5",
+            "name": "Splashd",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "archived alignment and indexed domain-specific search; no exact match established",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source": "6",
+            "name": "Popcorn.dating",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "archived alignment and indexed domain-specific search; no exact match established",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source": "7",
+            "name": "Squirt.org",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "archived alignment and indexed domain-specific search; no exact match established",
+            "checked_berlin": "2026-11-06"
+          },
+          {
+            "source": "8",
+            "name": "CruisingGays",
+            "status": "searched_no_match",
+            "url": null,
+            "method": "archived alignment and indexed domain-specific search; no exact match established",
+            "checked_berlin": "2026-11-06"
+          }
+        ],
+        "source_original_record": null,
+        "reports": [
+          {
+            "date": "2026-10-09",
+            "source": "gay-szene.net",
+            "summary": "person asked about preferred visiting times, not a positive cruising report"
+          },
+          {
+            "date": "2025-10-10",
+            "source": "gay-szene.net",
+            "summary": "question about activity in sauna, not evidence of an encounter"
+          },
+          {
+            "date": "2025-07-24",
+            "source": "gay-szene.net",
+            "summary": "visitor warned that staff had stepped up inspection of showers"
+          },
+          {
+            "date": "2025-06-10",
+            "source": "gay-szene.net",
+            "summary": "historic visitor described seeing men in showers"
+          }
+        ],
+        "official_url": "https://www.swm.de/baeder/olympia-schwimmhalle",
+        "access": "SWM facility is operating 2026, with admission, normal public use and event restrictions. Nov 5-7 2026 sports event limits public swimming areas. Explicit consent and facility policies apply.",
+        "possible_duplicates": [],
+        "activity": "October 2026 forum question is recent but not confirmed activity; no positive firsthand report dated 2025-11-06 or later.",
+        "cutoff": "2025-11-06",
+        "recent_verified": false,
+        "publication_status": "research_only_unverified"
+      },
+      "original_research_batch_file": "research/cruising/part5/D/batch_0890_0894.json",
       "research_archive_read_error": null,
       "research_next_step": "Verify dated reports, geolocation, current access, duplicates and publication eligibility",
       "publication_approved": false
