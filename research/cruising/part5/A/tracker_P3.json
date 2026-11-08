@@ -190,7 +190,17 @@
       172,
       173,
       174,
-      175
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185
     ],
     "genuinely_source_assessed_complete": [
       1,
@@ -248,7 +258,11 @@
       164,
       169,
       174,
-      175
+      175,
+      176,
+      181,
+      183,
+      184
     ],
     "incomplete": [
       {
@@ -845,20 +859,45 @@
         "index": 173,
         "id": "GC1-SWEDEN-12",
         "reason": "Parkering Lögdeåälven source #127713 unreadable, Sörmjöle/river area geography conflict and parking identity unresolved"
+      },
+      {
+        "index": 177,
+        "id": "GC1-SWEDEN-09",
+        "reason": "Vittene Rastplats original #125458 unreadable, precise reststop source pin unknown"
+      },
+      {
+        "index": 178,
+        "id": "GC1-SWEDEN-15",
+        "reason": "Bagarmossen Skogen original description and pin recovered, but Swedish suburb/city and exact forest entrance conflict"
+      },
+      {
+        "index": 179,
+        "id": "GC1-SWEDEN-04",
+        "reason": "Mora Stenar original #50807 unreadable, historic monument's actual alleged subspot unknown"
+      },
+      {
+        "index": 180,
+        "id": "GC1-SWEDEN-06",
+        "reason": "Anundshög original #88463 unreadable, precise protected monument park alleged area unknown"
+      },
+      {
+        "index": 185,
+        "id": "GC1-TURKEY-15",
+        "reason": "Lara Park original #14442 readable but 2024 visitor disputes source pin versus correctly named park, location still needs independent match"
       }
     ],
-    "completed_count": 56,
-    "remaining_not_completed": 235,
-    "unreviewed_indices_start": 176,
+    "completed_count": 60,
+    "remaining_not_completed": 231,
+    "unreviewed_indices_start": 186,
     "next_incomplete_index": 4,
     "next_incomplete_id": "GC1-ANDORRA-04",
-    "last_completed_index": 175,
-    "last_completed_id": "GC1-SWEDEN-10",
+    "last_completed_index": 184,
+    "last_completed_id": "GC1-TURKEY-12",
     "newly_identified_location_count": 0,
     "first_complete_5_record_checkpoint": true,
-    "last_assessed_index": 175,
-    "last_assessed_id": "GC1-SWEDEN-10",
-    "checkpoint_count": 11,
+    "last_assessed_index": 185,
+    "last_assessed_id": "GC1-TURKEY-15",
+    "checkpoint_count": 12,
     "first_checkpoint_indices": [
       1,
       2,
@@ -867,13 +906,17 @@
       14
     ],
     "last_completed_batch_indices": [
-      161,
-      162,
-      164,
-      169,
-      174
+      175,
+      176,
+      181,
+      183,
+      184
     ],
-    "next_complete_five_needs": 4
+    "next_complete_five_needs": 5,
+    "excluded_original_indices": [
+      182,
+      201
+    ]
   },
   "saved_evidence_files": [
     "research/cruising/part5/A/P3_deep_source_recheck_0001_0005_PARTIAL_2026-11-08.json",
@@ -915,12 +958,16 @@
     "research/cruising/part5/A/P3_deep_source_recheck_0161_0165_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0166_0170_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0171_0175_2026-11-08.json",
-    "research/cruising/part5/A/P3_completed_batch_0051_0055_2026-11-08.json"
+    "research/cruising/part5/A/P3_completed_batch_0051_0055_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0176_0180_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0181_0181_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0182_0185_2026-11-08.json",
+    "research/cruising/part5/A/P3_completed_batch_0056_0060_2026-11-08.json"
   ],
   "last_confirmed_commit": "956c6d4c4635f092bfb539c5bae801951a94f6bf",
-  "approach": "Next untouched original #176. 175 examined, 56 substantively researched, 119 incomplete; 11 immutable five-record checkpoints. #175 completed but awaiting next five batch (4 more). #174 map pin is disputed by dated firsthand report; no fake precise cruising point. Historic/negative/current reports preserved.",
+  "approach": "Next untouched #186. 185 original indices assessed including excluded #182, 60 source substantiated completed among 291 active, 124 active incomplete, 12 independently recoverable five-record checkpoints. No production edits. Source map at Lara Park disputed and operator MOOD toilet now paid 15 SEK.",
   "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write.",
-  "last_confirmed_evidence_commit": "bee7239ace3afb6b59c38465cad7721e0f2832f7",
-  "latest_checkpoint_commit": "0aff1cc45a11769179177a6e520617a2b8e52708",
-  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0051_0055_2026-11-08.json"
+  "last_confirmed_evidence_commit": "2bc402fbafcde200e4dbcf01d9da3b129937ccf3",
+  "latest_checkpoint_commit": "2cbcbaec7fc98bf771df8de612b6b0541bcca718",
+  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0056_0060_2026-11-08.json"
 }
