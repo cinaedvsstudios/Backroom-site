@@ -1,0 +1,653 @@
+{
+  "title": "Backroom Group CD2 candidate-by-candidate content investigation batch 008",
+  "date_berlin": "2026-11-08",
+  "records_assessed": [
+    "CRU-CD2-274",
+    "CRU-CD2-275",
+    "CRU-CD2-278",
+    "CRU-CD2-280",
+    "CRU-CD2-281"
+  ],
+  "counts": {
+    "new_substantive_investigations": 5,
+    "original_research_incomplete_cohort_total": 86,
+    "fully_source_exhaustive_candidates": 0,
+    "new_high_confidence_named_geography": 1
+  },
+  "methods": "Read archived original scrape, cross-source alignment, current candidate work records, every stored URL to extent publicly retrievable, independently dated geography/activity material, alternate original-language URLs, indexed search and neighbouring source entries. Directory access failures remain unresolved.",
+  "records": [
+    {
+      "Venue_ID": "CRU-CD2-274",
+      "Name": "Fornace Crocicchio",
+      "City": "Carisio",
+      "Country": "Italy",
+      "sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/italy",
+          "kind": "original_directory_index",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "Country directory lists Fornace Crocicchio, Carisio, as a Rest area; index itself contains no precise roadside lay-by, signed entrance or recent candidate-specific comments."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/fornace_crocicchio_carisio_italia_56434",
+          "kind": "original_detail",
+          "access": "direct_cache_miss",
+          "content_substantively_evaluated": false,
+          "extracted": "Original detail was attempted; its actual text, GPS and visitor reports cannot be read; no inference of absence."
+        },
+        {
+          "url": "https://busmaps.com/en/italy/public_transit-stop-Carisio-Localita-Crocicchio-Sp3-6264115563807322451",
+          "kind": "supporting",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "GTFS-based stop at Via Torino, Fornace Crocicchio, near SP3/SR230 junction; stop code 0020320101; adjacent Fornace junction stops approximately 20–152m away. Stop does not identify original cruising rest-area bay."
+        },
+        {
+          "url": "https://www.british1.co.uk/maps/italy/piemonte/vercelli/Fornace-Crocicchio-Carisio-Vercelli-Italy-map.html",
+          "kind": "supporting",
+          "access": "indexed_text_evaluated",
+          "content_substantively_evaluated": true,
+          "extracted": "Direct request cache miss; indexed description identifies a mapped hamlet but does not expose a source cruising pin."
+        },
+        {
+          "url": "https://www.italiamappata.it/piemonte/vc/7034-fornace-crocicchio/",
+          "kind": "supporting",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "Independent territorial gazette identifies Fornace Crocicchio as an actual Carisio frazione, at approximate locality coordinates 45.4450,8.23138, 4.77km from Carisio centre; locality centroid, not cruising spot."
+        },
+        {
+          "url": "https://guida.ilmonferrato.it/comuni/MgJoOh2K_UWw0S06qEzgeQ/carisio",
+          "kind": "supporting",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "Geographical guide lists Fornace Crocicchio as Carisio frazione; no specific rest facility."
+        },
+        {
+          "url": "https://www.gays-cruising.com/de/cruising/fornace_crocicchio_carisio_italia_56434",
+          "kind": "recovery_attempt",
+          "access": "direct_cache_miss",
+          "content_substantively_evaluated": false,
+          "extracted": "Alternate German-language version attempted; content unavailable."
+        }
+      ],
+      "stored_coordinate": {
+        "latitude": 45.444235,
+        "longitude": 8.23072,
+        "origin": "GROUP_CD_2_FILTERED_186_WORKING.json; attributed to secondary geographical hamlet map, NOT original cruising-detail pin",
+        "scope": "hamlet-area reference, not specific rest area"
+      },
+      "alternative_coordinates": [
+        {
+          "lat": 45.445,
+          "lon": 8.23138,
+          "source": "https://www.italiamappata.it/piemonte/vc/7034-fornace-crocicchio/",
+          "scope": "frazione centroid"
+        }
+      ],
+      "historical_location_assessment": "The named hamlet is unequivocally identified near Via Torino, SP3 and SR230, but the actual roadside/parking facility meant by the directory's Rest area label is not identified.",
+      "recent_activity": "no candidate-specific dated encounter or verified current cruising",
+      "dated_reports": [],
+      "conflicts": [
+        "Existing archived coordinate is for general hamlet, not source rest-area pin",
+        "Commercial/service-station identity was never established"
+      ],
+      "duplicates": "No matching same-name candidate in Group 1, Group 3 or production listings; independent nearby facilities could still overlap an unidentified stop.",
+      "safety_access": "Road junction/motorway adjacency is not permission to stop on a shoulder, bus bay or restricted highway ramp.",
+      "pending": [
+        "Recover original 56434 map/directions/dated comments through alternate indexed capture or archive",
+        "Identify precisely which legal rest/parking facility source intended; do not substitute arbitrary bus stop"
+      ],
+      "geographic_identified": "named_locality_only",
+      "specific_cruising_spot_identified": false,
+      "eight_source_review": {
+        "original_archive": "Original scrape_1/gap_fill, cross_source_alignment_2026-11-06 and per-record archived 8-source checks examined; each candidate matches Gays-Cruising only. Prior other seven marked searched_no_match from non-exhaustive archives, not proof of no listings.",
+        "this_pass": "Public-index searches on 2026-11-08 across gay-szene.net, Planet Randy, The Gay Passport, Splashd, Popcorn.dating, Squirt.org, CruisingGays for all five names yielded no candidate-specific readable match; all remain not_exhaustively_verified.",
+        "statuses": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "index_read_original_detail_blocked"
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Planet Randy",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Splashd",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Squirt.org",
+            "status": "no_indexed_candidate_match; member_content_not_accessed"
+          },
+          {
+            "site": "CruisingGays",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          }
+        ]
+      },
+      "source_review_complete": false,
+      "publication_approved": false,
+      "research_type": "substantive_content_investigation_not_source_exhaustive",
+      "research_date": "2026-11-08"
+    },
+    {
+      "Venue_ID": "CRU-CD2-275",
+      "Name": "Campo Sportivo",
+      "City": "Cassina Rizzardi",
+      "Country": "Italy",
+      "sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/italy",
+          "kind": "original_directory_index",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "Country listing specifically names Campo Sportivo, Cassina Rizzardi, categorised Park, but gives no uniquely matching field/entrance."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/campo_sportivo_cassina_rizzardi_italia_106991",
+          "kind": "original_detail",
+          "access": "direct_cache_miss",
+          "content_substantively_evaluated": false,
+          "extracted": "Original detailed listing, pinpoint and user reports unavailable."
+        },
+        {
+          "url": "https://www.laprovinciadicomo.it/stories/premium/olgiate-e-bassa-comasca/lidea-costruire-una-palestra-a-cielo-aperto-o_3984008_11/",
+          "kind": "supporting",
+          "access": "indexed_text_evaluated",
+          "content_substantively_evaluated": true,
+          "extracted": "Dated 30 Oct 2026 newspaper identifies Via Fratelli Nava multipurpose public park (basketball, dog area), separate but near established municipal football ground; proposed outdoor gym conditional on funding, not built or cruising evidence."
+        },
+        {
+          "url": "https://www.csicomo.it/sito/allegati/calcio26/comunicato_25.pdf",
+          "kind": "supporting",
+          "access": "pdf_text_read",
+          "content_substantively_evaluated": true,
+          "extracted": "CSI Como sports communiqué no.25 dated 19 Feb 2026 lists Cassina Rizzardi 1977 football fixtures at Comunale, Via Vittorio Veneto 179, including March–April fixtures. PDF text read; browser PDF screenshot attempted twice but failed, visual verification outstanding."
+        },
+        {
+          "url": "https://www.csi.milano.it/albo/campigara/centro-sportivo-comunale-via-vittorio-veneto-179-cassina-rizzardi-co-3790.html",
+          "kind": "supporting",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "Independent amateur-sport ground register explicitly calls Centro Sportivo Comunale at Via Vittorio Veneto 179, Cassina Rizzardi."
+        },
+        {
+          "url": "https://www.laprovinciadicomo.it/stories/sport/giro-amatori-ultima-tappa_1119372_11/",
+          "kind": "supporting",
+          "access": "indexed_text_evaluated",
+          "content_substantively_evaluated": true,
+          "extracted": "2015 sports event explicitly meeting at town Campo Sportivo; confirms colloquial name but not original cruising-area identity."
+        },
+        {
+          "url": "https://www.gays-cruising.com/fr/cruising/campo_sportivo_cassina_rizzardi_italia_106991",
+          "kind": "recovery_attempt",
+          "access": "direct_blocked_or_unavailable",
+          "content_substantively_evaluated": false,
+          "extracted": "Alternate language source attempted; no readable detail."
+        }
+      ],
+      "stored_coordinate": {
+        "latitude": 45.7497,
+        "longitude": 9.0266,
+        "origin": "GROUP_CD_2_FILTERED_186_WORKING.json; general road/facility-reference map, no evidence this came from original directory pin",
+        "scope": "municipal sports-ground vicinity, not specific source park feature"
+      },
+      "historical_location_assessment": "Physical town sports ground confidently established at Via Vittorio Veneto 179. Source label Campo Sportivo generic and directory calls it Park; the precise intended area (grounds, surrounding park, toilet, outdoor approach) is NOT determined.",
+      "recent_activity": "No firsthand reports of cruising; 2026 fixtures confirm legitimate sporting use only.",
+      "dated_reports": [
+        {
+          "date": "2026-02-19",
+          "kind": "sport association communiqué, legitimate fixture schedule, not cruising"
+        },
+        {
+          "date": "2026-10-30",
+          "kind": "local news planning proposed outdoor gym nearby, not cruising"
+        }
+      ],
+      "conflicts": [
+        "Via Fratelli Nava recreational park vs Via Vittorio Veneto 179 sports ground are different points/features; original may refer to either."
+      ],
+      "duplicates": "No exact same-name independently reconciled candidate in Group 1, Group 3 or live listings.",
+      "safety_access": "Football grounds/club facilities may have fencing and youth sport events; do not infer public access to private changing rooms or field.",
+      "pending": [
+        "Recover the original 106991 detail pin/entrance and visitor comments",
+        "Compare any original pin against Via Vittorio Veneto ground and Via Fratelli Nava park",
+        "PDF visual screenshot unavailable; textual match independently corroborated by sporting association"
+      ],
+      "geographic_identified": "candidate_sports_complex_only",
+      "specific_cruising_spot_identified": false,
+      "eight_source_review": {
+        "original_archive": "Original scrape_1/gap_fill, cross_source_alignment_2026-11-06 and per-record archived 8-source checks examined; each candidate matches Gays-Cruising only. Prior other seven marked searched_no_match from non-exhaustive archives, not proof of no listings.",
+        "this_pass": "Public-index searches on 2026-11-08 across gay-szene.net, Planet Randy, The Gay Passport, Splashd, Popcorn.dating, Squirt.org, CruisingGays for all five names yielded no candidate-specific readable match; all remain not_exhaustively_verified.",
+        "statuses": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "index_read_original_detail_blocked"
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Planet Randy",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Splashd",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Squirt.org",
+            "status": "no_indexed_candidate_match; member_content_not_accessed"
+          },
+          {
+            "site": "CruisingGays",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          }
+        ]
+      },
+      "source_review_complete": false,
+      "publication_approved": false,
+      "research_type": "substantive_content_investigation_not_source_exhaustive",
+      "research_date": "2026-11-08"
+    },
+    {
+      "Venue_ID": "CRU-CD2-278",
+      "Name": "Jack Danner",
+      "City": "Cavallino-Treporti",
+      "Country": "Italy",
+      "sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "kind": "original_directory_index",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "Regional primary index lists Jack Danner as separate Natural area in Cavallino-Treporti; NOT a named club or verified business."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/jack_danner_cavallino_treporti_italien_58950",
+          "kind": "original_detail",
+          "access": "direct_cache_miss",
+          "content_substantively_evaluated": false,
+          "extracted": "Actual original detail, coordinates, meaning of name and visitors' comments not retrieved."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/pineta_cavallino_treporti_italy_21222",
+          "kind": "supporting",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "This is a DIFFERENT nearby listing, Pineta Punta Sabbioni; its own nearby-spots section explicitly links Jack Danner at 0.2km, distinct ID 58950 vs 21222. Its Aug 2025 meet-up questions are NOT attributable to Jack Danner."
+        },
+        {
+          "url": "https://www.gays-cruising.com/pt/cruising/ca_savio_camping_cavallino_treporti_italien_109533",
+          "kind": "supporting",
+          "access": "indexed_text_evaluated",
+          "content_substantively_evaluated": true,
+          "extracted": "Another independent page within same original directory's indexed results places Jack Danner 3.4km from Ca Savio campsite and Pineta 3.5km from it, consistent with 0.2km local separation but insufficient to pin either exact site."
+        },
+        {
+          "url": "https://www.gays-cruising.com/it/cruising/jack_danner_cavallino_treporti_italien_58950",
+          "kind": "recovery_attempt",
+          "access": "direct_cache_miss",
+          "content_substantively_evaluated": false,
+          "extracted": "Italian-language original-detail attempt unreadable."
+        },
+        {
+          "url": "https://web.archive.org/web/20240000000000/https://www.gays-cruising.com/en/cruising/jack_danner_cavallino_treporti_italien_58950",
+          "kind": "recovery_attempt",
+          "access": "archive_access_unavailable",
+          "content_substantively_evaluated": false,
+          "extracted": "Archived snapshot requested but browser rejected URL; original content still not recovered."
+        }
+      ],
+      "stored_coordinate": null,
+      "historical_location_assessment": "The site depicts Jack Danner as its own outdoor natural-area pin about 200 metres from Pineta Punta Sabbioni, plausibly the wider Punta Sabbioni pinewood district. Actual path/parcel and name meaning remain unconfirmed; it is not acceptable to replace the site with Pineta's coordinates.",
+      "recent_activity": "No dated Jack Danner-specific cruising report; Pineta's 2025 activity comments do not count.",
+      "dated_reports": [
+        {
+          "date": "2025-08-17",
+          "kind": "question on separate Pineta Punta Sabbioni page, NOT Jack Danner and outside current 12-month cutoff"
+        }
+      ],
+      "conflicts": [
+        "Original proper name has no externally confirmed geographic explanation",
+        "Nearby Pineta source is a distinct ID; spatial adjacency alone does not establish duplicate"
+      ],
+      "duplicates": "Potential near-neighbour of Pineta Punta Sabbioni, but source assigns distinct spot IDs; do NOT merge without exact original pins.",
+      "safety_access": "No verified path or property type; no published directions until actual identity and public rights established.",
+      "pending": [
+        "Recover original 58950 coordinates/directions or external archive",
+        "Resolve the proper name and investigate nearby forest entrance independently",
+        "Do not transfer Pineta user comments to Jack Danner"
+      ],
+      "geographic_identified": "approximate_neighbourhood_only",
+      "specific_cruising_spot_identified": false,
+      "eight_source_review": {
+        "original_archive": "Original scrape_1/gap_fill, cross_source_alignment_2026-11-06 and per-record archived 8-source checks examined; each candidate matches Gays-Cruising only. Prior other seven marked searched_no_match from non-exhaustive archives, not proof of no listings.",
+        "this_pass": "Public-index searches on 2026-11-08 across gay-szene.net, Planet Randy, The Gay Passport, Splashd, Popcorn.dating, Squirt.org, CruisingGays for all five names yielded no candidate-specific readable match; all remain not_exhaustively_verified.",
+        "statuses": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "index_read_original_detail_blocked"
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Planet Randy",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Splashd",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Squirt.org",
+            "status": "no_indexed_candidate_match; member_content_not_accessed"
+          },
+          {
+            "site": "CruisingGays",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          }
+        ]
+      },
+      "source_review_complete": false,
+      "publication_approved": false,
+      "research_type": "substantive_content_investigation_not_source_exhaustive",
+      "research_date": "2026-11-08"
+    },
+    {
+      "Venue_ID": "CRU-CD2-280",
+      "Name": "Lago di Peretola",
+      "City": "Florence",
+      "Country": "Italy",
+      "sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/lago_di_peretola_firenze_italia_91608",
+          "kind": "original_detail",
+          "access": "direct_cache_miss",
+          "content_substantively_evaluated": false,
+          "extracted": "Original cruising page and its specific point/visitor comments not accessible."
+        },
+        {
+          "url": "https://mapcarta.com/de/W461136228",
+          "kind": "supporting",
+          "access": "direct_cache_miss",
+          "content_substantively_evaluated": false,
+          "extracted": "Recorded historical geographic link was directly attempted; cannot read map object detail."
+        },
+        {
+          "url": "https://it.wikipedia.org/wiki/Lago_di_Peretola",
+          "kind": "supporting",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "The precise named Lago di Peretola is independently attested between Florence and Sesto Fiorentino beside Florence Airport; map centre 43°48′45.94″N, 11°11′55.83″E (approx 43.812761, 11.198842); this rebuts archive description claiming no reliably identifiable lake."
+        },
+        {
+          "url": "https://www.birdingplaces.eu/en/birdingplaces/italy/lago-di-peretola",
+          "kind": "supporting",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "Birding area page explicitly locates Lake Peretola in Sesto Fiorentino university-area wetland. Older instructions describe approach via garden gate, bird hides, reed path and western edge; biodiversity note says do not climb banks. These descriptions are for legitimate birdwatching, NOT source cruising directions. Search-indexed visitor comment dated 2025-12-31 says main entrance was then closed to protect biodiversity, alternate bird hide might be open; 2026 status NOT confirmed."
+        },
+        {
+          "url": "https://dpaeroportofirenze.avventuraurbana.it/ragioni-intervento/",
+          "kind": "supporting",
+          "access": "indexed_text_evaluated",
+          "content_substantively_evaluated": true,
+          "extracted": "Official airport debate/project text identifies lake as protected Natura 2000 wetland adjoining existing airport runway; direct browser fetch unavailable."
+        },
+        {
+          "url": "https://dpaeroportofirenze.avventuraurbana.it/proposta/",
+          "kind": "supporting",
+          "access": "indexed_text_evaluated",
+          "content_substantively_evaluated": true,
+          "extracted": "Project proposes eventual removal/relocation of Lago di Peretola with environmental compensation for future runway; this is FUTURE PROPOSAL, not proof 2026 demolition or closure."
+        },
+        {
+          "url": "https://www.lanazione.it/firenze/cronaca/aeroporto-peretola-q9vrxfx6",
+          "kind": "supporting",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "16 May 2026 interview with airport CEO expects works only from summer 2027, subject to approvals; does not establish 2026 relocation completion."
+        },
+        {
+          "url": "https://www.gays-cruising.com/it/cruising/lago_di_peretola_firenze_italia_91608",
+          "kind": "recovery_attempt",
+          "access": "direct_cache_miss",
+          "content_substantively_evaluated": false,
+          "extracted": "Italian alternate language original detail attempted, unavailable."
+        }
+      ],
+      "stored_coordinate": {
+        "latitude": 43.81252,
+        "longitude": 11.1995,
+        "origin": "GROUP_CD_2_FILTERED_186_WORKING.json derived from Mapcarta named lake; independent coordinates nearby on Italian Wikipedia 43.812761,11.198842",
+        "scope": "lake general reference point, NOT proven original site pin, bird hide or access entrance"
+      },
+      "historical_location_assessment": "The named physical lake IS identified, so earlier 'no identifiable lake' text is incorrect. The source's exact cruising section is not known and its direct details remain blocked. Wetland conservation access may now be limited.",
+      "recent_activity": "No attributable firsthand gay cruising activity recovered in 2025–26. Birdwatching visitor comment is evidence of access restriction only.",
+      "dated_reports": [
+        {
+          "date": "2025-12-31",
+          "kind": "birdwatcher reports main gate closed to preserve biodiversity; second hide not checked; access report not cruising"
+        },
+        {
+          "date": "2026-05-16",
+          "kind": "airport project timeline from operator, not cruising or existing removal"
+        }
+      ],
+      "conflicts": [
+        "Previously archived general description erroneously said no reliably identifiable lake; independently named/map-proven lake exists",
+        "Historical 2021 birdwatching gate instructions may conflict with a 31 Dec 2025 closure report; use later evidence without assuming permanent closure"
+      ],
+      "duplicates": "No exact-name candidate in other groups or live listings; same lake references must not be split into multiple listings.",
+      "safety_access": "Protected wetland adjacent to airport, possible closure at main entrance and environmental restrictions. Do not direct visitors through closed gates, onto banks, or into restricted airport land.",
+      "pending": [
+        "Obtain original source 91608 map/comments to identify actual alleged section and avoid conflating birding hides",
+        "Verify 2026 gate notices and any publicly authorised access",
+        "Do not equate airport masterplan relocation intention with physical demolition"
+      ],
+      "geographic_identified": "named_lake_identified_high_confidence",
+      "specific_cruising_spot_identified": false,
+      "eight_source_review": {
+        "original_archive": "Original scrape_1/gap_fill, cross_source_alignment_2026-11-06 and per-record archived 8-source checks examined; each candidate matches Gays-Cruising only. Prior other seven marked searched_no_match from non-exhaustive archives, not proof of no listings.",
+        "this_pass": "Public-index searches on 2026-11-08 across gay-szene.net, Planet Randy, The Gay Passport, Splashd, Popcorn.dating, Squirt.org, CruisingGays for all five names yielded no candidate-specific readable match; all remain not_exhaustively_verified.",
+        "statuses": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "index_read_original_detail_blocked"
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Planet Randy",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Splashd",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Squirt.org",
+            "status": "no_indexed_candidate_match; member_content_not_accessed"
+          },
+          {
+            "site": "CruisingGays",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          }
+        ]
+      },
+      "source_review_complete": false,
+      "publication_approved": false,
+      "research_type": "substantive_content_investigation_not_source_exhaustive",
+      "research_date": "2026-11-08"
+    },
+    {
+      "Venue_ID": "CRU-CD2-281",
+      "Name": "Boschetto di Lacchiarella",
+      "City": "Lacchiarella",
+      "Country": "Italy",
+      "sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/italy",
+          "kind": "original_directory_index",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "National directory lists Boschetto di Lacchiarella as Natural area near Lacchiarella, no detailed locality or dated report in available index."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/boschetto_di_lacchiarella_lacchiarella_italia_5171",
+          "kind": "original_detail",
+          "access": "direct_cache_miss",
+          "content_substantively_evaluated": false,
+          "extracted": "Exact candidate original detail 5171 found from the country index but content, map and reports unavailable."
+        },
+        {
+          "url": "https://www.komoot.com/it-it/highlight/3880355",
+          "kind": "supporting",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "Boschetto di Villamaggiore is a real path/woodland in Lacchiarella. Cyclists' dated comments 2021-10-17 and 2025-07-06 place it between fields and a logistics company, with dense brambles and an overgrown trail beside an industrial fence; these describe geography, NOT gay cruising or legal access."
+        },
+        {
+          "url": "https://laprovinciapavese.gelocal.it/pavia/cronaca/2018/04/04/news/camporella-2-0-c-e-anche-pavia-nella-mappa-online-1.16673477",
+          "kind": "supporting",
+          "access": "read_content",
+          "content_substantively_evaluated": true,
+          "extracted": "Important independent dated 4 April 2018 regional newspaper specifically names 'boschetto di Lacchiarella' among lesser-known sites in an article about outdoor meeting/sex locations. This supports a historical place reference independent of the gay directory; does not specify same woodland parcel or exclusively male activity."
+        },
+        {
+          "url": "https://www.gays-cruising.com/it/cruising/boschetto_di_lacchiarella_lacchiarella_italia_5171",
+          "kind": "recovery_attempt",
+          "access": "direct_cache_miss",
+          "content_substantively_evaluated": false,
+          "extracted": "Original-detail alternate language request failed."
+        }
+      ],
+      "stored_coordinate": null,
+      "historical_location_assessment": "A named Lacchiarella woodland/meeting-area reference existed by 2018 independently of the directory. The potential exact mapped Boschetto di Villamaggiore has dated 2021/2025 paths evidence but cannot yet be proved to match the 2018 or original gay listing.",
+      "recent_activity": "No confirmed current male cruising, 2025 cycling report is not activity evidence, 2018 newspaper is historical mixed-orientation context.",
+      "dated_reports": [
+        {
+          "date": "2018-04-04",
+          "kind": "newspaper historical outdoors-meeting place by exact Lacchiarella boschetto name, no pinpoint or proof of gay activity"
+        },
+        {
+          "date": "2021-10-17",
+          "kind": "Komoot forest geography and overgrown entrance, not cruising"
+        },
+        {
+          "date": "2025-07-06",
+          "kind": "Komoot cycling trail and bramble condition, not cruising"
+        }
+      ],
+      "conflicts": [
+        "Boschetto di Villamaggiore is a plausible alias not established as same parcel",
+        "Old newspaper references general outdoor intimacy, not gay male cruising or dated personal encounter"
+      ],
+      "duplicates": "Different from Boschetto in Turate, and no exact match in Group 1, Group 3 or production listings.",
+      "safety_access": "Path may be overgrown and adjacent to industrial fences; verify ownership and legal approach before issuing a point.",
+      "pending": [
+        "Use original 5171 pin or archive to distinguish Lacchiarella 'boschetto' from Villamaggiore woods",
+        "Search land parcels/road landmarks and independently dated male cruising reports",
+        "Preserve 2018 historical reference but do not upgrade to current activity"
+      ],
+      "geographic_identified": "historical_woodland_reference_supported_exact_parcel_unknown",
+      "specific_cruising_spot_identified": false,
+      "eight_source_review": {
+        "original_archive": "Original scrape_1/gap_fill, cross_source_alignment_2026-11-06 and per-record archived 8-source checks examined; each candidate matches Gays-Cruising only. Prior other seven marked searched_no_match from non-exhaustive archives, not proof of no listings.",
+        "this_pass": "Public-index searches on 2026-11-08 across gay-szene.net, Planet Randy, The Gay Passport, Splashd, Popcorn.dating, Squirt.org, CruisingGays for all five names yielded no candidate-specific readable match; all remain not_exhaustively_verified.",
+        "statuses": [
+          {
+            "site": "Gays-Cruising.com",
+            "status": "index_read_original_detail_blocked"
+          },
+          {
+            "site": "gay-szene.net",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Planet Randy",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "The Gay Passport",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Splashd",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Popcorn.dating",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          },
+          {
+            "site": "Squirt.org",
+            "status": "no_indexed_candidate_match; member_content_not_accessed"
+          },
+          {
+            "site": "CruisingGays",
+            "status": "no_indexed_candidate_match; full_site_unverified"
+          }
+        ]
+      },
+      "source_review_complete": false,
+      "publication_approved": false,
+      "research_type": "substantive_content_investigation_not_source_exhaustive",
+      "research_date": "2026-11-08"
+    }
+  ],
+  "next_unstarted": "CRU-CD2-282",
+  "followup_ids": [
+    "CRU-CD2-274",
+    "CRU-CD2-275",
+    "CRU-CD2-278",
+    "CRU-CD2-280",
+    "CRU-CD2-281"
+  ],
+  "originals_untouched": true,
+  "production_unchanged": true
+}
