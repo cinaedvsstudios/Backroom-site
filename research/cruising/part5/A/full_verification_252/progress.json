@@ -7,7 +7,8 @@
     "live_data_unchanged": true,
     "checkpoint_every": 50,
     "completed_berlin": "2026-11-08",
-    "scope_caveat": "All 252 originally identified candidate records enriched and checked with original source archive and aligned eight-site archival cross-index; public searches and official checks where possible. Not a logged-in full individual crawl of all eight sites per location."
+    "scope_caveat": "All 252 originally identified candidate records enriched and checked with original source archive and aligned eight-site archival cross-index; public searches and official checks where possible. Not a logged-in full individual crawl of all eight sites per location.",
+    "last_reconciled_berlin": "2026-11-08"
   },
   "progress": {
     "completed": 252,
@@ -60,10 +61,12 @@
         "reclassified_to_needs_details": 1
       }
     ],
-    "known_locatable_active": 187,
-    "known_location_details_needed": 104,
+    "known_locatable_active": 198,
+    "known_location_details_needed": 93,
     "active_candidates": 291,
-    "status": "completed_first_full_252_source_comparison_pass"
+    "status": "completed_first_full_252_source_comparison_pass",
+    "post_completion_source_pin_recovered": 11,
+    "post_completion_recovery_file": "research/cruising/part5/A/full_verification_252/secondary_source_pin_recovery_2026-11-08.json"
   },
   "policy": {
     "each_record": "Original eight-source archived alignment + exact source URLs + searches for other-name/alias/candidate mentions + official geographical verification + dated report classification + duplicate avoidance. Preserve in record whether page opened, not indexed, authentication-restricted or not checked.",
