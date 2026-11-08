@@ -5,10 +5,10 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - Repository: https://github.com/cinaedvsstudios/Backroom-site
 - Working directory: `research/cruising/part5/`.
 - Group **2 of 3**, original positions **196–389 inclusive**, 194 source candidate records. **8 independently documented excluded from working set**, **186 active candidate records**. **99** previously historically mapped, **86** initially source-research-incomplete, **1** Poduene Railway Station included.
-- Original incomplete cohort of 86: **75 have received preliminary substantive content research across fifteen batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 11 still await initial substantive review.
-- Most recently assessed **CRU-CD2-365 — Parkplatz Arlesheim, Switzerland**.
-- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-366 — Mägenwilerwald, Birr, Switzerland.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
-- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `7fcaabdf4aa3790d47f1d5adafcd909541709ef4`. Latest individual working-file enrichment: `409514f6261d5de4eeeae3c7ffe9400b90360d4c`. Batch 015 immutable commit `ed8158e2c98f2cd7ca8ef0d7b8c147e92e208992`.
+- Original incomplete cohort of 86: **80 have received preliminary substantive content research across sixteen batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 6 still await initial substantive review.
+- Most recently assessed **CRU-CD2-380 — Werdinsel, Zurich**.
+- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-381 — Friedhof Sihlfeld WC, Zurich, Switzerland.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
+- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `d8ec5457727667adacd0ae53ef50087c5b7b1192`. Latest individual working-file enrichment: `9b02168efd77039224b4af97ce4a899196e92301`. Batch 016 immutable commit `59249c2bee998ba7914c5f26ae258f7865c554e6`.
 
 ## Required reading BEFORE more research
 1. `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json` — **authoritative next_unstarted** and batch list; if moved by another worker, follow latest tracker.
@@ -41,6 +41,8 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - 014: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_014_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_014_2026-11-08.json), IDs CRU-CD2-344, CRU-CD2-345, CRU-CD2-349, CRU-CD2-352, CRU-CD2-355
 
 - 015: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_015_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_015_2026-11-08.json), IDs CRU-CD2-357, CRU-CD2-361, CRU-CD2-363, CRU-CD2-364, CRU-CD2-365. NOTE: the immutable batch file accidentally lists next_unstarted=367; this is an ERROR. **The correct authoritative next ID is 366** as tracker and original URL-audit order both prove. NEVER skip 366.
+
+- 016: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_016_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_016_2026-11-08.json), IDs CRU-CD2-366, CRU-CD2-370, CRU-CD2-374, CRU-CD2-377, CRU-CD2-380
 
 ## Research method — MUST FOLLOW
 - Work in exact order from tracker, five records per batch. **Open and READ content of every stored source URL**, including original detailed listings, supplemental pages, comments, internal source-map directions, previous evidence, and related pages. Recording merely 'reachable/checked' is NOT source research.
@@ -109,8 +111,15 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - **CRU-CD2-365** generic Arlesheim Parkplatz unlocated; web checkins are NOT proof visits.
 - **CRITICAL CURSOR CORRECTION:** batch015 file has next=367 due to error, but original URL audit after 365 shows **366 Mägenwilerwald**, then 370 Wanneholz, 374 Maihof Pissoir, 377 Tribschen WC, 380 Werdinsel. Authoritative tracker `next_unstarted=CRU-CD2-366` correctly. Never skip 366. 75 preliminary /86; 0 complete; 11 still awaiting initial review.
 
+## Batch 016 findings, 80/86 initial, zero source-exhaustive
+- **366** Mägenwilerwald near Birr management official Mägenwil forestry, still no unique original exact parcel.
+- **370** MAJOR GEOGRAPHIC VALIDATION: Swiss Canton Luzern **2003 official cadastral forest names** specifically lists Wanneholz as Wald in municipality Inwil. Source official https://rawi.lu.ch/-/media/RAWI/Dokumente/Downloads/AV_Handbuch/AV_Handbuch_Stufe_Kanton/orts_flurnamenverzeichnis_av_lu.pdf ; indexed row available, PDF visual screenshot p0 failed cache miss. No original cruising pin.
+- **374/377** Lucerne source index confirms Maihof bus-stop public urinal and Tribschen park WC as SEPARATE. City 2022 WC masterplan and 2026 open-data listings show multiple potential restrooms (Tribschenhorn park around Richard-Wagner-Weg 27 versus museum/school); exact historical door not established. PDF screenshot for municipal masterplan p0 attempted, failed cache miss.
+- **380 Werdinsel** PRIMARY Gays-Cruising detailed original is readable https://www.gays-cruising.com/en/cruising/werdinsel_zurich_suiza_1902 . Google directions source link gives **47.401184082,8.4855051041** and working pin now corrected. Main site has 606 **login-blocked comments** and '318 last month' counter (old crawl): these ARE NOT substantiated user meet reports. Independent gay guide https://www.patroc.com/de/gay/zurich/d/werdinsel.html specifically states **'Kein Cruising!'** and plainclothes checks near gay/popular nudist zone. Official Zurich municipality https://www.stadt-zuerich.ch/werdinsel confirms FKK island-tip public bathing, not a gay-sex area. Important CONFLICT; preserve no activity conclusion until independent dated reports.
+- **NEXT** batch 017 five records: 381 Friedhof Sihlfeld WC, 382 Cam Area Nederland, 385 Lage Aard, and next IDs in URL audit (likely 386, 387). **Then one final pending original incomplete candidate**, make independent 1-record last batch if necessary. 80 prelim, 6 unreviewed, zero source-exhaustive.
+
 ## Recoverability / GitHub access
 - GitHub tool `mcp__GitHub__fetch_file` sometimes responds with **empty content** for 2MB JSON but includes blob SHA. Fetch same SHA using `mcp__GitHub__fetch_blob` to get entire JSON, parse and update; do not treat empty string as missing file.
-- Last verified tracker checkpoint commit: `7fcaabdf4aa3790d47f1d5adafcd909541709ef4`.
-- Permanent 186 working file update commit: `409514f6261d5de4eeeae3c7ffe9400b90360d4c`.
+- Last verified tracker checkpoint commit: `d8ec5457727667adacd0ae53ef50087c5b7b1192`.
+- Permanent 186 working file update commit: `9b02168efd77039224b4af97ce4a899196e92301`.
 - User requested review chat 'Progress update review GROUP 2 8am'; the correction and counts match tracker. This handover is authoritative on restart, not chat progress alone.
