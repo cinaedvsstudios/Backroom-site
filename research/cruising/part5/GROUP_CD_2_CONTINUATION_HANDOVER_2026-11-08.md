@@ -5,10 +5,10 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - Repository: https://github.com/cinaedvsstudios/Backroom-site
 - Working directory: `research/cruising/part5/`.
 - Group **2 of 3**, original positions **196–389 inclusive**, 194 source candidate records. **8 independently documented excluded from working set**, **186 active candidate records**. **99** previously historically mapped, **86** initially source-research-incomplete, **1** Poduene Railway Station included.
-- Original incomplete cohort of 86: **85 have received preliminary substantive content research across seventeen batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 1 still awaits initial substantive review.
-- Most recently assessed **CRU-CD2-388 — Bastion, Naarden**.
-- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-389 — Kanaaldijk, Nieuwegein, Netherlands.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
-- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `e88e415c2ea09e41772bf11eb38013ad9368e676`. Latest individual working-file enrichment: `2eef7fef6d0dde94459174c6beb108995f7dcb2e`. Batch 017 immutable commit `8a84b02722a3be18a7d321ddced0100e2b846e62`.
+- Original incomplete cohort of 86: **86 have received preliminary substantive content research across eighteen batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 0 await initial substantive review; 85 geographic followups still require full source-exhaustive investigation, with 1 virtual online-only candidate decisively classified.
+- Most recently assessed **CRU-CD2-389 — Kanaaldijk, Nieuwegein**.
+- **INITIAL-PASS COMPLETE: 86/86. NEXT SOURCE-EXHAUSTIVE FOLLOWUP: CRU-CD2-200 (from authoritative tracker), then subsequent IDs in `still_pending_deep_followup`; return to relevant batches and blocked original sources.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
+- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `122367983ce2fbfb539f19d220cf7e9cef681da3`. Latest individual working-file enrichment: `35ddf036463f8595f5f2ad092c4b3dfe0ba6bf4d`. Batch 018 immutable commit `9ca135747f7d9068bf9750292ee8f7a7d3442fec`.
 
 ## Required reading BEFORE more research
 1. `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json` — **authoritative next_unstarted** and batch list; if moved by another worker, follow latest tracker.
@@ -45,6 +45,8 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - 016: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_016_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_016_2026-11-08.json), IDs CRU-CD2-366, CRU-CD2-370, CRU-CD2-374, CRU-CD2-377, CRU-CD2-380
 
 - 017: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_017_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_017_2026-11-08.json), IDs CRU-CD2-381, 382, 385, 386, 388. Source-first virtual exclusion candidate 382 not removed from 186.
+
+- 018: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_018_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_018_2026-11-08.json), ID CRU-CD2-389 only, because exactly one candidate remained. Initial-pass 86/86, source-exhaustive 0/86.
 
 ## Research method — MUST FOLLOW
 - Work in exact order from tracker, five records per batch. **Open and READ content of every stored source URL**, including original detailed listings, supplemental pages, comments, internal source-map directions, previous evidence, and related pages. Recording merely 'reachable/checked' is NOT source research.
@@ -128,8 +130,14 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - **388 Bastion** Naarden English FIRST-PARTY FULL page https://www.gays-cruising.com/en/cruising/bastion_naarden_nederland_33802 maps **52.2959289551,5.1773176193**, exact secluded park across from distinct Ronduit ID18489 just 0.2km apart, old dike footpath, slippery after rainfall. Visible comments only through Aug2025, older than last-12mo.
 - **NEXT LAST initial original cohort candidate `CRU-CD2-389 Kanaaldijk`**. Dutch FULL original already located https://www.gays-cruising.com/nl/cruising/kanaaldijk_nieuwegein_nederland_20827 — read content and user comments; map destination click **75** for exact source GPS; 2025-Jul16 comment says 'Ben er nu', older than cutoff, another mentions parking near The Wall (unproven exact). Finish as immutable **batch018 single-record** and update tracker 86/86 *initial substantive reviews only*, **NOT** 86 exhausted (source-exhaustive count stays ZERO). Next phase revisit all still_pending_deep_followup, except virtual 382 is resolved nonphysical; no premature closure.
 
+## Batch 018 and transition to SOURCE-EXHAUSTIVE follow-up phase
+- **389 Kanaaldijk**, Nieuwegein, original Dutch primary https://www.gays-cruising.com/nl/cruising/kanaaldijk_nieuwegein_nederland_20827 FULL READ, exact source Google directions destination **52.0472259521,5.1057672501** recovered, working dataset corrected. Last visible personal 'I am here now' from **2025-07-16**, outside 2025-11-06 onward 12-month activity window. User comment referring to parking 'near The Wall' relates to **Utrecht shopping complex at Hertogswetering 183**, separate from original Nieuwegein pin. Do not merge The Wall with Kanaaldijk. Several additional original Gays nearby markers remain independent (Remiseweg, Huis de Geer, Noorderveldweg).
+- **INITIAL SUBSTANTIVE CONTENT PASS COMPLETE**: 86/86 of original incomplete cohort; immutable batches 001–018, 18 checkpoints. **ZERO SOURCE-EXHAUSTIVE COMPLETE**: actual original paywall/blocked content, alternative-language links and full 8-site individual comparisons have NOT been completed for any of 85 physical candidates. Original nonphysical **382 Cam Area Nederland** is definitively established virtual and recommended for formal exclusion, but remains in 186 until owner filtering. DO NOT claim '86 locations completely researched' or '86 unidentified.'
+- **NEXT ACTION**: tracker field `next_source_exhaustive_followup=CRU-CD2-200`, `still_pending_deep_followup` contains **85 IDs** in original order. Read existing respective batches/source archives first. For each, recover all source URL contents and follow relevant reports/maps/archives; only after fully checked update to source_exhaustive_complete=true. Save independent immutable 5-record follow-up batches and tracker, with exact next pending ID, and update this handover. Until evidence is exhaustive, retain unverified status. Do not restart initial passes.
+- Last batch commit `9ca135747f7d9068bf9750292ee8f7a7d3442fec`; tracker `122367983ce2fbfb539f19d220cf7e9cef681da3`; working file `35ddf036463f8595f5f2ad092c4b3dfe0ba6bf4d`. All 186 working candidates retained; original 194 and original 8 excluded untouched, production site not edited.
+
 ## Recoverability / GitHub access
 - GitHub tool `mcp__GitHub__fetch_file` sometimes responds with **empty content** for 2MB JSON but includes blob SHA. Fetch same SHA using `mcp__GitHub__fetch_blob` to get entire JSON, parse and update; do not treat empty string as missing file.
-- Last verified tracker checkpoint commit: `e88e415c2ea09e41772bf11eb38013ad9368e676`.
-- Permanent 186 working file update commit: `2eef7fef6d0dde94459174c6beb108995f7dcb2e`.
+- Last verified tracker checkpoint commit: `122367983ce2fbfb539f19d220cf7e9cef681da3`.
+- Permanent 186 working file update commit: `35ddf036463f8595f5f2ad092c4b3dfe0ba6bf4d`.
 - User requested review chat 'Progress update review GROUP 2 8am'; the correction and counts match tracker. This handover is authoritative on restart, not chat progress alone.
