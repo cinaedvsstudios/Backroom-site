@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "title": "Backroom A+B — final research quality review, 92 records",
+    "date_berlin": "2026-11-08",
+    "scope": "92 retained A+B cruising locations",
+    "completed": 92,
+    "unreviewed": 0,
+    "unique_locations": 92,
+    "immutable_batches": 19,
+    "source_file": "research/cruising/part5/GROUP_A_B_2026-11-08_RECENCY_FILTERED_PUBLICATION.json",
+    "progress_tracker": "research/cruising/part5/GROUP_A_B_QA_RESEARCH_TRACKER_2026-11-08.json",
+    "production_edited": false,
+    "publication_approved": false,
+    "disclaimer": "Every candidate has had a research QA pass; not all activity, original precise entrances or every source's private material could be independently verified."
+  },
+  "quality_checks": {
+    "source_retained_ids": 92,
+    "audited_unique_ids": 92,
+    "missing_records": 0,
+    "unexpected_records": 0,
+    "duplicate_audit_ids": 0
+  },
+  "high_priority_corrections": [
+    {
+      "queue_ids": [
+        233,
+        241,
+        383,
+        960
+      ],
+      "issue": "Map discrepancies or missing original coordinates: Nissi vs Nissi Bay, Paphos flag map link, Bologna Pontelungo, Llobregat El Prat original pin."
+    },
+    {
+      "queue_ids": [
+        464
+      ],
+      "issue": "MOL Parking Murcki operator station address/coordinates conflict with third-party record; parking bay remains unknown."
+    },
+    {
+      "queue_ids": [
+        492,
+        656,
+        733,
+        838,
+        866,
+        870
+      ],
+      "issue": "Motorway direction, separate carriageways or one broad multi-stop record require precise access labels, not invented shared driving pin."
+    },
+    {
+      "queue_ids": [
+        253,
+        299,
+        367,
+        465,
+        833,
+        890,
+        954
+      ],
+      "issue": "Confirmed operator WC charges or opening arrangements should be separated from reported cruising hours. Stöcken cemetery hours are not WC hours. Barcelona restroom redesign is procurement, not proven completion."
+    },
+    {
+      "queue_ids": [
+        608,
+        667,
+        701,
+        757,
+        761,
+        776
+      ],
+      "issue": "Recent conservation, swimming restrictions, construction, safety and uncertain legal parking access deserve careful wording."
+    },
+    {
+      "queue_ids": [
+        439,
+        447,
+        884,
+        991,
+        994,
+        1014,
+        1048
+      ],
+      "issue": "Cross-site possible duplicate, location alias or adjacent-but-distinct areas should be reconciled before import; Maspalomas kiosk numbers inconsistent."
+    }
+  ],
+  "completed_work": "Stored original URLs, source-specific observations, dated recent claims, access limitations, duplicate leads and specific needed corrections across the 19 immutable detailed research batches.",
+  "not_done": "No research corrections applied to production listings.json or live pages. No guarantee of 2026 in-person activity on question-only listings. No complete authenticated scan of every private item on all 8 sources.",
+  "owner_workflow": "Future output should be proposed research-only import/correction data for explicit review. Do not update live website without owner instruction."
+}
