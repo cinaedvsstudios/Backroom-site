@@ -20,7 +20,9 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7
     ],
     "genuinely_source_assessed_complete": [
       1,
@@ -33,22 +35,36 @@
         "index": 4,
         "id": "GC1-ANDORRA-04",
         "reason": "Original source page 18294 unreadable after EN/ES/FR/index/archival attempts; no exact identity/pin, separate from Rec del Solà only by source directory list."
+      },
+      {
+        "index": 6,
+        "id": "GC1-ANDORRA-06",
+        "reason": "Original directory's named river promenade identified in municipal sources, but original spot detail/map point and dated on-site activity remain unrecovered after targeted web and eight-site indexed searches."
+      },
+      {
+        "index": 7,
+        "id": "GC1-ANDORRA-08",
+        "reason": "Monument/gardens identified and 2025–26 closure/redevelopment independently documented, but original detail/map pin and precise cruising subsection remain unrecovered."
       }
     ],
     "completed_count": 4,
     "remaining_not_completed": 287,
-    "unreviewed_indices_start": 6,
+    "unreviewed_indices_start": 8,
     "next_incomplete_index": 4,
     "next_incomplete_id": "GC1-ANDORRA-04",
     "last_completed_index": 5,
     "last_completed_id": "GC1-ANDORRA-05",
     "newly_identified_location_count": 0,
-    "first_complete_5_record_checkpoint": false
+    "first_complete_5_record_checkpoint": false,
+    "last_assessed_index": 7,
+    "last_assessed_id": "GC1-ANDORRA-08"
   },
   "saved_evidence_files": [
-    "research/cruising/part5/A/P3_deep_source_recheck_0001_0005_PARTIAL_2026-11-08.json"
+    "research/cruising/part5/A/P3_deep_source_recheck_0001_0005_PARTIAL_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0006_0007_PARTIAL_2026-11-08.json"
   ],
   "last_confirmed_commit": "956c6d4c4635f092bfb539c5bae801951a94f6bf",
-  "approach": "Repair #4 first if new source evidence becomes accessible; keep incomplete explicitly. Deep research #6 next only after or while #4 remains flagged; count and checkpoint only five genuinely researched records. Keep old batch files immutable.",
-  "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write."
+  "approach": "Continue original #8 next while #4, #6 and #7 remain flagged incomplete for original source details and dating; count only truly completed records; preserve partial evidence and batch immutability.",
+  "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write.",
+  "last_confirmed_evidence_commit": "6a727889e2ee1d35a785b28ab58828e3ef766e90"
 }
