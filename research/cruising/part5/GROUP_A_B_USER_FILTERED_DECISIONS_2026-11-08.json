@@ -6,9 +6,9 @@
     "original": 210,
     "already_removed_confirmed_duplicates": 8,
     "removed_user_categories": 17,
-    "normal_mapped": 145,
+    "normal_mapped": 147,
     "unidentifiable_deferred": 8,
-    "location_research_open": 32,
+    "location_research_open": 30,
     "remaining_active_total": 185
   },
   "user_decisions": {
@@ -637,30 +637,6 @@
       ]
     },
     {
-      "queue_index": 492,
-      "name": "Antvorskov rest area",
-      "city": "Slagelse",
-      "issue": "Antvorskov Nord and Syd are separate E20 facilities; the directory entry is ambiguous.",
-      "research": "Antvorskov Nord or Syd on E20 from source route or map.",
-      "recheck": {
-        "checked_2026_11_08": true,
-        "finding": {
-          "finding": "Original saved research includes a 2021 commenter specifically naming Antvorskov Syd, although general source listing mentions a bridge and bushes and 2026 messages are mostly invitations.",
-          "source_url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
-          "confidence": "Syd_probable_but_not_unique_current_location",
-          "next": "Resolve Syd direction against original map, compare current Nord/Syd access."
-        },
-        "source_url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949"
-      },
-      "links": [
-        "https://www.gays-cruising.com/en/denmark",
-        "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
-        "https://www.vejdirektoratet.dk/trafikant/rastepladser-din-pause-paa-turen",
-        "https://www.retsinformation.dk/eli/lta/2023/1431",
-        "https://poi.gpsforalle.dk/print2.php?cid=1026&gid=555"
-      ]
-    },
-    {
       "queue_index": 594,
       "name": "Rastplatz Wäldchen mit Tür zu mehr",
       "city": "Sevelen",
@@ -1024,27 +1000,6 @@
       ]
     },
     {
-      "queue_index": 870,
-      "name": "A94 Ende in Marktl - unter der Alzbrücke",
-      "city": "Marktl",
-      "issue": "The source does not distinguish which side of the A94 Alzbrücke is meant or the public approach.",
-      "research": "Map both public parking approaches on either bank and select a named bridge reference rather than force one side.",
-      "recheck": {
-        "checked_2026_11_08": true,
-        "finding": {
-          "finding": "Original Gays-Cruising detail expressly says 'Unter der Autobahnbrücke an der Alz, auf beiden Seiten Parkplatz'—parking on BOTH sides beneath the motorway bridge. That identifies a two-sided location, not an unknown single side.",
-          "source_url": "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635",
-          "confidence": "both_banks_of_A94_Alz_bridge_identified",
-          "next": "Map both public parking approaches on either bank and select a named bridge reference rather than force one side."
-        },
-        "source_url": "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635"
-      },
-      "links": [
-        "https://www.gays-cruising.com/en/germany",
-        "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635"
-      ]
-    },
-    {
       "queue_index": 896,
       "name": "Hafenparkplatz Nürnberg Süd",
       "city": "Nuremberg",
@@ -1234,6 +1189,31 @@
         23.7338600159
       ],
       "source": "https://www.gays-cruising.com/en/cruising/agia_fotini_athens_greece_74115"
+    },
+    {
+      "queue_index": 492,
+      "name": "Antvorskov Syd",
+      "decision": "Original website's Google Maps directions destination corresponds closely to independently mapped Antvorskov Syd on E20 (separate Nord side exists). Original 2021 source comment specifically names Syd.",
+      "gps": [
+        55.3987159729,
+        11.3807201385
+      ],
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
+        "https://poi.gpsforalle.dk/print2.php?cid=1026&gid=555"
+      ]
+    },
+    {
+      "queue_index": 870,
+      "name": "A94 Ende in Marktl - unter der Alzbrücke",
+      "decision": "Original website's Google Maps driving destination for A94 Alzbrücke near Marktl. Source expressly states parking on BOTH sides of the motorway bridge. The pinned point is the original source reference and does not define the access side.",
+      "gps": [
+        48.247253418,
+        12.8153371811
+      ],
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635"
+      ]
     }
   ]
 }
