@@ -572,7 +572,8 @@
       "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
       "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
       "https://planet-randy.com/blog/eintrag/isar-kiesbank/",
-      "https://www.sueddeutsche.de/muenchen/toter-aus-ismaning-vermisster-81-jaehriger-wurde-ermordet-1.1176927"
+      "https://www.sueddeutsche.de/muenchen/toter-aus-ismaning-vermisster-81-jaehriger-wurde-ermordet-1.1176927",
+      "https://www.stbafs.bayern.de/service/medien/meldungen/2024/heckerbrucke-b-471-ismaning-garching-halbseitige-sperrung-am-30-april-zwischen-9-und-15-uhr-wegen-bauwerksprufung/"
     ],
     "research_action": "disambiguate_named_alternatives",
     "already_resolved": false,
@@ -583,14 +584,16 @@
     "web_recheck": {
       "checked_2026_11_08": true,
       "finding": {
-        "finding": "Original gay-szene page explicitly says B471 from Garching towards Ismaning, immediately after Isar bridge turn left; from Ismaning turn right before bridge. 8 June 2026 message describes men walking to the woodland.",
+        "finding": "Original directory specifies B471 Isar bridge west/east approach; road authority identifies historic Heckerbrücke on B471 between Garching and Ismaning, a confirmed named bridge landmark.",
         "source_url": "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
-        "confidence": "direction_and_approach_verified_pin_pending",
-        "next": "Map the Isar bridge on B471 and the public roadside pull-in on the Ismaning side, not any random B471 parking lot."
+        "confidence": "bridge_identified_as_Heckerbruecke_parkland_not_yet_PIN",
+        "next": "Map pull-in immediately east of Heckerbrücke on B471 towards Ismaning, not the separate bridge over Mittlerer Isarkanal.",
+        "additional_source": "https://www.stbafs.bayern.de/service/medien/meldungen/2024/heckerbrucke-b-471-ismaning-garching-halbseitige-sperrung-am-30-april-zwischen-9-und-15-uhr-wegen-bauwerksprufung/"
       },
       "source_url": "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html"
     },
-    "user_action_required": false
+    "user_action_required": false,
+    "followup_research_target": "Map pull-in immediately east of Heckerbrücke on B471 towards Ismaning, not the separate bridge over Mittlerer Isarkanal."
   },
   {
     "queue_index": 968,
@@ -982,43 +985,6 @@
     "user_action_required": false
   },
   {
-    "queue_index": 521,
-    "venue_id": "CRU-AB-0521",
-    "name": "Agia fotini",
-    "city": "Athens",
-    "country": "Greece",
-    "primary_group": "LOCATION_RESEARCH",
-    "primary_problem_type": "Place known; specific entrance, subsection or pin unclear",
-    "what_exactly_is_wrong": "The Agia Fotini bridge/crossing near Zappeion is not identified.",
-    "what_to_research": "Agia Fotini crossing near Zappeion: street and exact bridge.",
-    "search_query_maps": "Agia fotini Athens Greece",
-    "search_query_web": "Agia fotini Athens Greece location cruising access closure current",
-    "has_coordinates": false,
-    "coordinates": null,
-    "secondary_issue_tags": [
-      "no_defensible_map_pin"
-    ],
-    "original_research_reason": "AGIA_FOTINI_BRIDGE_UNKNOWN",
-    "evidence_last_known": "The 2025 visitor reportedly saw no one; an empty 2026 online post offers no current activity evidence.",
-    "source_links": [
-      "https://www.gays-cruising.com/en/greece",
-      "https://www.gays-cruising.com/en/cruising/agia_fotini_athens_greece_74115",
-      "https://www.gays-cruising.com/en/cruising/zappion_gardens_athens_grece_29879"
-    ],
-    "research_action": "geocode_named_place_then_refine_subarea",
-    "already_resolved": false,
-    "skip_current_publication": false,
-    "note": "Use a clearly labeled general reference point if exact public subarea cannot be verified.",
-    "previous_group": "F",
-    "research_type": "refine_section_of_known_place",
-    "web_recheck": {
-      "checked_2026_11_08": false,
-      "finding": null,
-      "source_url": null
-    },
-    "user_action_required": false
-  },
-  {
     "queue_index": 593,
     "venue_id": "CRU-AB-0593",
     "name": "Am Fluss",
@@ -1332,7 +1298,8 @@
     "source_links": [
       "https://gay-szene.net/gay-cruising-in-nuernberg/201/17/rubrik.html",
       "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html",
-      "https://planet-randy.com/blog/eintrag/hafenparkplatz-nuernberg/"
+      "https://planet-randy.com/blog/eintrag/hafenparkplatz-nuernberg/",
+      "https://www.nuernberg.de/presse/mitteilungen/pm_28109.html"
     ],
     "research_action": "geocode_named_place_then_refine_subarea",
     "already_resolved": false,
@@ -1343,14 +1310,16 @@
     "web_recheck": {
       "checked_2026_11_08": true,
       "finding": {
-        "finding": "Original gay-szene page supplies the road: access from Hafenstraße via Europakai, between Hafenstraße, canal and A73.",
+        "finding": "Original directory gives Hafenstraße→Europakai as access. Nürnberg municipality reports major Hafenbrücken traffic configuration changes effective 21 September 2026, so older turn-by-turn directions may be obsolete.",
         "source_url": "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html",
-        "confidence": "approach_road_confirmed_exact_bay_pending",
-        "next": "Map public Europakai access from Hafenstraße, not a randomly named port parking lot."
+        "confidence": "named_road_access_confirmed_traffic_changed_2026",
+        "next": "Geolocate public Europakai parking, verify route under current Nürnberg-Hafen bridge works.",
+        "additional_source": "https://www.nuernberg.de/presse/mitteilungen/pm_28109.html"
       },
       "source_url": "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html"
     },
-    "user_action_required": false
+    "user_action_required": false,
+    "followup_research_target": "Geolocate public Europakai parking, verify route under current Nürnberg-Hafen bridge works."
   },
   {
     "queue_index": 960,
@@ -1411,7 +1380,9 @@
       "https://www.gays-cruising.com/en/spain",
       "https://www.gays-cruising.com/en/barcelona/spain",
       "https://www.gays-cruising.com/es/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296",
-      "https://www.gays-cruising.com/fr/mollet/barcelona/espagne"
+      "https://www.gays-cruising.com/fr/mollet/barcelona/espagne",
+      "https://www.gays-cruising.com/pt/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296",
+      "https://www.alstom.com/worldwide-presence/spain"
     ],
     "research_action": "geocode_named_place_then_refine_subarea",
     "already_resolved": false,
@@ -1420,11 +1391,18 @@
     "previous_group": "F",
     "research_type": "refine_section_of_known_place",
     "web_recheck": {
-      "checked_2026_11_08": false,
-      "finding": null,
-      "source_url": null
+      "checked_2026_11_08": true,
+      "finding": {
+        "finding": "Original source explicitly describes rest area between Mollet firefighters and Alstom factory in direction Mollet to Santa Perpètua. Independent Alstom site identifies Carretera B-140 at km7.5; municipality confirms roadside path and Alstom roundabout.",
+        "source_url": "https://www.gays-cruising.com/pt/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296",
+        "additional_source": "https://www.alstom.com/worldwide-presence/spain",
+        "confidence": "B140_corridor_identified_exact_roadside_pullin_not_mapped",
+        "next": "Inspect B-140 between Mollet firefighters and Alstom km7.5; identify actual road rest pull-in separately from commercial site."
+      },
+      "source_url": "https://www.gays-cruising.com/pt/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296"
     },
-    "user_action_required": false
+    "user_action_required": false,
+    "followup_research_target": "Inspect B-140 between Mollet firefighters and Alstom km7.5; identify actual road rest pull-in separately from commercial site."
   },
   {
     "queue_index": 1049,
