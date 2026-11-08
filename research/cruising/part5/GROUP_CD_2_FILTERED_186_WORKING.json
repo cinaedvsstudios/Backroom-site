@@ -42588,11 +42588,11 @@
     "Address": "Kanaaldijk road and canal embankment, Nieuwegein; exact road section unverified",
     "Postcode": "",
     "Nearest_Station": "",
-    "Latitude": "",
-    "Longitude": "",
-    "Google_Maps_URL": "",
+    "Latitude": "52.0472259521",
+    "Longitude": "5.1057672501",
+    "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=52.0472259521%2C5.1057672501",
     "Apple_Maps_URL": "",
-    "Native_Map_Query": "",
+    "Native_Map_Query": "52.0472259521,5.1057672501",
     "Website_URL": "",
     "Instagram_URL": "",
     "Facebook_URL": "",
@@ -42600,7 +42600,7 @@
     "Source_URLs": "https://www.gays-cruising.com/en/netherlands, https://heterobos.nl/utrecht-ontmoetingsplekken-car-dates/",
     "Share_URL": "",
     "Image_URL": "placeholder_venue.jpg",
-    "Description": "Kanaaldijk is a long road and waterway corridor around Nieuwegein, without a single unique meeting point. The archived gay directory names it and a 2026-updated broader encounter directory repeats the name, but neither supplies a verified exact public area or dated current firsthand cruising report. Waterfront road sections may include traffic, private land and construction restrictions, so an arbitrary pin would mislead visitors.",
+    "Description": "Kanaaldijk is a historically mapped cruising spot on the Nieuwegein canal-side road. Its original Dutch Gays-Cruising directory gives precise Google directions to 52.0472259521, 5.1057672501, rather than merely referring to any canal dike. The latest publicly readable visitor messages are from July 2025, including one user claiming to be there on 16 July; they do not establish activity in the past 12 months. Another user mentions parking near The Wall shopping centre, which is in Utrecht and must not be confused with the Nieuwegein source pin. The current legal approach, access and activity remain unverified.",
     "Vibe_Tags": "Canal Road, Long Corridor, Mixed Directory Claim, Unverified",
     "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
@@ -42763,13 +42763,10 @@
         "https://heterobos.nl/utrecht-ontmoetingsplekken-car-dates/"
       ],
       "coordinate_resolution": {
-        "state": "unclear_name",
-        "reason": "Identify the specific Kanaaldijk section, nearby junction/parking area and legal public access from original directory pin.",
-        "original_name": "Kanaaldijk",
-        "city": "Nieuwegein",
-        "country": "Netherlands",
-        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
-        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+        "state": "primary_original_gay_source_pin_recovered",
+        "source_url": "https://www.gays-cruising.com/nl/cruising/kanaaldijk_nieuwegein_nederland_20827",
+        "directions_url": "https://www.google.com/maps/dir/?api=1&destination=52.0472259521%2C5.1057672501&travelmode=driving",
+        "scope": "Primary historic directory Google directions destination, not verified legal approach or current activity"
       },
       "original_page_audit": {
         "status": "only_country_index_and_independent_directory_available",
@@ -42806,8 +42803,10 @@
       },
       "research_followup_required": true,
       "owner_manual_review_required": false,
-      "source_review_status": "research_incomplete_all_urls_not_checked",
-      "location_resolution_final": false
+      "source_review_status": "source_research_incomplete",
+      "location_resolution_final": false,
+      "substantive_content_batch": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_018_2026-11-08.json",
+      "substantive_last_review_date": "2026-11-08"
     }
   }
 ]
