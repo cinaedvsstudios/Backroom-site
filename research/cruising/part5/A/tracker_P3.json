@@ -22,13 +22,22 @@
       4,
       5,
       6,
-      7
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ],
     "genuinely_source_assessed_complete": [
       1,
       2,
       3,
-      5
+      5,
+      14
     ],
     "incomplete": [
       {
@@ -45,26 +54,73 @@
         "index": 7,
         "id": "GC1-ANDORRA-08",
         "reason": "Monument/gardens identified and 2025–26 closure/redevelopment independently documented, but original detail/map pin and precise cruising subsection remain unrecovered."
+      },
+      {
+        "index": 8,
+        "id": "GC1-ANDORRA-15",
+        "reason": "Whole town Pas de la Casa directory reference; no original detailed spot/map or named sublocation"
+      },
+      {
+        "index": 9,
+        "id": "GC1-ANDORRA-07",
+        "reason": "Parc de La Massana ambiguous generic park, no original detail/map pin"
+      },
+      {
+        "index": 10,
+        "id": "GC1-ANDORRA-09",
+        "reason": "Parc de l'Anita identified by municipality but exact source detail and recent activity not recovered"
+      },
+      {
+        "index": 11,
+        "id": "GC1-ANDORRA-10",
+        "reason": "Ordino 'Jardín' no named garden/map pin"
+      },
+      {
+        "index": 12,
+        "id": "GC1-ANDORRA-12",
+        "reason": "Segudet region identified but specific original source spot unknown; several trails/privately managed approaches"
+      },
+      {
+        "index": 13,
+        "id": "GC1-ANDORRA-14",
+        "reason": "Centre Cultural Lauredià likely identity, original site sublocation unresolved"
+      },
+      {
+        "index": 15,
+        "id": "GC1-BELGIUM-02",
+        "reason": "Two separate Wolvenberg original source URLs unreadable; must compare original map/subarea before merging"
       }
     ],
-    "completed_count": 4,
-    "remaining_not_completed": 287,
-    "unreviewed_indices_start": 8,
+    "completed_count": 5,
+    "remaining_not_completed": 286,
+    "unreviewed_indices_start": 16,
     "next_incomplete_index": 4,
     "next_incomplete_id": "GC1-ANDORRA-04",
-    "last_completed_index": 5,
-    "last_completed_id": "GC1-ANDORRA-05",
+    "last_completed_index": 14,
+    "last_completed_id": "GC1-ARMENIA-01",
     "newly_identified_location_count": 0,
-    "first_complete_5_record_checkpoint": false,
-    "last_assessed_index": 7,
-    "last_assessed_id": "GC1-ANDORRA-08"
+    "first_complete_5_record_checkpoint": true,
+    "last_assessed_index": 15,
+    "last_assessed_id": "GC1-BELGIUM-02",
+    "checkpoint_count": 1,
+    "first_checkpoint_indices": [
+      1,
+      2,
+      3,
+      5,
+      14
+    ]
   },
   "saved_evidence_files": [
     "research/cruising/part5/A/P3_deep_source_recheck_0001_0005_PARTIAL_2026-11-08.json",
-    "research/cruising/part5/A/P3_deep_source_recheck_0006_0007_PARTIAL_2026-11-08.json"
+    "research/cruising/part5/A/P3_deep_source_recheck_0006_0007_PARTIAL_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0008_0015_2026-11-08.json",
+    "research/cruising/part5/A/P3_completed_batch_0001_0005_2026-11-08.json"
   ],
   "last_confirmed_commit": "956c6d4c4635f092bfb539c5bae801951a94f6bf",
-  "approach": "Continue original #8 next while #4, #6 and #7 remain flagged incomplete for original source details and dating; count only truly completed records; preserve partial evidence and batch immutability.",
+  "approach": "Resume examination at index 16. Never misclassify #4,#6–13,#15 as fully researched while source detail/spot identity remains unavailable. Seek recoveries later; preserve all partial evidence. Next immutable checkpoint after 5 more truly completed records.",
   "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write.",
-  "last_confirmed_evidence_commit": "6a727889e2ee1d35a785b28ab58828e3ef766e90"
+  "last_confirmed_evidence_commit": "607bc2cfb172c11bb4a1f38d4a0bb44f12cf6b87",
+  "latest_checkpoint_commit": "d2954753b74b45f7c768797bbe7417084494c3f8",
+  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0001_0005_2026-11-08.json"
 }
