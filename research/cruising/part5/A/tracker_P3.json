@@ -50,7 +50,22 @@
       32,
       33,
       34,
-      35
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
     ],
     "genuinely_source_assessed_complete": [
       1,
@@ -63,7 +78,11 @@
       25,
       26,
       27,
-      30
+      30,
+      43,
+      44,
+      45,
+      48
     ],
     "incomplete": [
       {
@@ -185,20 +204,75 @@
         "index": 35,
         "id": "CG8-14735",
         "reason": "Original CruisingGays detail inaccessible, no specific dune entrance or dated activity"
+      },
+      {
+        "index": 36,
+        "id": "GC1-GAP-BRUGES-05",
+        "reason": "Baronruzettelaan original exact #19888 detail inaccessible, specific street segment unknown"
+      },
+      {
+        "index": 37,
+        "id": "GC1-GAP-BRUGES-06",
+        "reason": "Lappersfortbos original #18847 detail inaccessible; 2026 public woodland event not cruising"
+      },
+      {
+        "index": 38,
+        "id": "GC1-GAP-BRUGES-07",
+        "reason": "Minnewaterpark CruisingGays and Gays-Cruising individual pages inaccessible, precise original subsection unknown"
+      },
+      {
+        "index": 39,
+        "id": "GC1-GAP-BRUGES-10",
+        "reason": "Astridpark original #107164 detail inaccessible; different from Astridlaan parkje"
+      },
+      {
+        "index": 40,
+        "id": "GC1-GAP-BRUGES-11",
+        "reason": "Fort Van Beieren original #65534 detail inaccessible, specific path unknown"
+      },
+      {
+        "index": 41,
+        "id": "GC1-GAP-BRUGES-14",
+        "reason": "Pastoor Van Haeckeplantsoen original #80282 detail inaccessible despite identified garden entrances"
+      },
+      {
+        "index": 42,
+        "id": "GC1-GAP-BRUGES-15",
+        "reason": "Natuurgebied Achterhaven source #115121 detail inaccessible, ambiguous harbour wetlands"
+      },
+      {
+        "index": 46,
+        "id": "GC1-ESTONIA-08",
+        "reason": "Pärnu Parking and forest original #102264 page inaccessible, ~6 km from beach"
+      },
+      {
+        "index": 47,
+        "id": "GC1-ESTONIA-01",
+        "reason": "Tallinn Parklas/Metsas original #99764 inaccessible, different from separate Parking spot"
+      },
+      {
+        "index": 49,
+        "id": "GC1-ESTONIA-04",
+        "reason": "Valdeku original #82678 inaccessible, exact street subsite unknown"
+      },
+      {
+        "index": 50,
+        "id": "GC1-ESTONIA-05",
+        "reason": "Tallinn Outdoor cruising exact original pin recovered but no named real-world facility/trail/entry identified; no firsthand reports"
       }
     ],
-    "completed_count": 11,
-    "remaining_not_completed": 280,
-    "unreviewed_indices_start": 36,
+    "completed_count": 15,
+    "remaining_not_completed": 276,
+    "unreviewed_indices_start": 51,
     "next_incomplete_index": 4,
     "next_incomplete_id": "GC1-ANDORRA-04",
-    "last_completed_index": 30,
-    "last_completed_id": "GC1-BELGIUM-04",
+    "last_completed_index": 48,
+    "last_completed_id": "GC1-ESTONIA-03",
     "newly_identified_location_count": 0,
     "first_complete_5_record_checkpoint": true,
-    "last_assessed_index": 35,
-    "last_assessed_id": "CG8-14735",
-    "checkpoint_count": 2,
+    "last_assessed_index": 50,
+    "last_assessed_id": "GC1-ESTONIA-05",
+    "checkpoint_count": 3,
     "first_checkpoint_indices": [
       1,
       2,
@@ -207,13 +281,13 @@
       14
     ],
     "last_completed_batch_indices": [
-      18,
-      22,
-      25,
-      26,
-      27
+      30,
+      43,
+      44,
+      45,
+      48
     ],
-    "next_complete_five_needs": 4
+    "next_complete_five_needs": 5
   },
   "saved_evidence_files": [
     "research/cruising/part5/A/P3_deep_source_recheck_0001_0005_PARTIAL_2026-11-08.json",
@@ -222,12 +296,15 @@
     "research/cruising/part5/A/P3_completed_batch_0001_0005_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0016_0025_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0026_0035_2026-11-08.json",
-    "research/cruising/part5/A/P3_completed_batch_0006_0010_2026-11-08.json"
+    "research/cruising/part5/A/P3_completed_batch_0006_0010_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0036_0045_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0046_0050_2026-11-08.json",
+    "research/cruising/part5/A/P3_completed_batch_0011_0015_2026-11-08.json"
   ],
   "last_confirmed_commit": "956c6d4c4635f092bfb539c5bae801951a94f6bf",
-  "approach": "Next unexamined index 36. Eleven substantively researched, 24 incomplete requiring recovery of original spot pages/precise subareas; 35 examined. One new completed #30 pending next immutable five-record batch; never claim an incomplete index is unidentifiable.",
+  "approach": "Resume untouched index 51, preserve 35 explicit source-specific incomplete cases for future pin/source recovery; 15 complete means evidence analyzed, not active cruising verified.",
   "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write.",
-  "last_confirmed_evidence_commit": "de30c2270e9fcab091b0b60d01e40930051635a5",
-  "latest_checkpoint_commit": "0cdfff0bb0dacc7212411808b38b0e6d7f6e9989",
-  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0006_0010_2026-11-08.json"
+  "last_confirmed_evidence_commit": "f8a3bcc9ef338d848c81467858e4bd1cbfd9204e",
+  "latest_checkpoint_commit": "5a7555825464a317b845f5c0e17a7d5e6225c508",
+  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0011_0015_2026-11-08.json"
 }
