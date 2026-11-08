@@ -200,7 +200,22 @@
       182,
       183,
       184,
-      185
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200
     ],
     "genuinely_source_assessed_complete": [
       1,
@@ -262,7 +277,12 @@
       176,
       181,
       183,
-      184
+      184,
+      187,
+      188,
+      190,
+      194,
+      199
     ],
     "incomplete": [
       {
@@ -884,20 +904,70 @@
         "index": 185,
         "id": "GC1-TURKEY-15",
         "reason": "Lara Park original #14442 readable but 2024 visitor disputes source pin versus correctly named park, location still needs independent match"
+      },
+      {
+        "index": 186,
+        "id": "GC1-TURKEY-02",
+        "reason": "City's Istanbul Mall exact mall branch and restroom unclear; Istanbul and Nişantaşı separate retail sites"
+      },
+      {
+        "index": 189,
+        "id": "GC1-TURKEY-06",
+        "reason": "Istanbul airport WC original spot not identifiable as IST or SAW, no terminal/internal restroom"
+      },
+      {
+        "index": 191,
+        "id": "GC1-UNITED-STATES-07",
+        "reason": "Clear Creek Park Denton very large, no exact original source location"
+      },
+      {
+        "index": 192,
+        "id": "GC1-UNITED-STATES-10",
+        "reason": "Desert Hot Springs Worsley Road between Indian and Dillon source description/road identity ambiguous"
+      },
+      {
+        "index": 193,
+        "id": "GC1-UNITED-STATES-01",
+        "reason": "Eunice City Lake no reliable U.S. state/city lake identity"
+      },
+      {
+        "index": 195,
+        "id": "GC1-UNITED-STATES-08",
+        "reason": "Houston Cullen Park huge park, precise source path/entrance not recovered"
+      },
+      {
+        "index": 196,
+        "id": "GC1-UNITED-STATES-02",
+        "reason": "Miami Westchester Plaza T.J. Maxx original exact store restroom/location unconfirmed"
+      },
+      {
+        "index": 197,
+        "id": "GC1-UNITED-STATES-09",
+        "reason": "Miami Normandy Isle Park original cruising area/entrance unconfirmed"
+      },
+      {
+        "index": 198,
+        "id": "GC1-UNITED-STATES-04",
+        "reason": "Miami Beach Flamingo Park original cruising subsection source evidence missing"
+      },
+      {
+        "index": 200,
+        "id": "GP4-UNITED-STATES-NEW-YORK-02",
+        "reason": "Christopher Street Pier original Gay Passport page HTTP403 and current exact evidence incomplete"
       }
     ],
-    "completed_count": 60,
-    "remaining_not_completed": 231,
-    "unreviewed_indices_start": 186,
+    "completed_count": 65,
+    "remaining_not_completed": 226,
+    "unreviewed_indices_start": 201,
     "next_incomplete_index": 4,
     "next_incomplete_id": "GC1-ANDORRA-04",
-    "last_completed_index": 184,
-    "last_completed_id": "GC1-TURKEY-12",
+    "last_completed_index": 199,
+    "last_completed_id": "GP4-UNITED-STATES-NEW-YORK-01",
     "newly_identified_location_count": 0,
     "first_complete_5_record_checkpoint": true,
-    "last_assessed_index": 185,
-    "last_assessed_id": "GC1-TURKEY-15",
-    "checkpoint_count": 12,
+    "last_assessed_index": 200,
+    "last_assessed_id": "GP4-UNITED-STATES-NEW-YORK-02",
+    "checkpoint_count": 13,
     "first_checkpoint_indices": [
       1,
       2,
@@ -906,17 +976,18 @@
       14
     ],
     "last_completed_batch_indices": [
-      175,
-      176,
-      181,
-      183,
-      184
+      187,
+      188,
+      190,
+      194,
+      199
     ],
     "next_complete_five_needs": 5,
     "excluded_original_indices": [
       182,
       201
-    ]
+    ],
+    "next_active_index": 202
   },
   "saved_evidence_files": [
     "research/cruising/part5/A/P3_deep_source_recheck_0001_0005_PARTIAL_2026-11-08.json",
@@ -962,12 +1033,16 @@
     "research/cruising/part5/A/P3_deep_source_recheck_0176_0180_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0181_0181_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0182_0185_2026-11-08.json",
-    "research/cruising/part5/A/P3_completed_batch_0056_0060_2026-11-08.json"
+    "research/cruising/part5/A/P3_completed_batch_0056_0060_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0186_0190_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0191_0195_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0196_0200_2026-11-08.json",
+    "research/cruising/part5/A/P3_completed_batch_0061_0065_2026-11-08.json"
   ],
   "last_confirmed_commit": "956c6d4c4635f092bfb539c5bae801951a94f6bf",
-  "approach": "Next untouched #186. 185 original indices assessed including excluded #182, 60 source substantiated completed among 291 active, 124 active incomplete, 12 independently recoverable five-record checkpoints. No production edits. Source map at Lara Park disputed and operator MOOD toilet now paid 15 SEK.",
+  "approach": "Next index 201 is archived excluded Jacob Riis Bay 1; do not count as active or reinclude. Continue next active #202. 200 original indices examined, 199 active, 65 substantive dossiers, 134 incomplete; 13 immutable batches. No live changes.",
   "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write.",
-  "last_confirmed_evidence_commit": "2bc402fbafcde200e4dbcf01d9da3b129937ccf3",
-  "latest_checkpoint_commit": "2cbcbaec7fc98bf771df8de612b6b0541bcca718",
-  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0056_0060_2026-11-08.json"
+  "last_confirmed_evidence_commit": "8f8045c935e3c3608881b529c023f9b76d51794c",
+  "latest_checkpoint_commit": "56d5ec95be34d0c2547b5e416960f8a4ff9ed62d",
+  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0061_0065_2026-11-08.json"
 }
