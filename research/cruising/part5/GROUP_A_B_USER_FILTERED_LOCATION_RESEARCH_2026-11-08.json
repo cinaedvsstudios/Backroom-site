@@ -144,11 +144,17 @@
     "previous_group": "E",
     "research_type": "choose_correct_identified_facility",
     "web_recheck": {
-      "checked_2026_11_08": false,
-      "finding": null,
-      "source_url": null
+      "checked_2026_11_08": true,
+      "finding": {
+        "finding": "The original source explicitly states 'Auf beiden Seiten der Autobahn' (on both sides of A9), with separate roadside WCs; the issue is finding the appropriate named Spielfeld rest stops, NOT choosing one direction. Ortnerhof Nord/Süd is near Sankt Michael (47.32° N), far north of Spielfeld, and must not be substituted.",
+        "source_url": "https://www.gays-cruising.com/en/cruising/a9_rastplatz_bei_spielfeld_leibnitz_osterreich_5116",
+        "confidence": "both_carriageways_specified_specific_Spielfeld_facilities_unresolved",
+        "next": "Identify the official A9 parking/rest-stop pair by Spielfeld near Slovenian border on BOTH carriageways. Do not geocode Ortnerhof, which is elsewhere."
+      },
+      "source_url": "https://www.gays-cruising.com/en/cruising/a9_rastplatz_bei_spielfeld_leibnitz_osterreich_5116"
     },
-    "user_action_required": false
+    "user_action_required": false,
+    "followup_research_target": "Identify the official A9 parking/rest-stop pair by Spielfeld near Slovenian border on BOTH carriageways. Do not geocode Ortnerhof, which is elsewhere."
   },
   {
     "queue_index": 322,
@@ -174,7 +180,9 @@
       "https://www.gays-cruising.com/en/cruising/phoenix_park_military_road_dublin_ireland_25514",
       "https://phoenixpark.ie/",
       "https://www.phoenixpark.ie/directions-2/",
-      "https://phoenixpark.ie/directions-2/"
+      "https://phoenixpark.ie/directions-2/",
+      "https://www.reddit.com/r/ireland/comments/y515tp",
+      "https://phoenixpark.ie/opening-hours/"
     ],
     "research_action": "disambiguate_named_alternatives",
     "already_resolved": false,
@@ -183,11 +191,18 @@
     "previous_group": "E",
     "research_type": "choose_correct_identified_facility",
     "web_recheck": {
-      "checked_2026_11_08": false,
-      "finding": null,
-      "source_url": null
+      "checked_2026_11_08": true,
+      "finding": {
+        "finding": "A 15 October 2022 firsthand Reddit report mentions a non-consensual exposure incident near the football clubhouse on Military Road, confirming this locality was associated with sexual approaches. The park operator separately names Soccer Pavilions parking on Military Road, while its strategy lists Military Road East/West and Soccer Pavilions as THREE different car parks. This supports a football-pavilion landmark but not which original directory car park. The reported incident must not be framed as consensual cruising.",
+        "source_url": "https://www.reddit.com/r/ireland/comments/y515tp",
+        "additional_source": "https://phoenixpark.ie/opening-hours/",
+        "confidence": "specific_football_clubhouse_landmark_historic_report_exact_directory_lot_unresolved",
+        "next": "Review original Gays-Cruising map and replies against the Soccer Pavilions clubhouse and separate Military Road East/West car parks, then select correct location."
+      },
+      "source_url": "https://www.reddit.com/r/ireland/comments/y515tp"
     },
-    "user_action_required": false
+    "user_action_required": false,
+    "followup_research_target": "Review original Gays-Cruising map and replies against the Soccer Pavilions clubhouse and separate Military Road East/West car parks, then select correct location."
   },
   {
     "queue_index": 428,
