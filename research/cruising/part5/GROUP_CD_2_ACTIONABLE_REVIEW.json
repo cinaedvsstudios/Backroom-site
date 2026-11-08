@@ -12,12 +12,12 @@
   "original_detail_pages_attempted_this_turn": 25,
   "original_detail_pages_readable_this_turn": 7,
   "counts": {
-    "normal_mapped": 100,
+    "normal_mapped": 101,
     "name_city_conflict": 3,
     "duplicate_exclude": 3,
     "closed_facility_exclude": 1,
     "closure_report_unconfirmed": 1,
-    "concrete_physical_hazard": 1,
+    "concrete_physical_hazard": 0,
     "source_research_incomplete": 85
   },
   "category_meanings": {
@@ -31,6 +31,19 @@
   },
   "categories": {
     "normal_mapped": [
+      {
+        "Venue_ID": "CRU-CD2-196",
+        "Name": "Poduene Railway Station",
+        "City": "Sofia",
+        "Country": "Bulgaria",
+        "Position": 196,
+        "Geo_Pin_Recorded": true,
+        "Original_Detail_Checked_In_This_Pass": false,
+        "Research_Task": "Named station geographically identified and retained for consolidation. Verify original directory site pin vs public station access, recent cruising claims and remaining sources; retain rail safety/access note as information, not an exclusion category.",
+        "Source_URLs": "https://www.gays-cruising.com/en/bulgaria, https://www.gays-cruising.com/en/cruising/poduene_railway_station_sofia_bulgaria_25863, https://svc.sofia.bg/en/web/sofia-municipality/stations, https://railwayz.info/photolines/station/25230",
+        "Duplicate_Survivor": null,
+        "Operational_Condition": null
+      },
       {
         "Venue_ID": "CRU-CD2-197",
         "Name": "Bulgaria Mall/Men's Bathrooms fl.2",
@@ -1486,21 +1499,7 @@
         }
       }
     ],
-    "concrete_physical_hazard": [
-      {
-        "Venue_ID": "CRU-CD2-196",
-        "Name": "Poduene Railway Station",
-        "City": "Sofia",
-        "Country": "Bulgaria",
-        "Position": 196,
-        "Geo_Pin_Recorded": true,
-        "Original_Detail_Checked_In_This_Pass": false,
-        "Research_Task": "Historical directions relate to active railway tracks; that is a specific physical hazard, not a generic objection to cruising.",
-        "Source_URLs": "https://www.gays-cruising.com/en/bulgaria, https://www.gays-cruising.com/en/cruising/poduene_railway_station_sofia_bulgaria_25863, https://svc.sofia.bg/en/web/sofia-municipality/stations, https://railwayz.info/photolines/station/25230",
-        "Duplicate_Survivor": null,
-        "Operational_Condition": null
-      }
-    ],
+    "concrete_physical_hazard": [],
     "source_research_incomplete": [
       {
         "Venue_ID": "CRU-CD2-200",
@@ -2724,9 +2723,9 @@
     "CRU-CD2-256"
   ],
   "working_counts_after_owner_exclusions": {
-    "normal_mapped": 100,
+    "normal_mapped": 101,
     "source_research_incomplete": 85,
-    "concrete_physical_hazard": 1
+    "concrete_physical_hazard": 0
   },
   "review_note": "2026-11-08 initial 5 substantive content reviews saved: 209 original Podoli GPS 50.0517654419,14.419169426 recovered (100 mapped); others 200/202/205/206 original details blocked and left research-incomplete (85). Five reviewed ≠ five source-complete. 86 candidates originally source-incomplete; 1 now geographically identified. No auto-publication.",
   "source_recheck_2026_11_08": {
@@ -2780,5 +2779,6 @@
       "CRU-CD2-209"
     ],
     "next_unstarted_record": "CRU-CD2-211"
-  }
+  },
+  "user_decision_2026_11_08": "CRU-CD2-196 Poduene Railway Station moved from special physical-hazard category to normal_mapped, per owner direction; original source rail safety observations remain documented as access context; publication still requires evidence checks."
 }
