@@ -4,14 +4,14 @@
   "scope": "86 candidates classified research-incomplete as of start",
   "original_backlog_count": 86,
   "working_records": 186,
-  "records_received_substantive_content_review": 60,
+  "records_received_substantive_content_review": 65,
   "records_source_review_fully_complete": 0,
   "original_direct_details_read_this_batch": 1,
   "new_geographically_identified": [
     "CRU-CD2-209"
   ],
-  "last_assessed": "CRU-CD2-322",
-  "next_unstarted": "CRU-CD2-326",
+  "last_assessed": "CRU-CD2-342",
+  "next_unstarted": "CRU-CD2-344",
   "still_pending_deep_followup": [
     "CRU-CD2-200",
     "CRU-CD2-202",
@@ -72,7 +72,12 @@
     "CRU-CD2-317",
     "CRU-CD2-318",
     "CRU-CD2-319",
-    "CRU-CD2-322"
+    "CRU-CD2-322",
+    "CRU-CD2-326",
+    "CRU-CD2-330",
+    "CRU-CD2-336",
+    "CRU-CD2-339",
+    "CRU-CD2-342"
   ],
   "completed_batches": [
     {
@@ -218,6 +223,18 @@
       ],
       "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_012_2026-11-08.json",
       "status": "5 source-content investigations; Storebaug east/west vs separate Storehaug, Rosnes rowing club, Seixal/Coina different municipalities. None exhaustive."
+    },
+    {
+      "number": 13,
+      "ids": [
+        "CRU-CD2-326",
+        "CRU-CD2-330",
+        "CRU-CD2-336",
+        "CRU-CD2-339",
+        "CRU-CD2-342"
+      ],
+      "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_013_2026-11-08.json",
+      "status": "Five substantive source investigations, Portuguese original ID20001 exact GPS and dated firsthand June2026 forest presence; all still require more source followup."
     }
   ],
   "research_rules": "A researched batch may contain partially researched candidates, but do not count source-exhaustive completion until URLs/content are substantively examined. Never label inaccessible-original candidates unidentifiable. Commit every five investigated; continue from next_unstarted and revisit pending_followup.",
@@ -229,10 +246,6 @@
   },
   "production_unchanged": true,
   "latest_substantive_findings": [
-    "CRU-CD2-299 Vitrupe Beach actually Salacgriva/Vidzeme river mouth not Riga; river-mouth coordinate is not beach cruising pin",
-    "CRU-CD2-303 Spice Style Lielirbes 29 distinct from Spice Life Jaunmoku 13; original WC remains unspecified",
-    "CRU-CD2-302 Lake Lāčplēsis not identified: hamlet map in Ogre is NOT a lake",
-    "CRU-CD2-315 Oslo municipality explicitly identifies Kongsveien Panorama or 'Utsikten' parking; independent parking GPS 59.89523,10.76120 (not original gay source), roadworks traffic lights through November",
     "CRU-CD2-306 geolocated named Rybnik Parking Lesny beside reservoir at 50.126447,18.500424 in 2024 camping source; original gay pin not recovered",
     "CRU-CD2-305 Galeria Kazimierz H&M Podgorska 34 levels 0/1 strongly matches Kazimierz WC listing but exact toilet unspecified",
     "CRU-CD2-308 Wroclaw named 80-space municipal Mickiewicza parking is distinct from <10 capacity camper site, do not substitute one for other",
@@ -241,8 +254,13 @@
     "CRU-CD2-318 Storehaug Nord separate directory marker 2.3km from Nesparken vs Storebaug 2.0km, possible alias not confirmed duplicate",
     "CRU-CD2-319 Moss Roklubb at Rosnes Jeloya Sara Petersons vei 150 club privately managed; original natural area may be nearby trail",
     "CRU-CD2-322 Coina industrial postcode is BARREIRO municipality, while alternate gay directory groups Seixal — do not conflate",
-    "CRU-CD2-316 generic Sucking area Haugesund original map inaccessible"
+    "CRU-CD2-316 generic Sucking area Haugesund original map inaccessible",
+    "CRU-CD2-326 primary Portuguese Gays original full content and directions point 41.2002258301,-8.61698246 (different from museum), June20 2026 user claims being on site; museum renovation separate",
+    "CRU-CD2-330 Limanakia B identified as specific south-Attica rocky gay nudist cove with bus stop B Limanakia, primary B page HTTP451",
+    "CRU-CD2-336 Elia-Agrari rocky headland and tiny clothing optional cove documented by 2026 first-person travel guide, visit dates not specified",
+    "CRU-CD2-339 original Braid Hills Drive Car Park 'needs check'; separate public golf carpark and former Braid Hills Drive pull-in possible",
+    "CRU-CD2-342 Battins Copse public woodland at 50.8654,-0.9805 next to Battens Way with geotagged entrance; strong spelling/location match, primary gay pin unknown"
   ],
-  "last_confirmed_batch_commit": "16421d429721ccacc18a1ad2e0b49c8e50aa51bc",
+  "last_confirmed_batch_commit": "d230fbee64ef76c734821f49403eedb8ab6de3c0",
   "handover_file": "GROUP_CD_2_CONTINUATION_HANDOVER_2026-11-08.md"
 }
