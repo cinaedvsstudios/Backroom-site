@@ -9,7 +9,7 @@
     "narrow_location_review_count": 46,
     "important_limit": "Narrow review list is a rule-based, manually curated triage from research flags, not a proof that other entries have perfect coordinates. Individual source site verification remains incomplete.",
     "updated_berlin_date": "2026-11-08",
-    "revision": "Web recheck recovered 5 Gays-Cruising original map pins and one matching Zolwereck shopping centre from 46 location cases. 6 moved into identifiable candidates. Six-coordinate list also includes disputed Lara Park point, which stays in conflicts. Two confirmed closures excluded from active import set; no live changes.",
+    "revision": "Web recheck recovered 5 Gays-Cruising original map pins and one matching Zolwereck shopping centre from 46 location cases. 6 moved into identifiable candidates. Six-coordinate list also includes disputed Lara Park point, which stays in conflicts. Two confirmed closures excluded from active import set; no live changes.; Corrected Põlva/Tartu and Pomorie/Nessebar city association in consolidation overlay; both now broad location candidates rather than unresolved conflicting identity.",
     "latest_duplicate_source_audit": "research/cruising/part5/A/duplicate_and_source_audit_2026-11-08.json",
     "review_note": "27 name/alias/possible duplicate comparison cases analyzed; source URLs and descriptions compared. Existing 21 duplicate flags were NOT 21 verified duplicates. No speculative merge is authorized. User need not adjudicate routine alias matching.",
     "source_technical_note": "21 source/link-warning flags now explained as 4 HTTP451, 10 cache misses, 3 source page unavailable, 4 archive URL/name mismatches; earlier 20 heuristic not a count of broken links.",
@@ -163,7 +163,8 @@
       "country": "Estonia",
       "reason": "Põlva town listed under Tartu and no exact spot",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "corrected_city_for_consolidation": "Põlva"
     },
     {
       "index": 59,
@@ -433,7 +434,8 @@
       "country": "Bulgaria",
       "reason": "Pomorie entire town and wrong municipality",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "corrected_city_for_consolidation": "Pomorie"
     },
     {
       "index": 232,
@@ -2667,7 +2669,7 @@
     {
       "key": "broad_but_known_area",
       "label": "Recognisable area but original claimed subarea broad",
-      "count": 16,
+      "count": 18,
       "indices": [
         6,
         8,
@@ -2675,6 +2677,7 @@
         17,
         49,
         57,
+        58,
         112,
         115,
         120,
@@ -2684,7 +2687,8 @@
         208,
         211,
         215,
-        218
+        218,
+        220
       ],
       "records": [
         {
@@ -2727,6 +2731,13 @@
           "proposal_id": "GC1-ESTONIA-15",
           "name": "Punane tn - Car Hookup Spot",
           "city": "Tallinn",
+          "country": "Estonia"
+        },
+        {
+          "index": 58,
+          "proposal_id": "GC1-ESTONIA-11",
+          "name": "Põlva",
+          "city": "Põlva",
           "country": "Estonia"
         },
         {
@@ -2797,6 +2808,13 @@
           "proposal_id": "GC1-BULGARIA-14",
           "name": "Nude Beach",
           "city": "Burgas",
+          "country": "Bulgaria"
+        },
+        {
+          "index": 220,
+          "proposal_id": "GC1-BULGARIA-15",
+          "name": "Pomorie",
+          "city": "Pomorie",
           "country": "Bulgaria"
         }
       ],
@@ -2975,34 +2993,18 @@
     {
       "key": "conflicting_place_identity",
       "label": "Conflicting city, place name or source-location match",
-      "count": 4,
+      "count": 2,
       "indices": [
-        58,
         185,
-        220,
         238
       ],
       "records": [
-        {
-          "index": 58,
-          "proposal_id": "GC1-ESTONIA-11",
-          "name": "Põlva",
-          "city": "Tartu",
-          "country": "Estonia"
-        },
         {
           "index": 185,
           "proposal_id": "GC1-TURKEY-15",
           "name": "Lara Park",
           "city": "Antalya",
           "country": "Turkey"
-        },
-        {
-          "index": 220,
-          "proposal_id": "GC1-BULGARIA-15",
-          "name": "Pomorie",
-          "city": "Nessebar",
-          "country": "Bulgaria"
         },
         {
           "index": 238,
@@ -3043,9 +3045,9 @@
   ],
   "primary_review_buckets_totals": {
     "identified_no_major_location_blocker": 251,
-    "broad_but_known_area": 16,
+    "broad_but_known_area": 18,
     "unidentified_facility_or_spot": 20,
-    "conflicting_place_identity": 4,
+    "conflicting_place_identity": 2,
     "explicit_current_closure": 2,
     "all_candidates": 293,
     "check_sum": 293,
