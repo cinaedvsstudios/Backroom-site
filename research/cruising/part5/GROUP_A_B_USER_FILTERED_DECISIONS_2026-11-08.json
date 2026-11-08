@@ -6,9 +6,9 @@
     "original": 210,
     "already_removed_confirmed_duplicates": 8,
     "removed_user_categories": 17,
-    "normal_mapped": 148,
+    "normal_mapped": 153,
     "unidentifiable_deferred": 8,
-    "location_research_open": 29,
+    "location_research_open": 24,
     "remaining_active_total": 185
   },
   "user_decisions": {
@@ -536,7 +536,8 @@
       "links": [
         "https://www.gays-cruising.com/en/turkey",
         "https://www.gays-cruising.com/en/cruising/airport_toilets_istanbul_turkije_117044"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 243,
@@ -554,7 +555,8 @@
         "https://www.gays-cruising.com/en/cruising/picnic_area_near_airport_paphos_cyprus_55627",
         "https://data.gov.cy/index.php/en/resource/689",
         "https://www.visitpafos.org.cy/off-the-beaten-track/where-to-stay/"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 281,
@@ -572,7 +574,8 @@
         "https://www.gays-cruising.com/en/cruising/spatiu_servicii_a1_inainte_de_sebes_alba_iulia_romania_51509",
         "https://distanta.eoo.ro/ro/autostrada/a1/",
         "https://restareaseurope.com/ro/romania/alba/"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 428,
@@ -595,7 +598,8 @@
         "https://www.gays-cruising.com/en/cruising/bagni_grill_bazzera_venezia_italia_29500",
         "https://zanibellato.it/progetto/commerciale/bagni-stazione-puntogrill-bazzera-nord/",
         "https://restaurantguru.it/Punto-Grill-Venice"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 468,
@@ -615,7 +619,8 @@
         "https://evstar.pl/mopy/a1/wisniowa-gora-wschod-146",
         "https://lodzka.policja.gov.pl/ld/informacje/116455%2CWymiana-turnusow-ferii-wzmozone-dzialania-na-drogach-Lodzkiego.html",
         "https://lodz.lento.pl/kierownik-budowy-stacja-orlen-mop-wisniowa%2C15204794.html"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 469,
@@ -634,7 +639,8 @@
         "https://www.gays-cruising.com/pl/wielkopolskie/polska",
         "https://www.as24.com/pl",
         "https://paliwa.pl/strona-startowa/archiwum/nowa-stacja-as-24-w-kostrzyniu?pdf=29"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 594,
@@ -650,52 +656,8 @@
       "links": [
         "https://www.gays-cruising.com/en/switzerland",
         "https://www.gays-cruising.com/en/cruising/rastplatz_waldchen_mit_tur_zu_mehr_sevelen_schweiz_97200"
-      ]
-    },
-    {
-      "queue_index": 656,
-      "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
-      "city": "Rüdersdorf bei Berlin",
-      "issue": "The A10 entry combines several separate parking areas around Erkner/Rüdersdorf.",
-      "research": "Split A10 stops by name and side (Kalkberge / Seeberg Ost / Seeberg West) and match source to one.",
-      "recheck": {
-        "checked_2026_11_08": true,
-        "finding": {
-          "finding": "Original gay-szene forum on 17 June 2026 explicitly mentions Seeberg West and route details; a separate 20 March 2026 comment mentions Kalkberge. These are different spots under one directory header.",
-          "source_url": "https://gay-szene.net/parkplaetze-a10-zwischen-erkner-und-ruedersdorf-in-berlin/11008/eintrag.html",
-          "confidence": "two_distinct_named_places_referenced",
-          "next": "Resolve Seeberg West and Kalkberge as separate named stops and keep comments assigned to their actual stop; no one location for the whole A10 corridor."
-        },
-        "source_url": "https://gay-szene.net/parkplaetze-a10-zwischen-erkner-und-ruedersdorf-in-berlin/11008/eintrag.html"
-      },
-      "links": [
-        "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
-        "https://gay-szene.net/parkplaetze-a10-zwischen-erkner-und-ruedersdorf-in-berlin/11008/eintrag.html",
-        "https://www.raststaetten.de/standorte/seeberg-west/",
-        "https://www.raststaetten.de/standorte/seeberg-ost/",
-        "https://www.autobahn-baustellen.de/rastanlage/a10-kalkberge/"
-      ]
-    },
-    {
-      "queue_index": 866,
-      "name": "Parkplatz A6 in Höhe Mannheim Sandhofen",
-      "city": "Mannheim",
-      "issue": "The source identifies A6 near Mannheim-Sandhofen but not which parking side or named rest stop.",
-      "research": "A6 Sandhofen rest area name and direction/carriageway.",
-      "recheck": {
-        "checked_2026_11_08": true,
-        "finding": {
-          "finding": "Original gay-szene directions specify the first A6 parking area after approaching via A67 from Darmstadt/Viernheimer Kreuz towards Mannheim-Sandhofen.",
-          "source_url": "https://gay-szene.net/parkplatz-a6-in-hoehe-mannheim-sandhofen-in-mannheim/7298/eintrag.html",
-          "confidence": "direction_identified_exact_rest_stop_pin_pending",
-          "next": "Map the first A6 rest area on the stated travel direction after Viernheimer Kreuz, and check actual parking name."
-        },
-        "source_url": "https://gay-szene.net/parkplatz-a6-in-hoehe-mannheim-sandhofen-in-mannheim/7298/eintrag.html"
-      },
-      "links": [
-        "https://gay-szene.net/gay-cruising-in-mannheim/174/17/rubrik.html",
-        "https://gay-szene.net/parkplatz-a6-in-hoehe-mannheim-sandhofen-in-mannheim/7298/eintrag.html"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 968,
@@ -711,7 +673,8 @@
       "links": [
         "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
         "https://7punto7radio.com/el-cabildo-iniciara-las-hobras-de-asfaltado-de-la-autovia-g-c-1-entre-hoya-de-la-plata-y-la-laja/"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 1012,
@@ -729,7 +692,8 @@
         "https://www.carrefour.es/tiendas-carrefour/hipermercados/carrefour/valles_terrassa.aspx",
         "https://www.carrefour.es/tiendas-carrefour/hipermercados/outlet/montserrat.aspx",
         "https://radarsuper.com/c/barcelona/terrassa"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 293,
@@ -752,7 +716,8 @@
         "https://www.gays-cruising.com/en/cruising/pdure_dumbravita_timisoara_timisoara_romania_67752",
         "https://hcl.usr.ro/timisoara/2026/h510",
         "https://visitromania.ro/en/attraction/dumbravita/padurea-verde"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 383,
@@ -769,7 +734,8 @@
         "https://www.gays-cruising.com/en/cruising/ponte_fiume_reno_a_borgo_panigale_bologna_italia_6009",
         "https://www.comune.bologna.it/novita/comunicati-stampa/replica-del-comune-di-bologna-sul-rilievo-anac-relativo-ai-lavori-sul-pontelungo",
         "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 401,
@@ -792,7 +758,8 @@
         "https://www.055firenze.it/art/243557/mugnone-nuove-segnalazioni-di-degrado-lungo-la-ciclabile-di-viale-redi",
         "https://mobilita.comune.fi.it/tramvia/sistema_tramviario/linea2.html",
         "https://www.nove.firenze.it/mugnone-in-corso-adeguamento-idraulico-per-la-sicurezza-del-torrente.htm"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 436,
@@ -808,7 +775,8 @@
       "links": [
         "https://www.gays-cruising.com/en/cruising/oasi_lungadige_est_verona_italia_114746",
         "https://www.gays-cruising.com/en/verona/veneto_verona/italy"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 437,
@@ -825,7 +793,8 @@
         "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
         "https://www.gays-cruising.com/en/cruising/alpo_cavalcavia_verona_italy_43481",
         "https://confartigianato.verona.it/categorie-cat/attualita/mobilita-modifiche-temporanee-alla-viabilita-sulla-tangenziale-sud-dal-5-settembre-chiuso-al-traffico-il-tratto-tra-alpo-zai-e-verona-sud-e-altre-limitazioni-nei-giorni-successivi/"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 472,
@@ -844,7 +813,8 @@
         "https://www.shell.pl/biznesowi/oferta-dla-firm-transportowych/lng-w-transporcie.html",
         "https://www.mylpg.eu/pl/stacje/polska/stacja/Shell-544AB74A-EAD0-66ED-4ABB-C5BD55E1765E",
         "https://teraz-otwarte.pl/swiecko"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 493,
@@ -862,7 +832,8 @@
         "https://www.gays-cruising.com/en/cruising/tinglevvej_aabenraa_danemark_102701",
         "https://www.gays-cruising.com/en/denmark",
         "https://aabenraa.dk/media/g1cdul3d/lokalrute-6-kliplev.pdf"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 593,
@@ -878,7 +849,8 @@
       "links": [
         "https://www.gays-cruising.com/en/switzerland",
         "https://www.gays-cruising.com/en/cruising/am_fluss_obfelden_schweiz_54302"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 609,
@@ -893,24 +865,8 @@
       },
       "links": [
         "https://www.gays-cruising.com/en/netherlands"
-      ]
-    },
-    {
-      "queue_index": 662,
-      "name": "Sandfläche im Jagen 87 des Grunewalds",
-      "city": "Berlin",
-      "issue": "The reported Jagen 87 Grunewald clearing was not mapped; a nearby Jagen 86 site would be a false match.",
-      "research": "Georeference Jagen 87 separately from protected Jagen 86, using forestry grid/trail maps.",
-      "recheck": {
-        "checked_2026_11_08": false,
-        "finding": null,
-        "source_url": null
-      },
-      "links": [
-        "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
-        "https://gay-szene.net/sandflaeche-im-jagen-87-des-grunewalds-in-berlin/12849/eintrag.html",
-        "https://www.berlin.de/forsten/walderlebnis/ausflugsziele/grunewald/"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 707,
@@ -920,39 +876,22 @@
       "research": "Search Google Maps public paths from Rather Straße/Schwarzer Weg and check latest accessible approach to back lake.",
       "recheck": {
         "checked_2026_11_08": true,
+        "source_url": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html",
         "finding": {
-          "finding": "Original gay-szene forum identifies Rather Straße and Schwarzer Weg, sports ground ESV Gremberghoven and rear quarry lake; 2026 comment confirms earlier pedestrian bridge no longer exists. Do not reuse the older bridge directions.",
-          "source_url": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html",
-          "confidence": "lake_identified_walk_route_changed",
-          "next": "Search Google Maps public paths from Rather Straße/Schwarzer Weg and check latest accessible approach to back lake."
-        },
-        "source_url": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html"
+          "source": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html",
+          "original_source_map": "50.90690,7.04420",
+          "note": "Original OSM link located but user reports in directory dispute lake/pin, and footbridge removed in March 2026; do not promote this to verified exact access before resolving corrected lake."
+        }
       },
       "links": [
         "https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html",
         "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html"
-      ]
-    },
-    {
-      "queue_index": 740,
-      "name": "Technische Universität Dortmund",
-      "city": "Dortmund",
-      "issue": "TU Dortmund is identified, but not the correct campus building, floor or restroom.",
-      "research": "Specific TU Dortmund campus building, floor and restroom from old source details.",
-      "recheck": {
-        "checked_2026_11_08": true,
-        "finding": {
-          "finding": "Gay-szene forum post of 15 Nov 2013 says university library first floor in front of copy room; 17 Apr 2018 post says toilets remodeled and stalls closed; 2026 comment asks whether site still works.",
-          "source_url": "https://gay-szene.net/technische-universitaet-dortmund-in-dortmund/9803/eintrag.html",
-          "confidence": "old_facility_identity_now_outdated",
-          "next": "Check whether same library restroom is publicly accessible and genuinely active after renovations."
-        },
-        "source_url": "https://gay-szene.net/technische-universitaet-dortmund-in-dortmund/9803/eintrag.html"
-      },
-      "links": [
-        "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
-        "https://gay-szene.net/technische-universitaet-dortmund-in-dortmund/9803/eintrag.html"
-      ]
+      ],
+      "map_conflict": {
+        "source": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html",
+        "original_source_map": "50.90690,7.04420",
+        "note": "Original OSM link located but user reports in directory dispute lake/pin, and footbridge removed in March 2026; do not promote this to verified exact access before resolving corrected lake."
+      }
     },
     {
       "queue_index": 763,
@@ -962,18 +901,13 @@
       "research": "Check that candidate point against Rhine kilometre 727 official geography and public access restrictions.",
       "recheck": {
         "checked_2026_11_08": true,
+        "source_url": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html",
         "finding": {
-          "finding": "Original gay-szene report dated 22 March 2025 gives 51.1474845,6.7980433 as alternative to an apparently inaccurate existing directory map pin; treat as reported coordinate only, not verified official Rhine km727 marker.",
-          "source_url": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html",
-          "confidence": "reported_coordinate_not_officially_confirmed",
-          "next": "Check that candidate point against Rhine kilometre 727 official geography and public access restrictions.",
-          "reference_gps": {
-            "latitude": 51.1474845,
-            "longitude": 6.7980433,
-            "meaning": "forum contributor's alternative map correction, not verified by official Rhine marker"
-          }
-        },
-        "source_url": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html"
+          "source": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html",
+          "original_source_map": "51.16506,6.80030",
+          "alternative_reported": "51.1474845,6.7980433",
+          "note": "Original OSM pin 51.16506,6.80030 disputes March 2025 forum suggested 51.1474845,6.7980433; verify Rhine kilometer and park side before promoting."
+        }
       },
       "links": [
         "https://gay-szene.net/gay-cruising-in-duesseldorf/68/17/rubrik.html",
@@ -981,31 +915,13 @@
         "https://www.duesseldorf.de/leben-in-duesseldorf/ertrinken",
         "https://www.duesseldorf.de/stadtgruen/landschaft-naturschutz/naturschutzgebiete/himmelgeister-rheinbogen",
         "https://beteiligung.nrw.de/portal/brd/beteiligung/themen/1033332"
-      ]
-    },
-    {
-      "queue_index": 896,
-      "name": "Hafenparkplatz Nürnberg Süd",
-      "city": "Nuremberg",
-      "issue": "The Nürnberg Süd harbour parking entrance and specific public parking area are not matched.",
-      "research": "Geolocate public Europakai parking, verify route under current Nürnberg-Hafen bridge works.",
-      "recheck": {
-        "checked_2026_11_08": true,
-        "finding": {
-          "finding": "Original directory gives Hafenstraße→Europakai as access. Nürnberg municipality reports major Hafenbrücken traffic configuration changes effective 21 September 2026, so older turn-by-turn directions may be obsolete.",
-          "source_url": "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html",
-          "confidence": "named_road_access_confirmed_traffic_changed_2026",
-          "next": "Geolocate public Europakai parking, verify route under current Nürnberg-Hafen bridge works.",
-          "additional_source": "https://www.nuernberg.de/presse/mitteilungen/pm_28109.html"
-        },
-        "source_url": "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html"
-      },
-      "links": [
-        "https://gay-szene.net/gay-cruising-in-nuernberg/201/17/rubrik.html",
-        "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html",
-        "https://planet-randy.com/blog/eintrag/hafenparkplatz-nuernberg/",
-        "https://www.nuernberg.de/presse/mitteilungen/pm_28109.html"
-      ]
+      ],
+      "map_conflict": {
+        "source": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html",
+        "original_source_map": "51.16506,6.80030",
+        "alternative_reported": "51.1474845,6.7980433",
+        "note": "Original OSM pin 51.16506,6.80030 disputes March 2025 forum suggested 51.1474845,6.7980433; verify Rhine kilometer and park side before promoting."
+      }
     },
     {
       "queue_index": 960,
@@ -1021,7 +937,8 @@
       "links": [
         "https://www.gays-cruising.com/en/barcelona/spain",
         "https://www.gays-cruising.com/pt/barcelona/espanha"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 993,
@@ -1047,7 +964,8 @@
         "https://www.gays-cruising.com/fr/mollet/barcelona/espagne",
         "https://www.gays-cruising.com/pt/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296",
         "https://www.alstom.com/worldwide-presence/spain"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 1049,
@@ -1065,7 +983,8 @@
         "https://www.accessable.co.uk/london-borough-of-lewisham/london-borough-of-lewisham/access-guides/waterlink-way",
         "https://www.lewishamnews.co.uk/waterlink-way-bridge-lift-opening-november/",
         "https://catfordgreen.org.uk/outdoor/"
-      ]
+      ],
+      "map_conflict": null
     },
     {
       "queue_index": 439,
@@ -1088,7 +1007,8 @@
         "https://www.gays-cruising.com/en/cruising/zona_industriale_ca_di_mazze_verona_italia_49128",
         "https://www.italiamappe.it/stradario/verona/via-ca%27-di-mazze%27/",
         "https://www.gays-cruising.com/en/cruising/palazzina_verona_italia_5902"
-      ]
+      ],
+      "map_conflict": null
     }
   ],
   "known_resolved_location_research": [
@@ -1214,6 +1134,76 @@
       "sources": [
         "https://www.autobahn-baustellen.de/rastanlage/a45-westerfilde-ost/",
         "https://www.autobahn-baustellen.de/rastanlage/a45-kirchlinde-west/"
+      ]
+    },
+    {
+      "queue_index": 662,
+      "name": "Sandfläche im Jagen 87 des Grunewalds",
+      "decision": "Original gay-szene.net listing OpenStreetMap point recovered",
+      "gps": [
+        52.4848,
+        13.2384
+      ],
+      "precision": "original directory map reference, not independently verified exact sexual meeting point",
+      "sources": [
+        "https://gay-szene.net/sandflaeche-im-jagen-87-des-grunewalds-in-berlin/12849/eintrag.html",
+        "https://www.openstreetmap.org/?mlat=52.48480&mlon=13.23840"
+      ]
+    },
+    {
+      "queue_index": 866,
+      "name": "Parkplatz A6 in Höhe Mannheim Sandhofen",
+      "decision": "Original gay-szene.net listing OpenStreetMap point recovered",
+      "gps": [
+        49.55631,
+        8.53352
+      ],
+      "precision": "original directory map reference, not independently verified exact sexual meeting point",
+      "sources": [
+        "https://gay-szene.net/parkplatz-a6-in-hoehe-mannheim-sandhofen-in-mannheim/7298/eintrag.html",
+        "https://www.openstreetmap.org/?mlat=49.55631&mlon=8.53352"
+      ]
+    },
+    {
+      "queue_index": 896,
+      "name": "Hafenparkplatz Nürnberg Süd",
+      "decision": "Original gay-szene.net listing OpenStreetMap point recovered",
+      "gps": [
+        49.40698,
+        11.07032
+      ],
+      "precision": "original directory map reference, not independently verified exact sexual meeting point",
+      "sources": [
+        "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html",
+        "https://www.openstreetmap.org/?mlat=49.40698&mlon=11.07032"
+      ]
+    },
+    {
+      "queue_index": 740,
+      "name": "Technische Universität Dortmund",
+      "decision": "Original gay-szene.net listing OpenStreetMap point recovered",
+      "gps": [
+        51.49454,
+        7.41706
+      ],
+      "precision": "original directory map reference, not independently verified exact sexual meeting point",
+      "sources": [
+        "https://gay-szene.net/technische-universitaet-dortmund-in-dortmund/9803/eintrag.html",
+        "https://www.openstreetmap.org/?mlat=51.49454&mlon=7.41706"
+      ]
+    },
+    {
+      "queue_index": 656,
+      "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
+      "decision": "Original gay-szene.net listing OpenStreetMap point recovered",
+      "gps": [
+        52.43749,
+        13.79567
+      ],
+      "precision": "original directory map reference, not independently verified exact sexual meeting point",
+      "sources": [
+        "https://gay-szene.net/parkplaetze-a10-zwischen-erkner-und-ruedersdorf-in-berlin/11008/eintrag.html",
+        "https://www.openstreetmap.org/?mlat=52.43749&mlon=13.79567"
       ]
     }
   ]
