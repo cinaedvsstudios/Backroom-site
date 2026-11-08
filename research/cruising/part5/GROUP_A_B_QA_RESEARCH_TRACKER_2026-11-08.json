@@ -4,9 +4,9 @@
   "working_source": "research/cruising/part5/GROUP_A_B_2026-11-08_RECENCY_FILTERED_PUBLICATION.json",
   "scope_note": "Review current remaining 92 of prior 96 after user excluded four previously published candidates with unresolved place identities. Excluded source records remain archived.",
   "total_retained_under_review": 92,
-  "audited": 85,
-  "remaining": 7,
-  "next_position": 86,
+  "audited": 92,
+  "remaining": 0,
+  "next_position": null,
   "ordered_first_ten": [
     175,
     221,
@@ -36,7 +36,9 @@
     "research/cruising/part5/GROUP_A_B_QA_BATCH_066_070_2026-11-08.json",
     "research/cruising/part5/GROUP_A_B_QA_BATCH_071_075_2026-11-08.json",
     "research/cruising/part5/GROUP_A_B_QA_BATCH_076_080_2026-11-08.json",
-    "research/cruising/part5/GROUP_A_B_QA_BATCH_081_085_2026-11-08.json"
+    "research/cruising/part5/GROUP_A_B_QA_BATCH_081_085_2026-11-08.json",
+    "research/cruising/part5/GROUP_A_B_QA_BATCH_086_090_2026-11-08.json",
+    "research/cruising/part5/GROUP_A_B_QA_BATCH_091_092_2026-11-08.json"
   ],
   "notable_findings": [
     "Mall of Scandinavia ICA confirmed at plan 0; description outdated",
@@ -87,5 +89,15 @@
     "index_already_reviewed_and_not_repeated": 726,
     "next_unreviewed_queue_index": 749
   },
-  "next_unreviewed_queue_index": 960
+  "next_unreviewed_queue_index": 960,
+  "status": "QA_PASS_COMPLETE_92_UNIQUE_RESEARCH_ONLY",
+  "unique_reconciliation": {
+    "date": "2026-11-08",
+    "source_retained": 92,
+    "audited_records": 92,
+    "unique_queue_indices": 92,
+    "missing": 0,
+    "unexpected": 0,
+    "duplicates": 0
+  }
 }
