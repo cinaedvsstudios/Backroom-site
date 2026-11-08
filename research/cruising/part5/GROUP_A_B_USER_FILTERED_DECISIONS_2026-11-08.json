@@ -6,9 +6,9 @@
     "original": 210,
     "already_removed_confirmed_duplicates": 8,
     "removed_user_categories": 17,
-    "normal_mapped": 142,
+    "normal_mapped": 145,
     "unidentifiable_deferred": 8,
-    "location_research_open": 35,
+    "location_research_open": 32,
     "remaining_active_total": 185
   },
   "user_decisions": {
@@ -575,42 +575,6 @@
       ]
     },
     {
-      "queue_index": 297,
-      "name": "A9 Rastplatz bei Spielfeld",
-      "city": "Leibnitz",
-      "issue": "The A9 stop near Spielfeld has neither a named rest area nor a carriageway direction.",
-      "research": "Named A9 rest area near Spielfeld and carriageway direction.",
-      "recheck": {
-        "checked_2026_11_08": false,
-        "finding": null,
-        "source_url": null
-      },
-      "links": [
-        "https://www.gays-cruising.com/en/austria",
-        "https://www.gays-cruising.com/en/cruising/a9_rastplatz_bei_spielfeld_leibnitz_osterreich_5116",
-        "https://www.pundk.at/verkehr/Generalplanung_PDF/119620_A9-Rastplatz-Ortnerhof-Sued.pdf"
-      ]
-    },
-    {
-      "queue_index": 322,
-      "name": "Phoenix Park Military Road",
-      "city": "Dublin",
-      "issue": "Several Phoenix Park car parks are on Military Road, and the source does not distinguish them.",
-      "research": "Phoenix Park Military Road East vs West vs Soccer Pavilions, using directory directions or pin.",
-      "recheck": {
-        "checked_2026_11_08": false,
-        "finding": null,
-        "source_url": null
-      },
-      "links": [
-        "https://www.gays-cruising.com/en/ireland",
-        "https://www.gays-cruising.com/en/cruising/phoenix_park_military_road_dublin_ireland_25514",
-        "https://phoenixpark.ie/",
-        "https://www.phoenixpark.ie/directions-2/",
-        "https://phoenixpark.ie/directions-2/"
-      ]
-    },
-    {
       "queue_index": 428,
       "name": "Bagni Grill Bazzera",
       "city": "Venice",
@@ -805,22 +769,6 @@
         "https://www.carrefour.es/tiendas-carrefour/hipermercados/carrefour/valles_terrassa.aspx",
         "https://www.carrefour.es/tiendas-carrefour/hipermercados/outlet/montserrat.aspx",
         "https://radarsuper.com/c/barcelona/terrassa"
-      ]
-    },
-    {
-      "queue_index": 241,
-      "name": "Parking Area near Big Greek Flag",
-      "city": "Paphos",
-      "issue": "The 'big Greek flag' viewpoint is not tied to a particular Paphos car park; 2026 posts are meeting requests.",
-      "research": "Greek flag landmark in Paphos and the specific adjacent public car park.",
-      "recheck": {
-        "checked_2026_11_08": false,
-        "finding": null,
-        "source_url": null
-      },
-      "links": [
-        "https://www.gays-cruising.com/en/cyprus",
-        "https://www.gays-cruising.com/en/cruising/parking_area_near_big_greek_flag_paphos_cyprus_83677"
       ]
     },
     {
@@ -1244,6 +1192,48 @@
         "https://www.mylpg.eu/stations/poland/station/MOL-Katowice-Murcki-81DA19AF-6103-F47A-A626-AD0CBC68891B",
         "https://silesion.pl/mzuim-rozpoczyna-naprawy-nawierzchni-prace-na-dk86-rynku-i-ul-mariackiej-w-katowicach/"
       ]
+    },
+    {
+      "queue_index": 241,
+      "name": "Parking Area near Big Greek Flag",
+      "decision": "Source-provided original Google Maps directions coordinate recovered",
+      "gps": [
+        34.8165512085,
+        32.3925437927
+      ],
+      "coordinate_precision": "Original cruising directory pin; not independent proof of site activity",
+      "source": "https://www.gays-cruising.com/en/cruising/parking_area_near_big_greek_flag_paphos_cyprus_83677"
+    },
+    {
+      "queue_index": 297,
+      "name": "A9 Rastplatz bei Spielfeld",
+      "decision": "Source-provided original Google Maps directions coordinate recovered",
+      "gps": [
+        46.7323303223,
+        15.6422567368
+      ],
+      "coordinate_precision": "Original cruising directory pin; not independent proof of site activity",
+      "source": "https://www.gays-cruising.com/en/cruising/a9_rastplatz_bei_spielfeld_leibnitz_osterreich_5116"
+    },
+    {
+      "queue_index": 322,
+      "name": "Phoenix Park Military Road",
+      "decision": "Source-provided original Google Maps directions coordinate recovered",
+      "gps": [
+        53.3481445312,
+        -6.3207435608
+      ],
+      "coordinate_precision": "Original cruising directory pin; not independent proof of site activity",
+      "source": "https://www.gays-cruising.com/en/cruising/phoenix_park_military_road_dublin_ireland_25514"
+    },
+    {
+      "queue_index": 521,
+      "decision": "Updated reference from church center to source-provided map coordinate",
+      "gps": [
+        37.9675445557,
+        23.7338600159
+      ],
+      "source": "https://www.gays-cruising.com/en/cruising/agia_fotini_athens_greece_74115"
     }
   ]
 }
