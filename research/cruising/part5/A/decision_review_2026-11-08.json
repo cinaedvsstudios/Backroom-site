@@ -21,7 +21,9 @@
     "last_cross_reference_result": "39 of 39 unclear candidates examined against publicly accessible original URLs, archived source alignment and independent geographical references; no exact-site identity confirmed, so all 39 retained for precise-location research. New clues saved for Linkeroever, Keflavik, Vilnius, and Prijedor.",
     "full_verification_pass": "research/cruising/part5/A/full_verification_252/batch_0001_0050.json",
     "full_verification_note": "First 100 original identified locations reviewed; 23 reclassified needing exact location; 152 original identified remain for same pass.",
-    "last_full_verification_batch": "research/cruising/part5/A/full_verification_252/batch_0201_0250.json"
+    "last_full_verification_batch": "research/cruising/part5/A/full_verification_252/batch_0251_0252.json",
+    "full_verification_original_252_completed": true,
+    "full_verification_coverage_limit": "All 252 original research records evaluated against available eight-site archival alignment and targeted fresh web searching; this is not full authenticated fresh querying of 8 websites per individual source. Records preserve evidence and uncertainty."
   },
   "decision_policy": {
     "recency": "Do not require a confirmed physical sexual encounter. Keep separate recent discussions, dated questions, self check-ins, firsthand accounts, older listings and negative reports; no negative conclusion from absent data.",
@@ -1179,6 +1181,16 @@
       "reason": "Review block 5: original purported cruising spot/facility cannot be uniquely identified",
       "current_simple_category": "location_details_need_checking",
       "recheck_batch": "research/cruising/part5/A/full_verification_252/batch_0201_0250.json"
+    },
+    {
+      "index": 293,
+      "proposal_id": "GC1-ROMANIA-09",
+      "name": "Pădure Dumbravita-Timisoara",
+      "city": "Timișoara",
+      "country": "Romania",
+      "reason": "No independent map point identifying exact reported forest zone beyond Dumbrăvița reference",
+      "current_simple_category": "location_details_need_checking",
+      "recheck_batch": "research/cruising/part5/A/full_verification_252/batch_0251_0252.json"
     }
   ],
   "canonical_merges": [],
@@ -1344,7 +1356,7 @@
     {
       "key": "location_identified",
       "label": "Location identified",
-      "count": 188,
+      "count": 187,
       "indices": [
         1,
         2,
@@ -1532,8 +1544,7 @@
         287,
         288,
         289,
-        292,
-        293
+        292
       ],
       "records": [
         {
@@ -2844,13 +2855,6 @@
           "name": "Parcul Central",
           "city": "Timișoara",
           "country": "Romania"
-        },
-        {
-          "index": 293,
-          "proposal_id": "GC1-ROMANIA-09",
-          "name": "Pădure Dumbravita-Timisoara",
-          "city": "Timișoara",
-          "country": "Romania"
         }
       ],
       "note": "Identity/location sufficiently identified for next verification stage. Does not imply that cruising is recently confirmed or that publication is approved."
@@ -2858,7 +2862,7 @@
     {
       "key": "location_details_need_checking",
       "label": "Location details still need checking",
-      "count": 103,
+      "count": 104,
       "indices": [
         4,
         6,
@@ -2962,7 +2966,8 @@
         282,
         286,
         290,
-        291
+        291,
+        293
       ],
       "records": [
         {
@@ -3685,17 +3690,24 @@
           "name": "Glory hole",
           "city": "Sibiu",
           "country": "Romania"
+        },
+        {
+          "index": 293,
+          "proposal_id": "GC1-ROMANIA-09",
+          "name": "Pădure Dumbravita-Timisoara",
+          "city": "Timișoara",
+          "country": "Romania"
         }
       ],
       "note": "One work queue for every candidate lacking reliable enough exact location, including vague areas, unnamed facilities and conflicting place descriptions. No automatic deletion or assumption that broad area itself is invalid."
     }
   ],
   "primary_review_buckets_totals": {
-    "location_identified": 188,
-    "location_details_need_checking": 103,
+    "location_identified": 187,
+    "location_details_need_checking": 104,
     "active_candidates": 291,
     "check_sum": 291,
-    "full_verification_original_252_completed": 250
+    "full_verification_original_252_completed": 252
   },
   "location_recheck_new_facts": {
     "48": {
