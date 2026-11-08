@@ -4,9 +4,9 @@
   "working_source": "research/cruising/part5/GROUP_A_B_2026-11-08_RECENCY_FILTERED_PUBLICATION.json",
   "scope_note": "Review current remaining 92 of prior 96 after user excluded four previously published candidates with unresolved place identities. Excluded source records remain archived.",
   "total_retained_under_review": 92,
-  "audited": 60,
-  "remaining": 32,
-  "next_position": 61,
+  "audited": 65,
+  "remaining": 27,
+  "next_position": 66,
   "ordered_first_ten": [
     175,
     221,
@@ -31,7 +31,8 @@
     "research/cruising/part5/GROUP_A_B_QA_BATCH_041_045_2026-11-08.json",
     "research/cruising/part5/GROUP_A_B_QA_BATCH_046_050_2026-11-08.json",
     "research/cruising/part5/GROUP_A_B_QA_BATCH_051_055_2026-11-08.json",
-    "research/cruising/part5/GROUP_A_B_QA_BATCH_056_060_2026-11-08.json"
+    "research/cruising/part5/GROUP_A_B_QA_BATCH_056_060_2026-11-08.json",
+    "research/cruising/part5/GROUP_A_B_QA_BATCH_061_065_2026-11-08.json"
   ],
   "notable_findings": [
     "Mall of Scandinavia ICA confirmed at plan 0; description outdated",
@@ -60,9 +61,19 @@
     "Neeltje Jans: Jul 26 2026 beach visitor reports men around restricted dunes; no sexual activity independently confirmed.",
     "Bremen Uni-See: 2026 autumn north-shore works, life-threatening unconsolidated sand warning, fences",
     "Lustheide A4: rest stop GPS and operation separately corroborated from road data, ongoing overnight works Nov 2026",
-    "Volkspark Prenzlauer Berg Judith-Auer-Straße: July11 2026 recent firsthand success account"
+    "Volkspark Prenzlauer Berg Judith-Auer-Straße: July11 2026 recent firsthand success account",
+    "Bologna The Space Cinema queue index 381 was skipped previously; now audited with primary operator",
+    "TU Dortmund Emil-Figge-Str 50 current gender-neutral toilets are NOT evidence of historic source cruising toilet",
+    "P+R Eichlinghofen Oct 13 2026 recent anonymous positive comment"
   ],
   "activity_evidence_warning": "A recent forum post does not establish a physical encounter; anonymous eyewitness accounts remain uncorroborated.",
   "publishing_policy": "No production site files or generated venue page changes without a separate explicit user instruction.",
-  "production_modified": false
+  "production_modified": false,
+  "audit_position_reconciliation": {
+    "date": "2026-11-08",
+    "description": "Reviewed all 12 previous batch files against 96 source candidates excluding four previously published owner-rejected records. Found raw queue 381 Parcheggio Cinema The Space was skipped, while index 726 Lustheide was reviewed at prior checkpoint 60 although its retained source position is 61. Completed a catch-up review of 381 in batch 61-65; every one of the 65 unique reviewed IDs has been reconciled. From next batch resume at source index 749.",
+    "source_candidate_skipped_then_recovered": 381,
+    "index_already_reviewed_and_not_repeated": 726,
+    "next_unreviewed_queue_index": 749
+  }
 }
