@@ -4,14 +4,14 @@
   "scope": "86 candidates classified research-incomplete as of start",
   "original_backlog_count": 86,
   "working_records": 186,
-  "records_received_substantive_content_review": 35,
+  "records_received_substantive_content_review": 40,
   "records_source_review_fully_complete": 0,
   "original_direct_details_read_this_batch": 1,
   "new_geographically_identified": [
     "CRU-CD2-209"
   ],
-  "last_assessed": "CRU-CD2-271",
-  "next_unstarted": "CRU-CD2-274",
+  "last_assessed": "CRU-CD2-281",
+  "next_unstarted": "CRU-CD2-282",
   "still_pending_deep_followup": [
     "CRU-CD2-200",
     "CRU-CD2-202",
@@ -47,7 +47,12 @@
     "CRU-CD2-266",
     "CRU-CD2-267",
     "CRU-CD2-269",
-    "CRU-CD2-271"
+    "CRU-CD2-271",
+    "CRU-CD2-274",
+    "CRU-CD2-275",
+    "CRU-CD2-278",
+    "CRU-CD2-280",
+    "CRU-CD2-281"
   ],
   "completed_batches": [
     {
@@ -133,6 +138,18 @@
       ],
       "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_007_2026-11-08.json",
       "status": "Five source-content investigations, original listed maps inaccessible; meaningful new Pohto/Villa Clara changes, still none source-exhaustive"
+    },
+    {
+      "number": 8,
+      "ids": [
+        "CRU-CD2-274",
+        "CRU-CD2-275",
+        "CRU-CD2-278",
+        "CRU-CD2-280",
+        "CRU-CD2-281"
+      ],
+      "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_008_2026-11-08.json",
+      "status": "5 substantive content investigations. Lago di Peretola geographic lake established; 2018 Lacchiarella historical mention found. None source-exhaustive (blocked primary details)."
     }
   ],
   "research_rules": "A researched batch may contain partially researched candidates, but do not count source-exhaustive completion until URLs/content are substantively examined. Never label inaccessible-original candidates unidentifiable. Commit every five investigated; continue from next_unstarted and revisit pending_followup.",
@@ -147,6 +164,11 @@
     "CRU-CD2-265 POHTO former 2021 Vellamontie 12 buildings confirmed demolished by City Oulu and redevelopment 2026",
     "CRU-CD2-271 original site 2011 description beside Villa Clara verified Via Zanardi 449 and explicitly no exact pin in source",
     "CRU-CD2-267 14 historical Siwa branches in Vaasa, chain ended 2017, no single shop identified",
-    "CRU-CD2-266 Sandviken in Raasepori not Vaasa; do not conflate"
-  ]
+    "CRU-CD2-266 Sandviken in Raasepori not Vaasa; do not conflate",
+    "CRU-CD2-280 original 'lake unidentified' assertion overturned: identifiable protected Lago di Peretola at Sesto Fiorentino with 2025-12-31 main-gate closure report",
+    "CRU-CD2-281 2018 newspaper explicitly named Boschetto di Lacchiarella for outdoor encounters; same as Villamaggiore not proven",
+    "CRU-CD2-278 source says Jack Danner is 0.2 km from separate Pineta Punta Sabbioni ID, do not merge"
+  ],
+  "last_confirmed_batch_commit": "75d9d6854a452a5068149f4a9daec1f1fc8afa0e",
+  "handover_file": "GROUP_CD_2_CONTINUATION_HANDOVER_2026-11-08.md"
 }
