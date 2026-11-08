@@ -1,0 +1,253 @@
+{
+  "_meta": {
+    "title": "A+B cruising QA — fifth five unique records after 60; earlier skipped raw queue index 381 repaired",
+    "date_berlin": "2026-11-08",
+    "review_batch": "61–65 (unique record count)",
+    "audit_records": [
+      381,
+      732,
+      733,
+      740,
+      741
+    ],
+    "original_filtered_positions": [
+      33,
+      62,
+      63,
+      64,
+      65
+    ],
+    "reviewed_before": 60,
+    "reviewed_after": 65,
+    "remaining": 27,
+    "research_only": true,
+    "production_files_modified": false,
+    "working_selection": "research/cruising/part5/GROUP_A_B_2026-11-08_RECENCY_FILTERED_PUBLICATION.json",
+    "note": "Prior 60-record checkpoint skipped candidate 381, and used 726 as its 60th research record despite 726 being filtered source position 61. We independently reconciled all archived batches and the 92 retained source candidates. Each new unique candidate is counted once. No published site changes. Source claims versus official physical facility facts are separate."
+  },
+  "records": [
+    {
+      "audit_position": 61,
+      "source_position": 33,
+      "queue_index": 381,
+      "venue_id": "CRU-AB-0381",
+      "name": "Parcheggio Cinema The Space",
+      "city": "Bologna",
+      "country": "Italy",
+      "disposition": "Retain as recent discussion only",
+      "identity": "Cinema The Space, Viale Europa 5, Bologna 40128; building and free visitor parking explicitly confirmed by current cinema operator. Stored general site coordinates 44.51133,11.37258; specific alleged parking row is not documented.",
+      "recent_evidence": [
+        {
+          "date": "2026-05-25",
+          "type": "online_meetup_question_only"
+        },
+        {
+          "date": "2026-05-26",
+          "type": "online_question_whether_carpark_active_and_future_meetup"
+        }
+      ],
+      "source_details": "Older individual directory listing cache unavailable; city index has dated posts; primary operator lists no fixed cinema access hour beyond opening before first screening.",
+      "access": "Free customer cinema parking is not permission for on-site sexual use or all-night public access. No specific parking-space map.",
+      "duplicates": "No indication same physical site as other Bologna venues (Montagnola, Pontelungo) in this research selection.",
+      "corrections": [
+        "Earlier audit queue had mistakenly omitted this retained candidate; now completed.",
+        "No independently documented recent physical cruising; statements about busy times not supported.",
+        "Cinema parking capacity/availability cannot be derived from theatre screening hours."
+      ],
+      "source_urls": [
+        "https://www.thespacecinema.it/cinema/bologna/al-cinema",
+        "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+        "https://www.gays-cruising.com/en/cruising/parcheggio_cinema_the_space_bologna_italia_75190"
+      ],
+      "external_web_evidence": [
+        "turn431475search0"
+      ],
+      "archived_source": "research/cruising/part5/B/batch_0379_0383.json"
+    },
+    {
+      "audit_position": 62,
+      "source_position": 62,
+      "queue_index": 732,
+      "venue_id": "CRU-AB-0732",
+      "name": "P & R Eichlinghofen",
+      "city": "Dortmund",
+      "country": "Germany",
+      "disposition": "Retain with 2026 firsthand success claim and parking location uncertainty",
+      "identity": "Park-and-ride/roadside lot by Universitätsstraße in Dortmund Eichlinghofen; original source names street and neighborhood and existing stored 51.4803,7.39292 is broad parking vicinity only, not independently verified correct row or bush. No municipal current named exact parking-lot record verified in this pass.",
+      "recent_evidence": [
+        {
+          "date": "2026-10-13",
+          "type": "anonymous_firstperson_success_claim",
+          "details": "Original forum commenter says 'Hat mich noch nie enttäuscht!' ('Never disappointed me!'), suggesting firsthand historical success but not giving an encounter date or current-day physical confirmation."
+        },
+        {
+          "date": "2026-07-22",
+          "type": "anonymous_activity_report",
+          "details": "User reports site still busy, older/mixed-age, unspecific counts."
+        }
+      ],
+      "access": "Transport parking near transit/university; public/managed parking regulations apply. Do not infer sex permission or nighttime privacy from forum reports.",
+      "duplicates": "Not interchangeable with A45 Westerfilde/Kirchlinde roadside rest stops; older original discussion explicitly compares them as separate sites.",
+      "corrections": [
+        "MATERIAL newer 13 Oct 2026 source comment was missing in prior published description and dated audit; keep as anonymous retrospective positive report, not exact confirmed 2026 encounter.",
+        "Exact claimed rear parking row still not independently pinned.",
+        "No reliable general crowd timetable."
+      ],
+      "source_urls": [
+        "https://gay-szene.net/p-und-r-eichlinghofen-in-dortmund/10628/eintrag.html",
+        "https://www.tu-dortmund.de/",
+        "https://rim.raumplanung.tu-dortmund.de/anfahrt/"
+      ],
+      "external_web_evidence": [
+        "turn413126search0",
+        "turn413126search5"
+      ],
+      "archived_source": "research/cruising/part5/C/batch_0732_0736.json"
+    },
+    {
+      "audit_position": 63,
+      "source_position": 63,
+      "queue_index": 733,
+      "venue_id": "CRU-AB-0733",
+      "name": "A45 Westerfilde / Kirchlinde (both directions)",
+      "city": "Dortmund",
+      "country": "Germany",
+      "disposition": "Retain but map BOTH stop directions distinctly",
+      "identity": "Westerfilde (Ost, toward Dortmund) 51.536992,7.369944; Kirchlinde (West, toward Aschaffenburg) 51.536357,7.368555. Stored coordinates pin Westerfilde only; Kirchlinde is a distinct vehicle entrance. Autobahn-data guides confirm separated named stops with different capacities.",
+      "recent_evidence": [
+        {
+          "date": "2026-06-06",
+          "type": "anonymous_report_increased_visits_in_area",
+          "details": "Forum suggests some former Lusebrink traffic shifted to these stops, unverified and no count."
+        },
+        {
+          "date": "2026-06-25",
+          "type": "question_about_separate_lusebrink_closure_only"
+        }
+      ],
+      "access": "Current third-party traffic status lists both stops as 'eingeschränkt' (restricted) with restrooms; these status fields vary and do not prove full closure or cruising. Enter from signed A45 direction and do not cross motorway.",
+      "duplicates": "Two independently named motorway sides are one historical source entry but not a single shared driving pin; keep site-specific access separately identifiable. Lusebrink is another site and should not be merged just because source users report moving.",
+      "corrections": [
+        "Clarify that 51.536992,7.369944 applies only to Westerfilde; include separate Kirchlinde coordinates in research metadata.",
+        "2026 forum claim about growth is an anecdote, not witnessed multiple confirmed encounters.",
+        "Traffic restrictions can change; no permanently closed assertion."
+      ],
+      "source_urls": [
+        "https://gay-szene.net/parkplatz-a45-dortmund-westerfilde-beidseitig-in-dortmund/1542/eintrag.html",
+        "https://www.autobahn-baustellen.de/rastanlage/a45-westerfilde-ost/",
+        "https://www.autobahn-baustellen.de/rastanlage/a45-kirchlinde-west/",
+        "https://rastplatz.app/parkplatz/westerfilde-a45",
+        "https://rastplatz.app/parkplatz/kirchlinde-a45"
+      ],
+      "external_web_evidence": [
+        "turn413126search1",
+        "turn413126search2",
+        "turn413126search8",
+        "turn413126search3"
+      ],
+      "archived_source": "research/cruising/part5/C/batch_0732_0736.json"
+    },
+    {
+      "audit_position": 64,
+      "source_position": 64,
+      "queue_index": 740,
+      "venue_id": "CRU-AB-0740",
+      "name": "Technische Universität Dortmund",
+      "city": "Dortmund",
+      "country": "Germany",
+      "disposition": "Retain only as recent question and historical changed conditions; highly uncertain ongoing use",
+      "identity": "Original gay-szene entry refers to some WC in Emil-Figge-Straße 50, but 2013/2018 comments conflict on floor and renovations, so actual source WC is not established. University current *gender-neutral public toilet directory* lists a DIFFERENT facility on fourth floor between D/E and a ground floor AStA WC. These current facilities cannot be assumed to be the old cruising spot, or described as cruising places. Stored coords 51.49454,7.41706 generic building point.",
+      "recent_evidence": [
+        {
+          "date": "2026-01-05",
+          "type": "question_only_whether_cruising_still_exists"
+        },
+        {
+          "date": "2018-04-17",
+          "type": "historical_renovation_negative",
+          "details": "Old claimed cubicle feature removed in renovation."
+        }
+      ],
+      "access": "Uni Emil-Figge-Straße 50 is active campus venue. Official Oct 27 2026 municipal notice scheduled street full-closure for 5–6 Nov only; no evidence it persists Nov 8. Tender for 2027–29 staged EF50 renovation is future work, NOT current building closure. University access hours vary; official student workspace hours Mon–Fri 06:30–21:30, Sat/Sun 08:30–16:00, not restroom hours or sex permit.",
+      "duplicates": "Cannot join historic first-floor/wing D-E WC to new gender-neutral toilets solely by common location. Do not publish current accessible gender-neutral WC details as substitute cruising directions.",
+      "corrections": [
+        "Important: currently operating university toilet directory does NOT verify old cruising WC and cannot be used to support sexual-activity location.",
+        "Avoid falsely claiming 5–6 Nov road closure on 8 Nov without fresh verification.",
+        "No current positive firsthand cruising evidence."
+      ],
+      "source_urls": [
+        "https://gay-szene.net/technische-universitaet-dortmund-in-dortmund/9803/eintrag.html",
+        "https://stabsstelle-cfv.tu-dortmund.de/vielfalt/lsbttiaq/toiletten/",
+        "https://www.tu-dortmund.de/studierende/im-studium/lernorte/",
+        "https://www.dortmund.de/newsroom/presse-mitteilungen/das-tiefbauamt-saniert-die-emil-figge-strasse-in-hoehe-hausnummer-50.html"
+      ],
+      "external_web_evidence": [
+        "turn431475search1",
+        "turn431475search3",
+        "turn431475search5",
+        "turn431475search8"
+      ],
+      "archived_source": "research/cruising/part5/C/batch_0737_0741.json"
+    },
+    {
+      "audit_position": 65,
+      "source_position": 65,
+      "queue_index": 741,
+      "venue_id": "CRU-AB-0741",
+      "name": "Formsandgrube Steinbach",
+      "city": "Moritzburg",
+      "country": "Germany",
+      "disposition": "Retain with multiple 2026 firsthand (positive and negative) reports",
+      "identity": "Formsandgrube/Neuer Anbau lake by Auer–Steinbach, Moritzburg (not Dresden municipality). Existing coords 51.184681,13.615133 are mapped general pond point. Original reports reference an S81 roadside pull-in, but exact lawful vehicle entrance and lake perimeter are unverified.",
+      "recent_evidence": [
+        {
+          "date": "2026-06-22",
+          "type": "anonymous_firstperson_visitor_says_busy_parking"
+        },
+        {
+          "date": "2026-06-18",
+          "type": "anonymous_firstperson_negative_visit"
+        },
+        {
+          "date": "2026-06-09",
+          "type": "anonymous_firstperson_success_claim"
+        },
+        {
+          "date": "2026-04-17",
+          "type": "anonymous_observation_of_attendance"
+        },
+        {
+          "date": "2026-08-05",
+          "type": "online_meetup_question_only"
+        }
+      ],
+      "access": "Wooded former sand quarry/pond with potential fence/private/environmental limits; no verified public parking, swimmer water quality or permission for sexual activity. Don't infer original old fence gap or wooded trail remains lawful in 2026.",
+      "duplicates": "Steinbach / Auer / Neuer Anbau names are geographic aliases for nearby quarry; do not imply unrelated Dresden quarry sites are the same without map match.",
+      "corrections": [
+        "Current description correctly preserves opposing June 2026 visitor reports.",
+        "Source supplies a general woodland sandpit location but NOT a verified roadside pull-in.",
+        "New current official lake rules not established in current sources, so do not assert swimming permission."
+      ],
+      "source_urls": [
+        "https://gay-szene.net/formsandgrube-steinbach-in-dresden/8384/eintrag.html",
+        "https://gay-szene.net/gay-cruising-in-dresden/65/17/rubrik.html",
+        "https://www.yumpu.com/de/document/view/1751028/gewasserverzeichnis-2012-anglerverband-sudsachsen-mulde-elster/50"
+      ],
+      "archived_source": "research/cruising/part5/C/batch_0737_0741.json"
+    }
+  ],
+  "summary": {
+    "new_unique_reviewed": 5,
+    "total_unique_reviewed": 65,
+    "remaining_unique": 27,
+    "next_unreviewed_queue_index": 749,
+    "prior_skip_repaired_index": 381,
+    "production_changes": 0,
+    "high_priority": [
+      "Oct 2026 P+R Eichlinghofen user report absent from previous writeup",
+      "University gender-neutral WCs cannot be assumed historic cruising WCs",
+      "A45 both directions have distinct roadway access",
+      "Original candidate 381 (The Space Cinema) skipped earlier, now checked"
+    ]
+  }
+}
