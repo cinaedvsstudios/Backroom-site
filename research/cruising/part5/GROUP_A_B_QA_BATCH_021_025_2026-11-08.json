@@ -1,0 +1,204 @@
+{
+  "_meta": {
+    "title": "A+B retained cruising area QA positions 21–25",
+    "date_berlin": "2026-11-08",
+    "scope": 92,
+    "original_dataset": "research/cruising/part5/GROUP_A_B_2026-11-08_RECENCY_FILTERED_PUBLICATION.json",
+    "research_only": true,
+    "live_changes": false,
+    "evidence_rule": "Differentiates actual park/beach existence, anonymous posted plans, on-site reports, and map pin. 8-source cross-ref is incomplete for paywall/login pages, and no current unverified crowd claims are inferred."
+  },
+  "records": [
+    {
+      "position": 21,
+      "queue_index": 314,
+      "venue_id": "CRU-AB-0314",
+      "name": "Lobau",
+      "city": "Vienna",
+      "country": "Austria",
+      "decision": "retain_named_large_floodplain_only",
+      "identity": "Named Lobau landscape in Donau-Auen National Park Vienna. City of Vienna confirms visitor center at Dechantweg 8, with bus 92B access; that address is ONLY a public orienting visitor centre and must not be treated as source's cruising location. The saved 48.19411,16.46869 requires coordinate-to-reference reconciliation and must not be presented as exact source meeting pin.",
+      "dated_activity": [
+        {
+          "date": "2026-04-17",
+          "type": "platform_checkin",
+          "detail": "Austrian country-index original shows a user check-in, not independently verifiable physical attendance or cruising."
+        }
+      ],
+      "access": "Official national park with marked hiking/cycling paths, protected areas and designated bathing waters. Dechantlacke is a separate officially identified natural bathing area; source one-word 'Lobau' does not prove equivalence.",
+      "duplicate": "Toter Grund is nearby and independently named by source; neither automatic duplicate nor proven same place; original Toter Grund page lists Lobau 0.5km apart.",
+      "fixes": [
+        "Current description correctly qualifies park office as orientation only",
+        "Check that coordinates are not actually pinned to Toter Grund or a different part of Lobau before future data revision",
+        "Do not imply Nationalparkhaus opening hours govern national park"
+      ],
+      "source_urls": [
+        "https://www.gays-cruising.com/en/austria",
+        "https://www.gays-cruising.com/en/cruising/lobau_wien_osterreich_62934",
+        "https://www.wien.gv.at/freizeit/nationalparkhaus-wienlobau",
+        "https://www.wien.gv.at/umwelt/nationalpark-donau-auen"
+      ]
+    },
+    {
+      "position": 22,
+      "queue_index": 315,
+      "venue_id": "CRU-AB-0315",
+      "name": "Donauinsel, Toter Grund",
+      "city": "Vienna",
+      "country": "Austria",
+      "decision": "retain_named_FKK_area_recent_forum_discussion_only",
+      "identity": "Toter Grund southern Danube Island/Austria Vienna; general area separately named from Lobau. Saved 48.18472,16.47333 plausible broad geographic point. City of Vienna explicitly defines southern FKK bathing stretch on Donauinsel/high-water embankment kilometres 2.1–5.1; historic source does not identify precise present sexual subarea.",
+      "dated_activity": [
+        {
+          "date": "2026-06-26",
+          "type": "announced_intended_presence",
+          "detail": "Poster says he will be there from 14:00; does not confirm encounter."
+        },
+        {
+          "date": "2026-06-20",
+          "type": "meeting_question_only"
+        },
+        {
+          "date": "2026-06-11",
+          "type": "truck-meeting_offer_only"
+        },
+        {
+          "date": "2026-06-01",
+          "type": "next_day_offer_only"
+        }
+      ],
+      "access": "Official FKK areas are public marked bathing zones and include toilets, water supply; clothing optional doesn't mean sexual conduct authorised. River/open water and nature-protection rules apply.",
+      "duplicate": "Nearby Lobau source listing 0.5 km away per original directory; retain separate as independently named site without proving duplicate.",
+      "fixes": [
+        "Old source says heavily frequented in summer; this is an undated historical description, not established 2026 popularity",
+        "Don't treat planned meetups as real-world completed events"
+      ],
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/donauinsel_toter_grund_wien_austria_1909",
+        "https://www.wien.gv.at/freizeit/fkk-donauinsel",
+        "https://www.gays-cruising.com/en/austria"
+      ]
+    },
+    {
+      "position": 23,
+      "queue_index": 319,
+      "venue_id": "CRU-AB-0319",
+      "name": "Figurteich",
+      "city": "Wiener Neudorf",
+      "country": "Austria",
+      "decision": "retain_recent_comment_checkin_only",
+      "identity": "Figurteich/Figurenteich (Brown-Boveri-Teich) is an independent 3.8-hectare pond between Südbahn and B17 near Wiener Neudorf/Guntramsdorf, per local fishing club. Saved 48.07156,16.30808 is a plausible pond area point, compared with OSM pond center 48.07097,16.30898 and naturist guide 48.07156,16.30808. It is NOT Windradlteich in Guntramsdorf.",
+      "dated_activity": [
+        {
+          "date": "2026-04-17",
+          "type": "same_day_online_meetup_question_only"
+        },
+        {
+          "date": "2026-04-17",
+          "type": "platform_checkin_only"
+        }
+      ],
+      "access": "Independent naturist guide describes unofficial free-clothing/nude bathing at Figurteich, no managed food/WC facilities. Local fishing club explicitly calls the pond a protected natural pond. No permission or exact cruising corner verified.",
+      "duplicate": "Don't confuse Figurenteich with nearby Guntramsdorf Windradlteich, which has different official municipal entry fees.",
+      "fixes": [
+        "Record both known names (Figurteich/Figurenteich, Brown-Boveri-Teich) for search",
+        "No recent eyewitness gay sex claims; naturist swimming ≠ cruising"
+      ],
+      "source_urls": [
+        "https://www.gays-cruising.com/en/austria",
+        "https://www.gays-cruising.com/en/cruising/figurteich_wiener_neudorf_austria_3707",
+        "https://www.stadtgui.de/nacktbaden/europa/oesterreich/niederoesterreich/guntramsdorf_figurenteich.php",
+        "https://www.fischervereinguntramsdorf.at/kopie-von-wt",
+        "https://mapcarta.com/W12151400",
+        "https://www.guntramsdorf.at/en/events-culture-leisure/leisure-time/bathing-ponds/"
+      ]
+    },
+    {
+      "position": 24,
+      "queue_index": 321,
+      "venue_id": "CRU-AB-0321",
+      "name": "Seapoint Beach",
+      "city": "Dublin",
+      "country": "Ireland",
+      "decision": "retain_recent_questions_only",
+      "identity": "Actual Seapoint Beach is County Dublin beside DART and Martello Tower, clearly NOT South Africa despite the original spot page's erroneous 'Western Cape-Sudáfrica' wording. Visit Dublin confirms public beach, high tide swimming and Martello Tower at NORTH end. Saved 53.297846,-6.159859 is general public beach/tower-area point.",
+      "dated_activity": [
+        {
+          "date": "2026-06-18",
+          "type": "possible_daytime_visit_question_only"
+        },
+        {
+          "date": "2026-06-03",
+          "type": "anyone_tonight_question"
+        },
+        {
+          "date": "2026-05-31",
+          "type": "anyone_tonight_question"
+        },
+        {
+          "date": "2026-05-20",
+          "type": "contact_offer_only"
+        },
+        {
+          "date": "2025-12-11",
+          "type": "evening_meeting_question_only"
+        }
+      ],
+      "access": "Popular family swim beach with toilets/showers, summer lifeguards; rocky shore and high tides matter. Historic source references bridge over DART and tower, not verified present cruising zone.",
+      "duplicate": "No evidence of exact duplicate with a distinct named DART bridge in this group. Maintain original name in evidence but corrected public place Dublin.",
+      "fixes": [
+        "Improve original-source historical landmark: around railway bridge or Martello Tower, not claim that source only points to general beach",
+        "Do not use old claimed 'best 11–12' as verified 2026 hours",
+        "No confirmed firsthand activity in the visible 2026 comments"
+      ],
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/seapoint_western_cape_sudafrica_dublin_irlanda_3523",
+        "https://www.visitdublin.com/seapoint",
+        "https://www.gays-cruising.com/en/ireland"
+      ]
+    },
+    {
+      "position": 25,
+      "queue_index": 322,
+      "venue_id": "CRU-AB-0322",
+      "name": "Phoenix Park Military Road",
+      "city": "Dublin",
+      "country": "Ireland",
+      "decision": "retain_directory_interest_but_recent_activity_unconfirmed",
+      "identity": "Phoenix Park Dublin road named Military Road, saved Gays-Cruising Google driving point 53.3481445312,-6.3207435608. Original describes carpark but does not identify exact carpark. Phoenix Park operator names 'Soccer Pavilions on Military Road' car park at opening 08:30, though original directory cannot conclusively be tied to that lot.",
+      "dated_activity": [
+        {
+          "date": "2026",
+          "type": "directory_account_or_checkin_signal_unverified",
+          "detail": "Current directory displays cumulative check-ins and last-month aggregate, but visible details/comments restricted to logged-in adults; neither dates nor eyewitness activity independently retrievable."
+        }
+      ],
+      "access": "Phoenix Park open 24 hours, main Castleknock/Parkgate gates 24 hours, side gates approximately 07:00–22:45. Most car parks close one hour before dusk, including Soccer Pavilions on Military Road; Upper Glen Road and Knockmaroon 24h. Operator also warns of car break-ins. Do NOT say all Military Road parking available at night.",
+      "duplicate": "Directory shows other Phoenix Park in night 1.4km away; no proof of same individual carpark. Avoid merge without GPS/source evidence.",
+      "fixes": [
+        "Existing 2026 discussion claim in listing not independently retrievable from public full original detail; needs source evidence citation before treating dated post as confirmed",
+        "A directory aggregate check-in counter is not real world visit verification",
+        "Keep exact carpark unconfirmed, not just road"
+      ],
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/phoenix_park_military_road_dublin_ireland_25514",
+        "https://phoenixpark.ie/directions-2/",
+        "https://www.phoenixpark.ie/opening-hours/",
+        "https://phoenixpark.ie/"
+      ]
+    }
+  ],
+  "summary": {
+    "completed_in_batch": 5,
+    "cumulative_completed": 25,
+    "total": 92,
+    "remaining": 67,
+    "next_position": 26,
+    "live_changes": 0,
+    "priority_review": [
+      "Lobau coordinate versus visitor center/nearby Toter Grund",
+      "Phoenix Park original 2026 discussion claim currently inaccessible from public source",
+      "Seapoint historic source description includes DART bridge and Martello tower; can improve copy attribution"
+    ]
+  }
+}
