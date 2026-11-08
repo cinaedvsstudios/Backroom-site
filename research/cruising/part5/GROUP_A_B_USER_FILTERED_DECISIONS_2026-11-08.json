@@ -6,9 +6,9 @@
     "original": 210,
     "already_removed_confirmed_duplicates": 8,
     "removed_user_categories": 17,
-    "normal_mapped": 139,
+    "normal_mapped": 140,
     "unidentifiable_deferred": 8,
-    "location_research_open": 38,
+    "location_research_open": 37,
     "remaining_active_total": 185
   },
   "user_decisions": {
@@ -794,14 +794,15 @@
       "name": "Parkplatz an der B 471",
       "city": "Munich",
       "issue": "B471 between Garching and Ismaning includes multiple car parks/bridge approaches.",
-      "research": "Exact B471 car park between Garching and Ismaning; side and access road.",
+      "research": "Map pull-in immediately east of Heckerbrücke on B471 towards Ismaning, not the separate bridge over Mittlerer Isarkanal.",
       "recheck": {
         "checked_2026_11_08": true,
         "finding": {
-          "finding": "Original gay-szene page explicitly says B471 from Garching towards Ismaning, immediately after Isar bridge turn left; from Ismaning turn right before bridge. 8 June 2026 message describes men walking to the woodland.",
+          "finding": "Original directory specifies B471 Isar bridge west/east approach; road authority identifies historic Heckerbrücke on B471 between Garching and Ismaning, a confirmed named bridge landmark.",
           "source_url": "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
-          "confidence": "direction_and_approach_verified_pin_pending",
-          "next": "Map the Isar bridge on B471 and the public roadside pull-in on the Ismaning side, not any random B471 parking lot."
+          "confidence": "bridge_identified_as_Heckerbruecke_parkland_not_yet_PIN",
+          "next": "Map pull-in immediately east of Heckerbrücke on B471 towards Ismaning, not the separate bridge over Mittlerer Isarkanal.",
+          "additional_source": "https://www.stbafs.bayern.de/service/medien/meldungen/2024/heckerbrucke-b-471-ismaning-garching-halbseitige-sperrung-am-30-april-zwischen-9-und-15-uhr-wegen-bauwerksprufung/"
         },
         "source_url": "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html"
       },
@@ -809,7 +810,8 @@
         "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
         "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
         "https://planet-randy.com/blog/eintrag/isar-kiesbank/",
-        "https://www.sueddeutsche.de/muenchen/toter-aus-ismaning-vermisster-81-jaehriger-wurde-ermordet-1.1176927"
+        "https://www.sueddeutsche.de/muenchen/toter-aus-ismaning-vermisster-81-jaehriger-wurde-ermordet-1.1176927",
+        "https://www.stbafs.bayern.de/service/medien/meldungen/2024/heckerbrucke-b-471-ismaning-garching-halbseitige-sperrung-am-30-april-zwischen-9-und-15-uhr-wegen-bauwerksprufung/"
       ]
     },
     {
@@ -867,11 +869,16 @@
       "name": "Pădure Dumbravita-Timisoara",
       "city": "Timișoara",
       "issue": "The Dumbrăvița forest is broadly identifiable, but the particular path/entrance is not.",
-      "research": "Dumbrăvița woodland road/trail/entrance described by the original source.",
+      "research": "Search original cruising comments/map for either the Avram Imbroane or Dumbrăvița lake side; map a public park entrance when a credible match exists.",
       "recheck": {
-        "checked_2026_11_08": false,
-        "finding": null,
-        "source_url": null
+        "checked_2026_11_08": true,
+        "finding": {
+          "finding": "Timișoara council's 2026 Pădurea Verde plan identifies two public approaches: Avram Imbroane street by former zoo to south, and the Dumbrăvița lake leisure area in northwest. It does NOT establish the precise cruising section.",
+          "source_url": "https://hcl.usr.ro/timisoara/2026/h510",
+          "confidence": "identified_public_forest_approaches_not_meeting_spot",
+          "next": "Search original cruising comments/map for either the Avram Imbroane or Dumbrăvița lake side; map a public park entrance when a credible match exists."
+        },
+        "source_url": "https://hcl.usr.ro/timisoara/2026/h510"
       },
       "links": [
         "https://www.gays-cruising.com/en/romania",
@@ -902,16 +909,22 @@
       "name": "Torrente Mugnone",
       "city": "Florence",
       "issue": "Torrente Mugnone is a long stream; no particular bridge or stretch is identified.",
-      "research": "Named bridge/segment of the Mugnone stream in Florence and public path approach.",
+      "research": "Crosscheck the directory's original map against bridge names and construction sections; do not assign a random bridge.",
       "recheck": {
-        "checked_2026_11_08": false,
-        "finding": null,
-        "source_url": null
+        "checked_2026_11_08": true,
+        "finding": {
+          "finding": "Florence reporting identifies numerous named Mugnone bridges and continuing hydraulic works (around Ponte Rosso, Ponte dello Statuto, Ponte degli Alpini). These are corridor landmarks, not evidence of which cruising section directory meant.",
+          "source_url": "https://www.nove.firenze.it/mugnone-in-corso-adeguamento-idraulico-per-la-sicurezza-del-torrente.htm",
+          "confidence": "river_clearly_real_but_cruising_section_still_unknown",
+          "next": "Crosscheck the directory's original map against bridge names and construction sections; do not assign a random bridge."
+        },
+        "source_url": "https://www.nove.firenze.it/mugnone-in-corso-adeguamento-idraulico-per-la-sicurezza-del-torrente.htm"
       },
       "links": [
         "https://www.gays-cruising.com/en/cruising/torrente_mugnone_firenze_italia_74570",
         "https://www.055firenze.it/art/243557/mugnone-nuove-segnalazioni-di-degrado-lungo-la-ciclabile-di-viale-redi",
-        "https://mobilita.comune.fi.it/tramvia/sistema_tramviario/linea2.html"
+        "https://mobilita.comune.fi.it/tramvia/sistema_tramviario/linea2.html",
+        "https://www.nove.firenze.it/mugnone-in-corso-adeguamento-idraulico-per-la-sicurezza-del-torrente.htm"
       ]
     },
     {
@@ -985,23 +998,6 @@
       ]
     },
     {
-      "queue_index": 521,
-      "name": "Agia fotini",
-      "city": "Athens",
-      "issue": "The Agia Fotini bridge/crossing near Zappeion is not identified.",
-      "research": "Agia Fotini crossing near Zappeion: street and exact bridge.",
-      "recheck": {
-        "checked_2026_11_08": false,
-        "finding": null,
-        "source_url": null
-      },
-      "links": [
-        "https://www.gays-cruising.com/en/greece",
-        "https://www.gays-cruising.com/en/cruising/agia_fotini_athens_greece_74115",
-        "https://www.gays-cruising.com/en/cruising/zappion_gardens_athens_grece_29879"
-      ]
-    },
-    {
       "queue_index": 593,
       "name": "Am Fluss",
       "city": "Obfelden",
@@ -1054,14 +1050,14 @@
       "name": "Alberti See",
       "city": "Cologne",
       "issue": "The Alberti See name and lawful public approach are unclear after removal of a pedestrian bridge.",
-      "research": "Which Alberti See lake, remaining public trails and whether the former crossing exists.",
+      "research": "Search Google Maps public paths from Rather Straße/Schwarzer Weg and check latest accessible approach to back lake.",
       "recheck": {
         "checked_2026_11_08": true,
         "finding": {
-          "finding": "Original page gives Rather Straße / Schwarzer Weg and describes the rear quarry lake by Gremberghoven. 21 March 2026 comment says footbridge removed. 2019 route across old bridge is obsolete.",
+          "finding": "Original gay-szene forum identifies Rather Straße and Schwarzer Weg, sports ground ESV Gremberghoven and rear quarry lake; 2026 comment confirms earlier pedestrian bridge no longer exists. Do not reuse the older bridge directions.",
           "source_url": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html",
-          "confidence": "lake_identified_access_altered",
-          "next": "Map lake via Rather Straße/Schwarzer Weg and determine currently lawful accessible approach without removed bridge."
+          "confidence": "lake_identified_walk_route_changed",
+          "next": "Search Google Maps public paths from Rather Straße/Schwarzer Weg and check latest accessible approach to back lake."
         },
         "source_url": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html"
       },
@@ -1096,14 +1092,19 @@
       "name": "FKK Strand Himmelgeist am km 727",
       "city": "Düsseldorf",
       "issue": "The claimed Rhine kilometre 727 shoreline is disputed; a 2026 negative observation is also recorded.",
-      "research": "Public access point at Rhine kilometre 727 near Himmelgeist, accounting for disputed 2026 observations.",
+      "research": "Check that candidate point against Rhine kilometre 727 official geography and public access restrictions.",
       "recheck": {
         "checked_2026_11_08": true,
         "finding": {
-          "finding": "Original gay-szene page supplies public approach Alt-Himmelgeist 1 and riverbank from old ferry landing. Comment dated 22 March 2025 explicitly supplied a different reported river-km-727 pin 51.1474845,6.7980433, warning existing map was wrong. 4 July 2026 visitor reported no naturists on visit.",
+          "finding": "Original gay-szene report dated 22 March 2025 gives 51.1474845,6.7980433 as alternative to an apparently inaccurate existing directory map pin; treat as reported coordinate only, not verified official Rhine km727 marker.",
           "source_url": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html",
-          "confidence": "reported_coordinates_available_not_independently_confirmed_by_official_km_marker",
-          "next": "Check actual Rhine-km 727 marker against 51.1474845,6.7980433, retain access and conservation warnings."
+          "confidence": "reported_coordinate_not_officially_confirmed",
+          "next": "Check that candidate point against Rhine kilometre 727 official geography and public access restrictions.",
+          "reference_gps": {
+            "latitude": 51.1474845,
+            "longitude": 6.7980433,
+            "meaning": "forum contributor's alternative map correction, not verified by official Rhine marker"
+          }
         },
         "source_url": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html"
       },
@@ -1120,11 +1121,16 @@
       "name": "A94 Ende in Marktl - unter der Alzbrücke",
       "city": "Marktl",
       "issue": "The source does not distinguish which side of the A94 Alzbrücke is meant or the public approach.",
-      "research": "Public parking/access side of the A94 Alzbrücke at Marktl.",
+      "research": "Map both public parking approaches on either bank and select a named bridge reference rather than force one side.",
       "recheck": {
-        "checked_2026_11_08": false,
-        "finding": null,
-        "source_url": null
+        "checked_2026_11_08": true,
+        "finding": {
+          "finding": "Original Gays-Cruising detail expressly says 'Unter der Autobahnbrücke an der Alz, auf beiden Seiten Parkplatz'—parking on BOTH sides beneath the motorway bridge. That identifies a two-sided location, not an unknown single side.",
+          "source_url": "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635",
+          "confidence": "both_banks_of_A94_Alz_bridge_identified",
+          "next": "Map both public parking approaches on either bank and select a named bridge reference rather than force one side."
+        },
+        "source_url": "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635"
       },
       "links": [
         "https://www.gays-cruising.com/en/germany",
@@ -1136,21 +1142,23 @@
       "name": "Hafenparkplatz Nürnberg Süd",
       "city": "Nuremberg",
       "issue": "The Nürnberg Süd harbour parking entrance and specific public parking area are not matched.",
-      "research": "Exact public Hafenparkplatz Süd entrance at Nürnberg harbour.",
+      "research": "Geolocate public Europakai parking, verify route under current Nürnberg-Hafen bridge works.",
       "recheck": {
         "checked_2026_11_08": true,
         "finding": {
-          "finding": "Original gay-szene page supplies the road: access from Hafenstraße via Europakai, between Hafenstraße, canal and A73.",
+          "finding": "Original directory gives Hafenstraße→Europakai as access. Nürnberg municipality reports major Hafenbrücken traffic configuration changes effective 21 September 2026, so older turn-by-turn directions may be obsolete.",
           "source_url": "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html",
-          "confidence": "approach_road_confirmed_exact_bay_pending",
-          "next": "Map public Europakai access from Hafenstraße, not a randomly named port parking lot."
+          "confidence": "named_road_access_confirmed_traffic_changed_2026",
+          "next": "Geolocate public Europakai parking, verify route under current Nürnberg-Hafen bridge works.",
+          "additional_source": "https://www.nuernberg.de/presse/mitteilungen/pm_28109.html"
         },
         "source_url": "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html"
       },
       "links": [
         "https://gay-szene.net/gay-cruising-in-nuernberg/201/17/rubrik.html",
         "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html",
-        "https://planet-randy.com/blog/eintrag/hafenparkplatz-nuernberg/"
+        "https://planet-randy.com/blog/eintrag/hafenparkplatz-nuernberg/",
+        "https://www.nuernberg.de/presse/mitteilungen/pm_28109.html"
       ]
     },
     {
@@ -1174,17 +1182,25 @@
       "name": "Área de bomberos Mollet",
       "city": "Mollet del Vallès",
       "issue": "The roadside pull-in by Mollet fire station and Alstom plant has not been located.",
-      "research": "Pull-in between Bombers de Mollet and Alstom, including roadside direction.",
+      "research": "Inspect B-140 between Mollet firefighters and Alstom km7.5; identify actual road rest pull-in separately from commercial site.",
       "recheck": {
-        "checked_2026_11_08": false,
-        "finding": null,
-        "source_url": null
+        "checked_2026_11_08": true,
+        "finding": {
+          "finding": "Original source explicitly describes rest area between Mollet firefighters and Alstom factory in direction Mollet to Santa Perpètua. Independent Alstom site identifies Carretera B-140 at km7.5; municipality confirms roadside path and Alstom roundabout.",
+          "source_url": "https://www.gays-cruising.com/pt/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296",
+          "additional_source": "https://www.alstom.com/worldwide-presence/spain",
+          "confidence": "B140_corridor_identified_exact_roadside_pullin_not_mapped",
+          "next": "Inspect B-140 between Mollet firefighters and Alstom km7.5; identify actual road rest pull-in separately from commercial site."
+        },
+        "source_url": "https://www.gays-cruising.com/pt/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296"
       },
       "links": [
         "https://www.gays-cruising.com/en/spain",
         "https://www.gays-cruising.com/en/barcelona/spain",
         "https://www.gays-cruising.com/es/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296",
-        "https://www.gays-cruising.com/fr/mollet/barcelona/espagne"
+        "https://www.gays-cruising.com/fr/mollet/barcelona/espagne",
+        "https://www.gays-cruising.com/pt/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296",
+        "https://www.alstom.com/worldwide-presence/spain"
       ]
     },
     {
@@ -1226,6 +1242,18 @@
         "https://www.gays-cruising.com/en/cruising/zona_industriale_ca_di_mazze_verona_italia_49128",
         "https://www.italiamappe.it/stradario/verona/via-ca%27-di-mazze%27/",
         "https://www.gays-cruising.com/en/cruising/palazzina_verona_italia_5902"
+      ]
+    }
+  ],
+  "known_resolved_location_research": [
+    {
+      "queue_index": 521,
+      "name": "Agia Fotini",
+      "decision": "Mapped original church and historic Anapafseos Street bridge",
+      "location_reference": "37.967249,23.732812 is church GPS, not precise cruising point",
+      "sources": [
+        "https://www.religiousgreece.gr/en/attractions/church-agia-fotini",
+        "https://www.researchgate.net/publication/337419448_The_archaeology_of_in-between_places_Finds_under_the_Ilissos_River_bridge_in_Athens"
       ]
     }
   ]
