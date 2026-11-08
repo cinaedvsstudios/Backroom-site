@@ -24,7 +24,7 @@ The former **Hold (83)** and **Flag (111)** fields are application safety status
 
 ### Important recovered information
 
-- **Za městem**: Original site directions mention Mostecká, 1. máje square, U Karbanů and a bridge over a stream. Source Google Maps destination: **50.5685348511, 13.5499191284**. No dated visitor comments were visible.
+- **Za městem**: Locality corrected from Most to **Horní Jiřetín (Most District)** using official street records. Original site directions mention Mostecká, 1. máje square, U Karbanů and a bridge over a stream. Source Google Maps destination: **50.5685348511, 13.5499191284**. No dated visitor comments were visible.
 - **Parking Leśny**: Source describes afternoon woodland use, with original map destination **50.4073677063, 18.8132076263**; no dated visitor comments visible.
 - **Zemun Toilet**: Original destination **44.840637207, 20.4141674042**. **A visitor reported on 9 August 2025 that the toilet was closed**, so the location should not be treated as currently open.
 - **Canal Tow Path**: Source references Green Lanes, Castle Climbing Centre and wooden bridge. Mapped to the Castle entrance landmark **51.5653078, -0.0923484**; precise historical activity area and current path access not confirmed.
