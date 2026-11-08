@@ -7,14 +7,17 @@
     "total_candidates_reviewed": 293,
     "previous_broad_location_flag_count": 146,
     "narrow_location_review_count": 46,
-    "important_limit": "Narrow review list is a rule-based, manually curated triage from research flags, not a proof that other entries have perfect coordinates. Individual source site verification remains incomplete."
+    "important_limit": "Narrow review list is a rule-based, manually curated triage from research flags, not a proof that other entries have perfect coordinates. Individual source site verification remains incomplete.",
+    "updated_berlin_date": "2026-11-08",
+    "revision": "Same place or building does not imply same cruising location. All source candidates kept separate pending exact subarea identity."
   },
   "decision_policy": {
     "recency": "Do not require a confirmed physical sexual encounter. Keep separate recent discussions, dated questions, self check-ins, firsthand accounts, older listings and negative reports; no negative conclusion from absent data.",
     "public_shared_spaces": "Informational context only; not a categorical disqualification.",
     "general_access_and_safety": "Informational context only unless an explicit current closure makes normal public entry unavailable.",
     "old_information": "Combine with recency/conflict review, rather than treating age alone as a separate blocker.",
-    "technical_source_pages": "Retain source links and inaccessible/blocked statuses; lack of access is not proof of no location."
+    "technical_source_pages": "Retain source links and inaccessible/blocked statuses; lack of access is not proof of no location.",
+    "duplicate_policy": "Never merge solely because two entries share a park, building, road, beach or name. Keep separate research candidates unless exact subarea coordinates or descriptions demonstrate identity."
   },
   "location_review": [
     {
@@ -386,36 +389,29 @@
       "reason": "Unidentified mall in Sibiu"
     }
   ],
-  "canonical_merges": [
+  "canonical_merges": [],
+  "duplicates_requiring_evidence_before_merge": [
     {
-      "canonical_id": "GC1-ICELAND-01",
-      "canonical_name": "Öskjuhlíð",
-      "same_place_source_candidate_ids": [
-        "GC1-ICELAND-05"
-      ],
       "indexes": [
         75,
         76
       ],
-      "decision": "ONE parent geographical location; alias Öskjuhlíð II is not independently geolocated. Preserve both original source rows. Split again only if distinct site pins or access areas are documented.",
-      "confidence": "high_same_named_hill_medium_specific_cruising_subarea",
-      "no_new_second_public_listing": true
+      "names": [
+        "Öskjuhlíð",
+        "Öskjuhlíð II"
+      ],
+      "reason": "Same hill, but possibly two distinct cruising areas. Do not merge without exact source pins or description matching; keep separate."
     },
     {
-      "canonical_id": "CRU-SOF-BORGRA-01",
-      "canonical_name": "Borisova Gradina",
-      "same_place_source_candidate_ids": [
-        "GC1-BULGARIA-04"
-      ],
       "indexes": [
         223
       ],
-      "decision": "Use existing Backroom venue as canonical parent; attach source URL and dated source check-in as evidence instead of importing a second duplicate park listing. Preserve research record.",
-      "confidence": "high_same_named_park_medium_specific_cruising_subarea",
-      "no_new_second_public_listing": true
-    }
-  ],
-  "duplicates_requiring_evidence_before_merge": [
+      "names": [
+        "Park Borisova Gradina",
+        "Existing Backroom Borisova Gradina"
+      ],
+      "reason": "Same park could contain multiple cruising sections. Compare the original source claimed section against existing Backroom directions before any merge; keep candidate separate."
+    },
     {
       "indexes": [
         112,
@@ -545,6 +541,7 @@
     "no_original_batches_edited": true,
     "no_master_queue_edited": true,
     "no_live_venue_changes": true,
-    "review_required_before_production_merge": true
+    "review_required_before_production_merge": true,
+    "no_candidates_merge_approved": true
   }
 }
