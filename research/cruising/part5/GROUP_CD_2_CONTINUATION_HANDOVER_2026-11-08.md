@@ -5,10 +5,10 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - Repository: https://github.com/cinaedvsstudios/Backroom-site
 - Working directory: `research/cruising/part5/`.
 - Group **2 of 3**, original positions **196–389 inclusive**, 194 source candidate records. **8 independently documented excluded from working set**, **186 active candidate records**. **99** previously historically mapped, **86** initially source-research-incomplete, **1** Poduene Railway Station included.
-- Original incomplete cohort of 86: **65 have received preliminary substantive content research across thirteen batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 21 still await initial substantive review.
-- Most recently assessed **CRU-CD2-342 — Battens woods, Havant**.
-- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-344 — consult URL audit file for exact name/location.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
-- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `cea469f7c0b4393d907d7686a9bd6ec8b7979432`. Latest individual working-file enrichment: `1d842686be0f5e0998947eadcbadf2179b78e879`. Batch 013 immutable commit `d230fbee64ef76c734821f49403eedb8ab6de3c0`.
+- Original incomplete cohort of 86: **70 have received preliminary substantive content research across fourteen batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 16 still await initial substantive review.
+- Most recently assessed **CRU-CD2-355 — Broadgate Shopping Centre (Lower Level), London**.
+- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-357 — Eastcheap, London.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
+- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `a3e3eff0696165456d55b81fa2e6284a3600afef`. Latest individual working-file enrichment: `0111381b5dc9bf28e39e5b286f5f78c4f08be97f`. Batch 014 immutable commit `74c3aff42d1da549f722a8a6e19dee468402785d`.
 
 ## Required reading BEFORE more research
 1. `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json` — **authoritative next_unstarted** and batch list; if moved by another worker, follow latest tracker.
@@ -37,6 +37,8 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - 012: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_012_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_012_2026-11-08.json), IDs CRU-CD2-316, CRU-CD2-317, CRU-CD2-318, CRU-CD2-319, CRU-CD2-322
 
 - 013: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_013_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_013_2026-11-08.json), IDs CRU-CD2-326, CRU-CD2-330, CRU-CD2-336, CRU-CD2-339, CRU-CD2-342
+
+- 014: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_014_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_014_2026-11-08.json), IDs CRU-CD2-344, CRU-CD2-345, CRU-CD2-349, CRU-CD2-352, CRU-CD2-355
 
 ## Research method — MUST FOLLOW
 - Work in exact order from tracker, five records per batch. **Open and READ content of every stored source URL**, including original detailed listings, supplemental pages, comments, internal source-map directions, previous evidence, and related pages. Recording merely 'reachable/checked' is NOT source research.
@@ -89,8 +91,16 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - **CRU-CD2-342** Battens woods likely actual **Battins Copse** by Battens Way, Havant, geolocated 50.8654,-0.9805 (named woodland) with 2022 photographed entrance 50.8648,-0.9816 and official council SINC HV0134. Gays original Havant index names Battens woods; detailed pin unrecovered; do not conflate with Havant Thicket. Protected ancient wood.
 - **Next Batch014 begins CRU-CD2-344** (then next four from URL audit), keep 0 fully exhaustive / 21 needing initial pass.
 
+## Batch 014 sourced findings; source-exhaustive = ZERO
+- **344 Limavady Forest road**: generic historical name, original id95671 alternate PT/EN fails; NI.gov documents multiple different forest roads at Springwell, Grange Park, Loughermore, not identical source. NO arbitrary forest location.
+- **345 London Dark Garden**: national index-only title, no geographic clue, no speculative Hyde Park/other garden assignment.
+- **349 Hilton London Bridge toilets**: source primary https://thegaypassport.com/community/london-cruising-guide/ **ACTUALLY READ** — explicitly names WC near lifts around lunchtime. Hilton official London Tower Bridge at 5 More London Place, SE1 2BY; https://www.accessable.co.uk/hilton/access-guides/hilton-london-tower-bridge identifies THREE DIFFERENT toilet zones ground, first, second floor near lifts, so no floor confirmed and no dated visitor reports.
+- **352 Woolwich Riverwalk**: original CruisingGays London category page https://www.cruisinggays.com/london/c/areas/ text explicitly mentions path from main road to Thames Barrier, says O2 reachable along riverwalk, BUT O2 is NORTH bank vs Woolwich/South Barrier, geographical contradiction. Original detailed ID46027 cache misses. Old '9am-midnight' is undated promotional time NOT verified current cruising.
+- **355 Broadgate Shopping Centre Lower Level**: PRIMARY detailed https://www.cruisinggays.com/london/areas/22361-broadgate-shopping-centre-lower-level/ FULLY READ; describes historical metal-door/toilet stairs under ICE RINK in old Broadgate Circle lower level. Architects https://www.m3c.co.uk/projects/broadgate-circle and contractor https://www.steintec.co.uk/casestudies/broadgate-circle/ document 2015 major rebuild of central/lower floors. Therefore 2015+ same WC/entrance NOT verified; preserve historical location but avoid claiming present access. No new exclusions.
+- **NEXT BATCH015**: CRU-CD2-357 Eastcheap, then 361,363,364,365 according to URL audit. 70 preliminary/86; 0 source-exhaustive; 16 yet to receive initial content review.
+
 ## Recoverability / GitHub access
 - GitHub tool `mcp__GitHub__fetch_file` sometimes responds with **empty content** for 2MB JSON but includes blob SHA. Fetch same SHA using `mcp__GitHub__fetch_blob` to get entire JSON, parse and update; do not treat empty string as missing file.
-- Last verified tracker checkpoint commit: `cea469f7c0b4393d907d7686a9bd6ec8b7979432`.
-- Permanent 186 working file update commit: `1d842686be0f5e0998947eadcbadf2179b78e879`.
+- Last verified tracker checkpoint commit: `a3e3eff0696165456d55b81fa2e6284a3600afef`.
+- Permanent 186 working file update commit: `0111381b5dc9bf28e39e5b286f5f78c4f08be97f`.
 - User requested review chat 'Progress update review GROUP 2 8am'; the correction and counts match tracker. This handover is authoritative on restart, not chat progress alone.
