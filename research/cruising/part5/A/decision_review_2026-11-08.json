@@ -9,7 +9,7 @@
     "narrow_location_review_count": 46,
     "important_limit": "Narrow review list is a rule-based, manually curated triage from research flags, not a proof that other entries have perfect coordinates. Individual source site verification remains incomplete.",
     "updated_berlin_date": "2026-11-08",
-    "revision": "Web recheck recovered 5 Gays-Cruising original map pins and one matching Zolwereck shopping centre from 46 location cases. 6 moved into identifiable candidates. Six-coordinate list also includes disputed Lara Park point, which stays in conflicts. Two confirmed closures excluded from active import set; no live changes.; Corrected Põlva/Tartu and Pomorie/Nessebar city association in consolidation overlay; both now broad location candidates rather than unresolved conflicting identity.",
+    "revision": "Web recheck recovered 5 Gays-Cruising original map pins and one matching Zolwereck shopping centre from 46 location cases. 6 moved into identifiable candidates. Six-coordinate list also includes disputed Lara Park point, which stays in conflicts. Two confirmed closures excluded from active import set; no live changes.; Corrected Põlva/Tartu and Pomorie/Nessebar city association in consolidation overlay; both now broad location candidates rather than unresolved conflicting identity.; Belval old Saturn / MediaMarkt probable building and Celpak industrial zone geographically identified from independent sources; precise WC/car park unverified.",
     "latest_duplicate_source_audit": "research/cruising/part5/A/duplicate_and_source_audit_2026-11-08.json",
     "review_note": "27 name/alias/possible duplicate comparison cases analyzed; source URLs and descriptions compared. Existing 21 duplicate flags were NOT 21 verified duplicates. No speculative merge is authorized. User need not adjudicate routine alias matching.",
     "source_technical_note": "21 source/link-warning flags now explained as 4 HTTP451, 10 cache misses, 3 source page unavailable, 4 archive URL/name mismatches; earlier 20 heuristic not a count of broken links.",
@@ -243,8 +243,8 @@
       "city": "Belvaux",
       "country": "Luxembourg",
       "reason": "Saturn business/facility not identified",
-      "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "triage_status": "probable_building_identified",
+      "updated_note": "Independent 2022 press confirms Saturn store Belval Plaza became MediaMarkt; probable original described restroom near the former Saturn, but exact WC position not verified."
     },
     {
       "index": 112,
@@ -403,8 +403,8 @@
       "city": "Prijedor",
       "country": "Bosnia and Herzegovina",
       "reason": "Celpaka facility/company not identified",
-      "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "triage_status": "industrial_zone_identified_precise_carpark_pending",
+      "updated_note": "Official Republic of Srpska development agency identifies Celpak industrial zone in Prijedor linked via Aleja Kozarskog odreda; precise car park still unknown."
     },
     {
       "index": 215,
@@ -651,7 +651,7 @@
     {
       "key": "identified_no_major_location_blocker",
       "label": "Named/identifiable candidate; no material location ambiguity or confirmed public closure in the reviewed flags",
-      "count": 251,
+      "count": 252,
       "indices": [
         1,
         2,
@@ -745,6 +745,7 @@
         107,
         108,
         110,
+        111,
         113,
         114,
         116,
@@ -1549,6 +1550,13 @@
           "name": "Nudist beach",
           "city": "Vilnius",
           "country": "Lithuania"
+        },
+        {
+          "index": 111,
+          "proposal_id": "GC1-LUXEMBOURG-15",
+          "name": "Toilette a Coté du Saturn",
+          "city": "Belvaux",
+          "country": "Luxembourg"
         },
         {
           "index": 113,
@@ -2669,7 +2677,7 @@
     {
       "key": "broad_but_known_area",
       "label": "Recognisable area but original claimed subarea broad",
-      "count": 18,
+      "count": 19,
       "indices": [
         6,
         8,
@@ -2686,6 +2694,7 @@
         172,
         208,
         211,
+        214,
         215,
         218,
         220
@@ -2797,6 +2806,13 @@
           "country": "Bosnia and Herzegovina"
         },
         {
+          "index": 214,
+          "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-10",
+          "name": "Parking kod Celpaka",
+          "city": "Prijedor",
+          "country": "Bosnia and Herzegovina"
+        },
+        {
           "index": 215,
           "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-15",
           "name": "Stari Grad",
@@ -2823,7 +2839,7 @@
     {
       "key": "unidentified_facility_or_spot",
       "label": "Generic or unidentifiable facility/spot",
-      "count": 20,
+      "count": 18,
       "indices": [
         11,
         28,
@@ -2836,12 +2852,10 @@
         103,
         105,
         109,
-        111,
         125,
         152,
         153,
         165,
-        214,
         232,
         244,
         291
@@ -2925,13 +2939,6 @@
           "country": "Lithuania"
         },
         {
-          "index": 111,
-          "proposal_id": "GC1-LUXEMBOURG-15",
-          "name": "Toilette a Coté du Saturn",
-          "city": "Belvaux",
-          "country": "Luxembourg"
-        },
-        {
           "index": 125,
           "proposal_id": "GC1-LUXEMBOURG-07",
           "name": "Schumann",
@@ -2958,13 +2965,6 @@
           "name": "Petrol WC Reststop",
           "city": "Murska Sobota",
           "country": "Slovenia"
-        },
-        {
-          "index": 214,
-          "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-10",
-          "name": "Parking kod Celpaka",
-          "city": "Prijedor",
-          "country": "Bosnia and Herzegovina"
         },
         {
           "index": 232,
@@ -3044,9 +3044,9 @@
     }
   ],
   "primary_review_buckets_totals": {
-    "identified_no_major_location_blocker": 251,
-    "broad_but_known_area": 18,
-    "unidentified_facility_or_spot": 20,
+    "identified_no_major_location_blocker": 252,
+    "broad_but_known_area": 19,
+    "unidentified_facility_or_spot": 18,
     "conflicting_place_identity": 2,
     "explicit_current_closure": 2,
     "all_candidates": 293,
@@ -3076,6 +3076,14 @@
       "original_url": "https://www.gays-cruising.com/en/cruising/old_monument_near_the_sea_tallinn_tallinn_estonia_3539",
       "note": "Original monument listing has a map pin close to Tallinn waterfront; monument's official name not independently confirmed."
     },
+    "111": {
+      "facility": "Former Saturn at Belval Plaza I; now MediaMarkt",
+      "source_qualification": "Independent 2022 press confirms Saturn store Belval Plaza became MediaMarkt; probable original described restroom near the former Saturn, but exact WC position not verified.",
+      "verification_urls": [
+        "https://today.rtl.lu/news/luxembourg/saturn-electronics-shops-in-luxembourg-to-be-rebranded-as-mediamarkt-1908281",
+        "https://www.belval-shopping.lu/fr/informations"
+      ]
+    },
     "117": {
       "lat": 49.6325874329,
       "lng": 6.1699967384,
@@ -3099,6 +3107,14 @@
       "precision": "source_google_directions_pin_DISPUTED",
       "original_url": "https://www.gays-cruising.com/en/cruising/lara_park_antalya_turkey_14442",
       "note": "2024 firsthand comment disputes original pin/location; do not treat as resolved without additional evidence."
+    },
+    "214": {
+      "facility": "Industrial zone Celpak, Prijedor",
+      "source_qualification": "Official Republic of Srpska development agency identifies Celpak industrial zone in Prijedor linked via Aleja Kozarskog odreda; precise car park still unknown.",
+      "verification_urls": [
+        "https://baze.rars-msp.org/lokacije-engleski/osnovni.php?ID=117",
+        "https://baze.rars-msp.org/lokacije-latinica/osnovni.php?ID=117"
+      ]
     },
     "249": {
       "lat": 50.5685348511,
