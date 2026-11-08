@@ -9,7 +9,10 @@
     "narrow_location_review_count": 46,
     "important_limit": "Narrow review list is a rule-based, manually curated triage from research flags, not a proof that other entries have perfect coordinates. Individual source site verification remains incomplete.",
     "updated_berlin_date": "2026-11-08",
-    "revision": "User clarified: retain separate cruising spots in same park/building, do not auto-merge. Exclusive five-bucket location/access triage added; recency/source/alias flags are overlays, not exclusive buckets."
+    "revision": "User clarified: retain separate cruising spots in same park/building, do not auto-merge. Exclusive five-bucket location/access triage added; recency/source/alias flags are overlays, not exclusive buckets.",
+    "latest_duplicate_source_audit": "research/cruising/part5/A/duplicate_and_source_audit_2026-11-08.json",
+    "review_note": "27 name/alias/possible duplicate comparison cases analyzed; source URLs and descriptions compared. Existing 21 duplicate flags were NOT 21 verified duplicates. No speculative merge is authorized. User need not adjudicate routine alias matching.",
+    "source_technical_note": "21 source/link-warning flags now explained as 4 HTTP451, 10 cache misses, 3 source page unavailable, 4 archive URL/name mismatches; earlier 20 heuristic not a count of broken links."
   },
   "decision_policy": {
     "recency": "Do not require a confirmed physical sexual encounter. Keep separate recent discussions, dated questions, self check-ins, firsthand accounts, older listings and negative reports; no negative conclusion from absent data.",
@@ -17,7 +20,7 @@
     "general_access_and_safety": "Informational context only unless an explicit current closure makes normal public entry unavailable.",
     "old_information": "Combine with recency/conflict review, rather than treating age alone as a separate blocker.",
     "technical_source_pages": "Retain source links and inaccessible/blocked statuses; lack of access is not proof of no location.",
-    "duplicate_policy": "Never merge solely because two entries share a park, building, road, beach or name. Keep separate research candidates unless exact subarea coordinates or descriptions demonstrate identity."
+    "duplicate_policy": "Compare original source record IDs, URLs, spot/subarea descriptions and coordinates. Keep potentially distinct cruising spots in same park/retail building separated, never merge based solely on location name; investigation should be automated/researched, not delegated to user."
   },
   "location_review": [
     {
