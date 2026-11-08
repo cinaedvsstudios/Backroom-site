@@ -436,11 +436,113 @@ def clean():
     if remaining!=[DEST]:raise RuntimeError("Unexpected file(s) left in Group A: "+repr(remaining))
     print("GROUP_A_CLEANUP_PREPARED",json.dumps({"removed_files":len(files),"remaining":str(DEST)}))
 
+
+def polish():
+    """Expose original duplication decisions and parent tracker inside the validated master."""
+    doc=load(DEST)
+    validate(doc,allow_stage=False,check_originals=False)
+    if doc["metadata"].get("polish_completed"):
+        print("GROUP_A_MASTER_ALREADY_POLISHED")
+        return
+    all_records=doc["records"]+doc["archived_exclusions"]
+    by_index={r["original_index"]:r for r in all_records}
+    by_id={r["proposal_id"]:r for r in all_records}
+    embedded={x["path"]:x["original_content"] for x in doc["source_inventory"] if x["in_group_A"]}
+    def old_doc(name):
+        match=next((x for x,y in embedded.items() if name in x),None)
+        return (json.loads(embedded[match]),match) if match else ({},None)
+    audit,apath=old_doc("/duplicate_and_source_audit_")
+    decisions,dpath=old_doc("/decision_review_")
+    for r in all_records:
+        r["duplicate_research"]=r.get("duplicate_research",[])
+        r["research_tasks"]=r.get("research_tasks",[])
+    seen={r["original_index"]:{json.dumps(e.get("raw"),sort_keys=True,ensure_ascii=False) for e in r["duplicate_research"]} for r in all_records}
+    matched=0
+    def link(item,path,reason):
+        nonlocal matched
+        indices=[]
+        for key in ("ids","indexes","indices","original_indices","candidate_indices"):
+            if isinstance(item.get(key),list):indices+=item[key]
+        for key in ("index","original_index","queue_index","proposal_id","candidate_id"):
+            if item.get(key) is not None:indices.append(item[key])
+        for v in indices:
+            r=by_id.get(v) if isinstance(v,str) else None
+            if r is None:
+                try:r=by_index.get(int(v))
+                except (ValueError,TypeError):pass
+            if r is None:continue
+            text=json.dumps(item,ensure_ascii=False,sort_keys=True)
+            if text in seen[r["original_index"]]:continue
+            seen[r["original_index"]].add(text)
+            r["duplicate_research"].append({"source_file":path,"reason":reason,"raw":item})
+            matched+=1
+    for row in audit.get("duplicate_spot_comparisons",[]):link(row,apath,"Original duplicate comparison")
+    for row in decisions.get("duplicates_requiring_evidence_before_merge",[]):link(row,dpath,"Original unresolved merge question")
+    for row in decisions.get("already_one_candidate_or_name_normalization",[]):link(row,dpath,"Original name normalization")
+    sites=list(SITES)
+    for r in all_records:
+        for x in r["original_queue_record"].get("source_refs",[]):
+            try:
+                n=int(x["s"])
+                if 1<=n<=8:
+                    v=r["site_verification"][sites[n-1]]
+                    url=x.get("u") or x.get("url")
+                    if isinstance(url,str) and url.startswith("http") and url not in v["matched_urls"]:
+                        v["matched_urls"].append(url)
+            except (ValueError,KeyError,TypeError):pass
+        ds=r["duplicate_research"]
+        r["duplicate_status"]="possible" if any(
+            re.search("unresolved|not_spot_proven|requires|possible|evidence_before_merge",
+                str(e.get("raw",{}).get("decision",""))+" "+str(e.get("reason","")),re.I) for e in ds
+            ) else "ruled_out" if ds and all(
+            re.search("keep_separate_spots|ruled.out",str(e.get("raw",{}).get("decision","")),re.I) for e in ds
+            ) else "unchecked"
+        summary=[]
+        for h in r["research_history"]:
+            if not re.search("GROUP_A_291_CONSOLIDATED|decision_review|P3_deep_source|full_verification_252",h["source_file"]):continue
+            item=h.get("raw_evidence",{})
+            if not isinstance(item,dict):continue
+            for key in ("summary","updated_note","reason","location_finding","geographic_finding","source_pin_notes","identity_and_access"):
+                value=item.get(key)
+                if isinstance(value,str) and 10<len(value)<1800 and not any(z["note"]==value for z in summary):
+                    summary.append({"note":value,"source_file":h["source_file"],"field":key})
+        r["location_evidence_summary"]={"historical_research_notes":summary[-8:],
+                   "physical_site_identification":r["location_status"],
+                   "do_not_infer_cruising_from_site_operation":True}
+        if r["research_status"]!="not_started":
+            r["last_researched_at"]="2026-11-08" if any("2026-11-08" in s for s in r["provenance_files"]) else "2026-11-06"
+        for question in r["missing_information"]:
+            if not any(x.get("task")==question for x in r["research_tasks"]):
+                r["research_tasks"].append({"task":question,"source":"Part 3 incomplete tracker"})
+        if r["research_status"]=="not_started" and not r["research_tasks"]:
+            r["research_tasks"].append({"task":r["next_recommended_action"] or "Begin source verification","source":"Canonical queue"})
+        if r["duplicate_status"]=="possible" and "Review original duplicate comparison before any merge" not in r["unresolved_conflicts"]:
+            r["unresolved_conflicts"].append("Review original duplicate comparison before any merge")
+    parent=PART/"tracker_A.json"
+    ent=next(x for x in doc["source_inventory"] if x["path"]==str(parent))
+    if file_sha(parent)!=ent["source_sha256"]:raise RuntimeError("Historical tracker changed unexpectedly")
+    ent["original_content"]=raw(parent)
+    ent["historical_first_pass_only"]=True
+    doc["metadata"]["parent_tracker_A_status"]="Historical first-pass record retained outside Group A because immutable master_queue still references it; not current substantive research progress"
+    doc["metadata"]["polish_completed"]=True
+    doc["validation_results"]["checks"]["duplicate_comparisons_indexed"]=True
+    doc["validation_results"]["checks"]["parent_tracker_A_content_embedded"]=True
+    doc["changelog"].append({"at":DATE(),"operation":"Index archived duplicate comparisons, linked source URLs and research tasks; embed historical parent tracker","candidate_duplicate_comparisons":sum(bool(r["duplicate_research"]) for r in all_records)})
+    DEST.write_text(json.dumps(doc,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
+    validate(load(DEST),allow_stage=False,check_originals=False)
+    print("GROUP_A_POLISH_VALIDATED",json.dumps({"duplicate_comparison_attachments":matched,
+       "duplicate_candidate_records":sum(bool(r["duplicate_research"]) for r in all_records),
+       "possible_duplicate_candidates":sum(r["duplicate_status"]=="possible" for r in all_records),
+       "active":len(doc["records"]),"archived":len(doc["archived_exclusions"]),
+       "master_bytes":DEST.stat().st_size},sort_keys=True))
+
+
 if __name__=="__main__":
     mode=sys.argv[1] if len(sys.argv)>1 else "--build"
     if mode=="--build":main()
     elif mode=="--validate-remote":validate_remote()
     elif mode=="--clean":clean()
+    elif mode=="--polish":polish()
     elif mode=="--validate-final":
         doc=load(DEST)
         v=validate(doc,allow_stage=False,check_originals=False)

@@ -31,8 +31,16 @@ jobs:
             git reset --hard origin/main
             if test -f research/cruising/part5/A/GROUP_A_291_MASTER_RESEARCH.json && \
                ! test -f research/cruising/part5/A/tracker_P3.json; then
+              python3 scripts/consolidate_group_a_once.py --polish
+              git add -- research/cruising/part5/A/GROUP_A_291_MASTER_RESEARCH.json
+              if ! git diff --cached --quiet; then
+                git commit -m "Group A final QA: index duplicate evidence and preserve parent tracker"
+                git push origin HEAD:main
+              fi
+              git fetch origin main
+              git reset --hard origin/main
               python3 scripts/consolidate_group_a_once.py --validate-final
-              echo "Already completed and validated"
+              echo "Consolidated master polished and validated"
               exit 0
             fi
             python3 scripts/consolidate_group_a_once.py --build
