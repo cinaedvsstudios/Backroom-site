@@ -5,10 +5,10 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - Repository: https://github.com/cinaedvsstudios/Backroom-site
 - Working directory: `research/cruising/part5/`.
 - Group **2 of 3**, original positions **196–389 inclusive**, 194 source candidate records. **8 independently documented excluded from working set**, **186 active candidate records**. **99** previously historically mapped, **86** initially source-research-incomplete, **1** Poduene Railway Station included.
-- Original incomplete cohort of 86: **70 have received preliminary substantive content research across fourteen batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 16 still await initial substantive review.
-- Most recently assessed **CRU-CD2-355 — Broadgate Shopping Centre (Lower Level), London**.
-- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-357 — Eastcheap, London.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
-- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `a3e3eff0696165456d55b81fa2e6284a3600afef`. Latest individual working-file enrichment: `0111381b5dc9bf28e39e5b286f5f78c4f08be97f`. Batch 014 immutable commit `74c3aff42d1da549f722a8a6e19dee468402785d`.
+- Original incomplete cohort of 86: **75 have received preliminary substantive content research across fifteen batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 11 still await initial substantive review.
+- Most recently assessed **CRU-CD2-365 — Parkplatz Arlesheim, Switzerland**.
+- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-366 — Mägenwilerwald, Birr, Switzerland.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
+- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `7fcaabdf4aa3790d47f1d5adafcd909541709ef4`. Latest individual working-file enrichment: `409514f6261d5de4eeeae3c7ffe9400b90360d4c`. Batch 015 immutable commit `ed8158e2c98f2cd7ca8ef0d7b8c147e92e208992`.
 
 ## Required reading BEFORE more research
 1. `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json` — **authoritative next_unstarted** and batch list; if moved by another worker, follow latest tracker.
@@ -39,6 +39,8 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - 013: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_013_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_013_2026-11-08.json), IDs CRU-CD2-326, CRU-CD2-330, CRU-CD2-336, CRU-CD2-339, CRU-CD2-342
 
 - 014: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_014_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_014_2026-11-08.json), IDs CRU-CD2-344, CRU-CD2-345, CRU-CD2-349, CRU-CD2-352, CRU-CD2-355
+
+- 015: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_015_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_015_2026-11-08.json), IDs CRU-CD2-357, CRU-CD2-361, CRU-CD2-363, CRU-CD2-364, CRU-CD2-365. NOTE: the immutable batch file accidentally lists next_unstarted=367; this is an ERROR. **The correct authoritative next ID is 366** as tracker and original URL-audit order both prove. NEVER skip 366.
 
 ## Research method — MUST FOLLOW
 - Work in exact order from tracker, five records per batch. **Open and READ content of every stored source URL**, including original detailed listings, supplemental pages, comments, internal source-map directions, previous evidence, and related pages. Recording merely 'reachable/checked' is NOT source research.
@@ -99,8 +101,16 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - **355 Broadgate Shopping Centre Lower Level**: PRIMARY detailed https://www.cruisinggays.com/london/areas/22361-broadgate-shopping-centre-lower-level/ FULLY READ; describes historical metal-door/toilet stairs under ICE RINK in old Broadgate Circle lower level. Architects https://www.m3c.co.uk/projects/broadgate-circle and contractor https://www.steintec.co.uk/casestudies/broadgate-circle/ document 2015 major rebuild of central/lower floors. Therefore 2015+ same WC/entrance NOT verified; preserve historical location but avoid claiming present access. No new exclusions.
 - **NEXT BATCH015**: CRU-CD2-357 Eastcheap, then 361,363,364,365 according to URL audit. 70 preliminary/86; 0 source-exhaustive; 16 yet to receive initial content review.
 
+## Batch 015 findings and cursor correction
+- **CRU-CD2-357** London Eastcheap is a small *toilet* source entry, not the entire street. Original publisher London area index readable; full detail ID45298 unavailable, no exact WC door nor current activity.
+- **CRU-CD2-361** A6 Maghera Road Authority Statutory Rule 2023 No216 effective Jan8 2024 prohibits ONLY western entry into particular lay-by opposite Ranaghan Road. Other Glenshane Forest A6 pull-ins possibly separate. DO NOT describe total permanent closure.
+- **CRU-CD2-363** Ealing Horsenden Hill official Horsenden Lane North carpark with woods. Independent undated adult site describes same hill-car-park/mixed meet. No present activity or night opening established.
+- **CRU-CD2-364** Thurauen reserve itself independently confirms **Parkplatz Alten**, plus seasonal April-Oct composting WCs. This is geographically more specific than generic floodplain POI. Original gay shoreline/pin remains unknown; respect protected zone.
+- **CRU-CD2-365** generic Arlesheim Parkplatz unlocated; web checkins are NOT proof visits.
+- **CRITICAL CURSOR CORRECTION:** batch015 file has next=367 due to error, but original URL audit after 365 shows **366 Mägenwilerwald**, then 370 Wanneholz, 374 Maihof Pissoir, 377 Tribschen WC, 380 Werdinsel. Authoritative tracker `next_unstarted=CRU-CD2-366` correctly. Never skip 366. 75 preliminary /86; 0 complete; 11 still awaiting initial review.
+
 ## Recoverability / GitHub access
 - GitHub tool `mcp__GitHub__fetch_file` sometimes responds with **empty content** for 2MB JSON but includes blob SHA. Fetch same SHA using `mcp__GitHub__fetch_blob` to get entire JSON, parse and update; do not treat empty string as missing file.
-- Last verified tracker checkpoint commit: `a3e3eff0696165456d55b81fa2e6284a3600afef`.
-- Permanent 186 working file update commit: `0111381b5dc9bf28e39e5b286f5f78c4f08be97f`.
+- Last verified tracker checkpoint commit: `7fcaabdf4aa3790d47f1d5adafcd909541709ef4`.
+- Permanent 186 working file update commit: `409514f6261d5de4eeeae3c7ffe9400b90360d4c`.
 - User requested review chat 'Progress update review GROUP 2 8am'; the correction and counts match tracker. This handover is authoritative on restart, not chat progress alone.
