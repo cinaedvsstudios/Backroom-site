@@ -27,7 +27,7 @@
         {
           "url": "https://www.gays-cruising.com/en/ayia_napa/famagusta/cyprus",
           "read": true,
-          "findings": "City index separately names 'Parking Area'; comments linked to this candidate dated 2025-12-17 (asks about winter activity), 2026-03-17 (asks whether active), and 2026-03-27 (asks if younger people present). None reports a confirmed encounter. 2026-04-12 messages appear near this entry but are associated with the separate Sculpture Park Toilets listing; do NOT misattribute."
+          "findings": "City index separately names 'Parking Area'. Precisely attributed comments: 2025-12-17 question about winter activity, 2026-03-27 question about younger people, and several short greetings 2026-04-12 (20:39–20:41). The 2026-03-17 question 'is this place alive?' belongs to the separate Adams/Landa Beach entry and MUST NOT be attributed to Parking Area. None reports a confirmed encounter."
         },
         {
           "url": "https://www.gays-cruising.com/en/cruising/parking_area_ayia_napa_cyprus_71303",
@@ -57,18 +57,18 @@
           "finding": "Asks about winter activity; not confirmed visit."
         },
         {
-          "date": "2026-03-17",
-          "type": "inquiry",
-          "finding": "Asks if location is active; not confirmed visit."
-        },
-        {
           "date": "2026-03-27",
           "type": "inquiry",
-          "finding": "Asks if younger visitors are around; not confirmed visit."
+          "finding": "Asks whether younger people are around; not confirmed visit."
+        },
+        {
+          "date": "2026-04-12",
+          "type": "conversation_only",
+          "finding": "Three short messages between 20:39:57 and 20:41:50 (two greetings and 'How are you'). No location report or encounter."
         }
       ],
       "cross_source_results": "Targeted indexed searches for matching Ayia Napa 'Parking Area' in CruisingGays, Squirt, gay-szene, Planet Randy, The Gay Passport, Splashd and Popcorn did not recover a unique corresponding source. This is NOT an exhaustive search or evidence of no listing.",
-      "description_for_research": "An older Ayia Napa cruising index has a separate car-park listing simply called Parking Area. Several messages from winter 2025 and spring 2026 ask about possible activity, but none confirms anyone was met there. The original detail page is blocked, so its map and access description still need recovery. The distinct Kermia gay-beach car park is not a verified match.",
+      "description_for_research": "An older Ayia Napa cruising index has a separate car-park listing simply called Parking Area. Several comments from winter 2025 and spring 2026 ask about possible activity or simply greet others; none confirms anyone was met there. The original detail page is blocked, so its map and access description still need recovery. The distinct Kermia gay-beach car park is not a verified match.",
       "next_actions": [
         "Recover source 71303 location coordinates from archive, authentic browser or source-provided map",
         "Search indexed local-language source mirrors and exact map/deep-link; test for alternate source listing",
@@ -371,5 +371,6 @@
     "CRU-CD2-205",
     "CRU-CD2-206",
     "CRU-CD2-209"
-  ]
+  ],
+  "methodology_correction": "Checked city-comment source markers line by line: message attribution is preceding listing title, and 2026-03-17 'is this place alive?' belongs to Adams/Landa Beach, NOT Parking Area."
 }
