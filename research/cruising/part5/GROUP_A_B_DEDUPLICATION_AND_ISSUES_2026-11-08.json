@@ -1,0 +1,2488 @@
+{
+  "_meta": {
+    "title": "Backroom A+B deduplicated QA — issue categories separated",
+    "generated_berlin": "2026-11-08",
+    "based_on_sha": "5347d9fe6e5fb3cffaef58d76a817abe56d2d6c7",
+    "scope": "Research staging only. Original research and live listings.json not modified; stage output is NOT publication approval.",
+    "principles": "Exact duplicates are excluded from new candidate set; duplicate source references are preserved for merge. Different issues have distinct categories; categories may overlap. Hold rows have verified named-place or approach GPS, not guaranteed pinpoint of sexual activity. Ambiguous flagged locations have no invented city-centre coordinates."
+  },
+  "counts": {
+    "original": 210,
+    "exact_duplicates_removed": 8,
+    "nonduplicate_remaining": 202,
+    "retained_mapped_with_hold": 131,
+    "retained_flagged": 71,
+    "retained_flagged_mapped": 14,
+    "retained_flagged_unmapped": 57,
+    "newly_geocoded": 13,
+    "hold_without_coordinates": 0
+  },
+  "removed_exact_duplicates": [
+    {
+      "candidate_index": 223,
+      "venue_id": "CRU-AB-0223",
+      "name": "Park Borisova Gradina",
+      "merge_into": "CRU-SOF-BORGRA-01",
+      "reason": "Existing Backroom listing already covers the same Borisova Gradina area",
+      "preserved_source_urls": "https://www.gays-cruising.com/en/bulgaria | https://www.gays-cruising.com/en/cruising/park_borisova_gradina_sofia_bulgaria_7519 | https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/cross_source_alignment_2026-11-06.json | https://www.visitsofia.bg/en/places-to-go/museums/index.php?Itemid=2021&lang=en&layer=50000&obektid=2182&option=com_cityinfrastructure&view=objectdetails"
+    },
+    {
+      "candidate_index": 316,
+      "venue_id": "CRU-AB-0316",
+      "name": "Donauinsel Nordstrand",
+      "merge_into": "CRU-AT-VIENNA-FKKUNDGAYCRUIS-0318",
+      "reason": "Existing Backroom listing covers same Donauinsel Nordstrand FKK sector and identical source position",
+      "preserved_source_urls": "https://www.gays-cruising.com/en/austria | https://www.gays-cruising.com/en/cruising/donauinsel_nordstrand_wien_austria_1910 | https://www.wien.gv.at/freizeit/fkk-donauinsel | https://www.gays-cruising.com/en/cruising/fkk_und_gay_cruising_wien_osterreich_52116 | https://www.rainbow.at/guide/1 | https://www.nakedplaces.net/photos/at_wn_donauinsel_nord.html"
+    },
+    {
+      "candidate_index": 448,
+      "venue_id": "CRU-AB-0448",
+      "name": "ZakjusalaNatural area",
+      "merge_into": "CRU-AB-0447",
+      "reason": "Same Zaķusala island with same coordinates; alternate transliteration",
+      "preserved_source_urls": "https://www.gays-cruising.com/en/latvia | https://www.gays-cruising.com/en/cruising/zakjusalanatural_area_riga_latvia_132852 | https://www.lvrtc.lv/projekti/tvtornis_2_0/ | https://www.lvrtc.lv/jaunumi/jaunumi/torna-parbuvi-istenos-tris-latvijas-uznemumu-apvieniba/ | https://en.wikipedia.org/wiki/Za%C4%B7usala"
+    },
+    {
+      "candidate_index": 449,
+      "venue_id": "CRU-AB-0449",
+      "name": "Kalngale Nudist Beach",
+      "merge_into": "CRU-RIX-KALBEA-03",
+      "reason": "Existing Backroom Kalngale Beach listing is the same beach",
+      "preserved_source_urls": "https://www.gays-cruising.com/en/latvia | https://www.gays-cruising.com/en/cruising/kalngale_nudist_beach_riga_latvia_134686 | https://www.cruisinggays.com/riga/areas/21874-kalngale/ | https://turisms.adazi.lv/piekrastes-stavlaukumi/ | https://www.mammamuntetiem.lv/skaistums-un-veseliba/fiziskas-aktivitates/52764/nudistu-pludmales-kuras-latvijas-pilsetas-tadas-ir | https://www.gayout.com/europe/latvia/riga | https://www.atd.lv/en/pieturvietas/11603"
+    },
+    {
+      "candidate_index": 603,
+      "venue_id": "CRU-AB-0603",
+      "name": "Park De Oeverlanden",
+      "merge_into": "CRU-AMS-HETNIEMEE-01",
+      "reason": "Existing Backroom De Oeverlanden/Het Nieuwe Meer listing is the same officially recognised area",
+      "preserved_source_urls": "https://www.gays-cruising.com/en/netherlands | https://www.amsterdam.nl/stadsdelen/nieuw-west/nieuws/gerichte-aanpak-brengt-rust-terug/ | https://www.politie.nl/nieuws/2026/mei/7/05-toename-geweldsincidenten-cruisegebied-de-oeverlanden.html | https://www.at5.nl/artikelen/240629/elf-jongens-aangehouden-na-geweldsincidenten-bij-cruiseplek-de-oeverlanden-rust-is-terug | https://mapcarta.com/26248924 | https://www.amsterdam.nl/projecten/oeverlanden/"
+    },
+    {
+      "candidate_index": 775,
+      "venue_id": "CRU-AB-0775",
+      "name": "Sortie efringen",
+      "merge_into": "CRU-AB-0776",
+      "reason": "French-language name for same Efringen-Kirchen parking/woodland source",
+      "preserved_source_urls": "https://www.gays-cruising.com/en/germany | https://gay-szene.net/parkplatz-efringen-kirchen-in-loerrach/13097/eintrag.html | https://www.queer.de/detail.php?article_id=52349 | https://croozr.fr/lieu-de-drague/bords-du-rhin-juste-a-la-sortie-efringen-kirchen-en-aval-des-chutes-d-istein/43085"
+    },
+    {
+      "candidate_index": 1033,
+      "venue_id": "CRU-AB-1033",
+      "name": "A5 Ausfahrt Efringen-Kirchen",
+      "merge_into": "CRU-AB-0776",
+      "reason": "Same A5 Efringen-Kirchen site, formerly wrongly categorized as France/Kembs",
+      "preserved_source_urls": "https://www.gays-cruising.com/en/france | https://gay-szene.net/parkplatz-efringen-kirchen-in-loerrach/13097/eintrag.html | https://rastplatz-treffpunkte.com/deutschland/baden-wuerttemberg/"
+    },
+    {
+      "candidate_index": 1170,
+      "venue_id": "CRU-AB-1170",
+      "name": "Scheidplatz",
+      "merge_into": "CRU-MUC-LUIPAR-01",
+      "reason": "Scheidplatz source explicitly describes Luitpoldpark and shares same mapped pin",
+      "preserved_source_urls": "https://www.gays-cruising.com/en/cruising/scheidplatz_munchen_deutschland_13147 | https://gay-szene.net/luitpoldpark-in-muenchen/6222/eintrag.html | https://www.cruisinggays.com/munchen/areas/76875-luitpoldpark/ | https://gaycation.eu/germany/munich/cruising-areas/luitpoldpark | https://mapcarta.com/36269974"
+    }
+  ],
+  "new_coordinate_matches": [
+    {
+      "index": 440,
+      "name": "Parco delle Mura - Bastioni",
+      "coordinates": [
+        45.433627,
+        10.981402
+      ],
+      "source_url": "https://www.outdooractive.com/en/poi/verona/parco-delle-mura/57226664/",
+      "pin_meaning": "named large park reference point, not exact cruising site"
+    },
+    {
+      "index": 732,
+      "name": "P & R Eichlinghofen",
+      "coordinates": [
+        51.4803,
+        7.39292
+      ],
+      "source_url": "https://www.nochoffen.de/salingen-p-r-dortmund-eichlinghofen",
+      "pin_meaning": "mapped named P+R on Universitätsstraße, not specific parking row"
+    },
+    {
+      "index": 741,
+      "name": "Formsandgrube Steinbach",
+      "coordinates": [
+        51.184681,
+        13.615133
+      ],
+      "source_url": "https://www.yumpu.com/de/document/view/1751028/gewasserverzeichnis-2012-anglerverband-sudsachsen-mulde-elster/50",
+      "pin_meaning": "named Formsandgrube Steinbach waterbody, not meeting point"
+    },
+    {
+      "index": 761,
+      "name": "Angermunder Baggerloch",
+      "coordinates": [
+        51.318569,
+        6.789478
+      ],
+      "source_url": "https://de.wikipedia.org/wiki/Angermunder_See",
+      "pin_meaning": "Angermunder See / Baggerloch central waterbody point, not swimming or access advice"
+    },
+    {
+      "index": 776,
+      "name": "Parkplatz Efringen-Kirchen",
+      "coordinates": [
+        47.67739,
+        7.52194
+      ],
+      "source_url": "https://mapcarta.com/W360817828",
+      "pin_meaning": "P+M Efringen-Kirchen exit approach parking, not verified same riverside meeting gate"
+    },
+    {
+      "index": 838,
+      "name": "Rastplatz Vahrenheide an der A 2",
+      "coordinates": [
+        52.42672,
+        9.75534
+      ],
+      "source_url": "https://mapcarta.com/de/W28389908",
+      "pin_meaning": "named Vahrenheide southbound A2 rest area point"
+    },
+    {
+      "index": 842,
+      "name": "Zauberwald beim Zoo",
+      "coordinates": [
+        52.38188,
+        9.76819
+      ],
+      "source_url": "https://mapcarta.com/de/N482916107",
+      "pin_meaning": "Zoo entrance on Adenauerallee 3 as walking approach to adjoining Eilenriede, not exact wooded location"
+    },
+    {
+      "index": 858,
+      "name": "Kanal in Dölzig",
+      "coordinates": [
+        51.357481,
+        12.202343
+      ],
+      "source_url": "https://www.fkk-freunde.info/viewtopic.php?f=8&sid=c7a671949f71155beaa34eebf33f1f87&start=20&t=5271",
+      "pin_meaning": "reported canal section east of A9/B186 near Dölzig, not permission to use restricted access"
+    },
+    {
+      "index": 861,
+      "name": "Kulkwitzer See Westufer",
+      "coordinates": [
+        51.306284,
+        12.238877
+      ],
+      "source_url": "https://www.outdooractive.com/de/route/trailrunning/region-leipzig/rund-um-den-kulkwitzer-see/1527102/",
+      "pin_meaning": "mapped public approach to Kulkwitzer See west shore, not exact cruising thicket"
+    },
+    {
+      "index": 918,
+      "name": "Rest area Briesenluch",
+      "coordinates": [
+        52.31237,
+        13.95229
+      ],
+      "source_url": "https://mapcarta.com/de/W370328682",
+      "pin_meaning": "named A12 Briesenluch rest area, not Briesen town or similarly named Briesen A12 layby"
+    },
+    {
+      "index": 943,
+      "name": "Parkplatz Aschheim",
+      "coordinates": [
+        48.17992,
+        11.72608
+      ],
+      "source_url": "https://www.b30oberschwaben.de/index.php?id=21&mode=show_locations",
+      "pin_meaning": "named A99 Parkplatz Aschheim motorway parking point, no confirmed exact meeting row"
+    },
+    {
+      "index": 948,
+      "name": "Riera Pomar",
+      "coordinates": [
+        41.472555,
+        2.24665
+      ],
+      "source_url": "https://callejear.com/barcelona/badalona/riera-de-pomar/",
+      "pin_meaning": "Riera de Pomar public roadway reference, not exact wooded section"
+    },
+    {
+      "index": 1014,
+      "name": "Calle Miguel Servet",
+      "coordinates": [
+        40.165421,
+        -3.664505
+      ],
+      "source_url": "https://carfy.es/concesionarios/madrid/valdemoro/volvo-espana-2-16067",
+      "pin_meaning": "Volvo business landmark near Calle Miguel Servet/Pinar de la Volvo, not legal woodland entrance"
+    }
+  ],
+  "flagged_issue_groups": {
+    "no_defensible_map_pin": [
+      {
+        "queue_index": 163,
+        "name": "Forest Logatec",
+        "city": "Logatec",
+        "country": "Slovenia",
+        "flag_reason": "EXACT_FOREST_AND_ACCESS_UNKNOWN;NO_VERIFIED_ACTIVITY;NO_SAFE_PIN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 189,
+        "name": "Airport toilets",
+        "city": "Istanbul",
+        "country": "Turkey",
+        "flag_reason": "IST_VS_SAW_UNRESOLVED;NO_SPECIFIC_FACILITY;NO_RECENT_ACTIVITY",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 222,
+        "name": "Abandoned WC in Park",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "flag_reason": "POSSIBLE_TRESPASS;BUILDING_UNSAFE;PARK_UNIDENTIFIED;NO_VERIFIED_ACTIVITY",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 241,
+        "name": "Parking Area near Big Greek Flag",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "flag_reason": "EXACT_CARPARK_PIN_UNVERIFIED;2026_MEETING_REQUESTS_ONLY",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 243,
+        "name": "Picnic Area near Airport",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "flag_reason": "TIMI_MATCH_HYPOTHESIS_ONLY;NO_EXACT_PIN_OR_RECENT_ACTIVITY",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 281,
+        "name": "Spatiu Servicii A1 inainte de Sebes",
+        "city": "Alba Iulia",
+        "country": "Romania",
+        "flag_reason": "MULTIPLE_A1_STOPS;DIRECTION_AND_PIN_MISSING;CHECKIN_NOT_ACTIVITY",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 290,
+        "name": "Glory hole",
+        "city": "Sibiu",
+        "country": "Romania",
+        "flag_reason": "EXACT_FACILITY_UNIDENTIFIED;RECENT_MEETING_MESSAGES_ONLY;PUBLIC_RESTROOM_PRIVACY",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 293,
+        "name": "Pădure Dumbravita-Timisoara",
+        "city": "Timișoara",
+        "country": "Romania",
+        "flag_reason": "FOREST_SITE_NOT_TIED_TO_PUBLIC_ENTRANCE;RECENT_INVITATION_NOT_VISIT",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 297,
+        "name": "A9 Rastplatz bei Spielfeld",
+        "city": "Leibnitz",
+        "country": "Austria",
+        "flag_reason": "A9_STOP_AND_DIRECTION_UNIDENTIFIED;NO_RECENT_PHYSICAL_REPORT",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 322,
+        "name": "Phoenix Park Military Road",
+        "city": "Dublin",
+        "country": "Ireland",
+        "flag_reason": "MULTIPLE_MILITARY_ROAD_CARPARKS;EXACT_ONE_NOT_IDENTIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 338,
+        "name": "Toilet near abandond hotel",
+        "city": "Marsaskala",
+        "country": "Malta",
+        "flag_reason": "TOILET_NOT_IDENTIFIED;JERMA_RELATION_SPECULATIVE;DERELICT_SITE_HAZARD",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 341,
+        "name": "Public toilet",
+        "city": "Qormi",
+        "country": "Malta",
+        "flag_reason": "PUBLIC_TOILET_UNSPECIFIED;NO_EXACT_PIN_OR_RECENT_ACTIVITY",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 342,
+        "name": "Garden, under the trees",
+        "city": "Qormi",
+        "country": "Malta",
+        "flag_reason": "PARK_OR_GARDEN_NOT_IDENTIFIED;ONLY_PROSPECTIVE_MEETINGS",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 383,
+        "name": "Ponte fiume Reno a Borgo Panigale",
+        "city": "Bologna",
+        "country": "Italy",
+        "flag_reason": "BRIDGE_NOT_IDENTIFIED;PONTELUNGO_HYPOTHESIS_ONLY",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 401,
+        "name": "Torrente Mugnone",
+        "city": "Florence",
+        "country": "Italy",
+        "flag_reason": "RIVER_SEGMENT_OR_BRIDGE_UNIDENTIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 428,
+        "name": "Bagni Grill Bazzera",
+        "city": "Venice",
+        "country": "Italy",
+        "flag_reason": "BAZZERA_NORD_OR_SUD_UNCONFIRMED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 436,
+        "name": "Oasi - Lungadige (Est)",
+        "city": "Verona",
+        "country": "Italy",
+        "flag_reason": "EXACT_EAST_BANK_STRETCH_UNKNOWN;EAST_VS_WEST_DISTINCT",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 437,
+        "name": "Alpo Cavalcavia",
+        "city": "Verona",
+        "country": "Italy",
+        "flag_reason": "OVERPASS_NOT_IDENTIFIED;2026_ROBBERY_WARNING",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 439,
+        "name": "Zona Industriale - Ca' di Mazze",
+        "city": "Verona",
+        "country": "Italy",
+        "flag_reason": "EXACT_LOT_UNKNOWN;POSSIBLE_DUPLICATE_PALAZZINA",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 457,
+        "name": "New place",
+        "city": "Riga",
+        "country": "Latvia",
+        "flag_reason": "NO_PLACE_IDENTITY;NO_SITE_PIN_OR_ROUTE",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 464,
+        "name": "Parking Murcki",
+        "city": "Katowice",
+        "country": "Poland",
+        "flag_reason": "MURCKI_EXACT_PARKING_LOT_UNIDENTIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 468,
+        "name": "MOP Wiśniowa Góa",
+        "city": "Łódź",
+        "country": "Poland",
+        "flag_reason": "A1_WISNIOWA_GORA_DIRECTION_NOT_IDENTIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 469,
+        "name": "AS 24",
+        "city": "Poznań",
+        "country": "Poland",
+        "flag_reason": "AS24_BRANCH_NOT_ESTABLISHED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 472,
+        "name": "Świecko Stacja Paliw Shell, boczna droga",
+        "city": "Słubice",
+        "country": "Poland",
+        "flag_reason": "SIDE_ROAD_NEAR_SHELL_SWIECKO_UNIDENTIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 492,
+        "name": "Antvorskov rest area",
+        "city": "Slagelse",
+        "country": "Denmark",
+        "flag_reason": "ANTVORSKOV_NORD_VS_SYD_NOT_CONCLUSIVELY_MATCHED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 493,
+        "name": "Tinglevvejen Rastplads",
+        "city": "Bolderslev",
+        "country": "Denmark",
+        "flag_reason": "TINGLEVVEJEN_REST_STOP_UNKNOWN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 521,
+        "name": "Agia fotini",
+        "city": "Athens",
+        "country": "Greece",
+        "flag_reason": "AGIA_FOTINI_BRIDGE_UNKNOWN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 593,
+        "name": "Am Fluss",
+        "city": "Obfelden",
+        "country": "Switzerland",
+        "flag_reason": "AM_FLUSS_RIVER_SEGMENT_UNKNOWN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 594,
+        "name": "Rastplatz Wäldchen mit Tür zu mehr",
+        "city": "Sevelen",
+        "country": "Switzerland",
+        "flag_reason": "SEVELEN_REST_STOP_UNKNOWN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 609,
+        "name": "De Bankjes",
+        "city": "Cromvoirt",
+        "country": "Netherlands",
+        "flag_reason": "DE_BANKJES_BENCHES_UNIDENTIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 641,
+        "name": "Karlshorst Treskowallee",
+        "city": "Berlin",
+        "country": "Germany",
+        "flag_reason": "2026_FIRSTHAND_DEMOLISHED_AND_CLOSED;UNSAFE_TRESPASS",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 648,
+        "name": "Klappe Tempelhofer Feld",
+        "city": "Berlin",
+        "country": "Germany",
+        "flag_reason": "EXACT_BASEBALL_AREA_RESTROOM_UNIDENTIFIED;SEALED_OPENING",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 656,
+        "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
+        "city": "Rüdersdorf bei Berlin",
+        "country": "Germany",
+        "flag_reason": "A10_UMBRELLA_CANDIDATE_MULTIPLE_DIFFERENT_STOPS",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 662,
+        "name": "Sandfläche im Jagen 87 des Grunewalds",
+        "city": "Berlin",
+        "country": "Germany",
+        "flag_reason": "JAGEN87_CLEARING_GEOREF_NOT_ESTABLISHED;DO_NOT_PIN_JAGEN86",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 699,
+        "name": "Bürgerpark Bremen 2",
+        "city": "Bremen",
+        "country": "Germany",
+        "flag_reason": "POSSIBLE_DUPLICATE_MASTER_CANDIDATE_698;RECENT_NEGATIVE_REPORT",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 706,
+        "name": "A4 Parkplatz Refrath",
+        "city": "Cologne",
+        "country": "Germany",
+        "flag_reason": "REFRATH_REOPENING_UNCONFIRMED;DO_NOT_COPY_LUSTHEIDE_PIN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 707,
+        "name": "Alberti See",
+        "city": "Cologne",
+        "country": "Germany",
+        "flag_reason": "EXACT_LAKE_AND_SAFE_ACCESS_UNKNOWN;BRIDGE_REMOVED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 733,
+        "name": "Parkplatz A45 Dortmund Westerfilde beidseitig",
+        "city": "Dortmund",
+        "country": "Germany",
+        "flag_reason": "TWO_DIFFERENT_A45_CARRIAGEWAYS_ONE_CANDIDATE",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 740,
+        "name": "Technische Universität Dortmund",
+        "city": "Dortmund",
+        "country": "Germany",
+        "flag_reason": "TOILET_BUILDING_FLOOR_AMBIGUOUS;NO_MODERN_POSITIVE_EVIDENCE",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 744,
+        "name": "Klappe Straßburger Platz",
+        "city": "Dresden",
+        "country": "Germany",
+        "flag_reason": "CURRENT_RESTROOM_ACCESS_AND_FLOOR_UNVERIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 763,
+        "name": "FKK Strand Himmelgeist am km 727",
+        "city": "Düsseldorf",
+        "country": "Germany",
+        "flag_reason": "KM727_PRECISE_SHORE_DISPUTED;2026_NEGATIVE_OBSERVATION",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 790,
+        "name": "Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring",
+        "city": "Frankfurt am Main",
+        "country": "Germany",
+        "flag_reason": "2026_CLOSED_CONSTRUCTION_STORAGE;MULTIPLE_UNIDENTIFIED_STOPS",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 866,
+        "name": "Parkplatz A6 in Höhe Mannheim Sandhofen",
+        "city": "Mannheim",
+        "country": "Germany",
+        "flag_reason": "A6_SANDHOFEN_REST_STOP_SIDE_UNIDENTIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 870,
+        "name": "A94 Ende in Marktl - unter der Alzbrücke",
+        "city": "Marktl",
+        "country": "Germany",
+        "flag_reason": "BRIDGE_ACCESS_POINTS_ON_BOTH_SIDES_UNKNOWN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 884,
+        "name": "Parkplatz an der B 471",
+        "city": "Munich",
+        "country": "Germany",
+        "flag_reason": "B471_EXACT_CAR_PARK_NOT_IDENTIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 896,
+        "name": "Hafenparkplatz Nürnberg Süd",
+        "city": "Nuremberg",
+        "country": "Germany",
+        "flag_reason": "EXACT_HAFENPARKPLATZ_ENTRANCE_UNCONFIRMED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 916,
+        "name": "Parking lot A117 Waldeck West",
+        "city": "Schönefeld",
+        "country": "Germany",
+        "flag_reason": "PARKING_LIKELY_DEMOLISHED_OR_REPURPOSED;NO_VERIFIED_REOPENING",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 960,
+        "name": "Parking río Llobregat El Prat",
+        "city": "El Prat de Llobregat",
+        "country": "Spain",
+        "flag_reason": "LLOBREGAT_PARKING_SPOT_UNIDENTIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 964,
+        "name": "Tivoli",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "flag_reason": "TIVOLI_PROPERTY_UNLOCATED;REDEVELOPMENT;NO_CURRENT_REPORT",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 968,
+        "name": "La Laja-Mercalaspalmas",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "flag_reason": "LA_LAJA_VS_MERCALASPALMAS_SITE_AMBIGUOUS",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 993,
+        "name": "Área de bomberos Mollet",
+        "city": "Mollet del Vallès",
+        "country": "Spain",
+        "flag_reason": "MOLLET_FIRE_STATION_PULLOUT_UNKNOWN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 1012,
+        "name": "Carrefour Terrassa",
+        "city": "Terrassa",
+        "country": "Spain",
+        "flag_reason": "CARREFOUR_TERRASSA_BRANCH_UNKNOWN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 1020,
+        "name": "Sa Coma",
+        "city": "Sa Coma",
+        "country": "Spain",
+        "flag_reason": "SA_COMA_PARKING_LOT_UNIDENTIFIED;GAY_MALE_RELEVANCE_UNVERIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 1039,
+        "name": "Bois Vincennes - Tata beach",
+        "city": "Paris",
+        "country": "France",
+        "flag_reason": "COMMUNITY_GAY_SOCIAL_SPOT_NOT_VALIDATED_AS_SEX_CRUISING",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 1049,
+        "name": "Riverside Walk - London",
+        "city": "London",
+        "country": "United Kingdom",
+        "flag_reason": "EXTENDED_CORRIDOR_NO_SPECIFIC_CRUISING_SECTION",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 1089,
+        "name": "The Greenway",
+        "city": "London",
+        "country": "United Kingdom",
+        "flag_reason": "2026_2028_SECTION_CLOSED;SOURCE_UNSPECIFIED_PATH_PIN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 1127,
+        "name": "Wetherspoons Pub in The Capitol",
+        "city": "London",
+        "country": "United Kingdom",
+        "flag_reason": "PUB_CLOSED_2023;CONVERTED_CHILDRENS_SOFTPLAY_2026;DO_NOT_PUBLISH",
+        "has_coordinates": false
+      }
+    ],
+    "historic_or_uncorroborated_activity": [
+      {
+        "queue_index": 189,
+        "name": "Airport toilets",
+        "city": "Istanbul",
+        "country": "Turkey",
+        "flag_reason": "IST_VS_SAW_UNRESOLVED;NO_SPECIFIC_FACILITY;NO_RECENT_ACTIVITY",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 241,
+        "name": "Parking Area near Big Greek Flag",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "flag_reason": "EXACT_CARPARK_PIN_UNVERIFIED;2026_MEETING_REQUESTS_ONLY",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 297,
+        "name": "A9 Rastplatz bei Spielfeld",
+        "city": "Leibnitz",
+        "country": "Austria",
+        "flag_reason": "A9_STOP_AND_DIRECTION_UNIDENTIFIED;NO_RECENT_PHYSICAL_REPORT",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 428,
+        "name": "Bagni Grill Bazzera",
+        "city": "Venice",
+        "country": "Italy",
+        "flag_reason": "BAZZERA_NORD_OR_SUD_UNCONFIRMED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 699,
+        "name": "Bürgerpark Bremen 2",
+        "city": "Bremen",
+        "country": "Germany",
+        "flag_reason": "POSSIBLE_DUPLICATE_MASTER_CANDIDATE_698;RECENT_NEGATIVE_REPORT",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 706,
+        "name": "A4 Parkplatz Refrath",
+        "city": "Cologne",
+        "country": "Germany",
+        "flag_reason": "REFRATH_REOPENING_UNCONFIRMED;DO_NOT_COPY_LUSTHEIDE_PIN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 744,
+        "name": "Klappe Straßburger Platz",
+        "city": "Dresden",
+        "country": "Germany",
+        "flag_reason": "CURRENT_RESTROOM_ACCESS_AND_FLOOR_UNVERIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 763,
+        "name": "FKK Strand Himmelgeist am km 727",
+        "city": "Düsseldorf",
+        "country": "Germany",
+        "flag_reason": "KM727_PRECISE_SHORE_DISPUTED;2026_NEGATIVE_OBSERVATION",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 780,
+        "name": "Alte Oper",
+        "city": "Frankfurt am Main",
+        "country": "Germany",
+        "flag_reason": "2025_WC_CLOSED_ON_VISIT;REOPENING_UNCONFIRMED",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 896,
+        "name": "Hafenparkplatz Nürnberg Süd",
+        "city": "Nuremberg",
+        "country": "Germany",
+        "flag_reason": "EXACT_HAFENPARKPLATZ_ENTRANCE_UNCONFIRMED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 1020,
+        "name": "Sa Coma",
+        "city": "Sa Coma",
+        "country": "Spain",
+        "flag_reason": "SA_COMA_PARKING_LOT_UNIDENTIFIED;GAY_MALE_RELEVANCE_UNVERIFIED",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 1039,
+        "name": "Bois Vincennes - Tata beach",
+        "city": "Paris",
+        "country": "France",
+        "flag_reason": "COMMUNITY_GAY_SOCIAL_SPOT_NOT_VALIDATED_AS_SEX_CRUISING",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 1106,
+        "name": "Haggerston Park",
+        "city": "London",
+        "country": "United Kingdom",
+        "flag_reason": "MANAGED_CODE_ACCESS_TOILET;OLD_CRUISING_CLAIM_UNVERIFIED",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 1108,
+        "name": "Abney Park Cemetery",
+        "city": "London",
+        "country": "United Kingdom",
+        "flag_reason": "CEMETERY_RESTRICTIONS;WINTER_GATES_CLOSE_16;NO_RECENT_VISITS",
+        "has_coordinates": true
+      }
+    ],
+    "safety_or_access": [
+      {
+        "queue_index": 222,
+        "name": "Abandoned WC in Park",
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "flag_reason": "POSSIBLE_TRESPASS;BUILDING_UNSAFE;PARK_UNIDENTIFIED;NO_VERIFIED_ACTIVITY",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 338,
+        "name": "Toilet near abandond hotel",
+        "city": "Marsaskala",
+        "country": "Malta",
+        "flag_reason": "TOILET_NOT_IDENTIFIED;JERMA_RELATION_SPECULATIVE;DERELICT_SITE_HAZARD",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 339,
+        "name": "Jerma Palace Glory Hole",
+        "city": "Marsaskala",
+        "country": "Malta",
+        "flag_reason": "DERELICT_UNSAFE_PROPERTY;NO_LEGAL_PUBLIC_WC_OR_RECENT_ACTIVITY",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 437,
+        "name": "Alpo Cavalcavia",
+        "city": "Verona",
+        "country": "Italy",
+        "flag_reason": "OVERPASS_NOT_IDENTIFIED;2026_ROBBERY_WARNING",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 475,
+        "name": "Olimpic Centre",
+        "city": "Warsaw",
+        "country": "Poland",
+        "flag_reason": "2026_KNIFE_THREAT_REPORT;NO_VERIFIED_SAFE_ACCESS",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 641,
+        "name": "Karlshorst Treskowallee",
+        "city": "Berlin",
+        "country": "Germany",
+        "flag_reason": "2026_FIRSTHAND_DEMOLISHED_AND_CLOSED;UNSAFE_TRESPASS",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 757,
+        "name": "Rahmer See",
+        "city": "Duisburg",
+        "country": "Germany",
+        "flag_reason": "PRIVATE_SHORE_RISK;MUNICIPAL_SWIMMING_BAN;NO_CURRENT_POSITIVE",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 798,
+        "name": "Friedhof Ohlsdorf",
+        "city": "Hamburg",
+        "country": "Germany",
+        "flag_reason": "ACTIVE_CEMETERY;CHAPEL_TOILET_LOCKED;TWO_SUBSITES",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 996,
+        "name": "Bosc CanDeu",
+        "city": "Sabadell",
+        "country": "Spain",
+        "flag_reason": "2026_RECREATIONAL_FOREST_ACCESS_PROHIBITED;NO_REOPENING",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 1051,
+        "name": "Nunhead Cemetery",
+        "city": "London",
+        "country": "United Kingdom",
+        "flag_reason": "ACTIVE_CEMETERY;NIGHT_ACCESS_NOT_PERMITTED;NO_2026_ONSITE_REPORT",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 1108,
+        "name": "Abney Park Cemetery",
+        "city": "London",
+        "country": "United Kingdom",
+        "flag_reason": "CEMETERY_RESTRICTIONS;WINTER_GATES_CLOSE_16;NO_RECENT_VISITS",
+        "has_coordinates": true
+      }
+    ],
+    "closed_rebuilt_or_access_changed": [
+      {
+        "queue_index": 641,
+        "name": "Karlshorst Treskowallee",
+        "city": "Berlin",
+        "country": "Germany",
+        "flag_reason": "2026_FIRSTHAND_DEMOLISHED_AND_CLOSED;UNSAFE_TRESPASS",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 648,
+        "name": "Klappe Tempelhofer Feld",
+        "city": "Berlin",
+        "country": "Germany",
+        "flag_reason": "EXACT_BASEBALL_AREA_RESTROOM_UNIDENTIFIED;SEALED_OPENING",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 655,
+        "name": "Parkplatz Waldeck Ost an der A 117",
+        "city": "Schönefeld",
+        "country": "Germany",
+        "flag_reason": "2026_REPEATED_CLOSURE_REPORTS;NO_CONFIRMED_REOPENING",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 706,
+        "name": "A4 Parkplatz Refrath",
+        "city": "Cologne",
+        "country": "Germany",
+        "flag_reason": "REFRATH_REOPENING_UNCONFIRMED;DO_NOT_COPY_LUSTHEIDE_PIN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 780,
+        "name": "Alte Oper",
+        "city": "Frankfurt am Main",
+        "country": "Germany",
+        "flag_reason": "2025_WC_CLOSED_ON_VISIT;REOPENING_UNCONFIRMED",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 785,
+        "name": "Klappe U-Bahnhof Schweizer Platz",
+        "city": "Frankfurt am Main",
+        "country": "Germany",
+        "flag_reason": "2026_LOCKED_TOILET_REPORT;NO_VERIFIED_REOPENING",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 790,
+        "name": "Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring",
+        "city": "Frankfurt am Main",
+        "country": "Germany",
+        "flag_reason": "2026_CLOSED_CONSTRUCTION_STORAGE;MULTIPLE_UNIDENTIFIED_STOPS",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 798,
+        "name": "Friedhof Ohlsdorf",
+        "city": "Hamburg",
+        "country": "Germany",
+        "flag_reason": "ACTIVE_CEMETERY;CHAPEL_TOILET_LOCKED;TWO_SUBSITES",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 830,
+        "name": "Cruising neben Parkplatz Silbersee Ost",
+        "city": "Hannover",
+        "country": "Germany",
+        "flag_reason": "2026_PARKING_CLOSED;REOPENING_NOT_VERIFIED",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 916,
+        "name": "Parking lot A117 Waldeck West",
+        "city": "Schönefeld",
+        "country": "Germany",
+        "flag_reason": "PARKING_LIKELY_DEMOLISHED_OR_REPURPOSED;NO_VERIFIED_REOPENING",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 964,
+        "name": "Tivoli",
+        "city": "Las Palmas de Gran Canaria",
+        "country": "Spain",
+        "flag_reason": "TIVOLI_PROPERTY_UNLOCATED;REDEVELOPMENT;NO_CURRENT_REPORT",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 996,
+        "name": "Bosc CanDeu",
+        "city": "Sabadell",
+        "country": "Spain",
+        "flag_reason": "2026_RECREATIONAL_FOREST_ACCESS_PROHIBITED;NO_REOPENING",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 1031,
+        "name": "Aire d'Entrenge",
+        "city": "Entrange",
+        "country": "France",
+        "flag_reason": "A31_2026_WC_DEMOLITION_AND_REBUILD;REOPENING_NOT_VERIFIED",
+        "has_coordinates": true
+      },
+      {
+        "queue_index": 1089,
+        "name": "The Greenway",
+        "city": "London",
+        "country": "United Kingdom",
+        "flag_reason": "2026_2028_SECTION_CLOSED;SOURCE_UNSPECIFIED_PATH_PIN",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 1127,
+        "name": "Wetherspoons Pub in The Capitol",
+        "city": "London",
+        "country": "United Kingdom",
+        "flag_reason": "PUB_CLOSED_2023;CONVERTED_CHILDRENS_SOFTPLAY_2026;DO_NOT_PUBLISH",
+        "has_coordinates": false
+      },
+      {
+        "queue_index": 1171,
+        "name": "Münchner Hauptbahnhof",
+        "city": "Munich",
+        "country": "Germany",
+        "flag_reason": "ORIGINAL_UNDERGROUND_WC_CLOSED_IN_REBUILD;REPLACEMENT_NOT_CRUISING_SITE",
+        "has_coordinates": true
+      }
+    ]
+  },
+  "flagged_rows": [
+    {
+      "queue_index": 163,
+      "Venue_ID": "CRU-AB-0163",
+      "Name": "Forest Logatec",
+      "City": "Logatec",
+      "Country": "Slovenia",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "EXACT_FOREST_AND_ACCESS_UNKNOWN;NO_VERIFIED_ACTIVITY;NO_SAFE_PIN",
+      "source_links": [
+        "https://www.gays-cruising.com/en/slovenia",
+        "https://www.gays-cruising.com/en/cruising/forest_logatec_inner_carniola_slovenia_14979"
+      ],
+      "original_activity_summary": "No supported time or seasonal pattern. A commenter in April 2026 asked where the location was and whether anything happens."
+    },
+    {
+      "queue_index": 189,
+      "Venue_ID": "CRU-AB-0189",
+      "Name": "Airport toilets",
+      "City": "Istanbul",
+      "Country": "Turkey",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "historic_or_uncorroborated_activity",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "IST_VS_SAW_UNRESOLVED;NO_SPECIFIC_FACILITY;NO_RECENT_ACTIVITY",
+      "source_links": [
+        "https://www.gays-cruising.com/en/turkey",
+        "https://www.gays-cruising.com/en/cruising/airport_toilets_istanbul_turkije_117044"
+      ],
+      "original_activity_summary": "No supported time. The April 2026 message was a contact inquiry, not a first-hand visit."
+    },
+    {
+      "queue_index": 222,
+      "Venue_ID": "CRU-AB-0222",
+      "Name": "Abandoned WC in Park",
+      "City": "Sofia",
+      "Country": "Bulgaria",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "safety_or_access",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "POSSIBLE_TRESPASS;BUILDING_UNSAFE;PARK_UNIDENTIFIED;NO_VERIFIED_ACTIVITY",
+      "source_links": [
+        "https://www.gays-cruising.com/en/bulgaria",
+        "https://www.gays-cruising.com/en/cruising/abandoned_wc_in_park_sofia_bulgaria_83800"
+      ],
+      "original_activity_summary": "No credible current peak. A July 2026 account merely mentions seeing one older man; other posts ask for details or say they never visited."
+    },
+    {
+      "queue_index": 241,
+      "Venue_ID": "CRU-AB-0241",
+      "Name": "Parking Area near Big Greek Flag",
+      "City": "Paphos",
+      "Country": "Cyprus",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "historic_or_uncorroborated_activity",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "EXACT_CARPARK_PIN_UNVERIFIED;2026_MEETING_REQUESTS_ONLY",
+      "source_links": [
+        "https://www.gays-cruising.com/en/cyprus",
+        "https://www.gays-cruising.com/en/cruising/parking_area_near_big_greek_flag_paphos_cyprus_83677"
+      ],
+      "original_activity_summary": "A contributor in February 2025 recalled attending in the mornings around 09:00–11:00, but this predates the research cutoff. June 2026 posts only propose meetings."
+    },
+    {
+      "queue_index": 243,
+      "Venue_ID": "CRU-AB-0243",
+      "Name": "Picnic Area near Airport",
+      "City": "Paphos",
+      "Country": "Cyprus",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "TIMI_MATCH_HYPOTHESIS_ONLY;NO_EXACT_PIN_OR_RECENT_ACTIVITY",
+      "source_links": [
+        "https://www.gays-cruising.com/en/cyprus",
+        "https://www.gays-cruising.com/en/cruising/picnic_area_near_airport_paphos_cyprus_55627",
+        "https://data.gov.cy/index.php/en/resource/689",
+        "https://www.visitpafos.org.cy/off-the-beaten-track/where-to-stay/"
+      ],
+      "original_activity_summary": "No confirmed busy times. June 2026 messages discuss future visits rather than documented encounters."
+    },
+    {
+      "queue_index": 281,
+      "Venue_ID": "CRU-AB-0281",
+      "Name": "Spatiu Servicii A1 inainte de Sebes",
+      "City": "Alba Iulia",
+      "Country": "Romania",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "MULTIPLE_A1_STOPS;DIRECTION_AND_PIN_MISSING;CHECKIN_NOT_ACTIVITY",
+      "source_links": [
+        "https://www.gays-cruising.com/en/romania",
+        "https://www.gays-cruising.com/en/cruising/spatiu_servicii_a1_inainte_de_sebes_alba_iulia_romania_51509",
+        "https://distanta.eoo.ro/ro/autostrada/a1/",
+        "https://restareaseurope.com/ro/romania/alba/"
+      ],
+      "original_activity_summary": "An April 2026 check-in is a platform signal, not proof of a completed meeting. No credible time pattern."
+    },
+    {
+      "queue_index": 290,
+      "Venue_ID": "CRU-AB-0290",
+      "Name": "Glory hole",
+      "City": "Sibiu",
+      "Country": "Romania",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "EXACT_FACILITY_UNIDENTIFIED;RECENT_MEETING_MESSAGES_ONLY;PUBLIC_RESTROOM_PRIVACY",
+      "source_links": [
+        "https://www.gays-cruising.com/en/romania",
+        "https://www.gays-cruising.com/en/cruising/glory_hole_sibiu_romania_71017"
+      ],
+      "original_activity_summary": "A directory calls afternoon popular, but its July 2026 comments were questions and prospective visits. There is no dependable current peak."
+    },
+    {
+      "queue_index": 293,
+      "Venue_ID": "CRU-AB-0293",
+      "Name": "Pădure Dumbravita-Timisoara",
+      "City": "Timișoara",
+      "Country": "Romania",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "FOREST_SITE_NOT_TIED_TO_PUBLIC_ENTRANCE;RECENT_INVITATION_NOT_VISIT",
+      "source_links": [
+        "https://www.gays-cruising.com/en/romania",
+        "https://www.gays-cruising.com/en/cruising/pdure_dumbravita_timisoara_timisoara_romania_67752",
+        "https://hcl.usr.ro/timisoara/2026/h510",
+        "https://visitromania.ro/en/attraction/dumbravita/padurea-verde"
+      ],
+      "original_activity_summary": "An April 2026 post offered to meet immediately; no actual encounter or repeat busy period was confirmed."
+    },
+    {
+      "queue_index": 297,
+      "Venue_ID": "CRU-AB-0297",
+      "Name": "A9 Rastplatz bei Spielfeld",
+      "City": "Leibnitz",
+      "Country": "Austria",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "historic_or_uncorroborated_activity",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "A9_STOP_AND_DIRECTION_UNIDENTIFIED;NO_RECENT_PHYSICAL_REPORT",
+      "source_links": [
+        "https://www.gays-cruising.com/en/austria",
+        "https://www.gays-cruising.com/en/cruising/a9_rastplatz_bei_spielfeld_leibnitz_osterreich_5116",
+        "https://www.pundk.at/verkehr/Generalplanung_PDF/119620_A9-Rastplatz-Ortnerhof-Sued.pdf"
+      ],
+      "original_activity_summary": "The April 2026 comment was simply a 'now?' query; no supported cruising hours or observed visits."
+    },
+    {
+      "queue_index": 322,
+      "Venue_ID": "CRU-AB-0322",
+      "Name": "Phoenix Park Military Road",
+      "City": "Dublin",
+      "Country": "Ireland",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "MULTIPLE_MILITARY_ROAD_CARPARKS;EXACT_ONE_NOT_IDENTIFIED",
+      "source_links": [
+        "https://www.gays-cruising.com/en/ireland",
+        "https://www.gays-cruising.com/en/cruising/phoenix_park_military_road_dublin_ireland_25514",
+        "https://phoenixpark.ie/",
+        "https://www.phoenixpark.ie/directions-2/",
+        "https://phoenixpark.ie/directions-2/"
+      ],
+      "original_activity_summary": "An indexed discussion in June 2026 proves only that someone posted, not that a meeting happened. No reliable current busy hours."
+    },
+    {
+      "queue_index": 338,
+      "Venue_ID": "CRU-AB-0338",
+      "Name": "Toilet near abandond hotel",
+      "City": "Marsaskala",
+      "Country": "Malta",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "safety_or_access",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "TOILET_NOT_IDENTIFIED;JERMA_RELATION_SPECULATIVE;DERELICT_SITE_HAZARD",
+      "source_links": [
+        "https://www.gays-cruising.com/en/malta",
+        "https://www.gays-cruising.com/en/cruising/toilet_near_abandond_hotel_marsa_scala_malta_42028",
+        "https://www.gov.mt/en/publicconsultation/Pages/2026/NL-0040-2026.aspx",
+        "https://www.maltatoday.com.mt/news/national/145095/jermas_accidental_rewilding_bat_roosts_and_lizards"
+      ],
+      "original_activity_summary": "No supported busy hours or recent direct visit evidence."
+    },
+    {
+      "queue_index": 339,
+      "Venue_ID": "CRU-AB-0339",
+      "Name": "Jerma Palace Glory Hole",
+      "City": "Marsaskala",
+      "Country": "Malta",
+      "original_status": "Flag",
+      "Latitude": "35.86108",
+      "Longitude": "14.57421",
+      "issue_categories": [
+        "safety_or_access"
+      ],
+      "issue_text": "DERELICT_UNSAFE_PROPERTY;NO_LEGAL_PUBLIC_WC_OR_RECENT_ACTIVITY",
+      "source_links": [
+        "https://www.gays-cruising.com/en/malta",
+        "https://www.gays-cruising.com/en/cruising/jerma_palace_glory_hole_mskala_malta_68016",
+        "https://www.gov.mt/en/publicconsultation/Pages/2026/NL-0040-2026.aspx",
+        "https://era.org.mt/era-project/pa04710-18/",
+        "https://www.maltatoday.com.mt/news/national/145095/jermas_accidental_rewilding_bat_roosts_and_lizards",
+        "https://mt.geoview.info/jerma_palace_hotel%2C907696296w"
+      ],
+      "original_activity_summary": "There is no supported recent cruising peak or credible report of currently accessible facilities."
+    },
+    {
+      "queue_index": 341,
+      "Venue_ID": "CRU-AB-0341",
+      "Name": "Public toilet",
+      "City": "Qormi",
+      "Country": "Malta",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "PUBLIC_TOILET_UNSPECIFIED;NO_EXACT_PIN_OR_RECENT_ACTIVITY",
+      "source_links": [
+        "https://www.gays-cruising.com/en/malta",
+        "https://www.gays-cruising.com/en/cruising/public_toilet_qormi_malta_110077"
+      ],
+      "original_activity_summary": "The June 2026 post asked if anybody was there; it does not establish an actual visit or a busy period."
+    },
+    {
+      "queue_index": 342,
+      "Venue_ID": "CRU-AB-0342",
+      "Name": "Garden, under the trees",
+      "City": "Qormi",
+      "Country": "Malta",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "PARK_OR_GARDEN_NOT_IDENTIFIED;ONLY_PROSPECTIVE_MEETINGS",
+      "source_links": [
+        "https://www.gays-cruising.com/en/malta",
+        "https://www.gays-cruising.com/en/cruising/garden_under_the_trees_qormi_malta_123629"
+      ],
+      "original_activity_summary": "June 2026 messages propose meetups, without documenting visits or repeat peak times."
+    },
+    {
+      "queue_index": 383,
+      "Venue_ID": "CRU-AB-0383",
+      "Name": "Ponte fiume Reno a Borgo Panigale",
+      "City": "Bologna",
+      "Country": "Italy",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "BRIDGE_NOT_IDENTIFIED;PONTELUNGO_HYPOTHESIS_ONLY",
+      "source_links": [
+        "https://www.gays-cruising.com/en/cruising/ponte_fiume_reno_a_borgo_panigale_bologna_italia_6009",
+        "https://www.comune.bologna.it/novita/comunicati-stampa/replica-del-comune-di-bologna-sul-rilievo-anac-relativo-ai-lavori-sul-pontelungo",
+        "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy"
+      ],
+      "original_activity_summary": "The May 2026 post was a meeting question, not a documented encounter or current peak."
+    },
+    {
+      "queue_index": 401,
+      "Venue_ID": "CRU-AB-0401",
+      "Name": "Torrente Mugnone",
+      "City": "Florence",
+      "Country": "Italy",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "RIVER_SEGMENT_OR_BRIDGE_UNIDENTIFIED",
+      "source_links": [
+        "https://www.gays-cruising.com/en/cruising/torrente_mugnone_firenze_italia_74570",
+        "https://www.055firenze.it/art/243557/mugnone-nuove-segnalazioni-di-degrado-lungo-la-ciclabile-di-viale-redi",
+        "https://mobilita.comune.fi.it/tramvia/sistema_tramviario/linea2.html"
+      ],
+      "original_activity_summary": "No dated first-hand cruising report establishes busy times."
+    },
+    {
+      "queue_index": 428,
+      "Venue_ID": "CRU-AB-0428",
+      "Name": "Bagni Grill Bazzera",
+      "City": "Venice",
+      "Country": "Italy",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "historic_or_uncorroborated_activity",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "BAZZERA_NORD_OR_SUD_UNCONFIRMED",
+      "source_links": [
+        "https://www.gays-cruising.com/en/veneto_venezia/italy",
+        "https://www.gays-cruising.com/en/cruising/bagni_grill_bazzera_venezia_italia_29500",
+        "https://zanibellato.it/progetto/commerciale/bagni-stazione-puntogrill-bazzera-nord/",
+        "https://restaurantguru.it/Punto-Grill-Venice"
+      ],
+      "original_activity_summary": "No current peak or verified encounter is established; a July 2026 review concerned general hygiene rather than cruising."
+    },
+    {
+      "queue_index": 436,
+      "Venue_ID": "CRU-AB-0436",
+      "Name": "Oasi - Lungadige (Est)",
+      "City": "Verona",
+      "Country": "Italy",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "EXACT_EAST_BANK_STRETCH_UNKNOWN;EAST_VS_WEST_DISTINCT",
+      "source_links": [
+        "https://www.gays-cruising.com/en/cruising/oasi_lungadige_est_verona_italia_114746",
+        "https://www.gays-cruising.com/en/verona/veneto_verona/italy"
+      ],
+      "original_activity_summary": "An April 2026 poster said they planned to go, which is not proof of a completed meeting or recurring peak."
+    },
+    {
+      "queue_index": 437,
+      "Venue_ID": "CRU-AB-0437",
+      "Name": "Alpo Cavalcavia",
+      "City": "Verona",
+      "Country": "Italy",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "safety_or_access",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "OVERPASS_NOT_IDENTIFIED;2026_ROBBERY_WARNING",
+      "source_links": [
+        "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+        "https://www.gays-cruising.com/en/cruising/alpo_cavalcavia_verona_italy_43481",
+        "https://confartigianato.verona.it/categorie-cat/attualita/mobilita-modifiche-temporanee-alla-viabilita-sulla-tangenziale-sud-dal-5-settembre-chiuso-al-traffico-il-tratto-tra-alpo-zai-e-verona-sud-e-altre-limitazioni-nei-giorni-successivi/"
+      ],
+      "original_activity_summary": "The latest report is a 2026 warning about theft and hostility, not evidence of current busy cruising times."
+    },
+    {
+      "queue_index": 439,
+      "Venue_ID": "CRU-AB-0439",
+      "Name": "Zona Industriale - Ca' di Mazze",
+      "City": "Verona",
+      "Country": "Italy",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "EXACT_LOT_UNKNOWN;POSSIBLE_DUPLICATE_PALAZZINA",
+      "source_links": [
+        "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+        "https://www.gays-cruising.com/en/cruising/zona_industriale_ca_di_mazze_verona_italia_49128",
+        "https://www.italiamappe.it/stradario/verona/via-ca%27-di-mazze%27/",
+        "https://www.gays-cruising.com/en/cruising/palazzina_verona_italia_5902"
+      ],
+      "original_activity_summary": "The April 2026 comment asked about the earlier event, without establishing a current peak."
+    },
+    {
+      "queue_index": 457,
+      "Venue_ID": "CRU-AB-0457",
+      "Name": "New place",
+      "City": "Riga",
+      "Country": "Latvia",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "NO_PLACE_IDENTITY;NO_SITE_PIN_OR_ROUTE",
+      "source_links": [
+        "https://www.gays-cruising.com/en/latvia",
+        "https://www.gays-cruising.com/en/cruising/new_place_riga_latvia_99061"
+      ],
+      "original_activity_summary": "An April 2026 comment asks about activity but does not establish an actual visitor or peak."
+    },
+    {
+      "queue_index": 464,
+      "Venue_ID": "CRU-AB-0464",
+      "Name": "Parking Murcki",
+      "City": "Katowice",
+      "Country": "Poland",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "MURCKI_EXACT_PARKING_LOT_UNIDENTIFIED",
+      "source_links": [
+        "https://www.gays-cruising.com/en/poland",
+        "https://www.gays-cruising.com/en/cruising/parking_murcki_kattowitz_sud_poland_73929"
+      ],
+      "original_activity_summary": "A June 2026 commenter said he was there and sought a meeting, but did not describe an observed encounter or reliable pattern."
+    },
+    {
+      "queue_index": 468,
+      "Venue_ID": "CRU-AB-0468",
+      "Name": "MOP Wiśniowa Góa",
+      "City": "Łódź",
+      "Country": "Poland",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "A1_WISNIOWA_GORA_DIRECTION_NOT_IDENTIFIED",
+      "source_links": [
+        "https://www.gays-cruising.com/en/poland",
+        "https://www.gays-cruising.com/en/cruising/mop_wisniowa_gora_lodz_poland_81801",
+        "https://evstar.pl/mopy/a1/wisniowa-gora-zachod-147",
+        "https://evstar.pl/mopy/a1/wisniowa-gora-wschod-146",
+        "https://lodzka.policja.gov.pl/ld/informacje/116455%2CWymiana-turnusow-ferii-wzmozone-dzialania-na-drogach-Lodzkiego.html",
+        "https://lodz.lento.pl/kierownik-budowy-stacja-orlen-mop-wisniowa%2C15204794.html"
+      ],
+      "original_activity_summary": "Both motorway stops provide parking and customer toilets, but no reliable recent cruise times or witnessed activity were found."
+    },
+    {
+      "queue_index": 469,
+      "Venue_ID": "CRU-AB-0469",
+      "Name": "AS 24",
+      "City": "Poznań",
+      "Country": "Poland",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "AS24_BRANCH_NOT_ESTABLISHED",
+      "source_links": [
+        "https://www.gays-cruising.com/en/poland",
+        "https://www.gays-cruising.com/pl/cruising/as_24_posen_poland_69237",
+        "https://www.gays-cruising.com/pl/wielkopolskie/polska",
+        "https://www.as24.com/pl",
+        "https://paliwa.pl/strona-startowa/archiwum/nowa-stacja-as-24-w-kostrzyniu?pdf=29"
+      ],
+      "original_activity_summary": "June 2026 online messages ask who is there, not proof of actual visits or busy hours."
+    },
+    {
+      "queue_index": 472,
+      "Venue_ID": "CRU-AB-0472",
+      "Name": "Świecko Stacja Paliw Shell, boczna droga",
+      "City": "Słubice",
+      "Country": "Poland",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "SIDE_ROAD_NEAR_SHELL_SWIECKO_UNIDENTIFIED",
+      "source_links": [
+        "https://www.gays-cruising.com/en/poland",
+        "https://www.gays-cruising.com/en/cruising/wiecko_stacja_paliw_shell_boczna_droga_slubice_polska_90388",
+        "https://www.shell.pl/biznesowi/oferta-dla-firm-transportowych/lng-w-transporcie.html",
+        "https://www.mylpg.eu/pl/stacje/polska/stacja/Shell-544AB74A-EAD0-66ED-4ABB-C5BD55E1765E",
+        "https://teraz-otwarte.pl/swiecko"
+      ],
+      "original_activity_summary": "A June 2026 online check-in doesn't prove anyone attended. There is no supported crowd or busy time."
+    },
+    {
+      "queue_index": 475,
+      "Venue_ID": "CRU-AB-0475",
+      "Name": "Olimpic Centre",
+      "City": "Warsaw",
+      "Country": "Poland",
+      "original_status": "Flag",
+      "Latitude": "52.2741",
+      "Longitude": "20.99688",
+      "issue_categories": [
+        "safety_or_access"
+      ],
+      "issue_text": "2026_KNIFE_THREAT_REPORT;NO_VERIFIED_SAFE_ACCESS",
+      "source_links": [
+        "https://www.gays-cruising.com/en/poland",
+        "https://www.gays-cruising.com/en/cruising/olimpic_centre_warszawa_poland_27698",
+        "https://olimpijski.pl/centrum-olimpijskie/budynek/",
+        "https://www.muzeumsportu.waw.pl/wizyta/dojazd",
+        "https://olimpijski.pl/centrum-olimpijskie/olympic-sky/",
+        "https://www.gays-cruising.com/en/warszawa/mazowieckie/poland",
+        "https://warsaw.worldplaces.me/pl/review/90055736-centrum-olimpijskie.html"
+      ],
+      "original_activity_summary": "The source contains recent meeting interest but not a reliable pattern of encounters or hours."
+    },
+    {
+      "queue_index": 492,
+      "Venue_ID": "CRU-AB-0492",
+      "Name": "Antvorskov rest area",
+      "City": "Slagelse",
+      "Country": "Denmark",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "ANTVORSKOV_NORD_VS_SYD_NOT_CONCLUSIVELY_MATCHED",
+      "source_links": [
+        "https://www.gays-cruising.com/en/denmark",
+        "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
+        "https://www.vejdirektoratet.dk/trafikant/rastepladser-din-pause-paa-turen",
+        "https://www.retsinformation.dk/eli/lta/2023/1431",
+        "https://poi.gpsforalle.dk/print2.php?cid=1026&gid=555"
+      ],
+      "original_activity_summary": "March and April 2026 messages proposed meetups, while one visitor complained that nobody arrived. No predictable active time is established."
+    },
+    {
+      "queue_index": 493,
+      "Venue_ID": "CRU-AB-0493",
+      "Name": "Tinglevvejen Rastplads",
+      "City": "Bolderslev",
+      "Country": "Denmark",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "TINGLEVVEJEN_REST_STOP_UNKNOWN",
+      "source_links": [
+        "https://www.popcorn.dating/denmark/syddanmark/bolderslev/locations/public-sex/parking%2Blot/tinglevvejen-rastplads/19234/",
+        "https://www.gays-cruising.com/en/cruising/tinglevvej_aabenraa_danemark_102701",
+        "https://www.gays-cruising.com/en/denmark",
+        "https://aabenraa.dk/media/g1cdul3d/lokalrute-6-kliplev.pdf"
+      ],
+      "original_activity_summary": "A June 2026 question at the possible alias does not establish physical visits or busiest times."
+    },
+    {
+      "queue_index": 521,
+      "Venue_ID": "CRU-AB-0521",
+      "Name": "Agia fotini",
+      "City": "Athens",
+      "Country": "Greece",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "AGIA_FOTINI_BRIDGE_UNKNOWN",
+      "source_links": [
+        "https://www.gays-cruising.com/en/greece",
+        "https://www.gays-cruising.com/en/cruising/agia_fotini_athens_greece_74115",
+        "https://www.gays-cruising.com/en/cruising/zappion_gardens_athens_grece_29879"
+      ],
+      "original_activity_summary": "The 2025 visitor reportedly saw no one; an empty 2026 online post offers no current activity evidence."
+    },
+    {
+      "queue_index": 593,
+      "Venue_ID": "CRU-AB-0593",
+      "Name": "Am Fluss",
+      "City": "Obfelden",
+      "Country": "Switzerland",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "AM_FLUSS_RIVER_SEGMENT_UNKNOWN",
+      "source_links": [
+        "https://www.gays-cruising.com/en/switzerland",
+        "https://www.gays-cruising.com/en/cruising/am_fluss_obfelden_schweiz_54302"
+      ],
+      "original_activity_summary": "A July 2026 website check-in isn't proof of an actual visit or any popular time."
+    },
+    {
+      "queue_index": 594,
+      "Venue_ID": "CRU-AB-0594",
+      "Name": "Rastplatz Wäldchen mit Tür zu mehr",
+      "City": "Sevelen",
+      "Country": "Switzerland",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "SEVELEN_REST_STOP_UNKNOWN",
+      "source_links": [
+        "https://www.gays-cruising.com/en/switzerland",
+        "https://www.gays-cruising.com/en/cruising/rastplatz_waldchen_mit_tur_zu_mehr_sevelen_schweiz_97200"
+      ],
+      "original_activity_summary": "A July 2026 online check-in alone provides no evidence of a real visit."
+    },
+    {
+      "queue_index": 609,
+      "Venue_ID": "CRU-AB-0609",
+      "Name": "De Bankjes",
+      "City": "Cromvoirt",
+      "Country": "Netherlands",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "DE_BANKJES_BENCHES_UNIDENTIFIED",
+      "source_links": [
+        "https://www.gays-cruising.com/en/netherlands"
+      ],
+      "original_activity_summary": "A July 2026 platform check-in gives no actual visit time or evidence of cruising."
+    },
+    {
+      "queue_index": 641,
+      "Venue_ID": "CRU-AB-0641",
+      "Name": "Karlshorst Treskowallee",
+      "City": "Berlin",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed",
+        "safety_or_access",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "2026_FIRSTHAND_DEMOLISHED_AND_CLOSED;UNSAFE_TRESPASS",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
+        "https://gay-szene.net/karlshorst-treskowallee-in-berlin/11594/eintrag.html",
+        "https://gay-szene.net/sonnenbad-wuhlheide-in-berlin/13063/eintrag.html"
+      ],
+      "original_activity_summary": "There is no current usable cruising time or place. The former location is reported sold and closed."
+    },
+    {
+      "queue_index": 648,
+      "Venue_ID": "CRU-AB-0648",
+      "Name": "Klappe Tempelhofer Feld",
+      "City": "Berlin",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "EXACT_BASEBALL_AREA_RESTROOM_UNIDENTIFIED;SEALED_OPENING",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
+        "https://gay-szene.net/klappe-tempelhofer-feld-in-berlin/13070/eintrag.html",
+        "https://www.tempelhoferfeld.de/"
+      ],
+      "original_activity_summary": "A March 2026 visitor found the former hole between cubicles sealed and no action. Later October posts report mixed access and often no visitors; no reliable current peak."
+    },
+    {
+      "queue_index": 655,
+      "Venue_ID": "CRU-AB-0655",
+      "Name": "Parkplatz Waldeck Ost an der A 117",
+      "City": "Schönefeld",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "52.378021",
+      "Longitude": "13.56291",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed"
+      ],
+      "issue_text": "2026_REPEATED_CLOSURE_REPORTS;NO_CONFIRMED_REOPENING",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
+        "https://gay-szene.net/parkplatz-waldeck-ost-an-der-a-117-in-berlin/9269/eintrag.html",
+        "https://rastplatz.app/parkplatz/waldeck-ost-a117",
+        "https://www.verkehr.de/autobahn/a117/",
+        "https://www.autobahn-baustellen.de/rastanlage/a117-waldeck-ost/"
+      ],
+      "original_activity_summary": "First-person comments in May, June and July 2026 report closure or very little activity; no credible current cruising peak can be recommended."
+    },
+    {
+      "queue_index": 656,
+      "Venue_ID": "CRU-AB-0656",
+      "Name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
+      "City": "Rüdersdorf bei Berlin",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "A10_UMBRELLA_CANDIDATE_MULTIPLE_DIFFERENT_STOPS",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
+        "https://gay-szene.net/parkplaetze-a10-zwischen-erkner-und-ruedersdorf-in-berlin/11008/eintrag.html",
+        "https://www.raststaetten.de/standorte/seeberg-west/",
+        "https://www.raststaetten.de/standorte/seeberg-ost/",
+        "https://www.autobahn-baustellen.de/rastanlage/a10-kalkberge/"
+      ],
+      "original_activity_summary": "March 2026 comments describe both repeat visits and empty parking, but they refer to different A10 stopping points. No consolidated busy time is meaningful."
+    },
+    {
+      "queue_index": 662,
+      "Venue_ID": "CRU-AB-0662",
+      "Name": "Sandfläche im Jagen 87 des Grunewalds",
+      "City": "Berlin",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "JAGEN87_CLEARING_GEOREF_NOT_ESTABLISHED;DO_NOT_PIN_JAGEN86",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
+        "https://gay-szene.net/sandflaeche-im-jagen-87-des-grunewalds-in-berlin/12849/eintrag.html",
+        "https://www.berlin.de/forsten/walderlebnis/ausflugsziele/grunewald/"
+      ],
+      "original_activity_summary": "April–July 2026 first-person accounts mention men sunbathing and exploring the adjacent woodland, with some visitors reporting no encounter. Warm daylight use is more supported than a specific nightly schedule."
+    },
+    {
+      "queue_index": 699,
+      "Venue_ID": "CRU-AB-0699",
+      "Name": "Bürgerpark Bremen 2",
+      "City": "Bremen",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "historic_or_uncorroborated_activity",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "POSSIBLE_DUPLICATE_MASTER_CANDIDATE_698;RECENT_NEGATIVE_REPORT",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html",
+        "https://gay-szene.net/buergerpark-bremen-2-in-bremen/12703/eintrag.html",
+        "https://www.buergerpark.de/bilder/Parkordnung.pdf?m=1757621813"
+      ],
+      "original_activity_summary": "A May 2026 contributor described several unsuccessful visits during April. The old positive report is from 2019, so no current busy time is established."
+    },
+    {
+      "queue_index": 706,
+      "Venue_ID": "CRU-AB-0706",
+      "Name": "A4 Parkplatz Refrath",
+      "City": "Cologne",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed",
+        "historic_or_uncorroborated_activity",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "REFRATH_REOPENING_UNCONFIRMED;DO_NOT_COPY_LUSTHEIDE_PIN",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html",
+        "https://gay-szene.net/a4-parkplatz-refrath-in-koeln/5659/eintrag.html"
+      ],
+      "original_activity_summary": "January 2026 reported both areas closed, while an April comment specifically said Lustheide had reopened; this does not confirm reopening of Refrath's side or current cruising."
+    },
+    {
+      "queue_index": 707,
+      "Venue_ID": "CRU-AB-0707",
+      "Name": "Alberti See",
+      "City": "Cologne",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "EXACT_LAKE_AND_SAFE_ACCESS_UNKNOWN;BRIDGE_REMOVED",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html",
+        "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html"
+      ],
+      "original_activity_summary": "A March 2026 user said the former pedestrian bridge was missing and asked for an alternate route. That is evidence of an access problem, not a recent encounter."
+    },
+    {
+      "queue_index": 733,
+      "Venue_ID": "CRU-AB-0733",
+      "Name": "Parkplatz A45 Dortmund Westerfilde beidseitig",
+      "City": "Dortmund",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "TWO_DIFFERENT_A45_CARRIAGEWAYS_ONE_CANDIDATE",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+        "https://gay-szene.net/parkplatz-a45-dortmund-westerfilde-beidseitig-in-dortmund/1542/eintrag.html"
+      ],
+      "original_activity_summary": "A June 2026 post described renewed cruising traffic after another nearby stop closed, but neither date nor direction supports a universal peak."
+    },
+    {
+      "queue_index": 740,
+      "Venue_ID": "CRU-AB-0740",
+      "Name": "Technische Universität Dortmund",
+      "City": "Dortmund",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "TOILET_BUILDING_FLOOR_AMBIGUOUS;NO_MODERN_POSITIVE_EVIDENCE",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+        "https://gay-szene.net/technische-universitaet-dortmund-in-dortmund/9803/eintrag.html"
+      ],
+      "original_activity_summary": "A January 2026 post asks if the site is active, but no recent firsthand visit confirms it."
+    },
+    {
+      "queue_index": 744,
+      "Venue_ID": "CRU-AB-0744",
+      "Name": "Klappe Straßburger Platz",
+      "City": "Dresden",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "historic_or_uncorroborated_activity",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "CURRENT_RESTROOM_ACCESS_AND_FLOOR_UNVERIFIED",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-dresden/65/17/rubrik.html",
+        "https://gay-szene.net/klappe-strassburger-platz-in-dresden/12858/eintrag.html"
+      ],
+      "original_activity_summary": "February 2026 commenters said toilet partitions and cubicle doors had been changed, and a March frequent visitor reported multiple unsuccessful trips; no contemporary busy period."
+    },
+    {
+      "queue_index": 757,
+      "Venue_ID": "CRU-AB-0757",
+      "Name": "Rahmer See",
+      "City": "Duisburg",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "51.3533632",
+      "Longitude": "6.7722413",
+      "issue_categories": [
+        "safety_or_access"
+      ],
+      "issue_text": "PRIVATE_SHORE_RISK;MUNICIPAL_SWIMMING_BAN;NO_CURRENT_POSITIVE",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+        "https://gay-szene.net/rahmer-see-in-duisburg/8304/eintrag.html",
+        "https://www.duisburg.de/wohnenleben/wasser/seen",
+        "https://www.duisburg.de/pressemitteilungen/pm/2026/mai/badeverbot-in-duisburg-lebensgefahr-in-seen-und-im-rhein",
+        "https://rc-maps.com/de/t/rahmer_see__duisburg/21N/"
+      ],
+      "original_activity_summary": "July 2026 first-person visits repeatedly found few or no men; February comments gave no confirmed encounter."
+    },
+    {
+      "queue_index": 763,
+      "Venue_ID": "CRU-AB-0763",
+      "Name": "FKK Strand Himmelgeist am km 727",
+      "City": "Düsseldorf",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "historic_or_uncorroborated_activity",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "KM727_PRECISE_SHORE_DISPUTED;2026_NEGATIVE_OBSERVATION",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-duesseldorf/68/17/rubrik.html",
+        "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html",
+        "https://www.duesseldorf.de/leben-in-duesseldorf/ertrinken",
+        "https://www.duesseldorf.de/stadtgruen/landschaft-naturschutz/naturschutzgebiete/himmelgeister-rheinbogen",
+        "https://beteiligung.nrw.de/portal/brd/beteiligung/themen/1033332"
+      ],
+      "original_activity_summary": "A July 2026 visitor reported searching the shore and seeing no naturists; May posts suggested only planned visits, so no current busy hours are reliable."
+    },
+    {
+      "queue_index": 780,
+      "Venue_ID": "CRU-AB-0780",
+      "Name": "Alte Oper",
+      "City": "Frankfurt am Main",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "50.11531",
+      "Longitude": "8.67124",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed",
+        "historic_or_uncorroborated_activity"
+      ],
+      "issue_text": "2025_WC_CLOSED_ON_VISIT;REOPENING_UNCONFIRMED",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-frankfurt-am-main/734/17/rubrik.html",
+        "https://gay-szene.net/alte-oper-in-frankfurt-am-main/5160/eintrag.html",
+        "https://mapcarta.com/de/N30353880"
+      ],
+      "original_activity_summary": "On 18 December 2025 a first-person visitor found the toilet closed and went to the fountain. No verified reopening or predictable cruising period has been established."
+    },
+    {
+      "queue_index": 785,
+      "Venue_ID": "CRU-AB-0785",
+      "Name": "Klappe U-Bahnhof Schweizer Platz",
+      "City": "Frankfurt am Main",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "50.10241",
+      "Longitude": "8.68006",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed"
+      ],
+      "issue_text": "2026_LOCKED_TOILET_REPORT;NO_VERIFIED_REOPENING",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-frankfurt-am-main/734/17/rubrik.html",
+        "https://gay-szene.net/klappe-u-bahnhof-schweizer-platz-in-frankfurt-am-main/12556/eintrag.html",
+        "https://mapcarta.com/N613535266"
+      ],
+      "original_activity_summary": "A December 2025 visitor found the WC open but empty; a June 2026 message says it had been locked for some time. No current cruising peak is credible."
+    },
+    {
+      "queue_index": 790,
+      "Venue_ID": "CRU-AB-0790",
+      "Name": "Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring",
+      "City": "Frankfurt am Main",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "2026_CLOSED_CONSTRUCTION_STORAGE;MULTIPLE_UNIDENTIFIED_STOPS",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-frankfurt-am-main/734/17/rubrik.html",
+        "https://gay-szene.net/parkplaetze-a-661-zwischen-offenbacher-kreuz-und-ausfahrt-taunusring-in-frankfurt-am-main/5161/eintrag.html"
+      ],
+      "original_activity_summary": "Several independent 2026 commenters describe the parking areas closed for construction storage and no current visits. No active times can be given."
+    },
+    {
+      "queue_index": 798,
+      "Venue_ID": "CRU-AB-0798",
+      "Name": "Friedhof Ohlsdorf",
+      "City": "Hamburg",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "53.6222043",
+      "Longitude": "10.0476049",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed",
+        "safety_or_access"
+      ],
+      "issue_text": "ACTIVE_CEMETERY;CHAPEL_TOILET_LOCKED;TWO_SUBSITES",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
+        "https://gay-szene.net/friedhof-ohlsdorf-in-hamburg/12574/eintrag.html",
+        "https://gay-szene.net/friedhof-ohlsdorf-kapelle-3-in-hamburg/12730/eintrag.html",
+        "https://friedhof-ohlsdorf-hamburg.de/oeffnungszeiten",
+        "https://friedhof-ohlsdorf-hamburg.de/adresse-anfahrt"
+      ],
+      "original_activity_summary": "A July 2026 visitor reported chapel 4 WC locked and no activity near chapel 3. There is no reliable current peak."
+    },
+    {
+      "queue_index": 830,
+      "Venue_ID": "CRU-AB-0830",
+      "Name": "Cruising neben Parkplatz Silbersee Ost",
+      "City": "Hannover",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "52.42895",
+      "Longitude": "9.76361",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed"
+      ],
+      "issue_text": "2026_PARKING_CLOSED;REOPENING_NOT_VERIFIED",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html",
+        "https://gay-szene.net/cruising-neben-parkplatz-silbersee-ost-in-hannover/12378/eintrag.html",
+        "https://mapcarta.com/de/W23983356"
+      ],
+      "original_activity_summary": "A May 2026 visitor found the parking closed; a July commenter only asked about reopening. No current usable cruising hours."
+    },
+    {
+      "queue_index": 866,
+      "Venue_ID": "CRU-AB-0866",
+      "Name": "Parkplatz A6 in Höhe Mannheim Sandhofen",
+      "City": "Mannheim",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "A6_SANDHOFEN_REST_STOP_SIDE_UNIDENTIFIED",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-mannheim/174/17/rubrik.html",
+        "https://gay-szene.net/parkplatz-a6-in-hoehe-mannheim-sandhofen-in-mannheim/7298/eintrag.html"
+      ],
+      "original_activity_summary": "Recent January–July 2026 posts include visitors observing some men circulating and a July report that daytime was quiet; the evidence is mixed and not a reliable schedule."
+    },
+    {
+      "queue_index": 870,
+      "Venue_ID": "CRU-AB-0870",
+      "Name": "A94 Ende in Marktl - unter der Alzbrücke",
+      "City": "Marktl",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "BRIDGE_ACCESS_POINTS_ON_BOTH_SIDES_UNKNOWN",
+      "source_links": [
+        "https://www.gays-cruising.com/en/germany",
+        "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635"
+      ],
+      "original_activity_summary": "April–May 2026 posters proposed visits, but no confirmed completed encounter or reliable active hours."
+    },
+    {
+      "queue_index": 884,
+      "Venue_ID": "CRU-AB-0884",
+      "Name": "Parkplatz an der B 471",
+      "City": "Munich",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "B471_EXACT_CAR_PARK_NOT_IDENTIFIED",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
+        "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
+        "https://planet-randy.com/blog/eintrag/isar-kiesbank/",
+        "https://www.sueddeutsche.de/muenchen/toter-aus-ismaning-vermisster-81-jaehriger-wurde-ermordet-1.1176927"
+      ],
+      "original_activity_summary": "No clearly dated recent visitor encounter is established; historical reports can't support a current busy period."
+    },
+    {
+      "queue_index": 896,
+      "Venue_ID": "CRU-AB-0896",
+      "Name": "Hafenparkplatz Nürnberg Süd",
+      "City": "Nuremberg",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "historic_or_uncorroborated_activity",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "EXACT_HAFENPARKPLATZ_ENTRANCE_UNCONFIRMED",
+      "source_links": [
+        "https://gay-szene.net/gay-cruising-in-nuernberg/201/17/rubrik.html",
+        "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html",
+        "https://planet-randy.com/blog/eintrag/hafenparkplatz-nuernberg/"
+      ],
+      "original_activity_summary": "Recent comments disagree about whether activity survived the roadworks, so there is no dependable time window."
+    },
+    {
+      "queue_index": 916,
+      "Venue_ID": "CRU-AB-0916",
+      "Name": "Parking lot A117 Waldeck West",
+      "City": "Schönefeld",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "PARKING_LIKELY_DEMOLISHED_OR_REPURPOSED;NO_VERIFIED_REOPENING",
+      "source_links": [
+        "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/3/",
+        "https://planet-randy.com/blog/eintrag/parkplatz-a117-waldeck-west/",
+        "https://www.verkehr.de/autobahn/a117/"
+      ],
+      "original_activity_summary": "The source records rubble storage and planned demolition from 2023, with no verified 2026 reopening or cruising visitors."
+    },
+    {
+      "queue_index": 960,
+      "Venue_ID": "CRU-AB-0960",
+      "Name": "Parking río Llobregat El Prat",
+      "City": "El Prat de Llobregat",
+      "Country": "Spain",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "LLOBREGAT_PARKING_SPOT_UNIDENTIFIED",
+      "source_links": [
+        "https://www.gays-cruising.com/en/barcelona/spain",
+        "https://www.gays-cruising.com/pt/barcelona/espanha"
+      ],
+      "original_activity_summary": "An August 2026 digital check-in shows online interest but not a witnessed visit or regular peak."
+    },
+    {
+      "queue_index": 964,
+      "Venue_ID": "CRU-AB-0964",
+      "Name": "Tivoli",
+      "City": "Las Palmas de Gran Canaria",
+      "Country": "Spain",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "TIVOLI_PROPERTY_UNLOCATED;REDEVELOPMENT;NO_CURRENT_REPORT",
+      "source_links": [
+        "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+        "https://www.atlanticohoy.com/palmas/guaguas-invertira-52-millones-en-terreno-antiguo-tivoli-levantar-sus-nuevas-cocheras_1551657_102.html",
+        "https://7punto7radio.com/el-cabildo-iniciara-las-hobras-de-asfaltado-de-la-autovia-g-c-1-entre-hoya-de-la-plata-y-la-laja/"
+      ],
+      "original_activity_summary": "The former business property is planned for transport/garage redevelopment, with no documented contemporary cruising activity."
+    },
+    {
+      "queue_index": 968,
+      "Venue_ID": "CRU-AB-0968",
+      "Name": "La Laja-Mercalaspalmas",
+      "City": "Las Palmas de Gran Canaria",
+      "Country": "Spain",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "LA_LAJA_VS_MERCALASPALMAS_SITE_AMBIGUOUS",
+      "source_links": [
+        "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+        "https://7punto7radio.com/el-cabildo-iniciara-las-hobras-de-asfaltado-de-la-autovia-g-c-1-entre-hoya-de-la-plata-y-la-laja/"
+      ],
+      "original_activity_summary": "Roadworks are reported in 2026, but no current cruising encounter or reliable peak appears."
+    },
+    {
+      "queue_index": 993,
+      "Venue_ID": "CRU-AB-0993",
+      "Name": "Área de bomberos Mollet",
+      "City": "Mollet del Vallès",
+      "Country": "Spain",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "MOLLET_FIRE_STATION_PULLOUT_UNKNOWN",
+      "source_links": [
+        "https://www.gays-cruising.com/en/spain",
+        "https://www.gays-cruising.com/en/barcelona/spain",
+        "https://www.gays-cruising.com/es/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296",
+        "https://www.gays-cruising.com/fr/mollet/barcelona/espagne"
+      ],
+      "original_activity_summary": "High digital interest is visible in the directory, but date-specific eyewitness testimony isn't accessible, so no genuine busiest time can be confirmed."
+    },
+    {
+      "queue_index": 996,
+      "Venue_ID": "CRU-AB-0996",
+      "Name": "Bosc CanDeu",
+      "City": "Sabadell",
+      "Country": "Spain",
+      "original_status": "Flag",
+      "Latitude": "41.57859",
+      "Longitude": "2.07446",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed",
+        "safety_or_access"
+      ],
+      "issue_text": "2026_RECREATIONAL_FOREST_ACCESS_PROHIBITED;NO_REOPENING",
+      "source_links": [
+        "https://www.gays-cruising.com/en/barcelona/spain",
+        "https://www.gays-cruising.com/pl/cruising/bosc_candeu_sabadell_espana_57473",
+        "https://web.sabadell.cat/index.php?id=107264&option=com_content&view=article",
+        "https://agricultura.gencat.cat/ca/ambits/ramaderia/sanitat-animal/programes-sanitaris/programes-sanitaris-porci/pesta-porcina-africana/",
+        "https://www.isabadell.cat/politica/la-junta-de-portaveus-demana-revisar-les-restriccions-de-la-pesta-porcina-339299/",
+        "https://mapcarta.com/W148893568"
+      ],
+      "original_activity_summary": "No valid cruising peak can be recommended while the natural area is restricted. Site check-ins are not physical encounters."
+    },
+    {
+      "queue_index": 1012,
+      "Venue_ID": "CRU-AB-1012",
+      "Name": "Carrefour Terrassa",
+      "City": "Terrassa",
+      "Country": "Spain",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "CARREFOUR_TERRASSA_BRANCH_UNKNOWN",
+      "source_links": [
+        "https://www.gays-cruising.com/en/barcelona/spain",
+        "https://www.carrefour.es/tiendas-carrefour/hipermercados/carrefour/valles_terrassa.aspx",
+        "https://www.carrefour.es/tiendas-carrefour/hipermercados/outlet/montserrat.aspx",
+        "https://radarsuper.com/c/barcelona/terrassa"
+      ],
+      "original_activity_summary": "A July 2026 comment is indexed but its content is not visible, so there is no valid busy time or encounter claim."
+    },
+    {
+      "queue_index": 1020,
+      "Venue_ID": "CRU-AB-1020",
+      "Name": "Sa Coma",
+      "City": "Sa Coma",
+      "Country": "Spain",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "historic_or_uncorroborated_activity",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "SA_COMA_PARKING_LOT_UNIDENTIFIED;GAY_MALE_RELEVANCE_UNVERIFIED",
+      "source_links": [
+        "https://www.popcorn.dating/spain/islas%2Bbaleares/sa%2Bcoma/locations/public-sex/parking%2Blot/sa-coma/21790/",
+        "https://illesbalears.travel/en/mallorca/beach-sa-coma",
+        "https://caminandopormallorca.es/2026/03/26/punta-de-namer-desde-sa-coma/",
+        "https://www.mallorca.com/en/guide/sights/castell-de-la-punta-de-namer"
+      ],
+      "original_activity_summary": "A recreation-park directory records the place, not dated 2026 visitor activity or a trustworthy busy time."
+    },
+    {
+      "queue_index": 1031,
+      "Venue_ID": "CRU-AB-1031",
+      "Name": "Aire d'Entrenge",
+      "City": "Entrange",
+      "Country": "France",
+      "original_status": "Flag",
+      "Latitude": "49.40442",
+      "Longitude": "6.11266",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed"
+      ],
+      "issue_text": "A31_2026_WC_DEMOLITION_AND_REBUILD;REOPENING_NOT_VERIFIED",
+      "source_links": [
+        "https://www.gays-cruising.com/en/france",
+        "https://gayspot.fr/lieu-de-drague-gay/507-aire-d-entrange-thionville.html",
+        "https://fr.gcruising.com/lieu-drague/6748%2Caire-de-la-porte-de-france-aire-d/%27entrange-%3A-lieu-de-drague-gay-en-moselle",
+        "https://www.marches-publics.info/avis/index.cfm?IDS=25&fuseaction=pub.affPublication&refPub=MPI-pub-2026049816&serveur=MPI",
+        "https://infos.rtl.lu/news/frontieres/ces-toilettes-de-lenfer-sur-la31-vont-enfin-etre-demolies-1044215805",
+        "https://www.virgule.lu/granderegion/a-deux-pas-du-luxembourg-les-toilettes-de-lenfer-sur-la31-vont-etre-demolies/160214428.html",
+        "https://mapcarta.com/W569293243"
+      ],
+      "original_activity_summary": "The dated cruising-directory meetups are from early 2025. In August 2026 its old toilets were closed for demolition/replacement, and reopening cannot yet be confirmed."
+    },
+    {
+      "queue_index": 1039,
+      "Venue_ID": "CRU-AB-1039",
+      "Name": "Bois Vincennes - Tata beach",
+      "City": "Paris",
+      "Country": "France",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "historic_or_uncorroborated_activity",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "COMMUNITY_GAY_SOCIAL_SPOT_NOT_VALIDATED_AS_SEX_CRUISING",
+      "source_links": [
+        "https://www.gays-cruising.com/en/france",
+        "https://www.parisgayzine.com/news/1589/tata-beach",
+        "https://www.paris.fr/pages/un-espace-naturiste-dans-le-bois-de-vincennes-5077/",
+        "https://www.paris.fr/lieux/bois-de-vincennes-6598"
+      ],
+      "original_activity_summary": "Public lawn time varies with summer weather, and no specific current on-site cruising encounter or reliably crowded hour is documented."
+    },
+    {
+      "queue_index": 1049,
+      "Venue_ID": "CRU-AB-1049",
+      "Name": "Riverside Walk - London",
+      "City": "London",
+      "Country": "United Kingdom",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "EXTENDED_CORRIDOR_NO_SPECIFIC_CRUISING_SECTION",
+      "source_links": [
+        "https://www.splashd.app/map/gb/eng/london",
+        "https://www.accessable.co.uk/london-borough-of-lewisham/london-borough-of-lewisham/access-guides/waterlink-way",
+        "https://www.lewishamnews.co.uk/waterlink-way-bridge-lift-opening-november/",
+        "https://catfordgreen.org.uk/outdoor/"
+      ],
+      "original_activity_summary": "Splashd has no recent dated firsthand report. A new bridge was still under construction in October 2026, so the accessible route may have diversions."
+    },
+    {
+      "queue_index": 1051,
+      "Venue_ID": "CRU-AB-1051",
+      "Name": "Nunhead Cemetery",
+      "City": "London",
+      "Country": "United Kingdom",
+      "original_status": "Flag",
+      "Latitude": "51.46271",
+      "Longitude": "-0.05154",
+      "issue_categories": [
+        "safety_or_access"
+      ],
+      "issue_text": "ACTIVE_CEMETERY;NIGHT_ACCESS_NOT_PERMITTED;NO_2026_ONSITE_REPORT",
+      "source_links": [
+        "https://www.splashd.app/map/gb/eng/london",
+        "https://www.cruisinggays.com/map/?cityid=7615&filter=4",
+        "https://www.thegayuk.com/listings/business-listing/uk/london/lewisham/nunhead-cemetery/",
+        "https://www.southwark.gov.uk/life-events/funerals/cemeteries/nunhead-cemetery",
+        "https://www.southwark.gov.uk/culture-and-sport/parks-and-open-spaces/park-opening-times",
+        "https://mapcarta.com/W4993995"
+      ],
+      "original_activity_summary": "Southwark lists November–February gates as 08:30–16:00. Old suggestions of nocturnal visits are incompatible with current site access."
+    },
+    {
+      "queue_index": 1089,
+      "Venue_ID": "CRU-AB-1089",
+      "Name": "The Greenway",
+      "City": "London",
+      "Country": "United Kingdom",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "2026_2028_SECTION_CLOSED;SOURCE_UNSPECIFIED_PATH_PIN",
+      "source_links": [
+        "https://www.splashd.app/map/gb/eng/london",
+        "https://www.newham.gov.uk/transport-streets/greenway-closure"
+      ],
+      "original_activity_summary": "No dated 2026 physical cruising report. Thames Water's current construction closure affects the Greenway section between Channelsea Path and Upper Road through 2028."
+    },
+    {
+      "queue_index": 1106,
+      "Venue_ID": "CRU-AB-1106",
+      "Name": "Haggerston Park",
+      "City": "London",
+      "Country": "United Kingdom",
+      "original_status": "Flag",
+      "Latitude": "51.53307",
+      "Longitude": "-0.0677",
+      "issue_categories": [
+        "historic_or_uncorroborated_activity"
+      ],
+      "issue_text": "MANAGED_CODE_ACCESS_TOILET;OLD_CRUISING_CLAIM_UNVERIFIED",
+      "source_links": [
+        "https://www.splashd.app/map/gb/eng/london",
+        "https://www.hackney.gov.uk/libraries-parks-and-leisure/parks-and-green-spaces/parks-list/haggerston-park",
+        "https://mapcarta.com/W8501796"
+      ],
+      "original_activity_summary": "Hackney currently closes the park at 17:00 from 2 November to year-end. There is no substantiated cruising timetable."
+    },
+    {
+      "queue_index": 1108,
+      "Venue_ID": "CRU-AB-1108",
+      "Name": "Abney Park Cemetery",
+      "City": "London",
+      "Country": "United Kingdom",
+      "original_status": "Flag",
+      "Latitude": "51.5644",
+      "Longitude": "-0.0768",
+      "issue_categories": [
+        "safety_or_access",
+        "historic_or_uncorroborated_activity"
+      ],
+      "issue_text": "CEMETERY_RESTRICTIONS;WINTER_GATES_CLOSE_16;NO_RECENT_VISITS",
+      "source_links": [
+        "https://www.splashd.app/map/gb/eng/london",
+        "https://abneypark.org/visitor-information",
+        "https://mapcarta.com/W4481918"
+      ],
+      "original_activity_summary": "The official winter gate schedule closes at 16:00 from 2 November to 31 December; there are no current firsthand cruising reports."
+    },
+    {
+      "queue_index": 1127,
+      "Venue_ID": "CRU-AB-1127",
+      "Name": "Wetherspoons Pub in The Capitol",
+      "City": "London",
+      "Country": "United Kingdom",
+      "original_status": "Flag",
+      "Latitude": "",
+      "Longitude": "",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed",
+        "no_defensible_map_pin"
+      ],
+      "issue_text": "PUB_CLOSED_2023;CONVERTED_CHILDRENS_SOFTPLAY_2026;DO_NOT_PUBLISH",
+      "source_links": [
+        "https://www.splashd.app/map/gb/eng/london",
+        "https://camra.org.uk/pubs/capitol-forest-hill-158713",
+        "https://southwarknews.co.uk/news/grandest-wetherspoons-in-london-permanently-closes-in-forest-hill/"
+      ],
+      "original_activity_summary": "There is no operating pub or adult cruising toilet to visit. All old directions to a men's urinal are obsolete."
+    },
+    {
+      "queue_index": 1171,
+      "Venue_ID": "CRU-AB-1171",
+      "Name": "Münchner Hauptbahnhof",
+      "City": "Munich",
+      "Country": "Germany",
+      "original_status": "Flag",
+      "Latitude": "48.14073",
+      "Longitude": "11.55694",
+      "issue_categories": [
+        "closed_rebuilt_or_access_changed"
+      ],
+      "issue_text": "ORIGINAL_UNDERGROUND_WC_CLOSED_IN_REBUILD;REPLACEMENT_NOT_CRUISING_SITE",
+      "source_links": [
+        "https://www.bahnhof.de/muenchen-hbf/einkaufen-und-essen/rail-fresh-wc",
+        "https://www.sueddeutsche.de/muenchen/muenchen-hauptbahnhof-neubau-toiletten-container-li.3515705",
+        "https://www.muenchen.de/verkehr/hauptbahnhof",
+        "https://mapcarta.com/de/24994884"
+      ],
+      "original_activity_summary": "The former main mezzanine WC closed during July 2026 construction, and Deutsche Bahn lists replacement rail&fresh containers at Arnulfstraße open 24/7. These are ordinary passenger toilets, not evidence of gay cruising."
+    }
+  ]
+}
