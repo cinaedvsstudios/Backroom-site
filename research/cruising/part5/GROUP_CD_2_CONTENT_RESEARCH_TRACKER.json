@@ -4,14 +4,14 @@
   "scope": "86 candidates classified research-incomplete as of start",
   "original_backlog_count": 86,
   "working_records": 186,
-  "records_received_substantive_content_review": 45,
+  "records_received_substantive_content_review": 50,
   "records_source_review_fully_complete": 0,
   "original_direct_details_read_this_batch": 1,
   "new_geographically_identified": [
     "CRU-CD2-209"
   ],
-  "last_assessed": "CRU-CD2-295",
-  "next_unstarted": "CRU-CD2-297",
+  "last_assessed": "CRU-CD2-303",
+  "next_unstarted": "CRU-CD2-305",
   "still_pending_deep_followup": [
     "CRU-CD2-200",
     "CRU-CD2-202",
@@ -57,7 +57,12 @@
     "CRU-CD2-286",
     "CRU-CD2-287",
     "CRU-CD2-292",
-    "CRU-CD2-295"
+    "CRU-CD2-295",
+    "CRU-CD2-297",
+    "CRU-CD2-299",
+    "CRU-CD2-301",
+    "CRU-CD2-302",
+    "CRU-CD2-303"
   ],
   "completed_batches": [
     {
@@ -167,6 +172,18 @@
       ],
       "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_009_2026-11-08.json",
       "status": "Five substantive content investigations, one exact source GPS recovered; zero fully exhaustive."
+    },
+    {
+      "number": 10,
+      "ids": [
+        "CRU-CD2-297",
+        "CRU-CD2-299",
+        "CRU-CD2-301",
+        "CRU-CD2-302",
+        "CRU-CD2-303"
+      ],
+      "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_010_2026-11-08.json",
+      "status": "5 original/supplementary contents examined, French original Ziepniekkalns exact map coordinates, zero source-exhaustive."
     }
   ],
   "research_rules": "A researched batch may contain partially researched candidates, but do not count source-exhaustive completion until URLs/content are substantively examined. Never label inaccessible-original candidates unidentifiable. Commit every five investigated; continue from next_unstarted and revisit pending_followup.",
@@ -178,8 +195,6 @@
   },
   "production_unchanged": true,
   "latest_substantive_findings": [
-    "CRU-CD2-265 POHTO former 2021 Vellamontie 12 buildings confirmed demolished by City Oulu and redevelopment 2026",
-    "CRU-CD2-271 original site 2011 description beside Villa Clara verified Via Zanardi 449 and explicitly no exact pin in source",
     "CRU-CD2-267 14 historical Siwa branches in Vaasa, chain ended 2017, no single shop identified",
     "CRU-CD2-266 Sandviken in Raasepori not Vaasa; do not conflate",
     "CRU-CD2-280 original 'lake unidentified' assertion overturned: identifiable protected Lago di Peretola at Sesto Fiorentino with 2025-12-31 main-gate closure report",
@@ -188,8 +203,12 @@
     "CRU-CD2-286 original Italian detailed listing read: precise map 45.4995498657,9.1210985184, 2025-08-26 historical firsthand report",
     "CRU-CD2-295 Turate 51712 original indexed directions to woodland beside factory, no original GPS or dated report",
     "CRU-CD2-292 original source detail 5691 discovered but not readable",
-    "CRU-CD2-282 park-and-ride and motorway rest areas are distinct"
+    "CRU-CD2-282 park-and-ride and motorway rest areas are distinct",
+    "CRU-CD2-301 Ziepniekkalns French original page READ: source Google directions precise 56.903263092,24.1068687439 and zero visitor comments; no recent activity",
+    "CRU-CD2-299 Vitrupe Beach actually Salacgriva/Vidzeme river mouth not Riga; river-mouth coordinate is not beach cruising pin",
+    "CRU-CD2-303 Spice Style Lielirbes 29 distinct from Spice Life Jaunmoku 13; original WC remains unspecified",
+    "CRU-CD2-302 Lake Lāčplēsis not identified: hamlet map in Ogre is NOT a lake"
   ],
-  "last_confirmed_batch_commit": "16fc009aebea1b6b1fbda866997650fd5bd6243e",
+  "last_confirmed_batch_commit": "304c6426fbb7a33c2f88b0e1d5a90b7be7c2df5f",
   "handover_file": "GROUP_CD_2_CONTINUATION_HANDOVER_2026-11-08.md"
 }
