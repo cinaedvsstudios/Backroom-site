@@ -4,14 +4,14 @@
   "scope": "86 candidates classified research-incomplete as of start",
   "original_backlog_count": 86,
   "working_records": 186,
-  "records_received_substantive_content_review": 85,
+  "records_received_substantive_content_review": 86,
   "records_source_review_fully_complete": 0,
   "original_direct_details_read_this_batch": 1,
   "new_geographically_identified": [
     "CRU-CD2-209"
   ],
-  "last_assessed": "CRU-CD2-388",
-  "next_unstarted": "CRU-CD2-389",
+  "last_assessed": "CRU-CD2-389",
+  "next_unstarted": null,
   "still_pending_deep_followup": [
     "CRU-CD2-200",
     "CRU-CD2-202",
@@ -96,7 +96,8 @@
     "CRU-CD2-381",
     "CRU-CD2-385",
     "CRU-CD2-386",
-    "CRU-CD2-388"
+    "CRU-CD2-388",
+    "CRU-CD2-389"
   ],
   "completed_batches": [
     {
@@ -302,6 +303,14 @@
       ],
       "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_017_2026-11-08.json",
       "status": "Five source-content investigations; primary original pins for Lage Aard, Bos bij de Rendac, Bastion; first-party confirms Cam Area Nederland virtual non-place, recommended exclusion not removed."
+    },
+    {
+      "number": 18,
+      "ids": [
+        "CRU-CD2-389"
+      ],
+      "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_018_2026-11-08.json",
+      "status": "Final one remaining candidate in source-incomplete cohort: original Dutch Kanaaldijk details and source pin 52.0472259521,5.1057672501; all 86 now have preliminary substantive evidence, ZERO source-exhaustive."
     }
   ],
   "research_rules": "A researched batch may contain partially researched candidates, but do not count source-exhaustive completion until URLs/content are substantively examined. Never label inaccessible-original candidates unidentifiable. Commit every five investigated; continue from next_unstarted and revisit pending_followup.",
@@ -313,8 +322,6 @@
   },
   "production_unchanged": true,
   "latest_substantive_findings": [
-    "CRU-CD2-361 NI road order 2024 bans only western A6 Ranaghan Road layby entrance; not all layby access",
-    "CRU-CD2-363 Ealing Horsenden official carpark Horsenden Lane North and undated independent mixed-orientation adult directory corroborates woods",
     "CRU-CD2-364 Thurauen management specifically has separate named Parkplatz Alten and seasonal toilets, though exact gay source shoreline unknown",
     "CRU-CD2-365 Arlesheim parking original ID/source pin missing; 2026 online checkin not firsthand",
     "CRU-CD2-370 Official Canton Luzern survey name register lists Wanneholz as Wald in Inwil, precise source gay pin unknown; PDF screenshot cache miss",
@@ -326,8 +333,12 @@
     "CRU-CD2-382 primary Dutch says ausdrücklich no real location; virtual cam room, recommended exclusion without silently removing from 186",
     "CRU-CD2-385 original Gays Lage Aard destination 51.5592918396,4.8867702484, June2026 comments on three gates",
     "CRU-CD2-386 original Dutch Rendac forest destination 51.5095176697,5.451772213, 2026 dated invite posts not confirmed meetings",
-    "CRU-CD2-388 original Bastion Naarden destination 52.2959289551,5.1773176193 opposite distinct Ronduit ID18489"
+    "CRU-CD2-388 original Bastion Naarden destination 52.2959289551,5.1773176193 opposite distinct Ronduit ID18489",
+    "CRU-CD2-389 full Dutch Gays original source GPS 52.0472259521,5.1057672501; 2025-Jul16 first-person onsite claim outside 12-month cutoff; Utrecht The Wall parking mentioned by different commenter not same pinned Nieuwegein place",
+    "All 86 original cohort have preliminary substantive research batch records now. ZERO source-exhaustive completions; return to outstanding original blocked details and eight-source coverage rather than claiming full finished."
   ],
-  "last_confirmed_batch_commit": "8a84b02722a3be18a7d321ddced0100e2b846e62",
-  "handover_file": "GROUP_CD_2_CONTINUATION_HANDOVER_2026-11-08.md"
+  "last_confirmed_batch_commit": "9ca135747f7d9068bf9750292ee8f7a7d3442fec",
+  "handover_file": "GROUP_CD_2_CONTINUATION_HANDOVER_2026-11-08.md",
+  "initial_pass_complete": true,
+  "next_source_exhaustive_followup": "CRU-CD2-200"
 }
