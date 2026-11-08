@@ -12,13 +12,13 @@
   "original_detail_pages_attempted_this_turn": 25,
   "original_detail_pages_readable_this_turn": 7,
   "counts": {
-    "normal_mapped": 99,
+    "normal_mapped": 100,
     "name_city_conflict": 3,
     "duplicate_exclude": 3,
     "closed_facility_exclude": 1,
     "closure_report_unconfirmed": 1,
     "concrete_physical_hazard": 1,
-    "source_research_incomplete": 86
+    "source_research_incomplete": 85
   },
   "category_meanings": {
     "normal_mapped": "Mapped — no specific unresolved location issue",
@@ -121,6 +121,23 @@
         "Source_URLs": "https://www.gays-cruising.com/en/czech_republic, https://www.gays-cruising.com/pl/plzen/plzensky_kraj/czechy, https://www.visitplzen.eu/poznej-plzen/v-plzni-do-prirody/bolevecke-rybniky/, https://old.khsplzen.cz/koupacimisto/11.html, https://plzen.rozhlas.cz/na-okraji-plzne-objevite-jedinecnou-vodni-plochu-bolevecke-rybniky-zvou-k-9614565, https://kdesizahrat.cz/en/natural-swimming/plzen/detail/bolevecky-rybnik-naturisticka-plaz-ostende/, https://plzen.rozhlas.cz/na-plzenske-nudisticke-plazi-je-letos-v-lete-zivo-nove-je-vybavena-prirodnimi-9059156",
         "Duplicate_Survivor": null,
         "Operational_Condition": null
+      },
+      {
+        "Venue_ID": "CRU-CD2-209",
+        "Name": "Podolí Cliffs",
+        "City": "Prague",
+        "Country": "Czechia",
+        "Position": 209,
+        "Geo_Pin_Recorded": true,
+        "Original_Detail_Checked_In_This_Pass": false,
+        "Research_Task": "Exact original location identified via source GPS; source-level supporting reference and recent-activity research still pending.",
+        "Source_URLs": "https://www.gays-cruising.com/en/czech_republic, https://prague.eu/en/architecture-1958-89-podoli-swimming-stadium/, https://koniklec.cz/wp-content/uploads/2018/02/Mapa_GP_Praha_2015_web.pdf, https://nomadicboys.com/prague-gay-travel-guide/, https://www.regionem.cz/clanek/kdyz-se-v-podoli-odkrylo-davne-morske-dno/",
+        "Duplicate_Survivor": null,
+        "Operational_Condition": null,
+        "Source_Review_Status": "original_primary_detail_read_and_map_gps_recovered_other_supporting_sources_pending",
+        "Location_Identified_Date": "2026-11-08",
+        "Location_Identity_Resolved": true,
+        "Confirmed_Recent_Activity": false
       },
       {
         "Venue_ID": "CRU-CD2-210",
@@ -1542,20 +1559,6 @@
         "Source_Review_Status": "source_links_not_exhaustively_checked"
       },
       {
-        "Venue_ID": "CRU-CD2-209",
-        "Name": "Podolí Cliffs",
-        "City": "Prague",
-        "Country": "Czechia",
-        "Position": 209,
-        "Geo_Pin_Recorded": true,
-        "Original_Detail_Checked_In_This_Pass": false,
-        "Research_Task": "SOURCE REVIEW INCOMPLETE. Check every URL attached to this candidate and pursue alternate source/mapping evidence before classifying the location as genuinely unresolvable.",
-        "Source_URLs": "https://www.gays-cruising.com/en/czech_republic, https://prague.eu/en/architecture-1958-89-podoli-swimming-stadium/, https://koniklec.cz/wp-content/uploads/2018/02/Mapa_GP_Praha_2015_web.pdf, https://nomadicboys.com/prague-gay-travel-guide/, https://www.regionem.cz/clanek/kdyz-se-v-podoli-odkrylo-davne-morske-dno/",
-        "Duplicate_Survivor": null,
-        "Operational_Condition": null,
-        "Source_Review_Status": "source_links_not_exhaustively_checked"
-      },
-      {
         "Venue_ID": "CRU-CD2-211",
         "Name": "Lesík u Metra Palmovka",
         "City": "Prague",
@@ -2721,11 +2724,11 @@
     "CRU-CD2-256"
   ],
   "working_counts_after_owner_exclusions": {
-    "normal_mapped": 99,
-    "source_research_incomplete": 86,
+    "normal_mapped": 100,
+    "source_research_incomplete": 85,
     "concrete_physical_hazard": 1
   },
-  "review_note": "Correction 2026-11-08: 86 cases are NOT classifiable as 'unresolved locations' because every source URL has not been investigated. They are research-incomplete. 260 distinct stored URLs (323 occurrences) await explicit per-link verification or sourced results. Only after exhausting sources may any case be labeled genuinely unresolvable. The 99 mapped places are not automatically current verified cruising spots.",
+  "review_note": "2026-11-08 initial 5 substantive content reviews saved: 209 original Podoli GPS 50.0517654419,14.419169426 recovered (100 mapped); others 200/202/205/206 original details blocked and left research-incomplete (85). Five reviewed ≠ five source-complete. 86 candidates originally source-incomplete; 1 now geographically identified. No auto-publication.",
   "source_recheck_2026_11_08": {
     "original_detail_urls_attempted_for_previously_unresolved": 68,
     "records_with_original_detail": 64,
@@ -2753,5 +2756,29 @@
     "distinct_source_url_count": 260,
     "status": "not_complete",
     "claim_that_86_unresolvable_allowed": false
+  },
+  "last_substantive_batch": {
+    "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_001_2026-11-08.json",
+    "date": "2026-11-08",
+    "candidate_ids": [
+      "CRU-CD2-200",
+      "CRU-CD2-202",
+      "CRU-CD2-205",
+      "CRU-CD2-206",
+      "CRU-CD2-209"
+    ],
+    "primary_original_detail_read": 1,
+    "exact_original_pin_recovered_ids": [
+      "CRU-CD2-209"
+    ],
+    "candidates_fully_exhaustive_source_review_complete": 0,
+    "still_pending_followup_ids": [
+      "CRU-CD2-200",
+      "CRU-CD2-202",
+      "CRU-CD2-205",
+      "CRU-CD2-206",
+      "CRU-CD2-209"
+    ],
+    "next_unstarted_record": "CRU-CD2-211"
   }
 }
