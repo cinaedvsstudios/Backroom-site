@@ -5,10 +5,10 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - Repository: https://github.com/cinaedvsstudios/Backroom-site
 - Working directory: `research/cruising/part5/`.
 - Group **2 of 3**, original positions **196–389 inclusive**, 194 source candidate records. **8 independently documented excluded from working set**, **186 active candidate records**. **99** previously historically mapped, **86** initially source-research-incomplete, **1** Poduene Railway Station included.
-- Original incomplete cohort of 86: **80 have received preliminary substantive content research across sixteen batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 6 still await initial substantive review.
-- Most recently assessed **CRU-CD2-380 — Werdinsel, Zurich**.
-- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-381 — Friedhof Sihlfeld WC, Zurich, Switzerland.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
-- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `d8ec5457727667adacd0ae53ef50087c5b7b1192`. Latest individual working-file enrichment: `9b02168efd77039224b4af97ce4a899196e92301`. Batch 016 immutable commit `59249c2bee998ba7914c5f26ae258f7865c554e6`.
+- Original incomplete cohort of 86: **85 have received preliminary substantive content research across seventeen batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 1 still awaits initial substantive review.
+- Most recently assessed **CRU-CD2-388 — Bastion, Naarden**.
+- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-389 — Kanaaldijk, Nieuwegein, Netherlands.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
+- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `e88e415c2ea09e41772bf11eb38013ad9368e676`. Latest individual working-file enrichment: `2eef7fef6d0dde94459174c6beb108995f7dcb2e`. Batch 017 immutable commit `8a84b02722a3be18a7d321ddced0100e2b846e62`.
 
 ## Required reading BEFORE more research
 1. `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json` — **authoritative next_unstarted** and batch list; if moved by another worker, follow latest tracker.
@@ -43,6 +43,8 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - 015: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_015_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_015_2026-11-08.json), IDs CRU-CD2-357, CRU-CD2-361, CRU-CD2-363, CRU-CD2-364, CRU-CD2-365. NOTE: the immutable batch file accidentally lists next_unstarted=367; this is an ERROR. **The correct authoritative next ID is 366** as tracker and original URL-audit order both prove. NEVER skip 366.
 
 - 016: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_016_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_016_2026-11-08.json), IDs CRU-CD2-366, CRU-CD2-370, CRU-CD2-374, CRU-CD2-377, CRU-CD2-380
+
+- 017: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_017_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_017_2026-11-08.json), IDs CRU-CD2-381, 382, 385, 386, 388. Source-first virtual exclusion candidate 382 not removed from 186.
 
 ## Research method — MUST FOLLOW
 - Work in exact order from tracker, five records per batch. **Open and READ content of every stored source URL**, including original detailed listings, supplemental pages, comments, internal source-map directions, previous evidence, and related pages. Recording merely 'reachable/checked' is NOT source research.
@@ -118,8 +120,16 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - **380 Werdinsel** PRIMARY Gays-Cruising detailed original is readable https://www.gays-cruising.com/en/cruising/werdinsel_zurich_suiza_1902 . Google directions source link gives **47.401184082,8.4855051041** and working pin now corrected. Main site has 606 **login-blocked comments** and '318 last month' counter (old crawl): these ARE NOT substantiated user meet reports. Independent gay guide https://www.patroc.com/de/gay/zurich/d/werdinsel.html specifically states **'Kein Cruising!'** and plainclothes checks near gay/popular nudist zone. Official Zurich municipality https://www.stadt-zuerich.ch/werdinsel confirms FKK island-tip public bathing, not a gay-sex area. Important CONFLICT; preserve no activity conclusion until independent dated reports.
 - **NEXT** batch 017 five records: 381 Friedhof Sihlfeld WC, 382 Cam Area Nederland, 385 Lage Aard, and next IDs in URL audit (likely 386, 387). **Then one final pending original incomplete candidate**, make independent 1-record last batch if necessary. 80 prelim, 6 unreviewed, zero source-exhaustive.
 
+## Batch 017 source content, 85/86 preliminarily reviewed
+- **381 Sihlfeld cemetery** city notice of 2023 confirms grounds OPEN 24h but cemetery WCs explicitly CLOSED evenings. Source individual old WC pin still inaccessible. Do not equate grounds hours and WC hours.
+- **382 Cam Area Nederland** extremely important: FIRST-PARTY Dutch original https://www.gays-cruising.com/nl/cruising/cam_area_nederland_almere_stad_nederland_73884 clearly says it is **NOT a real physical location**, but a virtual webcam chat-checkin. Source-specific Sep8 2025 user confirms. Mark `verified_nonphysical`, `recommended_exclusion`, DO NOT claim geographically unresolved. Preserved in 186 working as flagged pending formally documented owner filtering, 8 original exclusions remain untouched. It is verified grounds for eventual 9th exclusion.
+- **385 Lage Aard** Dutch full original https://www.gays-cruising.com/nl/cruising/lage_aard_bavel_nederland_19253 maps **51.5592918396,4.8867702484** along A58. 2026-Jun19 to Jun21 user comments mention 3 gates and middle gate, 2026-Jun21 experience claimed good but no explicit on-site act. Don't encourage crossing gate or ditch.
+- **386 Bos bij de Rendac** Dutch FULL original https://www.gays-cruising.com/nl/cruising/bos_bij_de_rendac_best_nederland_20950 maps **51.5095176697,5.451772213** in forest near factory; 2026 March/April comments include meeting requests, not independently witnessed encounter. Source has 3 nearby separate other listings 0.3-1.1km; do not auto-merge. Factory at Son en Breugel, not identical to forest.
+- **388 Bastion** Naarden English FIRST-PARTY FULL page https://www.gays-cruising.com/en/cruising/bastion_naarden_nederland_33802 maps **52.2959289551,5.1773176193**, exact secluded park across from distinct Ronduit ID18489 just 0.2km apart, old dike footpath, slippery after rainfall. Visible comments only through Aug2025, older than last-12mo.
+- **NEXT LAST initial original cohort candidate `CRU-CD2-389 Kanaaldijk`**. Dutch FULL original already located https://www.gays-cruising.com/nl/cruising/kanaaldijk_nieuwegein_nederland_20827 — read content and user comments; map destination click **75** for exact source GPS; 2025-Jul16 comment says 'Ben er nu', older than cutoff, another mentions parking near The Wall (unproven exact). Finish as immutable **batch018 single-record** and update tracker 86/86 *initial substantive reviews only*, **NOT** 86 exhausted (source-exhaustive count stays ZERO). Next phase revisit all still_pending_deep_followup, except virtual 382 is resolved nonphysical; no premature closure.
+
 ## Recoverability / GitHub access
 - GitHub tool `mcp__GitHub__fetch_file` sometimes responds with **empty content** for 2MB JSON but includes blob SHA. Fetch same SHA using `mcp__GitHub__fetch_blob` to get entire JSON, parse and update; do not treat empty string as missing file.
-- Last verified tracker checkpoint commit: `d8ec5457727667adacd0ae53ef50087c5b7b1192`.
-- Permanent 186 working file update commit: `9b02168efd77039224b4af97ce4a899196e92301`.
+- Last verified tracker checkpoint commit: `e88e415c2ea09e41772bf11eb38013ad9368e676`.
+- Permanent 186 working file update commit: `2eef7fef6d0dde94459174c6beb108995f7dcb2e`.
 - User requested review chat 'Progress update review GROUP 2 8am'; the correction and counts match tracker. This handover is authoritative on restart, not chat progress alone.
