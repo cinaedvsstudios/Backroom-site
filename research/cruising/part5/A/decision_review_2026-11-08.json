@@ -9,12 +9,14 @@
     "narrow_location_review_count": 46,
     "important_limit": "Narrow review list is a rule-based, manually curated triage from research flags, not a proof that other entries have perfect coordinates. Individual source site verification remains incomplete.",
     "updated_berlin_date": "2026-11-08",
-    "revision": "Web recheck recovered 5 Gays-Cruising original map pins and one matching Zolwereck shopping centre from 46 location cases. 6 moved into identifiable candidates. Six-coordinate list also includes disputed Lara Park point, which stays in conflicts. Two confirmed closures excluded from active import set; no live changes.; Corrected Põlva/Tartu and Pomorie/Nessebar city association in consolidation overlay; both now broad location candidates rather than unresolved conflicting identity.; Belval old Saturn / MediaMarkt probable building and Celpak industrial zone geographically identified from independent sources; precise WC/car park unverified.",
+    "revision": "Simplified active status to TWO categories only: 252 location identified, 39 location details need checking, 291 active. Closed records excluded from active index, not shown as a category. Historical research and reasons remain preserved.",
     "latest_duplicate_source_audit": "research/cruising/part5/A/duplicate_and_source_audit_2026-11-08.json",
     "review_note": "27 name/alias/possible duplicate comparison cases analyzed; source URLs and descriptions compared. Existing 21 duplicate flags were NOT 21 verified duplicates. No speculative merge is authorized. User need not adjudicate routine alias matching.",
     "source_technical_note": "21 source/link-warning flags now explained as 4 HTTP451, 10 cache misses, 3 source page unavailable, 4 archive URL/name mismatches; earlier 20 heuristic not a count of broken links.",
     "current_location_recheck": "research/cruising/part5/A/location_url_recheck_2026-11-08.json",
-    "current_active_candidate_set": "research/cruising/part5/A/active_candidate_index_2026-11-08.json"
+    "current_active_candidate_set": "research/cruising/part5/A/active_candidate_index_2026-11-08.json",
+    "active_listing_source": "research/cruising/part5/A/active_candidate_index_2026-11-08.json",
+    "original_historical_293_tracked_in": "research/cruising/part5/master_queue.json"
   },
   "decision_policy": {
     "recency": "Do not require a confirmed physical sexual encounter. Keep separate recent discussions, dated questions, self check-ins, firsthand accounts, older listings and negative reports; no negative conclusion from absent data.",
@@ -33,7 +35,8 @@
       "country": "Andorra",
       "reason": "Broad riverside promenade; specific stretch not identified",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 8,
@@ -43,7 +46,8 @@
       "country": "Andorra",
       "reason": "Entire town rather than a spot",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 11,
@@ -53,7 +57,8 @@
       "country": "Andorra",
       "reason": "Generic garden name",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 12,
@@ -63,7 +68,8 @@
       "country": "Andorra",
       "reason": "Broad Segudet valley/area",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 17,
@@ -73,7 +79,8 @@
       "country": "Belgium",
       "reason": "District rather than a specific spot",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 28,
@@ -83,7 +90,8 @@
       "country": "Belgium",
       "reason": "Specific waterside car park not identified",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 46,
@@ -93,7 +101,8 @@
       "country": "Estonia",
       "reason": "Generic parking and forest",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 47,
@@ -103,7 +112,8 @@
       "country": "Estonia",
       "reason": "Generic parking/forest term",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 48,
@@ -113,7 +123,8 @@
       "country": "Estonia",
       "reason": "No specific car park identified",
       "triage_status": "source_location_recovered_or_facility_identified",
-      "updated_note": "Original Parking Tallinn page had a specific Google driving destination; place type carpark still not independently validated."
+      "updated_note": "Original Parking Tallinn page had a specific Google driving destination; place type carpark still not independently validated.",
+      "current_simple_category": "location_identified"
     },
     {
       "index": 49,
@@ -123,7 +134,8 @@
       "country": "Estonia",
       "reason": "Whole street without a particular spot",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 50,
@@ -133,7 +145,8 @@
       "country": "Estonia",
       "reason": "Only generic outdoor cruising category",
       "triage_status": "source_location_recovered_or_facility_identified",
-      "updated_note": "Original generic outdoor cruising page has a map pin; physical suitability not independently validated."
+      "updated_note": "Original generic outdoor cruising page has a map pin; physical suitability not independently validated.",
+      "current_simple_category": "location_identified"
     },
     {
       "index": 53,
@@ -143,7 +156,8 @@
       "country": "Estonia",
       "reason": "Which seaside monument is not established",
       "triage_status": "source_location_recovered_or_facility_identified",
-      "updated_note": "Original monument listing has a map pin close to Tallinn waterfront; monument's official name not independently confirmed."
+      "updated_note": "Original monument listing has a map pin close to Tallinn waterfront; monument's official name not independently confirmed.",
+      "current_simple_category": "location_identified"
     },
     {
       "index": 57,
@@ -153,7 +167,8 @@
       "country": "Estonia",
       "reason": "Exact car park on Punane street not identified",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 58,
@@ -164,7 +179,8 @@
       "reason": "Põlva town listed under Tartu and no exact spot",
       "triage_status": "still_needs_detail_or_broad_area",
       "updated_note": null,
-      "corrected_city_for_consolidation": "Põlva"
+      "corrected_city_for_consolidation": "Põlva",
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 59,
@@ -174,7 +190,8 @@
       "country": "Georgia",
       "reason": "Park by cathedral not identified",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 74,
@@ -184,7 +201,8 @@
       "country": "Iceland",
       "reason": "Generic toilet; town versus airport unresolved",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 87,
@@ -194,7 +212,8 @@
       "country": "Israel",
       "reason": "Groves not uniquely identified",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 99,
@@ -204,7 +223,8 @@
       "country": "Lithuania",
       "reason": "Polygonas location not identified",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 103,
@@ -214,7 +234,8 @@
       "country": "Lithuania",
       "reason": "Generic parking with no precise location",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 105,
@@ -224,7 +245,8 @@
       "country": "Lithuania",
       "reason": "Cinema not identified",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 109,
@@ -234,7 +256,8 @@
       "country": "Lithuania",
       "reason": "Generic public toilet, not identifiable",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 111,
@@ -244,7 +267,8 @@
       "country": "Luxembourg",
       "reason": "Saturn business/facility not identified",
       "triage_status": "probable_building_identified",
-      "updated_note": "Independent 2022 press confirms Saturn store Belval Plaza became MediaMarkt; probable original described restroom near the former Saturn, but exact WC position not verified."
+      "updated_note": "Independent 2022 press confirms Saturn store Belval Plaza became MediaMarkt; probable original described restroom near the former Saturn, but exact WC position not verified.",
+      "current_simple_category": "location_identified"
     },
     {
       "index": 112,
@@ -254,7 +278,8 @@
       "country": "Luxembourg",
       "reason": "Dippach–Bertrange denotes a broad corridor",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 115,
@@ -264,7 +289,8 @@
       "country": "Luxembourg",
       "reason": "Unspecified forest",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 117,
@@ -274,7 +300,8 @@
       "country": "Luxembourg",
       "reason": "First-floor toilet but shopping building unidentified",
       "triage_status": "source_location_recovered_or_facility_identified",
-      "updated_note": "Original site pin at Kirchberg Shopping Center; official centre 5 Rue Alphonse Weicker, site has first floor. Not independently confirmed which exact restroom."
+      "updated_note": "Original site pin at Kirchberg Shopping Center; official centre 5 Rue Alphonse Weicker, site has first floor. Not independently confirmed which exact restroom.",
+      "current_simple_category": "location_identified"
     },
     {
       "index": 120,
@@ -284,7 +311,8 @@
       "country": "Luxembourg",
       "reason": "General Lintgen area, not one mapped spot",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 123,
@@ -294,7 +322,8 @@
       "country": "Luxembourg",
       "reason": "Toilet building not identified",
       "triage_status": "source_location_recovered_or_facility_identified",
-      "updated_note": "ZolwerEck retail building identified; toilet floor/section unverified"
+      "updated_note": "ZolwerEck retail building identified; toilet floor/section unverified",
+      "current_simple_category": "location_identified"
     },
     {
       "index": 125,
@@ -304,7 +333,8 @@
       "country": "Luxembourg",
       "reason": "Schumann/rest area exact site not found",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 131,
@@ -314,7 +344,8 @@
       "country": "Montenegro",
       "reason": "Igalo refers to a whole town",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 152,
@@ -324,7 +355,8 @@
       "country": "Slovakia",
       "reason": "3 studne physical site unresolved",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 153,
@@ -334,7 +366,8 @@
       "country": "Slovakia",
       "reason": "Lorry parking site not identified",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 163,
@@ -344,7 +377,8 @@
       "country": "Slovenia",
       "reason": "Unspecified Logatec woodland",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 165,
@@ -354,7 +388,8 @@
       "country": "Slovenia",
       "reason": "Petrol rest-stop branch unidentified",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 172,
@@ -364,7 +399,8 @@
       "country": "Sweden",
       "reason": "Västra Skogen could mean neighbourhood, station or woodland",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 185,
@@ -374,7 +410,8 @@
       "country": "Turkey",
       "reason": "Lara Park identity disputed",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 208,
@@ -384,7 +421,8 @@
       "country": "Bosnia and Herzegovina",
       "reason": "Entire Željeznica riverbank rather than a spot",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 211,
@@ -394,7 +432,8 @@
       "country": "Bosnia and Herzegovina",
       "reason": "Whole Pejton neighbourhood",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 214,
@@ -404,7 +443,8 @@
       "country": "Bosnia and Herzegovina",
       "reason": "Celpaka facility/company not identified",
       "triage_status": "industrial_zone_identified_precise_carpark_pending",
-      "updated_note": "Official Republic of Srpska development agency identifies Celpak industrial zone in Prijedor linked via Aleja Kozarskog odreda; precise car park still unknown."
+      "updated_note": "Official Republic of Srpska development agency identifies Celpak industrial zone in Prijedor linked via Aleja Kozarskog odreda; precise car park still unknown.",
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 215,
@@ -414,7 +454,8 @@
       "country": "Bosnia and Herzegovina",
       "reason": "Stari Grad generic old town name",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 218,
@@ -424,7 +465,8 @@
       "country": "Bulgaria",
       "reason": "Burgas nudist beach section not identified",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 220,
@@ -435,7 +477,8 @@
       "reason": "Pomorie entire town and wrong municipality",
       "triage_status": "still_needs_detail_or_broad_area",
       "updated_note": null,
-      "corrected_city_for_consolidation": "Pomorie"
+      "corrected_city_for_consolidation": "Pomorie",
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 232,
@@ -445,7 +488,8 @@
       "country": "Cyprus",
       "reason": "Unidentified parking area",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 238,
@@ -455,7 +499,8 @@
       "country": "Cyprus",
       "reason": "Unidentified tavern and conflicting source location",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 244,
@@ -465,7 +510,8 @@
       "country": "Cyprus",
       "reason": "Lidl branch not identified",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     },
     {
       "index": 249,
@@ -475,7 +521,8 @@
       "country": "Czechia",
       "reason": "Generic 'outside town' area without distinct geocode",
       "triage_status": "source_location_recovered_or_facility_identified",
-      "updated_note": "Original Czech source gives detailed route by 1. Máje, former siding and bridge over stream, plus map pin; route may be historic, use source pin for location evidence."
+      "updated_note": "Original Czech source gives detailed route by 1. Máje, former siding and bridge over stream, plus map pin; route may be historic, use source pin for location evidence.",
+      "current_simple_category": "location_identified"
     },
     {
       "index": 291,
@@ -485,7 +532,8 @@
       "country": "Romania",
       "reason": "Unidentified mall in Sibiu",
       "triage_status": "still_needs_detail_or_broad_area",
-      "updated_note": null
+      "updated_note": null,
+      "current_simple_category": "location_details_need_checking"
     }
   ],
   "canonical_merges": [],
@@ -649,8 +697,8 @@
   },
   "primary_review_buckets": [
     {
-      "key": "identified_no_major_location_blocker",
-      "label": "Named/identifiable candidate; no material location ambiguity or confirmed public closure in the reviewed flags",
+      "key": "location_identified",
+      "label": "Location identified",
       "count": 252,
       "indices": [
         1,
@@ -2672,32 +2720,52 @@
           "country": "Romania"
         }
       ],
-      "note": "Not equivalent to recently verified or approved; recent user comments remain separately unclassified."
+      "note": "Identity/location sufficiently identified for next verification stage. Does not imply that cruising is recently confirmed or that publication is approved."
     },
     {
-      "key": "broad_but_known_area",
-      "label": "Recognisable area but original claimed subarea broad",
-      "count": 19,
+      "key": "location_details_need_checking",
+      "label": "Location details still need checking",
+      "count": 39,
       "indices": [
         6,
         8,
+        11,
         12,
         17,
+        28,
+        46,
+        47,
         49,
         57,
         58,
+        59,
+        74,
+        87,
+        99,
+        103,
+        105,
+        109,
         112,
         115,
         120,
+        125,
         131,
+        152,
+        153,
         163,
+        165,
         172,
+        185,
         208,
         211,
         214,
         215,
         218,
-        220
+        220,
+        232,
+        238,
+        244,
+        291
       ],
       "records": [
         {
@@ -2715,6 +2783,13 @@
           "country": "Andorra"
         },
         {
+          "index": 11,
+          "proposal_id": "GC1-ANDORRA-10",
+          "name": "Jardín",
+          "city": "Ordino",
+          "country": "Andorra"
+        },
+        {
           "index": 12,
           "proposal_id": "GC1-ANDORRA-12",
           "name": "Segudet",
@@ -2727,146 +2802,6 @@
           "name": "Linkeroever",
           "city": "Antwerp",
           "country": "Belgium"
-        },
-        {
-          "index": 49,
-          "proposal_id": "GC1-ESTONIA-04",
-          "name": "Valdeku",
-          "city": "Tallinn",
-          "country": "Estonia"
-        },
-        {
-          "index": 57,
-          "proposal_id": "GC1-ESTONIA-15",
-          "name": "Punane tn - Car Hookup Spot",
-          "city": "Tallinn",
-          "country": "Estonia"
-        },
-        {
-          "index": 58,
-          "proposal_id": "GC1-ESTONIA-11",
-          "name": "Põlva",
-          "city": "Põlva",
-          "country": "Estonia"
-        },
-        {
-          "index": 112,
-          "proposal_id": "GC1-LUXEMBOURG-08",
-          "name": "Dippach-bertrange",
-          "city": "Dippach",
-          "country": "Luxembourg"
-        },
-        {
-          "index": 115,
-          "proposal_id": "GC1-LUXEMBOURG-12",
-          "name": "Foret",
-          "city": "Grosbous",
-          "country": "Luxembourg"
-        },
-        {
-          "index": 120,
-          "proposal_id": "GC1-LUXEMBOURG-03",
-          "name": "Lintgen gay bi area",
-          "city": "Lintgen",
-          "country": "Luxembourg"
-        },
-        {
-          "index": 131,
-          "proposal_id": "GC1-MONTENEGRO-06",
-          "name": "Igalo",
-          "city": "Herceg Novi",
-          "country": "Montenegro"
-        },
-        {
-          "index": 163,
-          "proposal_id": "GC1-SLOVENIA-10",
-          "name": "Forest Logatec",
-          "city": "Logatec",
-          "country": "Slovenia"
-        },
-        {
-          "index": 172,
-          "proposal_id": "GC1-SWEDEN-08",
-          "name": "Västra Skogen",
-          "city": "Solna",
-          "country": "Sweden"
-        },
-        {
-          "index": 208,
-          "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-05",
-          "name": "Obala rijeke Zeljeznice",
-          "city": "Banja Ilidza",
-          "country": "Bosnia and Herzegovina"
-        },
-        {
-          "index": 211,
-          "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-12",
-          "name": "Pejton",
-          "city": "Ildza",
-          "country": "Bosnia and Herzegovina"
-        },
-        {
-          "index": 214,
-          "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-10",
-          "name": "Parking kod Celpaka",
-          "city": "Prijedor",
-          "country": "Bosnia and Herzegovina"
-        },
-        {
-          "index": 215,
-          "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-15",
-          "name": "Stari Grad",
-          "city": "Prijedor",
-          "country": "Bosnia and Herzegovina"
-        },
-        {
-          "index": 218,
-          "proposal_id": "GC1-BULGARIA-14",
-          "name": "Nude Beach",
-          "city": "Burgas",
-          "country": "Bulgaria"
-        },
-        {
-          "index": 220,
-          "proposal_id": "GC1-BULGARIA-15",
-          "name": "Pomorie",
-          "city": "Pomorie",
-          "country": "Bulgaria"
-        }
-      ],
-      "note": "May be acceptable as a cruising area without an exact pin; no automatic rejection."
-    },
-    {
-      "key": "unidentified_facility_or_spot",
-      "label": "Generic or unidentifiable facility/spot",
-      "count": 18,
-      "indices": [
-        11,
-        28,
-        46,
-        47,
-        59,
-        74,
-        87,
-        99,
-        103,
-        105,
-        109,
-        125,
-        152,
-        153,
-        165,
-        232,
-        244,
-        291
-      ],
-      "records": [
-        {
-          "index": 11,
-          "proposal_id": "GC1-ANDORRA-10",
-          "name": "Jardín",
-          "city": "Ordino",
-          "country": "Andorra"
         },
         {
           "index": 28,
@@ -2887,6 +2822,27 @@
           "proposal_id": "GC1-ESTONIA-01",
           "name": "Parklas/Metsas",
           "city": "Tallinn",
+          "country": "Estonia"
+        },
+        {
+          "index": 49,
+          "proposal_id": "GC1-ESTONIA-04",
+          "name": "Valdeku",
+          "city": "Tallinn",
+          "country": "Estonia"
+        },
+        {
+          "index": 57,
+          "proposal_id": "GC1-ESTONIA-15",
+          "name": "Punane tn - Car Hookup Spot",
+          "city": "Tallinn",
+          "country": "Estonia"
+        },
+        {
+          "index": 58,
+          "proposal_id": "GC1-ESTONIA-11",
+          "name": "Põlva",
+          "city": "Põlva",
           "country": "Estonia"
         },
         {
@@ -2939,11 +2895,39 @@
           "country": "Lithuania"
         },
         {
+          "index": 112,
+          "proposal_id": "GC1-LUXEMBOURG-08",
+          "name": "Dippach-bertrange",
+          "city": "Dippach",
+          "country": "Luxembourg"
+        },
+        {
+          "index": 115,
+          "proposal_id": "GC1-LUXEMBOURG-12",
+          "name": "Foret",
+          "city": "Grosbous",
+          "country": "Luxembourg"
+        },
+        {
+          "index": 120,
+          "proposal_id": "GC1-LUXEMBOURG-03",
+          "name": "Lintgen gay bi area",
+          "city": "Lintgen",
+          "country": "Luxembourg"
+        },
+        {
           "index": 125,
           "proposal_id": "GC1-LUXEMBOURG-07",
           "name": "Schumann",
           "city": "Wiltz",
           "country": "Luxembourg"
+        },
+        {
+          "index": 131,
+          "proposal_id": "GC1-MONTENEGRO-06",
+          "name": "Igalo",
+          "city": "Herceg Novi",
+          "country": "Montenegro"
         },
         {
           "index": 152,
@@ -2960,6 +2944,13 @@
           "country": "Slovakia"
         },
         {
+          "index": 163,
+          "proposal_id": "GC1-SLOVENIA-10",
+          "name": "Forest Logatec",
+          "city": "Logatec",
+          "country": "Slovenia"
+        },
+        {
           "index": 165,
           "proposal_id": "GC1-SLOVENIA-14",
           "name": "Petrol WC Reststop",
@@ -2967,10 +2958,73 @@
           "country": "Slovenia"
         },
         {
+          "index": 172,
+          "proposal_id": "GC1-SWEDEN-08",
+          "name": "Västra Skogen",
+          "city": "Solna",
+          "country": "Sweden"
+        },
+        {
+          "index": 185,
+          "proposal_id": "GC1-TURKEY-15",
+          "name": "Lara Park",
+          "city": "Antalya",
+          "country": "Turkey"
+        },
+        {
+          "index": 208,
+          "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-05",
+          "name": "Obala rijeke Zeljeznice",
+          "city": "Banja Ilidza",
+          "country": "Bosnia and Herzegovina"
+        },
+        {
+          "index": 211,
+          "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-12",
+          "name": "Pejton",
+          "city": "Ildza",
+          "country": "Bosnia and Herzegovina"
+        },
+        {
+          "index": 214,
+          "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-10",
+          "name": "Parking kod Celpaka",
+          "city": "Prijedor",
+          "country": "Bosnia and Herzegovina"
+        },
+        {
+          "index": 215,
+          "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-15",
+          "name": "Stari Grad",
+          "city": "Prijedor",
+          "country": "Bosnia and Herzegovina"
+        },
+        {
+          "index": 218,
+          "proposal_id": "GC1-BULGARIA-14",
+          "name": "Nude Beach",
+          "city": "Burgas",
+          "country": "Bulgaria"
+        },
+        {
+          "index": 220,
+          "proposal_id": "GC1-BULGARIA-15",
+          "name": "Pomorie",
+          "city": "Pomorie",
+          "country": "Bulgaria"
+        },
+        {
           "index": 232,
           "proposal_id": "GC1-CYPRUS-02",
           "name": "Parking Area",
           "city": "Ayia Napa",
+          "country": "Cyprus"
+        },
+        {
+          "index": 238,
+          "proposal_id": "GC1-CYPRUS-09",
+          "name": "Old tavern",
+          "city": "Livadia",
           "country": "Cyprus"
         },
         {
@@ -2988,71 +3042,14 @@
           "country": "Romania"
         }
       ],
-      "note": "Exact car park, toilet, mall, or location name not established; most actionable need for additional map/source lookup."
-    },
-    {
-      "key": "conflicting_place_identity",
-      "label": "Conflicting city, place name or source-location match",
-      "count": 2,
-      "indices": [
-        185,
-        238
-      ],
-      "records": [
-        {
-          "index": 185,
-          "proposal_id": "GC1-TURKEY-15",
-          "name": "Lara Park",
-          "city": "Antalya",
-          "country": "Turkey"
-        },
-        {
-          "index": 238,
-          "proposal_id": "GC1-CYPRUS-09",
-          "name": "Old tavern",
-          "city": "Livadia",
-          "country": "Cyprus"
-        }
-      ],
-      "note": "Needs geographical reconciliation; do not invent coordinates."
-    },
-    {
-      "key": "explicit_current_closure",
-      "label": "Documented closure affecting public entry",
-      "count": 2,
-      "indices": [
-        182,
-        201
-      ],
-      "records": [
-        {
-          "index": 182,
-          "proposal_id": "GC1-TURKEY-13",
-          "name": "Kızılay Avm",
-          "city": "Ankara",
-          "country": "Turkey"
-        },
-        {
-          "index": 201,
-          "proposal_id": "GP4-UNITED-STATES-NEW-YORK-03",
-          "name": "Jacob Riis Park — Bay 1",
-          "city": "New York",
-          "country": "United States"
-        }
-      ],
-      "note": "Keep research candidate separate; do not describe public access as active without new evidence."
+      "note": "One work queue for every candidate lacking reliable enough exact location, including vague areas, unnamed facilities and conflicting place descriptions. No automatic deletion or assumption that broad area itself is invalid."
     }
   ],
   "primary_review_buckets_totals": {
-    "identified_no_major_location_blocker": 252,
-    "broad_but_known_area": 19,
-    "unidentified_facility_or_spot": 18,
-    "conflicting_place_identity": 2,
-    "explicit_current_closure": 2,
-    "all_candidates": 293,
-    "check_sum": 293,
-    "closed_deleted_from_active": 2,
-    "active_candidates": 291
+    "location_identified": 252,
+    "location_details_need_checking": 39,
+    "active_candidates": 291,
+    "check_sum": 291
   },
   "location_recheck_new_facts": {
     "48": {
