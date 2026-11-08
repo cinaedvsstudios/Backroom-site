@@ -97,7 +97,7 @@ def main():
     checkpoint_ids=set()
     for path in checkpoint_files:
         o=load(path)
-        checkpoint_ids.update(map(int,o.get("_meta",{}).get("original_indices",[])))
+        checkpoint_ids.update(int(z) for z in (o.get("_meta",{}).get("original_indices") or o.get("_meta",{}).get("indices") or o.get("_meta",{}).get("record_indices") or o.get("_meta",{}).get("original_queue_indices") or [v.get("original_index",v.get("index")) for v in o.get("records",[])]) if z is not None)
     if not checkpoint_ids.issubset(completions):
         raise RuntimeError("Tracker completion list omits a saved completed checkpoint")
     pending=set(map(int,p.get("pending_completion_indices",[])))
