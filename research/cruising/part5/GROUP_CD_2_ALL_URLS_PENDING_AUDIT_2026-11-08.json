@@ -1,7 +1,7 @@
 {
   "title": "Group CD2 – mandatory source-by-source audit of 86 research-incomplete candidates",
   "date": "2026-11-08",
-  "status": "every_stored_url_direct_open_attempted_first_pass; content_and_alternate_source_review_incomplete",
+  "status": "262 distinct URLs attempted; readable source material still needs full candidate-by-candidate interpretation, and more detail URLs may be discoverable via indices",
   "total_candidates": 86,
   "total_source_url_occurrences": 323,
   "distinct_source_urls": 260,
@@ -1389,6 +1389,13 @@
           "findings": null,
           "last_attempt_date": "2026-11-08",
           "content_inspected_for_exact_cruising_spot": false
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/boschetto_di_lacchiarella_lacchiarella_italia_5171",
+          "latest_direct_check": "direct_url_attempted_no_readable_page_returned",
+          "last_attempt_date": "2026-11-08",
+          "content_inspected_for_exact_cruising_spot": false,
+          "discovery_note": "source_detail_discovered_from_country_index; direct_open_cache_miss"
         }
       ],
       "source_evaluation": "all_stored_urls_attempted_once; extracted_place_evidence_still_requires_review",
@@ -1472,6 +1479,13 @@
           "findings": null,
           "last_attempt_date": "2026-11-08",
           "content_inspected_for_exact_cruising_spot": false
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/certosa_via_grosio_milano_italia_15415",
+          "latest_direct_check": "direct_url_attempted_no_readable_page_returned",
+          "last_attempt_date": "2026-11-08",
+          "content_inspected_for_exact_cruising_spot": false,
+          "discovery_note": "source_detail_discovered_from_country_index; direct_open_cache_miss"
         }
       ],
       "source_evaluation": "all_stored_urls_attempted_once; extracted_place_evidence_still_requires_review",
@@ -3131,13 +3145,13 @@
   ],
   "summary": {
     "total_candidates": 86,
-    "total_source_url_occurrences": 323,
-    "distinct_source_urls": 260,
-    "distinct_urls_attempted": 260,
+    "total_source_url_occurrences": 325,
+    "distinct_source_urls": 262,
+    "distinct_urls_attempted": 262,
     "returned_readable_pages": 116,
     "pdfs_opened": 6,
     "challenge_or_noncontent": 2,
-    "no_readable_page_returned": 136,
+    "no_readable_page_returned": 138,
     "source_content_fully_evaluated": false,
     "classification": "source_research_incomplete"
   },
@@ -3145,6 +3159,21 @@
     "All 260 distinct URL opens were requested in this session across six groups. Opening a URL does not mean its evidence was read and interpreted.",
     "Success means the web tool returned readable material or PDF, not proof of location/current gay cruising. PDFs require visual inspection before using their information.",
     "No readable result may mean block, cache miss, timeout, or unavailable site; do not equate this with a nonexistent location.",
-    "An alternate source search remains necessary for candidates whose primary pages are blocked; individual candidate resolutions are not final."
+    "An alternate source search remains necessary for candidates whose primary pages are blocked; individual candidate resolutions are not final.",
+    "Two additional original detail links were recovered from the Italy country index after checking the initially stored 260 URL list. Both returned cache misses; indexing all other candidate-specific detail links is ongoing."
+  ],
+  "discovered_additional_original_detail_urls": [
+    {
+      "id": "CRU-CD2-281",
+      "url": "https://www.gays-cruising.com/en/cruising/boschetto_di_lacchiarella_lacchiarella_italia_5171",
+      "state": "source_detail_discovered_from_country_index; direct_open_cache_miss",
+      "name": "Boschetto di Lacchiarella"
+    },
+    {
+      "id": "CRU-CD2-286",
+      "url": "https://www.gays-cruising.com/en/cruising/certosa_via_grosio_milano_italia_15415",
+      "state": "source_detail_discovered_from_country_index; direct_open_cache_miss",
+      "name": "Certosa - Via Grosio"
+    }
   ]
 }
