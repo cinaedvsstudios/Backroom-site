@@ -236,50 +236,6 @@
     "user_action_required": false
   },
   {
-    "queue_index": 492,
-    "venue_id": "CRU-AB-0492",
-    "name": "Antvorskov rest area",
-    "city": "Slagelse",
-    "country": "Denmark",
-    "primary_group": "LOCATION_RESEARCH",
-    "primary_problem_type": "Several plausible mapped places; select the correct one",
-    "what_exactly_is_wrong": "Antvorskov Nord and Syd are separate E20 facilities; the directory entry is ambiguous.",
-    "what_to_research": "Antvorskov Nord or Syd on E20 from source route or map.",
-    "search_query_maps": "Antvorskov rest area Slagelse Denmark",
-    "search_query_web": "Antvorskov rest area Slagelse Denmark location cruising access closure current",
-    "has_coordinates": false,
-    "coordinates": null,
-    "secondary_issue_tags": [
-      "no_defensible_map_pin"
-    ],
-    "original_research_reason": "ANTVORSKOV_NORD_VS_SYD_NOT_CONCLUSIVELY_MATCHED",
-    "evidence_last_known": "March and April 2026 messages proposed meetups, while one visitor complained that nobody arrived. No predictable active time is established.",
-    "source_links": [
-      "https://www.gays-cruising.com/en/denmark",
-      "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
-      "https://www.vejdirektoratet.dk/trafikant/rastepladser-din-pause-paa-turen",
-      "https://www.retsinformation.dk/eli/lta/2023/1431",
-      "https://poi.gpsforalle.dk/print2.php?cid=1026&gid=555"
-    ],
-    "research_action": "disambiguate_named_alternatives",
-    "already_resolved": false,
-    "skip_current_publication": false,
-    "note": null,
-    "previous_group": "E",
-    "research_type": "choose_correct_identified_facility",
-    "web_recheck": {
-      "checked_2026_11_08": true,
-      "finding": {
-        "finding": "Original saved research includes a 2021 commenter specifically naming Antvorskov Syd, although general source listing mentions a bridge and bushes and 2026 messages are mostly invitations.",
-        "source_url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
-        "confidence": "Syd_probable_but_not_unique_current_location",
-        "next": "Resolve Syd direction against original map, compare current Nord/Syd access."
-      },
-      "source_url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949"
-    },
-    "user_action_required": false
-  },
-  {
     "queue_index": 594,
     "venue_id": "CRU-AB-0594",
     "name": "Rastplatz Wäldchen mit Tür zu mehr",
@@ -1035,49 +991,6 @@
       "longitude": 6.7980433,
       "meaning": "forum contributor's alternative map correction, not verified by official Rhine marker"
     }
-  },
-  {
-    "queue_index": 870,
-    "venue_id": "CRU-AB-0870",
-    "name": "A94 Ende in Marktl - unter der Alzbrücke",
-    "city": "Marktl",
-    "country": "Germany",
-    "primary_group": "LOCATION_RESEARCH",
-    "primary_problem_type": "Place known; specific entrance, subsection or pin unclear",
-    "what_exactly_is_wrong": "The source does not distinguish which side of the A94 Alzbrücke is meant or the public approach.",
-    "what_to_research": "Public parking/access side of the A94 Alzbrücke at Marktl.",
-    "search_query_maps": "A94 Ende in Marktl - unter der Alzbrücke Marktl Germany",
-    "search_query_web": "A94 Ende in Marktl - unter der Alzbrücke Marktl Germany location cruising access closure current",
-    "has_coordinates": false,
-    "coordinates": null,
-    "secondary_issue_tags": [
-      "no_defensible_map_pin"
-    ],
-    "original_research_reason": "BRIDGE_ACCESS_POINTS_ON_BOTH_SIDES_UNKNOWN",
-    "evidence_last_known": "April–May 2026 posters proposed visits, but no confirmed completed encounter or reliable active hours.",
-    "source_links": [
-      "https://www.gays-cruising.com/en/germany",
-      "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635"
-    ],
-    "research_action": "geocode_named_place_then_refine_subarea",
-    "already_resolved": false,
-    "skip_current_publication": false,
-    "note": "Use a clearly labeled general reference point if exact public subarea cannot be verified.",
-    "previous_group": "F",
-    "research_type": "refine_section_of_known_place",
-    "web_recheck": {
-      "checked_2026_11_08": true,
-      "finding": {
-        "finding": "Original Gays-Cruising detail expressly says 'Unter der Autobahnbrücke an der Alz, auf beiden Seiten Parkplatz'—parking on BOTH sides beneath the motorway bridge. That identifies a two-sided location, not an unknown single side.",
-        "source_url": "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635",
-        "confidence": "both_banks_of_A94_Alz_bridge_identified",
-        "next": "Map both public parking approaches on either bank and select a named bridge reference rather than force one side."
-      },
-      "source_url": "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635"
-    },
-    "user_action_required": false,
-    "followup_research_target": "Map both public parking approaches on either bank and select a named bridge reference rather than force one side.",
-    "reference_gps": null
   },
   {
     "queue_index": 896,
