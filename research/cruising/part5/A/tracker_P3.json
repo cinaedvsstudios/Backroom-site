@@ -1,0 +1,54 @@
+{
+  "title": "Group 1 Worker A Part 3 substantive research continuation tracker",
+  "updated_berlin": "2026-11-08",
+  "source_master": "research/cruising/part5/master_queue.json",
+  "original_range": {
+    "start": 1,
+    "end": 293,
+    "total": 293
+  },
+  "active_candidates": 291,
+  "excluded_original_indices": [
+    182,
+    201
+  ],
+  "baseline_tracker": "research/cruising/part5/tracker_A.json",
+  "baseline_caution": "The baseline 293/293 and full_verification_252 252/252 describe previous passes, not exhaustive individual live research; never count those as P3 work.",
+  "p3_progress": {
+    "original_indices_assessed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "genuinely_source_assessed_complete": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "incomplete": [
+      {
+        "index": 4,
+        "id": "GC1-ANDORRA-04",
+        "reason": "Original source page 18294 unreadable after EN/ES/FR/index/archival attempts; no exact identity/pin, separate from Rec del Solà only by source directory list."
+      }
+    ],
+    "completed_count": 4,
+    "remaining_not_completed": 287,
+    "unreviewed_indices_start": 6,
+    "next_incomplete_index": 4,
+    "next_incomplete_id": "GC1-ANDORRA-04",
+    "last_completed_index": 5,
+    "last_completed_id": "GC1-ANDORRA-05",
+    "newly_identified_location_count": 0,
+    "first_complete_5_record_checkpoint": false
+  },
+  "saved_evidence_files": [
+    "research/cruising/part5/A/P3_deep_source_recheck_0001_0005_PARTIAL_2026-11-08.json"
+  ],
+  "last_confirmed_commit": "956c6d4c4635f092bfb539c5bae801951a94f6bf",
+  "approach": "Repair #4 first if new source evidence becomes accessible; keep incomplete explicitly. Deep research #6 next only after or while #4 remains flagged; count and checkpoint only five genuinely researched records. Keep old batch files immutable.",
+  "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write."
+}
