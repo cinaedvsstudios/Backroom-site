@@ -1,0 +1,65 @@
+name: Consolidate Group A to one research master
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/consolidate-group-a-once.yml
+      - scripts/consolidate_group_a_once.py
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: group-a-one-master-consolidation
+  cancel-in-progress: false
+jobs:
+  consolidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Consolidate and independently validate before destructive cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for try in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            if test -f research/cruising/part5/A/GROUP_A_291_MASTER_RESEARCH.json && \
+               ! test -f research/cruising/part5/A/tracker_P3.json; then
+              python3 scripts/consolidate_group_a_once.py --validate-final
+              echo "Already completed and validated"
+              exit 0
+            fi
+            python3 scripts/consolidate_group_a_once.py --build
+            git add -- research/cruising/part5/A/GROUP_A_291_MASTER_RESEARCH.json
+            git commit -m "Group A stage 1: save complete lossless 291-record master; retain originals"
+            if git push origin HEAD:main; then
+              echo "Stage 1 saved; checking remote contents"
+              break
+            fi
+            echo "Concurrent updates prevented stage 1 push; reconstructing on latest main"
+            sleep 3
+            if test "$try" = 3; then exit 1; fi
+          done
+          git fetch origin main
+          python3 scripts/consolidate_group_a_once.py --validate-remote
+          python3 scripts/consolidate_group_a_once.py --clean
+          git add -- research/cruising/part5/A/
+          git commit -m "Group A stage 2: verified one-master consolidation; retire old files"
+          for try in 1 2 3 4 5; do
+            if git push origin HEAD:main; then break; fi
+            echo "Concurrent repository push: rebasing cleanup commit without losing verification"
+            git fetch origin main
+            git rebase origin/main
+            sleep 3
+            if test "$try" = 5; then exit 1; fi
+          done
+          git fetch origin main
+          git reset --hard origin/main
+          python3 scripts/consolidate_group_a_once.py --validate-final
+          echo "Group A master and cleanup verified on remote main"
