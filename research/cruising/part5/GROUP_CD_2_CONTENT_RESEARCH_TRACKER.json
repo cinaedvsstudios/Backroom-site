@@ -4,14 +4,14 @@
   "scope": "86 candidates classified research-incomplete as of start",
   "original_backlog_count": 86,
   "working_records": 186,
-  "records_received_substantive_content_review": 55,
+  "records_received_substantive_content_review": 60,
   "records_source_review_fully_complete": 0,
   "original_direct_details_read_this_batch": 1,
   "new_geographically_identified": [
     "CRU-CD2-209"
   ],
-  "last_assessed": "CRU-CD2-315",
-  "next_unstarted": "CRU-CD2-316",
+  "last_assessed": "CRU-CD2-322",
+  "next_unstarted": "CRU-CD2-326",
   "still_pending_deep_followup": [
     "CRU-CD2-200",
     "CRU-CD2-202",
@@ -67,7 +67,12 @@
     "CRU-CD2-306",
     "CRU-CD2-308",
     "CRU-CD2-309",
-    "CRU-CD2-315"
+    "CRU-CD2-315",
+    "CRU-CD2-316",
+    "CRU-CD2-317",
+    "CRU-CD2-318",
+    "CRU-CD2-319",
+    "CRU-CD2-322"
   ],
   "completed_batches": [
     {
@@ -201,6 +206,18 @@
       ],
       "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_011_2026-11-08.json",
       "status": "5 substantial investigations, Utsikten Panorama official site identified, Kazimierz H&M mall, separate Rybnik forest parking and distinct Mickiewicza lots; 0 source-exhaustive."
+    },
+    {
+      "number": 12,
+      "ids": [
+        "CRU-CD2-316",
+        "CRU-CD2-317",
+        "CRU-CD2-318",
+        "CRU-CD2-319",
+        "CRU-CD2-322"
+      ],
+      "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_012_2026-11-08.json",
+      "status": "5 source-content investigations; Storebaug east/west vs separate Storehaug, Rosnes rowing club, Seixal/Coina different municipalities. None exhaustive."
     }
   ],
   "research_rules": "A researched batch may contain partially researched candidates, but do not count source-exhaustive completion until URLs/content are substantively examined. Never label inaccessible-original candidates unidentifiable. Commit every five investigated; continue from next_unstarted and revisit pending_followup.",
@@ -212,11 +229,6 @@
   },
   "production_unchanged": true,
   "latest_substantive_findings": [
-    "CRU-CD2-286 original Italian detailed listing read: precise map 45.4995498657,9.1210985184, 2025-08-26 historical firsthand report",
-    "CRU-CD2-295 Turate 51712 original indexed directions to woodland beside factory, no original GPS or dated report",
-    "CRU-CD2-292 original source detail 5691 discovered but not readable",
-    "CRU-CD2-282 park-and-ride and motorway rest areas are distinct",
-    "CRU-CD2-301 Ziepniekkalns French original page READ: source Google directions precise 56.903263092,24.1068687439 and zero visitor comments; no recent activity",
     "CRU-CD2-299 Vitrupe Beach actually Salacgriva/Vidzeme river mouth not Riga; river-mouth coordinate is not beach cruising pin",
     "CRU-CD2-303 Spice Style Lielirbes 29 distinct from Spice Life Jaunmoku 13; original WC remains unspecified",
     "CRU-CD2-302 Lake Lāčplēsis not identified: hamlet map in Ogre is NOT a lake",
@@ -224,8 +236,13 @@
     "CRU-CD2-306 geolocated named Rybnik Parking Lesny beside reservoir at 50.126447,18.500424 in 2024 camping source; original gay pin not recovered",
     "CRU-CD2-305 Galeria Kazimierz H&M Podgorska 34 levels 0/1 strongly matches Kazimierz WC listing but exact toilet unspecified",
     "CRU-CD2-308 Wroclaw named 80-space municipal Mickiewicza parking is distinct from <10 capacity camper site, do not substitute one for other",
-    "CRU-CD2-309 railway candidate retained without arbitrary line or exclusion"
+    "CRU-CD2-309 railway candidate retained without arbitrary line or exclusion",
+    "CRU-CD2-317 St1 Rygge 24h northbound E6 station Storebaug1; hotel on west side; original spot side unknown",
+    "CRU-CD2-318 Storehaug Nord separate directory marker 2.3km from Nesparken vs Storebaug 2.0km, possible alias not confirmed duplicate",
+    "CRU-CD2-319 Moss Roklubb at Rosnes Jeloya Sara Petersons vei 150 club privately managed; original natural area may be nearby trail",
+    "CRU-CD2-322 Coina industrial postcode is BARREIRO municipality, while alternate gay directory groups Seixal — do not conflate",
+    "CRU-CD2-316 generic Sucking area Haugesund original map inaccessible"
   ],
-  "last_confirmed_batch_commit": "7e812edb353faf747fedd6475aff4ef4de1c0b6a",
+  "last_confirmed_batch_commit": "16421d429721ccacc18a1ad2e0b49c8e50aa51bc",
   "handover_file": "GROUP_CD_2_CONTINUATION_HANDOVER_2026-11-08.md"
 }
