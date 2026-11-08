@@ -18,16 +18,16 @@
     "Instagram_URL": "",
     "Facebook_URL": "",
     "Other_URL": "",
-    "Source_URLs": "https://www.gays-cruising.com/en/bulgaria, https://www.gays-cruising.com/en/cruising/poduene_railway_station_sofia_bulgaria_25863, https://svc.sofia.bg/en/web/sofia-municipality/stations, https://railwayz.info/photolines/station/25230",
+    "Source_URLs": "https://www.gays-cruising.com/en/bulgaria, https://www.gays-cruising.com/en/cruising/poduene_railway_station_sofia_bulgaria_25863, https://svc.sofia.bg/en/web/sofia-municipality/stations, https://railwayz.info/photolines/station/25230, https://www.sofiatraffic.com/transport/stop/0470-gara-poduyane, https://www.bdz.bg/en/a/stations",
     "Share_URL": "",
     "Image_URL": "placeholder_venue.jpg",
-    "Description": "Poduyane is a working railway station on the eastern side of Sofia, with frequent trams and buses nearby. An old cruising-directory entry points towards railway land, but newer visitor comments do not confirm activity and include complaints about harassment. The alleged location is associated with live railway tracks, so it is not a place to explore or enter. Keep this as a safety-flagged historical lead, not a recommendation.",
+    "Description": "Poduyane is an active railway station in eastern Sofia, served by trams 20, 21 and 22. An older gay cruising directory describes wooded land near the railway corridor, while visitor comments from January and February 2026 describe the area without confirming recent encounters; one reports harassment. The directory's original map destination is east of the station itself, and is not a confirmed public access point. Use public station routes rather than crossing railway tracks.",
     "Vibe_Tags": "Railway Station, Historical Report, Unverified, Safety Warning",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T19:05:32Z",
     "Opening_Days": "Mon-Sun",
     "Opening_Open_Time": "05:00",
     "Opening_Close_Time": "23:00",
-    "Opening_Notes": "Railway station customer-service hours, not cruising times. Active railway property; do not enter tracks.",
+    "Opening_Notes": "05:00–23:00 are railway ticket/information-service hours, NOT cruising hours. The directory-referenced wooded area has no independently verified public access route.",
     "Event_Date": "",
     "Event_Time": "",
     "Unspecified02": "",
@@ -171,23 +171,23 @@
         "https://railwayz.info/photolines/station/25230"
       ],
       "review_classification": {
-        "category": "access_review",
-        "label": "Access, closure, legal or safety conditions need checking",
+        "category": "mapped",
+        "label": "Mapped named place; access and activity evidence pending",
         "work_owner": "researcher",
         "user_action_required": false,
         "publication_approved": false,
         "location_resolution": "coordinates_recorded",
-        "research_task": "Identify a safe, lawful, separately accessible public area. Reported area between active tracks is not suitable for directions.",
+        "research_task": "Geographic station identity and public transport confirmed. Verify specific directory-referenced outdoor area and recent cruising activity; original map point does not prove safe access.",
         "note": "A geo pin for a landmark does not itself demonstrate the alleged exact cruising position or active operation."
       },
       "simplified_review": {
-        "primary": "concrete_physical_hazard",
-        "reason": "Historical directions relate to active railway tracks; that is a specific physical hazard, not a generic objection to cruising.",
+        "primary": "normal_mapped",
+        "reason": "Owner-directed reclassification: the station is identified and mapped. Rail proximity remains a factual access note, not a separate exclusion category; the actual original directory spot is different from the general station map pin.",
         "user_action_required": false,
         "confirmed_current_cruising": false,
         "public_import_approved": false,
-        "checked_original_detail_this_pass": false,
-        "original_detail_result": "not_directly_checked_this_pass",
+        "checked_original_detail_this_pass": true,
+        "original_detail_result": "full_primary_page_read_2026_11_08; directory driving link destination recovered",
         "resolution_needed": false,
         "duplicate_target": null,
         "documented_actual_physical_hazard": true,
@@ -196,7 +196,26 @@
         "evidence_urls": []
       },
       "research_followup_required": true,
-      "owner_manual_review_required": false
+      "owner_manual_review_required": false,
+      "original_source_pin": {
+        "latitude": 42.6973686218,
+        "longitude": 23.357635498,
+        "source_url": "https://www.gays-cruising.com/en/cruising/poduene_railway_station_sofia_bulgaria_25863",
+        "provenance": "Original directory GET DIRECTIONS driving destination extracted 2026-11-08",
+        "scope": "Original historical claimed cruising-area reference; not verified public entrance, not used as front-facing directions"
+      },
+      "owner_decision_2026_11_08": {
+        "category": "normal_mapped",
+        "reason": "Physical hazard not treated as separate exclusion; retain factual source notes and do not assert recent activity"
+      },
+      "recent_independent_check_2026_11_08": {
+        "station_address": "57 Madrid Blvd confirmed Sofia municipality",
+        "ticket_office_hours": "05:00–23:00 confirmed Sofia municipality and BDZ",
+        "transport": "Trams 20, 21 and 22 confirmed by Sofia Traffic",
+        "source_primary": "Full original directory entry and visible comments read; most recent 2026-02-13 and 2026-01-05; no recent positive encounter",
+        "post_code": "1505 retained from working record; not independently checked in this source pass",
+        "map_note": "Public station map point is distinct from original Gays-Cruising directions destination"
+      }
     }
   },
   {
