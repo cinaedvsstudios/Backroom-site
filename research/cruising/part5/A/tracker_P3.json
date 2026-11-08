@@ -235,7 +235,12 @@
       217,
       218,
       219,
-      220
+      220,
+      221,
+      222,
+      223,
+      224,
+      225
     ],
     "genuinely_source_assessed_complete": [
       1,
@@ -306,7 +311,10 @@
       209,
       212,
       213,
-      219
+      219,
+      221,
+      224,
+      225
     ],
     "incomplete": [
       {
@@ -1053,20 +1061,30 @@
         "index": 220,
         "id": "GC1-BULGARIA-15",
         "reason": "Pomorie original #108831 unreadable and mislabeled Nessebar; no shoreline/site pinpoint"
+      },
+      {
+        "index": 222,
+        "id": "GC1-BULGARIA-03",
+        "reason": "Abandoned Sofia park WC original map point recovered, but building/entrance/access not independently identified"
+      },
+      {
+        "index": 223,
+        "id": "GC1-BULGARIA-01",
+        "reason": "Borisova Gradina original detailed 2022 two-subarea comments, but cannot yet resolve same physical spot as existing Backroom park listing"
       }
     ],
-    "completed_count": 69,
-    "remaining_not_completed": 222,
-    "unreviewed_indices_start": 221,
+    "completed_count": 72,
+    "remaining_not_completed": 219,
+    "unreviewed_indices_start": 226,
     "next_incomplete_index": 4,
     "next_incomplete_id": "GC1-ANDORRA-04",
-    "last_completed_index": 219,
-    "last_completed_id": "GC1-BULGARIA-03",
+    "last_completed_index": 225,
+    "last_completed_id": "GC1-BULGARIA-02",
     "newly_identified_location_count": 0,
     "first_complete_5_record_checkpoint": true,
-    "last_assessed_index": 220,
-    "last_assessed_id": "GC1-BULGARIA-15",
-    "checkpoint_count": 13,
+    "last_assessed_index": 225,
+    "last_assessed_id": "GC1-BULGARIA-02",
+    "checkpoint_count": 14,
     "first_checkpoint_indices": [
       1,
       2,
@@ -1075,23 +1093,21 @@
       14
     ],
     "last_completed_batch_indices": [
-      187,
-      188,
-      190,
-      194,
-      199
+      209,
+      212,
+      213,
+      219,
+      221
     ],
-    "next_complete_five_needs": 1,
+    "next_complete_five_needs": 3,
     "excluded_original_indices": [
       182,
       201
     ],
-    "next_active_index": 221,
+    "next_active_index": 226,
     "pending_completion_indices": [
-      209,
-      212,
-      213,
-      219
+      224,
+      225
     ]
   },
   "saved_evidence_files": [
@@ -1147,12 +1163,14 @@
     "research/cruising/part5/A/P3_deep_source_recheck_0206_0210_2026-11-08.json",
     "research/cruising/part5/A/P3_addendum_0209_original_page_map_recovered_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0211_0215_2026-11-08.json",
-    "research/cruising/part5/A/P3_deep_source_recheck_0216_0220_2026-11-08.json"
+    "research/cruising/part5/A/P3_deep_source_recheck_0216_0220_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0221_0225_2026-11-08.json",
+    "research/cruising/part5/A/P3_completed_batch_0066_0070_2026-11-08.json"
   ],
   "last_confirmed_commit": "956c6d4c4635f092bfb539c5bae801951a94f6bf",
-  "approach": "Resume original index #221. 220 queue positions examined; 2 historically excluded, 218 active. 69 source-researched, 149 still incomplete, one next completion triggers immutable checkpoint 14. Source-page access gaps retained. No live listing edits.",
+  "approach": "Next untouched original index 226. 225 indices examined; two active exclusions #182, #201; 223 active examined, 72 substantively source-researched and 151 incomplete; 14 immutable five-record checkpoints. #224-225 completed awaiting three more for checkpoint 15. Original sources and all dated claims preserved; no production edits.",
   "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write.",
-  "last_confirmed_evidence_commit": "8f8045c935e3c3608881b529c023f9b76d51794c",
-  "latest_checkpoint_commit": "56d5ec95be34d0c2547b5e416960f8a4ff9ed62d",
-  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0061_0065_2026-11-08.json"
+  "last_confirmed_evidence_commit": "659904aa26c5f6134bb4aa700cbe0733865e8f74",
+  "latest_checkpoint_commit": "9d06e382436a8d5fa906e93cdc0c8adf1db73118",
+  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0066_0070_2026-11-08.json"
 }
