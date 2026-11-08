@@ -2,10 +2,10 @@
   "title": "GROUP CD2 – simplified actionable review",
   "updated": "2026-11-08",
   "full_research_file": "GROUP_CD_2_194_ENRICHED.json",
-  "filtered_candidate_file": "GROUP_CD_2_DEDUPED_190_WORKING.json",
+  "filtered_candidate_file": "GROUP_CD_2_FILTERED_186_WORKING.json",
   "source_coverage_file": "GROUP_CD_2_SOURCE_URL_COVERAGE.json",
   "total_original_records": 194,
-  "working_records_after_verified_exclusions": 190,
+  "working_records_after_verified_exclusions": 186,
   "manual_questions_for_user": 0,
   "source_checking_fully_complete": false,
   "distinct_source_urls_in_research": 690,
@@ -2602,5 +2602,24 @@
       }
     ]
   },
-  "important": "A mapped landmark is not proof of actual encounters or exact subsection. A mere privacy/property concern is not a physical-hazard exclusion. Temporary or seasonal closure does not equal permanent deletion. 92 location issues combine missing map pins and imprecise building/toilet/woodland/entrance locations. 3 confirmed duplicates and 1 confirmed shut historic public-WC candidate are excluded from working import, but preserved in the immutable research file."
+  "important": "A mapped landmark is not proof of actual encounters or exact subsection. A mere privacy/property concern is not a physical-hazard exclusion. Temporary or seasonal closure does not equal permanent deletion. 92 location issues combine missing map pins and imprecise building/toilet/woodland/entrance locations. 3 confirmed duplicates and 1 confirmed shut historic public-WC candidate are excluded from working import, but preserved in the immutable research file.",
+  "previous_filtered_snapshot_file": "GROUP_CD_2_DEDUPED_190_WORKING.json",
+  "exclusion_manifest_file": "GROUP_CD_2_REMOVED_8_2026-11-08.json",
+  "working_records_after_all_owner_exclusions": 186,
+  "excluded_from_working_ids": [
+    "CRU-CD2-254",
+    "CRU-CD2-338",
+    "CRU-CD2-351",
+    "CRU-CD2-340",
+    "CRU-CD2-203",
+    "CRU-CD2-277",
+    "CRU-CD2-328",
+    "CRU-CD2-256"
+  ],
+  "working_counts_after_owner_exclusions": {
+    "normal_mapped": 93,
+    "location_not_identified": 92,
+    "concrete_physical_hazard": 1
+  },
+  "review_note": "The seven category lists remain the provenance classifications of all 194 ORIGINAL research records. Only 186 remain in the active working candidate file. The three unresolved name/city conflicts and Zemun reported-closed toilet were excluded at owner request, not all verified permanently invalid; four prior verified exclusions are also absent. Original URL and activity research remains incomplete."
 }
