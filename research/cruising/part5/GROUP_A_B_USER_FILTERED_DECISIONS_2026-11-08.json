@@ -6,9 +6,9 @@
     "original": 210,
     "already_removed_confirmed_duplicates": 8,
     "removed_user_categories": 17,
-    "normal_mapped": 141,
+    "normal_mapped": 142,
     "unidentifiable_deferred": 8,
-    "location_research_open": 36,
+    "location_research_open": 35,
     "remaining_active_total": 185
   },
   "user_decisions": {
@@ -634,22 +634,6 @@
       ]
     },
     {
-      "queue_index": 464,
-      "name": "Parking Murcki",
-      "city": "Katowice",
-      "issue": "There are multiple Murcki forest car parks; the source does not specify which.",
-      "research": "Which Murcki car park or forest access road/parking gate is intended.",
-      "recheck": {
-        "checked_2026_11_08": false,
-        "finding": null,
-        "source_url": null
-      },
-      "links": [
-        "https://www.gays-cruising.com/en/poland",
-        "https://www.gays-cruising.com/en/cruising/parking_murcki_kattowitz_sud_poland_73929"
-      ]
-    },
-    {
       "queue_index": 468,
       "name": "MOP Wiśniowa Góa",
       "city": "Łódź",
@@ -1244,6 +1228,22 @@
         "https://www.stbafs.bayern.de/service/medien/meldungen/2024/heckerbrucke-b-471-ismaning-garching-halbseitige-sperrung-am-30-april-zwischen-9-und-15-uhr-wegen-bauwerksprufung/"
       ],
       "note": "Location reference corroborated by hiking guide, not specific sexual activity map pin."
+    },
+    {
+      "queue_index": 464,
+      "name": "Parking Murcki",
+      "decision": "Original directory explicitly identifies MOL station on approach to Stara Wesoła; mapped station reference coordinate",
+      "gps": [
+        50.198095096355,
+        19.052733061481
+      ],
+      "coordinate_precision": "MOL business landmark, not car park spot",
+      "sources": [
+        "https://www.gays-cruising.com/en/poland",
+        "https://www.gays-cruising.com/en/cruising/parking_murcki_kattowitz_sud_poland_73929",
+        "https://www.mylpg.eu/stations/poland/station/MOL-Katowice-Murcki-81DA19AF-6103-F47A-A626-AD0CBC68891B",
+        "https://silesion.pl/mzuim-rozpoczyna-naprawy-nawierzchni-prace-na-dk86-rynku-i-ul-mariackiej-w-katowicach/"
+      ]
     }
   ]
 }
