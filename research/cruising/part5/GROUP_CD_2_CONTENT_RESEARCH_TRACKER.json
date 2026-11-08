@@ -4,20 +4,25 @@
   "scope": "86 candidates classified research-incomplete as of start",
   "original_backlog_count": 86,
   "working_records": 186,
-  "records_received_substantive_content_review": 5,
+  "records_received_substantive_content_review": 10,
   "records_source_review_fully_complete": 0,
   "original_direct_details_read_this_batch": 1,
   "new_geographically_identified": [
     "CRU-CD2-209"
   ],
-  "last_assessed": "CRU-CD2-209",
-  "next_unstarted": "CRU-CD2-211",
+  "last_assessed": "CRU-CD2-219",
+  "next_unstarted": "CRU-CD2-221",
   "still_pending_deep_followup": [
     "CRU-CD2-200",
     "CRU-CD2-202",
     "CRU-CD2-205",
     "CRU-CD2-206",
-    "CRU-CD2-209"
+    "CRU-CD2-209",
+    "CRU-CD2-211",
+    "CRU-CD2-213",
+    "CRU-CD2-216",
+    "CRU-CD2-217",
+    "CRU-CD2-219"
   ],
   "completed_batches": [
     {
@@ -31,6 +36,18 @@
       ],
       "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_001_2026-11-08.json",
       "status": "five substantively reviewed, zero source-exhaustive due inaccessible originals/other gaps"
+    },
+    {
+      "number": 2,
+      "ids": [
+        "CRU-CD2-211",
+        "CRU-CD2-213",
+        "CRU-CD2-216",
+        "CRU-CD2-217",
+        "CRU-CD2-219"
+      ],
+      "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_002_2026-11-08.json",
+      "status": "5 substantively assessed, 0 source-exhaustive; original pages blocked; new original deep links recovered for 211 and 219"
     }
   ],
   "research_rules": "A researched batch may contain partially researched candidates, but do not count source-exhaustive completion until URLs/content are substantively examined. Never label inaccessible-original candidates unidentifiable. Commit every five investigated; continue from next_unstarted and revisit pending_followup.",
@@ -40,5 +57,10 @@
     "source_url_audit": "GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json",
     "research_original": "GROUP_CD_2_194_ENRICHED.json"
   },
-  "production_unchanged": true
+  "production_unchanged": true,
+  "latest_substantive_findings": [
+    "CRU-CD2-216 rear Ibis hotel 800 m2 community garden substantiated as distinct green landmark",
+    "CRU-CD2-219 new original URL recovered, 2026-07-06 dated negative first-person report",
+    "CRU-CD2-213 nearby-listing distances narrow metro WC reference"
+  ]
 }
