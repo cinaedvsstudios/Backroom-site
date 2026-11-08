@@ -1982,11 +1982,11 @@
   {
     "Venue_ID": "CRU-CD2-207",
     "Name": "Za městem",
-    "City": "Most",
+    "City": "Horní Jiřetín",
     "Country": "Czechia",
     "Unspecified01": "",
     "Status": "Flag",
-    "Address": "",
+    "Address": "Near bridge over stream west of náměstí 1. máje, Horní Jiřetín, Most District; exact public path entry needs current verification",
     "Postcode": "",
     "Nearest_Station": "",
     "Latitude": "50.5685348511",
@@ -1998,10 +1998,10 @@
     "Instagram_URL": "",
     "Facebook_URL": "",
     "Other_URL": "",
-    "Source_URLs": "https://www.gays-cruising.com/en/czech_republic, https://www.gays-cruising.com/en/cruising/za_mstem_most_czech_republic_104898",
+    "Source_URLs": "https://www.gays-cruising.com/en/czech_republic, https://www.gays-cruising.com/en/cruising/za_mstem_most_czech_republic_104898, https://www.hornijiretin.cz/sluzby-mesta/mestska-policie/, https://czechia-streets.openalfa.com/streets/nam-1-maje-horni-jiretin-horni-jiretin, https://vdprefa.cuzk.gov.cz/vdp/ruian/ulice?kodOb=567175&mediaType=pdf&nazevUl=&nespravny=&ohradaId=&search=&sort=",
     "Share_URL": "",
     "Image_URL": "placeholder_venue.jpg",
-    "Description": "'Za městem' literally means 'outside the town', which is too vague to identify a destination in Most. The old source appears to describe woodland near industrial railway land rather than a designated public park, but the exact site and lawful access are unconfirmed. There are no dated reports supporting current activity, and it should not be confused with Lake Most. The original community directory gives a specific approach from Mostecká road via 1. máje square, passing the former U Karbanů restaurant, then towards a paved access track and a bridge over a stream. Its own directions link supplies the recorded pin. The description is historical; public access and any current encounters are not established.",
+    "Description": "'Za městem' literally means 'outside the town', which is too vague to identify a destination in Most. The old source appears to describe woodland near industrial railway land rather than a designated public park, but the exact site and lawful access are unconfirmed. There are no dated reports supporting current activity, and it should not be confused with Lake Most. The original community directory gives a specific approach from Mostecká road via 1. máje square, passing the former U Karbanů restaurant, then towards a paved access track and a bridge over a stream. Its own directions link supplies the recorded pin. The description is historical; public access and any current encounters are not established. Import correction: the Mostecká road, náměstí 1. máje and U Karbanů restaurant in the source directions are in Horní Jiřetín (Most District), not the City of Most.",
     "Vibe_Tags": "Woodland, Industrial Area, Unverified, Safety Warning",
     "Last_Updated": "2026-11-08T02:27:45Z",
     "Opening_Days": "",
@@ -2146,7 +2146,18 @@
         "gps_from_source": true,
         "source_record_is_historical": true,
         "check_date": "2026-11-08",
-        "notes": "GPS coordinates extracted from original listing's Google Maps directions URL"
+        "notes": "GPS coordinates extracted from original listing's Google Maps directions URL",
+        "locality_correction": {
+          "original_city": "Most",
+          "correct_city": "Horní Jiřetín",
+          "administrative_area": "Most District, Czechia",
+          "evidence": [
+            "https://www.hornijiretin.cz/sluzby-mesta/mestska-policie/",
+            "https://czechia-streets.openalfa.com/streets/nam-1-maje-horni-jiretin-horni-jiretin",
+            "https://vdprefa.cuzk.gov.cz/vdp/ruian/ulice?kodOb=567175&mediaType=pdf&nazevUl=&nespravny=&ohradaId=&search=&sort="
+          ],
+          "reason": "Original source directions name Mostecká, nám. 1. máje and U Karbanů, all independently located in Horní Jiřetín."
+        }
       },
       "review_classification": {
         "category": "source_recovered",
