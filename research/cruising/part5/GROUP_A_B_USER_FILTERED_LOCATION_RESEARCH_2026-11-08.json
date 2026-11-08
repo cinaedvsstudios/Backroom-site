@@ -735,11 +735,18 @@
     "previous_group": "F",
     "research_type": "refine_section_of_known_place",
     "web_recheck": {
-      "checked_2026_11_08": false,
-      "finding": null,
-      "source_url": null
+      "checked_2026_11_08": true,
+      "finding": {
+        "finding": "Timișoara council's 2026 Pădurea Verde plan identifies two public approaches: Avram Imbroane street by former zoo to south, and the Dumbrăvița lake leisure area in northwest. It does NOT establish the precise cruising section.",
+        "source_url": "https://hcl.usr.ro/timisoara/2026/h510",
+        "confidence": "identified_public_forest_approaches_not_meeting_spot",
+        "next": "Search original cruising comments/map for either the Avram Imbroane or Dumbrăvița lake side; map a public park entrance when a credible match exists."
+      },
+      "source_url": "https://hcl.usr.ro/timisoara/2026/h510"
     },
-    "user_action_required": false
+    "user_action_required": false,
+    "followup_research_target": "Search original cruising comments/map for either the Avram Imbroane or Dumbrăvița lake side; map a public park entrance when a credible match exists.",
+    "reference_gps": null
   },
   {
     "queue_index": 383,
@@ -800,7 +807,8 @@
     "source_links": [
       "https://www.gays-cruising.com/en/cruising/torrente_mugnone_firenze_italia_74570",
       "https://www.055firenze.it/art/243557/mugnone-nuove-segnalazioni-di-degrado-lungo-la-ciclabile-di-viale-redi",
-      "https://mobilita.comune.fi.it/tramvia/sistema_tramviario/linea2.html"
+      "https://mobilita.comune.fi.it/tramvia/sistema_tramviario/linea2.html",
+      "https://www.nove.firenze.it/mugnone-in-corso-adeguamento-idraulico-per-la-sicurezza-del-torrente.htm"
     ],
     "research_action": "geocode_named_place_then_refine_subarea",
     "already_resolved": false,
@@ -809,11 +817,18 @@
     "previous_group": "F",
     "research_type": "refine_section_of_known_place",
     "web_recheck": {
-      "checked_2026_11_08": false,
-      "finding": null,
-      "source_url": null
+      "checked_2026_11_08": true,
+      "finding": {
+        "finding": "Florence reporting identifies numerous named Mugnone bridges and continuing hydraulic works (around Ponte Rosso, Ponte dello Statuto, Ponte degli Alpini). These are corridor landmarks, not evidence of which cruising section directory meant.",
+        "source_url": "https://www.nove.firenze.it/mugnone-in-corso-adeguamento-idraulico-per-la-sicurezza-del-torrente.htm",
+        "confidence": "river_clearly_real_but_cruising_section_still_unknown",
+        "next": "Crosscheck the directory's original map against bridge names and construction sections; do not assign a random bridge."
+      },
+      "source_url": "https://www.nove.firenze.it/mugnone-in-corso-adeguamento-idraulico-per-la-sicurezza-del-torrente.htm"
     },
-    "user_action_required": false
+    "user_action_required": false,
+    "followup_research_target": "Crosscheck the directory's original map against bridge names and construction sections; do not assign a random bridge.",
+    "reference_gps": null
   },
   {
     "queue_index": 436,
@@ -1143,14 +1158,16 @@
     "web_recheck": {
       "checked_2026_11_08": true,
       "finding": {
-        "finding": "Original page gives Rather Straße / Schwarzer Weg and describes the rear quarry lake by Gremberghoven. 21 March 2026 comment says footbridge removed. 2019 route across old bridge is obsolete.",
+        "finding": "Original gay-szene forum identifies Rather Straße and Schwarzer Weg, sports ground ESV Gremberghoven and rear quarry lake; 2026 comment confirms earlier pedestrian bridge no longer exists. Do not reuse the older bridge directions.",
         "source_url": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html",
-        "confidence": "lake_identified_access_altered",
-        "next": "Map lake via Rather Straße/Schwarzer Weg and determine currently lawful accessible approach without removed bridge."
+        "confidence": "lake_identified_walk_route_changed",
+        "next": "Search Google Maps public paths from Rather Straße/Schwarzer Weg and check latest accessible approach to back lake."
       },
       "source_url": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html"
     },
-    "user_action_required": false
+    "user_action_required": false,
+    "followup_research_target": "Search Google Maps public paths from Rather Straße/Schwarzer Weg and check latest accessible approach to back lake.",
+    "reference_gps": null
   },
   {
     "queue_index": 740,
@@ -1229,14 +1246,25 @@
     "web_recheck": {
       "checked_2026_11_08": true,
       "finding": {
-        "finding": "Original gay-szene page supplies public approach Alt-Himmelgeist 1 and riverbank from old ferry landing. Comment dated 22 March 2025 explicitly supplied a different reported river-km-727 pin 51.1474845,6.7980433, warning existing map was wrong. 4 July 2026 visitor reported no naturists on visit.",
+        "finding": "Original gay-szene report dated 22 March 2025 gives 51.1474845,6.7980433 as alternative to an apparently inaccurate existing directory map pin; treat as reported coordinate only, not verified official Rhine km727 marker.",
         "source_url": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html",
-        "confidence": "reported_coordinates_available_not_independently_confirmed_by_official_km_marker",
-        "next": "Check actual Rhine-km 727 marker against 51.1474845,6.7980433, retain access and conservation warnings."
+        "confidence": "reported_coordinate_not_officially_confirmed",
+        "next": "Check that candidate point against Rhine kilometre 727 official geography and public access restrictions.",
+        "reference_gps": {
+          "latitude": 51.1474845,
+          "longitude": 6.7980433,
+          "meaning": "forum contributor's alternative map correction, not verified by official Rhine marker"
+        }
       },
       "source_url": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html"
     },
-    "user_action_required": false
+    "user_action_required": false,
+    "followup_research_target": "Check that candidate point against Rhine kilometre 727 official geography and public access restrictions.",
+    "reference_gps": {
+      "latitude": 51.1474845,
+      "longitude": 6.7980433,
+      "meaning": "forum contributor's alternative map correction, not verified by official Rhine marker"
+    }
   },
   {
     "queue_index": 870,
@@ -1268,11 +1296,18 @@
     "previous_group": "F",
     "research_type": "refine_section_of_known_place",
     "web_recheck": {
-      "checked_2026_11_08": false,
-      "finding": null,
-      "source_url": null
+      "checked_2026_11_08": true,
+      "finding": {
+        "finding": "Original Gays-Cruising detail expressly says 'Unter der Autobahnbrücke an der Alz, auf beiden Seiten Parkplatz'—parking on BOTH sides beneath the motorway bridge. That identifies a two-sided location, not an unknown single side.",
+        "source_url": "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635",
+        "confidence": "both_banks_of_A94_Alz_bridge_identified",
+        "next": "Map both public parking approaches on either bank and select a named bridge reference rather than force one side."
+      },
+      "source_url": "https://www.gays-cruising.com/en/cruising/a94_ende_in_marktl_unter_der_alzbrucke_marktl_deutschland_13635"
     },
-    "user_action_required": false
+    "user_action_required": false,
+    "followup_research_target": "Map both public parking approaches on either bank and select a named bridge reference rather than force one side.",
+    "reference_gps": null
   },
   {
     "queue_index": 896,
