@@ -1,148 +1,146 @@
-# Backroom — A+B outstanding issues, sorted by what needs researching
+# Backroom — A+B: exactly what needs researching
 
-**71 outstanding flagged records. Eight specific research actions. Every record has one primary group.**
-
-This is a research worklist, not a list of 71 rejected places. Duplicates already removed (8) and 131 mapped Hold candidates are covered in separate files. Each row says precisely what remains unknown and what to investigate. No user needs to manually check all 71.
+**71 flagged records, each in exactly one of eight specific problem types.** The eight confirmed duplicates are already removed; the 131 mapped Hold listings are separate. These are instructions for further research, not questions for you to answer manually.
 
 ## A. Confirmed obsolete, closed or unusable — 4 records
 
-**Problem:** The original site has been demolished, converted, or is an unsafe derelict property. There is no current usable cruising site in this record.
+**What's wrong:** The original site has been demolished, converted, or is an unsafe derelict property. There is no current usable cruising site in this record.
 
-**Research instruction:** Exclude these from new active cruising entries now. Preserve historical evidence; only reinstate on credible evidence that a new, accessible cruising site exists.
+**Instruction you can give:** Exclude these from new active cruising entries now. Preserve historical evidence; only reinstate on credible evidence that a new, accessible cruising site exists.
 
-| ID | Location | Exactly what's wrong | What to look for |
+| ID | Site | What's actually wrong | Research target |
 |---|---|---|---|
-| 339 | Jerma Palace Glory Hole (Marsaskala) | Jerma Palace is a derelict unsafe site; no operating public WC or current activity was established. | Determine whether any operating lawful public facility replaced the former Jerma Palace site; the original derelict property should not be listed. |
-| 641 | Karlshorst Treskowallee (Berlin) | The old facility at Karlshorst Treskowallee was reported demolished and closed. | Confirm that the former Karlshorst Treskowallee facility was demolished and archive the obsolete location. |
-| 1127 | Wetherspoons Pub in The Capitol (London) | The Capitol Wetherspoons pub closed in 2023 and the property changed to a children's soft-play business. | Archive the Wetherspoons Capitol listing: the pub closed in 2023 and the property was converted to children's soft play in 2026. |
-| 1171 | Münchner Hauptbahnhof (Munich) | The original underground WC at Munich Hauptbahnhof closed during station rebuilding; replacement is not the same cruising venue. | Archive the former Munich main-station underground WC: rebuilt/replaced and no evidence that the replacement is a cruising site. |
+| 339 | Jerma Palace Glory Hole (Marsaskala) | Jerma Palace is a derelict unsafe property with no established operating public toilet. | Confirm original Jerma Palace has no current safe public equivalent; archive obsolete entry. |
+| 641 | Karlshorst Treskowallee (Berlin) | The historic Karlshorst Treskowallee cruising facility was reported demolished and closed. | Confirm demolition and removal of original facility; exclude from current data. |
+| 1127 | Wetherspoons Pub in The Capitol (London) | The Wetherspoons Capitol pub closed and the unit became a children's soft-play business. | Confirm venue conversion to soft play and archive old pub listing. |
+| 1171 | Münchner Hauptbahnhof (Munich) | The former Munich main-station underground toilets closed for rebuilding; the replacement is not the same site. | Confirm original WC replaced during Hauptbahnhof rebuild; archive former facility. |
 
 ## B. Might be closed, rebuilt or temporarily inaccessible — 12 records
 
-**Problem:** An identified place has a dated closure, construction, sealed entrance, or uncertain reopening.
+**What's wrong:** An identified place has a dated closure, construction, sealed entrance, or uncertain reopening.
 
-**Research instruction:** Search current operator, municipal, road authority, Google Maps and recent dated firsthand reports to establish whether the ORIGINAL facility reopened, was replaced, or is still unavailable.
+**Instruction you can give:** Search current operator, municipal, road authority, Google Maps and recent dated firsthand reports to establish whether the ORIGINAL facility reopened, was replaced, or is still unavailable.
 
-| ID | Location | Exactly what's wrong | What to look for |
+| ID | Site | What's actually wrong | Research target |
 |---|---|---|---|
-| 648 | Klappe Tempelhofer Feld (Berlin) | exact baseball area restroom unidentified; sealed opening | Identify which toilet building near the baseball area of Tempelhofer Feld? A gate name or pin would help. |
-| 655 | Parkplatz Waldeck Ost an der A 117 (Schönefeld) | 2026 repeated closure reports; no confirmed reopening | Check official A117 Waldeck Ost rest-area operations and whether the reported 2026 closures have ended. |
-| 706 | A4 Parkplatz Refrath (Cologne) | refrath reopening unconfirmed; do not copy lustheide pin | Confirm whether A4 Parkplatz Refrath reopened and is not being confused with A4 Lustheide. |
-| 744 | Klappe Straßburger Platz (Dresden) | current restroom access and floor unverified | Identify which exact REWE property/customer WC by Straßburger Platz is intended, and is it still accessible? |
-| 780 | Alte Oper (Frankfurt am Main) | 2025 wc closed on visit; reopening unconfirmed | Confirm whether the Alte Oper public WC reopened after the 2025 closure report. |
-| 785 | Klappe U-Bahnhof Schweizer Platz (Frankfurt am Main) | 2026 locked toilet report; no verified reopening | Confirm the U-Bahnhof Schweizer Platz toilet reopened after a 2026 locked-door report. |
-| 790 | Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring (Frankfurt am Main) | 2026 closed construction storage; multiple unidentified stops | Check the A661 parking construction closure and whether the relevant listed stop has reopened. |
-| 830 | Cruising neben Parkplatz Silbersee Ost (Hannover) | 2026 parking closed; reopening not verified | Confirm reopening of the Silbersee Ost parking lot after its 2026 closure. |
-| 916 | Parking lot A117 Waldeck West (Schönefeld) | parking likely demolished or repurposed; no verified reopening | Check whether Waldeck West parking still exists or has been demolished/repurposed. |
-| 964 | Tivoli (Las Palmas de Gran Canaria) | tivoli property unlocated; redevelopment; no current report | Can you identify which Tivoli lot or street by La Laja on GC-1? |
-| 1031 | Aire d'Entrenge (Entrange) | a31 2026 wc demolition and rebuild; reopening not verified | Check the A31 Aire d'Entrange rest-area toilets and whether the demolished facilities have reopened after rebuilding. |
-| 1089 | The Greenway (London) | 2026 2028 section closed; source unspecified path pin | Check which section of Greenway is closed during 2026–2028 works and whether the original claimed spot is accessible. |
+| 648 | Klappe Tempelhofer Feld (Berlin) | The old Tempelhofer Feld toilet near the baseball area is not located, and the opening was sealed. | Whether former Tempelhofer Feld baseball-area WC is permanently sealed or replaced by an operating equivalent. |
+| 655 | Parkplatz Waldeck Ost an der A 117 (Schönefeld) | The A117 Waldeck Ost parking site had repeated 2026 closure reports; reopening is unconfirmed. | Official current A117 Waldeck Ost parking status and reopening evidence. |
+| 706 | A4 Parkplatz Refrath (Cologne) | A4 Parkplatz Refrath reopening is not verified; a nearby Lustheide parking pin must not be substituted. | Official status of A4 Refrath parking and whether the source mistakenly refers to Lustheide. |
+| 744 | Klappe Straßburger Platz (Dresden) | The specific REWE/customer toilet near Dresden Straßburger Platz and its present access are unclear. | Actual REWE/customer restroom building at Straßburger Platz and whether still publicly accessible. |
+| 780 | Alte Oper (Frankfurt am Main) | The Alte Oper toilet was reported closed in 2025; no verified reopening is saved. | Official operator status of Alte Oper restroom and current visitor reports. |
+| 785 | Klappe U-Bahnhof Schweizer Platz (Frankfurt am Main) | A 2026 visitor found Schweizer Platz station toilets locked; reopening has not been established. | Schweizer Platz station WC operator and current access after 2026 locked-toilet report. |
+| 790 | Parkplätze A 661 zwischen Offenbacher Kreuz und Ausfahrt Taunusring (Frankfurt am Main) | The A661 rest-stop corridor has 2026 construction closures and several possible parking sites. | Exactly which A661 stop was claimed and official closure/reopening status. |
+| 830 | Cruising neben Parkplatz Silbersee Ost (Hannover) | Silbersee Ost parking was reported closed in 2026, with no confirmed reopening. | Status of Silbersee Ost car park, closure works and reopening. |
+| 916 | Parking lot A117 Waldeck West (Schönefeld) | The Waldeck West A117 parking area may have been demolished or repurposed. | Whether A117 Waldeck West car park survives in current motorway maps. |
+| 964 | Tivoli (Las Palmas de Gran Canaria) | The historical Tivoli location is not mapped, and redevelopment may have removed the original site. | Historical Tivoli property address by La Laja/GC-1, redevelopment and what exists there today. |
+| 1031 | Aire d'Entrenge (Entrange) | The A31 Entrange service-area toilets were demolished/rebuilt; current availability is unverified. | A31 Aire d'Entrange rebuilding schedule and reopening/operation of WC. |
+| 1089 | The Greenway (London) | A section of the Greenway was closed for 2026–2028 works; the original claimed route section is unspecified. | Exact Greenway segment in source, construction closure boundaries and current route access. |
 
 ## C. Access or safety restriction at a known site — 7 records
 
-**Problem:** The site can be identified, but official access, private property, safety, or opening-hour constraints undermine the directory claim.
+**What's wrong:** The site can be identified, but official access, private property, safety, or opening-hour constraints undermine the directory claim.
 
-**Research instruction:** Find official access rules and independently dated safety/current-use evidence. Do not recommend restricted property or infer permission to cruise from general public access.
+**Instruction you can give:** Find official access rules and independently dated safety/current-use evidence. Do not recommend restricted property or infer permission to cruise from general public access.
 
-| ID | Location | Exactly what's wrong | What to look for |
+| ID | Site | What's actually wrong | Research target |
 |---|---|---|---|
-| 475 | Olimpic Centre (Warsaw) | 2026 knife threat report; no verified safe access | Check the dated knife-threat report at Warsaw's Olimpic Centre, latest safety incidents and whether the site has any verified accessible activity. |
-| 757 | Rahmer See (Duisburg) | private shore risk; municipal swimming ban; no current positive | Verify current Rahmer See public shore access and municipal swimming restrictions; avoid proposing entry via private shores. |
-| 798 | Friedhof Ohlsdorf (Hamburg) | active cemetery; chapel toilet locked; two subsites | Check Ohlsdorf cemetery rules and which chapel toilet, if any, is publicly accessible. A cemetery should not be promoted as a night cruising venue. |
-| 996 | Bosc CanDeu (Sabadell) | 2026 recreational forest access prohibited; no reopening | Verify current Bosc CanDeu forest closure and public access restrictions. |
-| 1051 | Nunhead Cemetery (London) | active cemetery; night access not permitted; no 2026 onsite report | Check Nunhead Cemetery official seasonal gate times and any meaningful contemporary evidence beyond old directory claims. |
-| 1106 | Haggerston Park (London) | managed code access toilet; old cruising claim unverified | Check Haggerston Park code-controlled toilet access and whether any current cruising evidence supports a directory entry. |
-| 1108 | Abney Park Cemetery (London) | cemetery restrictions; winter gates close 16; no recent visits | Check Abney Park Cemetery official access restrictions and whether any 2026 on-site reports exist. |
+| 475 | Olimpic Centre (Warsaw) | A 2026 knife-threat report raises a specific safety concern at the known Olympic Centre location. | Latest verified incident/access reports for the Olympic Centre; distinguish safety history from current conditions. |
+| 757 | Rahmer See (Duisburg) | Rahmer See is identifiable, but access via private shores and a municipal swimming ban raise restrictions. | Official public access route, private-shore restrictions and swimming ban at Rahmer See. |
+| 798 | Friedhof Ohlsdorf (Hamburg) | Ohlsdorf is an active cemetery; chapel toilet access was reportedly locked and there are two possible subareas. | Cemetery operating hours, named chapel toilets and current controlled access rules. |
+| 996 | Bosc CanDeu (Sabadell) | 2026 restrictions reportedly prohibit public access to the Bosc CanDeu recreational forest. | Official municipal/forest access status in 2026 and any reopening of Bosc CanDeu. |
+| 1051 | Nunhead Cemetery (London) | Nunhead is an active cemetery with winter gate closures; historic nocturnal cruising claims conflict with access. | Nunhead Cemetery seasonal access times and any 2026 on-site current activity. |
+| 1106 | Haggerston Park (London) | Haggerston Park toilets are code-controlled; the historic claim lacks evidence of accessible current cruising. | Haggerston Park toilet operator/code access and dated independent cruising reports. |
+| 1108 | Abney Park Cemetery (London) | Abney Park cemetery has seasonal gates and restrictions; recent night-time activity is not established. | Abney Park Cemetery current seasonal gates and genuine on-site activity evidence. |
 
 ## D. Place identity missing altogether — 8 records
 
-**Problem:** The source says 'forest', 'toilet', 'garden', 'new place', etc. without identifying which real-world place.
+**What's wrong:** The source says 'forest', 'toilet', 'garden', 'new place', etc. without identifying which real-world place.
 
-**Research instruction:** Inspect the original source map, photos, replies and other cruising directories for a real place name, address or landmark. If none can be established, mark insufficient identity—not merely missing GPS.
+**Instruction you can give:** Inspect the original source map, photos, replies and other cruising directories for a real place name, address or landmark. If none can be established, mark insufficient identity—not merely missing GPS.
 
-| ID | Location | Exactly what's wrong | What to look for |
+| ID | Site | What's actually wrong | Research target |
 |---|---|---|---|
-| 163 | Forest Logatec (Logatec) | ‘Forest Logatec’ names no forest entrance, trail, road or identifiable woodland section. | Find a pin, photo, road name, or directions to the forest? |
-| 222 | Abandoned WC in Park (Sofia) | ‘Abandoned WC in Park’ does not specify the park, and the building may be unsafe or off limits. | Find a public park name or map landmark that identifies the building without entering fenced property? |
-| 290 | Glory hole (Sibiu) | ‘Glory hole’ in Sibiu names no car park, building or restroom. | Do you know the carpark, business, road, or exact map pin for the restroom? |
-| 338 | Toilet near abandond hotel (Marsaskala) | An abandoned hotel and a toilet near Marsaskala are referenced without identifying the facility. | Identify which abandoned Marsaskala hotel and which public toilet? A map pin or nearby street would resolve it. |
-| 341 | Public toilet (Qormi) | Qormi has more than one possible public toilet; the source does not name one. | Identify which Qormi public toilet? A road name, shopping building, or screenshot with a pin would identify it. |
-| 342 | Garden, under the trees (Qormi) | ‘Garden, under the trees’ gives neither a named park nor a street in Qormi. | Identify which named Qormi garden or approximate street/landmark was intended? |
-| 457 | New place (Riga) | ‘New place’ in Riga has no identifiable address, landmark or map identity. | Determine whether the source page show a map pin, nearby road or named destination for 'New place' in Riga? |
-| 1020 | Sa Coma (Sa Coma) | ‘Sa Coma’ is not an identifiable car park; the source might refer to Punta de n'Amer or elsewhere. | Identify which Sa Coma car park is intended? Is it beside Punta de n'Amer or elsewhere? |
+| 163 | Forest Logatec (Logatec) | The directory says 'Forest Logatec' but names no specific woodland, trail or entrance. | Original directory map, comments or photo identifying which Logatec forest and public entrance. |
+| 222 | Abandoned WC in Park (Sofia) | The park and abandoned toilet building are both unidentified; entry may also be unsafe. | Name of the Sofia park and specific original WC building; confirm whether it is lawful and safe to approach. |
+| 290 | Glory hole (Sibiu) | A generic 'glory hole' listing does not identify a Sibiu building, car park or restroom. | Building or car park containing the Sibiu-area restroom; distinguish from unrelated public facilities. |
+| 338 | Toilet near abandond hotel (Marsaskala) | The abandoned Marsaskala hotel and its supposedly nearby toilet were never securely identified. | Name/address of abandoned Marsaskala hotel and exact nearby WC; public accessibility. |
+| 341 | Public toilet (Qormi) | 'Public toilet, Qormi' provides no named facility, road or property. | Named Qormi restroom and identifying road, plaza or commercial property. |
+| 342 | Garden, under the trees (Qormi) | 'Garden under the trees' names no Qormi park or identifiable street. | Specific Qormi garden/park and nearby street or landmark. |
+| 457 | New place (Riga) | 'New place' in Riga has no useful place identity, address or map landmark. | Original Riga source map pin, photo, driving route or nearby named destination. |
+| 1020 | Sa Coma (Sa Coma) | The Sa Coma car park is not identified; the directory also does not establish male cruising relevance. | Specific Sa Coma parking lot, possibly near Punta de n'Amer, and independent male cruising evidence. |
 
 ## E. Several plausible mapped places; select the correct one — 17 records
 
-**Problem:** A named road, station, motorway, business or park exists, but several different sites match the description.
+**What's wrong:** A named road, station, motorway, business or park exists, but several different sites match the description.
 
-**Research instruction:** List the plausible Google Maps places, compare road direction/branch/side with source clues and determine which is intended; map a relevant named landmark only when the match is defensible.
+**Instruction you can give:** List the plausible Google Maps places, compare road direction/branch/side with source clues and determine which is intended; map a relevant named landmark only when the match is defensible.
 
-| ID | Location | Exactly what's wrong | What to look for |
+| ID | Site | What's actually wrong | Research target |
 |---|---|---|---|
-| 189 | Airport toilets (Istanbul) | The source does not even specify Istanbul Airport (IST) versus Sabiha Gökçen (SAW), much less a terminal or toilet. | Identify which airport (IST or SAW), terminal and floor/landside or airside toilet? |
-| 243 | Picnic Area near Airport (Paphos) | The saved research suggests Timi Picnic Site, but the original source has not established that this is the intended picnic area. | Determine whether the directory indicate Timi picnic site on the airport road, or another named picnic area? |
-| 281 | Spatiu Servicii A1 inainte de Sebes (Alba Iulia) | The A1 has several service areas approaching Sebeș, and carriageway direction is unspecified. | Identify which carriageway, km marker, or named rest area before Sebeș? |
-| 297 | A9 Rastplatz bei Spielfeld (Leibnitz) | a9 stop and direction unidentified; no recent physical report | Identify which rest-area name, A9 carriageway or kilometre marker near Spielfeld is intended? |
-| 322 | Phoenix Park Military Road (Dublin) | Phoenix Park has several Military Road car parks: East, West and Soccer Pavilions. | Identify which Military Road car park: East, West, or Soccer Pavilions? A link or screenshot showing the pin would help. |
-| 428 | Bagni Grill Bazzera (Venice) | Bazzera Nord and Bazzera Sud are separate A57 service areas. | Determine whether this is Bazzera Nord or Bazzera Sud on the A57? |
-| 464 | Parking Murcki (Katowice) | murcki exact parking lot unidentified | Identify which Murcki parking lot or forest-road entrance is intended? A photo, street or source map pin would help. |
-| 468 | MOP Wiśniowa Góa (Łódź) | The A1 Wiśniowa Góra stop has east/west variants, so the motorway direction matters. | Identify which Wiśniowa Góra A1 service area: Wschód (Gdańsk-bound) or Zachód (Katowice-bound)? |
-| 469 | AS 24 (Poznań) | as24 branch not established | Identify which AS24 branch around Poznań? A street, road junction, business map link or pin would resolve it. |
-| 492 | Antvorskov rest area (Slagelse) | Antvorskov Nord and Antvorskov Syd are distinct E20 stops. | Determine whether the Antvorskov cruising source mean Nord (north-side) or Syd (south-side) on the E20? |
-| 594 | Rastplatz Wäldchen mit Tür zu mehr (Sevelen) | sevelen rest stop unknown | Identify which rest area, road or woodland gate in Sevelen is meant? |
-| 656 | Parkplätze A10 zwischen Erkner und Rüdersdorf (Rüdersdorf bei Berlin) | An umbrella entry spans multiple A10 rest areas: Kalkberge, Seeberg Ost and Seeberg West. | Does this record refer to Kalkberge, Seeberg Ost, Seeberg West or another A10 stop? |
-| 733 | Parkplatz A45 Dortmund Westerfilde beidseitig (Dortmund) | Westerfilde and Kirchlinde are opposite carriageway sites, not one interchangeable point. | Should the Westerfilde and Kirchlinde sides be represented separately, or does the cruising source mean one of them? |
-| 866 | Parkplatz A6 in Höhe Mannheim Sandhofen (Mannheim) | a6 sandhofen rest stop side unidentified | Identify which A6 parking side or official rest-stop name by Mannheim-Sandhofen is meant? |
-| 884 | Parkplatz an der B 471 (Munich) | b471 exact car park not identified | Identify which B471 Isar bridge car park or side between Garching and Ismaning? |
-| 968 | La Laja-Mercalaspalmas (Las Palmas de Gran Canaria) | La Laja beach and Mercalaspalmas industrial area are different parts of Las Palmas. | Determine whether this is entry by La Laja beach or Mercalaspalmas warehouses/parking, and which access road? |
-| 1012 | Carrefour Terrassa (Terrassa) | Several Carrefour supermarkets in Terrassa match; the source doesn't identify the branch. | Is the listing Carrefour Vallès (C-58) or Carrefour Montserrat (Avinguda Extremadura), or another store? |
+| 189 | Airport toilets (Istanbul) | The original listing does not distinguish IST from SAW airport, terminal or restroom. | Which airport (IST/SAW), terminal, landside/airside zone and current restroom. |
+| 243 | Picnic Area near Airport (Paphos) | The suggested Timi picnic area is a hypothesis, not a confirmed match to the original listing. | Confirm whether the original directory refers to Timi Picnic Site or another airport-area picnic area. |
+| 281 | Spatiu Servicii A1 inainte de Sebes (Alba Iulia) | 'A1 before Sebeș' could mean several motorway services in either direction. | Named A1 rest stop approaching Sebeș, direction of travel and kilometre marker. |
+| 297 | A9 Rastplatz bei Spielfeld (Leibnitz) | The A9 stop near Spielfeld has neither a named rest area nor a carriageway direction. | Named A9 rest area near Spielfeld and carriageway direction. |
+| 322 | Phoenix Park Military Road (Dublin) | Several Phoenix Park car parks are on Military Road, and the source does not distinguish them. | Phoenix Park Military Road East vs West vs Soccer Pavilions, using directory directions or pin. |
+| 428 | Bagni Grill Bazzera (Venice) | The A57 has Bazzera Nord and Bazzera Sud stops; the source does not say which. | A57 Bazzera Nord versus Bazzera Sud from original listing map/directions. |
+| 464 | Parking Murcki (Katowice) | There are multiple Murcki forest car parks; the source does not specify which. | Which Murcki car park or forest access road/parking gate is intended. |
+| 468 | MOP Wiśniowa Góa (Łódź) | Wiśniowa Góra has motorway-side variants with different access directions. | Wiśniowa Góra Wschód vs Zachód and A1 travel direction. |
+| 469 | AS 24 (Poznań) | 'AS24 Poznań' lacks a branch address or junction and matches multiple stations. | Which AS24 station in Greater Poznań the source actually identifies. |
+| 492 | Antvorskov rest area (Slagelse) | Antvorskov Nord and Syd are separate E20 facilities; the directory entry is ambiguous. | Antvorskov Nord or Syd on E20 from source route or map. |
+| 594 | Rastplatz Wäldchen mit Tür zu mehr (Sevelen) | The Sevelen wooded rest stop has no named road or confirmed parking entrance. | Named Sevelen rest stop, road and public woodland entrance. |
+| 656 | Parkplätze A10 zwischen Erkner und Rüdersdorf (Rüdersdorf bei Berlin) | The A10 entry combines several separate parking areas around Erkner/Rüdersdorf. | Split A10 stops by name and side (Kalkberge / Seeberg Ost / Seeberg West) and match source to one. |
+| 733 | Parkplatz A45 Dortmund Westerfilde beidseitig (Dortmund) | The source groups two different A45 carriageway parking sides (Westerfilde/Kirchlinde). | Which A45 carriageway side the source means; keep two only if separately supported. |
+| 866 | Parkplatz A6 in Höhe Mannheim Sandhofen (Mannheim) | The source identifies A6 near Mannheim-Sandhofen but not which parking side or named rest stop. | A6 Sandhofen rest area name and direction/carriageway. |
+| 884 | Parkplatz an der B 471 (Munich) | B471 between Garching and Ismaning includes multiple car parks/bridge approaches. | Exact B471 car park between Garching and Ismaning; side and access road. |
+| 968 | La Laja-Mercalaspalmas (Las Palmas de Gran Canaria) | La Laja beachfront and Mercalaspalmas industrial area are different areas; the source combines them. | Choose La Laja beach versus Mercalaspalmas and locate actual named access road. |
+| 1012 | Carrefour Terrassa (Terrassa) | Several Terrassa Carrefour branches could match; no exact store is named. | Carrefour Vallès vs Carrefour Montserrat vs other Terrassa branch from source map/directions. |
 
 ## F. Place known; specific entrance, subsection or pin unclear — 20 records
 
-**Problem:** The general park, shore, bridge, river or business is identifiable, but the report describes only part of it.
+**What's wrong:** The general park, shore, bridge, river or business is identifiable, but the report describes only part of it.
 
-**Research instruction:** Locate the named place/approach on Google Maps and record a clearly labelled reference-point GPS; then search source comments and mapped trails for the described specific public entry/section. Do not fake a precise cruising pin.
+**Instruction you can give:** Locate the named place/approach on Google Maps and record a clearly labelled reference-point GPS; then search source comments and mapped trails for the described specific public entry/section. Do not fake a precise cruising pin.
 
-| ID | Location | Exactly what's wrong | What to look for |
+| ID | Site | What's actually wrong | Research target |
 |---|---|---|---|
-| 241 | Parking Area near Big Greek Flag (Paphos) | exact carpark pin unverified; 2026 meeting requests only | Find the exact flag viewpoint, a map pin, or street name? |
-| 293 | Pădure Dumbravita-Timisoara (Timișoara) | forest site not tied to public entrance; recent invitation not visit | Identify which Dumbrăvița woodland entrance, street, trail or map pin was intended? |
-| 383 | Ponte fiume Reno a Borgo Panigale (Bologna) | bridge not identified; pontelungo hypothesis only | Can you identify the Reno River bridge near Borgo Panigale, a road name or map pin? |
-| 401 | Torrente Mugnone (Florence) | river segment or bridge unidentified | Identify which Mugnone stream stretch or bridge in Florence is meant? |
-| 436 | Oasi - Lungadige (Est) (Verona) | exact east bank stretch unknown; east vs west distinct | Identify which Lungadige Est stretch, nearest bridge or map pin is intended? |
-| 437 | Alpo Cavalcavia (Verona) | overpass not identified; 2026 robbery warning | Can you identify which Alpo flyover/overpass or road near Verona? |
-| 472 | Świecko Stacja Paliw Shell, boczna droga (Słubice) | side road near shell swiecko unidentified | Identify which exact side road near Shell Świecko 36 is intended? A screenshot, road name or GPS point would help. |
-| 493 | Tinglevvejen Rastplads (Bolderslev) | tinglevvejen rest stop unknown | Identify which exact Tinglevvejen lay-by or parking pull-in near Bolderslev? |
-| 521 | Agia fotini (Athens) | agia fotini bridge unknown | Identify which bridge or street crossing near Zappeion is meant by 'Agia Fotini'? |
-| 593 | Am Fluss (Obfelden) | am fluss river segment unknown | Identify which river, bridge, walking path or map pin near Obfelden is intended? |
-| 609 | De Bankjes (Cromvoirt) | de bankjes benches unidentified | Identify which benches in Cromvoirt? A park/trail name, landmark, image or source map pin would help. |
-| 662 | Sandfläche im Jagen 87 des Grunewalds (Berlin) | jagen87 clearing georef not established; do not pin jagen86 | Find a map pin or trail reference for the Jagen 87 clearing, distinct from the protected Jagen 86 sandpit? |
-| 707 | Alberti See (Cologne) | exact lake and safe access unknown; bridge removed | Identify which Alberti See lake or public approach survives after the pedestrian bridge removal? A current pin or path name would help. |
-| 740 | Technische Universität Dortmund (Dortmund) | toilet building floor ambiguous; no modern positive evidence | Identify which campus building and floor/toilet at TU Dortmund was meant? Older source descriptions conflict. |
-| 763 | FKK Strand Himmelgeist am km 727 (Düsseldorf) | km727 precise shore disputed; 2026 negative observation | Find the exact Rhine kilometre 727 shore access or map pin on the Düsseldorf side? |
-| 870 | A94 Ende in Marktl - unter der Alzbrücke (Marktl) | bridge access points on both sides unknown | Identify which side of the A94 Alzbrücke at Marktl, or which public parking entrance, is intended? |
-| 896 | Hafenparkplatz Nürnberg Süd (Nuremberg) | exact hafenparkplatz entrance unconfirmed | Identify which Hafenparkplatz Süd entrance on Hafenstraße, or which road/parking bay, is intended? |
-| 960 | Parking río Llobregat El Prat (El Prat de Llobregat) | llobregat parking spot unidentified | Identify which Llobregat car park or bridge in El Prat is intended? |
-| 993 | Área de bomberos Mollet (Mollet del Vallès) | mollet fire station pullout unknown | Can you identify the road/parking pull-in between Bombers de Mollet and the Alstom factory? |
-| 1049 | Riverside Walk - London (London) | extended corridor no specific cruising section | Identify which stretch of the River Pool/Waterlink Way or bridge near Sydenham/Catford is intended? |
+| 241 | Parking Area near Big Greek Flag (Paphos) | The 'big Greek flag' viewpoint is not tied to a particular Paphos car park; 2026 posts are meeting requests. | Greek flag landmark in Paphos and the specific adjacent public car park. |
+| 293 | Pădure Dumbravita-Timisoara (Timișoara) | The Dumbrăvița forest is broadly identifiable, but the particular path/entrance is not. | Dumbrăvița woodland road/trail/entrance described by the original source. |
+| 383 | Ponte fiume Reno a Borgo Panigale (Bologna) | The listing does not identify which crossing of the Reno River near Borgo Panigale. | Exact bridge across the Reno River near Borgo Panigale and path approach. |
+| 401 | Torrente Mugnone (Florence) | Torrente Mugnone is a long stream; no particular bridge or stretch is identified. | Named bridge/segment of the Mugnone stream in Florence and public path approach. |
+| 436 | Oasi - Lungadige (Est) (Verona) | 'Lungadige Est' is an extended eastern riverbank, not an identified stretch or crossing. | Eastern Adige bank stretch in Verona, nearest bridge and access trail. |
+| 437 | Alpo Cavalcavia (Verona) | No named Alpo overpass has been matched to the account; a 2026 robbery warning also needs review. | Named Alpo overpass or road, publicly accessible surroundings and recent safety report. |
+| 472 | Świecko Stacja Paliw Shell, boczna droga (Słubice) | Shell Świecko is identifiable, but the adjacent side road used in the source is not. | Specific publicly accessible side road near Shell Świecko 36. |
+| 493 | Tinglevvejen Rastplads (Bolderslev) | 'Tinglevvejen Rastplads' does not uniquely identify a lay-by or pull-in. | Exact lay-by on Tinglevvejen near Bolderslev. |
+| 521 | Agia fotini (Athens) | The Agia Fotini bridge/crossing near Zappeion is not identified. | Agia Fotini crossing near Zappeion: street and exact bridge. |
+| 593 | Am Fluss (Obfelden) | 'Am Fluss' near Obfelden identifies neither the river section nor an approach. | River name and accessible riverbank segment/bridge near Obfelden. |
+| 609 | De Bankjes (Cromvoirt) | 'De Bankjes' does not identify which benches or trail in Cromvoirt. | Identify benches by Cromvoirt park, trail, road or photo. |
+| 662 | Sandfläche im Jagen 87 des Grunewalds (Berlin) | The reported Jagen 87 Grunewald clearing was not mapped; a nearby Jagen 86 site would be a false match. | Georeference Jagen 87 separately from protected Jagen 86, using forestry grid/trail maps. |
+| 707 | Alberti See (Cologne) | The Alberti See name and lawful public approach are unclear after removal of a pedestrian bridge. | Which Alberti See lake, remaining public trails and whether the former crossing exists. |
+| 740 | Technische Universität Dortmund (Dortmund) | TU Dortmund is identified, but not the correct campus building, floor or restroom. | Specific TU Dortmund campus building, floor and restroom from old source details. |
+| 763 | FKK Strand Himmelgeist am km 727 (Düsseldorf) | The claimed Rhine kilometre 727 shoreline is disputed; a 2026 negative observation is also recorded. | Public access point at Rhine kilometre 727 near Himmelgeist, accounting for disputed 2026 observations. |
+| 870 | A94 Ende in Marktl - unter der Alzbrücke (Marktl) | The source does not distinguish which side of the A94 Alzbrücke is meant or the public approach. | Public parking/access side of the A94 Alzbrücke at Marktl. |
+| 896 | Hafenparkplatz Nürnberg Süd (Nuremberg) | The Nürnberg Süd harbour parking entrance and specific public parking area are not matched. | Exact public Hafenparkplatz Süd entrance at Nürnberg harbour. |
+| 960 | Parking río Llobregat El Prat (El Prat de Llobregat) | 'Parking río Llobregat El Prat' does not identify a particular river parking lot or bridge. | Which Llobregat riverside car park/bridge near El Prat is meant. |
+| 993 | Área de bomberos Mollet (Mollet del Vallès) | The roadside pull-in by Mollet fire station and Alstom plant has not been located. | Pull-in between Bombers de Mollet and Alstom, including roadside direction. |
+| 1049 | Riverside Walk - London (London) | Waterlink Way/River Pool spans a long corridor; the claimed crossing or section is absent. | Original Waterlink Way/River Pool bridge, stretch or entrance from source map/replies. |
 
 ## G. Possible duplicates requiring source comparison — 2 records
 
-**Problem:** These may refer to already-existing Backroom entries or to distinct sublocations; unlike eight already removed, identity is not settled.
+**What's wrong:** These may refer to already-existing Backroom entries or to distinct sublocations; unlike eight already removed, identity is not settled.
 
-**Research instruction:** Compare existing and new source URLs, names, public entrances, map points and geographical descriptions. Merge only if same real spot; keep separate if truly different subareas.
+**Instruction you can give:** Compare existing and new source URLs, names, public entrances, map points and geographical descriptions. Merge only if same real spot; keep separate if truly different subareas.
 
-| ID | Location | Exactly what's wrong | What to look for |
+| ID | Site | What's actually wrong | Research target |
 |---|---|---|---|
-| 439 | Zona Industriale - Ca' di Mazze (Verona) | The Via Ca' di Mazze industrial area may be the same location as the separate Palazzina entry. | Identify which part of Via Ca' di Mazze or car park, and is it the same as the separate Palazzina entry? |
-| 699 | Bürgerpark Bremen 2 (Bremen) | The ‘Bürgerpark Bremen 2’ park-side paths may duplicate the wider Bürgerpark candidate #698. | Compare Bürgerpark Bremen 2 paths around Parkallee with candidate #698; determine whether there is a genuinely different area. |
+| 439 | Zona Industriale - Ca' di Mazze (Verona) | Ca' di Mazze and the separate Palazzina candidate may be the same industrial road/parking spot. | Source comparison of Via Ca' di Mazze versus Palazzina entry; same parking area or distinct? |
+| 699 | Bürgerpark Bremen 2 (Bremen) | 'Bürgerpark Bremen 2' may simply be a subarea of candidate #698, not a second cruising location. | Compare Parkallee-side paths with candidate #698; merge if same real cruising area. |
 
 ## H. The place exists but evidence for cruising use is missing — 1 records
 
-**Problem:** An identifiable gay social/sunbathing location may have been incorrectly treated as a sex-cruising area.
+**What's wrong:** An identifiable gay social/sunbathing location may have been incorrectly treated as a sex-cruising area.
 
-**Research instruction:** Search specifically for dated evidence of gay male cruising at THIS site, not just general gay attendance. If evidence is absent, exclude from cruising category or recategorize.
+**Instruction you can give:** Search specifically for dated evidence of gay male cruising at THIS site, not just general gay attendance. If evidence is absent, exclude from cruising category or recategorize.
 
-| ID | Location | Exactly what's wrong | What to look for |
+| ID | Site | What's actually wrong | Research target |
 |---|---|---|---|
-| 1039 | Bois Vincennes - Tata beach (Paris) | The place is identified, but community evidence describes gay social/picnic use, not necessarily cruising. | Distinguish Bois Vincennes Tata Beach as a gay picnic/social lawn from the separate naturist or cruising woodland areas. |
+| 1039 | Bois Vincennes - Tata beach (Paris) | Tata Beach is described as a gay picnic/social lawn; that is not proof of sexual cruising there. | Evidence of actual gay male cruising at Tata Beach specifically, distinct from adjacent woodland. |
