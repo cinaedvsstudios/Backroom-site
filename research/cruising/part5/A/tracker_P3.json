@@ -30,14 +30,27 @@
       12,
       13,
       14,
-      15
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
     ],
     "genuinely_source_assessed_complete": [
       1,
       2,
       3,
       5,
-      14
+      14,
+      18,
+      22,
+      25
     ],
     "incomplete": [
       {
@@ -89,19 +102,54 @@
         "index": 15,
         "id": "GC1-BELGIUM-02",
         "reason": "Two separate Wolvenberg original source URLs unreadable; must compare original map/subarea before merging"
+      },
+      {
+        "index": 16,
+        "id": "GC1-BELGIUM-07",
+        "reason": "Stadspark precise source spot/map and current activity unspecified"
+      },
+      {
+        "index": 17,
+        "id": "GC1-BELGIUM-13",
+        "reason": "Linkeroever original generic district; several different possible physical areas"
+      },
+      {
+        "index": 19,
+        "id": "GC1-BELGIUM-09",
+        "reason": "American Theater outdoor section unspecified; building disused/under future plans"
+      },
+      {
+        "index": 20,
+        "id": "GC1-BELGIUM-12",
+        "reason": "Brussels Central source pin recovered but exact internal WC/access unverified"
+      },
+      {
+        "index": 21,
+        "id": "GC1-EX-BELGIUM-BRUSSELS-PARC-DU-CINQUANTENAIRE",
+        "reason": "Original exact page unavailable and exact park cruising section unidentified"
+      },
+      {
+        "index": 23,
+        "id": "GC1-BELGIUM-10",
+        "reason": "Viaductstraat original car park pin/entrance unknown; recent check-in without absolute time"
+      },
+      {
+        "index": 24,
+        "id": "GC1-BELGIUM-14",
+        "reason": "Opposite Herentals marina original shoreline/entrance unknown"
       }
     ],
-    "completed_count": 5,
-    "remaining_not_completed": 286,
-    "unreviewed_indices_start": 16,
+    "completed_count": 8,
+    "remaining_not_completed": 283,
+    "unreviewed_indices_start": 26,
     "next_incomplete_index": 4,
     "next_incomplete_id": "GC1-ANDORRA-04",
-    "last_completed_index": 14,
-    "last_completed_id": "GC1-ARMENIA-01",
+    "last_completed_index": 25,
+    "last_completed_id": "GC1-BELGIUM-03",
     "newly_identified_location_count": 0,
     "first_complete_5_record_checkpoint": true,
-    "last_assessed_index": 15,
-    "last_assessed_id": "GC1-BELGIUM-02",
+    "last_assessed_index": 25,
+    "last_assessed_id": "GC1-BELGIUM-03",
     "checkpoint_count": 1,
     "first_checkpoint_indices": [
       1,
@@ -115,12 +163,13 @@
     "research/cruising/part5/A/P3_deep_source_recheck_0001_0005_PARTIAL_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0006_0007_PARTIAL_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0008_0015_2026-11-08.json",
-    "research/cruising/part5/A/P3_completed_batch_0001_0005_2026-11-08.json"
+    "research/cruising/part5/A/P3_completed_batch_0001_0005_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0016_0025_2026-11-08.json"
   ],
   "last_confirmed_commit": "956c6d4c4635f092bfb539c5bae801951a94f6bf",
-  "approach": "Resume examination at index 16. Never misclassify #4,#6–13,#15 as fully researched while source detail/spot identity remains unavailable. Seek recoveries later; preserve all partial evidence. Next immutable checkpoint after 5 more truly completed records.",
+  "approach": "Begin candidate #26. Next immutable completed-five batch after two more genuinely fully researched records. Existing incomplete candidates preserved with primary source gaps; never count indexed names as verified firsthand use.",
   "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write.",
-  "last_confirmed_evidence_commit": "607bc2cfb172c11bb4a1f38d4a0bb44f12cf6b87",
+  "last_confirmed_evidence_commit": "af977a3d2d583d75cb694f581dc4c3b2f3c2d369",
   "latest_checkpoint_commit": "d2954753b74b45f7c768797bbe7417084494c3f8",
   "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0001_0005_2026-11-08.json"
 }
