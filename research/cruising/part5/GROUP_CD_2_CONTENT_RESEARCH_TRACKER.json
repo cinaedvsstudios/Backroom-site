@@ -4,14 +4,14 @@
   "scope": "86 candidates classified research-incomplete as of start",
   "original_backlog_count": 86,
   "working_records": 186,
-  "records_received_substantive_content_review": 70,
+  "records_received_substantive_content_review": 75,
   "records_source_review_fully_complete": 0,
   "original_direct_details_read_this_batch": 1,
   "new_geographically_identified": [
     "CRU-CD2-209"
   ],
-  "last_assessed": "CRU-CD2-355",
-  "next_unstarted": "CRU-CD2-357",
+  "last_assessed": "CRU-CD2-365",
+  "next_unstarted": "CRU-CD2-366",
   "still_pending_deep_followup": [
     "CRU-CD2-200",
     "CRU-CD2-202",
@@ -82,7 +82,12 @@
     "CRU-CD2-345",
     "CRU-CD2-349",
     "CRU-CD2-352",
-    "CRU-CD2-355"
+    "CRU-CD2-355",
+    "CRU-CD2-357",
+    "CRU-CD2-361",
+    "CRU-CD2-363",
+    "CRU-CD2-364",
+    "CRU-CD2-365"
   ],
   "completed_batches": [
     {
@@ -252,6 +257,18 @@
       ],
       "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_014_2026-11-08.json",
       "status": "5 substantive per-source reviews: Broadgate first-party historical toilet route read, Hilton actual lift-near toilets across floors, Woolwich source Thames Barrier path vs O2 discrepancy; none source-exhaustive."
+    },
+    {
+      "number": 15,
+      "ids": [
+        "CRU-CD2-357",
+        "CRU-CD2-361",
+        "CRU-CD2-363",
+        "CRU-CD2-364",
+        "CRU-CD2-365"
+      ],
+      "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_015_2026-11-08.json",
+      "status": "5 substantive source reviews; exact named Parkplatz Alten in protected Thurauen and Eastcheap toilet category; old batch embedded next=367 is a typographical cursor error, authoritative tracker correctly next=366."
     }
   ],
   "research_rules": "A researched batch may contain partially researched candidates, but do not count source-exhaustive completion until URLs/content are substantively examined. Never label inaccessible-original candidates unidentifiable. Commit every five investigated; continue from next_unstarted and revisit pending_followup.",
@@ -276,8 +293,13 @@
     "CRU-CD2-349 Gay Passport specifically names Hilton London Bridge toilet near lifts, independent Hilton Tower Bridge at More London Place and multiple distinct lift-proximate toilets; exact floor unknown",
     "CRU-CD2-352 original CruisingGays lists Thames Barrier Riverwalk, source wrongly claims it goes to O2 on opposite bank; original GPS unknown",
     "CRU-CD2-344 Limavady Forest road not assigned arbitrary Springwell/Grange/Loughermore forest",
-    "CRU-CD2-345 Dark Garden London source name too generic, no GPS recovered"
+    "CRU-CD2-345 Dark Garden London source name too generic, no GPS recovered",
+    "CRU-CD2-357 Eastcheap original CruisingGays is TOILETS, not whole street, exact public bog unknown",
+    "CRU-CD2-361 NI road order 2024 bans only western A6 Ranaghan Road layby entrance; not all layby access",
+    "CRU-CD2-363 Ealing Horsenden official carpark Horsenden Lane North and undated independent mixed-orientation adult directory corroborates woods",
+    "CRU-CD2-364 Thurauen management specifically has separate named Parkplatz Alten and seasonal toilets, though exact gay source shoreline unknown",
+    "CRU-CD2-365 Arlesheim parking original ID/source pin missing; 2026 online checkin not firsthand"
   ],
-  "last_confirmed_batch_commit": "74c3aff42d1da549f722a8a6e19dee468402785d",
+  "last_confirmed_batch_commit": "ed8158e2c98f2cd7ca8ef0d7b8c147e92e208992",
   "handover_file": "GROUP_CD_2_CONTINUATION_HANDOVER_2026-11-08.md"
 }
