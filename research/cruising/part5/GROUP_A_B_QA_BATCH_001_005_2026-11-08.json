@@ -1,0 +1,276 @@
+{
+  "_meta": {
+    "title": "A+B retained candidate quality audit — batch 1 of 5 (first five records)",
+    "date_berlin": "2026-11-08",
+    "scope": "First five of 92 current candidate listings following owner's exclusions",
+    "source_working_set": "research/cruising/part5/GROUP_A_B_2026-11-08_RECENCY_FILTERED_PUBLICATION.json",
+    "source_earlier_research": [
+      "research/cruising/part5/A/batch_0171_0175.json",
+      "research/cruising/part5/A/batch_0221_0225.json",
+      "research/cruising/part5/A/batch_0231_0235.json"
+    ],
+    "research_only": true,
+    "production_changes_authorized": false,
+    "site_files_modified": false,
+    "audit_fields": [
+      "current_place",
+      "location_geography",
+      "source_activity_dates_and_strength",
+      "current_access",
+      "duplicates",
+      "copy_claims",
+      "source_link_verification",
+      "required_corrections"
+    ],
+    "cross_source_limit": "Targeted public searching of other cruising domains did not establish corroboration. This is NOT an exhaustive logged-in sweep of the other seven websites; no-match searches are not proof of absence.",
+    "policy": "User permits a named broad park/road/beach location without a fabricated exact meeting pin. Recent questions/check-ins are distinguished from firsthand observations. Never modify live listings or generated pages without express user approval."
+  },
+  "batch_sequence": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "records": [
+    {
+      "position": 1,
+      "queue_index": 175,
+      "venue_id": "CRU-AB-0175",
+      "name": "Westfield Mall of Scandinavia",
+      "city": "Solna",
+      "country": "Sweden",
+      "record_review": "completed_primary_and_official_sources",
+      "identity": "Verified shopping centre Westfield Mall of Scandinavia, Stjärntorget 2, Solna, Sweden; distinct from central Stockholm. ICA Kvantum is confirmed in the present operator directory on Plan 0. Original directory names a toilet on ground floor near ICA, but no primary source verifies current restroom layout.",
+      "saved_coordinates": "59.369329,18.005496",
+      "coordinates_assessment": "Stored general shopping-centre point appears plausible; exact alleged restroom unverified. Do not imply an on-site cruising pin.",
+      "recent_evidence": [
+        {
+          "date": "2026-05-25",
+          "kind": "online_question_only",
+          "detail": "Original Swedish country index quotes 'Anyone here now?' against Mall of Scandinavia; NOT a physical visit/encounter."
+        }
+      ],
+      "important_source_snapshot_limit": "Direct spot page returned accessible but older cached snapshot whose newest displayed comment is 2025-08-14. The newer 2026-05-25 source discussion is confirmed separately on the country index; do not describe the spot page as current.",
+      "activity_assessment": "Recent site-specific online enquiry, no verified 2025-11-08–2026-11-08 firsthand cruising account.",
+      "access_and_facilities": "Mall publicly operates 10:00–21:00; operator independently lists ICA Kvantum on Plan 0 with store hours 07:00–22:00. Neither confirms restroom operating hours or sexual activity permissions.",
+      "duplicates": "No verified same-spot duplicate within these five; other Swedish location leads are separate.",
+      "issues": [
+        "Description 'former/current ICA retailer' is outdated/overcautious: ICA is confirmed present on plan 0.",
+        "The published 10:00–21:00 mall hours do not describe ICA hours or claimed restroom access.",
+        "No 2026 firsthand activity established; location is general mall not confirmed toilet."
+      ],
+      "research_recommendation": "Retain as recently discussed DIRECTORY-CLAIMED location only, with explicit activity uncertainty; correct shop-floor detail in future approved data revision.",
+      "evidence_urls": [
+        "https://www.gays-cruising.com/en/cruising/mall_of_scandinavia_stockholm_sweden_45874",
+        "https://www.gays-cruising.com/en/sweden",
+        "https://www.westfield.com/en/sweden/mallofscandinavia/openinghours",
+        "https://www.westfield.com/en/sweden/mallofscandinavia/stores/ica-kvantum/70702"
+      ]
+    },
+    {
+      "position": 2,
+      "queue_index": 221,
+      "venue_id": "CRU-AB-0221",
+      "name": "The Mall (Tsarigradsko Shose)",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "record_review": "completed_primary_and_official_sources",
+      "identity": "The Mall in Sofia's Mladost, NOT Sofia Ring Mall or Mall of Sofia. Original cruising directory names toilets on basement level -2 but current existence and layout of that WC not independently verified.",
+      "saved_coordinates": "42.660517,23.382172",
+      "coordinates_assessment": "Stored coordinates match a published geolocation for The Mall and are close to a mapped tenant; a tourism source instead gives another point approximately 1 km away, so do not replace existing point based on that conflicting source alone.",
+      "recent_evidence": [
+        {
+          "date": "2026-02-07",
+          "kind": "question_only",
+          "detail": "Asks if anyone is going soon."
+        },
+        {
+          "date": "2026-05-14",
+          "kind": "contact_invitation_only"
+        },
+        {
+          "date": "2026-06-09",
+          "kind": "meeting_question_only"
+        },
+        {
+          "date": "2026-07-01",
+          "kind": "same_day_meeting_question_only"
+        },
+        {
+          "date": "2026-07-05",
+          "kind": "plans_to_try_only"
+        },
+        {
+          "date": "2026-07-09",
+          "kind": "contact_invitation_only"
+        }
+      ],
+      "activity_assessment": "Recent discussion within 12 months, but no firsthand in-person encounter or observed cruising in those messages.",
+      "access_and_facilities": "Real retail centre open 10:00–22:00. Operator lists management address 115z Tsarigradsko shose Blvd; some tourism sources abbreviate to number 115. These are mall hours, not WC access or approval.",
+      "duplicates": "Three similarly named Sofia mall listings in this batch correspond to three different buildings; DO NOT merge them.",
+      "issues": [
+        "Use operator-style street number 115z where a precise postal address is needed; 115 appears as an abbreviation on municipal tourism page.",
+        "Stored point is plausible but one official tourism dataset has conflicting coordinates; don't automatically overwrite.",
+        "No 2026 firsthand activity evidenced; -2 toilet description remains unconfirmed."
+      ],
+      "research_recommendation": "Retain as recently discussed but unverified cruising; no claim of known busy hours or verified restroom layout.",
+      "evidence_urls": [
+        "https://www.gays-cruising.com/en/cruising/the_mall_sofia_bulgaria_99651",
+        "https://themall.bg/en/contacts/",
+        "https://www.visitsofia.info-sofia.bg/en/cityinfrastructure/shopping/malls-and-shopping-centres/the-mall",
+        "https://retailnews.bg/malls-retail-parks/the-mall/",
+        "https://en.wikipedia.org/wiki/The_Mall_%28Sofia%29",
+        "https://bizlocationdb.com/locations/hm/bulgaria/r/sofia-city-province"
+      ]
+    },
+    {
+      "position": 3,
+      "queue_index": 224,
+      "venue_id": "CRU-AB-0224",
+      "name": "Ring Mall",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "record_review": "completed_primary_and_official_sources",
+      "identity": "Sofia Ring Mall at 214 Okolovrasten pat/Ring Road, distinct from The Mall and Mall of Sofia. Original source alleges first-floor toilets near mobile-phone shops; operator does not verify this restroom's contemporary condition.",
+      "saved_coordinates": "42.624352,23.352417",
+      "coordinates_assessment": "Matches city tourism authority recorded location for Sofia Ring Mall; acceptable general building point.",
+      "recent_evidence": [
+        {
+          "date": "2026-07-03",
+          "kind": "firsthand_self_report_of_physical_visit_and_observation",
+          "detail": "Writer says visited restroom and observed a man masturbating in next stall; anonymous, not independently corroborated."
+        },
+        {
+          "date": "2026-07-19",
+          "kind": "firsthand_style_description_unverified",
+          "detail": "Poster describes quiet WC and visibility through openings; not proof of general ongoing activity."
+        },
+        {
+          "date": "2026-07-20",
+          "kind": "reported_meeting_practice",
+          "detail": "Commenter says he generally arranges a meeting in his car rather than the toilet."
+        },
+        {
+          "date": "2026-08-03",
+          "kind": "intended_visit_only",
+          "detail": "Poster says he is going later that day."
+        }
+      ],
+      "activity_assessment": "Stronger recent site-specific evidence than simple meeting questions, but still anonymous and uncorroborated. Do not convert the source site's dynamic check-in figures to crowd/busyness facts.",
+      "access_and_facilities": "Operator lists stores 10:00–22:00, longer restaurant/cinema hours, 24h parking, CCTV and security. Does not authorize cruising in public WCs.",
+      "duplicates": "Different building from The Mall (Tsarigradsko Shose) and Mall of Sofia.",
+      "issues": [
+        "Existing wording accurately distinguishes the July 3 anonymous report from a verified trend.",
+        "Never convert operator's all-building hours into a promise of WC availability.",
+        "Claimed openings between cubicles are historic source details, current layout unverified."
+      ],
+      "research_recommendation": "Retain with existing uncertainty wording; no immediate verified geographical correction needed.",
+      "evidence_urls": [
+        "https://www.gays-cruising.com/en/cruising/ring_mall_sofia_bulgaria_70315",
+        "https://sofiaring.bg/contact?lang=en",
+        "https://sofiaring.bg/about?lang=en",
+        "https://visitsofia.bg/en/cityinfrastructure/shopping/malls-and-shopping-centres/sofia-ring-mall"
+      ]
+    },
+    {
+      "position": 4,
+      "queue_index": 225,
+      "venue_id": "CRU-AB-0225",
+      "name": "Mall of Sofía WC Toilet",
+      "city": "Sofia",
+      "country": "Bulgaria",
+      "record_review": "completed_primary_and_official_sources",
+      "identity": "Mall of Sofia at Aleksandar Stamboliyski Boulevard 101–103 near Opalchenska metro, a separate shopping centre from both other Sofia malls.",
+      "saved_coordinates": "42.69816,23.308868",
+      "coordinates_assessment": "Plausible general shopping-centre point consistent with official address/metro; no verified pinpointed restroom coordinate.",
+      "recent_evidence": [
+        {
+          "date": "2026-07-08",
+          "kind": "firsthand_self_reported_encounter",
+          "detail": "Anonymous poster claims same-day encounter with three men, asks about CCTV; not independently verified."
+        },
+        {
+          "date": "2026-07-09",
+          "kind": "self_reported_current_presence_or_intent",
+          "detail": "Poster refers to a first-floor WC and seeks other men; current layout not verified."
+        },
+        {
+          "date": "2026-08-04",
+          "kind": "location_question_only",
+          "detail": "Someone asks which exact toilet is meant."
+        }
+      ],
+      "activity_assessment": "Recent anonymous firsthand claim exists within 12 months, alongside other question/meeting posts; no independent physical corroboration.",
+      "access_and_facilities": "Operator lists stores 10:00–21:00, supermarket 08:00–22:00, cinema 13:00–01:00, parking 08:30–23:30. Restroom hours and alleged CCTV coverage unverified.",
+      "duplicates": "Different building from the similarly named The Mall and Sofia Ring Mall; no merge.",
+      "issues": [
+        "Do not imply the specific restroom is verified solely because the mall/metro are identified.",
+        "CCTV discussed by commenter but not independently established inside the WC.",
+        "Existing description is appropriately cautious about anonymous self-report."
+      ],
+      "research_recommendation": "Retain with attribution of the July 8 anonymous firsthand claim and no claim of confirmed ongoing cruising.",
+      "evidence_urls": [
+        "https://www.gays-cruising.com/en/cruising/mall_of_sofia_wc_toilet_sofia_bulgaria_27522",
+        "https://mallofsofia.bg/en/information/"
+      ]
+    },
+    {
+      "position": 5,
+      "queue_index": 233,
+      "venue_id": "CRU-AB-0233",
+      "name": "Nissi Beach",
+      "city": "Ayia Napa",
+      "country": "Cyprus",
+      "record_review": "completed_country_index_and_official_geography_primary_detail_unavailable",
+      "identity": "Named public Nissi Beach in Ayia Napa; primary spot detail page not retrievable. Official Cyprus tourism distinguishes Nissi Beach from adjacent Nissi Bay Beach with the sandbar/islet.",
+      "saved_coordinates": "34.98787,33.96803",
+      "coordinates_assessment": "MATERIAL DATA PROBLEM: these stored coordinates exactly equal official Nissi Bay Beach, NOT official Nissi Beach. Official Nissi Beach coordinates 34.98829,33.9712. Must resolve intended named beach from source or use appropriately labelled broader Nissi Beach area; don't silently keep mismatched pin.",
+      "recent_evidence": [
+        {
+          "date": "2026-06-15",
+          "kind": "planned_visit_question_only"
+        },
+        {
+          "date": "2026-06-18",
+          "kind": "meeting_request_only"
+        },
+        {
+          "date": "2026-06-22",
+          "kind": "meeting_request_only"
+        },
+        {
+          "date": "2026-06-25",
+          "kind": "anyone_here_question_only"
+        }
+      ],
+      "activity_assessment": "Recent directory discussion only, no confirmed firsthand cruising observed in available indexed comments.",
+      "access_and_facilities": "Tourism ministry describes mainstream, managed Blue Flag resort beach; toilets, changing, beach activities and seasonal lifeguards April–October. No authorization to treat it as an adult venue.",
+      "duplicates": "Do not merge Nissi Beach, Nissi Bay Beach and Landa Beach or Adams Beach merely due to neighboring tourism names; original spot claim not mapped precisely.",
+      "issues": [
+        "Incorrect named-beach coordinate match (Nissi Bay vs Nissi Beach).",
+        "Original named cruising detail page returned cache miss; can see recent questions only in country index.",
+        "Mainstream beach is not proven a designated gay cruising area."
+      ],
+      "research_recommendation": "Retain as recently discussed under user's liberal source-signal rule; prioritize map-pin/title consistency correction in a later owner-approved data update.",
+      "evidence_urls": [
+        "https://www.gays-cruising.com/en/cyprus",
+        "https://www.gays-cruising.com/en/cruising/nissi_beach_ayia_napa_cyprus_90659",
+        "https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/nissi-beach-blue-flag/",
+        "https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/nissi-bay-beach-blue-flag/"
+      ]
+    }
+  ],
+  "summary": {
+    "completed": 5,
+    "site_identity_confirmed": 5,
+    "recent_firsthand_anonymous_account": 2,
+    "recent_discussion_only": 3,
+    "documented_geo_name_mismatch": 1,
+    "documented_mall_floor_detail_fix": 1,
+    "city_mall_duplicate_merges": 0,
+    "automated_live_changes": 0,
+    "next_position": 6,
+    "notes": "Remaining external corroboration is still limited; each record states the difference between a source discussion and eyewitness evidence."
+  }
+}
