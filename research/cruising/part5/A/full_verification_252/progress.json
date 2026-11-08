@@ -5,18 +5,17 @@
     "original_252_order": "Ascending original master queue indexes, excluding 39 initially unresolved and 2 archived closure records",
     "original_master_unchanged": true,
     "live_data_unchanged": true,
-    "checkpoint_every": 50
+    "checkpoint_every": 50,
+    "completed_berlin": "2026-11-08",
+    "scope_caveat": "All 252 originally identified candidate records enriched and checked with original source archive and aligned eight-site archival cross-index; public searches and official checks where possible. Not a logged-in full individual crawl of all eight sites per location."
   },
   "progress": {
-    "completed": 250,
-    "remaining": 2,
-    "next_batch": "0251-0252",
-    "next_original_index": 292,
-    "last_completed_original_index": 290,
-    "remaining_original_indices": [
-      292,
-      293
-    ],
+    "completed": 252,
+    "remaining": 0,
+    "next_batch": null,
+    "next_original_index": null,
+    "last_completed_original_index": 293,
+    "remaining_original_indices": [],
     "checkpoints": [
       {
         "range": "0001-0050",
@@ -52,11 +51,19 @@
         "last_index": 290,
         "locatable": 31,
         "reclassified_to_needs_details": 19
+      },
+      {
+        "range": "0251-0252",
+        "file": "research/cruising/part5/A/full_verification_252/batch_0251_0252.json",
+        "last_index": 293,
+        "locatable": 1,
+        "reclassified_to_needs_details": 1
       }
     ],
-    "known_locatable_active": 188,
-    "known_location_details_needed": 103,
-    "active_candidates": 291
+    "known_locatable_active": 187,
+    "known_location_details_needed": 104,
+    "active_candidates": 291,
+    "status": "completed_first_full_252_source_comparison_pass"
   },
   "policy": {
     "each_record": "Original eight-source archived alignment + exact source URLs + searches for other-name/alias/candidate mentions + official geographical verification + dated report classification + duplicate avoidance. Preserve in record whether page opened, not indexed, authentication-restricted or not checked.",
