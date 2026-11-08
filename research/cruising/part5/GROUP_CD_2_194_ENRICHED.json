@@ -713,7 +713,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "This is an archived Ayia Napa cruising-directory entry simply called 'Parking Area'. There are several distinct visitor car parks around the resort, and the directory also lists other named beach and sculpture-park parking locations. The original detail page is not currently accessible, so no particular car park, entrance or safe meeting area can be identified. It would be misleading to supply directions to a guessed car park.",
     "Vibe_Tags": "Parking Area, Ambiguous Identity, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -740,7 +740,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the specific parking area from the original map pin, road name or nearby landmark. | GENERIC_CARPARK_UNIDENTIFIED | POSSIBLE_DISTINCT_FROM_LANDA_AND_SCULPTURE_PARK | SOURCE_451 | NO_CURRENT_ACTIVITY",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the specific parking area from the original map pin, road name or nearby landmark. | GENERIC_CARPARK_UNIDENTIFIED | POSSIBLE_DISTINCT_FROM_LANDA_AND_SCULPTURE_PARK | SOURCE_451 | NO_CURRENT_ACTIVITY | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -758,7 +758,7 @@
       "priority_tier": "D_no_recent_sparse",
       "source_batch": "research/cruising/part5/A/batch_0231_0235.json",
       "publication_approved": false,
-      "place_coordinates_scope": "unresolved",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the specific parking area from the original map pin, road name or nearby landmark.",
       "activity_confirmation": "No independent confirmation of current cruising activity; do not infer from operator hours, directory listings or contact requests.",
@@ -844,7 +844,16 @@
         "phase": "first_pass",
         "publish_approved": false
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the specific parking area from the original map pin, road name or nearby landmark.",
+        "original_name": "Parking Area",
+        "city": "Ayia Napa",
+        "country": "Cyprus",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -1037,7 +1046,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The archive mentions an 'Old tavern' in Livadia, but supplies neither a business name nor a street address. More confusingly, the linked source page uses a different place-name slug. It is not possible to tell whether this refers to a still-operating business, a former tavern or private derelict property. Until its original map pin is recovered, there is no reliable destination or access information to provide.",
     "Vibe_Tags": "Tavern, Ambiguous Identity, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -1064,7 +1073,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the tavern by business name, street, photograph or original map pin; resolve the Livadia-versus-Talas source mismatch. | GENERIC_TAVERN_UNIDENTIFIABLE | SOURCE_SLUG_TALAS_VS_LIVADIA_MISMATCH | POSSIBLE_DERELICT_PRIVATE_PROPERTY | NO_RECENT_ACTIVITY",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the tavern by business name, street, photograph or original map pin; resolve the Livadia-versus-Talas source mismatch. | GENERIC_TAVERN_UNIDENTIFIABLE | SOURCE_SLUG_TALAS_VS_LIVADIA_MISMATCH | POSSIBLE_DERELICT_PRIVATE_PROPERTY | NO_RECENT_ACTIVITY | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -1082,7 +1091,7 @@
       "priority_tier": "D_no_recent_sparse",
       "source_batch": "research/cruising/part5/A/batch_0236_0240.json",
       "publication_approved": false,
-      "place_coordinates_scope": "unresolved",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the tavern by business name, street, photograph or original map pin; resolve the Livadia-versus-Talas source mismatch.",
       "activity_confirmation": "No independent confirmation of current cruising activity; do not infer from operator hours, directory listings or contact requests.",
@@ -1169,7 +1178,16 @@
         "status": "first_pass",
         "publish_approved": false
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the tavern by business name, street, photograph or original map pin; resolve the Livadia-versus-Talas source mismatch.",
+        "original_name": "Old tavern",
+        "city": "Livadia",
+        "country": "Cyprus",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -1684,7 +1702,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "An archived Paphos directory entry describes unused-looking land across from a Lidl, but does not specify which supermarket branch. There are multiple Lidl locations in the wider Paphos area, and the condition and ownership of vacant land can change. There is no sensible way to select a specific plot or present access directions without the missing original pin, nor is any recent gay cruising verified.",
     "Vibe_Tags": "Vacant Land, Ambiguous Location, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -1711,7 +1729,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the Lidl branch and opposite land parcel from an original map pin, street or clear landmark. | NO_LIDL_BRANCH_IDENTIFIED | POSSIBLE_PRIVATE_VACANT_LAND | NO_RECENT_ACTIVITY",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the Lidl branch and opposite land parcel from an original map pin, street or clear landmark. | NO_LIDL_BRANCH_IDENTIFIED | POSSIBLE_PRIVATE_VACANT_LAND | NO_RECENT_ACTIVITY | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -1729,7 +1747,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/A/batch_0241_0245.json",
       "publication_approved": false,
-      "place_coordinates_scope": "unresolved",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the Lidl branch and opposite land parcel from an original map pin, street or clear landmark.",
       "activity_confirmation": "No independent confirmation of current cruising activity; do not infer from operator hours, directory listings or contact requests.",
@@ -1815,7 +1833,16 @@
         "research_phase": "first_pass",
         "publish_approved": false
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the Lidl branch and opposite land parcel from an original map pin, street or clear landmark.",
+        "original_name": "Dead area opposite Lidl",
+        "city": "Paphos",
+        "country": "Cyprus",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -1842,7 +1869,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "'Za městem' literally means 'outside the town', which is too vague to identify a destination in Most. The old source appears to describe woodland near industrial railway land rather than a designated public park, but the exact site and lawful access are unconfirmed. There are no dated reports supporting current activity, and it should not be confused with Lake Most.",
     "Vibe_Tags": "Woodland, Industrial Area, Unverified, Safety Warning",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -1869,7 +1896,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Provide an exact original pin or uniquely identifiable road/landmark and confirm legal public access near the industrial rail area. | GENERIC_NAME_NO_UNIQUE_GEOCODE | INDUSTRIAL_RAIL_SIDING_PRIVATE_ACCESS_POSSIBLE | NOT_JEZERO_MOST | NO_CURRENT_ACTIVITY",
+    "Flag_Reason": "Research only: NOT approved for publication. | Provide an exact original pin or uniquely identifiable road/landmark and confirm legal public access near the industrial rail area. | GENERIC_NAME_NO_UNIQUE_GEOCODE | INDUSTRIAL_RAIL_SIDING_PRIVATE_ACCESS_POSSIBLE | NOT_JEZERO_MOST | NO_CURRENT_ACTIVITY | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -1887,7 +1914,7 @@
       "priority_tier": "D_no_recent_sparse",
       "source_batch": "research/cruising/part5/A/batch_0246_0250.json",
       "publication_approved": false,
-      "place_coordinates_scope": "unresolved",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Provide an exact original pin or uniquely identifiable road/landmark and confirm legal public access near the industrial rail area.",
       "activity_confirmation": "No independent confirmation of current cruising activity; do not infer from operator hours, directory listings or contact requests.",
@@ -1970,7 +1997,16 @@
         "research_stage": "first_pass_primary_site_and_official_place_checks_other_seven_pending",
         "publish_approved": false
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Provide an exact original pin or uniquely identifiable road/landmark and confirm legal public access near the industrial rail area.",
+        "original_name": "Za městem",
+        "city": "Most",
+        "country": "Czechia",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -2870,7 +2906,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "This archived Budapest entry refers to a public toilet on the east side of an unnamed metro station. Budapest has many stations, and there is no usable station name or source pin in the preserved data. Without that fundamental detail, neither an address nor safe directions can be supplied, and the record offers no verified recent activity.",
     "Vibe_Tags": "Public Restroom, Metro, Ambiguous Identity, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -2897,7 +2933,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the metro station and east-side restroom, ideally from the original map pin or source-page screenshot. | SPOT_PAGE_451_INACCESSIBLE | STATION_NAME_NOT_CONFIRMED | TOILET_MANAGED_ACCESS | NO_RECENT_VISIT",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the metro station and east-side restroom, ideally from the original map pin or source-page screenshot. | SPOT_PAGE_451_INACCESSIBLE | STATION_NAME_NOT_CONFIRMED | TOILET_MANAGED_ACCESS | NO_RECENT_VISIT | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -2915,7 +2951,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/A/batch_0261_0265.json",
       "publication_approved": false,
-      "place_coordinates_scope": "unresolved",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the metro station and east-side restroom, ideally from the original map pin or source-page screenshot.",
       "activity_confirmation": "No independent confirmation of current cruising activity; do not infer from operator hours, directory listings or contact requests.",
@@ -3022,7 +3058,16 @@
         "research_stage": "first_pass_eight_source_archive_alignment_targeted_live_2026",
         "publish_approved": false
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the metro station and east-side restroom, ideally from the original map pin or source-page screenshot.",
+        "original_name": "Public toilet, east side Metro station",
+        "city": "Budapest",
+        "country": "Hungary",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -3566,7 +3611,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "ELTE is a large Budapest university with multiple campuses and buildings, while the archive gives only the institution's initials and a claim about a 'glory hole'. The specific campus and toilet cannot be identified, and there are no recent corroborated accounts. It would be inaccurate to publish a pin for an arbitrary ELTE building, particularly in a non-public educational facility.",
     "Vibe_Tags": "University, Restrooms, Ambiguous Location, Privacy Warning",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -3593,7 +3638,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Specify the ELTE campus and building from credible source evidence; university facilities should not be labelled as public cruising space. | UNIVERSITY_SAFETY_AND_CONSENT | NO_EXACT_CAMPUS_RELIABLE | DETAIL_CACHE_MISS | NO_RECENT_VISIT",
+    "Flag_Reason": "Research only: NOT approved for publication. | Specify the ELTE campus and building from credible source evidence; university facilities should not be labelled as public cruising space. | UNIVERSITY_SAFETY_AND_CONSENT | NO_EXACT_CAMPUS_RELIABLE | DETAIL_CACHE_MISS | NO_RECENT_VISIT | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -3611,7 +3656,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/A/batch_0271_0275.json",
       "publication_approved": false,
-      "place_coordinates_scope": "unresolved",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Specify the ELTE campus and building from credible source evidence; university facilities should not be labelled as public cruising space.",
       "activity_confirmation": "No independent confirmation of current cruising activity; do not infer from operator hours, directory listings or contact requests.",
@@ -3705,7 +3750,16 @@
         "research_stage": "first_pass_archived_cross_source_plus_targeted_current_references",
         "publish_approved": false
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Specify the ELTE campus and building from credible source evidence; university facilities should not be labelled as public cruising space.",
+        "original_name": "ELTE Glory Hole",
+        "city": "Budapest",
+        "country": "Hungary",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -3890,21 +3944,21 @@
     "Address": "Rózsa utca / Danube riverside, Csepel, Budapest XXI; specific section unconfirmed",
     "Postcode": "",
     "Nearest_Station": "",
-    "Latitude": "",
-    "Longitude": "",
-    "Google_Maps_URL": "",
-    "Apple_Maps_URL": "",
-    "Native_Map_Query": "",
+    "Latitude": "47.413164",
+    "Longitude": "19.047292",
+    "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=47.413164%2C19.047292",
+    "Apple_Maps_URL": "https://maps.apple.com/?ll=47.413164%2C19.047292&q=R%C3%B3zsa%20utcai%20Duna-part",
+    "Native_Map_Query": "47.413164,19.047292",
     "Website_URL": "",
     "Instagram_URL": "",
     "Facebook_URL": "",
     "Other_URL": "",
-    "Source_URLs": "https://www.gays-cruising.com/en/budapest/hungary, https://www.gays-cruising.com/en/csepel/budapest/hungary",
+    "Source_URLs": "https://www.gays-cruising.com/en/budapest/hungary, https://www.gays-cruising.com/en/csepel/budapest/hungary, https://budapest.hu/api/file/doc/fovarosi-kozlony-2024-24.pdf",
     "Share_URL": "",
     "Image_URL": "placeholder_venue.jpg",
     "Description": "This entry names the Danube shore around Rózsa utca in Budapest's Csepel district. It seems to have originated in a directory comment rather than a separately documented location, and no exact riverside path or lawful access point is available. The waterfront is the only reliable general landmark; present-day gay cruising is unverified.",
     "Vibe_Tags": "Riverside, Outdoor, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -3949,7 +4003,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/A/batch_0276_0280.json",
       "publication_approved": false,
-      "place_coordinates_scope": "unresolved",
+      "place_coordinates_scope": "Budapest city administrative shore boundary where Rózsa utca meets Danube; riverside segment beyond exact crossing unclear",
       "manual_clarification_required": true,
       "manual_clarification_question": "Determine which part of the Danube shore off Rózsa utca is meant, with an original pin and access check.",
       "activity_confirmation": "No independent confirmation of current cruising activity; do not infer from operator hours, directory listings or contact requests.",
@@ -4051,7 +4105,13 @@
         "research_stage": "eight_source_archival_crosscheck_and_targeted_live_page_verification",
         "publish_approved": false
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "landmark_identified",
+        "coordinate_scope": "Budapest city administrative shore boundary where Rózsa utca meets Danube; riverside segment beyond exact crossing unclear",
+        "source_url": "https://budapest.hu/api/file/doc/fovarosi-kozlony-2024-24.pdf",
+        "verification_note": "The GPS identifies a source-supported geographical reference, not an independently verified active cruising area or exact toilet entrance."
+      }
     }
   },
   {
@@ -4258,7 +4318,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "An older directory calls somewhere on the Újpest side of Budapest a 'Gay beach', but it does not identify the actual shore, bathing place or approach. Újpest has multiple stretches of water and riverside recreation, so picking a beach from the title would be guesswork. Nothing independently documents a current cruising section or confirms public access.",
     "Vibe_Tags": "Beach, Waterfront, Unverified, Unlocated",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -4285,7 +4345,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Recover the original map pin or identify the named beach and its access. | BEACH_SUBAREA_UNVERIFIED | NO_RECENT_FIRSTHAND | DETAIL_CACHE_MISS | POSSIBLE_NEARBY_AREA_NOT_PROVEN_DUPLICATE",
+    "Flag_Reason": "Research only: NOT approved for publication. | Recover the original map pin or identify the named beach and its access. | BEACH_SUBAREA_UNVERIFIED | NO_RECENT_FIRSTHAND | DETAIL_CACHE_MISS | POSSIBLE_NEARBY_AREA_NOT_PROVEN_DUPLICATE | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -4303,7 +4363,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/A/batch_0276_0280.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact location or geographic coordinates have not been independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Recover the original map pin or identify the named beach and its access.",
       "activity_confirmation": "Recent independently verified cruising activity not established. Facility operating hours are not activity hours.",
@@ -4417,7 +4477,16 @@
         "research_stage": "eight_source_archival_crosscheck_and_targeted_live_page_verification",
         "publish_approved": false
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Recover the original map pin or identify the named beach and its access.",
+        "original_name": "Gay beach",
+        "city": "Újpest",
+        "country": "Hungary",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -4984,7 +5053,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "'La Mall' is a generic label for a shopping centre somewhere in Sibiu. Multiple modern retail destinations operate in and around the city, and the archived directory does not identify a building, entrance or nearby landmark. No present-day gay cruising has been corroborated, so it would be misleading to pin the record to whichever mall is most popular.",
     "Vibe_Tags": "Shopping Centre, Unlocated, Ambiguous Identity",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -5011,7 +5080,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Specify the shopping centre using the original pin, address or identifiable retailer; verify whether it duplicates another location. | RETAIL_FACILITY_NOT_IDENTIFIED | POSSIBLE_DUPLICATE_REQUIRE_FURTHER_LOCATION_CHECK | SOURCE_PAGE_CACHE_MISS | NO_RECENT_VISIT",
+    "Flag_Reason": "Research only: NOT approved for publication. | Specify the shopping centre using the original pin, address or identifiable retailer; verify whether it duplicates another location. | RETAIL_FACILITY_NOT_IDENTIFIED | POSSIBLE_DUPLICATE_REQUIRE_FURTHER_LOCATION_CHECK | SOURCE_PAGE_CACHE_MISS | NO_RECENT_VISIT | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -5029,7 +5098,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/A/batch_0291_0293.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact location or geographic coordinates have not been independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Specify the shopping centre using the original pin, address or identifiable retailer; verify whether it duplicates another location.",
       "activity_confirmation": "Recent independently verified cruising activity not established. Facility operating hours are not activity hours.",
@@ -5131,7 +5200,16 @@
         "research_stage": "eight_source_archival_crosscheck_and_targeted_independent_place_context",
         "publish_approved": false
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Specify the shopping centre using the original pin, address or identifiable retailer; verify whether it duplicates another location.",
+        "original_name": "La Mall",
+        "city": "Sibiu",
+        "country": "Romania",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -5342,7 +5420,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "'Parcare de Tiruri' means truck parking, but Timișoara and its outer ring roads have several freight parking facilities. The archived cruising source supplies no uniquely identifiable rest area, motorway exit or permission information. Commercial truck stops may be private or controlled, and no credible recent cruising visit has been verified.",
     "Vibe_Tags": "Truck Parking, Ambiguous Location, Private Access Possible",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -5369,7 +5447,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the exact truck park, road or exit, with original source pin and access permission. | ambiguous_location | may_be_private_commercial_parking",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the exact truck park, road or exit, with original source pin and access permission. | ambiguous_location | may_be_private_commercial_parking | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -5387,7 +5465,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0294_0298.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact location or geographic coordinates have not been independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the exact truck park, road or exit, with original source pin and access permission.",
       "activity_confirmation": "Recent independently verified cruising activity not established. Facility operating hours are not activity hours.",
@@ -5493,7 +5571,16 @@
         "approved_for_publication": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the exact truck park, road or exit, with original source pin and access permission.",
+        "original_name": "Parcare de Tiruri",
+        "city": "Timișoara",
+        "country": "Romania",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -5520,7 +5607,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The Saalach river on Salzburg's western edge has informal spots sometimes described as clothing-optional, particularly around Wals and nearby stretches of riverbank. The original listing contains a spelling error and does not identify the exact bank or gravel beach. A naturist reference does not demonstrate gay cruising, and seasonal water levels and public access need checking for the specific place.",
     "Vibe_Tags": "Riverbank, Naturist, Outdoors, Exact Spot Unknown",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -5547,7 +5634,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify which bank and river section the directory names; confirm a lawful public approach and avoid treating naturism as sexual activity. | possible_different_riverbank | naturism_not_cruising_proof | river_access_and_conditions_unverified",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify which bank and river section the directory names; confirm a lawful public approach and avoid treating naturism as sexual activity. | possible_different_riverbank | naturism_not_cruising_proof | river_access_and_conditions_unverified | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -5565,7 +5652,7 @@
       "priority_tier": "D_no_recent_sparse",
       "source_batch": "research/cruising/part5/B/batch_0299_0303.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact location or geographic coordinates have not been independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify which bank and river section the directory names; confirm a lawful public approach and avoid treating naturism as sexual activity.",
       "activity_confirmation": "Recent independently verified cruising activity not established. Facility operating hours are not activity hours.",
@@ -5673,7 +5760,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify which bank and river section the directory names; confirm a lawful public approach and avoid treating naturism as sexual activity.",
+        "original_name": "Fkk an det Saalach",
+        "city": "Salzburg",
+        "country": "Austria",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -8354,7 +8450,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "This archive entry combines the names Riverside and Liosbán, a residential district and an industrial/retail district on the northeast side of Galway. The name alone does not reveal which footpath, riverbank or linking trail is intended, and some industrial edges may not have public access. No independent, dated male cruising account has been verified for a particular stretch.",
     "Vibe_Tags": "Walking Trails, Industrial Edge, Ambiguous Location",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -8381,7 +8477,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the specific trail and access point with an original pin, path name, or landmark. | ambiguous_large_two_district_area | possible_private_industrial_paths | no_verifiable_current_cruising",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the specific trail and access point with an original pin, path name, or landmark. | ambiguous_large_two_district_area | possible_private_industrial_paths | no_verifiable_current_cruising | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -8399,7 +8495,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0324_0328.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact location or geographic coordinates have not been independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the specific trail and access point with an original pin, path name, or landmark.",
       "activity_confirmation": "Recent independently verified cruising activity not established. Facility operating hours are not activity hours.",
@@ -8505,7 +8601,16 @@
         "research_only": true,
         "researched_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the specific trail and access point with an original pin, path name, or landmark.",
+        "original_name": "Riverside/Liosban Trails",
+        "city": "Galway",
+        "country": "Ireland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -8532,7 +8637,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The archived Galway entry is simply '1st Floor toilet'. It contains no building, centre name, address, retail operator or landmark, so there is nothing unique to geocode. Assigning this to Galway Shopping Centre or another building would be invented. There is no current firsthand activity evidence or confirmed public access information.",
     "Vibe_Tags": "Public Toilet, Unlocated, Ambiguous Identity",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -8559,7 +8664,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the building and which first-floor toilet the source meant. | generic_non_geolocatable_toilet | managed_space_possible | no_recent_activity",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the building and which first-floor toilet the source meant. | generic_non_geolocatable_toilet | managed_space_possible | no_recent_activity | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -8577,7 +8682,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0329_0333.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact location or geographic coordinates have not been independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the building and which first-floor toilet the source meant.",
       "activity_confirmation": "Recent independently verified cruising activity not established. Facility operating hours are not activity hours.",
@@ -8684,7 +8789,16 @@
         "publication_approved": false,
         "researched_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the building and which first-floor toilet the source meant.",
+        "original_name": "1st Floor toilet",
+        "city": "Galway",
+        "country": "Ireland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -8901,7 +9015,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "This Birkirkara record is simply named 'Public toilet'. The original directory does not supply a verifiable street, landmark or restroom name, and there are several public and commercial conveniences across the town. It would be misleading to choose one at random. No independently verified recent cruising activity or visitor-access details are available.",
     "Vibe_Tags": "Restroom, Ambiguous Identity, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -8928,7 +9042,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Find the named public toilet in Birkirkara from the original map pin or an unmistakable landmark. | duplicate_generic_toilet_name_across_malta | cannot_geolocate_safely | no_recent_activity_evidence",
+    "Flag_Reason": "Research only: NOT approved for publication. | Find the named public toilet in Birkirkara from the original map pin or an unmistakable landmark. | duplicate_generic_toilet_name_across_malta | cannot_geolocate_safely | no_recent_activity_evidence | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -8946,7 +9060,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0329_0333.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific geographic point is not independently verified",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Find the named public toilet in Birkirkara from the original map pin or an unmistakable landmark.",
       "activity_confirmation": "No positive independently verified recent cruising activity established; online comments, older directories and retail hours do not prove activity.",
@@ -9053,7 +9167,16 @@
         "publication_approved": false,
         "researched_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Find the named public toilet in Birkirkara from the original map pin or an unmistakable landmark.",
+        "original_name": "Public toilet",
+        "city": "Birkirkara",
+        "country": "Malta",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -9080,7 +9203,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "One of two separate entries for public toilets in Birżebbuġa, this historical directory lead has no specific street, beach or restroom description accessible now. The town has a coastline and everyday visitor amenities, but the information does not establish a particular toilet block or current gay activity. It must remain separate from the other similarly named candidate until the source pins can be compared.",
     "Vibe_Tags": "Public Toilet, Potential Duplicate, Unlocated",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -9107,7 +9230,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Recover the original source pin or location clue and check possible duplicate against position 248. | exact_toilet_unidentified | possible_cross_candidate_duplicate | no_dated_activity",
+    "Flag_Reason": "Research only: NOT approved for publication. | Recover the original source pin or location clue and check possible duplicate against position 248. | exact_toilet_unidentified | possible_cross_candidate_duplicate | no_dated_activity | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -9125,7 +9248,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0334_0338.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific geographic point is not independently verified",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Recover the original source pin or location clue and check possible duplicate against position 248.",
       "activity_confirmation": "No positive independently verified recent cruising activity established; online comments, older directories and retail hours do not prove activity.",
@@ -9242,7 +9365,16 @@
         "publication_approved": false,
         "research_date_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Recover the original source pin or location clue and check possible duplicate against position 248.",
+        "original_name": "Public Toilet",
+        "city": "Birżebbuġa",
+        "country": "Malta",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -9269,7 +9401,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "A second Birżebbuġa directory entry uses the plural 'Public toilets'. Its separate original source ID is not proof it refers to a separate building; there is too little evidence to decide whether it duplicates the singular entry or points elsewhere. No exact WC, accessible hours or current cruising encounter is confirmed.",
     "Vibe_Tags": "Public Toilets, Potential Duplicate, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -9296,7 +9428,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the restroom using original map evidence; compare and possibly merge with position 247 only after confirming both pins. | generic_unlocated_toilet | potential_duplicate_334 | no_recent_visit",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the restroom using original map evidence; compare and possibly merge with position 247 only after confirming both pins. | generic_unlocated_toilet | potential_duplicate_334 | no_recent_visit | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -9314,7 +9446,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0334_0338.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific geographic point is not independently verified",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the restroom using original map evidence; compare and possibly merge with position 247 only after confirming both pins.",
       "activity_confirmation": "No positive independently verified recent cruising activity established; online comments, older directories and retail hours do not prove activity.",
@@ -9431,7 +9563,16 @@
         "publication_approved": false,
         "research_date_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the restroom using original map evidence; compare and possibly merge with position 247 only after confirming both pins.",
+        "original_name": "Public toilets",
+        "city": "Birżebbuġa",
+        "country": "Malta",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -9458,7 +9599,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The archived Gudja listing refers to unnamed 'Public urinals' without a road, park, town square or other landmark. Gudja lies close to Malta International Airport, but that is not enough to associate the alleged toilets with an airport building. The location cannot be mapped responsibly, and present-day cruising activity remains unverified.",
     "Vibe_Tags": "Public Urinals, Unlocated, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -9485,7 +9626,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the street or public urinal facility in Gudja, ruling out a guessed airport toilet. | toilet_not_geolocatable | do_not_conflate_airport_toilets | no_recent_physical_activity",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the street or public urinal facility in Gudja, ruling out a guessed airport toilet. | toilet_not_geolocatable | do_not_conflate_airport_toilets | no_recent_physical_activity | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -9503,7 +9644,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0334_0338.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific geographic point is not independently verified",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the street or public urinal facility in Gudja, ruling out a guessed airport toilet.",
       "activity_confirmation": "No positive independently verified recent cruising activity established; online comments, older directories and retail hours do not prove activity.",
@@ -9614,7 +9755,16 @@
         "publication_approved": false,
         "research_date_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the street or public urinal facility in Gudja, ruling out a guessed airport toilet.",
+        "original_name": "Public urinals",
+        "city": "Gudja",
+        "country": "Malta",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -10866,7 +11016,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The directory calls this Belgrade location 'Zemun Toilet' without a street or identifying feature. Public WC facilities exist around Zemun's waterfront and Gradski Park, but they are separate places; choosing one from a generic name would manufacture an exact location. No credible recent encounters or restroom opening hours have been verified.",
     "Vibe_Tags": "Public Toilet, Zemun, Ambiguous Facility",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -10893,7 +11043,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Specify which Zemun public toilet is intended, ideally with a source pin, street or nearby named landmark. | ambiguous_generic_restroom | cannot_transfer_hours_between_WCs | no_cruising_report_dated",
+    "Flag_Reason": "Research only: NOT approved for publication. | Specify which Zemun public toilet is intended, ideally with a source pin, street or nearby named landmark. | ambiguous_generic_restroom | cannot_transfer_hours_between_WCs | no_cruising_report_dated | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -10911,7 +11061,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0354_0358.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific geographic point is not independently verified",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Specify which Zemun public toilet is intended, ideally with a source pin, street or nearby named landmark.",
       "activity_confirmation": "No positive independently verified recent cruising activity established; online comments, older directories and retail hours do not prove activity.",
@@ -11033,7 +11183,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Specify which Zemun public toilet is intended, ideally with a source pin, street or nearby named landmark.",
+        "original_name": "Zemun Toilet",
+        "city": "Belgrade",
+        "country": "Serbia",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -12816,7 +12975,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The unusual label 'Sandviken87' seems to refer to Vaasa's Sandviken or Sandö seaside recreation area, although its unexplained number prevents an exact match. Vaasa has beaches and park paths in this general district, but they should not be treated as confirmed cruising areas. The location needs a source pin and the old activity claim has no recent independent backing.",
     "Vibe_Tags": "Coastal Recreation, Ambiguous Name, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -12843,7 +13002,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Clarify what '87' signifies and which Sandviken or Sandö stretch was originally listed. | name_suffix_unexplained | possible_sando_hietasaari_area_only | beach_family_use | no_recent_activity_confirmation",
+    "Flag_Reason": "Research only: NOT approved for publication. | Clarify what '87' signifies and which Sandviken or Sandö stretch was originally listed. | name_suffix_unexplained | possible_sando_hietasaari_area_only | beach_family_use | no_recent_activity_confirmation | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -12861,7 +13020,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0369_0373.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific geographic point is not independently verified",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Clarify what '87' signifies and which Sandviken or Sandö stretch was originally listed.",
       "activity_confirmation": "No positive independently verified recent cruising activity established; online comments, older directories and retail hours do not prove activity.",
@@ -12986,7 +13145,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Clarify what '87' signifies and which Sandviken or Sandö stretch was originally listed.",
+        "original_name": "Sandviken87",
+        "city": "Vaasa",
+        "country": "Finland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -13013,7 +13181,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "Siwa was a Finnish convenience-store chain, but its remaining stores were converted to K-branded shops or closed by 2017. The old Vaasa listing does not name the branch or street, so the original shop might no longer exist and cannot be matched to any current business. It should remain an archival lead rather than a live venue or public cruising location.",
     "Vibe_Tags": "Former Convenience Store, Historic, Unlocated",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -13040,7 +13208,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the former Siwa branch by street or source pin, and confirm what occupies the premises today. | former_siwa_brand_closed_by_2017 | store_identity_unknown | historical_listing_only",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the former Siwa branch by street or source pin, and confirm what occupies the premises today. | former_siwa_brand_closed_by_2017 | store_identity_unknown | historical_listing_only | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -13058,7 +13226,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0369_0373.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific geographic point is not independently verified",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the former Siwa branch by street or source pin, and confirm what occupies the premises today.",
       "activity_confirmation": "No positive independently verified recent cruising activity established; online comments, older directories and retail hours do not prove activity.",
@@ -13179,34 +13347,43 @@
       },
       "verification_new_web_sources": [
         "https://www.kesko.fi/en/media/news-and-releases/stock-exchange-releases/2017/keskos-half-year-financial-report-for-the-period-1-january-to-30-june-2017-keskos-profitability-improved/"
-      ]
+      ],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the former Siwa branch by street or source pin, and confirm what occupies the premises today.",
+        "original_name": "Siwa",
+        "city": "Vaasa",
+        "country": "Finland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
     "Venue_ID": "CRU-CD2-268",
     "Name": "Leppäkorven levähdysalue II",
-    "City": "Vantaa",
+    "City": "Kerava",
     "Country": "Finland",
     "Unspecified01": "",
     "Status": "Flag",
-    "Address": "Leppäkorpi II motorway rest area, Vantaa area; carriageway unverified",
+    "Address": "Leppäkorven levähdysalue II, northbound side of E75, near Kerava/Vantaa boundary",
     "Postcode": "",
     "Nearest_Station": "",
-    "Latitude": "",
-    "Longitude": "",
-    "Google_Maps_URL": "",
-    "Apple_Maps_URL": "",
-    "Native_Map_Query": "",
+    "Latitude": "60.365209",
+    "Longitude": "25.117908",
+    "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=60.365209%2C25.117908",
+    "Apple_Maps_URL": "https://maps.apple.com/?ll=60.365209%2C25.117908&q=Lepp%C3%A4korven%20lev%C3%A4hdysalue%20II",
+    "Native_Map_Query": "60.365209,25.117908",
     "Website_URL": "",
     "Instagram_URL": "",
     "Facebook_URL": "",
     "Other_URL": "",
-    "Source_URLs": "https://www.gays-cruising.com/en/finland, https://www.gays-cruising.com/en/cruising/leppakorven_levahdysalue_2_vantaa_finland_5525, https://www.doria.fi/bitstream/handle/10024/119852/SQ_Raskaan_liikenteen_taukopaikat_Uudenmaan_ELY-keskuksen_alueella_loppuraportti.pdf?isAllowed=y&sequence=2",
+    "Source_URLs": "https://www.gays-cruising.com/en/finland, https://www.gays-cruising.com/en/cruising/leppakorven_levahdysalue_2_vantaa_finland_5525, https://www.doria.fi/bitstream/handle/10024/119852/SQ_Raskaan_liikenteen_taukopaikat_Uudenmaan_ELY-keskuksen_alueella_loppuraportti.pdf?isAllowed=y&sequence=2, https://www.doria.fi/bitstream/handle/10024/183671/valvontapaikkaselvitys_saavutettava_raporttikokonaisuus_L1_L2_2022-02-21.pdf",
     "Share_URL": "",
     "Image_URL": "placeholder_venue.jpg",
     "Description": "Leppäkorven levähdysalue II is a numbered highway rest-area lead on Finland's national road network near Vantaa. Road records describe paired facilities, but the exact side marked 'II' and current access arrangements have not been confirmed from an authoritative pin. There is no current independent cruising report; road-stop operating access is not evidence of activity.",
     "Vibe_Tags": "Motorway Rest Area, Road Access, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -13251,7 +13428,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0374_0378.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific geographic point is not independently verified",
+      "place_coordinates_scope": "Leppäkorpi northbound P-side motorway rest area from Finnish official ETRS-TM35FIN easting 396190 northing 6693567, transformed to WGS84",
       "manual_clarification_required": true,
       "manual_clarification_question": "Confirm Leppäkorpi II location and carriageway using road authority coordinates and avoid mixing it with Leppäkorpi I.",
       "activity_confirmation": "No positive independently verified recent cruising activity established; online comments, older directories and retail hours do not prove activity.",
@@ -13359,7 +13536,13 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "landmark_identified",
+        "coordinate_scope": "Leppäkorpi northbound P-side motorway rest area from Finnish official ETRS-TM35FIN easting 396190 northing 6693567, transformed to WGS84",
+        "source_url": "https://www.doria.fi/bitstream/handle/10024/183671/valvontapaikkaselvitys_saavutettava_raporttikokonaisuus_L1_L2_2022-02-21.pdf",
+        "verification_note": "The GPS identifies a source-supported geographical reference, not an independently verified active cruising area or exact toilet entrance."
+      }
     }
   },
   {
@@ -13386,7 +13569,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The historical entry is titled only 'Nice gay park' and assigns it to Vantaa, a municipality containing numerous green areas. With no park name, street, district or source map marker, the place cannot be independently located. There are no trustworthy recent visitor accounts, so publishing a guessed park would misdirect users.",
     "Vibe_Tags": "Park, Ambiguous Identity, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -13413,7 +13596,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the actual park, with a reliable source pin or distinctive name and nearby address. | name_too_generic | cannot_geolocate | no_recent_activity_confirmation",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the actual park, with a reliable source pin or distinctive name and nearby address. | name_too_generic | cannot_geolocate | no_recent_activity_confirmation | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -13431,7 +13614,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0374_0378.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific geographic point is not independently verified",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the actual park, with a reliable source pin or distinctive name and nearby address.",
       "activity_confirmation": "No positive independently verified recent cruising activity established; online comments, older directories and retail hours do not prove activity.",
@@ -13533,7 +13716,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the actual park, with a reliable source pin or distinctive name and nearby address.",
+        "original_name": "Nice gay park",
+        "city": "Vantaa",
+        "country": "Finland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -14520,24 +14712,24 @@
     "Country": "Italy",
     "Unspecified01": "",
     "Status": "Flag",
-    "Address": "Cassina Rizzardi municipal sports grounds, Via Fratelli Nava area",
+    "Address": "Centro Sportivo Comunale, Via Vittorio Veneto 179, Cassina Rizzardi",
     "Postcode": "",
     "Nearest_Station": "",
-    "Latitude": "",
-    "Longitude": "",
-    "Google_Maps_URL": "",
-    "Apple_Maps_URL": "",
-    "Native_Map_Query": "",
+    "Latitude": "45.7497",
+    "Longitude": "9.0266",
+    "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=45.7497%2C9.0266",
+    "Apple_Maps_URL": "https://maps.apple.com/?ll=45.7497%2C9.0266&q=Campo%20Sportivo",
+    "Native_Map_Query": "45.7497,9.0266",
     "Website_URL": "",
     "Instagram_URL": "",
     "Facebook_URL": "",
     "Other_URL": "",
-    "Source_URLs": "https://www.gays-cruising.com/en/italy, https://www.gays-cruising.com/en/cruising/campo_sportivo_cassina_rizzardi_italia_106991, https://www.laprovinciadicomo.it/stories/premium/olgiate-e-bassa-comasca/lidea-costruire-una-palestra-a-cielo-aperto-o_3984008_11/",
+    "Source_URLs": "https://www.gays-cruising.com/en/italy, https://www.gays-cruising.com/en/cruising/campo_sportivo_cassina_rizzardi_italia_106991, https://www.laprovinciadicomo.it/stories/premium/olgiate-e-bassa-comasca/lidea-costruire-una-palestra-a-cielo-aperto-o_3984008_11/, https://www.csicomo.it/sito/allegati/calcio26/comunicato_25.pdf",
     "Share_URL": "",
     "Image_URL": "placeholder_venue.jpg",
     "Description": "Cassina Rizzardi has more than one sports facility, and the generic Italian description 'Campo Sportivo' only means sports field. A municipal playing field near Via Fratelli Nava is a possible geographic anchor, not evidence that it is the source's actual site. There is no identified changing room, entrance or current activity report; school and sport access rules must be respected.",
     "Vibe_Tags": "Sports Field, Ambiguous Facility, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -14582,7 +14774,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0389_0393.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific coordinates not independently established",
+      "place_coordinates_scope": "Municipal sports ground at Via Vittorio Veneto 179; GPS points to confirmed road, field entrance not surveyed",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify which sports ground is intended using an original pin, venue name or street, and establish access conditions.",
       "activity_confirmation": "No independent proof of current cruising activity, even where place identity and public access have been verified.",
@@ -14691,7 +14883,13 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "landmark_identified",
+        "coordinate_scope": "Municipal sports ground at Via Vittorio Veneto 179; GPS points to confirmed road, field entrance not surveyed",
+        "source_url": "https://www.csicomo.it/sito/allegati/calcio26/comunicato_25.pdf",
+        "verification_note": "The GPS identifies a source-supported geographical reference, not an independently verified active cruising area or exact toilet entrance."
+      }
     }
   },
   {
@@ -15101,7 +15299,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "'Jack Danner' is an unexplained name in an older directory for Cavallino-Treporti, possibly associated with the Punta Sabbioni pine woods. The named person or business cannot be reconciled with a unique public park, trail or beach. The original detail page was unavailable, and neither current access nor adult activity can be verified, so no speculative pin should be supplied.",
     "Vibe_Tags": "Unknown Identity, Possible Pinewood, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -15128,7 +15326,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify what 'Jack Danner' originally referred to with the directory screenshot, map pin, or alternative place name. | unresolved_jack_danner_identity | possible_near_pineta | no_geolocation | no_recent_activity_confirmation",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify what 'Jack Danner' originally referred to with the directory screenshot, map pin, or alternative place name. | unresolved_jack_danner_identity | possible_near_pineta | no_geolocation | no_recent_activity_confirmation | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -15146,7 +15344,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0394_0398.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific coordinates not independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify what 'Jack Danner' originally referred to with the directory screenshot, map pin, or alternative place name.",
       "activity_confirmation": "No independent proof of current cruising activity, even where place identity and public access have been verified.",
@@ -15262,7 +15460,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify what 'Jack Danner' originally referred to with the directory screenshot, map pin, or alternative place name.",
+        "original_name": "Jack Danner",
+        "city": "Cavallino-Treporti",
+        "country": "Italy",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -15674,7 +15881,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The archive describes a small wooded place around Lacchiarella, south of Milan. A cycle-route directory mentions the similarly named Boschetto di Villamaggiore, but that is not enough to establish the same parcel of land or access path. Neither the land's ownership nor current gay cruising has been independently confirmed.",
     "Vibe_Tags": "Woodland, Possible Alias, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -15701,7 +15908,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Verify whether the directory's Boschetto is Boschetto di Villamaggiore and identify a lawful public access point. | precise_boschetto_not_verified | possible_villamaggiore_alias | land_access_unknown | no_recent_activity_evidence",
+    "Flag_Reason": "Research only: NOT approved for publication. | Verify whether the directory's Boschetto is Boschetto di Villamaggiore and identify a lawful public access point. | precise_boschetto_not_verified | possible_villamaggiore_alias | land_access_unknown | no_recent_activity_evidence | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -15719,7 +15926,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0404_0408.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific coordinates not independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Verify whether the directory's Boschetto is Boschetto di Villamaggiore and identify a lawful public access point.",
       "activity_confirmation": "No independent proof of current cruising activity, even where place identity and public access have been verified.",
@@ -15835,7 +16042,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Verify whether the directory's Boschetto is Boschetto di Villamaggiore and identify a lawful public access point.",
+        "original_name": "Boschetto di Lacchiarella",
+        "city": "Lacchiarella",
+        "country": "Italy",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -17848,7 +18064,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The Po riverside around Piacenza has flood embankments, river paths and cycle routes that vary considerably from bank to bank. The generic directory title provides no specific village, path or bridge, and a visitor cycling route via Via del Pontiere is not proof of the original cruising place. River conditions and access change seasonally, and no recent independent activity has been confirmed.",
     "Vibe_Tags": "Riverbank, Embankment, Flood Safety, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -17875,7 +18091,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Specify the Po embankment section, bank and path/road entrance with a reliable source pin. | vague_large_river_corridor | no_precise_site | flood_and_water_safety | no_recent_onsite_activity",
+    "Flag_Reason": "Research only: NOT approved for publication. | Specify the Po embankment section, bank and path/road entrance with a reliable source pin. | vague_large_river_corridor | no_precise_site | flood_and_water_safety | no_recent_onsite_activity | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -17893,7 +18109,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0419_0423.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific coordinates not independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Specify the Po embankment section, bank and path/road entrance with a reliable source pin.",
       "activity_confirmation": "No independent proof of current cruising activity, even where place identity and public access have been verified.",
@@ -18013,7 +18229,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Specify the Po embankment section, bank and path/road entrance with a reliable source pin.",
+        "original_name": "Zona argini del po",
+        "city": "Piacenza",
+        "country": "Italy",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -18458,7 +18683,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "This 'Boschetto' is a small woodland lead around Turate's industrial fringe. The separate CruisingGays name 'Turate – via Strada di Mezzo' may describe the same area, which is worth retaining as a possible two-directory match. Neither old source proves which land parcel or path is meant, and current land access or encounters have not been verified.",
     "Vibe_Tags": "Woodland, Industrial Edge, Potential Duplicate, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -18485,7 +18710,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Verify the precise woodland parcel near Via Strada di Mezzo and whether both directory entries refer to one place. | probable_same_spot_two_directories | private_land_uncertain | no_dated_visits",
+    "Flag_Reason": "Research only: NOT approved for publication. | Verify the precise woodland parcel near Via Strada di Mezzo and whether both directory entries refer to one place. | probable_same_spot_two_directories | private_land_uncertain | no_dated_visits | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -18503,7 +18728,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0424_0428.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Specific coordinates not independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Verify the precise woodland parcel near Via Strada di Mezzo and whether both directory entries refer to one place.",
       "activity_confirmation": "No independent proof of current cruising activity, even where place identity and public access have been verified.",
@@ -18621,7 +18846,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Verify the precise woodland parcel near Via Strada di Mezzo and whether both directory entries refer to one place.",
+        "original_name": "Boschetto",
+        "city": "Turate",
+        "country": "Italy",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -19881,7 +20115,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "An archived Riga entry calls a supposed location 'Lake Lāčplēsis', but no confidently identifiable lake with that name could be established in Riga. Place-name searches also return a settlement called Lāčplēsis elsewhere in Latvia, which is not proof of this lake's identity. The original detail is inaccessible, and neither exact geography nor present-day gay cruising is verified.",
     "Vibe_Tags": "Lake, Unresolved Identity, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -19908,7 +20142,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Find the actual lake, correct municipality and source pin; do not substitute Lāčplēsis village or a differently named nearby lake. | cannot_geolocate | possible_wrong_city | Lāčplēsis_hamlet_not_same_as_unnamed_lake | source_detail_unavailable | no_activity_proof",
+    "Flag_Reason": "Research only: NOT approved for publication. | Find the actual lake, correct municipality and source pin; do not substitute Lāčplēsis village or a differently named nearby lake. | cannot_geolocate | possible_wrong_city | Lāčplēsis_hamlet_not_same_as_unnamed_lake | source_detail_unavailable | no_activity_proof | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -19927,7 +20161,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0454_0458.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No precise independently verified geographic coordinates",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Find the actual lake, correct municipality and source pin; do not substitute Lāčplēsis village or a differently named nearby lake.",
       "activity_confirmation": "No independent recent positive cruising encounters verified.",
@@ -20057,7 +20291,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Find the actual lake, correct municipality and source pin; do not substitute Lāčplēsis village or a differently named nearby lake.",
+        "original_name": "Lake Lāčplēsis",
+        "city": "Riga",
+        "country": "Latvia",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -20499,7 +20742,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "This Kraków listing names a public WC 'next to H&M', apparently in the Kazimierz area, but provides no shopping centre, street or particular store branch that can be verified today. H&M operates multiple shops in Kraków, so the toilet cannot be located from that clue alone. No recent corroborated encounter or lawful cruising access is established.",
     "Vibe_Tags": "Retail Toilet, Kazimierz, Unlocated, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -20526,7 +20769,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the specific H&M branch, shopping-centre floor and toilet with an original map pin or floorplan. | unresolved_retail_building | public_toilet | no_authoritative_address | no_date_evidence",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the specific H&M branch, shopping-centre floor and toilet with an original map pin or floorplan. | unresolved_retail_building | public_toilet | no_authoritative_address | no_date_evidence | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -20545,7 +20788,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0464_0468.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No precise independently verified geographic coordinates",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the specific H&M branch, shopping-centre floor and toilet with an original map pin or floorplan.",
       "activity_confirmation": "No independent recent positive cruising encounters verified.",
@@ -20669,7 +20912,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the specific H&M branch, shopping-centre floor and toilet with an original map pin or floorplan.",
+        "original_name": "Toilets/WC next to H&M",
+        "city": "Kraków",
+        "country": "Poland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -20696,7 +20948,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "'Leśny Parking' means forest car park, a generic description that could fit numerous roadside pull-ins around Rybnik. The archived entry is no longer visible in the current ranked city index and has no recovered map coordinates or dated encounters. It should not be merged with the similarly named Tarnowskie Góry parking record, which belongs to another city.",
     "Vibe_Tags": "Forest Parking, Ambiguous Site, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -20723,7 +20975,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Locate the specific Rybnik woodland parking area through the original directory pin or named road. | name_too_generic_for_precise_geolocation | original_index_listing_not_visible_now | no_dated_comments | do_not_merge_with_473",
+    "Flag_Reason": "Research only: NOT approved for publication. | Locate the specific Rybnik woodland parking area through the original directory pin or named road. | name_too_generic_for_precise_geolocation | original_index_listing_not_visible_now | no_dated_comments | do_not_merge_with_473 | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -20742,7 +20994,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0469_0473.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No precise independently verified geographic coordinates",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Locate the specific Rybnik woodland parking area through the original directory pin or named road.",
       "activity_confirmation": "No independent recent positive cruising encounters verified.",
@@ -20867,7 +21119,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Locate the specific Rybnik woodland parking area through the original directory pin or named road.",
+        "original_name": "Leśny Parking",
+        "city": "Rybnik",
+        "country": "Poland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -20894,7 +21155,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The original directory lists a forest car park in Tarnowskie Góry but has no visitor comments or accessible exact pin. One independently named public car park at Repty Stare on the Gliwicka road is a plausible geographic match, yet that alone cannot establish the same place. Nothing supports current cruising activity, and the proposed car park should not be substituted automatically.",
     "Vibe_Tags": "Forest Car Park, Possible Alias, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -20921,7 +21182,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Verify whether the source pin matches Parking Leśny Repty Stare and confirm public access. | zero_visitor_comments | unverified_geographic_pin | possible_Repty_Stare_site_unproven | no_recent_onsite_evidence",
+    "Flag_Reason": "Research only: NOT approved for publication. | Verify whether the source pin matches Parking Leśny Repty Stare and confirm public access. | zero_visitor_comments | unverified_geographic_pin | possible_Repty_Stare_site_unproven | no_recent_onsite_evidence | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -20940,7 +21201,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0469_0473.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No precise independently verified geographic coordinates",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Verify whether the source pin matches Parking Leśny Repty Stare and confirm public access.",
       "activity_confirmation": "No independent recent positive cruising encounters verified.",
@@ -21074,7 +21335,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Verify whether the source pin matches Parking Leśny Repty Stare and confirm public access.",
+        "original_name": "Parking Leśny",
+        "city": "Tarnowskie Góry",
+        "country": "Poland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -21087,21 +21357,21 @@
     "Address": "Ulica Adama Mickiewicza, Wrocław; exact car park unconfirmed",
     "Postcode": "",
     "Nearest_Station": "",
-    "Latitude": "",
-    "Longitude": "",
-    "Google_Maps_URL": "",
-    "Apple_Maps_URL": "",
-    "Native_Map_Query": "",
+    "Latitude": "51.1125701",
+    "Longitude": "17.0879647",
+    "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=51.1125701%2C17.0879647",
+    "Apple_Maps_URL": "https://maps.apple.com/?ll=51.1125701%2C17.0879647&q=Mickiewicza%20Parking%2FLasek",
+    "Native_Map_Query": "51.1125701,17.0879647",
     "Website_URL": "",
     "Instagram_URL": "",
     "Facebook_URL": "",
     "Other_URL": "",
-    "Source_URLs": "https://www.gays-cruising.com/en/poland, https://www.gays-cruising.com/en/cruising/mickiewicza_parkinglasek_wroclaw_psie_pole_poland_63609, https://www.gays-cruising.com/en/wroclaw/dolnoslaskie/poland, https://visitwroclaw.eu/parking-dla-autokarow/, https://grupabiwakowa.pl/wroclaw-blisko-centrum, https://wiadomosci.onet.pl/wroclaw/wroclaw-kontrowersyjna-tablica-zniknie-z-parkingu-przy-ul-mickiewicza/j6bz5ng",
+    "Source_URLs": "https://www.gays-cruising.com/en/poland, https://www.gays-cruising.com/en/cruising/mickiewicza_parkinglasek_wroclaw_psie_pole_poland_63609, https://www.gays-cruising.com/en/wroclaw/dolnoslaskie/poland, https://visitwroclaw.eu/parking-dla-autokarow/, https://grupabiwakowa.pl/wroclaw-blisko-centrum, https://wiadomosci.onet.pl/wroclaw/wroclaw-kontrowersyjna-tablica-zniknie-z-parkingu-przy-ul-mickiewicza/j6bz5ng, https://pl.near-place.com/parking-adama-mickiewicza-35-wroclaw",
     "Share_URL": "",
     "Image_URL": "placeholder_venue.jpg",
     "Description": "Wrocław's Mickiewicza road borders visitor parking, woodland and landscaped green areas near the zoo. A cruising-directory entry combines 'parking' and 'little wood', but there is more than one parking space along this route. Without the original source pin and recent visits, selecting the zoo or coach parking would be guesswork.",
     "Vibe_Tags": "Roadside Parking, Trees, Ambiguous Pin, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -21147,7 +21417,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0474_0478.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No precise independently verified geographic coordinates",
+      "place_coordinates_scope": "mapped public car park at 35 Adama Mickiewicza beside Szczytnicki park; historical cruising subarea unidentified",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify which Mickiewicza parking lot and adjacent woodland section the original source references.",
       "activity_confirmation": "No independent recent positive cruising encounters verified.",
@@ -21287,7 +21557,13 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "landmark_identified",
+        "coordinate_scope": "mapped public car park at 35 Adama Mickiewicza beside Szczytnicki park; historical cruising subarea unidentified",
+        "source_url": "https://pl.near-place.com/parking-adama-mickiewicza-35-wroclaw",
+        "verification_note": "The GPS identifies a source-supported geographical reference, not an independently verified active cruising area or exact toilet entrance."
+      }
     }
   },
   {
@@ -21314,7 +21590,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The Polish directory entry is literally called 'Railway tracks', without a named station, road or safe public walkway. Wrocław has extensive active railway infrastructure, and the preserved information does not establish any accessible public space distinct from the tracks. For safety, no rail-corridor access directions or arbitrary location point should be published.",
     "Vibe_Tags": "Railway, Dangerous Access, Unidentified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -21341,7 +21617,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Confirm a lawful, railway-separated public location and exact original pin; do not recommend track access. | unverified_pin | railway_safety_and_access | linked_page_unavailable | no_recent_firsthand_evidence",
+    "Flag_Reason": "Research only: NOT approved for publication. | Confirm a lawful, railway-separated public location and exact original pin; do not recommend track access. | unverified_pin | railway_safety_and_access | linked_page_unavailable | no_recent_firsthand_evidence | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -21360,7 +21636,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0479_0483.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No precise independently verified geographic coordinates",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Confirm a lawful, railway-separated public location and exact original pin; do not recommend track access.",
       "activity_confirmation": "No independent recent positive cruising encounters verified.",
@@ -21477,7 +21753,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Confirm a lawful, railway-separated public location and exact original pin; do not recommend track access.",
+        "original_name": "Tory kolejowe ️",
+        "city": "Wrocław",
+        "country": "Poland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -22729,7 +23014,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "This archived Haugesund record contains the generic phrase 'Sucking area' without any road, park, business or other locatable identity. The individual source page could not be opened, so there is no basis to say what type of location it is, whether it remains accessible or if anyone currently meets there. No arbitrary city-centre coordinate should be assigned.",
     "Vibe_Tags": "Unknown Venue Type, Unlocated, Historical Directory",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -22756,7 +23041,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Recover the original source pin, named landmark or street so the Haugesund location can be identified. | generic_name | unknown_type | no_pin | primary_page_unavailable | no_recent_activity_report",
+    "Flag_Reason": "Research only: NOT approved for publication. | Recover the original source pin, named landmark or street so the Haugesund location can be identified. | generic_name | unknown_type | no_pin | primary_page_unavailable | no_recent_activity_report | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -22775,7 +23060,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0494_0498.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No precise independently verified geographic coordinates",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Recover the original source pin, named landmark or street so the Haugesund location can be identified.",
       "activity_confirmation": "No independent recent positive cruising encounters verified.",
@@ -22887,7 +23172,16 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Recover the original source pin, named landmark or street so the Haugesund location can be identified.",
+        "original_name": "Sucking area",
+        "city": "Haugesund",
+        "country": "Norway",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -23306,11 +23600,11 @@
     "Address": "Moss Roklubb area, Rosnes, Jeløya, Moss; precise path/property not established",
     "Postcode": "",
     "Nearest_Station": "",
-    "Latitude": "",
-    "Longitude": "",
-    "Google_Maps_URL": "",
-    "Apple_Maps_URL": "",
-    "Native_Map_Query": "",
+    "Latitude": "59.44562",
+    "Longitude": "10.65063",
+    "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=59.44562%2C10.65063",
+    "Apple_Maps_URL": "https://maps.apple.com/?ll=59.44562%2C10.65063&q=Roklubben",
+    "Native_Map_Query": "59.44562,10.65063",
     "Website_URL": "",
     "Instagram_URL": "",
     "Facebook_URL": "",
@@ -23320,7 +23614,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "A location labelled 'Roklubben' near Moss probably refers to the rowing club at Rosnes on Jeløya, whose waterfront facilities are independently documented. The source does not reveal whether the alleged meeting area is a public shoreline path or the club's private premises. There is no dated independent cruising evidence, and neither membership-only buildings nor boating infrastructure should be assumed publicly accessible.",
     "Vibe_Tags": "Waterfront, Rowing Club, Private Property Possible, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -23366,7 +23660,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0499_0503.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No precise independently verified geographic coordinates",
+      "place_coordinates_scope": "Rosnes locality on Jeløya where Moss Roklubb states clubhouse is based; exact boating club building not separately pinned",
       "manual_clarification_required": true,
       "manual_clarification_question": "Verify the rowing club identity and whether the source meant a separate public shoreline path, including lawful access.",
       "activity_confirmation": "No independent recent positive cruising encounters verified.",
@@ -23503,7 +23797,13 @@
       },
       "verification_new_web_sources": [
         "https://virksomhet.brreg.no/nb/oppslag/enheter/975636534"
-      ]
+      ],
+      "coordinate_resolution": {
+        "state": "landmark_identified",
+        "coordinate_scope": "Rosnes locality on Jeløya where Moss Roklubb states clubhouse is based; exact boating club building not separately pinned",
+        "source_url": "https://www.moss-roklubb.no/om-klubben",
+        "verification_note": "The GPS identifies a source-supported geographical reference, not an independently verified active cruising area or exact toilet entrance."
+      }
     }
   },
   {
@@ -23913,24 +24213,24 @@
     "Country": "Portugal",
     "Unspecified01": "",
     "Status": "Flag",
-    "Address": "Industrial estate around Coina, Seixal municipality; exact lot not established",
+    "Address": "Zona Industrial de Coina, 2830-581 Coina (Barreiro Municipality), Portugal",
     "Postcode": "",
     "Nearest_Station": "",
-    "Latitude": "",
-    "Longitude": "",
-    "Google_Maps_URL": "",
-    "Apple_Maps_URL": "",
-    "Native_Map_Query": "",
+    "Latitude": "38.5942277",
+    "Longitude": "-9.0442609",
+    "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=38.5942277%2C-9.0442609",
+    "Apple_Maps_URL": "https://maps.apple.com/?ll=38.5942277%2C-9.0442609&q=Parque%20Industrial%20do%20Seixal",
+    "Native_Map_Query": "38.5942277,-9.0442609",
     "Website_URL": "",
     "Instagram_URL": "",
     "Facebook_URL": "",
     "Other_URL": "",
-    "Source_URLs": "https://www.gays-cruising.com/en/portugal, https://www.gays-cruising.com/en/cruising/parque_industrial_de_coina_coina_portugal_8111, https://gaycruising.pt/cruising-setubal, https://gcruise.appspride.com/cruising-setubal",
+    "Source_URLs": "https://www.gays-cruising.com/en/portugal, https://www.gays-cruising.com/en/cruising/parque_industrial_de_coina_coina_portugal_8111, https://gaycruising.pt/cruising-setubal, https://gcruise.appspride.com/cruising-setubal, https://codigopostal.ciberforma.pt/codigo-postal/zona-industrial-de-coina/coina/2830-581/",
     "Share_URL": "",
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The industrial zone around Coina south of Lisbon appears in two Portuguese cruising directories, the second describing vehicle-based meetings. Both accounts are undated, and the original page cannot currently be read. Industrial parking and private company grounds are not automatically publicly accessible; no particular entrance, safe legal parking bay or recent encounters have been verified.",
     "Vibe_Tags": "Industrial Estate, Roadside, Undated Two-Source Claim, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -23976,7 +24276,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0504_0508.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No independently identified exact point",
+      "place_coordinates_scope": "Named Zona Industrial de Coina in Barreiro municipality, not unrelated Parque Empresarial do Seixal/Paio Pires; specific lot unknown",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the named industrial estate/parking site in Coina or Seixal, with an exact road or source pin and access rights.",
       "activity_confirmation": "No independent positive recent cruising reports established unless explicitly noted as a dated community observation in the description; do not conflate with approved venue.",
@@ -24107,7 +24407,13 @@
         "publication_approved": false,
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "landmark_identified",
+        "coordinate_scope": "Named Zona Industrial de Coina in Barreiro municipality, not unrelated Parque Empresarial do Seixal/Paio Pires; specific lot unknown",
+        "source_url": "https://codigopostal.ciberforma.pt/codigo-postal/zona-industrial-de-coina/coina/2830-581/",
+        "verification_note": "The GPS identifies a source-supported geographical reference, not an independently verified active cruising area or exact toilet entrance."
+      }
     }
   },
   {
@@ -28505,7 +28811,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "'Forest road' is too generic to identify a single location around Limavady, where there are several forest routes and roadside woodland areas. The source directory index does not supply an exact junction or reliable pin, and commercial forestry operations can affect access. The nearby Cam and Springwell woods are distinct areas and cannot be guessed to be this entry.",
     "Vibe_Tags": "Forest Road, Ambiguous Location, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -28532,7 +28838,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Provide exact Forest Road section, nearby forest, junction or original map pin and verify public access. | imprecise_location | forest_operations_restrictions",
+    "Flag_Reason": "Research only: NOT approved for publication. | Provide exact Forest Road section, nearby forest, junction or original map pin and verify public access. | imprecise_location | forest_operations_restrictions | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -28551,7 +28857,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0549_0553.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No independently identified exact point",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Provide exact Forest Road section, nearby forest, junction or original map pin and verify public access.",
       "activity_confirmation": "No independent positive recent cruising reports established unless explicitly noted as a dated community observation in the description; do not conflate with approved venue.",
@@ -28675,7 +28981,16 @@
         "approved_for_publication": false,
         "checked_berlin": "2026-11-07"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Provide exact Forest Road section, nearby forest, junction or original map pin and verify public access.",
+        "original_name": "Forest road",
+        "city": "Limavady",
+        "country": "United Kingdom",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -28702,7 +29017,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "An older adult-directory entry in London is titled only 'Cruising in Dark Garden', without a park name, street, borough or map coordinate. London has numerous gardens, and assigning it to a well-known cruising park would create a false identity. The location and current access remain completely unverified until the original source page or map is recovered.",
     "Vibe_Tags": "Garden, Unknown Identity, Unlocated",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -28729,7 +29044,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the garden, street or borough using the original directory screenshot or map pin. | unresolved_identity | generic_name",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the garden, street or borough using the original directory screenshot or map pin. | unresolved_identity | generic_name | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -28748,7 +29063,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0549_0553.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No independently identified exact point",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the garden, street or borough using the original directory screenshot or map pin.",
       "activity_confirmation": "No independent positive recent cruising reports established unless explicitly noted as a dated community observation in the description; do not conflate with approved venue.",
@@ -28867,7 +29182,16 @@
         "approved_for_publication": false,
         "checked_berlin": "2026-11-07"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the garden, street or borough using the original directory screenshot or map pin.",
+        "original_name": "Cruising in Dark Garden",
+        "city": "London",
+        "country": "United Kingdom",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -30099,21 +30423,21 @@
     "Address": "Thames-side Riverwalk around Woolwich / Thames Barrier on south bank; exact stretch unconfirmed",
     "Postcode": "",
     "Nearest_Station": "Woolwich / Woolwich Arsenal (rail, DLR and Elizabeth line depending section)",
-    "Latitude": "",
-    "Longitude": "",
-    "Google_Maps_URL": "",
-    "Apple_Maps_URL": "",
-    "Native_Map_Query": "",
+    "Latitude": "51.494845",
+    "Longitude": "0.037233",
+    "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=51.494845%2C0.037233",
+    "Apple_Maps_URL": "https://maps.apple.com/?ll=51.494845%2C0.037233&q=Woolwich%20Riverwalk",
+    "Native_Map_Query": "51.494845,0.037233",
     "Website_URL": "",
     "Instagram_URL": "",
     "Facebook_URL": "",
     "Other_URL": "",
-    "Source_URLs": "https://www.cruisinggays.com/london/areas/46027-woolwich-riverwalk/",
+    "Source_URLs": "https://www.cruisinggays.com/london/areas/46027-woolwich-riverwalk/, https://commons.wikimedia.org/wiki/File:The_Thames_Path_at_the_Thames_Barrier_-_geograph.org.uk_-_3773297.jpg",
     "Share_URL": "",
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The title 'Woolwich Riverwalk' refers to Thames-side paths around Woolwich but gives no useful start and end point. Its historic guide mentions the Thames Barrier area, which must not be confused with Thames Barrier Park in Newham on the opposite bank. There is no credible exact source pin or recent visitor evidence for cruising on the promenade.",
     "Vibe_Tags": "Riverwalk, Thames, Broad Location, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -30159,7 +30483,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0559_0563.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact geographic point not independently established",
+      "place_coordinates_scope": "actual photographed Thames Path on southern bank at Woolwich/Thames Barrier, not north-bank park; original riverwalk segment unconfirmed",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the actual south-bank riverwalk section and public-access boundaries; distinguish from position 360 on the north bank.",
       "activity_confirmation": "Directory references historical or inaccessible; no independent recent physical cruising confirmed.",
@@ -30288,7 +30612,13 @@
         "approved_for_publication": false,
         "checked_berlin": "2026-11-07"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "landmark_identified",
+        "coordinate_scope": "actual photographed Thames Path on southern bank at Woolwich/Thames Barrier, not north-bank park; original riverwalk segment unconfirmed",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Thames_Path_at_the_Thames_Barrier_-_geograph.org.uk_-_3773297.jpg",
+        "verification_note": "The GPS identifies a source-supported geographical reference, not an independently verified active cruising area or exact toilet entrance."
+      }
     }
   },
   {
@@ -30315,7 +30645,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "An old cruising reference calls this merely 'Canal Tow Path', with a vague clue near Green Lanes and Manor House. Several watercourses and routes pass through the wider area, and no particular bridge or segment can be recovered. Inventing a pin would risk directing people to the wrong towpath or private waterway land; current activity is undocumented.",
     "Vibe_Tags": "Towpath, Waterway, Unidentified Section",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -30342,7 +30672,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify which watercourse and specific canal path segment are intended near Green Lanes/Manor House. | exact_towpath_unresolved | public_path",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify which watercourse and specific canal path segment are intended near Green Lanes/Manor House. | exact_towpath_unresolved | public_path | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -30361,7 +30691,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0559_0563.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact geographic point not independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify which watercourse and specific canal path segment are intended near Green Lanes/Manor House.",
       "activity_confirmation": "Directory references historical or inaccessible; no independent recent physical cruising confirmed.",
@@ -30484,7 +30814,16 @@
         "approved_for_publication": false,
         "checked_berlin": "2026-11-07"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify which watercourse and specific canal path segment are intended near Green Lanes/Manor House.",
+        "original_name": "Canal Tow Path",
+        "city": "London",
+        "country": "United Kingdom",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -31935,7 +32274,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "A roadside pull-in somewhere on the Glenshane route near Maghera appears in an old cruising directory. Northern Ireland's road authority imposed a specific access restriction at a western A6 lay-by opposite Ranaghan Road in 2024, but there is no evidence that this is the same place. Without the precise original source pin, directions could lead into a prohibited entrance or unsafe traffic area.",
     "Vibe_Tags": "Lay-by, Road Restrictions, Safety Warning",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -31962,7 +32301,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify exact Glenshane lay-by, side of A6 and whether the 2024 Ranaghan Road restriction applies. | road_access_restriction | exact_layby_unconfirmed | traffic_safety",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify exact Glenshane lay-by, side of A6 and whether the 2024 Ranaghan Road restriction applies. | road_access_restriction | exact_layby_unconfirmed | traffic_safety | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -31981,7 +32320,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0569_0573.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact geographic point not independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify exact Glenshane lay-by, side of A6 and whether the 2024 Ranaghan Road restriction applies.",
       "activity_confirmation": "Directory references historical or inaccessible; no independent recent physical cruising confirmed.",
@@ -32106,7 +32445,16 @@
         "approved_for_publication": false,
         "checked_berlin": "2026-11-07"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify exact Glenshane lay-by, side of A6 and whether the 2024 Ranaghan Road restriction applies.",
+        "original_name": "Glenshane lay by",
+        "city": "Maghera",
+        "country": "United Kingdom",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -32733,7 +33081,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The generic directory name 'Parkplatz Arlesheim' could mean any of several public and private car parks around Arlesheim. A mid-2026 website check-in is not a verified encounter and does not help identify the facility. Without a street, building or original pin, no useful parking coordinates or access times can responsibly be assigned.",
     "Vibe_Tags": "Car Park, Ambiguous Location, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -32760,7 +33108,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify which Arlesheim car park is meant, its road/access, and whether 2026 check-in refers to a physical visit. | generic_parking_identity | 2026_checkin_unverified",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify which Arlesheim car park is meant, its road/access, and whether 2026 check-in refers to a physical visit. | generic_parking_identity | 2026_checkin_unverified | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -32779,7 +33127,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0574_0578.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact geographic point not independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify which Arlesheim car park is meant, its road/access, and whether 2026 check-in refers to a physical visit.",
       "activity_confirmation": "Directory references historical or inaccessible; no independent recent physical cruising confirmed.",
@@ -32911,7 +33259,16 @@
         "approved_for_publication": false,
         "checked_berlin": "2026-11-07"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify which Arlesheim car park is meant, its road/access, and whether 2026 check-in refers to a physical visit.",
+        "original_name": "Parkplatz Arlesheim",
+        "city": "Arlesheim",
+        "country": "Switzerland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -32938,7 +33295,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The historical 'Mägenwilerwald' name likely indicates forest land around Mägenwil and Birrhard, where the municipality manages Birretholz woodland. The directory places it under Birr and gives no precisely identified trail or parking point. Ordinary forestry access and any closures must be established locally; there is no reliable recent gay cruising report.",
     "Vibe_Tags": "Forest, Municipality Confusion, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -32965,7 +33322,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify whether the source means Birretholz or another Mägenwil forest section, and the lawful trail entrance. | forest_extent_unresolved | forestry_operations",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify whether the source means Birretholz or another Mägenwil forest section, and the lawful trail entrance. | forest_extent_unresolved | forestry_operations | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -32984,7 +33341,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0574_0578.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact geographic point not independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify whether the source means Birretholz or another Mägenwil forest section, and the lawful trail entrance.",
       "activity_confirmation": "Directory references historical or inaccessible; no independent recent physical cruising confirmed.",
@@ -33108,7 +33465,16 @@
         "approved_for_publication": false,
         "checked_berlin": "2026-11-07"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify whether the source means Birretholz or another Mägenwil forest section, and the lawful trail entrance.",
+        "original_name": "Mägenwilerwald",
+        "city": "Birr",
+        "country": "Switzerland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -33741,7 +34107,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "Wanneholz appears as a woodland name in the older Inwil cruising directory. The place is broadly in the 6034 postcode region, but no independent precise forest boundary, public path or current encounter report could be confirmed. It should remain a location research lead rather than a pin to an arbitrary part of Inwil.",
     "Vibe_Tags": "Woodland, Unlocated, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -33768,7 +34134,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Confirm Wanneholz forest boundary and a specific lawful entrance or original map pin. | woodland_identity_unverified | access_unverified",
+    "Flag_Reason": "Research only: NOT approved for publication. | Confirm Wanneholz forest boundary and a specific lawful entrance or original map pin. | woodland_identity_unverified | access_unverified | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -33787,7 +34153,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/B/batch_0579_0583.json",
       "publication_approved": false,
-      "place_coordinates_scope": "Exact geographic point not independently established",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Confirm Wanneholz forest boundary and a specific lawful entrance or original map pin.",
       "activity_confirmation": "Directory references historical or inaccessible; no independent recent physical cruising confirmed.",
@@ -33906,7 +34272,16 @@
         "approved_for_publication": false,
         "checked_berlin": "2026-11-07"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Confirm Wanneholz forest boundary and a specific lawful entrance or original map pin.",
+        "original_name": "Wanneholz, 6034 Inwil",
+        "city": "Inwil",
+        "country": "Switzerland",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -35123,11 +35498,11 @@
     "Address": "Tribschen area, Lucerne; precise municipal WC not confirmed",
     "Postcode": "",
     "Nearest_Station": "Tribschen (city buses)",
-    "Latitude": "",
-    "Longitude": "",
-    "Google_Maps_URL": "",
-    "Apple_Maps_URL": "",
-    "Native_Map_Query": "",
+    "Latitude": "47.0408",
+    "Longitude": "8.3273",
+    "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=47.0408%2C8.3273",
+    "Apple_Maps_URL": "https://maps.apple.com/?ll=47.0408%2C8.3273&q=Tribschen%20%C3%B6ffentlicher%20Wc",
+    "Native_Map_Query": "47.0408,8.3273",
     "Website_URL": "",
     "Instagram_URL": "",
     "Facebook_URL": "",
@@ -35137,7 +35512,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "A Lucerne cruising directory names a public toilet in the Tribschen district. The city maintains public WC facilities in the wider area, but the archived entry gives no reliable distinct location and nearby school or sports-hall toilets are not necessarily freely accessible. The exact facility, operating hours and current gay cruising remain unverified.",
     "Vibe_Tags": "City District, Public Restroom, Ambiguous Facility",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -35183,7 +35558,7 @@
       "priority_tier": "D_no_recent_sparse",
       "source_batch": "research/cruising/part5/C/batch_0592_0596.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No reliable exact point identified",
+      "place_coordinates_scope": "Warteggstrasse Tribschen public toilets vicinity; city confirms Turnhalle Wartegg/Tribschen WC, GPS is nearby parking reference not exact door",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify which Tribschen public WC the source meant, its municipal map point and opening times; exclude school facilities unless explicitly public.",
       "activity_confirmation": "No positive independent current physical encounter established; older sources must be distinguished from recent dated evidence.",
@@ -35303,7 +35678,13 @@
       },
       "verification_new_web_sources": [
         "https://www.stadtluzern.ch/dienstleistungeninformation/85756"
-      ]
+      ],
+      "coordinate_resolution": {
+        "state": "landmark_identified",
+        "coordinate_scope": "Warteggstrasse Tribschen public toilets vicinity; city confirms Turnhalle Wartegg/Tribschen WC, GPS is nearby parking reference not exact door",
+        "source_url": "https://www.stadtluzern.ch/dienstleistungeninformation/85756",
+        "verification_note": "The GPS identifies a source-supported geographical reference, not an independently verified active cruising area or exact toilet entrance."
+      }
     }
   },
   {
@@ -36132,7 +36513,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "'Cam Area Nederland' is the entire title of an archived cruising-directory entry filed under Almere. It could refer to a camera area, car-park area or an unrelated commercial name, and there is no distinct real-world landmark or map pin in the saved research. Neither an address nor an authentic exact location can be supplied, and recent encounters are unverified.",
     "Vibe_Tags": "Unidentified Area, Generic Name, Unlocated",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -36159,7 +36540,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Recover the source page or map marker identifying what 'Cam Area Nederland' actually refers to in Almere. | Ambiguous name.",
+    "Flag_Reason": "Research only: NOT approved for publication. | Recover the source page or map marker identifying what 'Cam Area Nederland' actually refers to in Almere. | Ambiguous name. | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -36178,7 +36559,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/C/batch_0602_0606.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No reliable exact point identified",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Recover the source page or map marker identifying what 'Cam Area Nederland' actually refers to in Almere.",
       "activity_confirmation": "No positive independent current physical encounter established; older sources must be distinguished from recent dated evidence.",
@@ -36281,7 +36662,16 @@
         "disposition": "keep_research_not_live",
         "checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Recover the source page or map marker identifying what 'Cam Area Nederland' actually refers to in Almere.",
+        "original_name": "Cam Area Nederland",
+        "city": "Almere",
+        "country": "Netherlands",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -36875,24 +37265,24 @@
     "Country": "Netherlands",
     "Unspecified01": "",
     "Status": "Flag",
-    "Address": "Nieuwe Heide woodland near Rendac facility, Best/Son, North Brabant; exact part unconfirmed",
+    "Address": "Woods by Rendac Son B.V., Kanaaldijk Noord 20, Son en Breugel (original Best area)",
     "Postcode": "",
     "Nearest_Station": "",
-    "Latitude": "",
-    "Longitude": "",
-    "Google_Maps_URL": "",
-    "Apple_Maps_URL": "",
-    "Native_Map_Query": "",
+    "Latitude": "51.504531",
+    "Longitude": "5.445669",
+    "Google_Maps_URL": "https://www.google.com/maps/search/?api=1&query=51.504531%2C5.445669",
+    "Apple_Maps_URL": "https://maps.apple.com/?ll=51.504531%2C5.445669&q=Bos%20bij%20de%20Rendac",
+    "Native_Map_Query": "51.504531,5.445669",
     "Website_URL": "",
     "Instagram_URL": "",
     "Facebook_URL": "",
     "Other_URL": "",
-    "Source_URLs": "https://www.gays-cruising.com/en/netherlands, https://www.beleefbest.nl/nl/waar-te-gaan/natuur-in-best/de-nieuwe-heide, https://www.gemeentebest.nl/data/downloadables/1/0/9/5/1/beheerplan-bos-en-natuur-2016-2026.pdf",
+    "Source_URLs": "https://www.gays-cruising.com/en/netherlands, https://www.beleefbest.nl/nl/waar-te-gaan/natuur-in-best/de-nieuwe-heide, https://www.gemeentebest.nl/data/downloadables/1/0/9/5/1/beheerplan-bos-en-natuur-2016-2026.pdf, https://www.postcode-adresboek.nl/pand-kanaaldijk-noord-20-son-en-breugel",
     "Share_URL": "",
     "Image_URL": "placeholder_venue.jpg",
     "Description": "The original listing describes woods beside the Rendac animal-by-product processing site near Best. Public forestry documents identify Nieuwe Heide as a recreational woodland in the wider area, but the exact trail, company boundary or legal approach claimed by the directory is unknown. No recent independently dated meeting activity has been confirmed, and the company's private premises must not be confused with public woodland.",
     "Vibe_Tags": "Woodland, Industrial Landmark, Private Boundary, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -36938,7 +37328,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/C/batch_0607_0611.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No reliable exact point identified",
+      "place_coordinates_scope": "Rendac facility identified at Kanaaldijk Noord 20 in Son en Breugel; claimed adjoining woodland exact section not identified",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the exact Nieuwe Heide path or woodland parcel referenced near Rendac, using the original map pin and verifying private boundaries.",
       "activity_confirmation": "No positive independent current physical encounter established; older sources must be distinguished from recent dated evidence.",
@@ -37057,7 +37447,13 @@
         "retain_for_filtering": true,
         "research_checked_berlin": "2026-11-06"
       },
-      "verification_new_web_sources": []
+      "verification_new_web_sources": [],
+      "coordinate_resolution": {
+        "state": "landmark_identified",
+        "coordinate_scope": "Rendac facility identified at Kanaaldijk Noord 20 in Son en Breugel; claimed adjoining woodland exact section not identified",
+        "source_url": "https://www.postcode-adresboek.nl/pand-kanaaldijk-noord-20-son-en-breugel",
+        "verification_note": "The GPS identifies a source-supported geographical reference, not an independently verified active cruising area or exact toilet entrance."
+      }
     }
   },
   {
@@ -37289,7 +37685,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "Naarden's star-shaped fortified old town contains numerous named bastions and public sections of the historic ramparts. An older adult directory says only 'Bastion', without enough information to distinguish any one defensive work, entrance or garden. Its landform is a heritage site, and general access to the walls does not make every bastion an appropriate meeting place.",
     "Vibe_Tags": "Historic Fortress, Multiple Bastions, Unlocated",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -37316,7 +37712,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify which Naarden bastion the original source meant, or a particular public rampart footpath, before assigning coordinates.",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify which Naarden bastion the original source meant, or a particular public rampart footpath, before assigning coordinates. | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -37335,7 +37731,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/C/batch_0612_0616.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No reliable exact point identified",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify which Naarden bastion the original source meant, or a particular public rampart footpath, before assigning coordinates.",
       "activity_confirmation": "No positive independent current physical encounter established; older sources must be distinguished from recent dated evidence.",
@@ -37451,7 +37847,16 @@
       },
       "verification_new_web_sources": [
         "https://monumentenbezit.nl/en/monumenten/vestingwerken-van-naarden/"
-      ]
+      ],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify which Naarden bastion the original source meant, or a particular public rampart footpath, before assigning coordinates.",
+        "original_name": "Bastion",
+        "city": "Naarden",
+        "country": "Netherlands",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   },
   {
@@ -37478,7 +37883,7 @@
     "Image_URL": "placeholder_venue.jpg",
     "Description": "Kanaaldijk is a long road and waterway corridor around Nieuwegein, without a single unique meeting point. The archived gay directory names it and a 2026-updated broader encounter directory repeats the name, but neither supplies a verified exact public area or dated current firsthand cruising report. Waterfront road sections may include traffic, private land and construction restrictions, so an arbitrary pin would mislead visitors.",
     "Vibe_Tags": "Canal Road, Long Corridor, Mixed Directory Claim, Unverified",
-    "Last_Updated": "2026-11-07T18:37:45Z",
+    "Last_Updated": "2026-11-08T02:12:00Z",
     "Opening_Days": "",
     "Opening_Open_Time": "",
     "Opening_Close_Time": "",
@@ -37505,7 +37910,7 @@
     "Views": 0,
     "Emoji_Override": "",
     "Created_At": "2026-11-07T18:37:45Z",
-    "Flag_Reason": "Research only: NOT approved for publication. | Identify the specific Kanaaldijk section, nearby junction/parking area and legal public access from original directory pin.",
+    "Flag_Reason": "Research only: NOT approved for publication. | Identify the specific Kanaaldijk section, nearby junction/parking area and legal public access from original directory pin. | Unclear Name: cannot identify a unique map point from the original listing",
     "Category": "Cruising Area",
     "Feature_Darkroom": false,
     "Feature_Dresscode": false,
@@ -37524,7 +37929,7 @@
       "priority_tier": "C_no_recent_access_info",
       "source_batch": "research/cruising/part5/C/batch_0612_0616.json",
       "publication_approved": false,
-      "place_coordinates_scope": "No reliable exact point identified",
+      "place_coordinates_scope": "Unclear Name: no unique, independently grounded geographic point",
       "manual_clarification_required": true,
       "manual_clarification_question": "Identify the specific Kanaaldijk section, nearby junction/parking area and legal public access from original directory pin.",
       "activity_confirmation": "No positive independent current physical encounter established; older sources must be distinguished from recent dated evidence.",
@@ -37637,7 +38042,16 @@
       },
       "verification_new_web_sources": [
         "https://heterobos.nl/utrecht-ontmoetingsplekken-car-dates/"
-      ]
+      ],
+      "coordinate_resolution": {
+        "state": "unclear_name",
+        "reason": "Identify the specific Kanaaldijk section, nearby junction/parking area and legal public access from original directory pin.",
+        "original_name": "Kanaaldijk",
+        "city": "Nieuwegein",
+        "country": "Netherlands",
+        "needs": "Original source pin, specific building/street/landmark, or verifiable unique location name",
+        "note": "Not mapped to an arbitrary city centre, differently named business, or unrelated public facility."
+      }
     }
   }
 ]
