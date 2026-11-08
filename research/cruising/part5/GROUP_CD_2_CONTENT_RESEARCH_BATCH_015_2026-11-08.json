@@ -1,0 +1,340 @@
+{
+  "batch_number": 15,
+  "date_berlin": "2026-11-08",
+  "candidate_ids": [
+    "CRU-CD2-357",
+    "CRU-CD2-361",
+    "CRU-CD2-363",
+    "CRU-CD2-364",
+    "CRU-CD2-365"
+  ],
+  "initial_substantive_review_count": 5,
+  "source_exhaustive_completions": 0,
+  "original_pins_recovered": 0,
+  "records": [
+    {
+      "Venue_ID": "CRU-CD2-357",
+      "Name": "Eastcheap",
+      "City": "London",
+      "Country": "United Kingdom",
+      "sources": [
+        {
+          "url": "https://www.cruisinggays.com/london/areas/45298-eastcheap/",
+          "status": "cache_miss",
+          "content_read": false,
+          "findings": "Individual original detail page unavailable, no exact named building/entry, date or pin."
+        },
+        {
+          "url": "https://www.cruisinggays.com/london/c/areas/",
+          "status": "read",
+          "content_read": true,
+          "findings": "Original publisher category index EXACTLY categorises Eastcheap as TOILETS in City of London, with description 'little bog' away from main streets and crowd city workers, undated daytime/evening suggestion and warning. This rebuts old working implication that only whole street is identifiable."
+        },
+        {
+          "url": "https://mapcarta.com/36523590",
+          "status": "read",
+          "content_read": true,
+          "findings": "OSM general Eastcheap street marker (51.51065,-0.08375) in City, NOT original public convenience pin."
+        }
+      ],
+      "assessment": "Historical original publisher clearly identifies a discreet toilet on or near Eastcheap, but precise public WC/building, closure state and entrance not established.",
+      "geo_coordinates": {
+        "lat": 51.51065,
+        "lon": -0.08375,
+        "scope": "street centroid only"
+      },
+      "dated_reports": [],
+      "activity": "No independently dated 2026 first-person user report.",
+      "conflicts": [
+        "Source detailed title Eastcheap, category TOILETS not entire street; correcting old overbroad interpretation.",
+        "An undated 'daytime/evening' tag is not actual opening hours."
+      ],
+      "duplicates": "Potential overlap with other City toilets cannot assess without source pin.",
+      "access": "Public convenience may have been removed, privately controlled or time restricted; no assumptions.",
+      "pending": [
+        "Recover original 45298 WC exact premises and map/directions",
+        "Verify WC current existence and dates of reports"
+      ],
+      "research_complete": false,
+      "research_date_berlin": "2026-11-08",
+      "eight_sites": [
+        "Gays-Cruising.com",
+        "gay-szene.net",
+        "Planet Randy",
+        "The Gay Passport",
+        "Splashd",
+        "Popcorn.dating",
+        "Squirt.org",
+        "CruisingGays"
+      ],
+      "cross_source_warning": "Original scrape, alignment and saved candidate-specific archival checks reviewed. Only individually documented primary and alternate source contents read. No full-site login-only search on other portals; earlier no-match is not definitive.",
+      "source_review_complete": false,
+      "publication_approved": false
+    },
+    {
+      "Venue_ID": "CRU-CD2-361",
+      "Name": "Glenshane lay by",
+      "City": "Maghera",
+      "Country": "United Kingdom",
+      "sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/united_kingdom",
+          "status": "read",
+          "content_read": true,
+          "findings": "Original national directory index contains Glenshane lay-by candidate, but no source map or comment attached in accessible region index."
+        },
+        {
+          "url": "https://www.infrastructure-ni.gov.uk/publications/prohibition-traffic-lay-glenshane-road-route-a6-maghera-order-northern-ireland-2023-no-216",
+          "status": "read",
+          "content_read": true,
+          "findings": "OFFICIAL actual Statutory Rule 2023 no216 effective 2024-01-08 prohibits vehicles from entering WESTERN entrance of a SPECIFIC A6 lay-by opposite Ranaghan Road, NOT all lay-by access/overall permanent closure."
+        },
+        {
+          "url": "https://www.infrastructure-ni.gov.uk/articles/mid-ulster-council-20232024-network-development",
+          "status": "read",
+          "content_read": true,
+          "findings": "Road authority project record marks restriction complete, again western junction of lay-by opposite Ranaghan Road."
+        },
+        {
+          "url": "https://www.nidirect.gov.uk/articles/glenshane-forest",
+          "status": "read",
+          "content_read": true,
+          "findings": "NI government names Glenshane Forest and separate A6 roadside forest parking lay-by about 8mi from Castledawson, which could be original but NOT proven to match Ranaghan Road lay-by or gay source."
+        }
+      ],
+      "assessment": "Glenshane Road A6 route near Maghera has concrete road-side parking candidates including western Ranaghan junction lay-by. Primary old cruising candidate exact same facility not proven; detailed restriction only western entrance of particular lay-by.",
+      "geo_coordinates": null,
+      "dated_reports": [
+        {
+          "date": "2024-01-08",
+          "kind": "official western entry vehicle prohibition commencement, not gay activity"
+        }
+      ],
+      "activity": "No recent dated cruising evidence.",
+      "conflicts": [
+        "Official 2024 western entrance ban does NOT say entire lay-by permanently closed",
+        "Government Glenshane Forest layby may be separate roadside facility from Ranaghan Road opposite lot."
+      ],
+      "duplicates": "Uncertain until original map.",
+      "access": "A6 fast traffic; never suggest prohibited west entry, highway shoulder parking or crossings.",
+      "pending": [
+        "Recover original cruising pin/name variation, determine which A6 lay-by",
+        "Inspect restriction map if needed; web PDF must use screenshot; do not infer full closure",
+        "Find dated firsthand accounts"
+      ],
+      "research_complete": false,
+      "research_date_berlin": "2026-11-08",
+      "eight_sites": [
+        "Gays-Cruising.com",
+        "gay-szene.net",
+        "Planet Randy",
+        "The Gay Passport",
+        "Splashd",
+        "Popcorn.dating",
+        "Squirt.org",
+        "CruisingGays"
+      ],
+      "cross_source_warning": "Original scrape, alignment and saved candidate-specific archival checks reviewed. Only individually documented primary and alternate source contents read. No full-site login-only search on other portals; earlier no-match is not definitive.",
+      "source_review_complete": false,
+      "publication_approved": false
+    },
+    {
+      "Venue_ID": "CRU-CD2-363",
+      "Name": "Horsenden Hill Car Park",
+      "City": "Wembley",
+      "Country": "United Kingdom",
+      "sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/united_kingdom",
+          "status": "read",
+          "content_read": true,
+          "findings": "Gays national index original Horsenden Hill named car park candidate, detail URL not retrieved."
+        },
+        {
+          "url": "https://www.ealing.gov.uk/info/201134/nature_conservation/634/conservation_sites/3",
+          "status": "read",
+          "content_read": true,
+          "findings": "Ealing Council official 100ha conservation park, Horsenden East, Horsenden West and Paradise Fields. Specifically states car park OFF Horsenden Lane North via A40 Perivale. Positive specific parking approach from municipality, NOT primary gay listing pin."
+        },
+        {
+          "url": "https://mapcarta.com/W818883557",
+          "status": "read",
+          "content_read": true,
+          "findings": "OSM map is Horsenden Hill Open Space general natural park, working GPS 51.54614,-0.33413 not certain parking lot."
+        },
+        {
+          "url": "https://swingersinleeds.com/dogging-locations-middlesex.htm",
+          "status": "read",
+          "content_read": true,
+          "findings": "Separate adult directory actually names 'Horsendon hill car Park', provides rough walking-from-car-park-to-woods/fields directions and states 'Gated at Night'; UNDated, contains mixed-orientation outdoor cruising and not current report. Sufficient to strengthen near Horsenden Lane carpark location, but gates/hours current state unverified."
+        }
+      ],
+      "assessment": "Municipal Horsenden Hill visitor lot off Horsenden Lane North is strong car park match, reinforced by undated second adult directory specifically same car park, but original Gays map pin, actual gate and which edge used still unverified.",
+      "geo_coordinates": {
+        "lat": 51.54614,
+        "lon": -0.33413,
+        "scope": "Working OSM Horsenden Hill Open Space centroid, not confirmed car park entrance"
+      },
+      "dated_reports": [],
+      "activity": "Undated alternate directory claims daytime mixed encounters only; no dated gay male report after 2025-11.",
+      "conflicts": [
+        "Council general visitor lot vs second adult site's undefined parking gate (likely same but not GPS proven)",
+        "Undated alleged night gate closure not contemporaneous confirmation."
+      ],
+      "duplicates": "No exact named active group duplicate.",
+      "access": "Public woodland and grazing conservation. Nighttime gates maybe closed; do not encourage entry after closure.",
+      "pending": [
+        "Find Gays original detail link, exact geocode against Horsenden Lane North public lot",
+        "Confirm current car park gated hours with council",
+        "Check firsthand dated gay reports"
+      ],
+      "research_complete": false,
+      "research_date_berlin": "2026-11-08",
+      "eight_sites": [
+        "Gays-Cruising.com",
+        "gay-szene.net",
+        "Planet Randy",
+        "The Gay Passport",
+        "Splashd",
+        "Popcorn.dating",
+        "Squirt.org",
+        "CruisingGays"
+      ],
+      "cross_source_warning": "Original scrape, alignment and saved candidate-specific archival checks reviewed. Only individually documented primary and alternate source contents read. No full-site login-only search on other portals; earlier no-match is not definitive.",
+      "source_review_complete": false,
+      "publication_approved": false
+    },
+    {
+      "Venue_ID": "CRU-CD2-364",
+      "Name": "Thurstrand gegenüber Alten, Parkplatztafeln folgen",
+      "City": "Alten",
+      "Country": "Switzerland",
+      "sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/switzerland",
+          "status": "read",
+          "content_read": true,
+          "findings": "Original national Switzerland index archived German title means 'Thur shore opposite Alten, follow parking signs'; no precise source directions link accessible."
+        },
+        {
+          "url": "https://naturzentrum-thurauen.ch/faq/",
+          "status": "read",
+          "content_read": true,
+          "findings": "CRITICAL official reserve guide independently documents designated car park literally named **Parkplatz Alten** IN Thurauen reserve, and different Ellikerbrücke, Rheinbrücke and Forspitz car parks. Seasonal April-Oct compost toilets at Alten parking, and a free walking trail starts Ellikerbrücke; entire area protected since 2011. Establishes named Alten carpark, much more specific than general Auenlandschaft centroid. Does NOT confirm gay original refers to its parking lot or which Thur shore."
+        },
+        {
+          "url": "https://www.outdooractive.com/de/poi/zuercher-weinland/auenlandschaft-an-der-thurmuendung/24360507/",
+          "status": "read",
+          "content_read": true,
+          "findings": "Map point 47.593893,8.604761 is 400ha THURAUEN RESERVE GENERAL centre/geo point, NOT original riverbank site; routes designated bridge/nature path."
+        }
+      ],
+      "assessment": "Original German instruction references signed parking opposite Alten on Thur riverbank. The OFFICIAL protected area confirms **Parkplatz Alten** exists, a highly relevant named access facility, and distinguishes other bridge lots; geographical identification substantially narrowed. Exact historic meeting shoreline and original map remain unproven.",
+      "geo_coordinates": {
+        "lat": 47.593893,
+        "lon": 8.604761,
+        "scope": "Thurauen reserve generic POI, NOT Alten carpark or historic shoreline"
+      },
+      "dated_reports": [
+        {
+          "date": "2011",
+          "kind": "nature reserve protection, not gay activity"
+        },
+        {
+          "date": "2025",
+          "kind": "reserve viewpoint tower opens, not gay activity"
+        }
+      ],
+      "activity": "No date-specific cruising evidence.",
+      "conflicts": [
+        "Existing general Thurauen map point unrelated to precise Parkplatz Alten",
+        "Source says follow parking signs but does not tell whether to stop at official Alten or nearby roadside; site is protected."
+      ],
+      "duplicates": "Other Alten/Thur sites? No mapped same-name candidate.",
+      "access": "Rangers enforce reserve rules. Use designated paths/parking and no access to protected natural habitats off path. Official seasonal toilets not proof of original meeting place.",
+      "pending": [
+        "Recover source original exact pin, then compare to official Parkplatz Alten and shore opposite village",
+        "Review detailed official reserve access map if needed",
+        "Find dated gay-specific reports"
+      ],
+      "research_complete": false,
+      "research_date_berlin": "2026-11-08",
+      "eight_sites": [
+        "Gays-Cruising.com",
+        "gay-szene.net",
+        "Planet Randy",
+        "The Gay Passport",
+        "Splashd",
+        "Popcorn.dating",
+        "Squirt.org",
+        "CruisingGays"
+      ],
+      "cross_source_warning": "Original scrape, alignment and saved candidate-specific archival checks reviewed. Only individually documented primary and alternate source contents read. No full-site login-only search on other portals; earlier no-match is not definitive.",
+      "source_review_complete": false,
+      "publication_approved": false
+    },
+    {
+      "Venue_ID": "CRU-CD2-365",
+      "Name": "Parkplatz Arlesheim",
+      "City": "Arlesheim",
+      "Country": "Switzerland",
+      "sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/switzerland",
+          "status": "read",
+          "content_read": true,
+          "findings": "Original Swiss index archived generic Parkplatz Arlesheim title. Candidate-specific map/id/actual comments unavailable."
+        },
+        {
+          "url": "https://www.gays-cruising.com/de/schweiz",
+          "status": "locale_unavailable",
+          "content_read": false,
+          "findings": "German national index alternate attempted but no candidate-specific detail."
+        },
+        {
+          "url": "https://www.gays-cruising.com/de/arlesheim/basel_landschaft/schweiz",
+          "status": "locale_unavailable",
+          "content_read": false,
+          "findings": "Alternate city directory not readable; cannot recover original precise carpark."
+        },
+        {
+          "url": "https://www.google.com/maps/search/?api=1&query=Parkplatz%20Arlesheim",
+          "status": "generic_map_search_not_original",
+          "content_read": false,
+          "findings": "Generic search gives numerous Arlesheim parking areas, NOT original listing pin."
+        }
+      ],
+      "assessment": "Arlesheim municipality is identifiable, but specific car park remains unproven. An alleged source check-in mid-2026 archived without firsthand report does not establish activity or the location.",
+      "geo_coordinates": null,
+      "dated_reports": [],
+      "activity": "No first-person dated cruising encounter (online directory check-in not verified attendance).",
+      "conflicts": [
+        "Any municipal parking site may be chosen arbitrarily if original pin not recovered, must avoid."
+      ],
+      "duplicates": "Cannot determine without actual parking location.",
+      "access": "Public/private parking rules, hours unknown.",
+      "pending": [
+        "Find actual original source detailed link/Google directions from old index or language pages",
+        "Confirm parking ownership/address and gay visitor reporting"
+      ],
+      "research_complete": false,
+      "research_date_berlin": "2026-11-08",
+      "eight_sites": [
+        "Gays-Cruising.com",
+        "gay-szene.net",
+        "Planet Randy",
+        "The Gay Passport",
+        "Splashd",
+        "Popcorn.dating",
+        "Squirt.org",
+        "CruisingGays"
+      ],
+      "cross_source_warning": "Original scrape, alignment and saved candidate-specific archival checks reviewed. Only individually documented primary and alternate source contents read. No full-site login-only search on other portals; earlier no-match is not definitive.",
+      "source_review_complete": false,
+      "publication_approved": false
+    }
+  ],
+  "next_unstarted": "CRU-CD2-367",
+  "no_additional_exclusions": true,
+  "production_unchanged": true
+}
