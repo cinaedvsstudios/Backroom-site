@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "title": "Owner exclusion decision for eight unresolved A+B cruising locations",
+    "date_berlin": "2026-11-08",
+    "source_research": "research/cruising/part5/GROUP_A_B_18_LOCATION_VERIFICATION_RESEARCH_2026-11-08.json",
+    "scope": "Research decisions ONLY; no production publication, update, or deletion authorized",
+    "decision": "Exclude the eight UNRESOLVED location candidates from future import/curation sets unless new original evidence establishes a usable location.",
+    "original_research_preserved": true,
+    "production_listings_modified": false,
+    "published_venue_pages_modified": false,
+    "note": "This file is not an instruction to change any currently published listings. The owner explicitly requires separate authorization for all live site changes."
+  },
+  "excluded_from_future_import": [
+    {
+      "source_index": 189,
+      "name": "Airport toilets",
+      "city": "Istanbul",
+      "reason": "Neither airport nor terminal/restroom could be established."
+    },
+    {
+      "source_index": 281,
+      "name": "Spatiu Servicii A1 inainte de Sebes",
+      "city": "Alba Iulia / Sebeș",
+      "reason": "No unique motorway service area or carriageway established."
+    },
+    {
+      "source_index": 468,
+      "name": "MOP Wiśniowa Góa",
+      "city": "Łódź",
+      "reason": "Both motorway sides exist; original source does not identify which."
+    },
+    {
+      "source_index": 469,
+      "name": "AS 24",
+      "city": "Poznań",
+      "reason": "Chain of fuel stations; original source does not identify branch."
+    },
+    {
+      "source_index": 437,
+      "name": "Alpo Cavalcavia",
+      "city": "Verona",
+      "reason": "No unique overpass identified from source."
+    },
+    {
+      "source_index": 493,
+      "name": "Tinglevvejen Rastplads",
+      "city": "Bolderslev",
+      "reason": "No definite roadside lay-by identified from source."
+    },
+    {
+      "source_index": 593,
+      "name": "Am Fluss",
+      "city": "Obfelden",
+      "reason": "Original does not name a river section or identifiable facility."
+    },
+    {
+      "source_index": 609,
+      "name": "De Bankjes",
+      "city": "Cromvoirt",
+      "reason": "Generic benches with no park, road, or distinct map reference."
+    }
+  ],
+  "unconfirmed_keep_in_research_not_import": [
+    {
+      "source_index": 243,
+      "name": "Picnic Area near Airport",
+      "city": "Paphos",
+      "possible_identity": "Timi picnic site",
+      "reason": "Plausible but original source does not prove it's the same spot."
+    },
+    {
+      "source_index": 428,
+      "name": "Bagni Grill Bazzera",
+      "city": "Venice",
+      "possible_identity": "Bazzera Nord/Punto Grill",
+      "reason": "Plausible but the original source does not establish which service area."
+    }
+  ],
+  "all_18_research_status": "4 original map points confirmed; 4 general geographic references verified; 2 plausible but unproven; 8 excluded from future import.",
+  "owner_site_control": "Do not modify listings.json, site pages, or other production files unless user gives explicit separate instruction."
+}
