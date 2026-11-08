@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "title": "Backroom A+B — missing-coordinate follow-up (six source records)",
+    "date_berlin": "2026-11-08",
+    "missing_original": 6,
+    "coordinate_proposals": 5,
+    "unresolved_geographic_identity": 1,
+    "source_maps_recovered": 2,
+    "third_party_cartographic_landmarks": 3,
+    "production_files_modified": false,
+    "google_maps_access": "Google Maps search/place UI was attempted via web research browser but returned inaccessible; direct Google Maps URLs included for review only. Five map references cross-checked against published cartographic records or source map links. Not represented as Google's own confirmed GPS data.",
+    "owner_rule": "General park/road/station map pin is acceptable; never claim a broad landmark pin is exact cruising place."
+  },
+  "records": [
+    {
+      "queue_index": 293,
+      "name": "Pădure Dumbravița–Timișoara",
+      "proposed_latitude": 45.790988,
+      "proposed_longitude": 21.254768,
+      "precision": "GENERAL_NAMED_FOREST_ONLY",
+      "confidence": "medium",
+      "status": "MAP_REFERENCE_FOUND",
+      "identity": "Pădurea Verde forest on the northeast side of Timișoara near Dumbrăvița; source cruising track/entry unknown.",
+      "coordinate_origin": "Outdooractive editorial mapped Pădurea Verde forest, corroborated by Timișoara 2026 park/forest project and Dumbrăvița municipality plan.",
+      "evidence_urls": [
+        "https://www.outdooractive.com/en/poi/banat/padurea-verde/802027461/",
+        "https://hcl.usr.ro/timisoara/2026/h510",
+        "https://www.visit-timis.ro/trasee-padurea-verde"
+      ],
+      "google_maps_query_link": "https://www.google.com/maps/search/?api=1&query=Padurea+Verde+Timisoara+Dumbravita",
+      "google_maps_page_verified": false,
+      "caveat": "A published forest centre, not a verified location within the forest where men meet. Do not confuse with industrial archaeological Padurea Verde-UMT site."
+    },
+    {
+      "queue_index": 383,
+      "name": "Ponte fiume Reno a Borgo Panigale",
+      "proposed_latitude": 44.5111045837,
+      "proposed_longitude": 11.2912950516,
+      "precision": "ORIGINAL_CRUISING_DIRECTORY_PIN",
+      "confidence": "high_for_source_identity",
+      "status": "ORIGINAL_SOURCE_PIN_RECOVERED",
+      "identity": "Reno River bridge Pontelungo, at Via Emilia Ponente and Via del Triumvirato in Bologna.",
+      "coordinate_origin": "Original Gays-Cruising Italian site embedded directions map, preserved in 18-location verification research.",
+      "evidence_urls": [
+        "https://www.gays-cruising.com/it/cruising/ponte_fiume_reno_a_borgo_panigale_bologna_italia_6009",
+        "https://www.comune.bologna.it/novita/comunicati-stampa/replica-del-comune-di-bologna-sul-rilievo-anac-relativo-ai-lavori-sul-pontelungo",
+        "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/GROUP_A_B_18_LOCATION_VERIFICATION_RESEARCH_2026-11-08.json"
+      ],
+      "google_maps_query_link": "https://www.google.com/maps/search/?api=1&query=44.5111045837%2C11.2912950516",
+      "google_maps_page_verified": false,
+      "caveat": "Source point at/near bridge, not proven legal access path to park under bridge."
+    },
+    {
+      "queue_index": 436,
+      "name": "Oasi – Lungadige (Est)",
+      "proposed_latitude": null,
+      "proposed_longitude": null,
+      "precision": "BROAD_RIVERBANK_LABEL_WITHOUT_IDENTIFIABLE_SEGMENT",
+      "confidence": "unresolved_identity",
+      "status": "HOLD_FOR_SOURCE_IDENTITY_NOT_GPS_TECHNICAL_GAP",
+      "identity": "Eastern Adige bank in Verona; directory calls it a distinct eastern 'Oasi' from western riverside site, but no reliable specific stretch or entry was found in accessible source text.",
+      "coordinate_origin": "No original precise source pin recovered; named riverside region exists but east-bank designation alone spans multiple plausible sections.",
+      "evidence_urls": [
+        "https://www.gays-cruising.com/en/cruising/oasi_lungadige_est_verona_italia_114746",
+        "https://www.gays-cruising.com/it/cruising/palazzina_verona_italia_5902",
+        "https://turismo.comune.verona.it/nqcontent.cfm?a_id=35633",
+        "https://www.comune.verona.it/Vivere-il-comune/Luoghi/Lazzaretto"
+      ],
+      "google_maps_query_link": "https://www.google.com/maps/search/?api=1&query=Oasi+Lungadige+Est+Verona",
+      "google_maps_page_verified": false,
+      "caveat": "Google Maps direct search page inaccessible through research browser; must not substitute Lazzaretto or entire Parco dell'Adige Sud map point because those are separate named areas. This is an unresolved geographic identity, not a failure to retrieve coordinate from a known place."
+    },
+    {
+      "queue_index": 439,
+      "name": "Zona Industriale – Ca' di Mazze",
+      "proposed_latitude": 45.40749,
+      "proposed_longitude": 11.02056,
+      "precision": "GENERAL_NAMED_ROAD_CENTRE",
+      "confidence": "high_for_road_medium_for_cruising_section",
+      "status": "MAP_REFERENCE_FOUND",
+      "identity": "Via Ca' di Mazze, Verona 37134, approximately 1.6-km street through Palazzina industrial area; no exact lay-by/meeting section identified.",
+      "coordinate_origin": "Italian mapped street directory reports reference point 45.40749,11.02056; independently confirmed by another mapping site.",
+      "evidence_urls": [
+        "https://www.italiamappe.it/stradario/verona/via-ca%27-di-mazze%27/",
+        "https://cdn-3.distanzechilometriche.net/mappa/verona/via-ca-di-mazze/",
+        "https://www.gays-cruising.com/it/cruising/palazzina_verona_italia_5902"
+      ],
+      "google_maps_query_link": "https://www.google.com/maps/search/?api=1&query=Via+Ca%27+di+Mazze+Verona",
+      "google_maps_page_verified": false,
+      "caveat": "Street midpoint rather than original cruising directory pin. Possible overlap with Palazzina listing remains unconfirmed."
+    },
+    {
+      "queue_index": 472,
+      "name": "Świecko Stacja Paliw Shell, boczna droga",
+      "proposed_latitude": 52.313746,
+      "proposed_longitude": 14.640666,
+      "precision": "SHELL_STATION_LANDMARK_ONLY",
+      "confidence": "high_for_station_low_for_side_road",
+      "status": "MAP_REFERENCE_FOUND",
+      "identity": "Shell service station at Świecko 36, on DK29 near Słubice; source claims an adjacent side road, not the pumps/forecourt.",
+      "coordinate_origin": "myLPG station confirmed 6 November 2026 and independent property/Polish mapping references Shell Świecko 36 near same coordinates.",
+      "evidence_urls": [
+        "https://www.mylpg.eu/pl/stacje/polska/stacja/Shell-544AB74A-EAD0-66ED-4ABB-C5BD55E1765E",
+        "https://sprawdzadres.pl/lubuskie/slubice/swiecko/36",
+        "https://mapa.targeo.pl/shell-stacja-paliw-swiecko-36-69-100-swiecko~4672652/shell-stacja-paliw/adres",
+        "https://www.gays-cruising.com/en/cruising/wiecko_stacja_paliw_shell_boczna_droga_slubice_polska_90388"
+      ],
+      "google_maps_query_link": "https://www.google.com/maps/search/?api=1&query=Shell+Swiecko+36+Poland",
+      "google_maps_page_verified": false,
+      "caveat": "The exact 'boczna droga' side road is not mapped from original; do not treat petrol station as a public cruising destination."
+    },
+    {
+      "queue_index": 960,
+      "name": "Parking río Llobregat El Prat",
+      "proposed_latitude": 41.3368644714,
+      "proposed_longitude": 2.096414566,
+      "precision": "ORIGINAL_CRUISING_DIRECTORY_PIN",
+      "confidence": "high_for_original_source",
+      "status": "ORIGINAL_SOURCE_PIN_RECOVERED",
+      "identity": "Source directs from Barcelona via C-31 exit 194B to roundabout, access road toward river and small parking on right.",
+      "coordinate_origin": "Exact original directory directions map preserved in 18-location verification research.",
+      "evidence_urls": [
+        "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/GROUP_A_B_18_LOCATION_VERIFICATION_RESEARCH_2026-11-08.json",
+        "https://www.gays-cruising.com/en/barcelona/spain"
+      ],
+      "google_maps_query_link": "https://www.google.com/maps/search/?api=1&query=41.3368644714%2C2.096414566",
+      "google_maps_page_verified": false,
+      "caveat": "Original map destination, not current parking permission or independent confirmation of cruising."
+    }
+  ]
+}
