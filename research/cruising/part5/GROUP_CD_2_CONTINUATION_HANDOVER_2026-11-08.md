@@ -5,10 +5,10 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - Repository: https://github.com/cinaedvsstudios/Backroom-site
 - Working directory: `research/cruising/part5/`.
 - Group **2 of 3**, original positions **196–389 inclusive**, 194 source candidate records. **8 independently documented excluded from working set**, **186 active candidate records**. **99** previously historically mapped, **86** initially source-research-incomplete, **1** Poduene Railway Station included.
-- Original incomplete cohort of 86: **55 have received preliminary substantive content research across eleven batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 31 still await initial substantive review.
-- Most recently assessed **CRU-CD2-315 — Kongsveien uUsikt, Ekeberg**.
-- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-316 — Sucking area, Haugesund, Norway.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
-- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `a1fb0b9ec5d0655b4f41b468df70ca024f88215d`. Latest individual working-file enrichment: `25862e8af4cc10b173d659acb48424cb263b336b`. Batch 011 immutable commit `7e812edb353faf747fedd6475aff4ef4de1c0b6a`.
+- Original incomplete cohort of 86: **60 have received preliminary substantive content research across twelve batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 26 still await initial substantive review.
+- Most recently assessed **CRU-CD2-322 — Parque Industrial do Seixal, Coina**.
+- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-326 — Mata Museo Abel Salazar, São Mamede da Infesta, Portugal.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
+- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `e786a1104b28591178d22b7e72b572d459d2ed46`. Latest individual working-file enrichment: `e55981eee8650fa1380b40ba0b2e1f05d853bee6`. Batch 012 immutable commit `16421d429721ccacc18a1ad2e0b49c8e50aa51bc`.
 
 ## Required reading BEFORE more research
 1. `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json` — **authoritative next_unstarted** and batch list; if moved by another worker, follow latest tracker.
@@ -33,6 +33,8 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - 010: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_010_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_010_2026-11-08.json), IDs CRU-CD2-297, CRU-CD2-299, CRU-CD2-301, CRU-CD2-302, CRU-CD2-303
 
 - 011: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_011_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_011_2026-11-08.json), IDs CRU-CD2-305, CRU-CD2-306, CRU-CD2-308, CRU-CD2-309, CRU-CD2-315
+
+- 012: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_012_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_012_2026-11-08.json), IDs CRU-CD2-316, CRU-CD2-317, CRU-CD2-318, CRU-CD2-319, CRU-CD2-322
 
 ## Research method — MUST FOLLOW
 - Work in exact order from tracker, five records per batch. **Open and READ content of every stored source URL**, including original detailed listings, supplemental pages, comments, internal source-map directions, previous evidence, and related pages. Recording merely 'reachable/checked' is NOT source research.
@@ -70,8 +72,15 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - **CRU-CD2-315:** **Official Oslo municipality calls parking area "Kongsveien Panorama" or "Utsikten"**, close name match to "uUsikt". Independent place directory gives 59.89523,10.76120 as named parking GPS; old working marker 59.899434,10.761738 is DIFFERENT general viewpoint near restaurant. Do NOT replace original GPS until original 42612 page recovered. 2026 road access modified, city projected reopening 31 Oct, upper controlled until end Nov. No dated recent gay activity.
 - **Next batch 012 starts exactly CRU-CD2-316, then CRU-CD2-317 and the next 3 in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`**. 55 preliminary reviewed, 0 exhaustively finished, 31 not yet initially reviewed.
 
+## Batch 012 findings — source-exhaustive remains ZERO
+- **316:** Haugesund 'Sucking area' has no geographic feature accessible, original detail ID467 blocked; no random city pin.
+- **317/318:** Storebaug E6 near Moss has **separate west hotel and northbound St1** plus east/west road service sites. Source itself lists Storebaug 2.0km from Nesparken vs Storehaug Nord 2.3km, separate IDs and categories (rest area vs natural area). Cannot auto-merge.
+- **319:** Official Moss Roklubb at Rosnes/Jeløya with club facilities and Sara Petersons vei 150, but original natural-area spot may be nearby OUTDOOR path. No club interiors assumed accessible.
+- **322:** Source named Seixal industrial park but original URL says Parque Industrial de Coina, whose independently mapped postcode 2830-581 is in **Barreiro** municipality, not Seixal. Undated Portuguese gay-directory car-meet text not recent firsthand proof. Keep geographical conflict open.
+- **Next batch 013 starts CRU-CD2-326** and then the next four records in the URL audit (likely 330,336,339,342). 60 preliminary reviewed, 0 exhaustive, 26 not initially investigated.
+
 ## Recoverability / GitHub access
 - GitHub tool `mcp__GitHub__fetch_file` sometimes responds with **empty content** for 2MB JSON but includes blob SHA. Fetch same SHA using `mcp__GitHub__fetch_blob` to get entire JSON, parse and update; do not treat empty string as missing file.
-- Last verified tracker checkpoint commit: `a1fb0b9ec5d0655b4f41b468df70ca024f88215d`.
-- Permanent 186 working file update commit: `25862e8af4cc10b173d659acb48424cb263b336b`.
+- Last verified tracker checkpoint commit: `e786a1104b28591178d22b7e72b572d459d2ed46`.
+- Permanent 186 working file update commit: `e55981eee8650fa1380b40ba0b2e1f05d853bee6`.
 - User requested review chat 'Progress update review GROUP 2 8am'; the correction and counts match tracker. This handover is authoritative on restart, not chat progress alone.
