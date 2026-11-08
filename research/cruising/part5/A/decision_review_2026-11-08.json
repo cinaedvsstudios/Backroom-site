@@ -9,10 +9,12 @@
     "narrow_location_review_count": 46,
     "important_limit": "Narrow review list is a rule-based, manually curated triage from research flags, not a proof that other entries have perfect coordinates. Individual source site verification remains incomplete.",
     "updated_berlin_date": "2026-11-08",
-    "revision": "User clarified: retain separate cruising spots in same park/building, do not auto-merge. Exclusive five-bucket location/access triage added; recency/source/alias flags are overlays, not exclusive buckets.",
+    "revision": "Web recheck recovered 5 Gays-Cruising original map pins and one matching Zolwereck shopping centre from 46 location cases. 6 moved into identifiable candidates. Six-coordinate list also includes disputed Lara Park point, which stays in conflicts. Two confirmed closures excluded from active import set; no live changes.",
     "latest_duplicate_source_audit": "research/cruising/part5/A/duplicate_and_source_audit_2026-11-08.json",
     "review_note": "27 name/alias/possible duplicate comparison cases analyzed; source URLs and descriptions compared. Existing 21 duplicate flags were NOT 21 verified duplicates. No speculative merge is authorized. User need not adjudicate routine alias matching.",
-    "source_technical_note": "21 source/link-warning flags now explained as 4 HTTP451, 10 cache misses, 3 source page unavailable, 4 archive URL/name mismatches; earlier 20 heuristic not a count of broken links."
+    "source_technical_note": "21 source/link-warning flags now explained as 4 HTTP451, 10 cache misses, 3 source page unavailable, 4 archive URL/name mismatches; earlier 20 heuristic not a count of broken links.",
+    "current_location_recheck": "research/cruising/part5/A/location_url_recheck_2026-11-08.json",
+    "current_active_candidate_set": "research/cruising/part5/A/active_candidate_index_2026-11-08.json"
   },
   "decision_policy": {
     "recency": "Do not require a confirmed physical sexual encounter. Keep separate recent discussions, dated questions, self check-ins, firsthand accounts, older listings and negative reports; no negative conclusion from absent data.",
@@ -29,7 +31,9 @@
       "name": "Paseo al lado del Río Valira",
       "city": "Andorra la Vella",
       "country": "Andorra",
-      "reason": "Broad riverside promenade; specific stretch not identified"
+      "reason": "Broad riverside promenade; specific stretch not identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 8,
@@ -37,7 +41,9 @@
       "name": "Pas de la Casa",
       "city": "Encamp",
       "country": "Andorra",
-      "reason": "Entire town rather than a spot"
+      "reason": "Entire town rather than a spot",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 11,
@@ -45,7 +51,9 @@
       "name": "Jardín",
       "city": "Ordino",
       "country": "Andorra",
-      "reason": "Generic garden name"
+      "reason": "Generic garden name",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 12,
@@ -53,7 +61,9 @@
       "name": "Segudet",
       "city": "Ordino",
       "country": "Andorra",
-      "reason": "Broad Segudet valley/area"
+      "reason": "Broad Segudet valley/area",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 17,
@@ -61,7 +71,9 @@
       "name": "Linkeroever",
       "city": "Antwerp",
       "country": "Belgium",
-      "reason": "District rather than a specific spot"
+      "reason": "District rather than a specific spot",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 28,
@@ -69,7 +81,9 @@
       "name": "At the parking next to the water at the Hoeverdijk",
       "city": "Lommel",
       "country": "Belgium",
-      "reason": "Specific waterside car park not identified"
+      "reason": "Specific waterside car park not identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 46,
@@ -77,7 +91,9 @@
       "name": "Parking and forest",
       "city": "Pärnu",
       "country": "Estonia",
-      "reason": "Generic parking and forest"
+      "reason": "Generic parking and forest",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 47,
@@ -85,7 +101,9 @@
       "name": "Parklas/Metsas",
       "city": "Tallinn",
       "country": "Estonia",
-      "reason": "Generic parking/forest term"
+      "reason": "Generic parking/forest term",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 48,
@@ -93,7 +111,9 @@
       "name": "Parking",
       "city": "Tallinn",
       "country": "Estonia",
-      "reason": "No specific car park identified"
+      "reason": "No specific car park identified",
+      "triage_status": "source_location_recovered_or_facility_identified",
+      "updated_note": "Original Parking Tallinn page had a specific Google driving destination; place type carpark still not independently validated."
     },
     {
       "index": 49,
@@ -101,7 +121,9 @@
       "name": "Valdeku",
       "city": "Tallinn",
       "country": "Estonia",
-      "reason": "Whole street without a particular spot"
+      "reason": "Whole street without a particular spot",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 50,
@@ -109,7 +131,9 @@
       "name": "Outdoor cruising",
       "city": "Tallinn",
       "country": "Estonia",
-      "reason": "Only generic outdoor cruising category"
+      "reason": "Only generic outdoor cruising category",
+      "triage_status": "source_location_recovered_or_facility_identified",
+      "updated_note": "Original generic outdoor cruising page has a map pin; physical suitability not independently validated."
     },
     {
       "index": 53,
@@ -117,7 +141,9 @@
       "name": "Old monument near the sea-Tallinn",
       "city": "Tallinn",
       "country": "Estonia",
-      "reason": "Which seaside monument is not established"
+      "reason": "Which seaside monument is not established",
+      "triage_status": "source_location_recovered_or_facility_identified",
+      "updated_note": "Original monument listing has a map pin close to Tallinn waterfront; monument's official name not independently confirmed."
     },
     {
       "index": 57,
@@ -125,7 +151,9 @@
       "name": "Punane tn - Car Hookup Spot",
       "city": "Tallinn",
       "country": "Estonia",
-      "reason": "Exact car park on Punane street not identified"
+      "reason": "Exact car park on Punane street not identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 58,
@@ -133,7 +161,9 @@
       "name": "Põlva",
       "city": "Tartu",
       "country": "Estonia",
-      "reason": "Põlva town listed under Tartu and no exact spot"
+      "reason": "Põlva town listed under Tartu and no exact spot",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 59,
@@ -141,7 +171,9 @@
       "name": "Park near Holy Mother Virgin Nativity Cathedral",
       "city": "Batumi",
       "country": "Georgia",
-      "reason": "Park by cathedral not identified"
+      "reason": "Park by cathedral not identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 74,
@@ -149,7 +181,9 @@
       "name": "WC",
       "city": "Keflavík",
       "country": "Iceland",
-      "reason": "Generic toilet; town versus airport unresolved"
+      "reason": "Generic toilet; town versus airport unresolved",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 87,
@@ -157,7 +191,9 @@
       "name": "Bat Yam Grove",
       "city": "Rishon LeZion",
       "country": "Israel",
-      "reason": "Groves not uniquely identified"
+      "reason": "Groves not uniquely identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 99,
@@ -165,7 +201,9 @@
       "name": "Polygonas",
       "city": "Klaipėda",
       "country": "Lithuania",
-      "reason": "Polygonas location not identified"
+      "reason": "Polygonas location not identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 103,
@@ -173,7 +211,9 @@
       "name": "Parking Cruising Area",
       "city": "Pasvalys",
       "country": "Lithuania",
-      "reason": "Generic parking with no precise location"
+      "reason": "Generic parking with no precise location",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 105,
@@ -181,7 +221,9 @@
       "name": "Cinema toilet",
       "city": "Vilnius",
       "country": "Lithuania",
-      "reason": "Cinema not identified"
+      "reason": "Cinema not identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 109,
@@ -189,7 +231,9 @@
       "name": "Public toilet",
       "city": "Vilnius",
       "country": "Lithuania",
-      "reason": "Generic public toilet, not identifiable"
+      "reason": "Generic public toilet, not identifiable",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 111,
@@ -197,7 +241,9 @@
       "name": "Toilette a Coté du Saturn",
       "city": "Belvaux",
       "country": "Luxembourg",
-      "reason": "Saturn business/facility not identified"
+      "reason": "Saturn business/facility not identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 112,
@@ -205,7 +251,9 @@
       "name": "Dippach-bertrange",
       "city": "Dippach",
       "country": "Luxembourg",
-      "reason": "Dippach–Bertrange denotes a broad corridor"
+      "reason": "Dippach–Bertrange denotes a broad corridor",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 115,
@@ -213,7 +261,9 @@
       "name": "Foret",
       "city": "Grosbous",
       "country": "Luxembourg",
-      "reason": "Unspecified forest"
+      "reason": "Unspecified forest",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 117,
@@ -221,7 +271,9 @@
       "name": "Toilet on 1st floor",
       "city": "Kirchberg",
       "country": "Luxembourg",
-      "reason": "First-floor toilet but shopping building unidentified"
+      "reason": "First-floor toilet but shopping building unidentified",
+      "triage_status": "source_location_recovered_or_facility_identified",
+      "updated_note": "Original site pin at Kirchberg Shopping Center; official centre 5 Rue Alphonse Weicker, site has first floor. Not independently confirmed which exact restroom."
     },
     {
       "index": 120,
@@ -229,7 +281,9 @@
       "name": "Lintgen gay bi area",
       "city": "Lintgen",
       "country": "Luxembourg",
-      "reason": "General Lintgen area, not one mapped spot"
+      "reason": "General Lintgen area, not one mapped spot",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 123,
@@ -237,7 +291,9 @@
       "name": "Toilets Zolwereck",
       "city": "Sanem",
       "country": "Luxembourg",
-      "reason": "Toilet building not identified"
+      "reason": "Toilet building not identified",
+      "triage_status": "source_location_recovered_or_facility_identified",
+      "updated_note": "ZolwerEck retail building identified; toilet floor/section unverified"
     },
     {
       "index": 125,
@@ -245,7 +301,9 @@
       "name": "Schumann",
       "city": "Wiltz",
       "country": "Luxembourg",
-      "reason": "Schumann/rest area exact site not found"
+      "reason": "Schumann/rest area exact site not found",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 131,
@@ -253,7 +311,9 @@
       "name": "Igalo",
       "city": "Herceg Novi",
       "country": "Montenegro",
-      "reason": "Igalo refers to a whole town"
+      "reason": "Igalo refers to a whole town",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 152,
@@ -261,7 +321,9 @@
       "name": "3 studne",
       "city": "Nitra",
       "country": "Slovakia",
-      "reason": "3 studne physical site unresolved"
+      "reason": "3 studne physical site unresolved",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 153,
@@ -269,7 +331,9 @@
       "name": "TESCO parking for lorries",
       "city": "Trnava",
       "country": "Slovakia",
-      "reason": "Lorry parking site not identified"
+      "reason": "Lorry parking site not identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 163,
@@ -277,7 +341,9 @@
       "name": "Forest Logatec",
       "city": "Logatec",
       "country": "Slovenia",
-      "reason": "Unspecified Logatec woodland"
+      "reason": "Unspecified Logatec woodland",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 165,
@@ -285,7 +351,9 @@
       "name": "Petrol WC Reststop",
       "city": "Murska Sobota",
       "country": "Slovenia",
-      "reason": "Petrol rest-stop branch unidentified"
+      "reason": "Petrol rest-stop branch unidentified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 172,
@@ -293,7 +361,9 @@
       "name": "Västra Skogen",
       "city": "Solna",
       "country": "Sweden",
-      "reason": "Västra Skogen could mean neighbourhood, station or woodland"
+      "reason": "Västra Skogen could mean neighbourhood, station or woodland",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 185,
@@ -301,7 +371,9 @@
       "name": "Lara Park",
       "city": "Antalya",
       "country": "Turkey",
-      "reason": "Lara Park identity disputed"
+      "reason": "Lara Park identity disputed",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 208,
@@ -309,7 +381,9 @@
       "name": "Obala rijeke Zeljeznice",
       "city": "Banja Ilidza",
       "country": "Bosnia and Herzegovina",
-      "reason": "Entire Željeznica riverbank rather than a spot"
+      "reason": "Entire Željeznica riverbank rather than a spot",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 211,
@@ -317,7 +391,9 @@
       "name": "Pejton",
       "city": "Ildza",
       "country": "Bosnia and Herzegovina",
-      "reason": "Whole Pejton neighbourhood"
+      "reason": "Whole Pejton neighbourhood",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 214,
@@ -325,7 +401,9 @@
       "name": "Parking kod Celpaka",
       "city": "Prijedor",
       "country": "Bosnia and Herzegovina",
-      "reason": "Celpaka facility/company not identified"
+      "reason": "Celpaka facility/company not identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 215,
@@ -333,7 +411,9 @@
       "name": "Stari Grad",
       "city": "Prijedor",
       "country": "Bosnia and Herzegovina",
-      "reason": "Stari Grad generic old town name"
+      "reason": "Stari Grad generic old town name",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 218,
@@ -341,7 +421,9 @@
       "name": "Nude Beach",
       "city": "Burgas",
       "country": "Bulgaria",
-      "reason": "Burgas nudist beach section not identified"
+      "reason": "Burgas nudist beach section not identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 220,
@@ -349,7 +431,9 @@
       "name": "Pomorie",
       "city": "Nessebar",
       "country": "Bulgaria",
-      "reason": "Pomorie entire town and wrong municipality"
+      "reason": "Pomorie entire town and wrong municipality",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 232,
@@ -357,7 +441,9 @@
       "name": "Parking Area",
       "city": "Ayia Napa",
       "country": "Cyprus",
-      "reason": "Unidentified parking area"
+      "reason": "Unidentified parking area",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 238,
@@ -365,7 +451,9 @@
       "name": "Old tavern",
       "city": "Livadia",
       "country": "Cyprus",
-      "reason": "Unidentified tavern and conflicting source location"
+      "reason": "Unidentified tavern and conflicting source location",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 244,
@@ -373,7 +461,9 @@
       "name": "Dead area opposite Lidl",
       "city": "Paphos",
       "country": "Cyprus",
-      "reason": "Lidl branch not identified"
+      "reason": "Lidl branch not identified",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     },
     {
       "index": 249,
@@ -381,7 +471,9 @@
       "name": "Za městem",
       "city": "Most",
       "country": "Czechia",
-      "reason": "Generic 'outside town' area without distinct geocode"
+      "reason": "Generic 'outside town' area without distinct geocode",
+      "triage_status": "source_location_recovered_or_facility_identified",
+      "updated_note": "Original Czech source gives detailed route by 1. Máje, former siding and bridge over stream, plus map pin; route may be historic, use source pin for location evidence."
     },
     {
       "index": 291,
@@ -389,7 +481,9 @@
       "name": "La Mall",
       "city": "Sibiu",
       "country": "Romania",
-      "reason": "Unidentified mall in Sibiu"
+      "reason": "Unidentified mall in Sibiu",
+      "triage_status": "still_needs_detail_or_broad_area",
+      "updated_note": null
     }
   ],
   "canonical_merges": [],
@@ -545,13 +639,17 @@
     "no_master_queue_edited": true,
     "no_live_venue_changes": true,
     "review_required_before_production_merge": true,
-    "no_candidates_merge_approved": true
+    "no_candidates_merge_approved": true,
+    "excluded_from_active_import": [
+      "GC1-TURKEY-13",
+      "GP4-UNITED-STATES-NEW-YORK-03"
+    ]
   },
   "primary_review_buckets": [
     {
       "key": "identified_no_major_location_blocker",
       "label": "Named/identifiable candidate; no material location ambiguity or confirmed public closure in the reviewed flags",
-      "count": 245,
+      "count": 251,
       "indices": [
         1,
         2,
@@ -592,8 +690,11 @@
         43,
         44,
         45,
+        48,
+        50,
         51,
         52,
+        53,
         54,
         55,
         56,
@@ -645,10 +746,12 @@
         113,
         114,
         116,
+        117,
         118,
         119,
         121,
         122,
+        123,
         124,
         126,
         127,
@@ -755,6 +858,7 @@
         246,
         247,
         248,
+        249,
         250,
         251,
         252,
@@ -1074,6 +1178,20 @@
           "country": "Estonia"
         },
         {
+          "index": 48,
+          "proposal_id": "GC1-ESTONIA-03",
+          "name": "Parking",
+          "city": "Tallinn",
+          "country": "Estonia"
+        },
+        {
+          "index": 50,
+          "proposal_id": "GC1-ESTONIA-05",
+          "name": "Outdoor cruising",
+          "city": "Tallinn",
+          "country": "Estonia"
+        },
+        {
           "index": 51,
           "proposal_id": "GC1-ESTONIA-06",
           "name": "Nautica Keskus Toillet",
@@ -1084,6 +1202,13 @@
           "index": 52,
           "proposal_id": "GC1-ESTONIA-07",
           "name": "Shnelli Park",
+          "city": "Tallinn",
+          "country": "Estonia"
+        },
+        {
+          "index": 53,
+          "proposal_id": "GC1-ESTONIA-09",
+          "name": "Old monument near the sea-Tallinn",
           "city": "Tallinn",
           "country": "Estonia"
         },
@@ -1445,6 +1570,13 @@
           "country": "Luxembourg"
         },
         {
+          "index": 117,
+          "proposal_id": "GC1-LUXEMBOURG-10",
+          "name": "Toilet on 1st floor",
+          "city": "Kirchberg",
+          "country": "Luxembourg"
+        },
+        {
           "index": 118,
           "proposal_id": "GC1-LUXEMBOURG-01",
           "name": "Kockelscheuer",
@@ -1470,6 +1602,13 @@
           "proposal_id": "GC1-LUXEMBOURG-09",
           "name": "Baggersee",
           "city": "Remerschen",
+          "country": "Luxembourg"
+        },
+        {
+          "index": 123,
+          "proposal_id": "GC1-LUXEMBOURG-11",
+          "name": "Toilets Zolwereck",
+          "city": "Sanem",
           "country": "Luxembourg"
         },
         {
@@ -2215,6 +2354,13 @@
           "country": "Czechia"
         },
         {
+          "index": 249,
+          "proposal_id": "GC1-CZECHIA-09",
+          "name": "Za městem",
+          "city": "Most",
+          "country": "Czechia"
+        },
+        {
           "index": 250,
           "proposal_id": "GC1-CZECHIA-12",
           "name": "Forum Nova Karolina",
@@ -2521,7 +2667,7 @@
     {
       "key": "broad_but_known_area",
       "label": "Recognisable area but original claimed subarea broad",
-      "count": 17,
+      "count": 16,
       "indices": [
         6,
         8,
@@ -2538,8 +2684,7 @@
         208,
         211,
         215,
-        218,
-        249
+        218
       ],
       "records": [
         {
@@ -2653,13 +2798,6 @@
           "name": "Nude Beach",
           "city": "Burgas",
           "country": "Bulgaria"
-        },
-        {
-          "index": 249,
-          "proposal_id": "GC1-CZECHIA-09",
-          "name": "Za městem",
-          "city": "Most",
-          "country": "Czechia"
         }
       ],
       "note": "May be acceptable as a cruising area without an exact pin; no automatic rejection."
@@ -2667,15 +2805,12 @@
     {
       "key": "unidentified_facility_or_spot",
       "label": "Generic or unidentifiable facility/spot",
-      "count": 25,
+      "count": 20,
       "indices": [
         11,
         28,
         46,
         47,
-        48,
-        50,
-        53,
         59,
         74,
         87,
@@ -2684,8 +2819,6 @@
         105,
         109,
         111,
-        117,
-        123,
         125,
         152,
         153,
@@ -2721,27 +2854,6 @@
           "index": 47,
           "proposal_id": "GC1-ESTONIA-01",
           "name": "Parklas/Metsas",
-          "city": "Tallinn",
-          "country": "Estonia"
-        },
-        {
-          "index": 48,
-          "proposal_id": "GC1-ESTONIA-03",
-          "name": "Parking",
-          "city": "Tallinn",
-          "country": "Estonia"
-        },
-        {
-          "index": 50,
-          "proposal_id": "GC1-ESTONIA-05",
-          "name": "Outdoor cruising",
-          "city": "Tallinn",
-          "country": "Estonia"
-        },
-        {
-          "index": 53,
-          "proposal_id": "GC1-ESTONIA-09",
-          "name": "Old monument near the sea-Tallinn",
           "city": "Tallinn",
           "country": "Estonia"
         },
@@ -2799,20 +2911,6 @@
           "proposal_id": "GC1-LUXEMBOURG-15",
           "name": "Toilette a Coté du Saturn",
           "city": "Belvaux",
-          "country": "Luxembourg"
-        },
-        {
-          "index": 117,
-          "proposal_id": "GC1-LUXEMBOURG-10",
-          "name": "Toilet on 1st floor",
-          "city": "Kirchberg",
-          "country": "Luxembourg"
-        },
-        {
-          "index": 123,
-          "proposal_id": "GC1-LUXEMBOURG-11",
-          "name": "Toilets Zolwereck",
-          "city": "Sanem",
           "country": "Luxembourg"
         },
         {
@@ -2944,12 +3042,68 @@
     }
   ],
   "primary_review_buckets_totals": {
-    "identified_no_major_location_blocker": 245,
-    "broad_but_known_area": 17,
-    "unidentified_facility_or_spot": 25,
+    "identified_no_major_location_blocker": 251,
+    "broad_but_known_area": 16,
+    "unidentified_facility_or_spot": 20,
     "conflicting_place_identity": 4,
     "explicit_current_closure": 2,
     "all_candidates": 293,
-    "check_sum": 293
+    "check_sum": 293,
+    "closed_deleted_from_active": 2,
+    "active_candidates": 291
+  },
+  "location_recheck_new_facts": {
+    "48": {
+      "lat": 59.4565925598,
+      "lng": 24.900812149,
+      "precision": "source_google_directions_pin",
+      "original_url": "https://www.gays-cruising.com/en/cruising/parking_tallinn_estonia_93269",
+      "note": "Original Parking Tallinn page had a specific Google driving destination; place type carpark still not independently validated."
+    },
+    "50": {
+      "lat": 59.5411949158,
+      "lng": 24.8921012878,
+      "precision": "source_google_directions_pin",
+      "original_url": "https://www.gays-cruising.com/en/cruising/outdoor_cruising_tallinn_estonia_12978",
+      "note": "Original generic outdoor cruising page has a map pin; physical suitability not independently validated."
+    },
+    "53": {
+      "lat": 59.4483909607,
+      "lng": 24.753742218,
+      "precision": "source_google_directions_pin",
+      "original_url": "https://www.gays-cruising.com/en/cruising/old_monument_near_the_sea_tallinn_tallinn_estonia_3539",
+      "note": "Original monument listing has a map pin close to Tallinn waterfront; monument's official name not independently confirmed."
+    },
+    "117": {
+      "lat": 49.6325874329,
+      "lng": 6.1699967384,
+      "precision": "source_google_directions_pin_plus_independent_facility",
+      "original_url": "https://www.gays-cruising.com/en/cruising/toilet_on_1st_floor_kirchberg_luxembourg_49814",
+      "note": "Original site pin at Kirchberg Shopping Center; official centre 5 Rue Alphonse Weicker, site has first floor. Not independently confirmed which exact restroom."
+    },
+    "123": {
+      "facility": "ZolwerEck shopping centre",
+      "address": "195–197 Rue de Differdange, L-4437 Soleuvre, Luxembourg",
+      "precision": "independent_place_name_match_not_independently_toilet_verified",
+      "original_url": "https://www.gays-cruising.com/en/cruising/toilets_zolwereck_soleuvre_luxembourg_15211",
+      "verification_urls": [
+        "https://www.zolwereck.lu/",
+        "https://www.visitminett.lu/place/zolwereck-soleuvre"
+      ]
+    },
+    "185": {
+      "lat": 36.8457069397,
+      "lng": 30.7600288391,
+      "precision": "source_google_directions_pin_DISPUTED",
+      "original_url": "https://www.gays-cruising.com/en/cruising/lara_park_antalya_turkey_14442",
+      "note": "2024 firsthand comment disputes original pin/location; do not treat as resolved without additional evidence."
+    },
+    "249": {
+      "lat": 50.5685348511,
+      "lng": 13.5499191284,
+      "precision": "source_google_directions_pin_plus_detailed_directions",
+      "original_url": "https://www.gays-cruising.com/en/cruising/za_mstem_most_czech_republic_104898",
+      "note": "Original Czech source gives detailed route by 1. Máje, former siding and bridge over stream, plus map pin; route may be historic, use source pin for location evidence."
+    }
   }
 }
