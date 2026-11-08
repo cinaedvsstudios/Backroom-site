@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "title": "Backroom A+B retained cruising QA final two records 91–92",
+    "date_berlin": "2026-11-08",
+    "source": "research/cruising/part5/GROUP_A_B_2026-11-08_RECENCY_FILTERED_PUBLICATION.json",
+    "archived": [
+      "research/cruising/part5/D/batch_1010_1014.json",
+      "research/cruising/part5/D/batch_1045_1049.json"
+    ],
+    "research_only": true,
+    "production_modified": false,
+    "source_scope": "Review source directory claims against independent place sources and 12-month recency. Recent directory creation is not firsthand visit evidence; no assertion original source GPS maps to intimate spot."
+  },
+  "records": [
+    {
+      "position": 91,
+      "index": 1014,
+      "id": "CRU-AB-1014",
+      "name": "Calle Miguel Servet",
+      "city": "Valdemoro",
+      "country": "Spain",
+      "decision": "retain_probable_exact_cross_directory_alias_but_no_recent_visit",
+      "location": "Calle Miguel Servet industrial estate, Valdemoro south of Madrid. Independent Cruisingmap page 'Pinar de la VOLVO', created 3 Oct 2026, explicitly says pine grove behind Volvo on Calle Miguel Servet; this is strong geographic identity alignment with the existing Gays-Cruising record. Stored 40.165421,-3.664505 is general roadway location, NOT the exact lawful woodland entrance or parking.",
+      "activity": [
+        {
+          "date": "2026-10-03",
+          "type": "directory_creation_only",
+          "details": "New independent directory listing was created on this date, no firsthand forum messages or sexual encounters. It supports current online location recognition, not use."
+        }
+      ],
+      "access": "Industrial traffic and working business forecourts; don't enter private Volvo property or abandoned structures. Source description of 'two abandoned houses' is an unverified access/safety claim, not a destination to direct users to.",
+      "duplicates": "'Pinar de la VOLVO' is probably the same claimed roadside pine grove as Calle Miguel Servet; preserve two original source URLs, avoid two separate duplicate Backroom listings without pin comparison.",
+      "corrections": [
+        "Original source identity strengthened: independent 2026 same road and Volvo reference.",
+        "Do not claim recent onsite attendance from Oct2026 source card creation.",
+        "Legal public access to exact pine grove and use of abandoned buildings unconfirmed."
+      ],
+      "sources": [
+        "https://cruisingmap.com/57933-pinar-de-la-volvo",
+        "https://www.gays-cruising.com/en/spain",
+        "https://mispicaderos.com/57933-pinar-de-la-volvo"
+      ],
+      "web_evidence": [
+        "turn269946search3"
+      ]
+    },
+    {
+      "position": 92,
+      "index": 1048,
+      "id": "CRU-AB-1048",
+      "name": "Bostall Heath",
+      "city": "London",
+      "country": "United Kingdom",
+      "decision": "retain_existing_named_park_but_no_recent_activity_evidence",
+      "location": "Bostall Heath at Longleigh Lane, Abbey Wood, Royal Borough of Greenwich. GoParksLondon independently confirms named open-access public common, cricket pitch and nets, Longleigh Lane parking, public toilet, outdoor gym and wooded paths. London Cricket Trust independently confirms current nets and changing facilities and gives Longleigh Lane SE2 0BE (GoParks uses SE2 0GB). These are likely alternate local site postcodes; do not replace the user's park address with cricket trustee postcode as a uniquely proven cruising pin. Stored 51.4817609,0.1151354 is broad heath.",
+      "activity": [
+        {
+          "date": "approximately_2026-03",
+          "type": "source_directory_card_creation_not_visit",
+          "details": "Original Splashd city map card appears added about 8 months before Nov2026; no dated firsthand reports or reliable current activity counts in archived card. New site guide advertises live app activity but no actual record for this venue available to this audit."
+        }
+      ],
+      "access": "Public common advertised always open, but cricket pitches and changing facilities have ordinary booking/site policies. The source claims cruising near cricket nets and car park; no proof any portion is designated for sexual activity or that precise source subarea can be safely/legally entered.",
+      "duplicates": "Bostall Woods and Bostal Heath Triangle/Clam Field are adjacent overlapping public green designations; distinct named land parcels, not necessarily the same cruising subarea. Do not create duplicate site listings on proximity alone.",
+      "corrections": [
+        "Independent map confirms actual cricket nets and carpark; source spot remains unverified.",
+        "No recent visitor comments or physical sexual encounter evidenced.",
+        "Different published Longleigh Lane postcodes SE2 0BE/0GB should remain caveated rather than arbitrarily selecting one as exact spot."
+      ],
+      "sources": [
+        "https://www.splashd.app/map/gb/eng/london",
+        "https://www.goparks.london/park/bostall-heath/",
+        "https://londoncrickettrust.co.uk/facilities_kent/bostall-heath/",
+        "https://www.goparks.london/park/bostall-woods/"
+      ],
+      "web_evidence": [
+        "turn269946search0",
+        "turn269946search1",
+        "turn269946search14"
+      ]
+    }
+  ],
+  "summary": {
+    "new_reviewed": 2,
+    "cumulative_unique_reviewed": 92,
+    "remaining_unreviewed": 0,
+    "site_files_modified": false,
+    "next_step": "Reconcile 92 unique IDs across all immutable research batches and summarize remaining editorial corrections; do not publish without user's explicit approval.",
+    "findings": [
+      "Valdemoro Cruisingmap Oct2026 card precisely references Volvo/Calle Miguel Servet, no direct visit evidence",
+      "Bostall Heath cricket nets and parking verified by park/county cricket sources but venue has no dated firsthand cruising activity"
+    ]
+  }
+}
