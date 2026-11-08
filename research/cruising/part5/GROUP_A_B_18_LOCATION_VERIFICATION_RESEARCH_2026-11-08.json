@@ -1,0 +1,345 @@
+{
+  "_meta": {
+    "title": "Backroom A+B — source-based 18-location verification (research only)",
+    "date_berlin": "2026-11-08",
+    "scope": "Only 8 excluded ambiguous-location candidates plus 10 already-live blank-GPS candidates",
+    "count": 18,
+    "counts": {
+      "UNRESOLVED": 8,
+      "PROBABLE_NOT_PROVEN": 2,
+      "SOURCE_PIN_CONFIRMED": 4,
+      "GENERAL_REFERENCE_VERIFIED": 4
+    },
+    "original_210_research": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+    "production_listings_modified": false,
+    "publication_authorization": false,
+    "method": "Individually investigate original links and language variations where available, inspect original Google directions coordinates, compare operator/municipal/cartographic sources; avoid claiming alternatives as source spot.",
+    "notes": [
+      "SOURCE_PIN_CONFIRMED means original source directions link gives a coordinate, not proof of recent sexual activity or that private property is authorized.",
+      "GENERAL_REFERENCE_VERIFIED means named public geographical area or business geocoded externally, NOT original exact meeting pin.",
+      "PROBABLE_NOT_PROVEN means plausible identity, but original cannot be tied definitively.",
+      "UNRESOLVED means source detail was missing, inaccessible or too vague for a defensible point.",
+      "Do not import/add/update production listings.json without explicit user instruction.",
+      "Previously excluded records remain excluded; location recovery alone does not satisfy twelve-month activity filter."
+    ]
+  },
+  "records": [
+    {
+      "id": 189,
+      "name": "Airport toilets",
+      "city": "Istanbul",
+      "status": "UNRESOLVED",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/airport_toilets_istanbul_turkije_117044"
+      ],
+      "finding": "The original record does not specify Istanbul Airport IST versus Sabiha Gökçen SAW, terminal, or restroom. Alternate-language detail URLs were not retrievable. No exact spot or defensible pin.",
+      "source_access": "original detail unavailable/cache miss",
+      "followup": "Keep excluded; cannot select an airport from city name."
+    },
+    {
+      "id": 243,
+      "name": "Picnic Area near Airport",
+      "city": "Paphos",
+      "status": "PROBABLE_NOT_PROVEN",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/picnic_area_near_airport_paphos_cyprus_55627"
+      ],
+      "verification_urls": [
+        "https://data.gov.cy/index.php/en/resource/689",
+        "https://mapcarta.com/W1044309305"
+      ],
+      "possible_reference": {
+        "name": "Timi state-forest picnic site, on Timi-Paphos Airport road 1km before airport",
+        "lat": 34.7067,
+        "long": 32.49625,
+        "kind": "independent mapped picnic site, not original spot GPS"
+      },
+      "finding": "Cyprus forestry official listing confirms Timi as a picnic site immediately beside Paphos Airport; very plausible match, but inaccessible original spot detail has not substantiated identity.",
+      "source_access": "original detail unavailable/cache miss",
+      "followup": "Hold potential Timi identity; don't represent hypothesis as source pin."
+    },
+    {
+      "id": 281,
+      "name": "Spatiu Servicii A1 inainte de Sebes",
+      "city": "Alba Iulia / Sebeș",
+      "status": "UNRESOLVED",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/spatiu_servicii_a1_inainte_de_sebes_alba_iulia_romania_51509"
+      ],
+      "finding": "Multiple A1 service areas on different carriageways near Sebeș; source omits direction, name, km marker. Alternate language spot pages inaccessible.",
+      "source_access": "original detail unavailable/cache miss",
+      "followup": "Keep excluded pending demonstrable stop identity."
+    },
+    {
+      "id": 428,
+      "name": "Bagni Grill Bazzera",
+      "city": "Venice",
+      "status": "PROBABLE_NOT_PROVEN",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/bagni_grill_bazzera_venezia_italia_29500"
+      ],
+      "verification_urls": [
+        "https://www.infoviaggiando.it/en/13985/bazzera-nord",
+        "https://distributori-gpl.it/distributore/bazzera-sud/?app=1"
+      ],
+      "finding": "The operator identifies 'Punto Grill' at Bazzera Nord (A57 Turin-bound) and separate Bazzera Sud (eastbound) facilities. 'Grill Bazzera' likely means Nord but original source does not specify direction or pin.",
+      "source_access": "original detail unavailable/cache miss",
+      "followup": "Treat Bazzera Nord as probable, not proven source match."
+    },
+    {
+      "id": 468,
+      "name": "MOP Wiśniowa Góa",
+      "city": "Łódź",
+      "status": "UNRESOLVED",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/mop_wisniowa_gora_lodz_poland_81801"
+      ],
+      "verification_urls": [
+        "https://evstar.pl/mopy/a1/wisniowa-gora-zachod-147",
+        "https://evstar.pl/mopy/a1/wisniowa-gora-wschod-146"
+      ],
+      "possible_references": [
+        {
+          "name": "Wiśniowa Góra Wschód, Gdańsk bound",
+          "lat": 51.702524,
+          "long": 19.605316
+        },
+        {
+          "name": "Wiśniowa Góra Zachód, Katowice bound",
+          "lat": 51.703078,
+          "long": 19.602474
+        }
+      ],
+      "finding": "Both motorway sides identified, but original cruising directory is not tied to either. Choosing one would be arbitrary.",
+      "source_access": "original details unavailable",
+      "followup": "Keep excluded pending direction or original source GPS."
+    },
+    {
+      "id": 469,
+      "name": "AS 24",
+      "city": "Poznań",
+      "status": "UNRESOLVED",
+      "source_urls": [
+        "https://www.gays-cruising.com/pl/cruising/as_24_posen_poland_69237"
+      ],
+      "finding": "AS24 is a station chain. Directory says Posen/Poznań only and online 2026 question; possible branch near Kostrzyn is not proven source match. Spot page inaccessible.",
+      "source_access": "original detail unavailable/cache miss",
+      "followup": "Keep excluded; do not choose arbitrary chain branch."
+    },
+    {
+      "id": 968,
+      "name": "La Laja-Mercalaspalmas",
+      "city": "Las Palmas de Gran Canaria",
+      "status": "SOURCE_PIN_CONFIRMED",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/la_laja_mercalaspalmas_las_palmas_espana_3820"
+      ],
+      "source_map": {
+        "lat": 28.0520992279,
+        "long": -15.413775444,
+        "kind": "original directory directions link"
+      },
+      "finding": "Original Spanish description explicitly says La Laja beach parking and nearby tunnels. It is NOT an ambiguous choice of Mercalaspalmas wholesale market. Google Maps directions anchor confirms source point. Latest comments visible in cached page from Aug 2025; location clarification does not grant 12-month eligibility.",
+      "source_access": "direct accessible",
+      "followup": "Location solved; keep recency exclusion unless fresh evidence separately qualifies."
+    },
+    {
+      "id": 1012,
+      "name": "Carrefour Terrassa",
+      "city": "Terrassa",
+      "status": "SOURCE_PIN_CONFIRMED",
+      "source_urls": [
+        "https://www.gays-cruising.com/es/cruising/carrefour_terrassa_terrassa_terrassa_espana_3036"
+      ],
+      "verification_urls": [
+        "https://www.carrefour.es/tiendas-carrefour/hipermercados/carrefour/valles_terrassa.aspx",
+        "https://openhours.es/spots/carrefour-valles-terrassa-autopista-c-58-km-17-800-85cfda7cc6"
+      ],
+      "source_map": {
+        "lat": 41.5417442322,
+        "long": 2.0434849262,
+        "kind": "original directory Google Maps directions link"
+      },
+      "finding": "Original map points to Carrefour Vallès Terrassa, Autopista C-58 km 17.8, NOT Carrefour Montserrat. Current directory page cache displays comments up to Nov 2024 while earlier 2026 city feed index has a later comment; location only resolved here.",
+      "source_access": "direct Spanish page accessible",
+      "followup": "Location solved; eligibility/recency decision kept separate."
+    },
+    {
+      "id": 293,
+      "name": "Pădure Dumbravita-Timisoara",
+      "city": "Timișoara",
+      "status": "GENERAL_REFERENCE_VERIFIED",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/pdure_dumbravita_timisoara_timisoara_romania_67752"
+      ],
+      "verification_urls": [
+        "https://hcl.usr.ro/timisoara/2026/h510",
+        "https://www.outdooractive.com/en/poi/banat/padurea-verde/802027461/"
+      ],
+      "possible_reference": {
+        "name": "Pădurea Verde forest (broad forest centre), Dumbrăvița edge",
+        "lat": 45.790988,
+        "long": 21.254768,
+        "kind": "third-party geographic area only"
+      },
+      "finding": "2026 city resolution identifies the north-west entrance to Pădurea Verde from Dumbrăvița reservoir. Mapped forest is consistent with name/location, but original exact cruising entrance not source verified.",
+      "source_access": "original spot detail inaccessible",
+      "followup": "Can cite broad forest geography with exact cruising subsection explicitly unknown; no made-up entrance."
+    },
+    {
+      "id": 383,
+      "name": "Ponte fiume Reno a Borgo Panigale",
+      "city": "Bologna",
+      "status": "SOURCE_PIN_CONFIRMED",
+      "source_urls": [
+        "https://www.gays-cruising.com/it/cruising/ponte_fiume_reno_a_borgo_panigale_bologna_italia_6009"
+      ],
+      "verification_urls": [
+        "https://mandato-2021-2026.comune.bologna.it/azioni/conclusi-lavori-pontelungo/"
+      ],
+      "source_map": {
+        "lat": 44.5111045837,
+        "long": 11.2912950516,
+        "kind": "original directory directions link"
+      },
+      "finding": "The original Italian description explicitly identifies the park beneath the Reno river bridge at corner Via Emilia Ponente and Via del Triumvirato, i.e. Pontelungo. Source directions yield exact geo point. Bologna official confirms Pontelungo restored and open 2026.",
+      "source_access": "direct accessible",
+      "followup": "Location solved; no assumption of recent encounters."
+    },
+    {
+      "id": 436,
+      "name": "Oasi - Lungadige (Est)",
+      "city": "Verona",
+      "status": "GENERAL_REFERENCE_VERIFIED",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/oasi_lungadige_est_verona_italia_114746"
+      ],
+      "finding": "'Est' explicitly denotes the east-side Adige riverbank corridor, distinct from west-side Oasi Lungadige Ovest. Riverbank segment/bridge unlocated in accessible original pages; general eastern bank reference legitimate under user's general-area rule.",
+      "source_access": "original detail unavailable/cache miss",
+      "followup": "Keep broad riverbank reference only. No GPS for an arbitrary riverbank section."
+    },
+    {
+      "id": 437,
+      "name": "Alpo Cavalcavia",
+      "city": "Verona",
+      "status": "UNRESOLVED",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/alpo_cavalcavia_verona_italy_43481"
+      ],
+      "verification_urls": [
+        "https://confartigianato.verona.it/categorie-cat/attualita/mobilita-modifiche-temporanee-alla-viabilita-sulla-tangenziale-sud-dal-5-settembre-chiuso-al-traffico-il-tratto-tra-alpo-zai-e-verona-sud-e-altre-limitazioni-nei-giorni-successivi/"
+      ],
+      "finding": "A road/rail overpass exists near Alpo ZAI in south Verona; original source does not specify exact overpass and 2026 theft/robbery concern suggests care. Recent road works evidence does not identify original spot.",
+      "source_access": "original detail unavailable/cache miss",
+      "followup": "Avoid inaccurate pinned overpass."
+    },
+    {
+      "id": 439,
+      "name": "Zona Industriale - Ca' di Mazze",
+      "city": "Verona",
+      "status": "GENERAL_REFERENCE_VERIFIED",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/zona_industriale_ca_di_mazze_verona_italia_49128",
+        "https://www.gays-cruising.com/it/cruising/palazzina_verona_italia_5902"
+      ],
+      "verification_urls": [
+        "https://www.italiamappe.it/stradario/verona/via-ca%27-di-mazze%27/"
+      ],
+      "possible_reference": {
+        "name": "Via Ca' di Mazze street midpoint, Verona Palazzina, not exact parking bay",
+        "lat": 45.40749,
+        "long": 11.02056,
+        "kind": "verified named street midpoint"
+      },
+      "finding": "Named 1.6-km Via Ca' di Mazze geolocated. The source separately lists Palazzina as nearby, 0.2 km, not proven duplicate; do not merge based on proximity.",
+      "source_access": "Ca di Mazze spot detail unavailable, nearby Palazzina original page indexed",
+      "followup": "Accept named road/industrial district as general map reference only."
+    },
+    {
+      "id": 472,
+      "name": "Świecko Stacja Paliw Shell, boczna droga",
+      "city": "Słubice",
+      "status": "GENERAL_REFERENCE_VERIFIED",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/wiecko_stacja_paliw_shell_boczna_droga_slubice_polska_90388"
+      ],
+      "verification_urls": [
+        "https://find.shell.com/pl/fuel/10034899-4405-swiecko-slubice/en_MO",
+        "https://www.mylpg.eu/pl/stacje/polska/stacja/Shell-544AB74A-EAD0-66ED-4ABB-C5BD55E1765E"
+      ],
+      "possible_reference": {
+        "name": "Shell Świecko 36 fuel station, location reference only (NOT nearby side road)",
+        "lat": 52.313329,
+        "long": 14.641486,
+        "kind": "station official GPS"
+      },
+      "finding": "Shell operator confirms actual Świecko location. Original label adds 'boczna droga' (side road); unidentified exact side road not established. Mapping fuel station only as nearby reference would be accurate if qualified, not as actual meeting point.",
+      "source_access": "original detail inaccessible/HTTP restriction",
+      "followup": "Use station as broad location reference, not guessed side road."
+    },
+    {
+      "id": 493,
+      "name": "Tinglevvejen Rastplads",
+      "city": "Bolderslev",
+      "status": "UNRESOLVED",
+      "source_urls": [
+        "https://www.popcorn.dating/denmark/syddanmark/bolderslev/locations/public-sex/parking%2Blot/tinglevvejen-rastplads/19234/",
+        "https://www.gays-cruising.com/en/cruising/tinglevvej_aabenraa_danemark_102701"
+      ],
+      "finding": "Popcorn page identifies rest area on Tinglevvejen at Bolderslev but is access-limited. Separately, a named Hellevad-Bovvej 11 public rest area exists; road-name mismatch prevents claiming same site. Gays-Cruising possible alias not confirmed.",
+      "source_access": "Popcorn blocked; original alternate detail inaccessible",
+      "followup": "Do not choose unrelated public rest area."
+    },
+    {
+      "id": 593,
+      "name": "Am Fluss",
+      "city": "Obfelden",
+      "status": "UNRESOLVED",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/cruising/am_fluss_obfelden_schweiz_54302"
+      ],
+      "verification_urls": [
+        "https://park4night.com/en/place/179160"
+      ],
+      "possible_reference": {
+        "name": "Public Reuss riverside parking, 1494 Dorfstrasse, Obfelden: possible but no original linkage",
+        "lat": 47.2646,
+        "long": 8.4018,
+        "kind": "unverified candidate"
+      },
+      "finding": "Reuss river car park is real and near Obfelden, but original generic 'Am Fluss' never identifies this river section, car park, trail or bridge. Cannot pin as source spot.",
+      "source_access": "original spot detail inaccessible",
+      "followup": "Do not assign unrelated bank/park pin."
+    },
+    {
+      "id": 609,
+      "name": "De Bankjes",
+      "city": "Cromvoirt",
+      "status": "UNRESOLVED",
+      "source_urls": [
+        "https://www.gays-cruising.com/en/netherlands",
+        "https://www.gays-cruising.com/pl/cromvoirt/noord_brabant/holandia"
+      ],
+      "finding": "Source indexes generic 'the benches' in Cromvoirt, no park/road/cluster. A 2026 rainbow children's-playground bench is separate with no proven connection, so do NOT infer it's the cruising listing.",
+      "source_access": "town index found; original detailed map/location unavailable",
+      "followup": "No defensible source pin. Consider unidentifiable under user's earlier exclusion rule."
+    },
+    {
+      "id": 960,
+      "name": "Parking río Llobregat El Prat",
+      "city": "El Prat de Llobregat",
+      "status": "SOURCE_PIN_CONFIRMED",
+      "source_urls": [
+        "https://www.gays-cruising.com/es/cruising/debajo_del_puente_y_zona_de_servicio_el_prat_de_llobregat_espana_4799"
+      ],
+      "source_map": {
+        "lat": 41.3368644714,
+        "long": 2.096414566,
+        "kind": "original directory directions link"
+      },
+      "finding": "Original Spanish listing gives the exact route: coming from Barcelona, C-31 exit 194B to roundabout, then access road to river, small car park on right. Directions pin matches general river car park; no need to guess bridge or another parking lot.",
+      "source_access": "direct original Spanish page accessible",
+      "followup": "Location solved; do not modify published record without explicit approval."
+    }
+  ]
+}
