@@ -165,7 +165,17 @@
       147,
       148,
       149,
-      150
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160
     ],
     "genuinely_source_assessed_complete": [
       1,
@@ -214,7 +224,10 @@
       143,
       145,
       148,
-      150
+      150,
+      151,
+      153,
+      158
     ],
     "incomplete": [
       {
@@ -731,20 +744,55 @@
         "index": 149,
         "id": "GC1-SLOVAKIA-10",
         "reason": "Račianske Mýto Park source pin recovered, but exact claimed park subspot/recent activity not found"
+      },
+      {
+        "index": 152,
+        "id": "GC1-SLOVAKIA-13",
+        "reason": "3 Studne Nitra primary detail HTTP451, precise springs/spot unknown"
+      },
+      {
+        "index": 154,
+        "id": "GC1-SLOVAKIA-12",
+        "reason": "Žilina generic Glory Hole primary individual site/building not identified"
+      },
+      {
+        "index": 155,
+        "id": "GC1-SLOVENIA-01",
+        "reason": "Sava Ljubljana river corridor broad, original page unavailable despite 2026 source check-in"
+      },
+      {
+        "index": 156,
+        "id": "GC1-SLOVENIA-02",
+        "reason": "Ljubljana Tivoli source HTTP451, exact park area and dated activity unknown"
+      },
+      {
+        "index": 157,
+        "id": "GC1-SLOVENIA-03",
+        "reason": "Barje southbound rest area source HTTP451, 2026 online meetup offers but layout/rebuild details uncertain"
+      },
+      {
+        "index": 159,
+        "id": "GC1-SLOVENIA-06",
+        "reason": "SAP/MOL Gas Station Ljubljana primary detail inaccessible, exact rest area direction unknown"
+      },
+      {
+        "index": 160,
+        "id": "GC1-SLOVENIA-08",
+        "reason": "Ljubljana station WC source HTTP451; ongoing station reconstruction affects original access"
       }
     ],
-    "completed_count": 47,
-    "remaining_not_completed": 244,
-    "unreviewed_indices_start": 151,
+    "completed_count": 50,
+    "remaining_not_completed": 241,
+    "unreviewed_indices_start": 161,
     "next_incomplete_index": 4,
     "next_incomplete_id": "GC1-ANDORRA-04",
-    "last_completed_index": 150,
-    "last_completed_id": "GC1-SLOVAKIA-11",
+    "last_completed_index": 158,
+    "last_completed_id": "GC1-SLOVENIA-04",
     "newly_identified_location_count": 0,
     "first_complete_5_record_checkpoint": true,
-    "last_assessed_index": 150,
-    "last_assessed_id": "GC1-SLOVAKIA-11",
-    "checkpoint_count": 9,
+    "last_assessed_index": 160,
+    "last_assessed_id": "GC1-SLOVENIA-08",
+    "checkpoint_count": 10,
     "first_checkpoint_indices": [
       1,
       2,
@@ -753,13 +801,13 @@
       14
     ],
     "last_completed_batch_indices": [
-      138,
-      140,
-      142,
-      143,
-      145
+      148,
+      150,
+      151,
+      153,
+      158
     ],
-    "next_complete_five_needs": 3
+    "next_complete_five_needs": 5
   },
   "saved_evidence_files": [
     "research/cruising/part5/A/P3_deep_source_recheck_0001_0005_PARTIAL_2026-11-08.json",
@@ -794,12 +842,15 @@
     "research/cruising/part5/A/P3_completed_batch_0036_0040_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0141_0145_2026-11-08.json",
     "research/cruising/part5/A/P3_completed_batch_0041_0045_2026-11-08.json",
-    "research/cruising/part5/A/P3_deep_source_recheck_0146_0150_2026-11-08.json"
+    "research/cruising/part5/A/P3_deep_source_recheck_0146_0150_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0151_0155_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0156_0160_2026-11-08.json",
+    "research/cruising/part5/A/P3_completed_batch_0046_0050_2026-11-08.json"
   ],
   "last_confirmed_commit": "956c6d4c4635f092bfb539c5bae801951a94f6bf",
-  "approach": "Resume original #151. 150 assessed, 47 completed source research, 103 incomplete; completed #148 and #150 are waiting for 3 additional completions for next immutable batch. Source outages and unverified activity remain explicit. All original source data and research preserved.",
+  "approach": "Next untouched original index 161. 160 examined, 50 substantive source assessments completed, 110 explicitly incomplete; 10 verified immutable completed-five batches. Historic online claims and 2026 first-person reports remain separate. No live listing modifications.",
   "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write.",
-  "last_confirmed_evidence_commit": "53f2beefe75a9ec42fe6dedd5716e8128034ccd9",
-  "latest_checkpoint_commit": "d63ba3551d2933e51e7ef73a42e691f02f290905",
-  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0041_0045_2026-11-08.json"
+  "last_confirmed_evidence_commit": "a92a56b092fbd0a8eb9322da8e565cf9215f2266",
+  "latest_checkpoint_commit": "d2fcf3aa8482e910443159bc25d4e03d5439d255",
+  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0046_0050_2026-11-08.json"
 }
