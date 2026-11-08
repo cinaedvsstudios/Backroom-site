@@ -5,10 +5,10 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - Repository: https://github.com/cinaedvsstudios/Backroom-site
 - Working directory: `research/cruising/part5/`.
 - Group **2 of 3**, original positions **196–389 inclusive**, 194 source candidate records. **8 independently documented excluded from working set**, **186 active candidate records**. **99** previously historically mapped, **86** initially source-research-incomplete, **1** Poduene Railway Station included.
-- Original incomplete cohort of 86: **50 have received preliminary substantive content research across ten batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 36 still await initial substantive review.
-- Most recently assessed **CRU-CD2-303 — Spice WC, Riga**.
-- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-305 — Toilets/WC next to H&M, Kraków, Poland.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
-- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `b373e9cb16a2ca08f57bd79f49edba3cfbd72ca1`. Latest individual working-file enrichment: `ce927480e86599fb66a73f7a164a914c6ffc7070`. Batch 010 immutable commit `304c6426fbb7a33c2f88b0e1d5a90b7be7c2df5f`.
+- Original incomplete cohort of 86: **55 have received preliminary substantive content research across eleven batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 31 still await initial substantive review.
+- Most recently assessed **CRU-CD2-315 — Kongsveien uUsikt, Ekeberg**.
+- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-316 — Sucking area, Haugesund, Norway.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
+- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `a1fb0b9ec5d0655b4f41b468df70ca024f88215d`. Latest individual working-file enrichment: `25862e8af4cc10b173d659acb48424cb263b336b`. Batch 011 immutable commit `7e812edb353faf747fedd6475aff4ef4de1c0b6a`.
 
 ## Required reading BEFORE more research
 1. `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json` — **authoritative next_unstarted** and batch list; if moved by another worker, follow latest tracker.
@@ -31,6 +31,8 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - 009: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_009_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_009_2026-11-08.json), IDs CRU-CD2-282, CRU-CD2-286, CRU-CD2-287, CRU-CD2-292, CRU-CD2-295
 
 - 010: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_010_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_010_2026-11-08.json), IDs CRU-CD2-297, CRU-CD2-299, CRU-CD2-301, CRU-CD2-302, CRU-CD2-303
+
+- 011: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_011_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_011_2026-11-08.json), IDs CRU-CD2-305, CRU-CD2-306, CRU-CD2-308, CRU-CD2-309, CRU-CD2-315
 
 ## Research method — MUST FOLLOW
 - Work in exact order from tracker, five records per batch. **Open and READ content of every stored source URL**, including original detailed listings, supplemental pages, comments, internal source-map directions, previous evidence, and related pages. Recording merely 'reachable/checked' is NOT source research.
@@ -60,8 +62,16 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - **CRU-CD2-297 Banchina Azoto** identifiable industrial Marghera port roadway, potential number 15 public-office parking is NOT proven original pin. 2026 port roadworks were temporary; do not report closure.
 - **NEXT after Batch010: CRU-CD2-305**, then 306, 308, 309, 315 for next five-file batch. 50 preliminary reviewed, 0 source-exhaustive, 36 not yet initially reviewed.
 
+## Batch 011 findings, no present-day cruising established
+- **CRU-CD2-305:** Galeria Kazimierz, ul. Podgórska 34 Kraków, definitely contains H&M (levels 0/1); strong candidate building for archival 'WC next to H&M' but exact toilet still unknown, so no invented indoor pin.
+- **CRU-CD2-306:** Real "Rybnik parking leśny" independently geolocated by a 2024 campground record at 50.126447,18.500424, plus roads Rudzka/Buhla. This is NOT proven to be the original gay source point; never treat ordinary camping checkins as cruising.
+- **CRU-CD2-308:** Wrocław official geoportal identifies an 80-place Adama Mickiewicza public parking; camper log at 51.112570,17.087960 describes DIFFERENT <10-capacity lot with 2026 comments. Archive also lists separate 'Mickiewicza Nowa Miejscówka'. Original 63609 detailed page inaccessible, exact match unknown.
+- **CRU-CD2-309:** Railway-related candidate remains in cohort (no automatic deletion). Original detailed source blocked, no safely located public path, no invented coordinates.
+- **CRU-CD2-315:** **Official Oslo municipality calls parking area "Kongsveien Panorama" or "Utsikten"**, close name match to "uUsikt". Independent place directory gives 59.89523,10.76120 as named parking GPS; old working marker 59.899434,10.761738 is DIFFERENT general viewpoint near restaurant. Do NOT replace original GPS until original 42612 page recovered. 2026 road access modified, city projected reopening 31 Oct, upper controlled until end Nov. No dated recent gay activity.
+- **Next batch 012 starts exactly CRU-CD2-316, then CRU-CD2-317 and the next 3 in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`**. 55 preliminary reviewed, 0 exhaustively finished, 31 not yet initially reviewed.
+
 ## Recoverability / GitHub access
 - GitHub tool `mcp__GitHub__fetch_file` sometimes responds with **empty content** for 2MB JSON but includes blob SHA. Fetch same SHA using `mcp__GitHub__fetch_blob` to get entire JSON, parse and update; do not treat empty string as missing file.
-- Last verified tracker checkpoint commit: `b373e9cb16a2ca08f57bd79f49edba3cfbd72ca1`.
-- Permanent 186 working file update commit: `ce927480e86599fb66a73f7a164a914c6ffc7070`.
+- Last verified tracker checkpoint commit: `a1fb0b9ec5d0655b4f41b468df70ca024f88215d`.
+- Permanent 186 working file update commit: `25862e8af4cc10b173d659acb48424cb263b336b`.
 - User requested review chat 'Progress update review GROUP 2 8am'; the correction and counts match tracker. This handover is authoritative on restart, not chat progress alone.
