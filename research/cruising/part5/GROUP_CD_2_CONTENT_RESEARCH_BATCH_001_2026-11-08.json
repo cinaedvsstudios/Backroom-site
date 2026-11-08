@@ -1,0 +1,375 @@
+{
+  "title": "Group CD2 — substantive original-content research batch 001 (first five candidates)",
+  "date_berlin": "2026-11-08",
+  "methodology": "Read accessible original country/city/detail pages, extract their actual content, follow map and related links, inspect independent geographic evidence and dated reports; document failures without inferring absent evidence.",
+  "research_integrity": "These five received substantive source investigation; only one (209) obtained its original listing coordinates. For four others, the actual original detail body remains inaccessible, so their source research is still incomplete. This is NOT five 'fully completed' candidates.",
+  "original_research_incomplete": 86,
+  "records_assessed": 5,
+  "new_original_location_pin_recovered": 1,
+  "original_detail_bodies_read": 1,
+  "records_still_needing_source_followup": 5,
+  "records": [
+    {
+      "Venue_ID": "CRU-CD2-200",
+      "name": "Parking Area",
+      "city": "Ayia Napa",
+      "country": "Cyprus",
+      "source_name_category": "Rest area",
+      "geography_status": "specific_site_not_yet_verified",
+      "source_detail_body_read": false,
+      "record_review_complete": false,
+      "examined_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cyprus",
+          "read": true,
+          "findings": "Country index ranks generic 'Parking Area' as Ayia Napa rest area separately from Adams/Landa Beach and Sculpture Park Toilets; no specific location in index."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/ayia_napa/famagusta/cyprus",
+          "read": true,
+          "findings": "City index separately names 'Parking Area'; comments linked to this candidate dated 2025-12-17 (asks about winter activity), 2026-03-17 (asks whether active), and 2026-03-27 (asks if younger people present). None reports a confirmed encounter. 2026-04-12 messages appear near this entry but are associated with the separate Sculpture Park Toilets listing; do NOT misattribute."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/parking_area_ayia_napa_cyprus_71303",
+          "read": false,
+          "failure": "HTTP 451 Unavailable For Legal Reasons in direct fetch and via city/country link; no directions, pin or description could be extracted."
+        },
+        {
+          "url": "https://www.gays-cruising.com/es/chipre",
+          "read": true,
+          "findings": "Spanish country index independently within same platform confirms generic Ayia Napa 'Parking Area' distinct from named nearby places; no precise GPS supplied."
+        },
+        {
+          "url": "https://www.cruisinggays.com/larnaca/beaches/78297-ayia-napa-kermia-gay-beach/",
+          "read": true,
+          "findings": "Different Kermia gay beach has a named car park/road approach, but no evidence it is the SAME 'Parking Area' record; do not merge or assign Kermia coordinates."
+        },
+        {
+          "url": "https://nomadicboys.com/gay-cyprus/",
+          "read": true,
+          "findings": "Different Kermia gay beach is described with specific car park coordinates (34.973000,34.033167); this is NOT proof of this generic parking record's location."
+        }
+      ],
+      "dated_reports": [
+        {
+          "date": "2025-12-17",
+          "type": "inquiry",
+          "finding": "Asks about winter activity; not confirmed visit."
+        },
+        {
+          "date": "2026-03-17",
+          "type": "inquiry",
+          "finding": "Asks if location is active; not confirmed visit."
+        },
+        {
+          "date": "2026-03-27",
+          "type": "inquiry",
+          "finding": "Asks if younger visitors are around; not confirmed visit."
+        }
+      ],
+      "cross_source_results": "Targeted indexed searches for matching Ayia Napa 'Parking Area' in CruisingGays, Squirt, gay-szene, Planet Randy, The Gay Passport, Splashd and Popcorn did not recover a unique corresponding source. This is NOT an exhaustive search or evidence of no listing.",
+      "description_for_research": "An older Ayia Napa cruising index has a separate car-park listing simply called Parking Area. Several messages from winter 2025 and spring 2026 ask about possible activity, but none confirms anyone was met there. The original detail page is blocked, so its map and access description still need recovery. The distinct Kermia gay-beach car park is not a verified match.",
+      "next_actions": [
+        "Recover source 71303 location coordinates from archive, authentic browser or source-provided map",
+        "Search indexed local-language source mirrors and exact map/deep-link; test for alternate source listing",
+        "Avoid equating with Kermia or Sculpture Park parking without match"
+      ],
+      "publication_approved": false
+    },
+    {
+      "Venue_ID": "CRU-CD2-202",
+      "name": "Old tavern",
+      "city": "Livadia",
+      "country": "Cyprus",
+      "geography_status": "exact_tavern_not_identified",
+      "source_detail_body_read": false,
+      "record_review_complete": false,
+      "examined_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/livadia/larnaca/cyprus",
+          "read": true,
+          "findings": "KEY SOURCE RECOVERY: 4 linked original-user comments read, including 2025-04-17 firsthand negative visit ('there twice in evening; nobody'), 2025-04-16 inquiry, 2025-03-10 activity question, 2022-09-04 historical remark 'Definitely for the night time'. Indexed as Natural area, Livadia/Larnaca."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cyprus",
+          "read": true,
+          "findings": "Original country index separately names Old tavern in Livadia, not Larnaca nightlife venue; no site address."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/old_tavern_talas_cyprus_15445",
+          "read": false,
+          "failure": "Cache miss; page title slug 'talas' does not reconcile with city Livadia. No evidence whether this refers to Tala district."
+        },
+        {
+          "url": "https://www.gays-cruising.com/fr/cruising/old_tavern_talas_cyprus_15445",
+          "read": false,
+          "failure": "Alternate-language page cache miss; cannot access original map."
+        },
+        {
+          "url": "https://www.cyprusbites.com/larnaca/tavern",
+          "read": true,
+          "findings": "Contemporary Livadia tavern directory has multiple named venues; none evidentially linked to old cruising site. Do not guess one."
+        }
+      ],
+      "dated_reports": [
+        {
+          "date": "2022-09-04",
+          "type": "undetailed_historical_comment",
+          "finding": "Says at night is the time; no positive encounter described."
+        },
+        {
+          "date": "2025-03-10",
+          "type": "inquiry",
+          "finding": "Asks whether still active."
+        },
+        {
+          "date": "2025-04-16",
+          "type": "inquiry",
+          "finding": "Asks if anyone present."
+        },
+        {
+          "date": "2025-04-17",
+          "type": "firsthand_negative_visit",
+          "finding": "Visitor reports going twice in the evening and seeing nobody; site allegedly physically locatable to that user then, but no address in readable comment."
+        }
+      ],
+      "cross_source_results": "Targeted indexed searches for same named Livadia old tavern across CruisingGays/Squirt/gay-szene/other specialty sources recovered no unique identifying information; not an exhaustive absence claim.",
+      "description_for_research": "The directory's Old tavern entry is filed under Livadia in the Larnaca area. A contributor writing in September 2022 associated it with nighttime use, but another user reported visiting twice without finding anyone in April 2025. Those are distinct from the 2025 queries asking whether the site still sees activity. The source listing's detail map remains inaccessible and its 'talas' URL slug conflicts with the locality.",
+      "next_actions": [
+        "Recover original map pin for 15445 through genuine archive/browser access",
+        "Resolve Talas-vs-Livadia geographical mismatch from source pin, not naming guesses",
+        "Do not call closed or inactive on two negative visits alone"
+      ],
+      "publication_approved": false
+    },
+    {
+      "Venue_ID": "CRU-CD2-205",
+      "name": "Capital Coast",
+      "city": "Paphos",
+      "country": "Cyprus",
+      "geography_status": "named_hotel_identified_original_cruising_subarea_unconfirmed",
+      "source_detail_body_read": false,
+      "record_review_complete": false,
+      "examined_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cyprus",
+          "read": true,
+          "findings": "Original country list names Capital Coast as natural area in Paphos (not hotel)."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/paphos/paphos/cyprus",
+          "read": true,
+          "findings": "City list separately includes 'Capital Coast' and 'Capital Coast forest area' (distinct site ID 11963); must not merge automatically. No current first-hand report in visible latest-comments section for this exact record."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/capital_coast_2022_crusing_paphos_cyprus_53420",
+          "read": false,
+          "failure": "Original detail body cache miss; no original GPS or area description."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/capital_coast_forest_area_paphos_cyprus_11963",
+          "read": false,
+          "failure": "Related but SEPARATE record also cache miss; cannot treat as duplicate."
+        },
+        {
+          "url": "https://www.visitcyprus.com/accommodation/capital-coast/",
+          "read": true,
+          "findings": "Official Cyprus tourism identifies CAPITAL COAST as hotel at 69 Tombs of the Kings Street, Pafos 8015."
+        },
+        {
+          "url": "https://mapcarta.com/N11539381757",
+          "read": true,
+          "findings": "OSM / Mapcarta hotel node at 34.78222,32.40413, with Venus blue beach nearby. Hotel coordinate only, not original cruising pin."
+        },
+        {
+          "url": "https://capitalcoast.reserve-online.net/directions",
+          "read": true,
+          "findings": "Operator location directions place hotel directly on west Paphos coastline, about 700 m after Tombs of the Kings; no public cruising claim."
+        },
+        {
+          "url": "https://capitalcoastresort.com/contact/",
+          "read": false,
+          "failure": "Anti-bot verification page, no contact detail extracted from that URL."
+        }
+      ],
+      "location_approximate_landmark": {
+        "latitude": 34.78222,
+        "longitude": 32.40413,
+        "scope": "verified hotel landmark ONLY"
+      },
+      "dated_reports": [],
+      "cross_source_results": "Specific original cruising-area identity not independently recovered in targeted searches. Opening the hotel website verifies accommodation, not sexual activity.",
+      "description_for_research": "Capital Coast names a real beachfront hotel on Tombs of the Kings Road, but the directory categorises its cruising entry as a natural area. The same city index also lists a separate Capital Coast forest area. The hotel address and GPS can be mapped as landmarks; the actual outdoor cruising area, land ownership and any recent activity still need original-source confirmation.",
+      "next_actions": [
+        "Recover 53420 source map/directions before choosing public coastal section",
+        "Check separate 11963 forest area for relation without merging",
+        "Look for dated first-hand reports or mapped outdoor area; do not pin to hotel reception"
+      ],
+      "publication_approved": false
+    },
+    {
+      "Venue_ID": "CRU-CD2-206",
+      "name": "Dead area opposite Lidl",
+      "city": "Paphos",
+      "country": "Cyprus",
+      "geography_status": "specific_lidl_branch_and_land_unconfirmed",
+      "source_detail_body_read": false,
+      "record_review_complete": false,
+      "examined_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cyprus",
+          "read": true,
+          "findings": "Country index lists unique 'Dead area opposite Lidl', Paphos, category Other. No street and not one of the separate beach locations."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/paphos/paphos/cyprus",
+          "read": true,
+          "findings": "Paphos city index independently lists same name as a separate site from Venus hotel beach and Capital Coast; not enough to identify land."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/dead_area_opposite_lidl_paphos_cyprus_76686",
+          "read": false,
+          "failure": "Original detail cache miss; no GPS, parcel or direction body."
+        },
+        {
+          "url": "https://www.gays-cruising.com/fr/cruising/dead_area_opposite_lidl_paphos_cyprus_76686",
+          "read": false,
+          "failure": "French link cache miss."
+        },
+        {
+          "url": "https://www.lidl.com.cy/s/el-CY/anazitisi-katastimaton/pafos/",
+          "read": true,
+          "findings": "OFFICIAL LIDL branch locator identifies THREE Pafos branches: Tombs of the Kings 104, Alexandrou Ypsilanti 49, Leoforos Dimokratias 30. Need historical pin to disambiguate."
+        },
+        {
+          "url": "https://www.lidl.com.cy/s/en-CY/storesearch/pafos/tombs-of-the-kings-104/",
+          "read": true,
+          "findings": "Tombs of Kings 104 Lidl is a real operating supermarket, but source has not established it is the original alleged spot."
+        },
+        {
+          "url": "https://sunnyoption.com/venus-bleu-beach-in-paphos-a-beach-tip-in-tombs-of-the-kings/",
+          "read": true,
+          "findings": "Independent guide describes Venus Bleu beach/parking opposite a Lidl on Tombs of Kings road. This helps explain a POSSIBLE geographic clue, but directory separately lists Venus hotel beach; not sufficient to identify the 'dead area'."
+        }
+      ],
+      "candidate_store_branches_for_followup": [
+        {
+          "address": "104 Tombs of the Kings, Pafos 8015",
+          "confirmed_current_store": true,
+          "claim_this_is_cruising_spot": false
+        },
+        {
+          "address": "49 Alexandrou Ypsilanti, Pafos 8020",
+          "confirmed_current_store": true,
+          "claim_this_is_cruising_spot": false
+        },
+        {
+          "address": "30 Leoforos Dimokratias, Pafos 8028",
+          "confirmed_current_store": true,
+          "claim_this_is_cruising_spot": false
+        }
+      ],
+      "dated_reports": [],
+      "cross_source_results": "Exact candidate name not recovered in distinct independent cruising source queries; three plausible current Lidl branches cannot be collapsed into one guessed pin.",
+      "description_for_research": "An archived Paphos entry refers to vacant-looking ground across from an unidentified Lidl supermarket. Current official store listings establish three Pafos branches, and independent beach information points to a Lidl by Venus Bleu beach. That is a useful clue but not a verified identification of the land described in the cruising entry. No dated firsthand encounters were recovered for this particular source.",
+      "next_actions": [
+        "Recover source 76686 map/direction coordinates",
+        "Use dated satellite imagery to compare historical opposite parcels at three store branches",
+        "Check if directory's claimed 'dead area' changed after construction; do not guess coordinates"
+      ],
+      "publication_approved": false
+    },
+    {
+      "Venue_ID": "CRU-CD2-209",
+      "name": "Podolí Cliffs",
+      "city": "Prague",
+      "country": "Czechia",
+      "geography_status": "original_cruising_site_coordinates_recovered",
+      "source_detail_body_read": true,
+      "record_review_complete": false,
+      "examined_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/czech_republic",
+          "read": true,
+          "findings": "Country index links named Podolí Cliffs; 2026-06-30 21:13 inquiry 'anyone tonight?' is not a visit."
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/podoli_cliffs_praha_czech_republic_33479",
+          "read": true,
+          "findings": "PRIMARY DETAIL PAGE ACTUALLY READ. Description places nudist/cruising area on cliffs ABOVE Podolí swimming pool, accessible from Břidličná street; labelled park, nominal hours 'Daylong', medium influx/privacy (self-described page, not confirmed current). Comment dated 2023-05-24 reports positive site impression and says entrance at Podolská and U Vápenné skály; upper cliffs and secluded woods near pool noted. Page maps link to exact GPS below."
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=50.0517654419%2C14.419169426&travelmode=walking",
+          "read": false,
+          "failure": "Google Maps direct fetch cache miss but ORIGINAL PAGE DIRECTION LINK URL itself encodes destination GPS (50.0517654419,14.419169426). This is source location evidence, not guessed map coordinate."
+        },
+        {
+          "url": "https://prague.eu/en/architecture-1958-89-podoli-swimming-stadium/",
+          "read": true,
+          "findings": "Prague City Tourism confirms Podolská 74 swimming stadium built in former limestone quarry, matching source cliffs-above-pool geographical description; tourism page does not verify cruising activity."
+        },
+        {
+          "url": "https://nomadicboys.com/prague-gay-travel-guide/",
+          "read": true,
+          "findings": "Gay travel article about Prague overall, not independent evidence identifying this exact cliffs spot."
+        },
+        {
+          "url": "https://www.regionem.cz/clanek/kdyz-se-v-podoli-odkrylo-davne-morske-dno/",
+          "read": false,
+          "failure": "Source article cache miss; location not inferred from unread article."
+        },
+        {
+          "url": "https://koniklec.cz/wp-content/uploads/2018/02/Mapa_GP_Praha_2015_web.pdf",
+          "read": false,
+          "failure": "Download timed out; geological PDF not read or cited as confirmation."
+        }
+      ],
+      "original_source_GPS": {
+        "latitude": 50.0517654419,
+        "longitude": 14.419169426,
+        "exact_source": "https://www.gays-cruising.com/en/cruising/podoli_cliffs_praha_czech_republic_33479",
+        "how_recovered": "Walking/Driving GET DIRECTIONS link destination=..."
+      },
+      "former_working_coordinate": {
+        "latitude": 50.050923,
+        "longitude": 14.419601,
+        "scope": "previous inferred geological landmark; replace with exact source URL GPS"
+      },
+      "entrance_clues": [
+        "Břidličná street (source description)",
+        "Corner of Podolská and U Vápenné skály (firsthand comment 2023-05-24)",
+        "Wooded area and cliffs above Podolí Swimming Stadium"
+      ],
+      "dated_reports": [
+        {
+          "date": "2023-05-24",
+          "type": "positive_firsthand_historical_visit",
+          "finding": "Visitor calls it a good spot; spring/summer and daytime; provides Podolská/U Vápenné skály entrance and notes secluded woods / higher cliffs."
+        },
+        {
+          "date": "2026-06-30",
+          "type": "inquiry_only",
+          "finding": "User asks if anyone is there tonight; no first-hand current cruising verified."
+        }
+      ],
+      "activity_interpretation": "A dated 2023 affirmative report exists, but no substantiated dated 2025-26 positive visit from these sources. Do not describe as active or very busy in 2026.",
+      "rewritten_description": "The historic Podolí Cliffs cruising listing refers to the rocky wooded slopes above Podolí Swimming Stadium in Prague 4, not the pool itself. The source names Břidličná street and a visitor describes approaching via Podolská and U Vápenné skály. One firsthand comment from May 2023 reports daytime warm-season use of the wooded slopes and higher rocks. A June 2026 comment asks about meeting there but does not confirm an encounter. The original map directions place the claimed site at 50.0517654419, 14.419169426. Take care around steep rocky ground and follow any site restrictions.",
+      "source_quality": "primary site location GPS recovered and original description read; strong historic identity, no recent activity verification",
+      "next_actions": [
+        "Review timed-out geology PDF and verify public paths/any specific access restrictions",
+        "Targeted searches for more recent positive first-hand reports; do not assume June 2026 question proves visit",
+        "Check duplicate coverage against working and production listings using new exact coordinates"
+      ],
+      "publication_approved": false
+    }
+  ],
+  "source_research_note": "Targeted web search cross-checks for seven other niche cruising websites were made where indexed; no exhaustive site-by-site authenticated content review, do not treat nonresults as zero listings.",
+  "next_unstarted_record": "CRU-CD2-211",
+  "pending_followup_records": [
+    "CRU-CD2-200",
+    "CRU-CD2-202",
+    "CRU-CD2-205",
+    "CRU-CD2-206",
+    "CRU-CD2-209"
+  ]
+}
