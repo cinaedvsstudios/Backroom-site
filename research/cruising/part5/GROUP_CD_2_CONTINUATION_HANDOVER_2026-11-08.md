@@ -5,10 +5,10 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - Repository: https://github.com/cinaedvsstudios/Backroom-site
 - Working directory: `research/cruising/part5/`.
 - Group **2 of 3**, original positions **196–389 inclusive**, 194 source candidate records. **8 independently documented excluded from working set**, **186 active candidate records**. **99** previously historically mapped, **86** initially source-research-incomplete, **1** Poduene Railway Station included.
-- Original incomplete cohort of 86: **60 have received preliminary substantive content research across twelve batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 26 still await initial substantive review.
-- Most recently assessed **CRU-CD2-322 — Parque Industrial do Seixal, Coina**.
-- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-326 — Mata Museo Abel Salazar, São Mamede da Infesta, Portugal.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
-- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `e786a1104b28591178d22b7e72b572d459d2ed46`. Latest individual working-file enrichment: `e55981eee8650fa1380b40ba0b2e1f05d853bee6`. Batch 012 immutable commit `16421d429721ccacc18a1ad2e0b49c8e50aa51bc`.
+- Original incomplete cohort of 86: **65 have received preliminary substantive content research across thirteen batches**, NOT 45 fully researched: **0 of the 86 currently satisfy source-exhaustive completion**; 21 still await initial substantive review.
+- Most recently assessed **CRU-CD2-342 — Battens woods, Havant**.
+- **NEXT RECORD IN EXACT PENDING ORDER: CRU-CD2-344 — consult URL audit file for exact name/location.** Read exact next record in `GROUP_CD_2_ALL_URLS_PENDING_AUDIT_2026-11-08.json`, then subsequent 4. Do NOT restart at 196/274, and do NOT re-review batches 001–009 as initial passes.
+- Main current tracker: `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json`, last checkpoint commit `cea469f7c0b4393d907d7686a9bd6ec8b7979432`. Latest individual working-file enrichment: `1d842686be0f5e0998947eadcbadf2179b78e879`. Batch 013 immutable commit `d230fbee64ef76c734821f49403eedb8ab6de3c0`.
 
 ## Required reading BEFORE more research
 1. `GROUP_CD_2_CONTENT_RESEARCH_TRACKER.json` — **authoritative next_unstarted** and batch list; if moved by another worker, follow latest tracker.
@@ -35,6 +35,8 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - 011: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_011_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_011_2026-11-08.json), IDs CRU-CD2-305, CRU-CD2-306, CRU-CD2-308, CRU-CD2-309, CRU-CD2-315
 
 - 012: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_012_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_012_2026-11-08.json), IDs CRU-CD2-316, CRU-CD2-317, CRU-CD2-318, CRU-CD2-319, CRU-CD2-322
+
+- 013: [GROUP_CD_2_CONTENT_RESEARCH_BATCH_013_2026-11-08.json](GROUP_CD_2_CONTENT_RESEARCH_BATCH_013_2026-11-08.json), IDs CRU-CD2-326, CRU-CD2-330, CRU-CD2-336, CRU-CD2-339, CRU-CD2-342
 
 ## Research method — MUST FOLLOW
 - Work in exact order from tracker, five records per batch. **Open and READ content of every stored source URL**, including original detailed listings, supplemental pages, comments, internal source-map directions, previous evidence, and related pages. Recording merely 'reachable/checked' is NOT source research.
@@ -79,8 +81,16 @@ Updated 2026-11-08 (Europe/Berlin). Research, NOT publication.
 - **322:** Source named Seixal industrial park but original URL says Parque Industrial de Coina, whose independently mapped postcode 2830-581 is in **Barreiro** municipality, not Seixal. Undated Portuguese gay-directory car-meet text not recent firsthand proof. Keep geographical conflict open.
 - **Next batch 013 starts CRU-CD2-326** and then the next four records in the URL audit (likely 330,336,339,342). 60 preliminary reviewed, 0 exhaustive, 26 not initially investigated.
 
+## Batch 013 new findings — source exhaustive 0
+- **CRU-CD2-326** major: ORIGINAL Portuguese details fully read https://www.gays-cruising.com/pt/cruising/mata_museo_abel_salazar_sao_mamede_da_infesta_portugal_20001 ; original Google Directions **41.2002258301,-8.61698246**, ~350m WEST of museum heritage point 41.200411,-8.61288. On 2026-06-20 15:52 user first-person claim 'I am in the woods'; other 2026 Jun19-22 messages. YES recent presence claim, but not confirmed encounters or legal access. Museum building closed for renovation, not evidence adjacent forest closed. Source 1.4k comments, only 10 newest shown; rest remains access-limited. Nearby R. Prof Nuno Grande candidate ID49663 only 0.1km, possible spatial duplicate not merged. Working GPS corrected.
+- **CRU-CD2-330 Limanakia B** independently travelgay and CruisingGays document bus stop B Limanakia on EO91 near Vouliagmeni, rocky gay/nudist cove, rough shore access. Original B Gays ID57073 returns **HTTP451**; A ID57072 separately readable and explicitly distinguishes A and B stops; do not claim same pin or dated current activity.
+- **CRU-CD2-336** between Elia/Agrari rocky headland and secluded nude cove documented by Gay Passport, GayOut, TravelGay and 2026 first-person travel writers; visit dates NOT given, so don't claim 2026 on-site cruising encounters. Potential duplicate with Gays ID86264 Elia Nudist Beach; check before merge.
+- **CRU-CD2-339** Braid Hills Drive car park is indexed primary CruisingGays entry but marked 'Needs a check'. Public Edinburgh golf-course car park on Braid Hills Approach and a former roadside car-park along Braid Hills Drive are different options. No primary pinned lot or dated cruising.
+- **CRU-CD2-342** Battens woods likely actual **Battins Copse** by Battens Way, Havant, geolocated 50.8654,-0.9805 (named woodland) with 2022 photographed entrance 50.8648,-0.9816 and official council SINC HV0134. Gays original Havant index names Battens woods; detailed pin unrecovered; do not conflate with Havant Thicket. Protected ancient wood.
+- **Next Batch014 begins CRU-CD2-344** (then next four from URL audit), keep 0 fully exhaustive / 21 needing initial pass.
+
 ## Recoverability / GitHub access
 - GitHub tool `mcp__GitHub__fetch_file` sometimes responds with **empty content** for 2MB JSON but includes blob SHA. Fetch same SHA using `mcp__GitHub__fetch_blob` to get entire JSON, parse and update; do not treat empty string as missing file.
-- Last verified tracker checkpoint commit: `e786a1104b28591178d22b7e72b572d459d2ed46`.
-- Permanent 186 working file update commit: `e55981eee8650fa1380b40ba0b2e1f05d853bee6`.
+- Last verified tracker checkpoint commit: `cea469f7c0b4393d907d7686a9bd6ec8b7979432`.
+- Permanent 186 working file update commit: `1d842686be0f5e0998947eadcbadf2179b78e879`.
 - User requested review chat 'Progress update review GROUP 2 8am'; the correction and counts match tracker. This handover is authoritative on restart, not chat progress alone.
