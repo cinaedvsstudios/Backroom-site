@@ -1,0 +1,549 @@
+{
+  "meta": {
+    "title": "Backroom A+B research-only proposed data patch: 18 improved descriptions + original missing coordinates",
+    "date_berlin": "2026-11-08",
+    "source_candidate_records": 92,
+    "descriptions_rewritten": 18,
+    "previously_blank_gps_in_scope": 6,
+    "blank_gps_recovered": 5,
+    "source_identity_unresolved_gps": 1,
+    "additional_existing_GPS_correction": 1,
+    "production_files_edited": false,
+    "not_published": true,
+    "hold_location_identity_source_index": 436,
+    "google_maps_access_limit": "Direct Google Maps pages did not load via research browser; map sources were crosschecked using original Google driving links, open map reference pages, official geographic sites and published map coordinates. Google Maps review links are convenience links, NOT confirmed Google Maps search results.",
+    "application_policy": "Only research proposals; do not apply to listings.json or generated pages without user's approval."
+  },
+  "patches": [
+    {
+      "queue_index": 221,
+      "venue_id": "CRU-AB-0221",
+      "name": "The Mall (Tsarigradsko Shose)",
+      "proposed_fields": {
+        "Description": "The Mall sits on Tsarigradsko Shose Boulevard in Sofia’s Mladost district, and the cruising reference is specifically to the toilets on underground level −2—not Sofia Ring Mall or Mall of Sofia. The original listing marks evenings as its preferred period, but its more recent comments are men asking who is around or trying to arrange a meeting, rather than reports of something actually happening. The centre has multiple underground parking levels and is normally open for shopping until 22:00. It may be worth knowing about if you’re already there, but there’s no reliable evidence of a regular cruising crowd or a particularly productive time. It’s an ordinary, managed shopping-centre toilet, so the layout, security and access can change.",
+        "Address": "115z Tsarigradsko shose Blvd., Sofia 1784"
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/the_mall_sofia_bulgaria_99651",
+          "state": "direct page and 2026 dated comments read"
+        },
+        {
+          "url": "https://themall.bg/en/contacts/",
+          "state": "operator details read"
+        }
+      ],
+      "changes": [
+        "Correct postal street number to 115z, according to shopping centre management",
+        "Retain −2 as the claimed toilet level",
+        "Do not represent 2026 meetup requests as observed sexual activity"
+      ]
+    },
+    {
+      "queue_index": 233,
+      "venue_id": "CRU-AB-0233",
+      "name": "Nissi Beach",
+      "proposed_fields": {
+        "Description": "Nissi Beach is one of Ayia Napa’s busiest sandy resort beaches, with beach bars, music, sunbeds and water sports around its shallow bay. It is easy to reach from Nissi Avenue, but that popularity is also the limitation of this cruising listing: the directory discussions from June 2026 are requests to meet, and none identifies a recognisable gay cruising section or reports a confirmed encounter. It’s a holidaymakers’ beach rather than a known men-only or naturist spot, so someone looking specifically for discreet cruising has little concrete information to go on. Note that Cyprus tourism distinguishes Nissi Beach from the neighbouring Nissi Bay Beach and its famous sandbar; the previous pin was on Nissi Bay, not Nissi Beach.",
+        "Latitude": "34.98829",
+        "Longitude": "33.9712"
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/nissi_beach_ayia_napa_cyprus_90659",
+          "state": "direct page inaccessible; earlier June 2026 country-index references used"
+        },
+        {
+          "url": "https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/nissi-beach-blue-flag/",
+          "state": "official beach description and GPS read"
+        },
+        {
+          "url": "https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/nissi-bay-beach-blue-flag/",
+          "state": "official neighbouring beach description and GPS read"
+        }
+      ],
+      "changes": [
+        "If keeping Nissi Beach name use official GPS 34.98829,33.9712; stored 34.98787,33.96803 is Nissi Bay",
+        "No specific cruising subsection or eyewitness 2026 encounter established"
+      ],
+      "coordinate_precision": "OFFICIAL_NISSI_BEACH_CENTRE",
+      "coordinate_source_status": "CORRECT_INCORRECT_EXISTING_POINT",
+      "gps_source_evidence_urls": [
+        "https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/nissi-beach-blue-flag/",
+        "https://www.visitcyprus.com/discover-cyprus/sun-sea/beaches/nissi-bay-beach-blue-flag/"
+      ]
+    },
+    {
+      "queue_index": 241,
+      "venue_id": "CRU-AB-0241",
+      "name": "Parking Area near Big Greek Flag",
+      "proposed_fields": {
+        "Description": "This Paphos entry describes a seafront parking area by a prominent Greek flag. The important practical detail is that the original cruising page actually provides a mapped driving destination at 34.816551, 32.392544; it is not an entirely unlocated spot, as the previous description suggested. The older contributor description says it’s chiefly a place where people meet in cars, with very little privacy and fewer men passing on foot. One 2025 commenter described morning visits, but the more recent June 2026 comments only ask about meeting, so don’t count on those older hours still meaning much. The source pin identifies a starting point, not independently verified legal parking bays, and the exact flag landmark or current access still needs local confirmation.",
+        "Address": "Original-source mapped seafront car park near prominent Greek flag, Paphos; entrance not independently verified"
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/parking_area_near_big_greek_flag_paphos_cyprus_83677",
+          "state": "direct description, historic comments and original maps destination reviewed"
+        }
+      ],
+      "changes": [
+        "Remove contradictory claim that no trustworthy source map pin exists",
+        "Retain low privacy and mostly car-based historic use",
+        "Do not invent named car park/road"
+      ]
+    },
+    {
+      "queue_index": 253,
+      "venue_id": "CRU-AB-0253",
+      "name": "Palladium Shopping Mall WC",
+      "proposed_fields": {
+        "Description": "Palladium in central Prague has two toilet areas mentioned by the cruising directory, but they're not equally described: the basement WC on level −2 is the one the original contributor considered more active, while the other is on level +2 by the food court. Both still exist, and the shopping centre's operator confirms that since April 2025 they have been managed by M2C. Admission is 20 CZK for adults, payable in Czech crowns by cash or card. The operator gives −2 opening hours of 07:00–21:00 and +2 of 08:00–22:00. Those are toilet hours, not guaranteed cruising periods, and the late-2025 forum messages are requests to meet rather than reports of encounters. If you're already shopping at Palladium, the two levels explain what the original listing meant; it is still a regular public retail WC, not a sex venue."
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/palladium_shopping_mall_wc_praha_czech_republic_17704",
+          "state": "original source directly read: −2 described as more active, +2 in food court"
+        },
+        {
+          "url": "https://www.palladiumpraha.cz/novy-provozovatel-toalet-v-palladiu-patro-2-patro-2/",
+          "state": "operator's 20 CZK paid toilets and floor information read"
+        }
+      ],
+      "changes": [
+        "Add 20 CZK admission and distinguish two levels",
+        "Attribute −2 relative popularity to older directory author, not as independently confirmed 2026 activity"
+      ]
+    },
+    {
+      "queue_index": 293,
+      "venue_id": "CRU-AB-0293",
+      "name": "Pădure Dumbravita-Timisoara",
+      "proposed_fields": {
+        "Latitude": "45.790988",
+        "Longitude": "21.254768",
+        "Address": "Pădurea Verde forest, northeast of Timișoara beside Dumbrăvița; exact cruising section unverified"
+      },
+      "description_sources": [],
+      "changes": [],
+      "coordinate_source_status": "MAP_REFERENCE_FOUND",
+      "coordinate_precision": "GENERAL_NAMED_FOREST_ONLY",
+      "coordinate_url": "https://www.google.com/maps/search/?api=1&query=Padurea+Verde+Timisoara+Dumbravita",
+      "gps_source_evidence_urls": [
+        "https://www.outdooractive.com/en/poi/banat/padurea-verde/802027461/",
+        "https://hcl.usr.ro/timisoara/2026/h510",
+        "https://www.visit-timis.ro/trasee-padurea-verde"
+      ]
+    },
+    {
+      "queue_index": 298,
+      "venue_id": "CRU-AB-0298",
+      "name": "Weikerlsee",
+      "proposed_fields": {
+        "Description": "Weikerlsee in Linz-Pichling is a pair of connected lakes, and the distinction matters. The smaller lake, Kleiner Weikerlsee, is the swimming area: regular bathing is on its southern shore, while the northern side is the official FKK/naturist section. The larger lake is for walking and nature, with swimming prohibited. That naturist shore explains the older cruising directory reference, but it doesn't establish a particular current meeting corner or a reliably active gay crowd. An April 2026 digital check-in is too little to prove men were meeting. The area is a warm-weather recreation destination with footpaths and plenty of other visitors; don't confuse the larger lake or the whole nature reserve with the smaller lake's designated nude-bathing stretch."
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/weikerlsee_linz_osterreich_12066",
+          "state": "direct source page inaccessible; archived source identity used"
+        },
+        {
+          "url": "https://www.linztourismus.at/freizeit/linz-entdecken/aktivitaeten/natur/seen-und-baeder/weikerlsee",
+          "state": "current tourism source directly confirms north FKK, south textile bathing and larger lake ban"
+        }
+      ],
+      "changes": [
+        "State FKK is on SMALL lake's north shore and swimming banned in large lake",
+        "Do not imply naturism alone establishes cruising"
+      ]
+    },
+    {
+      "queue_index": 350,
+      "venue_id": "CRU-AB-0350",
+      "name": "Terazije public toilet",
+      "proposed_fields": {
+        "Description": "This is the public toilet in the underground pedestrian passage beside Palata Albanija, where Terazije meets Sremska and Knez Mihailova in central Belgrade. The location is more precise than a generic 'Terazije toilet': go by the named underground passage rather than looking for facilities on the surface. The city lists the Palata Albanija WC as a free public convenience, normally 07:00–22:30 in winter and 07:00–23:00 in summer. Unlike many other entries, the cruising source has a few actual first-person claims in 2026, including a January visitor saying he met men and a May commenter describing repeated visits. Those are uncorroborated personal reports, not a reason to assume the place is always busy. It is a shared city WC with normal cleaning and visitor rules."
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/terazije_public_toilet_belgrade_serbia_and_montenegro_19898",
+          "state": "original entry describing underground passage and saved 2026 source posts directly checked"
+        },
+        {
+          "url": "https://zelenilo.rs/delatnosti/odrzavanje-zelenih-povrsina/sanitarni-objekti",
+          "state": "operator access unavailable on direct open; free/seasonal hours from prior operator research and independent Belgrade guide"
+        },
+        {
+          "url": "https://www.belgradecitycard.rs/javni-toaleti-u-centru-beograda/",
+          "state": "municipal public-WC summary referenced"
+        }
+      ],
+      "changes": [
+        "Add free entry",
+        "Keep source description's exact underground entrance and 2026 firsthand-claim distinction"
+      ]
+    },
+    {
+      "queue_index": 367,
+      "venue_id": "CRU-AB-0367",
+      "name": "Tripla Toilets",
+      "proposed_fields": {
+        "Description": "Tripla is the huge shopping and railway complex at Pasila station in Helsinki. The cruising directory names its toilets but doesn’t say which floor or toilet bank, which is the biggest problem if someone actually wants to find the place. A May 2026 post asks whether anybody is there; that is recent interest, not proof of cruising. Tripla’s operator says pedestrian routes are generally open 06:00–24:00, while a first-floor supermarket passage stays accessible around the clock. That does not make every toilet open 24 hours, so the previous description was too generous about overnight access. Until there’s a better toilet location or a firsthand recent account, this is more of a tentative lead than somewhere I’d recommend travelling across Helsinki for."
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/tripla_toilets_helsinki_finland_129658",
+          "state": "direct detail page unavailable; previously saved indexed recent post used"
+        },
+        {
+          "url": "https://malloftripla.fi/en/opening-hours",
+          "state": "operator's detailed pedestrian and retail hours directly read"
+        }
+      ],
+      "changes": [
+        "Correct erroneous 24-hour general mall access claim",
+        "Keep exact WC floor unconfirmed and no reliable activity"
+      ]
+    },
+    {
+      "queue_index": 383,
+      "venue_id": "CRU-AB-0383",
+      "name": "Ponte fiume Reno a Borgo Panigale",
+      "proposed_fields": {
+        "Description": "This is not an unidentified bridge. The original Italian directory points to the riverside park underneath Bologna’s Pontelungo, where Via Emilia Ponente meets Via del Triumvirato in Borgo Panigale. It describes cruising on foot around the bridge and park and historically mentions paid encounters, though those older statements say nothing reliable about the present crowd. The original driving-map reference is 44.511105, 11.291295. Pontelungo’s roadworks have been completed, but a reopened road does not verify that the riverside paths below remain unchanged. The May 2026 directory message was simply asking who might be there at night, not reporting an encounter. Use the bridge and river park as the location reference rather than treating any random Reno crossing as equivalent.",
+        "Latitude": "44.5111045837",
+        "Longitude": "11.2912950516",
+        "Address": "Pontelungo, Via Emilia Ponente / Via del Triumvirato, Borgo Panigale, Bologna"
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/it/cruising/ponte_fiume_reno_a_borgo_panigale_bologna_italia_6009",
+          "state": "original Italian source directly read, including intersecting streets"
+        },
+        {
+          "url": "https://www.comune.bologna.it/novita/comunicati-stampa/replica-del-comune-di-bologna-sul-rilievo-anac-relativo-ai-lavori-sul-pontelungo",
+          "state": "municipal road reopening carried forward from previous audit"
+        }
+      ],
+      "changes": [
+        "Replace unidentified bridge wording with verified Pontelungo/Via Emilia Ponente/Via del Triumvirato",
+        "Restore original source GPS"
+      ],
+      "coordinate_source_status": "ORIGINAL_SOURCE_PIN_RECOVERED",
+      "coordinate_precision": "ORIGINAL_CRUISING_DIRECTORY_PIN",
+      "coordinate_url": "https://www.google.com/maps/search/?api=1&query=44.5111045837%2C11.2912950516",
+      "gps_source_evidence_urls": [
+        "https://www.gays-cruising.com/it/cruising/ponte_fiume_reno_a_borgo_panigale_bologna_italia_6009",
+        "https://www.comune.bologna.it/novita/comunicati-stampa/replica-del-comune-di-bologna-sul-rilievo-anac-relativo-ai-lavori-sul-pontelungo",
+        "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/GROUP_A_B_18_LOCATION_VERIFICATION_RESEARCH_2026-11-08.json"
+      ]
+    },
+    {
+      "queue_index": 413,
+      "venue_id": "CRU-AB-0413",
+      "name": "Bagni Palazzo Reale",
+      "proposed_fields": {
+        "Description": "Palazzo Reale is Milan's exhibition palace beside the Duomo, and the old cruising listing is about its visitor toilets rather than the surrounding piazza. There are two, but the museum makes an important access distinction: the ground-floor WC is near the Scalone d'Onore staircase, whereas the first-floor toilet is by exhibition room 143 and serves people attending the current exhibitions. So these are not two general-purpose public toilets available at any time. The directory has a July 2026 online check-in, but that isn't an account of a meeting or even proof someone visited. With gallery opening hours, ticketing and staff supervision, this is a very tentative cruising lead. The verified building layout is useful, but it would be misleading to suggest guaranteed cruising or free access upstairs."
+      },
+      "description_sources": [
+        {
+          "url": "https://www2.comune.milano.it/web/palazzo-reale-milano/la-tua-visita/accessibilita",
+          "state": "official accessibility details recovered in search result"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/italy",
+          "state": "regional source reference; individual spot detail unavailable"
+        }
+      ],
+      "changes": [
+        "Make downstairs vs upstairs exhibition-visitor access distinction",
+        "No supported firsthand 2026 encounter"
+      ]
+    },
+    {
+      "queue_index": 436,
+      "venue_id": "CRU-AB-0436",
+      "name": "Oasi - Lungadige (Est)",
+      "proposed_fields": {},
+      "description_sources": [],
+      "changes": [],
+      "coordinate_source_status": "HOLD_FOR_SOURCE_IDENTITY_NOT_GPS_TECHNICAL_GAP",
+      "coordinate_precision": "BROAD_RIVERBANK_LABEL_WITHOUT_IDENTIFIABLE_SEGMENT",
+      "coordinate_url": "https://www.google.com/maps/search/?api=1&query=Oasi+Lungadige+Est+Verona",
+      "gps_source_evidence_urls": [
+        "https://www.gays-cruising.com/en/cruising/oasi_lungadige_est_verona_italia_114746",
+        "https://www.gays-cruising.com/it/cruising/palazzina_verona_italia_5902",
+        "https://turismo.comune.verona.it/nqcontent.cfm?a_id=35633",
+        "https://www.comune.verona.it/Vivere-il-comune/Luoghi/Lazzaretto"
+      ]
+    },
+    {
+      "queue_index": 439,
+      "venue_id": "CRU-AB-0439",
+      "name": "Zona Industriale - Ca' di Mazze",
+      "proposed_fields": {
+        "Latitude": "45.40749",
+        "Longitude": "11.02056",
+        "Address": "Via Ca' di Mazze, 37134 Verona, Palazzina industrial area; exact stopping point unverified"
+      },
+      "description_sources": [],
+      "changes": [],
+      "coordinate_source_status": "MAP_REFERENCE_FOUND",
+      "coordinate_precision": "GENERAL_NAMED_ROAD_CENTRE",
+      "coordinate_url": "https://www.google.com/maps/search/?api=1&query=Via+Ca%27+di+Mazze+Verona",
+      "gps_source_evidence_urls": [
+        "https://www.italiamappe.it/stradario/verona/via-ca%27-di-mazze%27/",
+        "https://cdn-3.distanzechilometriche.net/mappa/verona/via-ca-di-mazze/",
+        "https://www.gays-cruising.com/it/cruising/palazzina_verona_italia_5902"
+      ]
+    },
+    {
+      "queue_index": 464,
+      "venue_id": "CRU-AB-0464",
+      "name": "Parking Murcki",
+      "proposed_fields": {
+        "Description": "The Polish directory describes a parking area behind the MOL petrol station in Katowice-Murcki, on the road towards Mysłowice–Stara Wesoła. If you’re trying to find it, use the station as a landmark rather than assuming its forecourt is the cruising spot. More importantly, MOL’s own station list gives the address as ul. Pawła Kołodzieja 10 and the station position as 50.197800, 19.051901; the previous description used number 86 from a third-party listing. The directory has older references to evening activity and a more recent online presence message, but no independently confirmed current pattern. The parking area behind the station is still not precisely identified, and access to neighbouring lots may be restricted.",
+        "Address": "Parking behind MOL service station, ul. Pawła Kołodzieja 10, Katowice-Murcki; parking entrance unconfirmed"
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/parking_murcki_kattowitz_sud_poland_73929",
+          "state": "direct page blocked (451); original Polish description from earlier archive reviewed"
+        },
+        {
+          "url": "https://molgroupcards.com/pl/wyszukiwarka-stacji/download?format=pdf",
+          "state": "official MOL station list verified through web search text; PDF original not analyzed"
+        }
+      ],
+      "changes": [
+        "MOL operator address Kołodzieja 10 supersedes third-party number 86",
+        "Make station-pin versus unconfirmed parking bay distinction explicit"
+      ]
+    },
+    {
+      "queue_index": 465,
+      "venue_id": "CRU-AB-0465",
+      "name": "Aquadrom Pool",
+      "proposed_fields": {
+        "Description": "Aquadrom is a public water park in Ruda Śląska, not Katowice, and the cruising claims are about the steam sauna rather than the swimming pools. The original directory recommends Saturday mornings and mentions men using the sauna, but its own old popularity ratings are not proof that it is busy now. June 2026 posts are more useful: one man described a good visit to the steam room, while another reported finding little happening during a late-morning visit. That mixed evidence suggests some interest without a dependable peak. You pay for a normal aquatic-centre visit here, and the saunarium has its own schedule: Monday–Wednesday from 12:00, Thursday–Friday from 10:00, weekends from 09:00, generally closing at 22:00. It isn’t a gay cruising sauna, so respect the facility’s rules and other users."
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/aquadrom_pool_katowice_poland_74928",
+          "state": "original page and historical Saturday claim directly read"
+        },
+        {
+          "url": "https://aquadrom.pl/kontakt",
+          "state": "operator address and overall hours directly read"
+        },
+        {
+          "url": "https://aquadrom.pl/atrakcje",
+          "state": "saunarium information from archived prior operator review; exact zone hours should be reconfirmed if changed"
+        }
+      ],
+      "changes": [
+        "Use correct city Ruda Śląska",
+        "Distinguish paid saunarium weekday hours from general pool hours",
+        "Preserve both positive and quiet June 2026 accounts"
+      ]
+    },
+    {
+      "queue_index": 472,
+      "venue_id": "CRU-AB-0472",
+      "name": "Świecko Stacja Paliw Shell, boczna droga",
+      "proposed_fields": {
+        "Latitude": "52.313746",
+        "Longitude": "14.640666",
+        "Address": "Side road near Shell service station, Świecko 36, 69-100 Słubice; road/entry unknown"
+      },
+      "description_sources": [],
+      "changes": [],
+      "coordinate_source_status": "MAP_REFERENCE_FOUND",
+      "coordinate_precision": "SHELL_STATION_LANDMARK_ONLY",
+      "coordinate_url": "https://www.google.com/maps/search/?api=1&query=Shell+Swiecko+36+Poland",
+      "gps_source_evidence_urls": [
+        "https://www.mylpg.eu/pl/stacje/polska/stacja/Shell-544AB74A-EAD0-66ED-4ABB-C5BD55E1765E",
+        "https://sprawdzadres.pl/lubuskie/slubice/swiecko/36",
+        "https://mapa.targeo.pl/shell-stacja-paliw-swiecko-36-69-100-swiecko~4672652/shell-stacja-paliw/adres",
+        "https://www.gays-cruising.com/en/cruising/wiecko_stacja_paliw_shell_boczna_droga_slubice_polska_90388"
+      ]
+    },
+    {
+      "queue_index": 492,
+      "venue_id": "CRU-AB-0492",
+      "name": "Antvorskov Syd",
+      "proposed_fields": {
+        "Description": "Antvorskov has two E20 rest areas outside Slagelse, but this directory entry points most clearly to the southern side, Antvorskov Syd. The original map destination at 55.398716, 11.380720 matches independently mapped Syd, and a source commenter specifically named that side. The older description also refers to bushes west of the toilets and gives a road direction that can be read ambiguously, so the correct signed approach matters far more than simply entering 'Antvorskov' in a satnav. Early 2026 posts include meeting invitations and one visitor saying nobody arrived. That’s not enough to promise an active crowd or reliable hours. Antvorskov Nord is a different motorway entrance; do not use the Syd pin as directions to both.",
+        "Address": "E20 Antvorskov Syd rest area, near Slagelse, Denmark"
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/antvorskov_rest_area_slagelse_denmark_18949",
+          "state": "original rest-area text and road-direction claim directly read"
+        },
+        {
+          "url": "https://poi.gpsforalle.dk/print2.php?cid=1026&gid=555",
+          "state": "independent north/south GPS alignment carried forward from archived QA"
+        }
+      ],
+      "changes": [
+        "Specify Syd as location of source GPS rather than Nord/Syd combined address",
+        "Separate carriageway directions, preserve unknown actual cruising outcome"
+      ]
+    },
+    {
+      "queue_index": 611,
+      "venue_id": "CRU-AB-0611",
+      "name": "Neeltje Jans",
+      "proposed_fields": {
+        "Description": "Neeltje Jans is a spacious coastal naturist beach on the seaward side of the Oosterschelde storm-surge barrier. A July 2026 visitor says the nude-bathing section now begins at the southern beach access, with clearer signage, and describes parking in the shade beneath the Roompotsluis viaduct. The same visitor warned that kitesurfers were operating unusually close to swimmers, so pay attention to the water as well as the weather. Older guestbook discussions mention men walking in the high dunes, but those are not fresh evidence of current cruising; the dunes themselves are protected and entering them is restricted. If you're going for a naturist beach day, the place and access are well documented. If you're going specifically for cruising, the present reports don't establish reliable activity or a permitted area."
+      },
+      "description_sources": [
+        {
+          "url": "https://www.naaktstrandje.nl/v2/naaktstrand/neeltje-jans/gastenboek/en",
+          "state": "2026-07-26 visitor account directly read; mentions southern access and kitesurfing, NOT men cruising"
+        },
+        {
+          "url": "https://www.hetzeeuwselandschap.nl/natuurgebieden/neeltje-jans",
+          "state": "nature-reserve manager independently identifies protected location"
+        }
+      ],
+      "changes": [
+        "Correct earlier QA mistake: 26 July 2026 report describes nudist access and kitesurfers, NOT men observed cruising",
+        "Historic dunes accounts should not be represented as current 2026 sexual activity"
+      ]
+    },
+    {
+      "queue_index": 667,
+      "venue_id": "CRU-AB-0667",
+      "name": "Spektepark",
+      "proposed_fields": {
+        "Description": "Spektepark in Berlin-Spandau stretches around Großer Spektesee, with lawns, walking paths and a car park off Am Kiesteich. The older cruising guide specifically described scrub beside a path from the parking area down towards the lake, rather than the entire park. But the most recent July 2026 forum comment simply asks whether anything still happens, and earlier posts are mixed—so there is no credible present-day cruising timetable. There have also been access changes: the Spektelakesteg I pedestrian bridge was closed after damage in June 2026, although other nearby bridges had reopened. One important correction to older notices: Spandau's 31 August water-quality warning was lifted on 14 September after improved test results. The park is open recreation space; neither that former warning nor the bridge works establishes closure of the whole park."
+      },
+      "description_sources": [
+        {
+          "url": "https://gay-szene.net/spektepark-in-berlin/12638/eintrag.html",
+          "state": "original park-to-lake path description and 2026 question directly read"
+        },
+        {
+          "url": "https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2026/pressemitteilung.1708712.php",
+          "state": "August 31 warning verified"
+        },
+        {
+          "url": "https://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2026/pressemitteilung.1713481.php",
+          "state": "IMPORTANT September 14 lifting notice found, supersedes August warning"
+        },
+        {
+          "url": "https://www.berlin.de/sen/uvk/presse/pressemitteilungen/2026/pressemitteilung.1679333.php",
+          "state": "June bridge closure verified; no later official reopening established"
+        }
+      ],
+      "changes": [
+        "Important new correction: don't perpetuate 31 Aug warning as active; lifted 14 Sep 2026",
+        "Add old source's real landmark path without depicting recent cruising",
+        "Keep June pedestrian bridge closure distinct from entire park status"
+      ]
+    },
+    {
+      "queue_index": 701,
+      "venue_id": "CRU-AB-0701",
+      "name": "Uni-See",
+      "proposed_fields": {
+        "Description": "Bremen's Uni-See, officially Stadtwaldsee, has long been popular for swimming and FKK sunbathing. The original cruising guide was more specific than the previous description: it mentioned reeds and wooded ground between Hochschulring and Uni-Wildnis, reached from the western side. Those historic paths may not look the same today. A March 2026 visitor reported that high bushes around the parking area had been cleared, reducing privacy, while a June forum post asked why woodland by the naturist area had been fenced. There is also a separate, serious access issue: northern-shore stabilisation work was scheduled to start in November 2026, with temporary fences and dangerous loose sand until it settles. The FKK beach itself is on the eastern shore; it is not automatically the reported cruising section. Men may still visit, but there is no trustworthy fixed peak or guaranteed clear path."
+      },
+      "description_sources": [
+        {
+          "url": "https://gay-szene.net/uni-see-in-bremen/6824/eintrag.html",
+          "state": "original source and dated March/June 2026 comments directly read"
+        },
+        {
+          "url": "https://butenunbinnen.qa.gcp.radiobremen.de/nachrichten/bauarbeiten-unisee-bremen-100.html",
+          "state": "Oct 21 2026 northern shore construction and dangerous sand report verified"
+        },
+        {
+          "url": "https://www.bremen.eu/stadtwaldsee-lake",
+          "state": "official tourism site confirms eastern FKK beach"
+        }
+      ],
+      "changes": [
+        "Restore original landmark between Hochschulring and Uni-Wildnis",
+        "Include March/June 2026 vegetation and fence reports",
+        "Explain November shore works and unstable sand without asserting entire lake closure"
+      ]
+    },
+    {
+      "queue_index": 732,
+      "venue_id": "CRU-AB-0732",
+      "name": "P & R Eichlinghofen",
+      "proposed_fields": {
+        "Description": "This is the park-and-ride area by Universitätsstraße in Dortmund-Eichlinghofen, with old cruising descriptions referring to the rear of the lot and adjoining shrubs rather than university buildings. The original guide says evenings and weekends were traditionally busiest, but that reflects older listings. A real July 2026 forum comment says there was still activity and describes a mixed, generally older male crowd. Older firsthand reports mention men meeting in the morning and among the bushes, but those are several years old, so they shouldn't be turned into a current schedule. The exact rear parking row hasn't been independently pinned, and parking and shrub access may have changed. It's a more credible lead than a mere digital check-in, but still not somewhere with guaranteed activity."
+      },
+      "description_sources": [
+        {
+          "url": "https://gay-szene.net/p-und-r-eichlinghofen-in-dortmund/10628/eintrag.html",
+          "state": "original location description and July 22 2026 comment directly read"
+        }
+      ],
+      "changes": [
+        "Restore older weekend/evening historical timing as clearly undated source claim",
+        "Distinguish July 2026 claimed traffic from old first-person reports",
+        "Prior audit mentions Oct 13 2026 item absent from currently accessible page: do not silently treat as independently checked"
+      ]
+    },
+    {
+      "queue_index": 884,
+      "venue_id": "CRU-AB-0884",
+      "name": "Parkplatz an der B 471",
+      "proposed_fields": {
+        "Description": "The original source is quite specific: the wooded B471 car park is beside the Isar bridge between Garching and Ismaning. Travelling towards Ismaning, it says to look for the parking area just after the bridge; from Ismaning, the turn-off is before the crossing. A second directory describes a nearby wooded car park and the Isar gravel bank as a traditional spot for gay and bisexual men, though it isn't proven that both directories mean exactly the same parking entrance. Two June 2026 reports paint different pictures: one visitor described men going into the woods on dry afternoons, while another found nobody on two visits. That makes a good-weather afternoon a reported possibility, not a guarantee. Use the source's road and bridge as the location, not a generic Munich pin; check lawful parking and riverside access."
+      },
+      "description_sources": [
+        {
+          "url": "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
+          "state": "original explicit directions and 7–8 June 2026 comments directly read"
+        },
+        {
+          "url": "https://planet-randy.com/blog/eintrag/isar-kiesbank/",
+          "state": "independent historic description of Isar gravel bank car park directly read"
+        }
+      ],
+      "changes": [
+        "Use proper Garching–Ismaning municipality, with both approach directions",
+        "Add contrasting first-person June 2026 observations rather than saying no current firsthand reports",
+        "Keep suspected Planet Randy alias uncertain"
+      ]
+    },
+    {
+      "queue_index": 960,
+      "venue_id": "CRU-AB-0960",
+      "name": "Parking río Llobregat El Prat",
+      "proposed_fields": {
+        "Description": "This is a specific riverside car park in El Prat de Llobregat, not just an anonymous stretch of the river. The original Spanish directions say to leave the C-31 at exit 194B when coming from Barcelona, go to the roundabout and follow the access road towards the Llobregat, with a small parking area on the right. The original directory map destination is 41.336864, 2.096415. That gives a much better location reference than the old description, which incorrectly said no car park, bridge or approach could be identified. The August 2026 source signal was only a digital check-in, so it does not establish actual cruising or busy hours. Check local road signs and river protection restrictions rather than assuming every unmarked vehicle track is public.",
+        "Latitude": "41.3368644714",
+        "Longitude": "2.096414566",
+        "Address": "Small river car park by Llobregat, C-31 exit 194B, El Prat de Llobregat; original source map reference"
+      },
+      "description_sources": [
+        {
+          "url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "state": "regional indexed source page examined in archived QA"
+        },
+        {
+          "url": "https://www.gays-cruising.com/es/cruising/parking_rio_llobregat_el_prat_barcelona_espana",
+          "state": "direct guessed source URL unavailable; original Spanish directions/maps captured in previous 18-location audit"
+        }
+      ],
+      "changes": [
+        "Replace no-known-location wording with recovered source directions (C-31 exit 194B)",
+        "Add original source GPS to proposed data only"
+      ],
+      "coordinate_source_status": "ORIGINAL_SOURCE_PIN_RECOVERED",
+      "coordinate_precision": "ORIGINAL_CRUISING_DIRECTORY_PIN",
+      "coordinate_url": "https://www.google.com/maps/search/?api=1&query=41.3368644714%2C2.096414566",
+      "gps_source_evidence_urls": [
+        "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/GROUP_A_B_18_LOCATION_VERIFICATION_RESEARCH_2026-11-08.json",
+        "https://www.gays-cruising.com/en/barcelona/spain"
+      ]
+    }
+  ]
+}
