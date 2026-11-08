@@ -175,7 +175,22 @@
       157,
       158,
       159,
-      160
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175
     ],
     "genuinely_source_assessed_complete": [
       1,
@@ -227,7 +242,13 @@
       150,
       151,
       153,
-      158
+      158,
+      161,
+      162,
+      164,
+      169,
+      174,
+      175
     ],
     "incomplete": [
       {
@@ -779,20 +800,65 @@
         "index": 160,
         "id": "GC1-SLOVENIA-08",
         "reason": "Ljubljana station WC source HTTP451; ongoing station reconstruction affects original access"
+      },
+      {
+        "index": 163,
+        "id": "GC1-SLOVENIA-10",
+        "reason": "Forest Logatec original #14979 unreadable, site-specific 2026 question explicitly asks where location is"
+      },
+      {
+        "index": 165,
+        "id": "GC1-SLOVENIA-14",
+        "reason": "Petrol WC Reststop Prekmurje original #92397 unreadable, no matched station/road direction"
+      },
+      {
+        "index": 166,
+        "id": "GC1-SLOVENIA-13",
+        "reason": "Kozina page #47373 unreadable, source city Postojna conflicting, exact stop unknown"
+      },
+      {
+        "index": 167,
+        "id": "GC1-SWEDEN-07",
+        "reason": "Grandalen original #48485 unreadable, no source pin or carriageway direction"
+      },
+      {
+        "index": 168,
+        "id": "GC1-SWEDEN-02",
+        "reason": "Frösvi original #82964 unreadable, Swedish official E18 stop identity confirmed but original pin/subsection unknown"
+      },
+      {
+        "index": 170,
+        "id": "GC1-SWEDEN-01",
+        "reason": "Klinga original #103360 unreadable, Trafikverket rest area exists but precise source pin/direction unknown"
+      },
+      {
+        "index": 171,
+        "id": "GC1-SWEDEN-05",
+        "reason": "Evelunds Rondellen original #33041 unreadable, actual rest-area side/source pin unknown"
+      },
+      {
+        "index": 172,
+        "id": "GC1-SWEDEN-08",
+        "reason": "Västra Skogen original #117622 unreadable, source-specific woodland subsection unknown"
+      },
+      {
+        "index": 173,
+        "id": "GC1-SWEDEN-12",
+        "reason": "Parkering Lögdeåälven source #127713 unreadable, Sörmjöle/river area geography conflict and parking identity unresolved"
       }
     ],
-    "completed_count": 50,
-    "remaining_not_completed": 241,
-    "unreviewed_indices_start": 161,
+    "completed_count": 56,
+    "remaining_not_completed": 235,
+    "unreviewed_indices_start": 176,
     "next_incomplete_index": 4,
     "next_incomplete_id": "GC1-ANDORRA-04",
-    "last_completed_index": 158,
-    "last_completed_id": "GC1-SLOVENIA-04",
+    "last_completed_index": 175,
+    "last_completed_id": "GC1-SWEDEN-10",
     "newly_identified_location_count": 0,
     "first_complete_5_record_checkpoint": true,
-    "last_assessed_index": 160,
-    "last_assessed_id": "GC1-SLOVENIA-08",
-    "checkpoint_count": 10,
+    "last_assessed_index": 175,
+    "last_assessed_id": "GC1-SWEDEN-10",
+    "checkpoint_count": 11,
     "first_checkpoint_indices": [
       1,
       2,
@@ -801,13 +867,13 @@
       14
     ],
     "last_completed_batch_indices": [
-      148,
-      150,
-      151,
-      153,
-      158
+      161,
+      162,
+      164,
+      169,
+      174
     ],
-    "next_complete_five_needs": 5
+    "next_complete_five_needs": 4
   },
   "saved_evidence_files": [
     "research/cruising/part5/A/P3_deep_source_recheck_0001_0005_PARTIAL_2026-11-08.json",
@@ -845,12 +911,16 @@
     "research/cruising/part5/A/P3_deep_source_recheck_0146_0150_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0151_0155_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0156_0160_2026-11-08.json",
-    "research/cruising/part5/A/P3_completed_batch_0046_0050_2026-11-08.json"
+    "research/cruising/part5/A/P3_completed_batch_0046_0050_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0161_0165_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0166_0170_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0171_0175_2026-11-08.json",
+    "research/cruising/part5/A/P3_completed_batch_0051_0055_2026-11-08.json"
   ],
   "last_confirmed_commit": "956c6d4c4635f092bfb539c5bae801951a94f6bf",
-  "approach": "Next untouched original index 161. 160 examined, 50 substantive source assessments completed, 110 explicitly incomplete; 10 verified immutable completed-five batches. Historic online claims and 2026 first-person reports remain separate. No live listing modifications.",
+  "approach": "Next untouched original #176. 175 examined, 56 substantively researched, 119 incomplete; 11 immutable five-record checkpoints. #175 completed but awaiting next five batch (4 more). #174 map pin is disputed by dated firsthand report; no fake precise cruising point. Historic/negative/current reports preserved.",
   "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write.",
-  "last_confirmed_evidence_commit": "a92a56b092fbd0a8eb9322da8e565cf9215f2266",
-  "latest_checkpoint_commit": "d2fcf3aa8482e910443159bc25d4e03d5439d255",
-  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0046_0050_2026-11-08.json"
+  "last_confirmed_evidence_commit": "bee7239ace3afb6b59c38465cad7721e0f2832f7",
+  "latest_checkpoint_commit": "0aff1cc45a11769179177a6e520617a2b8e52708",
+  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0051_0055_2026-11-08.json"
 }
