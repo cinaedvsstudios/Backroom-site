@@ -4,14 +4,14 @@
   "scope": "86 candidates classified research-incomplete as of start",
   "original_backlog_count": 86,
   "working_records": 186,
-  "records_received_substantive_content_review": 40,
+  "records_received_substantive_content_review": 45,
   "records_source_review_fully_complete": 0,
   "original_direct_details_read_this_batch": 1,
   "new_geographically_identified": [
     "CRU-CD2-209"
   ],
-  "last_assessed": "CRU-CD2-281",
-  "next_unstarted": "CRU-CD2-282",
+  "last_assessed": "CRU-CD2-295",
+  "next_unstarted": "CRU-CD2-297",
   "still_pending_deep_followup": [
     "CRU-CD2-200",
     "CRU-CD2-202",
@@ -52,7 +52,12 @@
     "CRU-CD2-275",
     "CRU-CD2-278",
     "CRU-CD2-280",
-    "CRU-CD2-281"
+    "CRU-CD2-281",
+    "CRU-CD2-282",
+    "CRU-CD2-286",
+    "CRU-CD2-287",
+    "CRU-CD2-292",
+    "CRU-CD2-295"
   ],
   "completed_batches": [
     {
@@ -150,6 +155,18 @@
       ],
       "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_008_2026-11-08.json",
       "status": "5 substantive content investigations. Lago di Peretola geographic lake established; 2018 Lacchiarella historical mention found. None source-exhaustive (blocked primary details)."
+    },
+    {
+      "number": 9,
+      "ids": [
+        "CRU-CD2-282",
+        "CRU-CD2-286",
+        "CRU-CD2-287",
+        "CRU-CD2-292",
+        "CRU-CD2-295"
+      ],
+      "file": "GROUP_CD_2_CONTENT_RESEARCH_BATCH_009_2026-11-08.json",
+      "status": "Five substantive content investigations, one exact source GPS recovered; zero fully exhaustive."
     }
   ],
   "research_rules": "A researched batch may contain partially researched candidates, but do not count source-exhaustive completion until URLs/content are substantively examined. Never label inaccessible-original candidates unidentifiable. Commit every five investigated; continue from next_unstarted and revisit pending_followup.",
@@ -167,8 +184,12 @@
     "CRU-CD2-266 Sandviken in Raasepori not Vaasa; do not conflate",
     "CRU-CD2-280 original 'lake unidentified' assertion overturned: identifiable protected Lago di Peretola at Sesto Fiorentino with 2025-12-31 main-gate closure report",
     "CRU-CD2-281 2018 newspaper explicitly named Boschetto di Lacchiarella for outdoor encounters; same as Villamaggiore not proven",
-    "CRU-CD2-278 source says Jack Danner is 0.2 km from separate Pineta Punta Sabbioni ID, do not merge"
+    "CRU-CD2-278 source says Jack Danner is 0.2 km from separate Pineta Punta Sabbioni ID, do not merge",
+    "CRU-CD2-286 original Italian detailed listing read: precise map 45.4995498657,9.1210985184, 2025-08-26 historical firsthand report",
+    "CRU-CD2-295 Turate 51712 original indexed directions to woodland beside factory, no original GPS or dated report",
+    "CRU-CD2-292 original source detail 5691 discovered but not readable",
+    "CRU-CD2-282 park-and-ride and motorway rest areas are distinct"
   ],
-  "last_confirmed_batch_commit": "75d9d6854a452a5068149f4a9daec1f1fc8afa0e",
+  "last_confirmed_batch_commit": "16fc009aebea1b6b1fbda866997650fd5bd6243e",
   "handover_file": "GROUP_CD_2_CONTINUATION_HANDOVER_2026-11-08.md"
 }
