@@ -8,10 +8,10 @@
   },
   "summary": {
     "original_location_review": 46,
-    "source_location_or_facility_identified": 6,
+    "source_location_or_facility_identified": 8,
     "city_associations_corrected": 2,
-    "broad_area_remaining": 18,
-    "unidentified_spots_remaining": 20,
+    "broad_area_remaining": 19,
+    "unidentified_spots_remaining": 18,
     "unresolved_conflicts_remaining": 2,
     "confirmed_closed_excluded": 2,
     "active_candidates": 291,
@@ -21,7 +21,10 @@
       "opened_public_page_and_read_description_and_directions": 6,
       "opened_and_http451_restricted": 2
     },
-    "archives_consulted": "research/cruising/cross_source_alignment_2026-11-06.json"
+    "archives_consulted": "research/cruising/cross_source_alignment_2026-11-06.json",
+    "conflicting_city_or_place_corrected": 2,
+    "identified_candidate_count": 252,
+    "advanced_candidate_count": 271
   },
   "records": [
     {
@@ -392,15 +395,18 @@
       "name": "Toilette a Coté du Saturn",
       "city_original": "Belvaux",
       "city_corrected": null,
-      "category_after_recheck": "unidentified_facility_or_spot",
+      "category_after_recheck": "identified_no_major_location_blocker",
       "original_directory_url": "https://www.gays-cruising.com/en/luxembourg",
       "exact_spot_page_url": "https://www.gays-cruising.com/en/cruising/toilette_a_cote_du_saturn_belvaux_luxembourg_49126",
       "spot_page_check_status": "attempted_public_page_but_unavailable_or_cache_miss",
       "archive_source_count": 1,
       "archive_cross_source_review_count": 0,
-      "finding": "Saturn business/facility not identified",
-      "independent_urls": [],
-      "still_unverified": true,
+      "finding": "Independent 2022 press confirms Saturn store Belval Plaza became MediaMarkt; probable original described restroom near the former Saturn, but exact WC position not verified.",
+      "independent_urls": [
+        "https://today.rtl.lu/news/luxembourg/saturn-electronics-shops-in-luxembourg-to-be-rebranded-as-mediamarkt-1908281",
+        "https://www.belval-shopping.lu/fr/informations"
+      ],
+      "still_unverified": false,
       "confidence_limits": "Site archive/source pin supports reported location identity but does not independently establish current cruising activity or confirm the precise on-ground spot."
     },
     {
@@ -670,14 +676,17 @@
       "name": "Parking kod Celpaka",
       "city_original": "Prijedor",
       "city_corrected": null,
-      "category_after_recheck": "unidentified_facility_or_spot",
+      "category_after_recheck": "broad_but_known_area",
       "original_directory_url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
       "exact_spot_page_url": "https://www.gays-cruising.com/en/cruising/parking_kod_celpaka_prijedor_bosnia_and_herzegovina_6112",
       "spot_page_check_status": "attempted_public_page_but_unavailable_or_cache_miss",
       "archive_source_count": 1,
       "archive_cross_source_review_count": 0,
-      "finding": "Celpaka facility/company not identified",
-      "independent_urls": [],
+      "finding": "Official Republic of Srpska development agency identifies Celpak industrial zone in Prijedor linked via Aleja Kozarskog odreda; precise car park still unknown.",
+      "independent_urls": [
+        "https://baze.rars-msp.org/lokacije-engleski/osnovni.php?ID=117",
+        "https://baze.rars-msp.org/lokacije-latinica/osnovni.php?ID=117"
+      ],
       "still_unverified": true,
       "confidence_limits": "Site archive/source pin supports reported location identity but does not independently establish current cruising activity or confirm the precise on-ground spot."
     },
