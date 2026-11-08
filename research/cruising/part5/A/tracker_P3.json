@@ -145,7 +145,17 @@
       127,
       128,
       129,
-      130
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140
     ],
     "genuinely_source_assessed_complete": [
       1,
@@ -183,7 +193,13 @@
       118,
       122,
       129,
-      130
+      130,
+      131,
+      133,
+      136,
+      137,
+      138,
+      140
     ],
     "incomplete": [
       {
@@ -655,20 +671,40 @@
         "index": 128,
         "id": "GC1-MONTENEGRO-14",
         "reason": "Krčevac stene nude beach original index only, exact shoreline/entry unavailable"
+      },
+      {
+        "index": 132,
+        "id": "GC1-MONTENEGRO-02",
+        "reason": "Brdo Gorica original #123433 detail inaccessible; precise hill sublocation unidentified"
+      },
+      {
+        "index": 134,
+        "id": "GC1-MONTENEGRO-07",
+        "reason": "Ljubović hill original page inaccessible; changed 2026 footpath makes historic section uncertain"
+      },
+      {
+        "index": 135,
+        "id": "GC1-MONTENEGRO-08",
+        "reason": "Ivan Milutinović Park rebuilt Nov 6 2026; original exact section unverified"
+      },
+      {
+        "index": 139,
+        "id": "GC1-MONTENEGRO-10",
+        "reason": "White beach source map recovered but actual officially named beach and source after-midnight versus afternoon conflict unresolved"
       }
     ],
-    "completed_count": 36,
-    "remaining_not_completed": 255,
-    "unreviewed_indices_start": 131,
+    "completed_count": 42,
+    "remaining_not_completed": 249,
+    "unreviewed_indices_start": 141,
     "next_incomplete_index": 4,
     "next_incomplete_id": "GC1-ANDORRA-04",
-    "last_completed_index": 130,
-    "last_completed_id": "GC1-MONTENEGRO-09",
+    "last_completed_index": 140,
+    "last_completed_id": "GC1-MONTENEGRO-13",
     "newly_identified_location_count": 0,
     "first_complete_5_record_checkpoint": true,
-    "last_assessed_index": 130,
-    "last_assessed_id": "GC1-MONTENEGRO-09",
-    "checkpoint_count": 7,
+    "last_assessed_index": 140,
+    "last_assessed_id": "GC1-MONTENEGRO-13",
+    "checkpoint_count": 8,
     "first_checkpoint_indices": [
       1,
       2,
@@ -677,13 +713,13 @@
       14
     ],
     "last_completed_batch_indices": [
-      110,
-      116,
-      118,
-      122,
-      129
+      130,
+      131,
+      133,
+      136,
+      137
     ],
-    "next_complete_five_needs": 4
+    "next_complete_five_needs": 3
   },
   "saved_evidence_files": [
     "research/cruising/part5/A/P3_deep_source_recheck_0001_0005_PARTIAL_2026-11-08.json",
@@ -711,12 +747,16 @@
     "research/cruising/part5/A/P3_deep_source_recheck_0116_0120_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0121_0125_2026-11-08.json",
     "research/cruising/part5/A/P3_deep_source_recheck_0126_0130_2026-11-08.json",
-    "research/cruising/part5/A/P3_completed_batch_0031_0035_2026-11-08.json"
+    "research/cruising/part5/A/P3_completed_batch_0031_0035_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0131_0135_2026-11-08.json",
+    "research/cruising/part5/A/P3_addendum_0131_original_source_recovered_2026-11-08.json",
+    "research/cruising/part5/A/P3_deep_source_recheck_0136_0140_2026-11-08.json",
+    "research/cruising/part5/A/P3_completed_batch_0036_0040_2026-11-08.json"
   ],
   "last_confirmed_commit": "956c6d4c4635f092bfb539c5bae801951a94f6bf",
-  "approach": "Resume original index #131. 130 original records examined, 36 substantive source-reviewed, 94 explicitly incomplete. #130 source research completed but awaiting next five-record checkpoint. Do not pretend primary cache-missed pages mean sites absent. Preserve all original URL/date/activity states and no live edits.",
+  "approach": "Next untouched #141. 140 examined, 42 substantively researched, 98 incomplete, eight immutable five-record checkpoints. #138 and #140 complete awaiting ninth batch, requiring 3 more genuinely complete records. Avoid incorrect permanent closures/mergers and never infer activity from tourism operation.",
   "user_policy": "No publication, no false source negatives, never exclude hazards automatically, retain all primary/report URLs and negative/historic findings; save every five genuinely researched records and verify GitHub write.",
-  "last_confirmed_evidence_commit": "d389c76987421eeadfc53b66cdabb0b492d1d3dd",
-  "latest_checkpoint_commit": "230f58e3c591f539133eef97dfe58eeb644aeecc",
-  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0031_0035_2026-11-08.json"
+  "last_confirmed_evidence_commit": "f6aefc111212c342c18c4900fcdd45f2dd9c39a9",
+  "latest_checkpoint_commit": "aa2375afda02b583e77f529e5ddd9804ea5ded4c",
+  "latest_checkpoint_link": "https://github.com/cinaedvsstudios/Backroom-site/blob/main/research/cruising/part5/A/P3_completed_batch_0036_0040_2026-11-08.json"
 }
