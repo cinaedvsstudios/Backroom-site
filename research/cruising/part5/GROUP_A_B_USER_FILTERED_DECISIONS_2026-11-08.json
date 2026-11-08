@@ -6,9 +6,9 @@
     "original": 210,
     "already_removed_confirmed_duplicates": 8,
     "removed_user_categories": 17,
-    "normal_mapped": 140,
+    "normal_mapped": 141,
     "unidentifiable_deferred": 8,
-    "location_research_open": 37,
+    "location_research_open": 36,
     "remaining_active_total": 185
   },
   "user_decisions": {
@@ -790,31 +790,6 @@
       ]
     },
     {
-      "queue_index": 884,
-      "name": "Parkplatz an der B 471",
-      "city": "Munich",
-      "issue": "B471 between Garching and Ismaning includes multiple car parks/bridge approaches.",
-      "research": "Map pull-in immediately east of Heckerbrücke on B471 towards Ismaning, not the separate bridge over Mittlerer Isarkanal.",
-      "recheck": {
-        "checked_2026_11_08": true,
-        "finding": {
-          "finding": "Original directory specifies B471 Isar bridge west/east approach; road authority identifies historic Heckerbrücke on B471 between Garching and Ismaning, a confirmed named bridge landmark.",
-          "source_url": "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
-          "confidence": "bridge_identified_as_Heckerbruecke_parkland_not_yet_PIN",
-          "next": "Map pull-in immediately east of Heckerbrücke on B471 towards Ismaning, not the separate bridge over Mittlerer Isarkanal.",
-          "additional_source": "https://www.stbafs.bayern.de/service/medien/meldungen/2024/heckerbrucke-b-471-ismaning-garching-halbseitige-sperrung-am-30-april-zwischen-9-und-15-uhr-wegen-bauwerksprufung/"
-        },
-        "source_url": "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html"
-      },
-      "links": [
-        "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
-        "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
-        "https://planet-randy.com/blog/eintrag/isar-kiesbank/",
-        "https://www.sueddeutsche.de/muenchen/toter-aus-ismaning-vermisster-81-jaehriger-wurde-ermordet-1.1176927",
-        "https://www.stbafs.bayern.de/service/medien/meldungen/2024/heckerbrucke-b-471-ismaning-garching-halbseitige-sperrung-am-30-april-zwischen-9-und-15-uhr-wegen-bauwerksprufung/"
-      ]
-    },
-    {
       "queue_index": 968,
       "name": "La Laja-Mercalaspalmas",
       "city": "Las Palmas de Gran Canaria",
@@ -1255,6 +1230,20 @@
         "https://www.religiousgreece.gr/en/attractions/church-agia-fotini",
         "https://www.researchgate.net/publication/337419448_The_archaeology_of_in-between_places_Finds_under_the_Ilissos_River_bridge_in_Athens"
       ]
+    },
+    {
+      "queue_index": 884,
+      "name": "Parkplatz an der B 471",
+      "decision": "Mapped named B471 Isarbrücke car park, side identified by original directions",
+      "gps": [
+        48.238688,
+        11.673832
+      ],
+      "sources": [
+        "https://gay-szene.net/parkplatz-an-der-b-471-in-muenchen/9667/eintrag.html",
+        "https://www.stbafs.bayern.de/service/medien/meldungen/2024/heckerbrucke-b-471-ismaning-garching-halbseitige-sperrung-am-30-april-zwischen-9-und-15-uhr-wegen-bauwerksprufung/"
+      ],
+      "note": "Location reference corroborated by hiking guide, not specific sexual activity map pin."
     }
   ]
 }
