@@ -1,0 +1,550 @@
+{
+  "_meta": {
+    "purpose": "Worker A consolidation decision overlay; preserves immutable batch research and master queue",
+    "created_berlin_date": "2026-11-08",
+    "research_only": true,
+    "changes_live_listings": false,
+    "total_candidates_reviewed": 293,
+    "previous_broad_location_flag_count": 146,
+    "narrow_location_review_count": 46,
+    "important_limit": "Narrow review list is a rule-based, manually curated triage from research flags, not a proof that other entries have perfect coordinates. Individual source site verification remains incomplete."
+  },
+  "decision_policy": {
+    "recency": "Do not require a confirmed physical sexual encounter. Keep separate recent discussions, dated questions, self check-ins, firsthand accounts, older listings and negative reports; no negative conclusion from absent data.",
+    "public_shared_spaces": "Informational context only; not a categorical disqualification.",
+    "general_access_and_safety": "Informational context only unless an explicit current closure makes normal public entry unavailable.",
+    "old_information": "Combine with recency/conflict review, rather than treating age alone as a separate blocker.",
+    "technical_source_pages": "Retain source links and inaccessible/blocked statuses; lack of access is not proof of no location."
+  },
+  "location_review": [
+    {
+      "index": 6,
+      "proposal_id": "GC1-ANDORRA-06",
+      "name": "Paseo al lado del Río Valira",
+      "city": "Andorra la Vella",
+      "country": "Andorra",
+      "reason": "Broad riverside promenade; specific stretch not identified"
+    },
+    {
+      "index": 8,
+      "proposal_id": "GC1-ANDORRA-15",
+      "name": "Pas de la Casa",
+      "city": "Encamp",
+      "country": "Andorra",
+      "reason": "Entire town rather than a spot"
+    },
+    {
+      "index": 11,
+      "proposal_id": "GC1-ANDORRA-10",
+      "name": "Jardín",
+      "city": "Ordino",
+      "country": "Andorra",
+      "reason": "Generic garden name"
+    },
+    {
+      "index": 12,
+      "proposal_id": "GC1-ANDORRA-12",
+      "name": "Segudet",
+      "city": "Ordino",
+      "country": "Andorra",
+      "reason": "Broad Segudet valley/area"
+    },
+    {
+      "index": 17,
+      "proposal_id": "GC1-BELGIUM-13",
+      "name": "Linkeroever",
+      "city": "Antwerp",
+      "country": "Belgium",
+      "reason": "District rather than a specific spot"
+    },
+    {
+      "index": 28,
+      "proposal_id": "GC1-BELGIUM-08",
+      "name": "At the parking next to the water at the Hoeverdijk",
+      "city": "Lommel",
+      "country": "Belgium",
+      "reason": "Specific waterside car park not identified"
+    },
+    {
+      "index": 46,
+      "proposal_id": "GC1-ESTONIA-08",
+      "name": "Parking and forest",
+      "city": "Pärnu",
+      "country": "Estonia",
+      "reason": "Generic parking and forest"
+    },
+    {
+      "index": 47,
+      "proposal_id": "GC1-ESTONIA-01",
+      "name": "Parklas/Metsas",
+      "city": "Tallinn",
+      "country": "Estonia",
+      "reason": "Generic parking/forest term"
+    },
+    {
+      "index": 48,
+      "proposal_id": "GC1-ESTONIA-03",
+      "name": "Parking",
+      "city": "Tallinn",
+      "country": "Estonia",
+      "reason": "No specific car park identified"
+    },
+    {
+      "index": 49,
+      "proposal_id": "GC1-ESTONIA-04",
+      "name": "Valdeku",
+      "city": "Tallinn",
+      "country": "Estonia",
+      "reason": "Whole street without a particular spot"
+    },
+    {
+      "index": 50,
+      "proposal_id": "GC1-ESTONIA-05",
+      "name": "Outdoor cruising",
+      "city": "Tallinn",
+      "country": "Estonia",
+      "reason": "Only generic outdoor cruising category"
+    },
+    {
+      "index": 53,
+      "proposal_id": "GC1-ESTONIA-09",
+      "name": "Old monument near the sea-Tallinn",
+      "city": "Tallinn",
+      "country": "Estonia",
+      "reason": "Which seaside monument is not established"
+    },
+    {
+      "index": 57,
+      "proposal_id": "GC1-ESTONIA-15",
+      "name": "Punane tn - Car Hookup Spot",
+      "city": "Tallinn",
+      "country": "Estonia",
+      "reason": "Exact car park on Punane street not identified"
+    },
+    {
+      "index": 58,
+      "proposal_id": "GC1-ESTONIA-11",
+      "name": "Põlva",
+      "city": "Tartu",
+      "country": "Estonia",
+      "reason": "Põlva town listed under Tartu and no exact spot"
+    },
+    {
+      "index": 59,
+      "proposal_id": "GC1-GEORGIA-06",
+      "name": "Park near Holy Mother Virgin Nativity Cathedral",
+      "city": "Batumi",
+      "country": "Georgia",
+      "reason": "Park by cathedral not identified"
+    },
+    {
+      "index": 74,
+      "proposal_id": "GC1-ICELAND-02",
+      "name": "WC",
+      "city": "Keflavík",
+      "country": "Iceland",
+      "reason": "Generic toilet; town versus airport unresolved"
+    },
+    {
+      "index": 87,
+      "proposal_id": "GC1-ISRAEL-14",
+      "name": "Bat Yam Grove",
+      "city": "Rishon LeZion",
+      "country": "Israel",
+      "reason": "Groves not uniquely identified"
+    },
+    {
+      "index": 99,
+      "proposal_id": "GC1-LITHUANIA-01",
+      "name": "Polygonas",
+      "city": "Klaipėda",
+      "country": "Lithuania",
+      "reason": "Polygonas location not identified"
+    },
+    {
+      "index": 103,
+      "proposal_id": "GC1-LITHUANIA-04",
+      "name": "Parking Cruising Area",
+      "city": "Pasvalys",
+      "country": "Lithuania",
+      "reason": "Generic parking with no precise location"
+    },
+    {
+      "index": 105,
+      "proposal_id": "GC1-LITHUANIA-07",
+      "name": "Cinema toilet",
+      "city": "Vilnius",
+      "country": "Lithuania",
+      "reason": "Cinema not identified"
+    },
+    {
+      "index": 109,
+      "proposal_id": "GC1-LITHUANIA-12",
+      "name": "Public toilet",
+      "city": "Vilnius",
+      "country": "Lithuania",
+      "reason": "Generic public toilet, not identifiable"
+    },
+    {
+      "index": 111,
+      "proposal_id": "GC1-LUXEMBOURG-15",
+      "name": "Toilette a Coté du Saturn",
+      "city": "Belvaux",
+      "country": "Luxembourg",
+      "reason": "Saturn business/facility not identified"
+    },
+    {
+      "index": 112,
+      "proposal_id": "GC1-LUXEMBOURG-08",
+      "name": "Dippach-bertrange",
+      "city": "Dippach",
+      "country": "Luxembourg",
+      "reason": "Dippach–Bertrange denotes a broad corridor"
+    },
+    {
+      "index": 115,
+      "proposal_id": "GC1-LUXEMBOURG-12",
+      "name": "Foret",
+      "city": "Grosbous",
+      "country": "Luxembourg",
+      "reason": "Unspecified forest"
+    },
+    {
+      "index": 117,
+      "proposal_id": "GC1-LUXEMBOURG-10",
+      "name": "Toilet on 1st floor",
+      "city": "Kirchberg",
+      "country": "Luxembourg",
+      "reason": "First-floor toilet but shopping building unidentified"
+    },
+    {
+      "index": 120,
+      "proposal_id": "GC1-LUXEMBOURG-03",
+      "name": "Lintgen gay bi area",
+      "city": "Lintgen",
+      "country": "Luxembourg",
+      "reason": "General Lintgen area, not one mapped spot"
+    },
+    {
+      "index": 123,
+      "proposal_id": "GC1-LUXEMBOURG-11",
+      "name": "Toilets Zolwereck",
+      "city": "Sanem",
+      "country": "Luxembourg",
+      "reason": "Toilet building not identified"
+    },
+    {
+      "index": 125,
+      "proposal_id": "GC1-LUXEMBOURG-07",
+      "name": "Schumann",
+      "city": "Wiltz",
+      "country": "Luxembourg",
+      "reason": "Schumann/rest area exact site not found"
+    },
+    {
+      "index": 131,
+      "proposal_id": "GC1-MONTENEGRO-06",
+      "name": "Igalo",
+      "city": "Herceg Novi",
+      "country": "Montenegro",
+      "reason": "Igalo refers to a whole town"
+    },
+    {
+      "index": 152,
+      "proposal_id": "GC1-SLOVAKIA-13",
+      "name": "3 studne",
+      "city": "Nitra",
+      "country": "Slovakia",
+      "reason": "3 studne physical site unresolved"
+    },
+    {
+      "index": 153,
+      "proposal_id": "GC1-SLOVAKIA-14",
+      "name": "TESCO parking for lorries",
+      "city": "Trnava",
+      "country": "Slovakia",
+      "reason": "Lorry parking site not identified"
+    },
+    {
+      "index": 163,
+      "proposal_id": "GC1-SLOVENIA-10",
+      "name": "Forest Logatec",
+      "city": "Logatec",
+      "country": "Slovenia",
+      "reason": "Unspecified Logatec woodland"
+    },
+    {
+      "index": 165,
+      "proposal_id": "GC1-SLOVENIA-14",
+      "name": "Petrol WC Reststop",
+      "city": "Murska Sobota",
+      "country": "Slovenia",
+      "reason": "Petrol rest-stop branch unidentified"
+    },
+    {
+      "index": 172,
+      "proposal_id": "GC1-SWEDEN-08",
+      "name": "Västra Skogen",
+      "city": "Solna",
+      "country": "Sweden",
+      "reason": "Västra Skogen could mean neighbourhood, station or woodland"
+    },
+    {
+      "index": 185,
+      "proposal_id": "GC1-TURKEY-15",
+      "name": "Lara Park",
+      "city": "Antalya",
+      "country": "Turkey",
+      "reason": "Lara Park identity disputed"
+    },
+    {
+      "index": 208,
+      "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-05",
+      "name": "Obala rijeke Zeljeznice",
+      "city": "Banja Ilidza",
+      "country": "Bosnia and Herzegovina",
+      "reason": "Entire Željeznica riverbank rather than a spot"
+    },
+    {
+      "index": 211,
+      "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-12",
+      "name": "Pejton",
+      "city": "Ildza",
+      "country": "Bosnia and Herzegovina",
+      "reason": "Whole Pejton neighbourhood"
+    },
+    {
+      "index": 214,
+      "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-10",
+      "name": "Parking kod Celpaka",
+      "city": "Prijedor",
+      "country": "Bosnia and Herzegovina",
+      "reason": "Celpaka facility/company not identified"
+    },
+    {
+      "index": 215,
+      "proposal_id": "GC1-BOSNIA-AND-HERZEGOVINA-15",
+      "name": "Stari Grad",
+      "city": "Prijedor",
+      "country": "Bosnia and Herzegovina",
+      "reason": "Stari Grad generic old town name"
+    },
+    {
+      "index": 218,
+      "proposal_id": "GC1-BULGARIA-14",
+      "name": "Nude Beach",
+      "city": "Burgas",
+      "country": "Bulgaria",
+      "reason": "Burgas nudist beach section not identified"
+    },
+    {
+      "index": 220,
+      "proposal_id": "GC1-BULGARIA-15",
+      "name": "Pomorie",
+      "city": "Nessebar",
+      "country": "Bulgaria",
+      "reason": "Pomorie entire town and wrong municipality"
+    },
+    {
+      "index": 232,
+      "proposal_id": "GC1-CYPRUS-02",
+      "name": "Parking Area",
+      "city": "Ayia Napa",
+      "country": "Cyprus",
+      "reason": "Unidentified parking area"
+    },
+    {
+      "index": 238,
+      "proposal_id": "GC1-CYPRUS-09",
+      "name": "Old tavern",
+      "city": "Livadia",
+      "country": "Cyprus",
+      "reason": "Unidentified tavern and conflicting source location"
+    },
+    {
+      "index": 244,
+      "proposal_id": "GC1-CYPRUS-13",
+      "name": "Dead area opposite Lidl",
+      "city": "Paphos",
+      "country": "Cyprus",
+      "reason": "Lidl branch not identified"
+    },
+    {
+      "index": 249,
+      "proposal_id": "GC1-CZECHIA-09",
+      "name": "Za městem",
+      "city": "Most",
+      "country": "Czechia",
+      "reason": "Generic 'outside town' area without distinct geocode"
+    },
+    {
+      "index": 291,
+      "proposal_id": "GC1-ROMANIA-12",
+      "name": "La Mall",
+      "city": "Sibiu",
+      "country": "Romania",
+      "reason": "Unidentified mall in Sibiu"
+    }
+  ],
+  "canonical_merges": [
+    {
+      "canonical_id": "GC1-ICELAND-01",
+      "canonical_name": "Öskjuhlíð",
+      "same_place_source_candidate_ids": [
+        "GC1-ICELAND-05"
+      ],
+      "indexes": [
+        75,
+        76
+      ],
+      "decision": "ONE parent geographical location; alias Öskjuhlíð II is not independently geolocated. Preserve both original source rows. Split again only if distinct site pins or access areas are documented.",
+      "confidence": "high_same_named_hill_medium_specific_cruising_subarea",
+      "no_new_second_public_listing": true
+    },
+    {
+      "canonical_id": "CRU-SOF-BORGRA-01",
+      "canonical_name": "Borisova Gradina",
+      "same_place_source_candidate_ids": [
+        "GC1-BULGARIA-04"
+      ],
+      "indexes": [
+        223
+      ],
+      "decision": "Use existing Backroom venue as canonical parent; attach source URL and dated source check-in as evidence instead of importing a second duplicate park listing. Preserve research record.",
+      "confidence": "high_same_named_park_medium_specific_cruising_subarea",
+      "no_new_second_public_listing": true
+    }
+  ],
+  "duplicates_requiring_evidence_before_merge": [
+    {
+      "indexes": [
+        112,
+        113
+      ],
+      "names": [
+        "Dippach–Bertrange",
+        "Route de Dippach"
+      ],
+      "reason": "Road/corridor versus claimed car park; missing shared map pin."
+    },
+    {
+      "indexes": [
+        127,
+        128
+      ],
+      "names": [
+        "Maljevik",
+        "Krčevac rocks/nude beach"
+      ],
+      "reason": "Related coastline but potentially distinct cove/headland; no matching pin."
+    },
+    {
+      "indexes": [
+        144,
+        145
+      ],
+      "names": [
+        "Pri hrádzi",
+        "Apollo"
+      ],
+      "reason": "Nearby riverbank spots approximately 0.7km apart, with distinct descriptions."
+    },
+    {
+      "indexes": [
+        20
+      ],
+      "names": [
+        "Toilettes de la gare"
+      ],
+      "reason": "Unknown Brussels station; cannot assume Midi/Zuid."
+    },
+    {
+      "indexes": [
+        32
+      ],
+      "names": [
+        "Toilets truck parking Vorselaar"
+      ],
+      "reason": "A different same-town glory-hole entry may be another facility."
+    },
+    {
+      "indexes": [
+        250
+      ],
+      "names": [
+        "Forum Nova Karolina"
+      ],
+      "reason": "Retail centre and adjacent WC references may share building; specific facilities not compared."
+    },
+    {
+      "indexes": [
+        267
+      ],
+      "names": [
+        "Arena Mall",
+        "Arena Mall Glory Hole"
+      ],
+      "reason": "Same shopping centre but unknown whether exactly the same toilet or a distinct subarea; main queue already carries a single Arena Mall candidate."
+    },
+    {
+      "indexes": [
+        291
+      ],
+      "names": [
+        "La Mall"
+      ],
+      "reason": "Sibiu mall unspecified; nearby Glory Hole record should not be merged by name alone."
+    }
+  ],
+  "already_one_candidate_or_name_normalization": [
+    {
+      "index": 15,
+      "note": "Wolvenberg appears on two cards from one source but has one canonical queue candidate already."
+    },
+    {
+      "index": 184,
+      "note": "Karaoğlan / Karaalioğlu are alternate names of one Antalya park, not two candidate IDs."
+    },
+    {
+      "index": 216,
+      "note": "Vils / Wilson's Promenade is a local/official name pairing for one broad Sarajevo promenade."
+    },
+    {
+      "index": 253,
+      "note": "Palladium shopping mall has two different toilet floors, recorded under one candidate; do not create two venue records solely because of floors."
+    },
+    {
+      "index": 268,
+      "note": "KÖKI Terminál appears in multiple archives of one source but is one queue candidate."
+    }
+  ],
+  "recent_comments_examples": [
+    {
+      "index": 75,
+      "source_comment_date": "2026-04-15",
+      "type": "question_whether_still_active"
+    },
+    {
+      "index": 223,
+      "source_comment_date": "2026-06-10",
+      "type": "platform_checkin_not_independently_verified_as_visit"
+    },
+    {
+      "index": 253,
+      "source_comment_dates": [
+        "2025-11-06",
+        "2025-11-09",
+        "2025-11-12",
+        "2025-11-15"
+      ],
+      "type": "discussion_and_meeting_intent_not_proven_encounter"
+    }
+  ],
+  "publication_safety": {
+    "original_293_candidates_retained": true,
+    "no_original_batches_edited": true,
+    "no_master_queue_edited": true,
+    "no_live_venue_changes": true,
+    "review_required_before_production_merge": true
+  }
+}
