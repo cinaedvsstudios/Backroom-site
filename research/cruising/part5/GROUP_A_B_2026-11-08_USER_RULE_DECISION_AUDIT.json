@@ -1,0 +1,2926 @@
+{
+  "_meta": {
+    "title": "Backroom A+B — user rule application",
+    "date_berlin": "2026-11-08",
+    "candidate_count": 185,
+    "retained": 96,
+    "excluded": 89,
+    "user_rules": [
+      "Check ambiguous source URLs and decide, without asking user to identify a location",
+      "General park/riverbank/road pin sufficient when exact meeting subsection is unknown",
+      "Compare possible duplicates; do not merge without proof",
+      "Exclude eight genuinely unidentifiable geographic entries",
+      "Exclude no site-specific source signal in previous twelve months; merely current shop opening/roadworks is not cruising evidence",
+      "Exclude confirmed closed/fundamentally rebuilt or repeated no-activity records"
+    ],
+    "counts": {
+      "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED": 11,
+      "EXCLUDE_UNIDENTIFIABLE_LOCATION": 8,
+      "RETAIN_RECENT_SOURCE_SIGNAL": 96,
+      "EXCLUDE_AMBIGUOUS_IDENTITY_AFTER_SOURCE_CHECK": 8,
+      "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL": 50,
+      "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT": 12
+    },
+    "not_a_claim_of_independently_verified_cruising": true,
+    "prior_state_file": "research/cruising/part5/GROUP_A_B_ACTIVE_FILTERED_MASTER_2026-11-08.json",
+    "newly_verified_context": [
+      "Gays-Cruising's Palazzina page lists Ca di Mazze as separate nearby spot, 0.2km apart",
+      "Gays-Cruising Sevelen spot page specifies Rheintal rest area Sargans direction",
+      "Nov 2025 report documents demolition and rebuild of Rheintal West",
+      "Public operators identify separate Wiśniowa Góra east and west motorway stops",
+      "Carrefour identifies separate Vallès Terrassa and Montserrat hypermarkets"
+    ]
+  },
+  "decisions": [
+    {
+      "queue_index": 157,
+      "candidate_id": "GC1-SLOVENIA-03",
+      "name": "Rest area Barje (south area)",
+      "decision": "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED",
+      "source_signal_dates": [
+        "2026-04-29",
+        "2026-05-02"
+      ],
+      "source_signal_types": [
+        "meeting_inquiry_only"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 163,
+      "candidate_id": "GC1-SLOVENIA-10",
+      "name": "Forest Logatec",
+      "decision": "EXCLUDE_UNIDENTIFIABLE_LOCATION",
+      "source_signal_dates": [
+        "2026-04-12"
+      ],
+      "source_signal_types": [
+        "location_question_and_meeting_intent_not_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 164,
+      "candidate_id": "GC1-SLOVENIA-09",
+      "name": "Mariborski otok - Island",
+      "decision": "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED",
+      "source_signal_dates": [
+        "2026-05-05"
+      ],
+      "source_signal_types": [
+        "inquiry_only"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 175,
+      "candidate_id": "GC1-SWEDEN-10",
+      "name": "Mall of Scandinavia",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-23",
+        "2026-05-25"
+      ],
+      "source_signal_types": [
+        "meeting_question_only"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 189,
+      "candidate_id": "GC1-TURKEY-06",
+      "name": "Airport toilets",
+      "decision": "EXCLUDE_AMBIGUOUS_IDENTITY_AFTER_SOURCE_CHECK",
+      "source_signal_dates": [
+        "2026-04-26"
+      ],
+      "source_signal_types": [
+        "meeting_solicitation_only"
+      ],
+      "source_signal_note": null,
+      "review_note": "Source's Istanbul airport toilet entry lacks airport code, terminal and facility; spot detail page inaccessible.",
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 221,
+      "candidate_id": "GC1-BULGARIA-01",
+      "name": "The Mall",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-09",
+        "2026-07-01",
+        "2026-07-09"
+      ],
+      "source_signal_types": [
+        "sexual_contact_proposal_not_visit",
+        "same_day_invitation_not_visited",
+        "meeting_question_not_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 222,
+      "candidate_id": "GC1-BULGARIA-02",
+      "name": "Abandoned WC in Park",
+      "decision": "EXCLUDE_UNIDENTIFIABLE_LOCATION",
+      "source_signal_dates": [
+        "2026-07-08",
+        "2026-08-04"
+      ],
+      "source_signal_types": [
+        "did_not_visit",
+        "activity_and_safety_question"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 224,
+      "candidate_id": "GC1-BULGARIA-05",
+      "name": "Ring Mall",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-03",
+        "2026-07-19"
+      ],
+      "source_signal_types": [
+        "firsthand_self_reported_presence_and_observed_sexual_activity_onsite",
+        "self_reported_access_and_privacy_caution"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 225,
+      "candidate_id": "GC1-BULGARIA-07",
+      "name": "Mall of Sofía WC Toilet",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-08",
+        "2026-07-09",
+        "2026-08-04"
+      ],
+      "source_signal_types": [
+        "firsthand_self_reported_onsite_sexual_encounter_not_independently_corroborated",
+        "self_reported_contemporaneous_presence_not_confirmed_encounter",
+        "inquiry_not_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 233,
+      "candidate_id": "GC1-CYPRUS-06",
+      "name": "Nissi Beach",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-15",
+        "2026-06-22",
+        "2026-06-25"
+      ],
+      "source_signal_types": [
+        "is_anyone_here_question",
+        "sexual_meetup_invitation_not_visit",
+        "plans_to_visit_query"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 236,
+      "candidate_id": "GC1-CYPRUS-03",
+      "name": "Pissouri Beach",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-24"
+      ],
+      "source_signal_types": [
+        "future_meetup_question_not_onsite_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 241,
+      "candidate_id": "GC1-CYPRUS-07",
+      "name": "Parking Area near Big Greek Flag",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-16",
+        "2026-06-17"
+      ],
+      "source_signal_types": [
+        "meeting_inquiry",
+        "meeting_offer"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 243,
+      "candidate_id": "GC1-CYPRUS-11",
+      "name": "Picnic Area near Airport",
+      "decision": "EXCLUDE_AMBIGUOUS_IDENTITY_AFTER_SOURCE_CHECK",
+      "source_signal_dates": [
+        "2026-06-14",
+        "2026-06-18",
+        "2026-06-26"
+      ],
+      "source_signal_types": [
+        "looking_for_afternoon_activity_not_visit",
+        "plans_overnight_meetup_not_visited",
+        "planned_future_escort_contact_not_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": "Paphos picnic area near airport is indexed, but neither original description nor government picnic lists establish which picnic ground; Timi remains speculation.",
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 246,
+      "candidate_id": "GC1-CZECHIA-04",
+      "name": "WC dole u Rossmana Hlavní Nádraží",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-05"
+      ],
+      "source_signal_types": [
+        "postcutoff_retrospective_firsthand_claim_encounter_date_unknown"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 253,
+      "candidate_id": "GC1-CZECHIA-06",
+      "name": "Palladium Shopping Mall WC",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2025-11-09",
+        "2025-11-12",
+        "2025-11-15"
+      ],
+      "source_signal_types": [
+        "future_visit_invitation_not_attendance",
+        "plan_to_visit_not_observed",
+        "meeting_question_not_observed"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 257,
+      "candidate_id": "GC1-CZECHIA-14",
+      "name": "Folimanka Park",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-29",
+        "2026-05-30"
+      ],
+      "source_signal_types": [
+        "meeting_proposal_not_firsthand",
+        "reply_arrangement_not_firsthand"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 259,
+      "candidate_id": "GC1-CZECHIA-07",
+      "name": "Barbora",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-22"
+      ],
+      "source_signal_types": [
+        "future_meeting_advertisement_not_firsthand"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 265,
+      "candidate_id": "GC1-HUNGARY-08",
+      "name": "Városliget",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-13",
+        "2026-04-16",
+        "2026-07-08"
+      ],
+      "source_signal_types": [
+        "future_intention",
+        "meeting_query",
+        "opening_question"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 270,
+      "candidate_id": "GC1-HUNGARY-14",
+      "name": "Metro Station Corbin Negyed",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2025-12-10"
+      ],
+      "source_signal_types": [
+        "recent_meeting_arrangement_not_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 274,
+      "candidate_id": "GC1-EX-HUNGARY-BUDAPEST-NEPLIGET",
+      "name": "Népliget",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-02-25"
+      ],
+      "source_signal_types": [
+        "postcutoff_meeting_query"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 276,
+      "candidate_id": "GC1-EX-HUNGARY-BUDAPEST-GERMANUS-GYULA-PARK",
+      "name": "Germanus Gyula Park",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-05"
+      ],
+      "source_signal_types": [
+        "self_reported_presence_only"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 281,
+      "candidate_id": "GC1-ROMANIA-05",
+      "name": "Spatiu Servicii A1 inainte de Sebes",
+      "decision": "EXCLUDE_AMBIGUOUS_IDENTITY_AFTER_SOURCE_CHECK",
+      "source_signal_dates": [
+        "2026-04-08"
+      ],
+      "source_signal_types": [
+        "dated_checkin_presence_not_activity"
+      ],
+      "source_signal_note": null,
+      "review_note": "Alba Iulia A1 service-area entry is indexed, but no road direction or named stop established.",
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 285,
+      "candidate_id": "GC1-ROMANIA-10",
+      "name": "WC Mall Unirea",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-07"
+      ],
+      "source_signal_types": [
+        "recent_meeting_query"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 290,
+      "candidate_id": "GC1-ROMANIA-01",
+      "name": "Glory hole",
+      "decision": "EXCLUDE_UNIDENTIFIABLE_LOCATION",
+      "source_signal_dates": [
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-20"
+      ],
+      "source_signal_types": [
+        "recent_meeting_question",
+        "recent_intended_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 293,
+      "candidate_id": "GC1-ROMANIA-09",
+      "name": "Pădure Dumbravita-Timisoara",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-08"
+      ],
+      "source_signal_types": [
+        "recent_immediate_sexual_solicitation_not_meeting_proof"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 297,
+      "candidate_id": "GC1-AUSTRIA-06",
+      "name": "A9 Rastplatz bei Spielfeld",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-17"
+      ],
+      "source_signal_types": [
+        "meeting_query_not_activity"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 298,
+      "candidate_id": "GC1-AUSTRIA-03",
+      "name": "Weikerlsee",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-17"
+      ],
+      "source_signal_types": [
+        "directory_checkin_not_activity_proof"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 299,
+      "candidate_id": "GC1-AUSTRIA-04",
+      "name": "WC Unionkreuzung",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-17"
+      ],
+      "source_signal_types": [
+        "meeting_query"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 304,
+      "candidate_id": "GC1-GAP-SALZBURG-05",
+      "name": "Paracelsusbad",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 314,
+      "candidate_id": "GC1-AUSTRIA-09",
+      "name": "Lobau",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-17"
+      ],
+      "source_signal_types": [
+        "directory_checkin"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 315,
+      "candidate_id": "GC1-AUSTRIA-10",
+      "name": "Donauinsel, Toter Grund",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-01",
+        "2026-06-20",
+        "2026-07-20"
+      ],
+      "source_signal_types": [
+        "meeting_question",
+        "meeting_query",
+        "squirt_latest_reply_date_only"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 319,
+      "candidate_id": "GC1-AUSTRIA-15",
+      "name": "Figurteich",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-17"
+      ],
+      "source_signal_types": [
+        "directory_checkin",
+        "meeting_query"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 320,
+      "candidate_id": "GC1-IRELAND-03",
+      "name": "Swiss cottage - Cahir woods",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 321,
+      "candidate_id": "GC1-IRELAND-02",
+      "name": "Seapoint-Western Cape-Sudáfrica",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-31",
+        "2026-06-03",
+        "2026-06-18"
+      ],
+      "source_signal_types": [
+        "meeting_question_about_daytime",
+        "meeting_question"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 322,
+      "candidate_id": "GC1-IRELAND-04",
+      "name": "Phoenix Park Military Road",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-18"
+      ],
+      "source_signal_types": [
+        "forum_reply_without_visit_proof"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 330,
+      "candidate_id": "GC1-IRELAND-14",
+      "name": "Merlin Woods Car Park",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 336,
+      "candidate_id": "GC1-MALTA-03",
+      "name": "SA Maison Gardens",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-07"
+      ],
+      "source_signal_types": [
+        "directory_meeting_query"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 338,
+      "candidate_id": "GC1-MALTA-05",
+      "name": "Toilet near abandond hotel",
+      "decision": "EXCLUDE_UNIDENTIFIABLE_LOCATION",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 340,
+      "candidate_id": "GC1-MALTA-08",
+      "name": "White Rocks",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 341,
+      "candidate_id": "GC1-MALTA-01",
+      "name": "Public toilet",
+      "decision": "EXCLUDE_UNIDENTIFIABLE_LOCATION",
+      "source_signal_dates": [
+        "2026-06-09"
+      ],
+      "source_signal_types": [
+        "meeting_question_not_verified_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 342,
+      "candidate_id": "GC1-MALTA-02",
+      "name": "Garden, under the trees",
+      "decision": "EXCLUDE_UNIDENTIFIABLE_LOCATION",
+      "source_signal_dates": [
+        "2026-06-07"
+      ],
+      "source_signal_types": [
+        "online_meeting_query"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 343,
+      "candidate_id": "GC1-MALTA-09",
+      "name": "Public Toilets, Garden of Serenity",
+      "decision": "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED",
+      "source_signal_dates": [
+        "2026-06-09"
+      ],
+      "source_signal_types": [
+        "firsthand_appearing_access_warning_unverified"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 350,
+      "candidate_id": "GC1-SERBIA-03",
+      "name": "Terazije public toilet",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-01-21",
+        "2026-04-30",
+        "2026-05-12",
+        "2026-05-21"
+      ],
+      "source_signal_types": [
+        "claimed_regular_firsthand_visits_and_encounters",
+        "recent_crowd_comment",
+        "firsthand_recent_physical_activity_claim",
+        "meeting_question"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 361,
+      "candidate_id": "GC1-FINLAND-01",
+      "name": "Kamppi Shopping Centre WC",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-03-09"
+      ],
+      "source_signal_types": [
+        "question_not_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 362,
+      "candidate_id": "GC1-FINLAND-02",
+      "name": "Park Laakso - Helsinki",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-17"
+      ],
+      "source_signal_types": [
+        "ambiguous_short_comment"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 363,
+      "candidate_id": "GC1-FINLAND-03",
+      "name": "Paavali Church",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-25"
+      ],
+      "source_signal_types": [
+        "ambiguous_short_comment"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 367,
+      "candidate_id": "GC1-FINLAND-11",
+      "name": "Tripla Toilets",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-25"
+      ],
+      "source_signal_types": [
+        "question_not_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 371,
+      "candidate_id": "GC1-FINLAND-08",
+      "name": "Paavonurmi stadion",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-02-18",
+        "2026-02-20"
+      ],
+      "source_signal_types": [
+        "question_not_observation",
+        "contact_seeking_not_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 376,
+      "candidate_id": "CG8-58898",
+      "name": "Tuomikallio",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 381,
+      "candidate_id": "GC1-GAP-BOLOGNA-02",
+      "name": "Parcheggio Cinema The Space",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-25",
+        "2026-05-26"
+      ],
+      "source_signal_types": [
+        "question_not_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 382,
+      "candidate_id": "GC1-GAP-BOLOGNA-04",
+      "name": "Via Felice Battaglia / Parco Barone Rampante",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-05-30"
+      ],
+      "source_signal_types": [
+        "negative_site_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 383,
+      "candidate_id": "GC1-GAP-BOLOGNA-05",
+      "name": "Ponte fiume Reno a Borgo Panigale",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-25"
+      ],
+      "source_signal_types": [
+        "question_not_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 385,
+      "candidate_id": "GC1-GAP-BOLOGNA-07",
+      "name": "Parco della Montagnola - VIII Agosto",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2025-11-18"
+      ],
+      "source_signal_types": [
+        "question_not_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 401,
+      "candidate_id": "GC1-GAP-FLORENCE-06",
+      "name": "Torrente Mugnone",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 413,
+      "candidate_id": "GC1-EX-ITALY-MILAN-BAGNI-PALAZZO-REALE",
+      "name": "Bagni Palazzo Reale",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-06"
+      ],
+      "source_signal_types": [
+        "source_platform_checkin_not_verified_onsite"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 416,
+      "candidate_id": "GC1-GAP-NAPLES-02",
+      "name": "Giardini Del Molosiglio",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-06-03",
+        "2026-06-16"
+      ],
+      "source_signal_types": [
+        "recent_negative_site_comment",
+        "contact_request_not_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 419,
+      "candidate_id": "GC1-GAP-NAPLES-11",
+      "name": "Parcheggio Brin",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 428,
+      "candidate_id": "GC1-EX-ITALY-VENICE-BAGNI-GRILL-BAZZERA",
+      "name": "Bagni Grill Bazzera",
+      "decision": "EXCLUDE_AMBIGUOUS_IDENTITY_AFTER_SOURCE_CHECK",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": "A57 Bazzera Nord and Bazzera Sud are separate; original listing does not establish side. 2026 hygiene note is not cruising activity.",
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 430,
+      "candidate_id": "GC1-EX-ITALY-VENICE-GIARDINI-DELLA-BIENNALE",
+      "name": "Giardini della Biennale",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 434,
+      "candidate_id": "CG8-13629",
+      "name": "Porta Vescovo",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 436,
+      "candidate_id": "GC1-GAP-VERONA-02",
+      "name": "Oasi - Lungadige (Est)",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-27",
+        "2026-04-28"
+      ],
+      "source_signal_types": [
+        "intent_not_observed",
+        "other_subarea_negative"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 437,
+      "candidate_id": "GC1-GAP-VERONA-03",
+      "name": "Alpo Cavalcavia",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-29"
+      ],
+      "source_signal_types": [
+        "recent_negative_safety_report"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 438,
+      "candidate_id": "GC1-GAP-VERONA-05",
+      "name": "Parcheggio B visitatori - Stadio Marcantonio Bentegodi",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 439,
+      "candidate_id": "GC1-GAP-VERONA-06",
+      "name": "Zona Industriale - Ca' di Mazze",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-01"
+      ],
+      "source_signal_types": [
+        "reply_to_undated_encounter"
+      ],
+      "source_signal_note": null,
+      "review_note": "Gays-Cruising.com lists Palazzina and Zona Industriale Ca' di Mazze as two distinct entries about 0.2km apart; no proof same meeting point; do not auto-merge.",
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 440,
+      "candidate_id": "GC1-GAP-VERONA-07",
+      "name": "Parco delle Mura - Bastioni",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 444,
+      "candidate_id": "GC1-GAP-VERONA-14",
+      "name": "Centro Commerciale Verona Uno",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-03-26",
+        "2026-04-29"
+      ],
+      "source_signal_types": [
+        "negative_firsthand_visit",
+        "positive_firsthand_encounter_comment"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 447,
+      "candidate_id": "GC1-LATVIA-01",
+      "name": "Za?usala",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2025-12-02",
+        "2026-06-16"
+      ],
+      "source_signal_types": [
+        "contact_question_not_activity",
+        "future_visit_post_not_activity"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 451,
+      "candidate_id": "GC1-LATVIA-06",
+      "name": "Riga Internation Bus Station",
+      "decision": "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED",
+      "source_signal_dates": [
+        "2025-12-26"
+      ],
+      "source_signal_types": [
+        "recent_negative_activity_report_not_confirmed_encounter"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 457,
+      "candidate_id": "GC1-LATVIA-12",
+      "name": "New place",
+      "decision": "EXCLUDE_UNIDENTIFIABLE_LOCATION",
+      "source_signal_dates": [
+        "2026-04-12"
+      ],
+      "source_signal_types": [
+        "recent_question_not_activity"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 460,
+      "candidate_id": "GC1-POLAND-08",
+      "name": "Kolibki Park",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 462,
+      "candidate_id": "GC1-EX-POLAND-GDANSK-GALERIA-METROPOLIA",
+      "name": "Galeria Metropolia",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-03-13",
+        "2026-04-02",
+        "2026-06-27"
+      ],
+      "source_signal_types": [
+        "recent_meeting_intention_not_witnessed",
+        "recent_proposed_visit_not_witnessed",
+        "recent_activity_proposal_not_confirmed_actual"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 463,
+      "candidate_id": "GC1-POLAND-12",
+      "name": "Starganiec",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 464,
+      "candidate_id": "GC1-EX-POLAND-KATOWICE-PARKING-MURCKI",
+      "name": "Parking Murcki",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-27"
+      ],
+      "source_signal_types": [
+        "recent_presence_meeting_intention_not_encounter"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 465,
+      "candidate_id": "GC1-EX-POLAND-KATOWICE-AQUADROM-POOL",
+      "name": "Aquadrom Pool",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-10",
+        "2026-06-13",
+        "2026-06-15"
+      ],
+      "source_signal_types": [
+        "recent_firstperson_positive_steam_room_visit",
+        "recent_negative_firsthand_visit",
+        "recent_generic_pattern_claim"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 466,
+      "candidate_id": "GC1-POLAND-02",
+      "name": "Bagry Beach",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 468,
+      "candidate_id": "GC1-POLAND-15",
+      "name": "MOP Wiśniowa Góa",
+      "decision": "EXCLUDE_AMBIGUOUS_IDENTITY_AFTER_SOURCE_CHECK",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": "MOP Wiśniowa Góra Wschód (Gdańsk-bound) and Zachód (Katowice-bound) both exist; original source does not identify either side; recent police report is not cruising activity.",
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 469,
+      "candidate_id": "GC1-EX-POLAND-POZNAN-AS-24",
+      "name": "AS 24",
+      "decision": "EXCLUDE_AMBIGUOUS_IDENTITY_AFTER_SOURCE_CHECK",
+      "source_signal_dates": [
+        "2026-06-27"
+      ],
+      "source_signal_types": [
+        "question_not_onsite_activity"
+      ],
+      "source_signal_note": null,
+      "review_note": "Multiple AS24 stations near Poznań; original source does not specify which branch. Recent source only asks if anyone is there.",
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 472,
+      "candidate_id": "GC1-POLAND-11",
+      "name": "Świecko Stacja Paliw Shell, boczna droga",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-27"
+      ],
+      "source_signal_types": [
+        "website_checkin_metadata_not_onsite_proof"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 474,
+      "candidate_id": "GC1-POLAND-01",
+      "name": "The Warsaw HUB",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-04"
+      ],
+      "source_signal_types": [
+        "online_question_not_physical_report"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 475,
+      "candidate_id": "GC1-POLAND-05",
+      "name": "Olimpic Centre",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-27",
+        "2026-07-04"
+      ],
+      "source_signal_types": [
+        "online_meetup_question",
+        "online_presence_question"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 480,
+      "candidate_id": "GC1-DENMARK-15",
+      "name": "Kystvejen",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-03-23"
+      ],
+      "source_signal_types": [
+        "online_future_intent_not_confirmed_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 492,
+      "candidate_id": "GC1-DENMARK-11",
+      "name": "Antvorskov rest area",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-03-19",
+        "2026-04-01",
+        "2026-04-02"
+      ],
+      "source_signal_types": [
+        "onsite_presence_claim_no_encounter",
+        "future_meetup_intent",
+        "negative_onsite_visitor_report"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 493,
+      "candidate_id": "PC6-DK-TINGLEVVEJEN",
+      "name": "Tinglevvejen Rastplads",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-24"
+      ],
+      "source_signal_types": [
+        "potential_alias_online_question_not_physical"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 509,
+      "candidate_id": "GC1-PORTUGAL-04",
+      "name": "Praia 19",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-24",
+        "2026-05-26",
+        "2026-05-30"
+      ],
+      "source_signal_types": [
+        "recent_firstperson_activity_description",
+        "recent_firsthand_arrival_and_wayfinding",
+        "recent_meeting_requests_and_intentions"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 521,
+      "candidate_id": "GC1-GREECE-02",
+      "name": "Agia fotini",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-03-11"
+      ],
+      "source_signal_types": [
+        "blank_online_post_not_evidence"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 522,
+      "candidate_id": "GC1-GREECE-03",
+      "name": "Syntagma (constitution Sq) public toilets",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-01-22",
+        "2026-01-25"
+      ],
+      "source_signal_types": [
+        "recent_firsthand_repeated_unsuccessful_visits",
+        "recent_negative_local_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 534,
+      "candidate_id": "GC1-GREECE-06",
+      "name": "FKK beach Mandomata",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-20"
+      ],
+      "source_signal_types": [
+        "online_future_visit_not_encounter"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 593,
+      "candidate_id": "GC1-EX-SWITZERLAND-OBFELDEN-AM-FLUSS",
+      "name": "Am Fluss",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-04"
+      ],
+      "source_signal_types": [
+        "site_check_in"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 594,
+      "candidate_id": "GC1-EX-SWITZERLAND-SEVELEN-RASTPLATZ-WALDCHEN-MIT-TUR-ZU-MEHR",
+      "name": "Rastplatz Wäldchen mit Tür zu mehr",
+      "decision": "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED",
+      "source_signal_dates": [
+        "2026-07-04"
+      ],
+      "source_signal_types": [
+        "site_check_in"
+      ],
+      "source_signal_note": null,
+      "review_note": "Spot source identifies Raststätte Rheintal, A13 direction Sargans, BUT Rheintal West was demolished and rebuilt in 2025–26; old woodland/door directions cannot be assumed unchanged.",
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 608,
+      "candidate_id": "GC1-NETHERLANDS-15",
+      "name": "Galderse Meren",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-06",
+        "2026-08-14"
+      ],
+      "source_signal_types": [
+        "self_reported_visitor_observation_of_contact_seeking",
+        "self_reported_visitor_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 609,
+      "candidate_id": "GC1-EX-NETHERLANDS-CROMVOIRT-DE-BANKJES",
+      "name": "De Bankjes",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-04"
+      ],
+      "source_signal_types": [
+        "",
+        "directory_check_in"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 611,
+      "candidate_id": "GC1-EX-NETHERLANDS-KAMPERLAND-NEELTJE-JANS",
+      "name": "Neeltje Jans",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-04"
+      ],
+      "source_signal_types": [
+        "",
+        "directory_check_in"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 615,
+      "candidate_id": "GC1-EX-NETHERLANDS-THE-HAGUE-MEER-EN-BOS-PARK",
+      "name": "Meer en Bos Park",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-04"
+      ],
+      "source_signal_types": [
+        "directory_check_in"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 656,
+      "candidate_id": "GS2-DE-BERLIN-034",
+      "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-03-12",
+        "2026-03-20",
+        "2026-06-17"
+      ],
+      "source_signal_types": [
+        "access_and_activity_context",
+        "first_person_negative_visit",
+        "repeated_first_person_activity_claim"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 662,
+      "candidate_id": "GS2-DE-BERLIN-041",
+      "name": "Sandfläche im Jagen 87 des Grunewalds",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-26",
+        "2026-05-26",
+        "2026-07-30"
+      ],
+      "source_signal_types": [
+        "first_person_cruising_area_visit",
+        "first_person_fkk_visit_and_cruising_observation",
+        "visitor_report_of_men_sunbathing"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 667,
+      "candidate_id": "GS2-DE-BERLIN-046",
+      "name": "Spektepark",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-31"
+      ],
+      "source_signal_types": [
+        "question_only"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 674,
+      "candidate_id": "GS2-DE-BERLIN-060",
+      "name": "Volkspark Prenzlauer Berg - Judith-Auer-Straße",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-10",
+        "2026-07-11"
+      ],
+      "source_signal_types": [
+        "first_person_recent_encounter_claim",
+        "first_person_visit_no_confirmed_encounter"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 696,
+      "candidate_id": "GS2-DE-BREMEN-001",
+      "name": "Autobahn Parkplatz Mahndorfer Marsch",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-05-02"
+      ],
+      "source_signal_types": [
+        "first_person_two_unsuccessful_visits"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 699,
+      "candidate_id": "GS2-DE-BREMEN-004",
+      "name": "Bürgerpark Bremen 2",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-05-02"
+      ],
+      "source_signal_types": [
+        "first_person_multiple_2026_negative_visits"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 700,
+      "candidate_id": "GS2-DE-BREMEN-005",
+      "name": "Parkplatz A1 Krumhörens Kuhlen",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-30"
+      ],
+      "source_signal_types": [
+        "first_person_repeated_visits_low_activity"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 701,
+      "candidate_id": "GS2-DE-BREMEN-006",
+      "name": "Uni-See",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-03-22",
+        "2026-06-25",
+        "2026-09-08"
+      ],
+      "source_signal_types": [
+        "first_person_on_site_social_activity_claim",
+        "first_person_fence_observation",
+        "first_person_site_and_patrol_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 704,
+      "candidate_id": "GC1-GERMANY-01",
+      "name": "Cranachwald",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2025-12-03",
+        "2026-07-04"
+      ],
+      "source_signal_types": [
+        "first_person_safety_area_report",
+        "first_person_area_and_social_meeting_description"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 707,
+      "candidate_id": "GS2-DE-KOELN-005",
+      "name": "Alberti See",
+      "decision": "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED",
+      "source_signal_dates": [
+        "2026-03-21"
+      ],
+      "source_signal_types": [
+        "first_person_access_question"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 726,
+      "candidate_id": "PR3-DE-COLOGNE-02-07",
+      "name": "Parking lot Lustheide",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-27"
+      ],
+      "source_signal_types": [
+        "source_user_lustheide_reopening_report"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 728,
+      "candidate_id": "GS2-DE-KOELN-004",
+      "name": "Agrippabad",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 732,
+      "candidate_id": "GS2-DE-DORTMUND-004",
+      "name": "P & R Eichlinghofen",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-22"
+      ],
+      "source_signal_types": [
+        "contemporaneous_activity_claim"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 733,
+      "candidate_id": "GS2-DE-DORTMUND-005",
+      "name": "Parkplatz A45 Dortmund Westerfilde beidseitig",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-06",
+        "2026-06-25"
+      ],
+      "source_signal_types": [
+        "current_activity_shift_claim",
+        "closure_question_about_other_site"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 734,
+      "candidate_id": "GS2-DE-DORTMUND-006",
+      "name": "Rastplatz Beverbach an der A 40 (Ruhrschnellweg)",
+      "decision": "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 740,
+      "candidate_id": "GS2-DE-DORTMUND-011",
+      "name": "Technische Universität Dortmund",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-01-05"
+      ],
+      "source_signal_types": [
+        "question_only"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 741,
+      "candidate_id": "GS2-DE-DRESDEN-001",
+      "name": "Formsandgrube Steinbach",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-17",
+        "2026-06-09",
+        "2026-06-18",
+        "2026-06-22",
+        "2026-08-05"
+      ],
+      "source_signal_types": [
+        "question_about_other_visitors",
+        "first_person_busy_parking_area",
+        "first_person_no_activity",
+        "first_person_positive_visit_claim",
+        "first_person_male_activity_claim"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 743,
+      "candidate_id": "GS2-DE-DRESDEN-003",
+      "name": "Kiesgrube Leuben",
+      "decision": "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED",
+      "source_signal_dates": [
+        "2026-03-31",
+        "2026-05-11"
+      ],
+      "source_signal_types": [
+        "first_person_negative_condition_and_activity_report",
+        "non_cruising_positive_scenery_comment",
+        "historic_nostalgic_comment"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 745,
+      "candidate_id": "GS2-DE-DRESDEN-005",
+      "name": "Rastplatz Nöthnitzgrund",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-02-25",
+        "2026-03-17"
+      ],
+      "source_signal_types": [
+        "question_only",
+        "first_person_repeated_negative_visits"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 749,
+      "candidate_id": "GS2-DE-DRESDEN-009",
+      "name": "Weißeritz-Grünzug",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-16"
+      ],
+      "source_signal_types": [
+        "first_person_seen_people_no_interactions"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 757,
+      "candidate_id": "GS2-DE-DUISBURG-007",
+      "name": "Rahmer See",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-02-22",
+        "2026-06-17",
+        "2026-07-27"
+      ],
+      "source_signal_types": [
+        "first_person_repeated_visits_low_or_no_activity",
+        "first_person_ongoing_visits_no_cruising_proof",
+        "question_only"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 761,
+      "candidate_id": "GS2-DE-DUESSELDORF-002",
+      "name": "Angermunder Baggerloch",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-13"
+      ],
+      "source_signal_types": [
+        "first_person_naturist_and_cruising_area_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 763,
+      "candidate_id": "GS2-DE-DUESSELDORF-004",
+      "name": "FKK Strand Himmelgeist am km 727",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-05-26",
+        "2026-07-04"
+      ],
+      "source_signal_types": [
+        "first_person_ordinary_fkk_search_negative",
+        "planned_visit_question"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 764,
+      "candidate_id": "GS2-DE-DUESSELDORF-006",
+      "name": "Hofgarten",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2025-12-15"
+      ],
+      "source_signal_types": [
+        "first_person_multiple_encounters_claim"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 771,
+      "candidate_id": "GS2-DE-DUESSELDORF-013",
+      "name": "Unterbacher See",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-03-01"
+      ],
+      "source_signal_types": [
+        "recently_posted_historical_cruising_recollection"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 776,
+      "candidate_id": "GS2-DE-EFRINGEN-KIRCHEN-001",
+      "name": "Parkplatz Efringen-Kirchen",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-25"
+      ],
+      "source_signal_types": [
+        "first_person_report_of_men_and_cruising"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 782,
+      "candidate_id": "GS2-DE-FRANKFURT-AM-MAIN-003",
+      "name": "Friedberger Anlage",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-20"
+      ],
+      "source_signal_types": [
+        "first_person_access_reopening_report"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 784,
+      "candidate_id": "GS2-DE-FRANKFURT-AM-MAIN-005",
+      "name": "Klappe U-Bahnhof Bockenheimer Warte",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-01-15",
+        "2026-02-24"
+      ],
+      "source_signal_types": [
+        "first_person_operational_reopening_and_security_report",
+        "possible_positive_activity_self_report_ambiguous_context"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 798,
+      "candidate_id": "GS2-DE-HAMBURG-005",
+      "name": "Friedhof Ohlsdorf",
+      "decision": "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED",
+      "source_signal_dates": [
+        "2026-02-12",
+        "2026-07-10"
+      ],
+      "source_signal_types": [
+        "first_person_negative_and_wc_closed",
+        "visitor_comment_no_confirmed_cruising"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 833,
+      "candidate_id": "GS2-DE-HANNOVER-005",
+      "name": "Klappe am Stadtfriedhof Stöcken",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-22"
+      ],
+      "source_signal_types": [
+        "positive_first_person_repeated_claim"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 838,
+      "candidate_id": "GS2-DE-HANNOVER-010",
+      "name": "Rastplatz Vahrenheide an der A 2",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-03-08",
+        "2026-06-17"
+      ],
+      "source_signal_types": [
+        "recent_use_observation_claim",
+        "question_only"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 842,
+      "candidate_id": "GS2-DE-HANNOVER-014",
+      "name": "Zauberwald beim Zoo",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-03"
+      ],
+      "source_signal_types": [
+        "first_person_negative_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 849,
+      "candidate_id": "GS2-DE-KARLSRUHE-005",
+      "name": "Nymphengarten",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-03-20"
+      ],
+      "source_signal_types": [
+        "retrospective_police_contact"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 850,
+      "candidate_id": "GS2-DE-KARLSRUHE-006",
+      "name": "Rastplatz Birkenwäldle an der A 8",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-06-04"
+      ],
+      "source_signal_types": [
+        "recent_negative_activity_report"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 856,
+      "candidate_id": "GS2-DE-LEIPZIG-002",
+      "name": "Die Nonne im Clara Zetkin Park",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 858,
+      "candidate_id": "GS2-DE-LEIPZIG-004",
+      "name": "Kanal in Dölzig",
+      "decision": "EXCLUDE_RECENT_NEGATIVE_ONLY_OR_OLDER_EVENT",
+      "source_signal_dates": [
+        "2026-05-17",
+        "2026-07-24",
+        "2026-08-06"
+      ],
+      "source_signal_types": [
+        "recent_place_visit_litter_observation",
+        "question_only",
+        "repeated_negative_first_person_visits"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 861,
+      "candidate_id": "GS2-DE-LEIPZIG-007",
+      "name": "Kulkwitzer See Westufer",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-05-27"
+      ],
+      "source_signal_types": [
+        "recent_generic_positive_activity_claim"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 866,
+      "candidate_id": "GS2-DE-MANNHEIM-005",
+      "name": "Parkplatz A6 in Höhe Mannheim Sandhofen",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-02-26",
+        "2026-03-11",
+        "2026-07-31"
+      ],
+      "source_signal_types": [
+        "recent_negative_or_quiet_visit",
+        "recent_site_user_comment",
+        "recent_first_person_social_observation"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 870,
+      "candidate_id": "GC1-GERMANY-05",
+      "name": "A94 Ende in Marktl - unter der Alzbrücke",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-04-28"
+      ],
+      "source_signal_types": [
+        "solicitation_only"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 884,
+      "candidate_id": "GS2-DE-MUENCHEN-016",
+      "name": "Parkplatz an der B 471",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-07",
+        "2026-06-08"
+      ],
+      "source_signal_types": [
+        "positive_firsthand_claim",
+        "negative_firsthand_claim"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 885,
+      "candidate_id": "GS2-DE-MUENCHEN-017",
+      "name": "Parkplatz und FKK Gelände Eching am Ammersee",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 889,
+      "candidate_id": "GS2-DE-MUENCHEN-012",
+      "name": "Naturbad Maria Einsiedel",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 890,
+      "candidate_id": "GS2-DE-MUENCHEN-013",
+      "name": "Olympiabad",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-10-09"
+      ],
+      "source_signal_types": [
+        ""
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 896,
+      "candidate_id": "GS2-DE-NUERNBERG-002",
+      "name": "Hafenparkplatz Nürnberg Süd",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-01-20",
+        "2026-02-11",
+        "2026-02-27"
+      ],
+      "source_signal_types": [
+        ""
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 918,
+      "candidate_id": "PR3-DE-BERLIN-01-03",
+      "name": "Rest area Briesenluch",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 919,
+      "candidate_id": "GS2-DE-STUTTGART-001",
+      "name": "Botanischer Garten der Uni Hohenheim",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 923,
+      "candidate_id": "GS2-DE-STUTTGART-007",
+      "name": "Klappe am Bismarckplatz",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-05"
+      ],
+      "source_signal_types": [
+        "positive_claim"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 924,
+      "candidate_id": "GS2-DE-STUTTGART-008",
+      "name": "Klappe am Schillerplatz",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-06-18"
+      ],
+      "source_signal_types": [
+        "negative_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 943,
+      "candidate_id": "PR3-MUC-GAP-22",
+      "name": "Parkplatz Aschheim",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2025-11-30"
+      ],
+      "source_signal_types": [
+        ""
+      ],
+      "source_signal_note": "Planet Randy spot-specific meeting posts dated 2025-11-30",
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 944,
+      "candidate_id": "PR3-MUC-GAP-23",
+      "name": "Paradiesparkplatz",
+      "decision": "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED",
+      "source_signal_dates": [
+        "2026-01-30",
+        "2026-01-31",
+        "2026-02-01"
+      ],
+      "source_signal_types": [
+        ""
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 948,
+      "candidate_id": "GC1-EX-SPAIN-BADALONA-RIERA-POMAR",
+      "name": "Riera Pomar",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 954,
+      "candidate_id": "GC1-EX-SPAIN-BARCELONA-ASEOS-MERCAT-SANT-ANTONI",
+      "name": "Aseos Mercat Sant Antoni",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-18"
+      ],
+      "source_signal_types": [
+        "meeting_inquiry"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 960,
+      "candidate_id": "GC1-EX-SPAIN-EL-PRAT-DE-LLOBREGAT-PARKING-RIO-LLOBREGAT-EL-PRAT",
+      "name": "Parking río Llobregat El Prat",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-08-25"
+      ],
+      "source_signal_types": [
+        "on_platform_check_in"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 962,
+      "candidate_id": "GC1-SPAIN-02",
+      "name": "Dunas Playa El Rebollo y Els Tossals",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 965,
+      "candidate_id": "GC1-ESP-LPA-03",
+      "name": "Doramas - Las Palmas de Gran Canaria",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 968,
+      "candidate_id": "GC1-ESP-LPA-06",
+      "name": "La Laja-Mercalaspalmas",
+      "decision": "EXCLUDE_AMBIGUOUS_IDENTITY_AFTER_SOURCE_CHECK",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": "La Laja beach and Mercalaspalmas industrial district are different places; only dated roadway construction info is available.",
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 969,
+      "candidate_id": "GC1-ESP-LPA-07",
+      "name": "Centro Comercial La Ballena",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 972,
+      "candidate_id": "GC1-ESP-LPA-11",
+      "name": "Estación de guaguas de San Telmo",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 974,
+      "candidate_id": "GC1-ESP-LPA-13",
+      "name": "CC Las Ramblas",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 975,
+      "candidate_id": "GC1-ESP-LPA-14",
+      "name": "Intercambiador Santa Catalina",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 985,
+      "candidate_id": "GC1-ESP-MAS-09",
+      "name": "Holidayworld Maspalomas Center",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 990,
+      "candidate_id": "GC1-ESP-MAS-14",
+      "name": "Playa Carpinteras",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 991,
+      "candidate_id": "GP4-SPAIN-MASPALOMAS-02",
+      "name": "Maspalomas gay beach — Kiosk 7",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-21",
+        "2026-08-21"
+      ],
+      "source_signal_types": [
+        "dated_firsthand_beach_visit"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 993,
+      "candidate_id": "GC1-SPAIN-14",
+      "name": "Área de bomberos Mollet",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 994,
+      "candidate_id": "GC1-SPAIN-06",
+      "name": "Zona Saltoki",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-19"
+      ],
+      "source_signal_types": [
+        "dated_named_forum_discussion"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 996,
+      "candidate_id": "GC1-EX-SPAIN-SABADELL-BOSC-CANDEU",
+      "name": "Bosc CanDeu",
+      "decision": "EXCLUDE_CLOSED_OR_FUNDAMENTALLY_CHANGED",
+      "source_signal_dates": [
+        "2026-10-25"
+      ],
+      "source_signal_types": [
+        "independent_recent_access_update"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1002,
+      "candidate_id": "GC1-GAP-SEVILLE-01",
+      "name": "Carrefour Macarena",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1003,
+      "candidate_id": "GC1-GAP-SEVILLE-04",
+      "name": "Jardines del Guadalquivir",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-03-18",
+        "2026-03-29"
+      ],
+      "source_signal_types": [
+        "dated_online_visit_question",
+        "dated_online_presence_question"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 1007,
+      "candidate_id": "GC1-GAP-SEVILLE-10",
+      "name": "Wc Estación de autobuses del Prado de San Sebastián",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1011,
+      "candidate_id": "GC1-GAP-SEVILLE-14",
+      "name": "Alcampo Tamarguillo",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1012,
+      "candidate_id": "GC1-EX-SPAIN-TERRASSA-CARREFOUR-TERRASSA",
+      "name": "Carrefour Terrassa",
+      "decision": "EXCLUDE_AMBIGUOUS_IDENTITY_AFTER_SOURCE_CHECK",
+      "source_signal_dates": [
+        "2026-07-18"
+      ],
+      "source_signal_types": [
+        "archived_source_online_comment_date"
+      ],
+      "source_signal_note": null,
+      "review_note": "Carrefour Vallès Terrassa and Carrefour Montserrat Terrassa are distinct hypermarkets; original source does not identify which.",
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1013,
+      "candidate_id": "GC1-EX-SPAIN-TORDERA-POLIGONO-INDUSTRIAL-MAS-PUIGVERT",
+      "name": "Polígono Industrial Mas Puigvert",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-07-18"
+      ],
+      "source_signal_types": [
+        "archived_source_online_comment_date"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 1014,
+      "candidate_id": "GC1-SPAIN-12",
+      "name": "Calle Miguel Servet",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [
+        "2026-10-03"
+      ],
+      "source_signal_types": [
+        "independent_directory_record_created"
+      ],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 1019,
+      "candidate_id": "PC6-ES-PLATJA-TORN",
+      "name": "Platja del Torn",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1020,
+      "candidate_id": "PC6-ES-SA-COMA",
+      "name": "Sa Coma",
+      "decision": "EXCLUDE_UNIDENTIFIABLE_LOCATION",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1021,
+      "candidate_id": "GC1-GAP-GRANADA-02",
+      "name": "Aseos Neptuno",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1022,
+      "candidate_id": "GC1-GAP-GRANADA-03",
+      "name": "Baños Estación Buses",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1024,
+      "candidate_id": "GC1-GAP-GRANADA-07",
+      "name": "Baños 1ª Planta Parking Alcampo",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1028,
+      "candidate_id": "GC1-GAP-GRANADA-11",
+      "name": "Baños Parking Granaita",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1029,
+      "candidate_id": "GC1-GAP-GRANADA-14",
+      "name": "Aseos parking cubierto Nevada Shopping",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1032,
+      "candidate_id": "GC1-FRANCE-03",
+      "name": "Abadia",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1034,
+      "candidate_id": "GC1-FRANCE-02",
+      "name": "Lac Mort",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1037,
+      "candidate_id": "GC1-FRANCE-06",
+      "name": "Pelouse de Reuilly",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1041,
+      "candidate_id": "GC1-FRANCE-04",
+      "name": "Pont du bouc",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1042,
+      "candidate_id": "GC1-FRANCE-11",
+      "name": "Aire de Fronholz",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1048,
+      "candidate_id": "SP5-GB-LON-001",
+      "name": "Bostall Heath",
+      "decision": "RETAIN_RECENT_SOURCE_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": "Splashd source card added about eight months before 2026-11-06, without dated eyewitness activity",
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Recent mention/check-in/claim is not necessarily verified in-person cruising. Public description must keep this distinction."
+    },
+    {
+      "queue_index": 1049,
+      "candidate_id": "SP5-GB-LON-002",
+      "name": "Riverside Walk - London",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1051,
+      "candidate_id": "SP5-GB-LON-004",
+      "name": "Nunhead Cemetery",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1053,
+      "candidate_id": "SP5-GB-LON-006",
+      "name": "Stave Hill",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1106,
+      "candidate_id": "SP5-GB-LON-063",
+      "name": "Haggerston Park",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1108,
+      "candidate_id": "SP5-GB-LON-067",
+      "name": "Abney Park Cemetery",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    },
+    {
+      "queue_index": 1172,
+      "candidate_id": "SP5-DE-MUNIC-008",
+      "name": "Josephsplatz",
+      "decision": "EXCLUDE_NO_RELEVANT_12_MONTH_SIGNAL",
+      "source_signal_dates": [],
+      "source_signal_types": [],
+      "source_signal_note": null,
+      "review_note": null,
+      "original_research_reference": "research/cruising/part5/GROUP_A_B_210_WORKING_RESEARCH.json",
+      "note": "Excluded from active, NOT deleted from preserved research."
+    }
+  ],
+  "source_checks": {
+    "189": "Source's Istanbul airport toilet entry lacks airport code, terminal and facility; spot detail page inaccessible.",
+    "243": "Paphos picnic area near airport is indexed, but neither original description nor government picnic lists establish which picnic ground; Timi remains speculation.",
+    "281": "Alba Iulia A1 service-area entry is indexed, but no road direction or named stop established.",
+    "428": "A57 Bazzera Nord and Bazzera Sud are separate; original listing does not establish side. 2026 hygiene note is not cruising activity.",
+    "439": "Gays-Cruising.com lists Palazzina and Zona Industriale Ca' di Mazze as two distinct entries about 0.2km apart; no proof same meeting point; do not auto-merge.",
+    "468": "MOP Wiśniowa Góra Wschód (Gdańsk-bound) and Zachód (Katowice-bound) both exist; original source does not identify either side; recent police report is not cruising activity.",
+    "469": "Multiple AS24 stations near Poznań; original source does not specify which branch. Recent source only asks if anyone is there.",
+    "594": "Spot source identifies Raststätte Rheintal, A13 direction Sargans, BUT Rheintal West was demolished and rebuilt in 2025–26; old woodland/door directions cannot be assumed unchanged.",
+    "968": "La Laja beach and Mercalaspalmas industrial district are different places; only dated roadway construction info is available.",
+    "1012": "Carrefour Vallès Terrassa and Carrefour Montserrat Terrassa are distinct hypermarkets; original source does not identify which."
+  }
+}
