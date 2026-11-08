@@ -272,91 +272,6 @@
     "user_action_required": false
   },
   {
-    "queue_index": 656,
-    "venue_id": "CRU-AB-0656",
-    "name": "Parkplätze A10 zwischen Erkner und Rüdersdorf",
-    "city": "Rüdersdorf bei Berlin",
-    "country": "Germany",
-    "primary_group": "LOCATION_RESEARCH",
-    "primary_problem_type": "Several plausible mapped places; select the correct one",
-    "what_exactly_is_wrong": "The A10 entry combines several separate parking areas around Erkner/Rüdersdorf.",
-    "what_to_research": "Split A10 stops by name and side (Kalkberge / Seeberg Ost / Seeberg West) and match source to one.",
-    "search_query_maps": "Parkplätze A10 zwischen Erkner und Rüdersdorf Rüdersdorf bei Berlin Germany",
-    "search_query_web": "Parkplätze A10 zwischen Erkner und Rüdersdorf Rüdersdorf bei Berlin Germany location cruising access closure current",
-    "has_coordinates": false,
-    "coordinates": null,
-    "secondary_issue_tags": [
-      "no_defensible_map_pin"
-    ],
-    "original_research_reason": "A10_UMBRELLA_CANDIDATE_MULTIPLE_DIFFERENT_STOPS",
-    "evidence_last_known": "March 2026 comments describe both repeat visits and empty parking, but they refer to different A10 stopping points. No consolidated busy time is meaningful.",
-    "source_links": [
-      "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
-      "https://gay-szene.net/parkplaetze-a10-zwischen-erkner-und-ruedersdorf-in-berlin/11008/eintrag.html",
-      "https://www.raststaetten.de/standorte/seeberg-west/",
-      "https://www.raststaetten.de/standorte/seeberg-ost/",
-      "https://www.autobahn-baustellen.de/rastanlage/a10-kalkberge/"
-    ],
-    "research_action": "disambiguate_named_alternatives",
-    "already_resolved": false,
-    "skip_current_publication": false,
-    "note": null,
-    "previous_group": "E",
-    "research_type": "choose_correct_identified_facility",
-    "web_recheck": {
-      "checked_2026_11_08": true,
-      "finding": {
-        "finding": "Original gay-szene forum on 17 June 2026 explicitly mentions Seeberg West and route details; a separate 20 March 2026 comment mentions Kalkberge. These are different spots under one directory header.",
-        "source_url": "https://gay-szene.net/parkplaetze-a10-zwischen-erkner-und-ruedersdorf-in-berlin/11008/eintrag.html",
-        "confidence": "two_distinct_named_places_referenced",
-        "next": "Resolve Seeberg West and Kalkberge as separate named stops and keep comments assigned to their actual stop; no one location for the whole A10 corridor."
-      },
-      "source_url": "https://gay-szene.net/parkplaetze-a10-zwischen-erkner-und-ruedersdorf-in-berlin/11008/eintrag.html"
-    },
-    "user_action_required": false
-  },
-  {
-    "queue_index": 866,
-    "venue_id": "CRU-AB-0866",
-    "name": "Parkplatz A6 in Höhe Mannheim Sandhofen",
-    "city": "Mannheim",
-    "country": "Germany",
-    "primary_group": "LOCATION_RESEARCH",
-    "primary_problem_type": "Several plausible mapped places; select the correct one",
-    "what_exactly_is_wrong": "The source identifies A6 near Mannheim-Sandhofen but not which parking side or named rest stop.",
-    "what_to_research": "A6 Sandhofen rest area name and direction/carriageway.",
-    "search_query_maps": "Parkplatz A6 in Höhe Mannheim Sandhofen Mannheim Germany",
-    "search_query_web": "Parkplatz A6 in Höhe Mannheim Sandhofen Mannheim Germany location cruising access closure current",
-    "has_coordinates": false,
-    "coordinates": null,
-    "secondary_issue_tags": [
-      "no_defensible_map_pin"
-    ],
-    "original_research_reason": "A6_SANDHOFEN_REST_STOP_SIDE_UNIDENTIFIED",
-    "evidence_last_known": "Recent January–July 2026 posts include visitors observing some men circulating and a July report that daytime was quiet; the evidence is mixed and not a reliable schedule.",
-    "source_links": [
-      "https://gay-szene.net/gay-cruising-in-mannheim/174/17/rubrik.html",
-      "https://gay-szene.net/parkplatz-a6-in-hoehe-mannheim-sandhofen-in-mannheim/7298/eintrag.html"
-    ],
-    "research_action": "disambiguate_named_alternatives",
-    "already_resolved": false,
-    "skip_current_publication": false,
-    "note": null,
-    "previous_group": "E",
-    "research_type": "choose_correct_identified_facility",
-    "web_recheck": {
-      "checked_2026_11_08": true,
-      "finding": {
-        "finding": "Original gay-szene directions specify the first A6 parking area after approaching via A67 from Darmstadt/Viernheimer Kreuz towards Mannheim-Sandhofen.",
-        "source_url": "https://gay-szene.net/parkplatz-a6-in-hoehe-mannheim-sandhofen-in-mannheim/7298/eintrag.html",
-        "confidence": "direction_identified_exact_rest_stop_pin_pending",
-        "next": "Map the first A6 rest area on the stated travel direction after Viernheimer Kreuz, and check actual parking name."
-      },
-      "source_url": "https://gay-szene.net/parkplatz-a6-in-hoehe-mannheim-sandhofen-in-mannheim/7298/eintrag.html"
-    },
-    "user_action_required": false
-  },
-  {
     "queue_index": 968,
     "venue_id": "CRU-AB-0968",
     "name": "La Laja-Mercalaspalmas",
@@ -780,43 +695,6 @@
     "user_action_required": false
   },
   {
-    "queue_index": 662,
-    "venue_id": "CRU-AB-0662",
-    "name": "Sandfläche im Jagen 87 des Grunewalds",
-    "city": "Berlin",
-    "country": "Germany",
-    "primary_group": "LOCATION_RESEARCH",
-    "primary_problem_type": "Place known; specific entrance, subsection or pin unclear",
-    "what_exactly_is_wrong": "The reported Jagen 87 Grunewald clearing was not mapped; a nearby Jagen 86 site would be a false match.",
-    "what_to_research": "Georeference Jagen 87 separately from protected Jagen 86, using forestry grid/trail maps.",
-    "search_query_maps": "Sandfläche im Jagen 87 des Grunewalds Berlin Germany",
-    "search_query_web": "Sandfläche im Jagen 87 des Grunewalds Berlin Germany location cruising access closure current",
-    "has_coordinates": false,
-    "coordinates": null,
-    "secondary_issue_tags": [
-      "no_defensible_map_pin"
-    ],
-    "original_research_reason": "JAGEN87_CLEARING_GEOREF_NOT_ESTABLISHED;DO_NOT_PIN_JAGEN86",
-    "evidence_last_known": "April–July 2026 first-person accounts mention men sunbathing and exploring the adjacent woodland, with some visitors reporting no encounter. Warm daylight use is more supported than a specific nightly schedule.",
-    "source_links": [
-      "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
-      "https://gay-szene.net/sandflaeche-im-jagen-87-des-grunewalds-in-berlin/12849/eintrag.html",
-      "https://www.berlin.de/forsten/walderlebnis/ausflugsziele/grunewald/"
-    ],
-    "research_action": "geocode_named_place_then_refine_subarea",
-    "already_resolved": false,
-    "skip_current_publication": false,
-    "note": "Use a clearly labeled general reference point if exact public subarea cannot be verified.",
-    "previous_group": "F",
-    "research_type": "refine_section_of_known_place",
-    "web_recheck": {
-      "checked_2026_11_08": false,
-      "finding": null,
-      "source_url": null
-    },
-    "user_action_required": false
-  },
-  {
     "queue_index": 707,
     "venue_id": "CRU-AB-0707",
     "name": "Alberti See",
@@ -847,58 +725,21 @@
     "research_type": "refine_section_of_known_place",
     "web_recheck": {
       "checked_2026_11_08": true,
+      "source_url": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html",
       "finding": {
-        "finding": "Original gay-szene forum identifies Rather Straße and Schwarzer Weg, sports ground ESV Gremberghoven and rear quarry lake; 2026 comment confirms earlier pedestrian bridge no longer exists. Do not reuse the older bridge directions.",
-        "source_url": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html",
-        "confidence": "lake_identified_walk_route_changed",
-        "next": "Search Google Maps public paths from Rather Straße/Schwarzer Weg and check latest accessible approach to back lake."
-      },
-      "source_url": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html"
+        "source": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html",
+        "original_source_map": "50.90690,7.04420",
+        "note": "Original OSM link located but user reports in directory dispute lake/pin, and footbridge removed in March 2026; do not promote this to verified exact access before resolving corrected lake."
+      }
     },
     "user_action_required": false,
     "followup_research_target": "Search Google Maps public paths from Rather Straße/Schwarzer Weg and check latest accessible approach to back lake.",
-    "reference_gps": null
-  },
-  {
-    "queue_index": 740,
-    "venue_id": "CRU-AB-0740",
-    "name": "Technische Universität Dortmund",
-    "city": "Dortmund",
-    "country": "Germany",
-    "primary_group": "LOCATION_RESEARCH",
-    "primary_problem_type": "Place known; specific entrance, subsection or pin unclear",
-    "what_exactly_is_wrong": "TU Dortmund is identified, but not the correct campus building, floor or restroom.",
-    "what_to_research": "Specific TU Dortmund campus building, floor and restroom from old source details.",
-    "search_query_maps": "Technische Universität Dortmund Dortmund Germany",
-    "search_query_web": "Technische Universität Dortmund Dortmund Germany location cruising access closure current",
-    "has_coordinates": false,
-    "coordinates": null,
-    "secondary_issue_tags": [
-      "no_defensible_map_pin"
-    ],
-    "original_research_reason": "TOILET_BUILDING_FLOOR_AMBIGUOUS;NO_MODERN_POSITIVE_EVIDENCE",
-    "evidence_last_known": "A January 2026 post asks if the site is active, but no recent firsthand visit confirms it.",
-    "source_links": [
-      "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
-      "https://gay-szene.net/technische-universitaet-dortmund-in-dortmund/9803/eintrag.html"
-    ],
-    "research_action": "geocode_named_place_then_refine_subarea",
-    "already_resolved": false,
-    "skip_current_publication": false,
-    "note": "Use a clearly labeled general reference point if exact public subarea cannot be verified.",
-    "previous_group": "F",
-    "research_type": "refine_section_of_known_place",
-    "web_recheck": {
-      "checked_2026_11_08": true,
-      "finding": {
-        "finding": "Gay-szene forum post of 15 Nov 2013 says university library first floor in front of copy room; 17 Apr 2018 post says toilets remodeled and stalls closed; 2026 comment asks whether site still works.",
-        "source_url": "https://gay-szene.net/technische-universitaet-dortmund-in-dortmund/9803/eintrag.html",
-        "confidence": "old_facility_identity_now_outdated",
-        "next": "Check whether same library restroom is publicly accessible and genuinely active after renovations."
-      },
-      "source_url": "https://gay-szene.net/technische-universitaet-dortmund-in-dortmund/9803/eintrag.html"
-    },
-    "user_action_required": false
+    "reference_gps": null,
+    "map_conflict": {
+      "source": "https://gay-szene.net/alberti-see-in-koeln/7470/eintrag.html",
+      "original_source_map": "50.90690,7.04420",
+      "note": "Original OSM link located but user reports in directory dispute lake/pin, and footbridge removed in March 2026; do not promote this to verified exact access before resolving corrected lake."
+    }
   },
   {
     "queue_index": 763,
@@ -935,18 +776,13 @@
     "research_type": "refine_section_of_known_place",
     "web_recheck": {
       "checked_2026_11_08": true,
+      "source_url": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html",
       "finding": {
-        "finding": "Original gay-szene report dated 22 March 2025 gives 51.1474845,6.7980433 as alternative to an apparently inaccurate existing directory map pin; treat as reported coordinate only, not verified official Rhine km727 marker.",
-        "source_url": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html",
-        "confidence": "reported_coordinate_not_officially_confirmed",
-        "next": "Check that candidate point against Rhine kilometre 727 official geography and public access restrictions.",
-        "reference_gps": {
-          "latitude": 51.1474845,
-          "longitude": 6.7980433,
-          "meaning": "forum contributor's alternative map correction, not verified by official Rhine marker"
-        }
-      },
-      "source_url": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html"
+        "source": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html",
+        "original_source_map": "51.16506,6.80030",
+        "alternative_reported": "51.1474845,6.7980433",
+        "note": "Original OSM pin 51.16506,6.80030 disputes March 2025 forum suggested 51.1474845,6.7980433; verify Rhine kilometer and park side before promoting."
+      }
     },
     "user_action_required": false,
     "followup_research_target": "Check that candidate point against Rhine kilometre 727 official geography and public access restrictions.",
@@ -954,53 +790,13 @@
       "latitude": 51.1474845,
       "longitude": 6.7980433,
       "meaning": "forum contributor's alternative map correction, not verified by official Rhine marker"
-    }
-  },
-  {
-    "queue_index": 896,
-    "venue_id": "CRU-AB-0896",
-    "name": "Hafenparkplatz Nürnberg Süd",
-    "city": "Nuremberg",
-    "country": "Germany",
-    "primary_group": "LOCATION_RESEARCH",
-    "primary_problem_type": "Place known; specific entrance, subsection or pin unclear",
-    "what_exactly_is_wrong": "The Nürnberg Süd harbour parking entrance and specific public parking area are not matched.",
-    "what_to_research": "Exact public Hafenparkplatz Süd entrance at Nürnberg harbour.",
-    "search_query_maps": "Hafenparkplatz Nürnberg Süd Nuremberg Germany",
-    "search_query_web": "Hafenparkplatz Nürnberg Süd Nuremberg Germany location cruising access closure current",
-    "has_coordinates": false,
-    "coordinates": null,
-    "secondary_issue_tags": [
-      "historic_or_uncorroborated_activity",
-      "no_defensible_map_pin"
-    ],
-    "original_research_reason": "EXACT_HAFENPARKPLATZ_ENTRANCE_UNCONFIRMED",
-    "evidence_last_known": "Recent comments disagree about whether activity survived the roadworks, so there is no dependable time window.",
-    "source_links": [
-      "https://gay-szene.net/gay-cruising-in-nuernberg/201/17/rubrik.html",
-      "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html",
-      "https://planet-randy.com/blog/eintrag/hafenparkplatz-nuernberg/",
-      "https://www.nuernberg.de/presse/mitteilungen/pm_28109.html"
-    ],
-    "research_action": "geocode_named_place_then_refine_subarea",
-    "already_resolved": false,
-    "skip_current_publication": false,
-    "note": "Use a clearly labeled general reference point if exact public subarea cannot be verified.",
-    "previous_group": "F",
-    "research_type": "refine_section_of_known_place",
-    "web_recheck": {
-      "checked_2026_11_08": true,
-      "finding": {
-        "finding": "Original directory gives Hafenstraße→Europakai as access. Nürnberg municipality reports major Hafenbrücken traffic configuration changes effective 21 September 2026, so older turn-by-turn directions may be obsolete.",
-        "source_url": "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html",
-        "confidence": "named_road_access_confirmed_traffic_changed_2026",
-        "next": "Geolocate public Europakai parking, verify route under current Nürnberg-Hafen bridge works.",
-        "additional_source": "https://www.nuernberg.de/presse/mitteilungen/pm_28109.html"
-      },
-      "source_url": "https://gay-szene.net/hafenparkplatz-nuernberg-sued-in-nuernberg/4921/eintrag.html"
     },
-    "user_action_required": false,
-    "followup_research_target": "Geolocate public Europakai parking, verify route under current Nürnberg-Hafen bridge works."
+    "map_conflict": {
+      "source": "https://gay-szene.net/fkk-strand-himmelgeist-am-km-727-in-duesseldorf/10815/eintrag.html",
+      "original_source_map": "51.16506,6.80030",
+      "alternative_reported": "51.1474845,6.7980433",
+      "note": "Original OSM pin 51.16506,6.80030 disputes March 2025 forum suggested 51.1474845,6.7980433; verify Rhine kilometer and park side before promoting."
+    }
   },
   {
     "queue_index": 960,
