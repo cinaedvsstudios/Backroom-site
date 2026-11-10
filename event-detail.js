@@ -334,6 +334,7 @@
             <div class="event-detail-action-row">
               ${buttonLink('🎟️ Tickets / Info', ticketUrl, 'primary-btn')}
               ${buttonLink('Website', websiteUrl)}
+              <button type="button" class="btn secondary-btn pill-btn" id="event-download-story">🖼️ Share to story</button>
             </div>
             ${lastUpdated ? `<p class="event-detail-updated">⌛ Last updated: ${escapeHTML(lastUpdated)}</p>` : ''}
           </div>
@@ -368,6 +369,10 @@
   }
 
   function bindEventModalActions(event, venue) {
+    document.getElementById('event-download-story')?.addEventListener('click', function () {
+      window.BackroomDownloads?.showStory(event, venue, this);
+    });
+
     const saveButton = document.getElementById('event-modal-save');
     if (saveButton) saveButton.onclick = () => {
       if (typeof window.toggleEventFavorite === 'function') {

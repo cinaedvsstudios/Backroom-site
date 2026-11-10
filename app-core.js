@@ -2491,6 +2491,7 @@ function renderSharedListView(name, emoji, entries) {
         <p class="meta-text" role="note" style="max-width:550px; margin:0 auto 20px; font-size:0.95rem; line-height:1.5; color:var(--text-light);">Something missing? Make sure your friend has sent you the most recent link!</p>
         <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
             <button id="btn-save-shared" class="btn primary-btn pill-btn" style="padding:10px 20px;">💾 Save List to Profile</button>
+            <button id="btn-download-shared-pdf" class="btn secondary-btn pill-btn" style="padding:10px 20px;">📥 Download PDF</button>
             <button id="btn-open-site" class="btn secondary-btn pill-btn" style="padding:10px 20px;">🌍 Open Main Site</button>
         </div>
         <p style="font-size:0.85rem; color:var(--label-grey); margin-top:15px;">Saving adds these venues and events to your Shortlists.</p>
@@ -2502,6 +2503,10 @@ function renderSharedListView(name, emoji, entries) {
     if (!sharedCounts.venueCount && !sharedCounts.eventCount) {
         resultsContainer.innerHTML += '<p class="shortlist-empty-state">No active shortlist items found.</p>';
     }
+
+    document.getElementById('btn-download-shared-pdf')?.addEventListener('click', function () {
+        window.BackroomDownloads?.downloadShortlist(name, entries, this);
+    });
 
     document.getElementById('btn-save-shared')?.addEventListener('click', () => {
         const baseName = String(name || '').trim().slice(0, 80) || 'Shared Shortlist';
@@ -2676,6 +2681,15 @@ function renderSingleShortlist(name) {
             share.setAttribute('aria-label', `Share ${name}`);
             share.addEventListener('click', () => shareShortlist(name));
             actions.appendChild(share);
+
+            const download = document.createElement('button');
+            download.type = 'button';
+            download.className = 'shortlist-rename-btn shortlist-heading-download';
+            download.textContent = '📥';
+            download.title = 'Download PDF - offline copy with full details';
+            download.setAttribute('aria-label', `Download ${name} as PDF`);
+            download.addEventListener('click', () => window.BackroomDownloads?.downloadShortlist(name, getShortlistEntries(name), download));
+            actions.appendChild(download);
 
             cTitle.appendChild(actions);
         }
