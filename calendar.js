@@ -59,6 +59,165 @@
         loaded: false
     };
 
+    // Selection editing deliberately updates only the grid classes and the event panel.
+    const selection = { active:false, multi:false, anchor:'', last:'', deadline:0, timer:null, gesture:null, hold:null, suppressClickUntil:0 };
+    const emptyJump = { timer:null, signature:'', cancelled:new Set(), target:'', deadline:0 };
+    const HOLD_MS = 500, EDIT_MS = 5000;
+    function stopEmptyJump() { clearInterval(emptyJump.timer); emptyJump.timer=null; }
+    function cancelGesture() { clearTimeout(selection.hold); selection.hold=null; selection.gesture=null; }
+    function stopSelection() {
+        clearInterval(selection.timer); selection.timer=null; selection.active=false; cancelGesture();
+    }
+    function syncSelectionGrid() {
+        document.querySelectorAll('#calendar-container [data-calendar-date]').forEach(button=>{
+            const key=button.dataset.calendarDate, chosen=state.selectedDates.has(key);
+            button.classList.toggle('selected',chosen);
+            button.classList.toggle('calendar-multi-selected',chosen&&selection.multi);
+            button.classList.toggle('calendar-selection-pulse',chosen&&selection.active&&key===selection.anchor);
+            button.setAttribute('aria-pressed',String(chosen));
+        });
+    }
+    function selectionPanel() {
+        const panel=document.querySelector('#calendar-container .calendar-event-panel');
+        if(!panel)return;
+        if(!panel.querySelector('#calendar-selection-status')) {
+            panel.innerHTML='<div class="calendar-selection-message" id="calendar-selection-status"><h2 class="display-font">SELECT YOUR DATES</h2><p>Tap more days to add or remove them, or hold and drag to select a range.</p><p><strong id="calendar-selection-count"></strong></p><p id="calendar-selection-clock" role="status" aria-live="polite"></p><button type="button" class="btn secondary-btn pill-btn" id="calendar-selection-done">Done</button></div>';
+            panel.querySelector('#calendar-selection-done').onclick=finishSelection;
+        }
+        panel.querySelector('#calendar-selection-count').textContent=state.selectedDates.size+' date'+(state.selectedDates.size===1?'':'s')+' selected';
+        const clock=panel.querySelector('#calendar-selection-clock');
+        const label=selection.gesture?'Release to continue selecting.':'Loading your events in '+Math.max(1,Math.ceil((selection.deadline-Date.now())/1000))+' seconds…';
+        if(clock.textContent!==label)clock.textContent=label;
+    }
+    function resetSelectionTimer() { selection.deadline=Date.now()+EDIT_MS; }
+    function beginSelection(key, replace=true) {
+        stopEmptyJump(); selection.active=true; selection.multi=true; selection.anchor=key; selection.last=key; state.dateFilter='all';
+        if(replace)state.selectedDates=new Set([key]);
+        state.selectedDate=key; resetSelectionTimer();
+        clearInterval(selection.timer);
+        selection.timer=setInterval(()=>{
+            if(!selection.active)return;
+            if(selection.gesture)resetSelectionTimer();
+            else if(Date.now()>=selection.deadline){finishSelection();return;}
+            selectionPanel();
+        },200);
+        syncSelectionGrid(); selectionPanel();
+    }
+    function finishSelection() {
+        if(!selection.active)return;
+        stopSelection();
+        if(readCalendarRouteState())history.replaceState(history.state,'',getCalendarShareUrl());
+        render();
+    }
+    function selectSingle(key) {
+        stopSelection(); stopEmptyJump(); selection.multi=false; selection.anchor=key; selection.last=key;
+        emptyJump.cancelled.clear(); state.dateFilter='all'; state.selectedDates=new Set([key]); state.selectedDate=key;
+        const date=parseDate(key);state.month=new Date(date.getFullYear(),date.getMonth(),1);
+        if(readCalendarRouteState())history.replaceState(history.state,'',getCalendarShareUrl());
+        render();
+    }
+    function toggleSelected(key) {
+        if(state.selectedDates.has(key)) { if(state.selectedDates.size>1)state.selectedDates.delete(key); }
+        else state.selectedDates.add(key);
+        state.selectedDate=state.selectedDates.has(key)?key:[...state.selectedDates].sort()[0];
+        if(!state.selectedDates.has(selection.anchor))selection.anchor=[...state.selectedDates][0];
+        selection.last=key; resetSelectionTimer();syncSelectionGrid();selectionPanel();
+    }
+    function rangeKeys(a,b) {
+        const start=parseDate(a),end=parseDate(b); if(!start||!end)return [];
+        const low=start<end?start:end,high=start<end?end:start,keys=[];
+        for(let d=new Date(low);d<=high;d.setDate(d.getDate()+1))keys.push(dateKey(d));
+        return keys;
+    }
+    function dayFromPoint(x,y) { return document.elementFromPoint(x,y)?.closest('#calendar-container [data-calendar-date]')?.dataset.calendarDate; }
+    function bindDateSelection() {
+        const grid=document.querySelector('#calendar-container .calendar-grid');if(!grid)return;
+        grid.addEventListener('contextmenu',event=>{if(event.target.closest('[data-calendar-date]'))event.preventDefault();});
+        grid.addEventListener('pointerdown',event=>{
+            const button=event.target.closest('[data-calendar-date]');if(!button||event.button!==0||!event.isPrimary)return;
+            stopEmptyJump(); cancelGesture(); selection.suppressClickUntil=0;
+            const key=button.dataset.calendarDate;
+            const gesture={id:event.pointerId,key,x:event.clientX,y:event.clientY,last:key,activated:false,dragged:false,base:new Set(state.selectedDates)};
+            selection.gesture=gesture;
+            selection.hold=setTimeout(()=>{
+                if(selection.gesture!==gesture)return;
+                gesture.activated=true;
+                if(!selection.active) {beginSelection(key);gesture.base=new Set();}
+                else {gesture.base=new Set(state.selectedDates);state.selectedDates.add(key);resetSelectionTimer();syncSelectionGrid();selectionPanel();}
+            },HOLD_MS);
+        });
+        grid.addEventListener('click',event=>{
+            const button=event.target.closest('[data-calendar-date]');if(!button)return;
+            if(event.detail>0&&Date.now()<selection.suppressClickUntil){event.preventDefault();return;}
+            const key=button.dataset.calendarDate;
+            if(event.shiftKey) {
+                const anchor=selection.last||state.selectedDate;
+                if(!selection.active)beginSelection(anchor);
+                state.selectedDates=new Set(rangeKeys(anchor,key));state.selectedDate=key;selection.last=key;resetSelectionTimer();syncSelectionGrid();selectionPanel();
+            } else if(selection.active)toggleSelected(key);
+            else selectSingle(key);
+        });
+        grid.addEventListener('keydown',event=>{
+            if(event.key==='Escape'&&selection.active){event.preventDefault();finishSelection();}
+        });
+    }
+    document.addEventListener('pointermove',event=>{
+        const g=selection.gesture;if(!g||g.id!==event.pointerId)return;
+        if(!g.activated) {if(Math.hypot(event.clientX-g.x,event.clientY-g.y)>10)cancelGesture();return;}
+        event.preventDefault();const key=dayFromPoint(event.clientX,event.clientY);if(!key||key===g.last)return;
+        g.dragged=true;g.last=key;state.selectedDates=new Set([...g.base,...rangeKeys(g.key,key)]);
+        state.selectedDate=key;selection.last=key;resetSelectionTimer();syncSelectionGrid();selectionPanel();
+    },{passive:false});
+    // Cancelling touch scrolling only after activation preserves ordinary page scrolling.
+    document.addEventListener('touchmove',event=>{if(selection.gesture?.activated)event.preventDefault();},{passive:false});
+    document.addEventListener('pointerup',event=>{
+        const g=selection.gesture;if(!g||g.id!==event.pointerId)return;
+        if(g.activated){selection.suppressClickUntil=Date.now()+700;resetSelectionTimer();}
+        cancelGesture();if(selection.active)selectionPanel();else scheduleEmptyJump();
+    });
+    document.addEventListener('pointercancel',()=>{cancelGesture();if(selection.active){resetSelectionTimer();selectionPanel();}});
+    document.addEventListener('visibilitychange',()=>{
+        if(document.hidden){stopEmptyJump();if(selection.active){stopSelection();}else cancelGesture();}
+        else if(isCalendarRouteHash()&&state.loaded)render();
+    });
+    window.addEventListener('blur',()=>{if(emptyJump.timer)document.getElementById('calendar-empty-cancel')?.click();stopEmptyJump();if(selection.active){stopSelection();if(isCalendarRouteHash())render();}else cancelGesture();});
+    function nextMatchingDate() {
+        const current=parseDate(state.selectedDate);if(!current)return '';
+        const after=new Date(current);after.setDate(after.getDate()+1);
+        const candidates=new Set();
+        for(const event of state.events.filter(isPublic)) {
+            const first=parseDate(event.Event_Date);if(!first)continue;
+            if(!isWeekly(event)){if(first>current)candidates.add(dateKey(first));continue;}
+            const weekday=weeklyDay(event);if(weekday===null)continue;
+            const next=new Date(Math.max(first.getTime(),after.getTime()));next.setDate(next.getDate()+(weekday-next.getDay()+7)%7);
+            if(occurrenceForDate(event,next))candidates.add(dateKey(next));
+        }
+        if(state.featuredOnly)for(const pick of window.BackroomV15?.picks?.Events||[])if(parseDate(pick.Event_Date)>current)candidates.add(pick.Event_Date);
+        return [...candidates].sort().find(key=>eventsOnDate(key).some(e=>!state.featuredOnly||window.BackroomV15?.isFeaturedEvent(e.Event_ID,key)))||'';
+    }
+    function scheduleEmptyJump() {
+        stopEmptyJump();
+        if(!state.loaded||state.loading||document.hidden||!isCalendarRouteHash()||state.mode!=='events'||selection.active||selection.multi||state.selectedDates.size!==1||!['all','today'].includes(state.dateFilter))return;
+        const matches=eventsForActiveDateFilter().filter(e=>!state.featuredOnly||window.BackroomV15?.isFeaturedEvent(e.Event_ID,e.Display_Date||e.Event_Date));if(matches.length)return;
+        const box=document.querySelector('#calendar-container .calendar-empty');if(!box)return;
+        const target=nextMatchingDate();
+        const signature=JSON.stringify([state.selectedDate,state.location,state.vibeFilter,state.featuredOnly,state.dateFilter]);
+        emptyJump.signature=signature;
+        if(!target){box.innerHTML='<p>No events match your filters on this day, and no later matching events are currently listed.</p><button type="button" class="btn secondary-btn pill-btn" id="calendar-clear-empty-filters">Clear category and Featured filters</button>';box.querySelector('button').onclick=()=>activateFilter('all');return;}
+        if(emptyJump.cancelled.has(signature)){box.textContent='No events match your filters on this day. Automatic navigation cancelled.';return;}
+        emptyJump.target=target;emptyJump.deadline=Date.now()+5000;
+        const label=parseDate(target).toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'});
+        box.innerHTML='<p>No events match your filters on this day.</p><p>Loading the next date with events: <strong>'+escapeHTML(label)+'</strong></p><p role="status" aria-live="polite">Moving in <strong id="calendar-empty-countdown">5</strong> seconds…</p><div class="calendar-empty-actions"><button type="button" class="btn primary-btn pill-btn" id="calendar-empty-now">Go now</button><button type="button" class="btn secondary-btn pill-btn" id="calendar-empty-cancel">Cancel</button></div>';
+        const go=()=>{stopEmptyJump();selectSingle(target);};
+        box.querySelector('#calendar-empty-now').onclick=go;
+        box.querySelector('#calendar-empty-cancel').onclick=()=>{emptyJump.cancelled.add(signature);stopEmptyJump();box.textContent='No events match your filters on this day. Automatic navigation cancelled.';};
+        emptyJump.timer=setInterval(()=>{
+            if(!isCalendarRouteHash()||selection.active||document.hidden){stopEmptyJump();return;}
+            const seconds=Math.ceil((emptyJump.deadline-Date.now())/1000);if(seconds<=0){go();return;}
+            const counter=document.getElementById('calendar-empty-countdown');if(counter&&counter.textContent!==String(seconds))counter.textContent=String(seconds);
+        },200);
+    }
+
     function dateKey(date) {
         return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
     }
@@ -530,6 +689,7 @@
         state.vibeFilter = routeState.vibeFilter;
         state.selectedDate = routeState.selectedDate;
         state.selectedDates = new Set((routeState.selectedDates || [routeState.selectedDate]).filter(v=>parseDate(v)));
+        selection.multi=state.selectedDates.size>1;selection.last=state.selectedDate;
         const selected = parseDate(routeState.selectedDate) || startOfToday();
         state.month = new Date(selected.getFullYear(), selected.getMonth(), 1);
         return true;
@@ -1007,7 +1167,9 @@ function ensureSelectedDate() {
         return '<section class="calendar-event-panel">'+heading+'<p class="calendar-day-count">'+items.length+' event occurrences · '+nodes.length+' listings</p>'+nodes.join('')+'</section>';
     }
 
-    function render() {
+    function render(allowDuringSelection = false) {
+        if(selection.active && !allowDuringSelection){syncSelectionGrid();selectionPanel();return;}
+        stopEmptyJump();
         const container = ensureContainer();
         ensureSelectedDate();
         const festivalsMode = state.mode === 'festivals';
@@ -1016,9 +1178,13 @@ function ensureSelectedDate() {
         container.innerHTML = `<div class="calendar-page ${festivalsMode?'calendar-page--festivals':''}"><div class="calendar-title-row"><div class="calendar-title-block">${heading}</div>${right}</div><div class="calendar-layout"><section class="calendar-selector"><div class="calendar-month-row"><button type="button" class="calendar-month-button" id="calendar-prev-month" aria-label="Previous month">‹</button><h2 class="display-font">${monthLabel()}</h2><button type="button" class="calendar-month-button" id="calendar-next-month" aria-label="Next month">›</button></div>${renderGrid()}<p class="calendar-key"><span class="calendar-dot"></span> ${festivalsMode?'Festivals with events on this date':'Events listed on this date'}</p></section>${renderPanel()}</div></div>`;
         window.BackroomCalendarLayout?.apply(container, festivalsMode);
         bindControls();
+        syncSelectionGrid();
+        if(selection.active)selectionPanel();else scheduleEmptyJump();
     }
 
     function activateFilter(value) {
+        stopSelection(); stopEmptyJump(); emptyJump.cancelled.clear();
+        if(value === 'today' || value === 'week'){selection.multi=false;state.selectedDates=new Set([dateKey(startOfToday())]);state.selectedDate=dateKey(startOfToday());}
         if (value === 'all') {
             state.dateFilter = 'all';
             state.vibeFilter = '';
@@ -1045,16 +1211,22 @@ function ensureSelectedDate() {
             try{replacement?.setSelectionRange(start,end)}catch(_){}
         });
         document.getElementById('calendar-prev-month')?.addEventListener('click', () => {
+            if(emptyJump.timer)emptyJump.cancelled.add(emptyJump.signature);
+            stopEmptyJump();
             state.dateFilter = 'all';
             state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1);
             ensureSelectedDate();
-            render();
+            if(selection.active)resetSelectionTimer();
+            render(true);
         });
         document.getElementById('calendar-next-month')?.addEventListener('click', () => {
+            if(emptyJump.timer)emptyJump.cancelled.add(emptyJump.signature);
+            stopEmptyJump();
             state.dateFilter = 'all';
             state.month = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 1);
             ensureSelectedDate();
-            render();
+            if(selection.active)resetSelectionTimer();
+            render(true);
         });
         document.getElementById('calendar-location-pill')?.addEventListener('click', () => {
             document.getElementById('calendar-location-pill')?.classList.add('hidden');
@@ -1087,16 +1259,7 @@ function ensureSelectedDate() {
         });
         document.getElementById('calendar-share-day')?.addEventListener('click', shareSelectedCalendarDay);
         document.querySelectorAll('[data-calendar-filter]').forEach(button => button.addEventListener('click', () => activateFilter(button.dataset.calendarFilter)));
-        document.querySelectorAll('[data-calendar-date]').forEach(button => button.addEventListener('click', () => {
-    state.dateFilter = 'all';
-    const selected = parseDate(button.dataset.calendarDate);
-    if (!selected) return;
-    const key=dateKey(selected);
-    if(state.selectedDates.has(key))state.selectedDates.delete(key);else state.selectedDates.add(key);
-    state.selectedDate=[...state.selectedDates].sort()[0] || key;
-    state.month = new Date(selected.getFullYear(), selected.getMonth(), 1);
-    render();
-}));
+        bindDateSelection();
         document.querySelectorAll('[data-calendar-save]').forEach(button => button.addEventListener('click', () => {
             window.toggleEventFavorite?.(button.dataset.calendarSave, button, false);
             render();
@@ -1140,6 +1303,7 @@ function ensureSelectedDate() {
     }
 
     function close(clear = true) {
+        stopSelection(); stopEmptyJump();
         const container = document.getElementById('calendar-container');
         container?.classList.add('hidden');
         if (container && clear) container.innerHTML = '';
@@ -1149,8 +1313,10 @@ function ensureSelectedDate() {
 
     window.closeCalendarScreen = close;
     window.openCalendarScreen = async function (requestedMode) {
+        stopSelection(); stopEmptyJump();
         const targetMode = requestedMode === 'festivals' || isFestivalsRouteHash() ? 'festivals' : 'events';
         if (state.mode !== targetMode) {
+            selection.multi=false;
             if (targetMode === 'festivals') {
                 state.eventsSelectedDates = new Set(state.selectedDates);
                 state.selectedDates = new Set();
@@ -1158,6 +1324,8 @@ function ensureSelectedDate() {
                 state.selectedDates = new Set(state.eventsSelectedDates.size ? state.eventsSelectedDates : [dateKey(new Date())]);
                 state.selectedDate = [...state.selectedDates].sort()[0] || dateKey(new Date());
             }
+            selection.multi=state.selectedDates.size>1;
+            selection.last=state.selectedDate;
             state.mode=targetMode;
             state.dateFilter='all';
             state.vibeFilter='';
@@ -1184,6 +1352,7 @@ function ensureSelectedDate() {
     document.addEventListener('backroom:v15-saved', () => { if(isCalendarRouteHash() && state.loaded)render(); });
     document.addEventListener('backroom:v15-ready', () => { if(isCalendarRouteHash() && state.loaded)render(); });
     window.addEventListener('backroom:location-changed', () => {
+        stopSelection(); stopEmptyJump(); emptyJump.cancelled.clear();
         if (!state.loaded) return;
         if (readCalendarRouteState()) history.replaceState(history.state, '', '#calendar');
         syncLocationFromSharedLocation(true);

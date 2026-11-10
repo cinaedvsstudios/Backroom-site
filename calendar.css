@@ -683,3 +683,24 @@
     box-sizing:border-box;
   }
 }
+
+/* Hold-to-select date editing. The grid stays mounted while selection is active. */
+.calendar-grid { -webkit-user-select:none; user-select:none; -webkit-touch-callout:none; }
+.calendar-day { touch-action:pan-y; }
+.calendar-page .calendar-day.calendar-multi-selected,
+.calendar-page--festivals .calendar-day.calendar-multi-selected {
+  background:#f2c94c!important;border-color:#ffe58f!important;color:#151a26!important;
+  box-shadow:0 0 0 1px rgba(242,201,76,.4)!important;
+}
+.calendar-day.calendar-multi-selected .calendar-dot { background:#a7412b!important; }
+.calendar-day.calendar-multi-selected .calendar-count { color:#a7412b!important; }
+.calendar-selection-pulse { animation:calendar-selection-pulse 1s ease-in-out infinite; }
+@keyframes calendar-selection-pulse { 50% { filter:brightness(.68); } }
+@media(prefers-reduced-motion:reduce) { .calendar-selection-pulse { animation:none;outline:2px dashed #ffe58f;outline-offset:2px; } }
+.calendar-selection-message { padding:30px 15px;text-align:center;color:var(--text-light); }
+.calendar-selection-message h2 { color:#f2c94c; }
+.calendar-selection-message p,.calendar-empty p { margin:14px 0;line-height:1.5; }
+.calendar-selection-message .btn { width:auto;min-width:110px; }
+.calendar-empty-actions { display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px; }
+.calendar-empty-actions .btn { width:auto;min-width:100px; }
+#calendar-clear-empty-filters { width:auto;max-width:100%;white-space:normal; }
