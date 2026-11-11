@@ -265,7 +265,13 @@
         }
         const existing = state.draftById.get(id);
         if (!existing) return 'New';
-        const merged = { ...existing, ...entry.row };
+        const merged = { ...existing };
+        Object.entries(entry.row).forEach(([key, value]) => {
+            if (key === field || key === 'Last_Updated') return;
+            if (value === '__CLEAR__') { merged[key] = ''; return; }
+            if (value === '' || value === null || value === undefined) return;
+            merged[key] = value;
+        });
         return JSON.stringify(existing) === JSON.stringify(merged) ? 'Unchanged' : 'Updating';
     }
 
