@@ -3,7 +3,7 @@
 'use strict';
 const DB_NAME='backroom_admin_reporting_v1', DB_VERSION=1;
 let database=null;
-const state={data:{venues:[],events:[]},scope:{events:true,venues:false,cruising:false},conditions:[{op:'OR',key:'status:Live'}],results:null,lastQueryId:null,groupCount:1,logs:[],opened:false};
+const state={data:{venues:[],events:[]},scope:{events:true,venues:false,cruising:false},conditions:[{op:'OR',key:'status:Live'}],results:null,lastQueryId:null,groupCount:1,logs:[],opened:false,countrySort:'total',countryAsc:false};
 const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const fmt=n=>Number(n||0).toLocaleString('en-GB');
 const isCruising=r=>String(r?.Category||'').trim().toLowerCase()==='cruising area';
@@ -173,8 +173,14 @@ function refreshScopeStats(){
     v.forEach(r=>{const country=r.Country||'(Missing country)';const cur=countries.get(country)||{venue:0,cruise:0,events:0};cur[isCruising(r)?'cruise':'venue']++;countries.set(country,cur);});
     e.forEach(r=>{const country=r.Country||'(Missing country)';const cur=countries.get(country)||{venue:0,cruise:0,events:0};cur.events++;countries.set(country,cur);});
     const table=document.getElementById('br-country-table');
-    const entries=[...countries.entries()].sort((a,b)=>(b[1].venue+b[1].cruise+b[1].events)-(a[1].venue+a[1].cruise+a[1].events));
-    table.innerHTML='<thead><tr><th>Country</th><th>Venues</th><th>Cruising</th><th>Events</th><th>Total</th></tr></thead><tbody>'+
+    const entries=[...countries.entries()].sort((a,b)=>{
+        const field=state.countrySort;
+        const ax=field==='country'?a[0]:(field==='total'?a[1].venue+a[1].cruise+a[1].events:a[1][field]);
+        const bx=field==='country'?b[0]:(field==='total'?b[1].venue+b[1].cruise+b[1].events:b[1][field]);
+        const result=field==='country'?String(ax).localeCompare(String(bx)):Number(ax)-Number(bx);
+        return state.countryAsc?result:-result;
+    });
+    table.innerHTML='<thead><tr><th data-country-sort="country">Country ↕</th><th data-country-sort="venue">Venues ↕</th><th data-country-sort="cruise">Cruising ↕</th><th data-country-sort="events">Events ↕</th><th data-country-sort="total">Total ↕</th></tr></thead><tbody>'+
       entries.map(([country,n])=>'<tr><td>'+esc(country)+'</td><td>'+fmt(n.venue)+'</td><td>'+fmt(n.cruise)+'</td><td>'+fmt(n.events)+'</td><td>'+fmt(n.venue+n.cruise+n.events)+'</td></tr>').join('')+'</tbody>';
     renderMonths();
 }
@@ -361,11 +367,11 @@ function install(){
     '<details class="br-panel" open><summary>📅 Monthly Event Coverage</summary><div id="br-months"></div></details>',
     '<div class="br-panel"><h2>🔍 Data Completeness & Advanced Query Builder</h2><p class="br-muted">Select datasets, build conditions, then Execute. Only the executed result is logged and available for export.</p>',
     '<div id="br-report-scopes" class="br-scopes"></div>',
-    '<div class="br-panel-inner"><h3>Find missing information — all applicable checks</h3><details><summary>Show Completeness Overview</summary><div id="br-completeness-overview" class="br-scroll"></div></details></div>',
+    '<div class="br-panel-inner"><h3>Find missing information — all applicable checks</h3><details open><summary>Show Completeness Overview</summary><div id="br-completeness-overview" class="br-scroll"></div></details></div>',
     '<div class="br-builder"><div class="br-headrow"><span>Operator</span><span>Condition</span></div><div id="br-condition-rows"></div>',
     '<button id="br-add-condition" class="btn secondary-btn pill-btn">+ Add Another Condition</button>',
     '<label class="br-query-label">Generated Query</label><div id="br-query-preview" class="br-query"></div>',
-    '<button id="br-execute" class="btn primary-btn pill-btn">▶ Execute Query</button></div>',
+    '<button id="br-execute" class="btn primary-btn pill-btn" disabled>▶ Execute Query</button></div>',
     '<div id="br-results" class="br-results"><p class="br-muted">Execute a query to see matching records and export options.</p></div></div>',
     '<div class="br-panel" id="br-growth"></div><div class="br-panel" id="br-query-history"></div>',
     '<div class="br-panel br-actions"><h2>💾 Reporting History Backup</h2><button class="btn primary-btn pill-btn" id="br-backup">Save Report</button><label class="btn secondary-btn pill-btn">Restore Report <input type="file" id="br-restore" class="hidden" accept=".json"></label><p class="br-muted">History is stored locally in this browser. Export a backup at least every seven days.</p></div>'
@@ -381,7 +387,7 @@ function install(){
     '.br-panel{margin:13px 0;padding:17px;background:#151b29;border:1px solid #394359;border-radius:12px}',
     '.br-panel summary{cursor:pointer;font-weight:bold;color:#49d2ff;padding:6px}.br-panel-inner{padding:12px;background:#0b0f19;border-radius:8px;margin:12px 0}',
     '.br-scroll{max-height:400px;overflow:auto}.br-table{width:100%;border-collapse:collapse;font-size:.95rem;margin:10px 0}',
-    '.br-table td,.br-table th{padding:8px;text-align:left;border-bottom:1px solid #354156}.br-table th{color:#49d2ff;background:#202838;position:sticky;top:0}',
+    '.br-table td,.br-table th{padding:8px;text-align:left;border-bottom:1px solid #354156}.br-table th{color:#49d2ff;background:#202838;position:sticky;top:0}#br-country-table th{cursor:pointer}',
     '.br-bar{height:9px;background:#49d2ff;border-radius:6px;margin:3px 8px 3px 0;display:inline-block;max-width:55%;min-width:2px}',
     '.br-scopes{display:flex;gap:20px;flex-wrap:wrap;margin:15px 0}.br-scopes label{display:flex;gap:8px;align-items:center;cursor:pointer}',
     '.br-builder{margin-top:16px}.br-headrow,.br-condition-row{display:grid;grid-template-columns:125px minmax(180px,1fr) 36px;gap:10px;margin:7px 0}',
@@ -410,6 +416,25 @@ function install(){
         if(target.id==='br-group-count'&&state.results){state.groupCount=Math.max(1,Math.min(Number(target.value)||1,state.results.rows.length||1));renderResults();}
         if(target.id==='br-history-query-select')refreshLogViews();
         if(target.id==='br-restore'){restoreHistory(target.files?.[0]);target.value='';}
+    });
+    root.addEventListener('click',event=>{
+        const th=event.target.closest('[data-country-sort]');
+        if(!th)return;
+        const field=th.dataset.countrySort;
+        if(state.countrySort===field)state.countryAsc=!state.countryAsc;
+        else {state.countrySort=field;state.countryAsc=field==='country';}
+        refreshScopeStats();
+    });
+    root.addEventListener('input',event=>{
+        if(event.target.id!=='br-group-count'||!state.results)return;
+        const n=state.results.rows.length;
+        const count=Math.max(1,Math.min(Number(event.target.value)||1,Math.max(1,n)));
+        state.groupCount=count;
+        const base=Math.floor(n/count),extra=n%count;
+        const preview=document.getElementById('br-group-preview');
+        if(preview)preview.innerHTML=Array.from({length:count},(_,i)=>'<div>'+groupName(i)+' — '+fmt(base+(i<extra?1:0))+' records</div>').join('');
+        const button=document.getElementById('br-download-groups');
+        if(button)button.textContent='⬇ Choose Folder & Save '+count+' JSON '+(count===1?'File':'Files');
     });
     root.addEventListener('click',event=>{
         const target=event.target.closest('button');if(!target)return;
