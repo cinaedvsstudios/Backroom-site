@@ -683,6 +683,7 @@
                 document.getElementById('preview-edit-form').addEventListener('submit', async event => {
                     event.preventDefault();
                     const errorBox = document.getElementById('preview-edit-error');
+                    try {
                     const update = {};
                     root.querySelectorAll('[data-edit-field]').forEach(input => {
                         const key = input.dataset.editField;
@@ -694,7 +695,6 @@
                             catch { throw new Error('Invalid JSON in ' + key); }
                         } else update[key] = input.value;
                     });
-                    try {
                         const changed = window.opener.BackroomAdminUpgrade.savePreview(payload.mode, payload.record[identityKey], update);
                         payload.record = changed;
                         editing = false;
