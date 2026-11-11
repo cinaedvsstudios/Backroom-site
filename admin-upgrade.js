@@ -58,7 +58,7 @@ function addSidebar() {
     const scrape=[...document.querySelectorAll('.sidebar-item')].find(x=>x.textContent.trim()==='Scrape Info');
     scrape?.remove();
     ['btn-export-csv','btn-save-json-as'].forEach(id=>{const el=document.getElementById(id);if(el)archive.appendChild(el);});
-    const audit=document.getElementById('btn-audit-event-venues')||document.getElementById('btn-audit-venue-id');
+    const audit=document.getElementById('btn-audit-event-venue-ids');
     if(audit) archive.appendChild(audit);
     // A link to the existing audit button if the enhancement adds it later.
     cruise.addEventListener('click',()=>{
@@ -185,6 +185,13 @@ function install() {
     },true);
     window.openAdminRecordPreview=openPreview;
     window.BackroomAdminUpgrade.savePreview=savePreview;
+    const oldUpdateViewButton=updateViewRecordButton;
+    updateViewRecordButton=function upgradedViewButton(){
+        const result=oldUpdateViewButton.apply(this,arguments);
+        const button=document.getElementById('btn-view-record');
+        if(button)button.textContent='👁️ View / Edit Record';
+        return result;
+    };
     const note=document.createElement('style');note.textContent=[
         '#br-archived{margin:13px 10px;border:1px solid var(--panel-mid);border-radius:10px;padding:8px;color:#eee}',
         '#br-archived summary{cursor:pointer;padding:10px;font-weight:bold;color:var(--primary-blue)}',
@@ -193,6 +200,7 @@ function install() {
         '#nav-cruising,#nav-reporting{cursor:pointer}',
         '.br-nav-active{border-left:3px solid var(--primary-blue)!important;background:var(--panel-dark)}'
     ].join('\n');document.head.appendChild(note);
+    if(currentMode==='venues'&&Array.isArray(draftData)&&draftData.length)renderTable();
 }
 window.BackroomAdminUpgrade={state,savePreview,readStored,esc,totals,isCruising,openPreview};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
