@@ -53,9 +53,9 @@ function addSidebar() {
     const parent=document.querySelector('.sidebar-menu');parent?.appendChild(archived);
     const archive=archived.querySelector('.br-archive-inner');
     ['btn-sidebar-pending','sidebar-pending-list','btn-sidebar-old','sidebar-old-list','nav-editor'].forEach(id=>{const el=document.getElementById(id);if(el)archive.appendChild(el);});
-    const previewButton=[...document.querySelectorAll('.sidebar-item')].find(x=>x.textContent.trim()==='Preview Import');
+    const previewButton=[...document.querySelectorAll('.sidebar-item')].find(x=>x.querySelector('.sidebar-text')?.textContent.trim()==='Preview Import');
     if(previewButton)archive.appendChild(previewButton);
-    const scrape=[...document.querySelectorAll('.sidebar-item')].find(x=>x.textContent.trim()==='Scrape Info');
+    const scrape=[...document.querySelectorAll('.sidebar-item')].find(x=>x.querySelector('.sidebar-text')?.textContent.trim()==='Scrape Info');
     scrape?.remove();
     ['btn-export-csv','btn-save-json-as'].forEach(id=>{const el=document.getElementById(id);if(el)archive.appendChild(el);});
     const audit=document.getElementById('btn-audit-event-venue-ids');
