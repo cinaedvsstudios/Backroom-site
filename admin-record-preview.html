@@ -118,6 +118,23 @@
         .empty { padding: 32px; text-align: center; color: var(--muted); }
         .error { max-width: 760px; margin: 80px auto; padding: 28px; border: 1px solid var(--red); border-radius: 16px; background: #1f1418; color: #fff; }
         .error h1 { color: #ff9f90; font-size: 2rem; }
+        .preview-editor { padding:24px; margin:0 auto; max-width:1100px; }
+        .preview-editor h2 { margin-bottom:12px; }
+        .preview-editor p { color:var(--muted); }
+        .preview-edit-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px; }
+        .preview-edit-field { display:flex;flex-direction:column;gap:5px;min-width:0; }
+        .preview-edit-field.wide { grid-column:1/-1; }
+        .preview-edit-field label { color:var(--cyan); font-weight:700; overflow-wrap:anywhere; }
+        .preview-edit-field input,.preview-edit-field textarea,.preview-edit-field select {
+            background:var(--surface-mid);color:var(--text);border:1px solid var(--line);
+            border-radius:8px;padding:10px;font:inherit;width:100%;min-width:0;
+        }
+        .preview-edit-field textarea { min-height:110px;resize:vertical;line-height:1.45; }
+        .preview-edit-actions { display:flex;gap:12px;align-items:center;margin:20px 0;flex-wrap:wrap; }
+        .preview-edit-actions button { background:var(--blue);color:#071018;cursor:pointer;border:0;border-radius:9px;padding:12px 20px;font:700 1.1rem 'Barlow Condensed',sans-serif; }
+        #preview-edit-error { color:#ff9f90;font-size:1.1rem;font-weight:700; }
+        @media(max-width:780px){.preview-edit-grid{grid-template-columns:1fr}.preview-editor{padding:15px}}
+
 
 
         .preview-shell.preview-cruising-area {
@@ -173,7 +190,7 @@
             <p class="preview-kicker" id="preview-kicker">👁️ DRAFT RECORD PREVIEW</p>
             <p class="preview-note">This preview uses the saved admin draft, not the published JSON.</p>
         </div>
-        <button type="button" class="close-button" onclick="window.close()">Close Preview ✕</button>
+        <div style="display:flex;gap:9px;flex-wrap:wrap;"><button type="button" class="close-button" id="preview-edit">✏️ Edit Record</button><button type="button" class="close-button" onclick="window.close()">Close Preview ✕</button></div>
     </header>
 
     <main class="page" id="preview-root"></main>
@@ -630,6 +647,69 @@
             root.innerHTML = payload.mode === 'venues'
                 ? renderVenue(payload.record, payload.events)
                 : renderEvent(payload.record, payload.venues);
+
+            const editButton = document.getElementById('preview-edit');
+            const editorAvailable = !!(window.opener && window.opener.BackroomAdminUpgrade?.savePreview);
+            editButton.disabled = !editorAvailable;
+            if (!editorAvailable) editButton.title = 'Open this record from the Admin panel to edit it.';
+            const identityKey = payload.mode === 'venues' ? 'Venue_ID' : 'Event_ID';
+            let editing = false;
+            const renderPreview = () => {
+                root.innerHTML = payload.mode === 'venues'
+                    ? renderVenue(payload.record, payload.events)
+                    : renderEvent(payload.record, payload.venues);
+                editButton.textContent = '✏️ Edit Record';
+            };
+            function renderEditForm() {
+                const fields = Object.entries(payload.record)
+                    .filter(([key]) => key !== identityKey && key !== 'Last_Updated' && !/^Unspecified\d+$/i.test(key));
+                const items = fields.map(([key, value]) => {
+                    const isLong = /Description|Opening_Notes|Info|Source_URLs|Vibe_Tags|Map_Points/i.test(key)
+                        || String(value ?? '').length > 180 || Array.isArray(value);
+                    const display = value && typeof value === 'object' ? JSON.stringify(value, null, 2) : String(value ?? '');
+                    const field = typeof value === 'boolean'
+                        ? '<select data-edit-field="' + escapeHTML(key) + '"><option value="true"' + (value ? ' selected' : '') + '>True</option><option value="false"' + (!value ? ' selected' : '') + '>False</option></select>'
+                        : isLong
+                        ? '<textarea data-edit-field="' + escapeHTML(key) + '">' + escapeHTML(display) + '</textarea>'
+                        : '<input data-edit-field="' + escapeHTML(key) + '" type="' + (typeof value === 'number' ? 'number' : 'text') + '" value="' + escapeHTML(display) + '">';
+                    return '<div class="preview-edit-field' + (isLong ? ' wide' : '') + '"><label>' + escapeHTML(key.replaceAll('_', ' ')) + '</label>' + field + '</div>';
+                }).join('');
+                root.innerHTML = '<section class="preview-shell preview-editor"><h2>Edit ' + escapeHTML(payload.record.Name || payload.record.Event_Name || 'Record') + '</h2>'
+                    + '<p>Editing the working Admin draft only. The permanent ID cannot be changed. Save your JSON from Admin afterwards.</p>'
+                    + '<p><strong>' + escapeHTML(identityKey) + ':</strong> ' + escapeHTML(payload.record[identityKey]) + '</p>'
+                    + '<form id="preview-edit-form"><div class="preview-edit-grid">' + items + '</div>'
+                    + '<div class="preview-edit-actions"><button type="submit">💾 Save Changes to Draft</button><span id="preview-edit-error"></span></div></form></section>';
+                editButton.textContent = '↩ Cancel Edit';
+                document.getElementById('preview-edit-form').addEventListener('submit', async event => {
+                    event.preventDefault();
+                    const errorBox = document.getElementById('preview-edit-error');
+                    const update = {};
+                    root.querySelectorAll('[data-edit-field]').forEach(input => {
+                        const key = input.dataset.editField;
+                        const original = payload.record[key];
+                        if (typeof original === 'boolean') update[key] = input.value === 'true';
+                        else if (typeof original === 'number') update[key] = Number(input.value);
+                        else if (original && typeof original === 'object') {
+                            try { update[key] = JSON.parse(input.value); }
+                            catch { throw new Error('Invalid JSON in ' + key); }
+                        } else update[key] = input.value;
+                    });
+                    try {
+                        const changed = window.opener.BackroomAdminUpgrade.savePreview(payload.mode, payload.record[identityKey], update);
+                        payload.record = changed;
+                        editing = false;
+                        renderPreview();
+                    } catch (error) {
+                        errorBox.textContent = error.message || String(error);
+                    }
+                });
+            }
+            editButton.addEventListener('click', () => {
+                if (!editorAvailable) return;
+                editing = !editing;
+                if (editing) renderEditForm(); else renderPreview();
+            });
+
         }());
     </script>
 </body>
