@@ -217,7 +217,11 @@
                 'placeholder_venue04.jpg',
                 'placeholder_venue05.jpg',
                 'placeholder_venue06.jpg',
-                'placeholder_venue07.jpg'
+                'placeholder_venue07.jpg',
+        'placeholder_venue15.jpg',
+        'placeholder_venue16.jpg',
+        'placeholder_venue17.jpg',
+        'placeholder_venue18.jpg'
             ];
             let payload = null;
 
@@ -390,12 +394,12 @@
 
             function isGenericPlaceholderImage(value) {
                 const image = String(value || '').trim().split('/').pop().toLowerCase();
-                return /^placeholder_venue(?:0[1-7])?\.jpg$/.test(image);
+                return /^placeholder_venue(?:(?:0[1-7])|(?:1[5-8]))?\.jpg$/.test(image);
             }
 
             function isAnyPlaceholderImage(value) {
                 const image = String(value || '').trim().split('/').pop().toLowerCase();
-                return /^placeholder_venue(?:0[1-9]|1[0-4])?\.jpg$/.test(image);
+                return /^placeholder_venue(?:0[1-9]|1[0-8])?\.jpg$/.test(image);
             }
 
             function categoryKey(venue) {
