@@ -261,13 +261,33 @@ function chartSvg(series){
     const points=series.map((d,i)=>(p+(w-2*p)*i/(series.length-1)).toFixed(1)+','+(h-p-(d.y-min)/(max-min)*(h-2*p)).toFixed(1)).join(' ');
     return '<svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Historical trend" class="br-chart"><line x1="'+p+'" y1="'+(h-p)+'" x2="'+(w-p)+'" y2="'+(h-p)+'" stroke="#8392a8"/><polyline fill="none" stroke="#49d2ff" stroke-width="3" points="'+points+'"/><text x="22" y="17" fill="#e4edf8">'+fmt(max)+'</text><text x="22" y="'+(h-5)+'" fill="#e4edf8">'+fmt(min)+'</text></svg>';
 }
+function growthChart(changes){
+    if(!changes.length)return '<p class="br-muted">The first data-changing operation will establish a growth history. Existing counts appear in Database Overview.</p>';
+    const v=state.data.venues;
+    const initialVenue=changes.find(x=>x.mode==='venues');
+    const initialEvents=changes.find(x=>x.mode==='events');
+    const first={venues:initialVenue?.before.venues??v.filter(r=>!isCruising(r)).length,cruising:initialVenue?.before.cruising??v.filter(isCruising).length,events:initialEvents?.before.events??state.data.events.length};
+    const points=[{...first}];
+    let totals={...first};
+    changes.forEach(x=>{
+        totals={...totals,...x.after};points.push({...totals});
+    });
+    const w=740,h=205,p=30,min=0,max=Math.max(1,...points.flatMap(x=>[x.venues,x.cruising,x.events]));
+    const lines=[['venues','Venues','#49d2ff'],['cruising','Cruising Areas','#ef6957'],['events','Events','#f0c94c']];
+    const path=(key)=>points.map((x,i)=>(p+(w-2*p)*i/Math.max(1,points.length-1)).toFixed(2)+','+(h-p-(x[key]/max)*(h-2*p)).toFixed(2)).join(' ');
+    return '<div class="br-growth-legend">'+lines.map(x=>'<span style="color:'+x[2]+'">● '+x[1]+'</span>').join('')+'</div>'+
+      '<svg class="br-chart" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Venues, cruising areas and events over time">'+
+      '<line x1="'+p+'" y1="'+(h-p)+'" x2="'+(w-p)+'" y2="'+(h-p)+'" stroke="#8392a8"/>'+
+      lines.map(x=>'<polyline fill="none" stroke="'+x[2]+'" stroke-width="3" points="'+path(x[0])+'"/>').join('')+
+      '<text x="'+p+'" y="18" fill="#e4edf8">'+fmt(max)+'</text>'+
+      '</svg><p class="br-muted">Each point represents a recorded data change; the lines are separate totals for each listing type.</p>';
+}
 async function refreshLogViews(){
     try{state.logs=await getAllLogs();}catch(error){console.error(error);state.logs=[];}
     const logs=state.logs.slice().sort((a,b)=>String(b.date).localeCompare(String(a.date)));
     const changes=state.logs.filter(x=>x.type==='change').sort((a,b)=>String(a.date).localeCompare(String(b.date)));
-    const latest=changes.slice(-30).map(x=>({y:x.mode==='events'?x.after.events:(x.after.venues||0)+(x.after.cruising||0)}));
     const growth=document.getElementById('br-growth');
-    if(growth)growth.innerHTML='<h3>Database Growth History</h3>'+chartSvg(latest)+
+    if(growth)growth.innerHTML='<h3>Database Growth History</h3>'+growthChart(changes)+
       '<table class="br-table"><thead><tr><th>Date</th><th>Operation</th><th>Added</th><th>Modified</th><th>Removed</th></tr></thead><tbody>'+
       logs.filter(x=>x.type==='change').slice(0,50).map(x=>'<tr><td>'+esc(new Date(x.date).toLocaleString('en-GB'))+'</td><td>'+esc(x.mode+' · '+x.operation)+'</td><td>'+fmt(x.added)+'</td><td>'+fmt(x.modified)+'</td><td>'+fmt(x.removed)+'</td></tr>').join('')+'</tbody></table>';
     const queryLogs=logs.filter(x=>x.type==='query');
@@ -373,7 +393,8 @@ function install(){
     '#br-group-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:5px;margin:10px 0;max-height:250px;overflow:auto}',
     '#br-group-preview div{padding:7px;background:#202838;border-radius:4px}.br-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}',
     '.br-actions .btn,.br-group-box .btn{width:auto}.br-link{border:0;background:none;color:#49d2ff;text-decoration:underline;cursor:pointer;text-align:left}',
-    '.br-chart{width:100%;height:auto;max-height:200px}.br-notice{border:1px solid #f0c94c;padding:12px;margin:10px 0;border-radius:8px;color:#f0c94c}',
+    '.br-growth-legend{display:flex;gap:15px;flex-wrap:wrap;font-size:.9rem;margin:10px 0}',
+    '.br-chart{width:100%;height:auto;max-height:205px}.br-notice{border:1px solid #f0c94c;padding:12px;margin:10px 0;border-radius:8px;color:#f0c94c}',
     '@media(max-width:720px){.br-stats{grid-template-columns:1fr}.br-headrow,.br-condition-row{grid-template-columns:85px minmax(120px,1fr) 30px}}'
     ].join('\n');document.head.appendChild(style);
     root.addEventListener('change',event=>{
@@ -394,7 +415,7 @@ function install(){
         const target=event.target.closest('button');if(!target)return;
         if(target.id==='br-add-condition'){const list=checkList();if(list.length){state.conditions.push({op:'OR',key:list[0].key});state.results=null;renderBuilder();}}
         if(target.dataset.removeCondition!==undefined){state.conditions.splice(Number(target.dataset.removeCondition),1);state.results=null;renderBuilder();}
-        if(target.dataset.addCheck){state.conditions.push({op:'OR',key:target.dataset.addCheck});state.results=null;renderBuilder();document.getElementById('br-query-preview')?.scrollIntoView({behavior:'smooth',block:'nearest'});}
+        if(target.dataset.addCheck){if(state.conditions.length===1&&state.conditions[0].key==='status:Live'&&!state.results)state.conditions[0]={op:'OR',key:target.dataset.addCheck};else state.conditions.push({op:'OR',key:target.dataset.addCheck});state.results=null;renderBuilder();document.getElementById('br-query-preview')?.scrollIntoView({behavior:'smooth',block:'nearest'});}
         if(target.id==='br-execute')execute();
         if(target.id==='br-download-results'&&state.results){writeFile(JSON.stringify(state.results.rows,null,2),'identified_records.json');markDownloaded(1);}
         if(target.id==='br-download-groups')saveGroups();
