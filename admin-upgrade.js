@@ -49,7 +49,7 @@ function addSidebar() {
     if(!venues||!events)return;
     const cruise=document.createElement('div');cruise.id='nav-cruising';cruise.className='sidebar-item';cruise.innerHTML='<span class="icon">🗺️</span><span class="sidebar-text">Cruising Areas</span>';events.after(cruise);
     const report=document.createElement('div');report.id='nav-reporting';report.className='sidebar-item';report.innerHTML='<span class="icon">📊</span><span class="sidebar-text">Reporting & Statistics</span>';cruise.after(report);
-    const archived=document.createElement('details');archived.id='br-archived';archived.innerHTML='<summary>▸ &nbsp;📦 Archived Functions</summary><div class="br-archive-inner"></div>';
+    const archived=document.createElement('details');archived.id='br-archived';archived.innerHTML='<summary>📦 Archived Functions</summary><div class="br-archive-inner"></div>';
     const parent=document.querySelector('.sidebar-menu');parent?.appendChild(archived);
     const archive=archived.querySelector('.br-archive-inner');
     ['btn-sidebar-pending','sidebar-pending-list','btn-sidebar-old','sidebar-old-list','nav-editor'].forEach(id=>{const el=document.getElementById(id);if(el)archive.appendChild(el);});
@@ -205,6 +205,16 @@ function install() {
     ].join('\n');document.head.appendChild(note);
     if(currentMode==='venues'&&Array.isArray(draftData)&&draftData.length)renderTable();
 }
-window.BackroomAdminUpgrade={state,savePreview,readStored,esc,totals,isCruising,openPreview};
+function getScopeRows(rows) {
+    if (!Array.isArray(rows)) return [];
+    if (currentMode !== 'venues') return rows;
+    if (state.section === 'cruising') return rows.filter(isCruising);
+    if (state.section === 'venues') return rows.filter(row => !isCruising(row));
+    return rows;
+}
+function getScopeTotal() {
+    return getScopeRows(Array.isArray(draftData) ? draftData : []).length;
+}
+window.BackroomAdminUpgrade={state,savePreview,readStored,esc,totals,isCruising,openPreview,getScopeRows,getScopeTotal};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
