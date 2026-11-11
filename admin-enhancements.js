@@ -1,6 +1,6 @@
 /* Backroom Admin v0.19 enhancements loader and live coverage statistics. */
-document.write('<script src="admin-performance.js?v=0.20"><\/script>');
-document.write('<script src="admin-enhancements-core.js?v=0.20"><\/script>');
+document.write('<script src="admin-performance.js?v=0.20.1"><\/script>');
+document.write('<script src="admin-enhancements-core.js?v=0.20.1"><\/script>');
 document.write('<script src="admin-location-json.js?v=0.18"><\/script>');
 document.write('<script src="admin-reset.js?v=0.17"><\/script>');
 document.write('<script src="admin-event-venue-audit.js?v=1.00"><\/script>');
@@ -126,11 +126,13 @@ document.write('<script src="admin-remove-json.js?v=0.17"><\/script>');
         if (!line || (currentMode !== 'venues' && currentMode !== 'events')) return;
 
         const modeAtStart = currentMode;
-        const rows = Array.isArray(draftData) ? draftData : [];
+        const allRows = Array.isArray(draftData) ? draftData : [];
+        const rows = window.BackroomAdminUpgrade?.getScopeRows?.(allRows) ?? allRows;
+        const section = window.BackroomAdminUpgrade?.state?.section;
         const cities = new Set();
         const countries = new Set();
         const venueMap = modeAtStart === 'events' ? await getVenueMap() : new Map();
-        if (currentMode !== modeAtStart) return;
+        if (currentMode !== modeAtStart || window.BackroomAdminUpgrade?.state?.section !== section) return;
 
         rows.forEach((row) => {
             const location = modeAtStart === 'events'

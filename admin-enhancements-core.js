@@ -869,7 +869,7 @@
     }
 
     function updateDashboardStatus(rows) {
-        const total = Array.isArray(draftData) ? draftData.length : 0;
+        const total = window.BackroomAdminUpgrade?.getScopeTotal?.() ?? (Array.isArray(draftData) ? draftData.length : 0);
         const shown = rows.filter((row) => row.style.display !== 'none').length;
         const columnFilterCount = Object.keys(activeTableFilters || {}).length;
         const reviewLabel = getReviewLabel();
@@ -1383,7 +1383,7 @@
     }
 
     function updateLocationStatus(rows) {
-        const total = Array.isArray(draftData) ? draftData.length : 0;
+        const total = window.BackroomAdminUpgrade?.getScopeTotal?.() ?? (Array.isArray(draftData) ? draftData.length : 0);
         const shown = rows.filter((row) => row.style.display !== 'none').length;
         const count = document.getElementById('summary-record-count');
         const context = document.getElementById('summary-filter-context');

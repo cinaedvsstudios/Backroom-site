@@ -358,7 +358,8 @@ async function open(){
     }catch(error){message('Unable to load Reporting data: '+error.message);}
 }
 function install(){
-    const main=document.querySelector('.admin-main');if(!main)return;
+    const main=document.querySelector('#admin-shell > main.admin-main');
+    if(!main) { console.error('Backroom Reporting: main admin container missing'); return; }
     const root=document.createElement('section');root.id='br-reporting-view';root.style.display='none';
     root.innerHTML=[
     '<div class="br-report-head"><h1>📊 Reporting & Statistics</h1><p>Local working-data statistics, research queries and history.</p></div>',
