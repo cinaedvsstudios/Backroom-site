@@ -9,7 +9,7 @@
     if (window.__backroomAdminPerformanceInstalled) return;
     window.__backroomAdminPerformanceInstalled = true;
 
-    const VERSION = 'v0.19';
+    const VERSION = 'v0.20';
     const DEFAULT_ROW_CAP = 250;
     const STORAGE_KEY = 'br_admin_table_row_cap';
 
