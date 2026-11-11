@@ -62,6 +62,11 @@ function addSidebar() {
     if(audit) archive.appendChild(audit);
     // A link to the existing audit button if the enhancement adds it later.
     cruise.addEventListener('click',()=>{
+        window.__backroomAdminResetDashboard?.();
+        for (const filter of [window.__backroomAdminV109?.state,window.__backroomAdminJsonLocations?.state]) {
+            if(filter){filter.country='';filter.city='';}
+        }
+        state.sortField='';state.sortDir='';
         showSection('cruising');
         switchView('venues');
         const title=document.getElementById('summary-title');if(title)title.textContent='CRUISING AREAS';
@@ -175,10 +180,8 @@ function install() {
     document.body.addEventListener('change',event=>{
         if(['admin-json-country-filter','admin-json-city-filter','admin-country-filter','admin-city-filter'].includes(event.target.id))setTimeout(()=>renderTable(),30);
     });
-    document.getElementById('btn-export-json')?.addEventListener('click',()=>{state.logOperation='Save JSON';});
-    document.getElementById('file-upload-merge')?.addEventListener('change',()=>{state.logOperation='Merge JSON';});
-    document.getElementById('br-remove-json-file')?.addEventListener('change',()=>{state.logOperation='Remove JSON';});
     document.body.addEventListener('click',event=>{
+        if(event.target.closest('#btn-apply-merge'))state.logOperation='Merge JSON';
         if(event.target.closest('#btn-delete-old-events, #btn-remove-old, #btn-remove-old-events'))state.logOperation='Remove Old';
         if(event.target.closest('#br-remove-json-apply'))state.logOperation='Remove JSON';
         if(event.target.closest('#btn-delete-records'))state.logOperation='Delete Record';
