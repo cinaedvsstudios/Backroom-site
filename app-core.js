@@ -63,7 +63,11 @@ const PLACEHOLDER_POOL = [
     'placeholder_venue04.jpg',
     'placeholder_venue05.jpg',
     'placeholder_venue06.jpg',
-    'placeholder_venue07.jpg'
+    'placeholder_venue07.jpg',
+        'placeholder_venue15.jpg',
+        'placeholder_venue16.jpg',
+        'placeholder_venue17.jpg',
+        'placeholder_venue18.jpg'
 ];
 const SPECIAL_PLACEHOLDERS = Object.freeze({
     default: 'placeholder_venue.jpg',
@@ -295,12 +299,12 @@ function eventPrefersVenueImageOverPride(event, venue) {
 
 function isGenericPlaceholderImage(value) {
     const image = String(value || '').trim().split('/').pop().toLowerCase();
-    return /^placeholder_venue(?:0[1-7])?\.jpg$/.test(image);
+    return /^placeholder_venue(?:(?:0[1-7])|(?:1[5-8]))?\.jpg$/.test(image);
 }
 
 function isAnyPlaceholderImage(value) {
     const image = String(value || '').trim().split('/').pop().toLowerCase();
-    return /^placeholder_venue(?:0[1-9]|1[0-4])?\.jpg$/.test(image);
+    return /^placeholder_venue(?:0[1-9]|1[0-8])?\.jpg$/.test(image);
 }
 
 function isCruisingAreaIndoorLocation(venue) {
@@ -566,7 +570,7 @@ function openCommunityRatingModal(venueId) {
         <div class="community-rating-options" role="group" aria-label="Rate ${escapeHTML(venue.Name || 'venue')} from 1 to 5">
             ${[1, 2, 3, 4, 5].map(value => `
                 <button type="button" class="community-rating-option ${currentRating === value ? 'selected' : ''}" onclick="window.submitCommunityRating('${escapeHTML(venueId)}', ${value})" aria-label="${value} out of 5">
-                    <span>🌈</span><strong>${value}</strong>
+                    <img class="community-rating-choice-icon" src="Emoji/gays0${value}.png" alt="" aria-hidden="true" loading="lazy"><strong>${value}</strong>
                 </button>
             `).join('')}
         </div>
