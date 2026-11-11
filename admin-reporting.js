@@ -83,7 +83,7 @@ function checkList(){
         ['empty:Price_Info','Missing price information'],['empty:Dresscode_Info','Missing dress code'],
         ['empty:Event_Description','Missing description'],['short:Event_Description:100','Description under 100 characters'],
         ['short:Event_Description:200','Description under 200 characters'],['broken:Venue_ID','Unlinked venue ID'],
-        ['empty:Recurrence_Type','Missing recurrence type'],['invalid:Event_Date','Invalid date']
+        ['recurrence','Weekly event missing recurrence day'],['invalid:Event_Date','Invalid date']
     ];
     const v=[
         ['empty:Website_URL','Missing website'],['empty:Instagram_URL','Missing Instagram'],
@@ -125,6 +125,7 @@ function predicate(row,key){
         const point=Array.isArray(row.Map_Points)&&row.Map_Points.some(p=>p.Google_Maps_URL||(!blank(p.Latitude)&&!blank(p.Longitude)));
         return !point&&blank(row.Google_Maps_URL)&&(!row.Latitude||!row.Longitude)&&blank(row.Native_Map_Query);
     }
+    if(key==='recurrence')return String(row.Recurrence_Type||'').trim().toLowerCase()==='weekly'&&blank(row.Recurrence_Day);
     if(key==='invalid:Event_Date')return blank(row.Event_Date)||Number.isNaN(Date.parse(String(row.Event_Date)));
     if(key==='broken:Venue_ID')return !state.data.venues.some(v=>String(v.Venue_ID||'')===String(row.Venue_ID||''));
     return false;
