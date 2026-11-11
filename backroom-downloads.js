@@ -97,59 +97,385 @@
     const date = typeof parseEventDateLocal === 'function' ? parseEventDateLocal(raw) : new Date(raw + 'T12:00:00');
     return date && !Number.isNaN(date.getTime()) ? date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).toUpperCase() : clean(raw) || 'DATE TBC';
   }
-  async function createStory(event, venue) {
-    await storyFonts();
-    const canvas = document.createElement('canvas'); canvas.width = 1080; canvas.height = 1920;
-    const ctx = canvas.getContext('2d');
-    ctx.fillStyle = C.bg; ctx.fillRect(0, 0, 1080, 1920); ctx.fillStyle = C.cyan; ctx.fillRect(0, 0, 1080, 12);
-    centerLines(ctx, 'CHECK OUT THIS', 190, 900, 60, C.white);
-    centerLines(ctx, 'EVENT FROM', 258, 900, 60, C.white);
-    const logo = await loadImage(asset('backdoortitle.png'));
-    const scale = Math.min(555 / logo.naturalWidth, 100 / logo.naturalHeight);
-    ctx.drawImage(logo, (1080 - logo.naturalWidth * scale) / 2, 350, logo.naturalWidth * scale, logo.naturalHeight * scale);
-    centerLines(ctx, 'https://backroom.s.gy/', 458, 900, 30, C.muted);
-    ctx.save(); ctx.shadowColor = '#000000'; ctx.shadowBlur = 38; ctx.shadowOffsetY = 24;
-    rounded(ctx, 72, 545, 936, 1190, 42, C.card); ctx.restore(); ctx.lineWidth = 4;
-    rounded(ctx, 72, 545, 936, 1190, 42, null, C.cyan);
-    const source = typeof getEventImageSource === 'function' ? getEventImageSource(event, venue) : venue?.Image_URL;
-    let photo;
-    try { photo = await loadImage(new URL(source || 'placeholder_venue.jpg', ASSET_ROOT).href); }
-    catch (_) { photo = await loadImage(asset('placeholder_venue.jpg')); }
-    ctx.save(); rounded(ctx, 108, 581, 864, 505, 22); ctx.clip(); cover(ctx, photo, 108, 581, 864, 505); ctx.restore();
-    const title = clean(event.Event_Name).toUpperCase() || 'EVENT';
-    let titleSize = 104, titleLines;
-    do { setFont(ctx,titleSize,600); titleLines = wrap(ctx,title,820); if (titleLines.length <= 2 || titleSize <= 20) break; titleSize -= 2; } while (true);
-    const titleTop = 1125 + Math.max(0,(225 - titleLines.length*titleSize*1.08)/2);
-    const titleBottom = centerLines(ctx, title, titleTop, 820, titleSize, C.red, 600, 2);
-    const location = [venue?.Name || event.Venue_Name || event.Venue, event.City || venue?.City].filter(Boolean).join(' / ');
-    centerLines(ctx, '📍 ' + location, Math.max(1365, titleBottom + 14), 810, 32, C.muted, 400, 2);
-    const tags = storyTags(event); let size = 30, widths;
-    do { setFont(ctx, size); widths = tags.map(tag => ctx.measureText(tag).width + 38); if (widths.reduce((a,b) => a+b,0) + 14*(tags.length-1) <= 820 || size <= 18) break; size--; } while (true);
-    let x = (1080 - widths.reduce((a,b) => a+b,0) - 14*(tags.length-1)) / 2;
-    tags.forEach((tag, i) => { ctx.lineWidth = 1; rounded(ctx, x, 1450, widths[i], 48, 24, C.panel, C.cyan); ctx.fillStyle = '#E5E7ED'; ctx.textAlign = 'center'; ctx.fillText(tag, x + widths[i]/2, 1458); x += widths[i] + 14; });
-    ctx.lineWidth = 2; rounded(ctx, 108, 1520, 864, 160, 18, C.panel, C.line);
-    ctx.textAlign = 'left'; ctx.fillStyle = C.muted; setFont(ctx, 29); ctx.fillText('📅 DATE', 140, 1542); ctx.fillText('🕒 TIME', 740, 1542);
-    ctx.strokeStyle = C.line; ctx.beginPath(); ctx.moveTo(697, 1546); ctx.lineTo(697, 1653); ctx.stroke();
-    let dateSize = 48; while (dateSize > 20) { setFont(ctx,dateSize,600); if (ctx.measureText(dateLabel(event)).width <= 520) break; dateSize--; }
-    ctx.fillStyle = C.white; ctx.fillText(dateLabel(event), 140, 1597);
-    ctx.fillStyle = C.cyan; setFont(ctx, 48, 600); ctx.fillText(clean(event.Event_Start_Time) || 'TBC', 740, 1597);
-    // Export now to detect inaccessible cross-origin artwork before showing a broken preview.
-    const blob = await new Promise((resolve, reject) => { try { canvas.toBlob(value => value ? resolve(value) : reject(new Error('JPEG export failed')), 'image/jpeg', .95); } catch (e) { reject(e); } });
-    return { blob, preview: canvas.toDataURL('image/jpeg', .9) };
+
+  // Only these generic images can be chosen using the Story Card image cycle.
+  // Special-purpose venue placeholders (08–14) are intentionally excluded.
+  const STORY_GENERIC_IMAGES = Object.freeze([
+    'placeholder_venue01.jpg', 'placeholder_venue02.jpg', 'placeholder_venue03.jpg',
+    'placeholder_venue04.jpg', 'placeholder_venue05.jpg', 'placeholder_venue06.jpg',
+    'placeholder_venue07.jpg', 'placeholder_venue15.jpg', 'placeholder_venue16.jpg',
+    'placeholder_venue17.jpg', 'placeholder_venue18.jpg'
+  ]);
+  const STORY_STANDARD_FRAME = Object.freeze({ x: 108, y: 581, width: 864, height: 505 });
+  const STORY_UPLOAD_FRAME = Object.freeze({ x: 108, y: 506, width: 864, height: 674 });
+  const STORY_MAX_ZOOM = 3;
+
+  function storyFrame(state) {
+    return state.uploaded ? STORY_UPLOAD_FRAME : STORY_STANDARD_FRAME;
   }
+
+  function clampPhotoOffset(state) {
+    const frame = storyFrame(state), image = state.photo;
+    if (!image) return;
+    const width = image.naturalWidth || image.width;
+    const height = image.naturalHeight || image.height;
+    const baseScale = Math.max(frame.width / width, frame.height / height);
+    const scaledWidth = width * baseScale * state.zoom;
+    const scaledHeight = height * baseScale * state.zoom;
+    const limitX = Math.max(0, (scaledWidth - frame.width) / 2);
+    const limitY = Math.max(0, (scaledHeight - frame.height) / 2);
+    state.offsetX = Math.max(-limitX, Math.min(limitX, state.offsetX));
+    state.offsetY = Math.max(-limitY, Math.min(limitY, state.offsetY));
+    return { frame, scaledWidth, scaledHeight };
+  }
+
+  function paintStoryPhoto(ctx, state) {
+    const metrics = clampPhotoOffset(state);
+    if (!metrics) return;
+    const { frame, scaledWidth, scaledHeight } = metrics;
+    ctx.save();
+    rounded(ctx, frame.x, frame.y, frame.width, frame.height, 22);
+    ctx.clip();
+    ctx.drawImage(
+      state.photo,
+      frame.x + (frame.width - scaledWidth) / 2 + state.offsetX,
+      frame.y + (frame.height - scaledHeight) / 2 + state.offsetY,
+      scaledWidth, scaledHeight
+    );
+    ctx.restore();
+  }
+
+  // One renderer is used for both the editable live preview and the downloaded JPEG.
+  function paintStory(canvas, event, venue, logo, state) {
+    const ctx = canvas.getContext('2d');
+    const uploaded = state.uploaded;
+    const frame = storyFrame(state);
+    ctx.fillStyle = C.bg; ctx.fillRect(0, 0, 1080, 1920);
+    ctx.fillStyle = C.cyan; ctx.fillRect(0, 0, 1080, 12);
+
+    centerLines(ctx, 'CHECK OUT THIS', uploaded ? 106 : 190, 900, 60, C.white);
+    centerLines(ctx, 'EVENT FROM', uploaded ? 174 : 258, 900, 60, C.white);
+    const logoScale = Math.min(555 / logo.naturalWidth, 100 / logo.naturalHeight);
+    ctx.drawImage(
+      logo, (1080 - logo.naturalWidth * logoScale) / 2,
+      uploaded ? 287 : 350, logo.naturalWidth * logoScale,
+      logo.naturalHeight * logoScale
+    );
+    centerLines(ctx, 'https://backroom.s.gy/', uploaded ? 400 : 458, 900, 30, C.muted);
+
+    const cardY = uploaded ? 470 : 545;
+    const cardHeight = uploaded ? 1260 : 1190;
+    ctx.save();
+    ctx.shadowColor = '#000000'; ctx.shadowBlur = 38; ctx.shadowOffsetY = 24;
+    rounded(ctx, 72, cardY, 936, cardHeight, 42, C.card);
+    ctx.restore();
+    ctx.lineWidth = 4;
+    rounded(ctx, 72, cardY, 936, cardHeight, 42, null, C.cyan);
+    paintStoryPhoto(ctx, state);
+
+    const title = clean(event.Event_Name).toUpperCase() || 'EVENT';
+    let titleSize = uploaded ? 92 : 104, titleLines;
+    do {
+      setFont(ctx, titleSize, 600);
+      titleLines = wrap(ctx, title, 820);
+      if (titleLines.length <= 2 &&
+          (!uploaded || titleLines.length * titleSize * 1.08 <= 182)) break;
+      if (titleSize <= 20) break;
+      titleSize -= 2;
+    } while (true);
+
+    const titleTop = uploaded
+      ? 1195 + Math.max(0, (182 - titleLines.length * titleSize * 1.08) / 2)
+      : 1125 + Math.max(0, (225 - titleLines.length * titleSize * 1.08) / 2);
+    const titleBottom = centerLines(ctx, title, titleTop, 820, titleSize, C.red, 600, 2);
+    const location = [
+      venue?.Name || event.Venue_Name || event.Venue,
+      event.City || venue?.City
+    ].filter(Boolean).join(' / ');
+    centerLines(
+      ctx, '📍 ' + location,
+      uploaded ? Math.max(1388, titleBottom + 8) : Math.max(1365, titleBottom + 14),
+      810, 32, C.muted, 400, 2
+    );
+
+    const tags = storyTags(event);
+    let size = 30, widths;
+    do {
+      setFont(ctx, size);
+      widths = tags.map(tag => ctx.measureText(tag).width + 38);
+      if (widths.reduce((a, b) => a + b, 0) + 14 * (tags.length - 1) <= 820 || size <= 18) break;
+      size--;
+    } while (true);
+    let x = (1080 - widths.reduce((a, b) => a + b, 0) - 14 * (tags.length - 1)) / 2;
+    tags.forEach((tag, i) => {
+      ctx.lineWidth = 1;
+      rounded(ctx, x, uploaded ? 1478 : 1450, widths[i], 48, 24, C.panel, C.cyan);
+      ctx.fillStyle = '#E5E7ED';
+      ctx.textAlign = 'center';
+      ctx.fillText(tag, x + widths[i] / 2, uploaded ? 1486 : 1458);
+      x += widths[i] + 14;
+    });
+
+    const panelY = uploaded ? 1542 : 1520;
+    ctx.lineWidth = 2;
+    rounded(ctx, 108, panelY, 864, 160, 18, C.panel, C.line);
+    ctx.textAlign = 'left'; ctx.fillStyle = C.muted; setFont(ctx, 29);
+    ctx.fillText('📅 DATE', 140, panelY + 22);
+    ctx.fillText('🕒 TIME', 740, panelY + 22);
+    ctx.strokeStyle = C.line;
+    ctx.beginPath(); ctx.moveTo(697, panelY + 26); ctx.lineTo(697, panelY + 133); ctx.stroke();
+    let dateSize = 48;
+    while (dateSize > 20) {
+      setFont(ctx, dateSize, 600);
+      if (ctx.measureText(dateLabel(event)).width <= 520) break;
+      dateSize--;
+    }
+    ctx.fillStyle = C.white; ctx.fillText(dateLabel(event), 140, panelY + 77);
+    ctx.fillStyle = C.cyan; setFont(ctx, 48, 600);
+    ctx.fillText(clean(event.Event_Start_Time) || 'TBC', 740, panelY + 77);
+  }
+
+  function storyJpeg(canvas) {
+    return new Promise((resolve, reject) => {
+      try {
+        canvas.toBlob(value => value ? resolve(value) :
+          reject(new Error('JPEG export failed')), 'image/jpeg', 0.95);
+      } catch (error) { reject(error); }
+    });
+  }
+
+  // A locally selected image is decoded from an object URL. It never leaves the
+  // browser, and the temporary object URL is revoked as soon as decoding ends.
+  function loadOwnImage(file) {
+    return new Promise((resolve, reject) => {
+      const url = URL.createObjectURL(file);
+      const image = new Image();
+      image.onload = () => { URL.revokeObjectURL(url); resolve(image); };
+      image.onerror = () => { URL.revokeObjectURL(url); reject(new Error('This image could not be opened by your browser.')); };
+      image.src = url;
+    });
+  }
+
   function showStory(event, venue, button) {
     return busy(button, async () => {
-      const { blob, preview } = await createStory(event, venue);
+      await storyFonts();
+      const logo = await loadImage(asset('backdoortitle.png'));
+      const originalSource = typeof getEventImageSource === 'function'
+        ? getEventImageSource(event, venue) : venue?.Image_URL;
+      let initialPhoto;
+      try {
+        initialPhoto = await loadImage(new URL(originalSource || 'placeholder_venue.jpg', ASSET_ROOT).href);
+      } catch (_) {
+        initialPhoto = await loadImage(asset('placeholder_venue.jpg'));
+      }
+
       document.getElementById('backroom-story-preview')?.remove();
-      const dialog = document.createElement('dialog'); dialog.id = 'backroom-story-preview';
-      dialog.style.cssText = 'margin:auto;padding:18px;background:#111725;color:#fff;border:1px solid #2CA8D4;border-radius:16px;max-width:94vw;max-height:94dvh;overflow:auto;';
-      const heading = document.createElement('h2'); heading.textContent = 'Share to story'; heading.style.cssText = 'font-size:1.4rem;margin:0 0 12px;';
-      const image = document.createElement('img'); image.src = preview; image.alt = `Story preview for ${event.Event_Name}`; image.style.cssText = 'display:block;height:65dvh;max-width:100%;object-fit:contain;margin:auto;';
-      const actions = document.createElement('div'); actions.style.cssText = 'display:flex;gap:10px;margin-top:14px;';
-      const download = document.createElement('button'); download.className = 'btn primary-btn pill-btn'; download.textContent = 'Download JPEG'; download.onclick = () => saveBlob(blob, fileName(event.Event_Name) + '-story.jpg');
-      const close = document.createElement('button'); close.className = 'btn secondary-btn pill-btn'; close.textContent = 'Close'; close.onclick = () => dialog.close();
-      actions.append(download, close); dialog.append(heading, image, actions); document.body.append(dialog);
-      dialog.addEventListener('close', () => dialog.remove()); dialog.showModal(); download.focus();
+      const dialog = document.createElement('dialog');
+      dialog.id = 'backroom-story-preview';
+      dialog.style.cssText = 'box-sizing:border-box;margin:auto;padding:16px;background:#111725;color:#fff;border:1px solid #2CA8D4;border-radius:16px;width:min(440px,94vw);max-height:94dvh;overflow:auto;';
+      const heading = document.createElement('h2');
+      heading.textContent = 'Create Story Card';
+      heading.style.cssText = 'font-size:1.3rem;margin:0 0 10px;';
+      const canvas = document.createElement('canvas');
+      canvas.width = 1080; canvas.height = 1920;
+      canvas.setAttribute('role', 'img');
+      canvas.setAttribute('aria-label', 'Story Card preview. Select Move to drag the photo inside its frame.');
+      canvas.style.cssText = 'display:block;height:min(57dvh,540px);width:auto;max-width:100%;margin:auto;cursor:default;user-select:none;-webkit-user-select:none;';
+      const state = {
+        photo: initialPhoto, uploaded: false, zoom: 1,
+        offsetX: 0, offsetY: 0, moving: false
+      };
+      let genericIndex = -1;
+      let requestId = 0;
+      let dragging = null;
+
+      const toolbar = document.createElement('div');
+      toolbar.setAttribute('role', 'toolbar');
+      toolbar.setAttribute('aria-label', 'Story Card image controls');
+      toolbar.style.cssText = 'display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;margin-top:12px;';
+      function toolButton(label, tooltip) {
+        const control = document.createElement('button');
+        control.type = 'button';
+        control.className = 'btn secondary-btn pill-btn';
+        control.textContent = label;
+        control.title = tooltip;
+        control.setAttribute('aria-label', tooltip);
+        control.style.cssText = 'flex:0 0 auto;min-width:34px;min-height:38px;padding:6px 9px;font-size:0.88rem;line-height:1.15;white-space:nowrap;';
+        return control;
+      }
+      const cycleButton = toolButton('↻ Images', 'Cycle through generic placeholder images');
+      const ownButton = toolButton('Use own image', 'Choose an image from your device');
+      const moveButton = toolButton('✥ Move', 'Move the selected photo');
+      const minusButton = toolButton('−', 'Zoom out');
+      const plusButton = toolButton('+', 'Zoom in');
+      toolbar.append(cycleButton, ownButton, moveButton, minusButton, plusButton);
+
+      const actions = document.createElement('div');
+      actions.style.cssText = 'display:flex;flex-wrap:nowrap;gap:8px;margin-top:12px;';
+      function actionButton(label, className) {
+        const control = document.createElement('button');
+        control.type = 'button';
+        control.className = className;
+        control.textContent = label;
+        control.style.cssText = 'box-sizing:border-box;min-width:0;flex:1 1 0;padding:9px 10px;font-size:0.95rem;line-height:1.2;white-space:nowrap;';
+        return control;
+      }
+      const download = actionButton('Download JPEG', 'btn primary-btn pill-btn');
+      const close = actionButton('Close', 'btn secondary-btn pill-btn');
+      actions.append(download, close);
+      const picker = document.createElement('input');
+      picker.type = 'file';
+      picker.accept = 'image/jpeg,image/png,image/webp,image/gif,image/avif,image/heic,image/heif';
+      picker.hidden = true;
+      dialog.append(heading, canvas, toolbar, actions, picker);
+      document.body.append(dialog);
+
+      function refresh() {
+        paintStory(canvas, event, venue, logo, state);
+        minusButton.disabled = state.zoom <= 1.0001;
+        plusButton.disabled = state.zoom >= STORY_MAX_ZOOM - 0.0001;
+        moveButton.setAttribute('aria-pressed', String(state.moving));
+        moveButton.style.backgroundColor = state.moving ? '#00547C' : '';
+        canvas.style.touchAction = state.moving ? 'none' : 'auto';
+      }
+      function stopDragging(pointerId) {
+        if (!dragging || (pointerId !== undefined && dragging.id !== pointerId)) return;
+        if (canvas.hasPointerCapture?.(dragging.id)) canvas.releasePointerCapture(dragging.id);
+        dragging = null;
+      }
+      function cursorPoint(ev) {
+        const rect = canvas.getBoundingClientRect();
+        return {
+          x: (ev.clientX - rect.left) * canvas.width / rect.width,
+          y: (ev.clientY - rect.top) * canvas.height / rect.height
+        };
+      }
+      function onPhoto(point) {
+        const frame = storyFrame(state);
+        return point.x >= frame.x && point.x <= frame.x + frame.width &&
+          point.y >= frame.y && point.y <= frame.y + frame.height;
+      }
+      canvas.addEventListener('pointerdown', ev => {
+        if (!state.moving || !onPhoto(cursorPoint(ev))) return;
+        if (ev.pointerType === 'mouse' && ev.button !== 0) return;
+        ev.preventDefault();
+        const point = cursorPoint(ev);
+        dragging = { id: ev.pointerId, x: point.x, y: point.y,
+          offsetX: state.offsetX, offsetY: state.offsetY };
+        canvas.setPointerCapture(ev.pointerId);
+      });
+      canvas.addEventListener('pointermove', ev => {
+        const point = cursorPoint(ev);
+        if (dragging && dragging.id === ev.pointerId) {
+          ev.preventDefault();
+          state.offsetX = dragging.offsetX + point.x - dragging.x;
+          state.offsetY = dragging.offsetY + point.y - dragging.y;
+          refresh();
+        }
+        canvas.style.cursor = state.moving && onPhoto(point)
+          ? (dragging ? 'grabbing' : 'crosshair') : 'default';
+      });
+      canvas.addEventListener('pointerup', ev => stopDragging(ev.pointerId));
+      canvas.addEventListener('pointercancel', ev => stopDragging(ev.pointerId));
+      canvas.addEventListener('pointerleave', () => {
+        if (!dragging) canvas.style.cursor = 'default';
+      });
+
+      function choosePhoto(promise, uploaded) {
+        const currentRequest = ++requestId;
+        return Promise.resolve(promise).then(photo => {
+          if (!dialog.isConnected || currentRequest !== requestId) return;
+          state.photo = photo;
+          state.uploaded = uploaded;
+          state.zoom = 1;
+          state.offsetX = 0; state.offsetY = 0;
+          stopDragging();
+          refresh();
+        }).catch(error => {
+          console.error('Story Card image:', error);
+          window.showToast?.(error.message || 'Image could not be loaded.');
+        });
+      }
+      cycleButton.onclick = () => {
+        const next = (genericIndex + 1) % STORY_GENERIC_IMAGES.length;
+        const filename = STORY_GENERIC_IMAGES[next];
+        choosePhoto(loadImage(asset(filename)), false).then(() => {
+          if (dialog.isConnected) genericIndex = next;
+        });
+      };
+      function privacyNotice() {
+        const notice = document.createElement('dialog');
+        notice.style.cssText = 'box-sizing:border-box;margin:auto;max-width:min(350px,90vw);padding:20px;border:1px solid #2CA8D4;border-radius:14px;background:#111725;color:white;';
+        const title = document.createElement('h3');
+        title.textContent = 'Your image stays private';
+        title.style.cssText = 'margin:0 0 10px;font-size:1.2rem;';
+        const message = document.createElement('p');
+        message.textContent = 'This image is only used locally in your browser. It is not sent over the internet anywhere.';
+        message.style.cssText = 'margin:0 0 16px;line-height:1.5;';
+        const row = document.createElement('div');
+        row.style.cssText = 'display:flex;gap:8px;';
+        const agree = document.createElement('button');
+        agree.type = 'button'; agree.className = 'btn primary-btn pill-btn';
+        agree.textContent = 'I Understand';
+        agree.style.cssText = 'flex:1;white-space:nowrap;font-size:0.9rem;padding:9px;';
+        const cancel = document.createElement('button');
+        cancel.type = 'button'; cancel.className = 'btn secondary-btn pill-btn';
+        cancel.textContent = 'Cancel';
+        cancel.style.cssText = 'flex:1;white-space:nowrap;font-size:0.9rem;padding:9px;';
+        agree.onclick = () => {
+          notice.close();
+          picker.value = '';
+          picker.click();
+        };
+        cancel.onclick = () => notice.close();
+        notice.addEventListener('close', () => notice.remove(), { once: true });
+        row.append(agree, cancel);
+        notice.append(title, message, row);
+        document.body.append(notice);
+        notice.showModal();
+        agree.focus();
+      }
+      ownButton.onclick = privacyNotice;
+      picker.addEventListener('change', () => {
+        const file = picker.files?.[0];
+        if (!file) return;
+        const supported = /^image\/(jpeg|png|webp|gif|avif|heic|heif)$/i.test(file.type);
+        if (!supported) {
+          window.showToast?.('Choose a JPEG, PNG, WebP or other supported photo.');
+          return;
+        }
+        if (file.size > 40 * 1024 * 1024) {
+          window.showToast?.('Please choose an image smaller than 40 MB.');
+          return;
+        }
+        choosePhoto(loadOwnImage(file), true);
+      });
+      moveButton.onclick = () => {
+        state.moving = !state.moving;
+        stopDragging();
+        refresh();
+      };
+      minusButton.onclick = () => {
+        state.zoom = Math.max(1, Math.round((state.zoom - 0.12) * 100) / 100);
+        refresh();
+      };
+      plusButton.onclick = () => {
+        state.zoom = Math.min(STORY_MAX_ZOOM, Math.round((state.zoom + 0.12) * 100) / 100);
+        refresh();
+      };
+      download.onclick = () => busy(download, async () => {
+        paintStory(canvas, event, venue, logo, state);
+        saveBlob(await storyJpeg(canvas), fileName(event.Event_Name) + '-story.jpg');
+      });
+      close.onclick = () => dialog.close();
+      dialog.addEventListener('close', () => {
+        ++requestId;
+        stopDragging();
+        dialog.remove();
+      }, { once: true });
+
+      refresh();
+      dialog.showModal();
     });
   }
   let pdfLibraryPromise, pdfFontsPromise;
