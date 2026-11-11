@@ -35,11 +35,24 @@
   }
   async function busy(button, task) {
     if (button?.disabled) return;
-    const label = button?.textContent;
-    if (button) { button.disabled = true; button.setAttribute('aria-busy', 'true'); button.textContent = label.length <= 4 ? '⏳' : 'Preparing download…'; }
+    const originalHtml = button?.innerHTML;
+    const label = button?.textContent || '';
+    const hasIcon = Boolean(button?.querySelector('img'));
+    if (button) {
+      button.disabled = true;
+      button.setAttribute('aria-busy', 'true');
+      // Loading must not destroy the Story Card toolbar's image element.
+      if (!hasIcon) button.textContent = label.length <= 4 ? '⏳' : 'Preparing download…';
+    }
     try { await task(); }
     catch (error) { console.error('Backroom download:', error); window.showToast?.('Download could not be prepared. Please try again.'); }
-    finally { if (button) { button.disabled = false; button.removeAttribute('aria-busy'); button.textContent = label; } }
+    finally {
+      if (button) {
+        button.disabled = false;
+        button.removeAttribute('aria-busy');
+        button.innerHTML = originalHtml;
+      }
+    }
   }
   const imageCache = new Map();
   function loadImage(url) {
@@ -397,11 +410,8 @@
         });
       }
       cycleButton.onclick = () => {
-        const next = (genericIndex + 1) % STORY_GENERIC_IMAGES.length;
-        const filename = STORY_GENERIC_IMAGES[next];
-        choosePhoto(loadImage(asset(filename)), false).then(() => {
-          if (dialog.isConnected) genericIndex = next;
-        });
+        genericIndex = (genericIndex + 1) % STORY_GENERIC_IMAGES.length;
+        choosePhoto(loadImage(asset(STORY_GENERIC_IMAGES[genericIndex])), false);
       };
       function privacyNotice() {
         const notice = document.createElement('dialog');
