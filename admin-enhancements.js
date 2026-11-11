@@ -126,11 +126,13 @@ document.write('<script src="admin-remove-json.js?v=0.17"><\/script>');
         if (!line || (currentMode !== 'venues' && currentMode !== 'events')) return;
 
         const modeAtStart = currentMode;
-        const rows = Array.isArray(draftData) ? draftData : [];
+        const allRows = Array.isArray(draftData) ? draftData : [];
+        const rows = window.BackroomAdminUpgrade?.getScopeRows?.(allRows) ?? allRows;
+        const section = window.BackroomAdminUpgrade?.state?.section;
         const cities = new Set();
         const countries = new Set();
         const venueMap = modeAtStart === 'events' ? await getVenueMap() : new Map();
-        if (currentMode !== modeAtStart) return;
+        if (currentMode !== modeAtStart || window.BackroomAdminUpgrade?.state?.section !== section) return;
 
         rows.forEach((row) => {
             const location = modeAtStart === 'events'
