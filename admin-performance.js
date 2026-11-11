@@ -153,7 +153,7 @@
             const capBar = buildCapBar(allRows.length, visibleRows.length);
 
             let html = `${capBar}<table><thead id="admin-thead"><tr>`;
-            html += '<th style="min-width:70px;">Review</th>';
+            html += '<th style="min-width:70px;">Select</th>';
 
             columns.forEach((col, idx) => {
                 const displayName = headerMapping[col] || col;
@@ -165,7 +165,7 @@
                     </div>`;
 
                 if (col === 'Status') {
-                    html += `<select class="filter-header-select filter-dropdown" data-col="${escapeHtml(col)}"><option value="">Filter...</option><option value="Live">Live</option><option value="Closed">Closed</option><option value="Hold">Hold</option><option value="Flag">Flag</option></select>`;
+                    html += `<select class="filter-header-select filter-dropdown" data-col="${escapeHtml(col)}"><option value="">Filter...</option><option value="Live">Live</option><option value="Closed">Closed</option><option value="Hold">Hold</option><option value="Flag">Flag</option><option value="Review">Review</option></select>`;
                 } else if (col === 'Priority') {
                     html += `<select class="filter-header-select filter-dropdown" data-col="${escapeHtml(col)}"><option value="">Filter...</option><option value="1">Priority 1</option><option value="2">Priority 2</option><option value="3">Priority 3</option></select>`;
                 } else if (String(col).startsWith('Rating_')) {
@@ -194,7 +194,7 @@
 
                 html += `<tr data-id="${escapeHtml(id)}" data-draft-index="${editIndex}" class="${isNew ? 'new-entry-row' : ''}" onmousedown="selectAdminRecord(this.dataset.id)">`;
 
-                const needsReview = (!row.Share_URL || String(row.Share_URL).toLowerCase() === 'false' || String(row.Share_URL) === 'PENDING' || String(row.Status || '') === 'Draft');
+                const needsReview = currentReviewFilter === 'pending' && (!row.Share_URL || String(row.Share_URL).toLowerCase() === 'false' || String(row.Share_URL) === 'PENDING' || String(row.Status || '') === 'Draft');
                 html += `<td style="text-align:center;">
                     <span class="highlight-toggle-btn" title="Highlight Row">🖍️</span><br>
                     ${needsReview ? `<button onclick="markReviewed(${rowIdForJs})" style="background:var(--primary-blue); border:none; color:#fff; border-radius:4px; cursor:pointer; padding:2px 5px;" title="Mark Reviewed">✔️</button>` : ''}

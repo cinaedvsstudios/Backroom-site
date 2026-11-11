@@ -265,7 +265,13 @@
         }
         const existing = state.draftById.get(id);
         if (!existing) return 'New';
-        const merged = { ...existing, ...entry.row };
+        const merged = { ...existing };
+        Object.entries(entry.row).forEach(([key, value]) => {
+            if (key === field || key === 'Last_Updated') return;
+            if (value === '__CLEAR__') { merged[key] = ''; return; }
+            if (value === '' || value === null || value === undefined) return;
+            merged[key] = value;
+        });
         return JSON.stringify(existing) === JSON.stringify(merged) ? 'Unchanged' : 'Updating';
     }
 
@@ -507,8 +513,19 @@
                 const id = String(entry.row?.[idField] ?? '');
                 const index = indexById.get(id);
                 if (index !== undefined) {
-                    draftData[index] = { ...draftData[index], ...entry.row };
-                    updated += 1;
+                    // Partial research imports: blanks mean "leave unchanged"; __CLEAR__ explicitly clears.
+                    const before = draftData[index];
+                    const merged = { ...before };
+                    Object.entries(entry.row).forEach(([key, value]) => {
+                        if (key === idField || key === 'Last_Updated') return;
+                        if (value === '__CLEAR__') { merged[key] = ''; return; }
+                        if (value === '' || value === null || value === undefined) return;
+                        merged[key] = value;
+                    });
+                    if (JSON.stringify(before) !== JSON.stringify(merged)) {
+                        draftData[index] = merged;
+                        updated += 1;
+                    }
                 } else {
                     indexById.set(id, draftData.length);
                     draftData.push(entry.row);
