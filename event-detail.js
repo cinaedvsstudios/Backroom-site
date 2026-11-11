@@ -232,7 +232,8 @@
           <div class="modal-actions-group event-modal-actions">
             <button id="event-modal-save" class="icon-btn tooltip" type="button" title="Save Event">💖</button>
             <button id="event-modal-shortlist" class="icon-btn tooltip" type="button" title="Add Event to Shortlist"><img src="shortlist.png" alt="" aria-hidden="true"></button>
-            <button id="event-modal-share" class="icon-btn tooltip" type="button" title="Share Event">📣</button>
+            <button id="event-modal-share" class="icon-btn tooltip" type="button" title="↗ Send to a friend">📣</button>
+             <button id="event-download-story" class="icon-btn tooltip" type="button" title="Share / Download Story Card" aria-label="Share / Download Story Card"><img src="Emoji/story-card.png" alt="" aria-hidden="true" width="24" height="24"></button>
             <button id="event-modal-report" class="icon-btn tooltip" type="button" title="Report Event"><img src="report.png" alt="" aria-hidden="true"></button>
           </div>
           <button id="close-event-modal" class="icon-btn tooltip event-modal-close-btn" type="button" title="Close">❌</button>
@@ -334,7 +335,6 @@
             <div class="event-detail-action-row">
               ${buttonLink('🎟️ Tickets / Info', ticketUrl, 'primary-btn')}
               ${buttonLink('Website', websiteUrl)}
-              <button type="button" class="btn secondary-btn pill-btn" id="event-download-story">🖼️ Share to story</button>
             </div>
             ${lastUpdated ? `<p class="event-detail-updated">⌛ Last updated: ${escapeHTML(lastUpdated)}</p>` : ''}
           </div>
@@ -369,9 +369,10 @@
   }
 
   function bindEventModalActions(event, venue) {
-    document.getElementById('event-download-story')?.addEventListener('click', function () {
+    const storyButton = document.getElementById('event-download-story');
+    if (storyButton) storyButton.onclick = function () {
       window.BackroomDownloads?.showStory(event, venue, this);
-    });
+    };
 
     const saveButton = document.getElementById('event-modal-save');
     if (saveButton) saveButton.onclick = () => {
