@@ -6,7 +6,7 @@
   "website_urls_count": 902,
   "distinct_website_urls": 879,
   "source_url_tokens_count": 4045,
-  "checked_listings": 78,
+  "checked_listings": 91,
   "items": [
     {
       "Venue_ID": "BER-BAE-01",
@@ -419,10 +419,10 @@
       "Facebook_URL": "",
       "Other_URL": "",
       "Source_URLs": "https://www.siegessaeule.de/termine/sex/after-work-boese-buben-26/2026-05-13/16%3A00/, https://www.patroc.com/gay/berlin/gayguide.html, https://www.google.com/maps/search/?api=1&query=B%C3%B6se+Buben+Berlin, https://boese-buben-berlin.de/",
-      "january_2027_check_status": "checked_access_failed",
+      "january_2027_check_status": "checked_stale_calendar",
       "checked_at": "2026-11-12",
-      "checked_calendar_url": "https://boese-buben-berlin.de/",
-      "january_findings": "Official website could not be retrieved; January programme not verified"
+      "checked_calendar_url": "https://www.boese-buben-berlin.de/events-eng.html",
+      "january_findings": "Official programme currently displays June/July 2026 and says binding dates until September 2026. Several January entries already in events.json from other sources; no new venue-issued January date verified."
     },
     {
       "Venue_ID": "BER-BOY-01",
@@ -1795,10 +1795,10 @@
       "Facebook_URL": "",
       "Other_URL": "",
       "Source_URLs": "https://www.patroc.com/gay/hamburg/gayguide.html; https://apollosauna.de/",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_january_dated_secondary",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://apollosauna.de/",
+      "january_findings": "Official sauna's Fetish Night series confirmed; specifically dated January 1 event from Gaycation added to events.json. January start time not known."
     },
     {
       "Venue_ID": "HAM-SAU-03",
@@ -1814,7 +1814,7 @@
       "january_2027_check_status": "checked_recurring_schedule_only",
       "checked_at": "2026-11-12",
       "checked_calendar_url": "https://www.gaysauna.de/",
-      "january_findings": "Official sauna lists Saturday-of-month themes, including mixed/trans editions; no individually dated January 2027 event published"
+      "january_findings": "Official Saturday programme lists gay-only first Saturday but mixed/trans-targeted second/fourth; no individually dated January calendar."
     },
     {
       "Venue_ID": "HAM-SHP-01",
@@ -2579,10 +2579,10 @@
       "Facebook_URL": "",
       "Other_URL": "https://x.com/interlgbt",
       "Source_URLs": "https://www.inter-lgbt.org/",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://www.inter-lgbt.org/",
+      "january_findings": "Official Paris Pride organiser site, unrelated to January men-only cruising event programme."
     },
     {
       "Venue_ID": "MAD-PRD-01",
@@ -3078,7 +3078,7 @@
       "january_2027_check_status": "checked_stale_calendar",
       "checked_at": "2026-11-12",
       "checked_calendar_url": "https://www.hotdogclubmilano.it/en/",
-      "january_findings": "Official events page displayed August 2026 dates, no January 2027 dates"
+      "january_findings": "Official venue programme last retrieved with August 2026 dates; no January dates."
     },
     {
       "Venue_ID": "MIL-CRU-04",
@@ -3493,8 +3493,8 @@
       "Source_URLs": "https://kaiserbruendl.at/ | https://www.patroc.com/gay/vienna/gayguide.html",
       "january_2027_check_status": "checked_january_dated",
       "checked_at": "2026-11-12",
-      "checked_calendar_url": "https://kaiserbruendl.at/en/",
-      "january_findings": "New Year's event crosses into 1 January 2027; existing Morning Glory January record is present"
+      "checked_calendar_url": "https://kaiserbruendl.at/en/whats-on/",
+      "january_findings": "Official calendar confirms January 1 Morning Glory afterhour 04:30–12:00 already in events.json, and Dec31 Silvester Fun crossing into Jan1; weekly offers not separate January announcements"
     },
     {
       "Venue_ID": "VIE-SAU-02",
@@ -4163,10 +4163,10 @@
       "Facebook_URL": "",
       "Other_URL": "",
       "Source_URLs": "https://lebarlone.fr/;https://www.patroc.com/gay/paris/gayguide.html",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_access_limited",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://lebarlone.fr/",
+      "january_findings": "Official site only surfaced images and no machine-readable January 2027 schedule."
     },
     {
       "Venue_ID": "PAR-BAR-02",
@@ -4179,10 +4179,10 @@
       "Facebook_URL": "https://www.facebook.com/Bearsden-Paris",
       "Other_URL": "",
       "Source_URLs": "https://www.facebook.com/Bearsden-Paris;https://www.patroc.com/gay/paris/gayguide.html",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_access_failed",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://www.facebook.com/Bearsden-Paris",
+      "january_findings": "Facebook venue page blocked by robots.txt; no January calendar verified."
     },
     {
       "Venue_ID": "PAR-BAR-03",
@@ -4195,10 +4195,10 @@
       "Facebook_URL": "",
       "Other_URL": "",
       "Source_URLs": "https://cox.fr/;https://www.patroc.com/gay/paris/gayguide.html",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_no_january_dates_visible",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://cox.fr/",
+      "january_findings": "Official website accessible and weekly opening hours shown, no January 2027 event announcement found."
     },
     {
       "Venue_ID": "PAR-BAR-04",
@@ -4211,10 +4211,10 @@
       "Facebook_URL": "",
       "Other_URL": "",
       "Source_URLs": "https://cudbar.com/;https://www.patroc.com/gay/paris/gayguide.html",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_recurring_schedule_only",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://cudbar.com/en/index.html",
+      "january_findings": "Official bar site lists recurring weekly agenda and hours only, no special January 2027 calendar."
     },
     {
       "Venue_ID": "PAR-BAR-05",
@@ -4227,10 +4227,10 @@
       "Facebook_URL": "",
       "Other_URL": "",
       "Source_URLs": "https://freedj.fr/;https://www.patroc.com/gay/paris/gayguide.html",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_recurring_schedule_only",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://freedj.fr/",
+      "january_findings": "Official schedule confirms regular weeknight DJs and Friday/Saturday parties but no individually dated January 2027 event."
     },
     {
       "Venue_ID": "PAR-BAR-06",
@@ -4275,10 +4275,10 @@
       "Facebook_URL": "",
       "Other_URL": "https://x.com/raiddbar",
       "Source_URLs": "https://raiddbar.com/;https://www.patroc.com/gay/paris/gayguide.html",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://raiddbar.com/en/index.html",
+      "january_findings": "Official upcoming events section displayed August 2026 dates rather than January 2027."
     },
     {
       "Venue_ID": "PAR-BAR-09",
@@ -4291,10 +4291,10 @@
       "Facebook_URL": "",
       "Other_URL": "",
       "Source_URLs": "https://thelabo.fr/;https://www.patroc.com/gay/paris/gayguide.html",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://thelabo.fr/",
+      "january_findings": "Official Events section displayed August 2026 and recurring programme; no new individually dated January announcement."
     },
     {
       "Venue_ID": "PAR-CRU-01",
@@ -4323,10 +4323,10 @@
       "Facebook_URL": "",
       "Other_URL": "",
       "Source_URLs": "https://boxxman.fr/;https://www.patroc.com/gay/paris/gayguide.html",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_access_failed",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://boxxman.fr/",
+      "january_findings": "Official shop website inaccessible to retrieval; no January event calendar found."
     },
     {
       "Venue_ID": "PAR-CRU-02",
@@ -4565,8 +4565,8 @@
       "Source_URLs": "https://suncity-paris.fr/;https://www.patroc.com/gay/paris/gayguide.html",
       "january_2027_check_status": "checked_recurring_schedule_only",
       "checked_at": "2026-11-12",
-      "checked_calendar_url": "https://www.suncity-paris.fr/agenda/",
-      "january_findings": "Weekly and monthly programmes listed; no standalone dated January 2027 programme visible"
+      "checked_calendar_url": "https://www.suncity-paris.fr/agenda-gay-parties/",
+      "january_findings": "Official venue agenda confirms every Tuesday Nasty Boys and Sunday 17:00 Gay Tea Dance, now entered as explicitly weekly January recurrence records. The 2nd Saturday bear event and 1st/3rd Wednesday party also recur, but not added without specific January confirmation."
     },
     {
       "Venue_ID": "MRS-BAR-01",
@@ -12323,10 +12323,10 @@
       "Facebook_URL": "",
       "Other_URL": "",
       "Source_URLs": "",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://www.casinodeparis.fr/",
+      "january_findings": "Official theatre programme accessible but not a men-only cruising party venue calendar; no relevant January event identified."
     },
     {
       "Venue_ID": "HAM-PRD-HAMCSD-01",
@@ -19187,10 +19187,10 @@
       "Facebook_URL": "https://www.facebook.com/menergyparis",
       "Other_URL": "",
       "Source_URLs": "https://shotgun.live/en/venues/menergy-paris | https://gibusclub.fr/nos-soirees",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_no_january_dates_visible",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://shotgun.live/en/venues/menergy-paris",
+      "january_findings": "Official ticketing/organiser page states no upcoming events; last visible show July 2026; no January party confirmed."
     },
     {
       "Venue_ID": "DUB-PAR-OINK-01",
@@ -19347,10 +19347,10 @@
       "Facebook_URL": "https://www.facebook.com/technosteroneparty",
       "Other_URL": "",
       "Source_URLs": "https://www.patroc.com/gay/paris/d/technosterone-party.html",
-      "january_2027_check_status": "pending",
-      "checked_at": "",
-      "checked_calendar_url": "",
-      "january_findings": ""
+      "january_2027_check_status": "checked_access_failed",
+      "checked_at": "2026-11-12",
+      "checked_calendar_url": "https://www.facebook.com/technosteroneparty",
+      "january_findings": "Facebook source inaccessible; no January dated event verified."
     },
     {
       "Venue_ID": "WAR-PAR-FETISHWEEKEND-01",
@@ -26233,5 +26233,5 @@
       "january_findings": ""
     }
   ],
-  "summary_status": "In progress: full source audit incomplete. 'Checked' only means the linked website or calendar was consulted, not that all January dates were published/verified."
+  "summary_status": "In progress. A checked site may have no published January dates; date-specific events only enter events.json where grounded in dated notices, or explicit weekly recurrence rules."
 }
