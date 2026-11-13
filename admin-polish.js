@@ -86,8 +86,8 @@ function installToolbar(){
    if(event.key!=='Escape')return;
    controls.querySelectorAll('details[open]').forEach(details=>{details.open=false;});
  });
- const badge=get('admin-sidebar-version');if(badge)badge.textContent='v0.23.1';
- document.title='Backroom Admin Dashboard — v0.23';
+ const badge=get('admin-sidebar-version');if(badge)badge.textContent='v0.23.2';
+ document.title='Backroom Admin Dashboard — v0.23.2';
 }
 function tipPosition(x,y){
  const tip=state.tooltip;if(!tip)return;
