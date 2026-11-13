@@ -124,3 +124,9 @@
  #br3-view .br3-status{white-space:normal}
  #br3-view .br3-tabs button{flex:1 1 100px;padding:8px;font-size:.84rem}
 }
+
+/* Phase 3 v0.23.6: original URL reference details inside canonical source rows. */
+#br3-view .br3-provenance-list{list-style:disc;margin:7px 0 7px 18px;padding:0 8px 0 0;max-height:180px;overflow-y:auto;}
+#br3-view .br3-provenance-list li{margin:6px 0;padding:4px 0;overflow-wrap:anywhere;line-height:1.5;font-size:.78rem;}
+#br3-view .br3-provenance-list a{color:#88dbee;text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere;}
+#br3-view .br3-provenance-list small{color:#b9cddc;}
