@@ -480,7 +480,7 @@ function install(){
     if(!main) { console.error('Backroom Reporting: main admin container missing'); return; }
     const root=document.createElement('section');root.id='br-reporting-view';root.style.display='none';
     root.innerHTML=[
-    '<div class="br-report-head"><h1>📊 Reporting & Statistics</h1><p>Local working-data statistics, research queries and history.</p></div>',
+    '<div class="br-report-head"><h1>📊 Reporting & Statistics</h1><p>Working-draft statistics, research queries and history. Capture Data Point reads the published JSON files independently.</p></div>',
     '<div id="br-backup-reminder" class="br-notice hidden">Reporting history has unsaved changes older than seven days. <button class="btn primary-btn pill-btn" id="br-reminder-save">Save Report</button></div>',
     '<div id="br-stats" class="br-stats"></div>',
     '<details class="br-panel"><summary>🌍 Country Statistics</summary><div class="br-scroll"><table id="br-country-table" class="br-table"></table></div></details>',
