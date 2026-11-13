@@ -37,7 +37,7 @@
       "errors": []
     },
     "enrichment_D_progress": {
-      "batches_completed_through": 41,
+      "batches_completed_through": 56,
       "batches_total": 59,
       "records_enriched_this_pass": 75,
       "errors": []
@@ -66112,14 +66112,18 @@
       "best_url": "https://www.cruisinggays.com/lb-of-hackney/areas/577-abney-park-old-cemetery/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://abneypark.org/visitor-information",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -66134,10 +66138,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Abney Park Trust confirms this is a memorial cemetery and nature reserve, with gates currently locked 16:00 from 2 November to 31 December and weather safety closures. Splashd old 'very busy' claims are not firsthand activity proof for the last 12 months.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1105_1109.json"
       ],
       "original_index": 1108,
       "original_section": "D"
@@ -66324,14 +66329,13 @@
       "best_url": "https://www.cruisinggays.com/lb-of-richmond-upon-thames/areas/3235-barnes-common-old-cemetery/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         }
       ],
       "source_count": 1,
@@ -66346,10 +66350,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd describes two related but different areas: Barnes Common generally and the old cemetery after dark. Without a precise point it is not appropriate to merge these or accept claims of safety/current encounters. Public common and consecrated cemetery require distinct access research.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1110_1114.json"
       ],
       "original_index": 1110,
       "original_section": "D"
@@ -66401,14 +66406,18 @@
       "best_url": "https://www.cruisinggays.com/lb-of-wandsworth/areas/22651-battersea-park-southwest-corner/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://enablelc.org/parks/battersea-park/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -66423,10 +66432,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Wandsworth and its park operator confirm a public Victorian park with separate facility/gate hours; the operator gives gates approximately 06:30–22:30 and toilet-specific times. Splashd encourages entry after closure, which should not be followed; no dated cruising activity verified.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1105_1109.json"
       ],
       "original_index": 1107,
       "original_section": "D"
@@ -66569,20 +66579,19 @@
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/lb-of-greenwich/toilets/51975-beresford-square-toilets/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.nla.london/projects/woolwich-town-centre-regeneration",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -66597,10 +66606,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd's dated-only-by-listing-age card alleges sexual conduct and holes between cubicles in an old public toilet at Beresford Square, Woolwich. No independent current toilet, repairs, access rights or recent consenting reports were established.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1120_1124.json"
       ],
       "original_index": 1121,
       "original_section": "D"
@@ -67092,17 +67102,21 @@
       ],
       "research_stage": "needs_more_verification",
       "live_status": null,
-      "best_url": "https://www.cruisinggays.com/lb-of-lambeth/toilets/10574-brockwell-park-public-toilets/",
+      "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
-          "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "url": "https://www.cruisinggays.com/lb-of-lambeth/toilets/10574-brockwell-park-public-toilets/",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.lambeth.gov.uk/parks/brockwell-park",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -67117,10 +67131,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Lambeth Council says Brockwell Park normally closes shortly before sunset, but Friends of Brockwell Park report that gates stopped being locked from November 2024. This unresolved access discrepancy should be verified at the park; Splashd does not provide dated current cruising testimony.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1090_1094.json"
       ],
       "original_index": 1091,
       "original_section": "D"
@@ -67176,15 +67191,19 @@
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/lb-of-lambeth/toilets/10574-brockwell-park-public-toilets/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.lambeth.gov.uk/parks/brockwell-park",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -67199,10 +67218,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd identifies a restroom somewhere within Brockwell Park, already covered separately as index 1091. Lambeth confirms the park's existence, but not the historic toilet structure, present layout or any recent sexual activity.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1135_1139.json"
       ],
       "original_index": 1139,
       "original_section": "D"
@@ -67383,11 +67403,16 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.southwark.gov.uk/culture-and-sport/parks-and-open-spaces/find-park/burgess-park?chapter=4&displaypref=default",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -67400,10 +67425,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Southwark describes the main Burgess Park as always open, whereas the carpark and specific nature/garden areas are seasonally gated. The archived Splashd cruising label supplies no dated eyewitness since the cutoff.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1090_1094.json"
       ],
       "original_index": 1093,
       "original_section": "D"
@@ -67421,15 +67447,14 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.islington.gov.uk/physical-activity-parks-and-trees/parks-and-green-space/your-local-parks/caledonian-park",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -67444,10 +67469,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Islington Council's visitor page verifies Caledonian Park as a sports and green open space, and its seasonal rules include this among parks locked at night. A one-line Splashd claim of bushes being cruisy has no location specificity or dated corroboration.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1105_1109.json"
       ],
       "original_index": 1109,
       "original_section": "D"
@@ -67503,20 +67529,19 @@
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/lb-of-tower-hamlets/toilets/19869-canada-place-mall-toilets-canary-wharf-shopping-centre/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://cwg.com/accessibility/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -67531,10 +67556,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd describes alleged encounters in the Canada Place shopping mall toilets. The relevant mall is part of the privately managed Canary Wharf retail complex; no current independent restroom layout or activity evidence obtained.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1130_1134.json"
       ],
       "original_index": 1134,
       "original_section": "D"
@@ -67588,20 +67614,19 @@
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/lb-of-tower-hamlets/toilets/41212-canary-wharf-toilets/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://cwg.com/accessibility/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -67616,10 +67641,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd calls an unspecified Canary Wharf restroom a 'new toilet', but the district includes multiple shopping-centre and station facilities. Without a precise site or independent current match this cannot be mapped accurately or promoted.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1130_1134.json"
       ],
       "original_index": 1133,
       "original_section": "D"
@@ -67637,20 +67663,24 @@
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/lb-of-tower-hamlets/c/areas/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://tfl.gov.uk/tube/stop/940GZZLUCYF/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://tfl.gov.uk/hub/stop/HUBCAW/canary-wharf/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -67665,10 +67695,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "TfL currently lists toilets among Canary Wharf's station facilities. This establishes the presence of a managed passenger amenity, not any date-specific cruising. The archived description of its precise layout could be obsolete.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1135_1139.json"
       ],
       "original_index": 1137,
       "original_section": "D"
@@ -67686,15 +67717,14 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.accessable.co.uk/london-borough-of-newham/london-borough-of-newham/access-guides/canning-town-bus-station",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -67709,10 +67739,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The archived card claims cruising at a Canning Town bus-station restroom and itself warns of monitoring and cleaners. Current restroom access needs operator verification; the archive's police/security anecdotes are undated.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1130_1134.json"
       ],
       "original_index": 1132,
       "original_section": "D"
@@ -67730,15 +67761,19 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.networkrail.co.uk/rail-travel/our-stations/london-cannon-street/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.nationalrail.co.uk/stations/london-cannon-street/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -67753,10 +67788,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Network Rail and National Rail independently confirm staffed railway station toilet facilities near the ticket office/platform 7, whereas Splashd's archived layout directions may no longer reflect the station. Actual cruising remains unverified after 2025-11-06.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1155_1159.json"
       ],
       "original_index": 1156,
       "original_section": "D"
@@ -68013,15 +68049,19 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://cwg.com/accessibility/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.nationalrail.co.uk/stations/canary-wharf-elizabeth-line/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -68036,10 +68076,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A notable conflict: National Rail's current Elizabeth line station page says there are no toilets in that station, despite the Splashd 'Cross Rail Canary Wharf' card describing a level -3 toilet from before Crossrail opened. This may be a nearby mall toilet, not the station; precise identity unresolved.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1135_1139.json"
       ],
       "original_index": 1138,
       "original_section": "D"
@@ -68094,14 +68135,13 @@
       "best_url": "https://www.cruisinggays.com/lb-of-bromley/areas/39842-crystal-palace-park/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -68116,10 +68156,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd describes a traditional public toilet within or beside Crystal Palace Park, but does not establish a current operational toilet or any recent gay cruising reports. Archive also notes nearby family use.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1125_1129.json"
       ],
       "original_index": 1125,
       "original_section": "D"
@@ -68181,15 +68222,14 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.itv.com/news/utv/2021-05-15/final-debenhams-stores-to-shut-as-chains-243-year-history-ends",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -68204,10 +68244,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The archive discusses a Debenhams department-store toilet; however Debenhams shut its remaining UK physical stores in May 2021. A named former store restroom cannot be treated as a currently operating customer amenity.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1145_1149.json"
       ],
       "original_index": 1147,
       "original_section": "D"
@@ -68223,17 +68264,16 @@
       ],
       "research_stage": "hold_access_or_outdated",
       "live_status": null,
-      "best_url": "https://www.cruisinggays.com/lb-of-lewisham/c/areas/",
+      "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
-          "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "url": "https://www.cruisinggays.com/lb-of-lewisham/c/areas/",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
         }
       ],
       "source_count": 1,
@@ -68248,10 +68288,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd describes old toilets and vague park surroundings as a cruising lead, but admits no dated activity. Site-level current toilet existence and gate access remain unverified; search results for Deptford Park Primary School concern a different site.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1085_1089.json"
       ],
       "original_index": 1088,
       "original_section": "D"
@@ -68306,14 +68347,13 @@
       "best_url": "https://www.cruisinggays.com/london/areas/55091-dickens-square/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         }
       ],
       "source_count": 1,
@@ -68328,10 +68368,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd's London archive describes a small residential park bordered by several housing estates, alleging outdoor encounters without dates. No independent site-specific account, exact viable coordinates or recent firsthand activity could be confirmed.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1095_1099.json"
       ],
       "original_index": 1099,
       "original_section": "D"
@@ -68483,15 +68524,14 @@
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/london/c/areas/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -68506,10 +68546,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd's historical London card describes an underground municipal toilet near Eastcheap, formerly with an entry charge. It provides no source visit date, and current operating status, charges and ownership are unknown.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1150_1154.json"
       ],
       "original_index": 1151,
       "original_section": "D"
@@ -68527,15 +68568,14 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.elyswimbledon.co.uk/pages/store-info",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -68550,10 +68590,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The store's official guide confirms that Elys is operating and has customer toilets on the third floor, aligning with the old Splashd card's broad identity. The archived sexual-activity allegation is undated and not independently corroborated; current customers and staff are not participants.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1150_1154.json"
       ],
       "original_index": 1150,
       "original_section": "D"
@@ -68572,14 +68613,13 @@
       "best_url": "https://www.cruisinggays.com/london/areas/22361-broadgate-shopping-centre-lower-level/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -68594,10 +68634,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Splashd card describes a small toilet under the generic name Exchange Square. The Broadgate Exchange Square public space exists, but the card provides no building or operator; it might overlap with the separately listed Broadgate Circle restroom yet cannot be assumed identical.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1155_1159.json"
       ],
       "original_index": 1158,
       "original_section": "D"
@@ -68615,11 +68656,16 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.islington.gov.uk/physical-activity-parks-and-trees/nature-reserves/parkland-walk",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -68632,10 +68678,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd's 'Finsbury Park' card actually names Parkland Walk, a nearby linear nature reserve also recorded separately as candidate 1071. Identity overlap is a serious duplicate risk; neither archive claim is evidence of recent firsthand activity.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1110_1114.json"
       ],
       "original_index": 1111,
       "original_section": "D"
@@ -68653,9 +68700,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -68670,10 +68716,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd's label 'Gardens of Imperial War Museum' likely means the public museum-side park and peace garden, but exact plot is unpinned. The historic archive refers to alleged cruising at night, not a contemporaneous verifiable experience; museum grounds are shared with families and visitors.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1100_1104.json"
       ],
       "original_index": 1103,
       "original_section": "D"
@@ -68724,11 +68771,16 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.merton.gov.uk/leisure-recreation-and-culture/parks-and-open-spaces/play-areas/wimbledon",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -68741,10 +68793,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The official Merton play-area directory confirms Garfield Recreation Ground and a fenced children's play area. Splashd suggests the park and adjoining meadow as a cruising location, but the alleged spot and recent activity are not corroborated.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1095_1099.json"
       ],
       "original_index": 1096,
       "original_section": "D"
@@ -68762,15 +68815,14 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.accessable.co.uk/goldsmiths-university-of-london/access-guides/goldsmiths-students-union-building",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -68785,10 +68837,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The source discusses men's toilets within Goldsmiths Students' Union, a university setting intended primarily for enrolled students and approved visitors. The archive claims casual public access, but this is unverified and potentially misleading.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1130_1134.json"
       ],
       "original_index": 1130,
       "original_section": "D"
@@ -69074,19 +69127,18 @@
       "best_url": "https://www.cruisinggays.com/lb-of-hackney/areas/4622-haggerston-park/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         },
         {
           "url": "https://www.hackney.gov.uk/libraries-parks-and-leisure/parks-and-green-spaces/parks-list/haggerston-park",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -69101,10 +69153,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Hackney Council confirms public park and accessible toilets, with managed access; its autumn schedule says closure at 17:00 from 2 November until December end. Splashd suggests toilet/bush encounters but provides no dated recent witness or sexual-use authorization.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1105_1109.json"
       ],
       "original_index": 1106,
       "original_section": "D"
@@ -69211,9 +69264,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -69228,10 +69280,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd has an archived public toilet cruising card describing urinals and cubicles. There is no independently verified current toilet, owner, entrance policy or recent consenting adult encounter; treating the facility as a sex venue is inappropriate without access/consent checks.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1115_1119.json"
       ],
       "original_index": 1119,
       "original_section": "D"
@@ -69346,20 +69399,24 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://london.gaycities.com/arts/130504-the-royal-parks",
-          "page_type": "context_or_official_source",
-          "source_status": "specialist_guide_or_contextual"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.gayout.com/europe/united-kingdom/london/cruising",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.visitlondon.com/things-to-do/place/469929-holland-park",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -69374,11 +69431,12 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd references a path behind an unspecified hostel; this could concern a footpath near Holland Park rather than an official park section. Visit London documents normal Holland Park access until 30 minutes before dusk. Hostel/property boundaries must not be crossed.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
         "research/Archive/verification_manifest_2026-11-06.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/D/batch_1110_1114.json"
       ],
       "original_index": 1112,
       "original_section": "D"
@@ -69517,11 +69575,16 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/parks_and_open_spaces/Parks-directory/Ion-Square-Gardens.aspx",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -69534,10 +69597,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Tower Hamlets' park directory independently identifies this small garden and its biodiversity area and playground; no current source confirms Splashd's description of male cruising, numbers or staffing.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1105_1109.json"
       ],
       "original_index": 1105,
       "original_section": "D"
@@ -69555,20 +69619,19 @@
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/lb-of-tower-hamlets/c/areas/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://cwg.com/accessibility/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -69583,10 +69646,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "This historical card alleges encounters inside a mall toilet. No 2026 facilities directory or recent participant record was independently matched to the claimed precise toilet; its source description is retained internally.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1135_1139.json"
       ],
       "original_index": 1136,
       "original_section": "D"
@@ -69604,11 +69668,16 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.lambeth.gov.uk/parks/kennington-park",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -69621,10 +69690,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Lambeth verifies the public park and its opening hours, normally 07:30 until 15 minutes before sunset. Splashd's old mention of toilets and garden paths is uncorroborated by any post-cutoff eyewitness.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1095_1099.json"
       ],
       "original_index": 1097,
       "original_section": "D"
@@ -69708,15 +69778,14 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.fromthemurkydepths.co.uk/2026/03/14/bar-incoming-greenwich-public-toilets-up-for-rent/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -69731,10 +69800,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd lists an underground public convenience on King William Walk near Greenwich tourist attractions. The archive describes a possible attendant/locked door but has no dated visit, and present operation/access has not been established.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1125_1129.json"
       ],
       "original_index": 1128,
       "original_section": "D"
@@ -69796,11 +69866,16 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://event.lambeth.gov.uk/venues/larkhall-park/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -69813,10 +69888,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Lambeth's events site confirms Larkhall Park has football, tennis, a children's play area and community garden. Splashd suggests cruising near a children's area without dates; this is inappropriate for public promotion and has no recent corroboration.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1100_1104.json"
       ],
       "original_index": 1100,
       "original_section": "D"
@@ -69834,15 +69910,19 @@
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/lb-of-lewisham/c/areas/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.lewishamshopping.co.uk/en/plan-my-visit/centre-map",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -69857,10 +69937,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Lewisham Shopping Centre's current centre map confirms the shopping centre still lists public toilets, including accessible facilities. Splashd's archived description claims cruising in a particular part of the toilets, but supplies no date or independent consent evidence.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1120_1124.json"
       ],
       "original_index": 1124,
       "original_section": "D"
@@ -69974,11 +70055,16 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.nationalrail.co.uk/stations/london-bridge/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -69991,10 +70077,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The archive says an underground station toilet was near Southern trains, suggesting a National Rail-associated area. National Rail presently confirms toilets at London Bridge station but not the specific archived underground passage. Keep the two operations separate.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1145_1149.json"
       ],
       "original_index": 1148,
       "original_section": "D"
@@ -70012,9 +70099,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -70029,10 +70115,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd records a vague account of a park public toilet at Maryon Park; the record does not document any actual visit date. There is no corroborated current cubicle operation, access hours or consent context.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1120_1124.json"
       ],
       "original_index": 1122,
       "original_section": "D"
@@ -70050,15 +70137,14 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://mertonpride.co.uk/accessibility/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -70073,10 +70159,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd alleges cruising in a small market toilet, but this is an undated account. There is no independent confirmation of present restroom operation, layout or recent consensual activity.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1140_1144.json"
       ],
       "original_index": 1143,
       "original_section": "D"
@@ -70095,14 +70182,18 @@
       "best_url": "https://www.cruisinggays.com/lb-of-tower-hamlets/areas/20214-mile-end-park/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/parks_and_open_spaces/mile_end_park/mile_end_park.aspx",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -70117,10 +70208,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Tower Hamlets Council describes an extensive multi-part linear park next to the Regent's Canal. Splashd claims anonymous cruising in an unspecified subarea but no current observed visit or precise mapped place is established.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1095_1099.json"
       ],
       "original_index": 1095,
       "original_section": "D"
@@ -70182,15 +70274,19 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.thegayuk.com/listings/business-tag/gay-cruising-in-north-london/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.enfield.gov.uk/services/leisure-and-culture/friends-of-parks",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -70205,10 +70301,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd's archived entry uses a generic 'Montagu Park' title with no borough, address or GPS. Enfield lists a Montagu Recreation Ground among park groups, but matching this to the Splashd description is only a candidate identity, not a proven same-place link.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1115_1119.json"
       ],
       "original_index": 1116,
       "original_section": "D"
@@ -70270,11 +70367,16 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.mudchute.org/plan-your-visit/opening-times",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -70287,10 +70389,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Splashd archived card alleges encounters around Mudchute, but neither dated activity nor a suitable place is verified. The charity's current site describes a working community farm, nursery and family visitor attraction; park access is dawn–dusk and the farm closes in the afternoon.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1085_1089.json"
       ],
       "original_index": 1085,
       "original_section": "D"
@@ -70346,9 +70449,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -70363,10 +70465,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Splashd title is simply 'National Rail Station', and its card gives generic activity claims without identifying any actual station. London has many stations, making the geographic identity insufficient to corroborate the physical restroom, operating hours or any recent activity.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1155_1159.json"
       ],
       "original_index": 1157,
       "original_section": "D"
@@ -70384,15 +70487,14 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.brent.gov.uk/parks-leisure-and-healthy-living/parks-and-open-spaces/park-finder/neasden-recreation-ground",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -70407,10 +70509,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Brent Council confirms this public sports ground near the Welsh Harp Reservoir with a playground and wildlife area. Splashd's broad claim of encounters by a 'wood deck' has no verified precise spot or dated report.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1115_1119.json"
       ],
       "original_index": 1118,
       "original_section": "D"
@@ -70530,9 +70633,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -70547,10 +70649,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd claims cruising at a North Greenwich underground station toilet, but no current TfL amenity location or opening schedule was independently confirmed in this review. The station serves general public transport, including families.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1125_1129.json"
       ],
       "original_index": 1129,
       "original_section": "D"
@@ -70568,15 +70671,14 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.croydon.gov.uk/libraries-leisure-and-culture/parks-and-open-spaces/parks-and-playgrounds/parks-opening-and-closing-times-and-maintenance-schedules",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -70591,10 +70693,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd references a small public convenience near Norwood Grove and Streatham Common. Croydon's council information identifies park public toilet operating times in general, not this specific unit or any sexual activity.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1130_1134.json"
       ],
       "original_index": 1131,
       "original_section": "D"
@@ -70671,15 +70774,19 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.thegayuk.com/listings/business-tag/gay-cruising-in-north-london/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.enfield.gov.uk/services/leisure-and-culture/green-enfield",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -70694,10 +70801,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Enfield Council independently identifies Oakwood Park, its recreational facilities and gated 2026 opening rules. Splashd's mention of woodland and toilets is undated; park toilets and gates have distinct closing times.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1115_1119.json"
       ],
       "original_index": 1117,
       "original_section": "D"
@@ -70948,19 +71056,18 @@
       "best_url": "https://www.cruisinggays.com/lb-of-southwark/areas/7193-peckham-rye-park/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         },
         {
           "url": "https://www.southwark.gov.uk/culture-and-sport/parks-and-open-spaces/find-park/peckham-rye-park-and-common",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -70975,10 +71082,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Southwark Council distinguishes the gated Peckham Rye Park, which opens 07:30 and shuts by seasonal sunset, from the adjoining common, which remains open at all hours. Splashd's archived cruising guide omits any dated recent reports and suggests bypassing fencing, which is not valid access.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1085_1089.json"
       ],
       "original_index": 1086,
       "original_section": "D"
@@ -71034,9 +71142,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -71051,10 +71158,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The card only calls this an ordinary toilet on Pope's Road, with no operator, street number or timestamp of an actual encounter. Its identity remains unresolved; source detail is not suitable for mapping.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1140_1144.json"
       ],
       "original_index": 1141,
       "original_section": "D"
@@ -71212,9 +71320,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -71229,10 +71336,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd's campus card alleges bathroom encounters and even suggests unauthorised alterations to cubicles. The institution is a teaching campus, not a public cruising venue. The claim lacks specific current independent proof.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1140_1144.json"
       ],
       "original_index": 1144,
       "original_section": "D"
@@ -71304,9 +71412,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -71321,10 +71428,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd describes a basement restroom at the Royal Exchange with an undated cruising allegation. London also has a Royal Exchange Theatre in Manchester; evidence for that separate business must not be used as confirmation of the London toilet. No current exact amenity or activity is verified.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1155_1159.json"
       ],
       "original_index": 1155,
       "original_section": "D"
@@ -71340,17 +71448,21 @@
       ],
       "research_stage": "priority_for_listing_build",
       "live_status": null,
-      "best_url": "https://www.cruisinggays.com/map/?cityid=7550&filter=4",
+      "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
-          "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "url": "https://www.cruisinggays.com/map/?cityid=7550&filter=4",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.lambeth.gov.uk/parks/ruskin-park",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -71365,10 +71477,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The council documents this as a public park with pond, play and sports facilities, open 07:00 to 15 minutes before sunset. Splashd's older cruising claims are not current eyewitness evidence and cannot override park hours.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1090_1094.json"
       ],
       "original_index": 1090,
       "original_section": "D"
@@ -71424,9 +71537,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -71441,10 +71553,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An archived Splashd card alleges casual encounters in supermarket washrooms close to the tills. Neither the particular branch nor present customer-toilet operation was independently established, and the archive includes no post-cutoff activity evidence.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1150_1154.json"
       ],
       "original_index": 1152,
       "original_section": "D"
@@ -71462,9 +71575,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -71479,10 +71591,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The archived entry contains only an allegation that restroom cubicles have peep holes. No independent confirmation was found for the branch, bathroom condition, or post-cutoff activity. Such holes would be a privacy and maintenance issue.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1145_1149.json"
       ],
       "original_index": 1145,
       "original_section": "D"
@@ -71500,9 +71613,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -71517,10 +71629,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd's old card describes an alleged restroom on a supermarket's second floor close to a café. The account supplies no witness date or verification that the store still retains the same floor plan and toilets.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1150_1154.json"
       ],
       "original_index": 1154,
       "original_section": "D"
@@ -71538,9 +71651,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -71555,10 +71667,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The name 'Sainsburys Crystal' is ambiguous, probably a supermarket around Crystal Palace. The archive claims holes in cubicle doors, a privacy problem if true; no physical store/toilet identity or current condition was verified.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1125_1129.json"
       ],
       "original_index": 1126,
       "original_section": "D"
@@ -71802,9 +71915,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -71819,10 +71931,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The archive includes a particular door entry code explicitly dated MAY 2017; this is stale and must not be presented as current access information. The station and any customer toilets are managed by operators and do not establish permission for sex.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1140_1144.json"
       ],
       "original_index": 1142,
       "original_section": "D"
@@ -71838,27 +71951,31 @@
       ],
       "research_stage": "priority_for_listing_build",
       "live_status": null,
-      "best_url": "https://www.cruisinggays.com/map/?cityid=7550&filter=4",
+      "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
-          "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "url": "https://www.cruisinggays.com/map/?cityid=7550&filter=4",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
         },
         {
           "url": "https://urbanpamphleteer.org/content/7-lgbtq-night-time-spaces-past-present-future/issue-pdf/up-7-lgbtq-night-time-spaces-past-present-future.pdf",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.gayout.com/europe/united-kingdom/london/cruising",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.lambeth.gov.uk/parks/streatham-common",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -71873,10 +71990,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Lambeth's own location page confirms the common is accessible around the clock. Splashd's historic place card alleges occasional male encounters, but provides no dated eyewitness or independent 2026 confirmation.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1085_1089.json"
       ],
       "original_index": 1087,
       "original_section": "D"
@@ -72040,9 +72158,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -72057,10 +72174,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The archive refers to retailer-owned toilets at a Tesco Extra near Gallions Reach. This is a shop/customer amenity, not a venue offering cruising. No current premises layout, entrance rules or recent encounters are verified.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1120_1124.json"
       ],
       "original_index": 1123,
       "original_section": "D"
@@ -72162,11 +72280,16 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.newham.gov.uk/transport-streets/greenway-closure",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -72179,10 +72302,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Newham Council's live closure notice verifies that Thames Water works have closed the Greenway between Channelsea Path and Upper Road, with works continuing into 2028. Splashd names the broad path as a cruising lead without a precise spot or actual recent encounter.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1085_1089.json"
       ],
       "original_index": 1089,
       "original_section": "D"
@@ -72236,15 +72360,19 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.thegayuk.com/listings/business-tag/gay-cruising-in-north-london/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.cityoflondon.gov.uk/things-to-do/green-spaces/hampstead-heath/where-to-go-at-hampstead-heath/highgate-mens-pond",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -72259,10 +72387,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd's archived description of a historically male swimming pond at Millfield Lane plausibly refers to Highgate Men's Pond. City of London's official page identifies this location and distinguishes it from the separate women-only and mixed ponds. Nude swimming is not evidence of public sex or contemporary cruising.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1115_1119.json"
       ],
       "original_index": 1115,
       "original_section": "D"
@@ -72351,14 +72480,18 @@
       "best_url": "https://www.cruisinggays.com/lb-of-haringey/areas/592-tottenham-cemetery/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://friendsoftottenhamcemetery.org.uk/about-the-cemetery/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -72373,10 +72506,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd names a cemetery-lake landscape; Friends of Tottenham Cemetery confirm the genuine working cemetery with public opening about 08:00–16:30 in winter. This does not validate its claimed cruising. Tottenham Park Cemetery is a separate similarly named private property.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1110_1114.json"
       ],
       "original_index": 1114,
       "original_section": "D"
@@ -72449,19 +72583,23 @@
       "best_url": "https://www.cruisinggays.com/lb-of-tower-hamlets/areas/33250-tower-hamlets-cemetery-park/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         },
         {
           "url": "https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/parks_and_open_spaces/cemetery_park.aspx",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://fothcp.org/visit-us/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -72476,10 +72614,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Friends group confirms the disused cemetery/nature reserve can be entered around the clock at selected pedestrian gates; the Southern Grove main entrance is commonly dawn–dusk. Historic Splashd descriptions are unverified as to recent sexual activity.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1090_1094.json"
       ],
       "original_index": 1094,
       "original_section": "D"
@@ -72497,9 +72636,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -72514,10 +72652,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Splashd card describes an older bus station toilet and presence of transport security; current building and toilet operation have not been independently matched. No recent dated gay cruising evidence is provided.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1145_1149.json"
       ],
       "original_index": 1149,
       "original_section": "D"
@@ -72535,11 +72674,16 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.lambeth.gov.uk/parks/vauxhall-park",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -72552,10 +72696,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd describes casual cruising in bushes, but Lambeth Council's official record defines normal public opening as 07:30 until shortly before sunset. No post-2025 firsthand encounter established.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1100_1104.json"
       ],
       "original_index": 1102,
       "original_section": "D"
@@ -72611,20 +72756,19 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://he-corp-prod-uksouth-corpweb.azurewebsites.net/research/inclusive-heritage/lgbtq-heritage-project/meeting-and-socialising/places-for-sex/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.lambeth.gov.uk/parks/vauxhall-pleasure-gardens",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -72639,10 +72783,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd references the park behind Royal Vauxhall Tavern, but this is an undated city-card description. Lambeth Council confirms the park is open 24 hours and has a dedicated wildlife/pollinator project; no contemporary cruising witness has been established.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1100_1104.json"
       ],
       "original_index": 1104,
       "original_section": "D"
@@ -72661,25 +72806,29 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://londonboyxxx.substack.com/p/the-interviews-gay-cruising-in-london",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.gayout.com/europe/united-kingdom/london/cruising",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.travelgay.com/editorial/popular-gay-cruising-areas-in-london",
-          "page_type": "context_or_official_source",
-          "source_status": "specialist_guide_or_contextual"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/parks_and_open_spaces/Byelaws-for-pleasure-grounds-public-walks-and-open-spaces.aspx",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -72694,11 +72843,12 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Victoria Park is a managed recreation area with specific gate hours. Tower Hamlets says gates normally operate from 07:00 until dusk; Splashd lists several unverified historical subareas but no precise verified current encounter.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
         "research/Archive/verification_manifest_2026-11-06.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/D/batch_1095_1099.json"
       ],
       "original_index": 1098,
       "original_section": "D"
@@ -72758,9 +72908,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -72775,10 +72924,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd's archive describes a specific supermarket toilet arrangement and claimed lunchtime activity, with no date-stamped eyewitness. The store's current layout and even the restroom's existence were not independently verified.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1135_1139.json"
       ],
       "original_index": 1135,
       "original_section": "D"
@@ -72796,9 +72946,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -72813,10 +72962,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd's historic card refers to a supermarket restroom and nearby carpark, but does not include a first-hand report date, specific retailer facility notice or independently verifiable activity. Do not confuse this with the different Sainsbury's Nine Elms entry.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1155_1159.json"
       ],
       "original_index": 1159,
       "original_section": "D"
@@ -72834,20 +72984,19 @@
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/map/?cityid=7614&filter=4",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.wandsworth.gov.uk/roads-and-transport/toilets/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -72862,10 +73011,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd combines a park toilet lead with surrounding wooded paths, but its original description is undated and lacks a current toilet address. A generic public common is not evidence that the restroom remains open or that encounters take place.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1150_1154.json"
       ],
       "original_index": 1153,
       "original_section": "D"
@@ -72884,14 +73034,18 @@
       "best_url": "https://www.cruisinggays.com/lb-of-redbridge/areas/2494-wanstead-flats/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.cityoflondon.gov.uk/things-to-do/green-spaces/epping-forest/where-to-go-in-epping-forest/wanstead-flats",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -72906,10 +73060,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "City of London verifies this public part of Epping Forest is open 24 hours and includes protected habitat and playing fields. Splashd's claimed cruising spots are not verified by a recent participant's account.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1090_1094.json"
       ],
       "original_index": 1092,
       "original_section": "D"
@@ -73056,15 +73211,19 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/parks_and_open_spaces/Weavers_Fields.aspx",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.towerhamlets.gov.uk/lgnl/leisure_and_culture/parks_and_open_spaces/Parks-directory/Weavers-Fields.aspx",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -73079,10 +73238,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Tower Hamlets' official directory states Weavers Fields is a popular family recreation ground with playgrounds and is locked overnight. Splashd's old card is not dated activity proof and does not justify access past fences.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1100_1104.json"
       ],
       "original_index": 1101,
       "original_section": "D"
@@ -73207,9 +73367,8 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -73224,10 +73383,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd describes numerous different restrooms and alleged encounters rather than one uniquely pin-able place. No specific restroom, customer access policy or post-2025 eyewitness is independently established.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1140_1144.json"
       ],
       "original_index": 1140,
       "original_section": "D"
@@ -73245,20 +73405,24 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://capitalpost.uk/transport/future-projects/forest-hill-soft-play-plans-advance-at-former-wetherspoons.html",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://southwarknews.co.uk/news/grandest-wetherspoons-in-london-permanently-closes-in-forest-hill/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://camra.org.uk/pubs/capitol-forest-hill-158713",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -73273,10 +73437,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "This entry is historically obsolete: Wetherspoon's The Capitol in Forest Hill shut in October 2023, and CAMRA records conversion into a children's play centre opening 16 October 2026. The old toilet described by Splashd is no longer a pub toilet and must not be promoted as an active cruising location.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1125_1129.json"
       ],
       "original_index": 1127,
       "original_section": "D"
@@ -73420,11 +73585,16 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://cindex.camden.gov.uk/kb5/camden/cd/service.page?id=StM5Rs8VTUU",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -73437,10 +73607,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Splashd describes a roadside wooded alleged dogging/cruising corridor. Camden's directory confirms the Heath Extension lies between Wildwood Road and Hampstead Way. No current roadside access rules, specific pin or date-stamped encounters verified.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1110_1114.json"
       ],
       "original_index": 1113,
       "original_section": "D"
@@ -73458,20 +73629,19 @@
       "live_status": null,
       "best_url": "https://www.splashd.app/map/gb/eng/london",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://retailhub.southwesternrailway.com/travelling-with-us/at-the-station/wimbledon",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.nationalrail.co.uk/stations/wimbledon/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -73486,10 +73656,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The source talks about a station washroom and alleged hole between cubicles without a report date. No current site condition or exact operator of the claimed restroom is established.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1145_1149.json"
       ],
       "original_index": 1146,
       "original_section": "D"
@@ -73507,25 +73678,24 @@
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/woolwich/c/toilets/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/gb/eng/london",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.southeasternrailway.co.uk/travel-information/station-information/station-information/stations/woolwich-arsenal",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.thegayuk.com/listings/business-listing/uk/london/greenwich/woolwich-arsenal-railing-station/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -73540,10 +73710,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "This is a historical Splashd claim about the National Rail station's Platform 1 toilet, not the DLR. Southeastern's live facilities page confirms a staffed-hours toilet on Platform 1, but not cruising activity or public sexual use.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_1120_1124.json"
       ],
       "original_index": 1120,
       "original_section": "D"
