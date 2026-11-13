@@ -1,0 +1,245 @@
+{
+  "research_month": "2027-01",
+  "batch": "P12",
+  "date_researched": "2026-11-13",
+  "batch_size": 20,
+  "scope": "Next 20 sequential pending website records indices 582–698, covering Georgia, Israel, Croatia, London, Dresden, Athens, Cyprus and Istanbul; skipped 2026-11-13 previously checked or no-website entries.",
+  "new_eligible_january_events": 0,
+  "publication": "No January 2027 source-dated eligible events confirmed; events.json unchanged.",
+  "important_venue_flags": [
+    {
+      "Venue_ID": "ISR-TLV-SAU-01",
+      "finding": "Sauna Paradise specifically advertises bisexual parties for men and women; men-only status must not be presumed."
+    },
+    {
+      "Venue_ID": "ISR-TLV-SAU-02",
+      "finding": "Sauna Club Tel Aviv officially states men-only, but ticket calendar has no January 2027 date."
+    },
+    {
+      "Venue_ID": "DRS-BAR-03",
+      "finding": "Valentino has dated March 2027 events, not January."
+    }
+  ],
+  "entries": [
+    {
+      "audit_index_zero_based": 582,
+      "Venue_ID": "GEO-TBS-PAR-01",
+      "Name": "Horoom at Bassiani",
+      "City": "Tbilisi",
+      "Country": "Georgia",
+      "Website_URL": "https://bassiani.com/",
+      "checked_calendar_url": "https://bassiani.com/",
+      "january_2027_check_status": "checked_access_limited",
+      "january_findings": "Bassiani/Horoom official website is a JavaScript application with no accessible textual schedule; no official independently dated January 2027 men's darkroom event verified. Needs calendar/social review."
+    },
+    {
+      "audit_index_zero_based": 583,
+      "Venue_ID": "ISR-TLV-PRD-01",
+      "Name": "Tel Aviv Pride",
+      "City": "Tel Aviv",
+      "Country": "Israel",
+      "Website_URL": "https://www.lgbtqcenter.org.il/pride",
+      "checked_calendar_url": "https://www.lgbtqcenter.org.il/pride",
+      "january_2027_check_status": "checked_no_january_dates_visible",
+      "january_findings": "Tel Aviv LGBTQ Center's official Pride information contains no January 2027 event date. Pride is a broad public community festival and not itself a men-only darkroom event."
+    },
+    {
+      "audit_index_zero_based": 586,
+      "Venue_ID": "ISR-TLV-SAU-01",
+      "Name": "Sauna Paradise",
+      "City": "Tel Aviv",
+      "Country": "Israel",
+      "Website_URL": "https://www.saunaparadise.co.il/home-1.html",
+      "checked_calendar_url": "https://www.saunaparadise.co.il/home-1.html",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Sauna Paradise Tel Aviv official website advertises a 'next party for bisexual men & women' dated 5 August 2026. The page has no confirmed January 2027 events and includes mixed-gender attendance; do not classify all sessions men-only."
+    },
+    {
+      "audit_index_zero_based": 593,
+      "Venue_ID": "CRU-DBV-LOKISL-01",
+      "Name": "Lokrum Island",
+      "City": "Dubrovnik",
+      "Country": "Croatia",
+      "Website_URL": "https://www.lokrum.hr/en/",
+      "checked_calendar_url": "https://www.lokrum.hr/en/",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "january_findings": "Lokrum Island official public nature reserve/tourist site lists transport, tickets and environmental rules, not a men-only party calendar. Public-area cruising listing should be researched separately from formal events."
+    },
+    {
+      "audit_index_zero_based": 671,
+      "Venue_ID": "CRU-LON-HYDPAR-05",
+      "Name": "Hyde Park — Rose Garden",
+      "City": "London",
+      "Country": "United Kingdom",
+      "Website_URL": "https://www.royalparks.org.uk/visit/parks/hyde-park",
+      "checked_calendar_url": "https://www.royalparks.org.uk/visit/parks/hyde-park",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "january_findings": "Hyde Park official Royal Parks visitor page contains public park amenities and general organised events, not specific gay men's cruising party dates. Maintain cruising-area research separately; do not infer activity from an official park website."
+    },
+    {
+      "audit_index_zero_based": 675,
+      "Venue_ID": "DRS-CRU-02",
+      "Name": "Pickup Men's Club",
+      "City": "Dresden",
+      "Country": "Germany",
+      "Website_URL": "https://www.pickupdresden.de/",
+      "checked_calendar_url": "https://www.pickupdresden.de/partys/",
+      "january_2027_check_status": "checked_recurring_schedule_only",
+      "january_findings": "Pickup Men's Club Dresden official site confirms daily late-night opening and describes an underwear cruising party and Pup Play, but the party page provides no individual January 2027 dates. Recurrence cannot be assigned automatically."
+    },
+    {
+      "audit_index_zero_based": 676,
+      "Venue_ID": "DRS-BAR-02",
+      "Name": "Saxxim",
+      "City": "Dresden",
+      "Country": "Germany",
+      "Website_URL": "https://saxxim.de/",
+      "checked_calendar_url": "https://saxxim.de/",
+      "january_2027_check_status": "checked_access_failed",
+      "january_findings": "Saxxim Dresden official URL returned a 502 error; no individually dated January 2027 eligible men's darkroom event could be established."
+    },
+    {
+      "audit_index_zero_based": 677,
+      "Venue_ID": "DRS-BAR-03",
+      "Name": "Valentino",
+      "City": "Dresden",
+      "Country": "Germany",
+      "Website_URL": "https://www.valentino-dresden.de/",
+      "checked_calendar_url": "https://www.valentino-dresden.de/",
+      "january_2027_check_status": "checked_no_eligible_january_dates",
+      "january_findings": "Valentino Dresden official site announces Tuntenball 6 March 2027 and warm-up at Valentino 5 March 2027, outside January; general gay café not a confirmed men's darkroom venue."
+    },
+    {
+      "audit_index_zero_based": 678,
+      "Venue_ID": "ATH-BAR-03",
+      "Name": "Del Sol Café",
+      "City": "Athens",
+      "Country": "Greece",
+      "Website_URL": "https://delsolcafe.gr/",
+      "checked_calendar_url": "https://delsolcafe.gr/",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "january_findings": "Official Del Sol Café Athens page provides gay café contact and social links but no event calendar or individually dated January 2027 men's cruising event."
+    },
+    {
+      "audit_index_zero_based": 679,
+      "Venue_ID": "ATH-BAR-02",
+      "Name": "Rooster",
+      "City": "Athens",
+      "Country": "Greece",
+      "Website_URL": "https://www.roostercafe.gr/",
+      "checked_calendar_url": "https://www.roostercafe.gr/",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "january_findings": "Official Rooster Athens site is a café/restaurant with all-day food, music and art displays; no men-only darkroom party calendar or January 2027 date."
+    },
+    {
+      "audit_index_zero_based": 686,
+      "Venue_ID": "LON-BAR-01",
+      "Name": "Eagle London",
+      "City": "London",
+      "Country": "United Kingdom",
+      "Website_URL": "https://www.eaglelondon.com/",
+      "checked_calendar_url": "https://www.eaglelondon.com/",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Official Eagle London homepage publishes recurring nightlife brands and event listings from August 2026 on the accessible version, not dated January 2027 men-only darkroom parties. Do not extrapolate Bear Bash or other weekly programmes."
+    },
+    {
+      "audit_index_zero_based": 687,
+      "Venue_ID": "CYP-NIC-COM-01",
+      "Name": "Accept – LGBTI Cyprus",
+      "City": "Nicosia",
+      "Country": "Cyprus",
+      "Website_URL": "https://accept.cy/",
+      "checked_calendar_url": "https://accept.cy/",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "january_findings": "Official Accept LGBTI Cyprus website resolves to /home/ and describes community rights, support and projects; it is not a men-only darkroom organiser calendar, and no January 2027 eligible date is listed."
+    },
+    {
+      "audit_index_zero_based": 688,
+      "Venue_ID": "CYP-NIC-PAR-01",
+      "Name": "Queer Wave",
+      "City": "Nicosia",
+      "Country": "Cyprus",
+      "Website_URL": "https://queerwave.com/",
+      "checked_calendar_url": "https://queerwave.com/",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "january_findings": "Official Queer Wave Cyprus is an inclusive queer film festival; its programme says Coming Soon and archives prior years, with no January 2027 male-only darkroom party."
+    },
+    {
+      "audit_index_zero_based": 689,
+      "Venue_ID": "ISR-TLV-BAR-03",
+      "Name": "Callas TLV",
+      "City": "Tel Aviv",
+      "Country": "Israel",
+      "Website_URL": "https://www.callastlv.com/",
+      "checked_calendar_url": "https://www.callastlv.com/",
+      "january_2027_check_status": "checked_access_failed",
+      "january_findings": "Official Callas TLV page timed out in web retrieval; no confirmed men-only January 2027 darkroom date available through this source."
+    },
+    {
+      "audit_index_zero_based": 692,
+      "Venue_ID": "ISR-TLV-PAR-02",
+      "Name": "MUSCLES TLV",
+      "City": "Tel Aviv",
+      "Country": "Israel",
+      "Website_URL": "https://chillz.com/en/lu1sCHcXH9",
+      "checked_calendar_url": "https://chillz.com/en/lu1sCHcXH9",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Official MUSCLES TLV ticket organiser profile lists upcoming August/September 2026 fetish parties and earlier dates including Saturday 10 January 2026 (not 2027). No January 2027 confirmed date."
+    },
+    {
+      "audit_index_zero_based": 693,
+      "Venue_ID": "ISR-TLV-PAR-03",
+      "Name": "SCHWARZE",
+      "City": "Tel Aviv",
+      "Country": "Israel",
+      "Website_URL": "https://chillz.com/en/SCHWARZE",
+      "checked_calendar_url": "https://chillz.com/en/SCHWARZE",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Official SCHWARZE ticket profile identifies men-only fetish events but displays a 14 August 2026 upcoming event and older 2026 dates, with no January 2027 listing."
+    },
+    {
+      "audit_index_zero_based": 695,
+      "Venue_ID": "ISR-TLV-SAU-02",
+      "Name": "Sauna Club Tel Aviv",
+      "City": "Tel Aviv",
+      "Country": "Israel",
+      "Website_URL": "https://saunatlv.com/",
+      "checked_calendar_url": "https://chillz.com/en/Sauna-Club-TLV",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Sauna Club Tel Aviv official website confirms men-only sauna with event ticket calendar. Linked Chillz organiser schedule publishes dated July 2026 sessions, no January 2027 confirmed date."
+    },
+    {
+      "audit_index_zero_based": 696,
+      "Venue_ID": "ISR-TLV-COM-01",
+      "Name": "Tel Aviv LGBTQ Center",
+      "City": "Tel Aviv",
+      "Country": "Israel",
+      "Website_URL": "https://www.lgbtqcenter.org.il/",
+      "checked_calendar_url": "https://www.lgbtqcenter.org.il/",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "january_findings": "Official Tel Aviv LGBTQ Center homepage provides community services, clinic and Pride information but no January 2027 specifically men-only darkroom event; separate listing from Pride shares the same organisation."
+    },
+    {
+      "audit_index_zero_based": 697,
+      "Venue_ID": "ISR-TLV-PAR-01",
+      "Name": "Havruta Party",
+      "City": "Tel Aviv / Jerusalem",
+      "Country": "Israel",
+      "Website_URL": "https://havruta.org.il/",
+      "checked_calendar_url": "https://havruta.org.il/category/app_homepage2-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D/",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Havruta official national activity calendar presents LGBTQ religious/community meetings dated primarily June–August 2026; no independently dated January 2027 male-only darkroom party. Community parties are not assumed cruise-focused."
+    },
+    {
+      "audit_index_zero_based": 698,
+      "Venue_ID": "TUR-IST-CLB-04",
+      "Name": "Cheeky Club",
+      "City": "Istanbul",
+      "Country": "Turkey",
+      "Website_URL": "https://cheekyclub.eatbu.com/",
+      "checked_calendar_url": "https://cheekyclub.eatbu.com/",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "january_findings": "Official Cheeky Club Istanbul restaurant/bar page lists location and amenities, no event programme or January 2027 men-only darkroom event."
+    }
+  ]
+}
