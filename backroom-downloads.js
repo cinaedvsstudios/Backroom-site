@@ -111,6 +111,36 @@
     return date && !Number.isNaN(date.getTime()) ? date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).toUpperCase() : clean(raw) || 'DATE TBC';
   }
 
+  // Country comes from the event, or from its linked venue when omitted.
+  // Regional-indicator pairs produce the country flag emoji on the canvas.
+  const STORY_COUNTRY_CODES = Object.freeze({
+    'albania':'AL','andorra':'AD','armenia':'AM','austria':'AT','azerbaijan':'AZ',
+    'belarus':'BY','belgium':'BE','bosnia and herzegovina':'BA','bosnia':'BA',
+    'bulgaria':'BG','croatia':'HR','cyprus':'CY','czechia':'CZ','czech republic':'CZ',
+    'denmark':'DK','estonia':'EE','finland':'FI','france':'FR','georgia':'GE',
+    'germany':'DE','greece':'GR','hungary':'HU','iceland':'IS','ireland':'IE',
+    'italy':'IT','kazakhstan':'KZ','kosovo':'XK','latvia':'LV','liechtenstein':'LI',
+    'lithuania':'LT','luxembourg':'LU','malta':'MT','moldova':'MD','monaco':'MC',
+    'montenegro':'ME','netherlands':'NL','holland':'NL','north macedonia':'MK',
+    'macedonia':'MK','norway':'NO','poland':'PL','portugal':'PT','romania':'RO',
+    'russia':'RU','san marino':'SM','serbia':'RS','slovakia':'SK','slovenia':'SI',
+    'spain':'ES','sweden':'SE','switzerland':'CH','turkey':'TR','turkiye':'TR',
+    'ukraine':'UA','united kingdom':'GB','great britain':'GB','britain':'GB',
+    'england':'GB','scotland':'GB','wales':'GB','northern ireland':'GB',
+    'vatican city':'VA','vatican':'VA','holy see':'VA',
+    'united states':'US','united states of america':'US','usa':'US',
+    'australia':'AU','canada':'CA','new zealand':'NZ','israel':'IL','morocco':'MA',
+    'lebanon':'LB','argentina':'AR','brazil':'BR','mexico':'MX','japan':'JP',
+    'south korea':'KR','republic of korea':'KR','thailand':'TH'
+  });
+  function storyCountryFlag(country) {
+    const name = clean(country).normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/^the\s+/, '').replace(/\s+/g, ' ').trim();
+    const code = STORY_COUNTRY_CODES[name] || (/^[a-z]{2}$/.test(name) ? name.toUpperCase() : '');
+    if (!/^[A-Z]{2}$/.test(code)) return '';
+    return [...code].map(letter => String.fromCodePoint(0x1F1E6 + letter.charCodeAt(0) - 65)).join('');
+  }
+
   // Only these generic images can be chosen using the Story Card image cycle.
   // Special-purpose venue placeholders (08–14) are intentionally excluded.
   const STORY_GENERIC_IMAGES = Object.freeze([
@@ -201,9 +231,11 @@
       ? 1195 + Math.max(0, (182 - titleLines.length * titleSize * 1.08) / 2)
       : 1125 + Math.max(0, (225 - titleLines.length * titleSize * 1.08) / 2);
     const titleBottom = centerLines(ctx, title, titleTop, 820, titleSize, C.red, 600, 2);
+    const city = clean(event.City || venue?.City);
+    const flag = storyCountryFlag(event.Country) || storyCountryFlag(venue?.Country);
     const location = [
       venue?.Name || event.Venue_Name || event.Venue,
-      event.City || venue?.City
+      city ? city + (flag ? ' ' + flag : '') : ''
     ].filter(Boolean).join(' / ');
     centerLines(
       ctx, '📍 ' + location,
@@ -305,7 +337,7 @@
       const toolbar = document.createElement('div');
       toolbar.setAttribute('role', 'toolbar');
       toolbar.setAttribute('aria-label', 'Story Card image controls');
-      toolbar.style.cssText = 'display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;margin-top:12px;';
+      toolbar.style.cssText = 'display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin-top:12px;';
       function toolButton(label, tooltip) {
         const control = document.createElement('button');
         control.type = 'button';
@@ -313,7 +345,7 @@
         control.textContent = label;
         control.title = tooltip;
         control.setAttribute('aria-label', tooltip);
-        control.style.cssText = 'flex:0 0 auto;min-width:34px;min-height:38px;padding:6px 9px;font-size:0.88rem;line-height:1.15;white-space:nowrap;';
+        control.style.cssText = 'box-sizing:border-box;width:100%;min-width:0;min-height:36px;padding:6px 7px;font-size:0.88rem;line-height:1.15;white-space:nowrap;';
         return control;
       }
       const cycleButton = toolButton('↻ Images', 'Cycle through generic placeholder images');
@@ -321,6 +353,11 @@
       const moveButton = toolButton('✥ Move', 'Move the selected photo');
       const minusButton = toolButton('−', 'Zoom out');
       const plusButton = toolButton('+', 'Zoom in');
+      cycleButton.style.gridColumn = 'span 3';
+      ownButton.style.gridColumn = 'span 3';
+      moveButton.style.gridColumn = 'span 2';
+      minusButton.style.gridColumn = 'span 2';
+      plusButton.style.gridColumn = 'span 2';
       toolbar.append(cycleButton, ownButton, moveButton, minusButton, plusButton);
 
       const actions = document.createElement('div');
