@@ -85,23 +85,35 @@ function renderCompact(rows){
   const selected=selectionSet(),field=idField();
   const html=current.map(row=>{
     const id=String(row[field]??'');
+    const eventMode=currentMode==='events';
     const name=String(row.Name||row.Event_Name||id);
+    const venueName=eventMode?String(row.Venue_Name||row.Venue_ID||'Venue unknown').trim():'';
+    const title=eventMode?'<strong>'+esc(name)+'</strong><span class="br-p1-at-venue">@ '+esc(venueName)+'</span>':'<strong>'+esc(name)+'</strong>';
     const status=String(row.Status||'Unknown');
     const location=(row.Country?flagHTML(row.Country)+' ':'')+esc(row.City||'');
     const category=currentMode==='events'?String(row.Venue_ID||'No linked venue'):String(row.Category||'');
     const date=currentMode==='events'?String(row.Event_Date||''):String(row.Last_Updated||'').slice(0,10);
     const times=currentMode==='events'?[row.Event_Start_Time,row.Event_End_Time].filter(Boolean).join('–'):'';
-    const tags=String(row.Vibe_Tags||'').split(',').map(x=>x.trim()).filter(Boolean).slice(0,4).join(' · ');
+    const tags=(Array.isArray(row.Vibe_Tags)?row.Vibe_Tags.join(','):String(row.Vibe_Tags||'')).split(',').map(x=>x.trim()).filter(Boolean).slice(0,4).join(' · ');
+    const eventLink=id?'index.html#event='+encodeURIComponent(id):'';
+    const venueID=String(row.Venue_ID||'').trim();
+    const venueLink=venueID?'index.html#venue='+encodeURIComponent(venueID):'';
+    const publicLinks=eventMode?'<td class="br-p1-public-links">'+
+      (eventLink?'<a class="br-p1-public-link" href="'+esc(eventLink)+'" target="_blank" rel="noopener noreferrer" title="Open event on Backroom" aria-label="Open event '+esc(name)+' on Backroom in new tab" onmousedown="event.stopPropagation()" onclick="event.stopPropagation()">🎟️</a>':'<span class="br-p1-public-disabled" title="Event ID missing">🎟️</span>')+
+      (venueLink?'<a class="br-p1-public-link" href="'+esc(venueLink)+'" target="_blank" rel="noopener noreferrer" title="Open venue: '+esc(venueName)+'" aria-label="Open venue '+esc(venueName)+' on Backroom in new tab" onmousedown="event.stopPropagation()" onclick="event.stopPropagation()">📍</a>':'<span class="br-p1-public-disabled" title="No linked venue">📍</span>')+
+      '</td>':'';
     return '<tr data-id="'+esc(id)+'" class="br-p1-row" onmousedown="selectAdminRecord(this.dataset.id)">'+
       '<td class="br-p1-checkbox"><input type="checkbox" aria-label="Select '+esc(id)+'" data-compact-select="'+esc(id)+'" '+(selected.has(id)?'checked':'')+'></td>'+
-      '<td><div class="br-p1-row-top"><strong>'+esc(name)+'</strong><span class="br-p1-status '+(status.toLowerCase()==='live'?'br-p1-live':'br-p1-alert')+'">'+esc(status)+'</span></div>'+
+      '<td><div class="br-p1-row-top">'+title+'<span class="br-p1-status '+(status.toLowerCase()==='live'?'br-p1-live':'br-p1-alert')+'">'+esc(status)+'</span></div>'+
       '<div class="br-p1-row-meta">'+[esc(id),location,esc(category),esc(date),esc(times)].filter(Boolean).join(' · ')+'</div></td>'+
+      publicLinks+
       '<td class="br-p1-tags">'+(tags?esc(tags):'<span class="br-p1-muted">No tags</span>')+'</td></tr>';
   }).join('');
   const pages=Math.max(1,Math.ceil(compact.rows.length/compact.size));
   updateSelectionToolbar();
-  return '<table class="br-p1-compact-table"><thead><tr><th style="width:46px">✓</th><th>Record</th><th>Tags</th></tr></thead><tbody>'+
-    (html||'<tr><td colspan="3" class="br-p1-muted">No matching records. Adjust the filters to see more.</td></tr>')+
+  const eventMode=currentMode==='events';
+  return '<table class="br-p1-compact-table'+(eventMode?' br-p1-event-table':'')+'"><thead><tr><th style="width:46px">✓</th><th>Record</th>'+(eventMode?'<th class="br-p1-public-header">Open</th>':'')+'<th>Tags</th></tr></thead><tbody>'+
+    (html||'<tr><td colspan="'+(eventMode?'4':'3')+'" class="br-p1-muted">No matching records. Adjust the filters to see more.</td></tr>')+
     '</tbody></table><div class="br-p1-pagination"><button class="btn secondary-btn pill-btn" data-compact-page="-1" '+(compact.page===1?'disabled':'')+'>Previous</button>'+
     '<span>'+fmt(compact.rows.length)+' records · Page '+compact.page+' of '+pages+'</span>'+
     '<button class="btn secondary-btn pill-btn" data-compact-page="1" '+(compact.page>=pages?'disabled':'')+'>Next</button></div>';
