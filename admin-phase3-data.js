@@ -22,7 +22,7 @@ function library(){
  }
  return{byKey,errors,add,all:()=>[...byKey.values()],size:()=>byKey.size};
 }
-function urlsFrom(v){const s=clean(v);if(!s||s.length>120000)return[];return uniq([...s.matchAll(/https?:\/\/[^\s<>"'|]+/gi)].map(m=>m[0].replace(/[),;\]}]+$/,'')).filter(validURL))}
+function urlsFrom(v){const s=clean(v);if(!s||s.length>120000)return[];const separated=s.replace(/[|,;](?=https?:\/\/)/gi,' ');return uniq([...separated.matchAll(/https?:\/\/[^\s<>"'|]+/gi)].map(m=>m[0].replace(/[),;\]}]+$/,'')).filter(validURL))}
 function ingest(lib,data,origin,workflow='all'){
  const stats={origin,objects:0,occurrences:0,newUrls:0};let nodes=0;
  function walk(v,ctx={},field='',depth=0){
