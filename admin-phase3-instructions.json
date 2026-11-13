@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "created": "2026-11-13",
+  "description": "Editable current research instructions. This is a consolidated implementation of known Backroom rules, NOT a verbatim archival copy of earlier prompts.",
+  "instructions": [
+    {
+      "id": "EVENT_DISCOVERY",
+      "title": "📅 Event Discovery",
+      "workflow": "events",
+      "source": "Current consolidated Backroom instructions (reconstructed from P1 and repository documents; original historical prompts may be imported)",
+      "editable": true,
+      "body": "Find NEW qualifying gay men-only events, parties and festivals within the supplied YYYY-MM-DD date window. Prioritise one-night and date-specific events, then recurring confirmed editions. Confirm the date, venue and men-only/darkroom criteria from official organisers, venue calendars, ticket pages or reliable dated source evidence. Use ISO dates and 24-hour HH:MM. Match Venue_ID to an existing venue whenever possible; do not invent ID/linkage for unmatched venues. Dated events should remain separate from a general venue/party parent. Recurrence_Type/Day/Until should only be filled where the recurrence is evidenced, and projected dates must not masquerade as official dated confirmations. Include supported dress code, admission and time-sensitive ticket conditions in Event_Description. If both exist, preserve ticket details as 'Tickets:' then 'Approx. price:'; never invent price amounts. Preserve all existing events and statuses. Output new candidates and conflicts separately."
+    },
+    {
+      "id": "EVENT_UPDATES",
+      "title": "📅 Event Updates",
+      "workflow": "events",
+      "source": "Current consolidated Backroom instructions (reconstructed from P1 and repository documents; original historical prompts may be imported)",
+      "editable": true,
+      "body": "Review supplied Event_ID values against current venue/organiser pages and exact record-linked URLs. Confirm upcoming edition, date, start/end times, cancellation, postponement, ticket conditions, men-only eligibility, darkroom access and recurrence. Preserve original Event_ID, Venue_ID, Event_Name and optional fields unless reliable evidence requires a correction. Do not recycle an old past event date or assume a weekly event repeats automatically. Closed/cancelled/held/flagged items must remain traceable rather than being silently discarded. Keep previous values and a source-backed suggested correction; update Last_Updated only on actual changes. Return unchanged and needs-verification counts."
+    },
+    {
+      "id": "VENUE_DISCOVERY",
+      "title": "📍 Venue Discovery",
+      "workflow": "venues",
+      "source": "Current consolidated Backroom instructions (reconstructed from P1 and repository documents; original historical prompts may be imported)",
+      "editable": true,
+      "body": "Find new fixed-location gay male darkroom venues, saunas, cruising-focused bars/clubs, gay male sex cinemas and eligible fetish spaces for the selected countries and cities. Verify a real current venue and actual men-only access/darkroom or comparable play features rather than inferring from a generic gay label. Check official homepage, verified socials, ticket/booking page, maps and specialist directories. Match existing Venue_ID by name/alternate name/address before proposing additions; preserve distinct sessions for mixed-use places in dated events where appropriate. Research accurate category, address, transport, opening days/hours and important restrictions, features, official/Instagram/Facebook/source links, tags, descriptions and ratings only if evidenced. Do not invent coordinates, ages, scores, opening hours or prices; leave unsupported fields blank or unchanged."
+    },
+    {
+      "id": "VENUE_UPDATES",
+      "title": "📍 Venue Updates",
+      "workflow": "venues",
+      "source": "Current consolidated Backroom instructions (reconstructed from P1 and repository documents; original historical prompts may be imported)",
+      "editable": true,
+      "body": "Review existing selected Venue_ID records for changes in business status, men-only eligibility, cruising/darkroom features, official URL and social links, hours, contact/address, entrance conditions, tags and description quality. Use existing source links first. Verify conflicting sources independently and note what cannot be checked. Match venue identity and preserve all production JSON fields including unknown optional fields and existing ratings unless a documented update justifies change. Do not delete or downgrade a record solely because of an inaccessible website, outdated directory listing or missing map listing. Separate actual edits from research suggestions; keep held/closed/flagged history and source evidence."
+    },
+    {
+      "id": "CRUISING_UPDATES",
+      "title": "🗺️ Cruising Area Updates",
+      "workflow": "cruising",
+      "source": "Current consolidated Backroom instructions (reconstructed from P1 and repository documents; original historical prompts may be imported)",
+      "editable": true,
+      "body": "Zone 8: research PUBLIC-space cruising areas only (parks, beaches, forests, public toilets, promenades, rest areas, parking areas). Exclude commercial venues, private homes, event sessions and hotels. Use the normal Backroom venue schema: Category = 'Cruising Area', Feature_Cruise_Focused = true and Vibe_Tags contains 'Cruising'. Match existing Venue_ID and preserve all research leads without interpreting old directory pages as current activity. Compare source dates and access rules, availability, seasonality, safety and public access; when newest genuine public activity evidence is older than 12 months or undated, retain Hold/Flag pending review. Last_Public_Confirmation must be the newest dated PUBLIC activity evidence; Last_Checked is review time, not proof of activity. Avoid publishing secluded micro-locations, hidden paths, detailed routes or identities; use broad location/entry points only. Preserve source URLs, source-specific report dates, restrictions and uncertainty. Scrape Builder input may link to the consolidated cruising URL registry, but a link is not independent verification."
+    },
+    {
+      "id": "WORLDWIDE_ZONES",
+      "title": "🌍 Geographic Zones & Coverage",
+      "workflow": "all",
+      "source": "Current consolidated Backroom instructions (reconstructed from P1 and repository documents; original historical prompts may be imported)",
+      "editable": true,
+      "body": "Zone 0: Germany. Zone 1: France, Belgium, Netherlands and Luxembourg (Benelux). Zone 2: UK and Ireland. Zone 3: Spain, Portugal and island destinations (Ibiza, Maspalomas, Sitges, Torremolinos). Zone 4: Italy, Switzerland, Austria, Greece, Czechia, Hungary and neighbouring major Central/Mediterranean destinations. Zone 5: Poland, Denmark, Sweden, Finland, Estonia, Latvia, Lithuania. Zone 6: other/unassigned or lower-frequency destinations, cross-border touring party parent brands. Zone 8: public-space cruising areas only. No Zone 7. Preserve existing zone assignments if already established.\nUse the editable world city registry. Include capitals, secondary cities, islands, resorts and major tourist destinations even when small, including Ibiza, Venice, Sitges, Torremolinos, Mykonos and Hvar. Do not use population alone to eliminate a destination. Preserve city names/aliases from sources while normalising carefully. Assign fixed venues to their physical location, and locate dated editions in the actual host city. Put travelling party parent brands in Zone 6 when they have no fixed venue, with Country='Europe' or 'International' and verified host cities only; never fabricate a permanent address/coordinates. Split large selections into explicit manageable batches with their own city/venue membership, and make the source/research status readable. Zero current Backroom entries does not mean zero real venues."
+    },
+    {
+      "id": "COMMON_RULES",
+      "title": "📜 Common Research & Output Rules",
+      "workflow": "all",
+      "source": "Current consolidated Backroom instructions (reconstructed from P1 and repository documents; original historical prompts may be imported)",
+      "editable": true,
+      "body": "BACKROOM — UNIVERSAL EDITORIAL AND DATA RULES\n- Research men-only gay male darkroom/cruising venues and eligible men-only darkroom parties. Exclude mixed, women-only, FLINTA-only, straight venues and events unless a separate qualifying men-only darkroom session is explicitly confirmed. For Zone 8 use the separate public-area rules.\n- Verify venue/event identity, current status and dates against official venue/organiser pages first, then dated public social/ticket evidence, then specialist directories. Keep exact source URL, checked date, publication/evidence date and uncertainty. A directory listing is a lead, not automatic proof of opening or current activity.\n- Check existing supplied records FIRST. Match permanent Venue_ID and Event_ID, do not rename or manufacture IDs, do not erase unfamiliar production fields, and distinguish add/update/unchanged/hold. Candidate IDs can be left blank/pending review.\n- Preserve existing data where no reliable correction exists; do not automatically delete a closed, historic, held, flagged, cancelled or previously researched record. A failure to load a URL is not evidence that a place closed. Respect provided exclusion and hold lists.\n- Use original, natural descriptions as if advising a friend why to go (or not): do not copy directory descriptions verbatim, and do not describe the writing as scraped or extrapolated. Avoid unsupported claims about prices, popularity, darkrooms, ratings, demographics or amenities.\n- Preserve exact useful URLs, including page paths, query strings and anchors; do not collapse specific links into a generic homepage. Distinguish social, official, tickets, maps, directory, archived and user-confirmed sources. Treat user-supplied public knowledge carefully and mark its basis.\n- Output JSON matching the current production schemas from the supplied records: venue/cruising entries use listings.json and Category = 'Cruising Area' for Zone 8; dated events use events.json linked to Venue_ID. Keep Last_Updated only when a record actually changes; retain unsupported optional fields untouched.\n- A prepared research packet is NOT approval to publish. Return candidate changes with sources and evidence for review, not unverified additions silently included in production."
+    }
+  ]
+}
