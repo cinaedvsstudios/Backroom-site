@@ -18,7 +18,7 @@
       "current_site_cruising_listings": 486,
       "auxiliary_manifest": 162,
       "reference_pass": 50,
-      "best_direct": 721,
+      "best_direct": 760,
       "best_index": 875,
       "no_best_url": 0
     },
@@ -27,9 +27,9 @@
     "group_A_master_sha": "13e14c501fca766a0f62e9b7a265d09ca484dfb6",
     "live_listings_sha": "f0a8dc88ad1440d0cb0a427e2914f13935077f52",
     "enrichment_B_progress": {
-      "batches_completed_through": 13,
+      "batches_completed_through": 28,
       "batches_total": 59,
-      "records_enriched_this_pass": 65,
+      "records_enriched_this_pass": 75,
       "errors": []
     }
   },
@@ -10329,15 +10329,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "single_source_needs_recent_verification",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/alakiventie_2_myllypuro_kvarnbacken_helsinki_finlandia_3655",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.hel.fi/fi/kaupunkiymparisto-ja-liikenne/kaupunkisuunnittelu-ja-rakentaminen/uutta-helsinkia-rakentamassa/myllypuro",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://moovitapp.com/index/fi/julkinen_liikenne-Alakiventie-Helsinki-stop_3831132-1084",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -10348,11 +10363,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Myllypuro green space in the original listing is a small wooded strip between Ring I (Kehä I) and the metro line, reached from the Alakiventie/Areena Center side. Its original page gives these directions but has no visitor comments; present-day encounters cannot be confirmed.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0364_0368.json"
       ],
       "original_index": 364,
       "original_section": "B"
@@ -10365,15 +10381,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "crosssource_listed_recent_activity_unverified",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/central_park_mantymaki_helsinki_helsinki_finlandia_2898",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/helsinki/areas/3642-mantymaki-park/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.cruisinggays.com/helsinki/c/areas/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -10384,11 +10415,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Mäntymäki park near central Helsinki appears both in the original directory and CruisingGays. The directories associate it with warm-season evenings or after dark, but the claims are undated. Another partly garbled CruisingGays Mäntymäki entry may represent the same park and needs deduplication.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0364_0368.json"
       ],
       "original_index": 366,
       "original_section": "B"
@@ -10429,15 +10461,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "historic_activity_current_uncertain",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/kamppi_shopping_centre_wc_helsinki_finland_94134",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.kamppihelsinki.fi/en/about",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.kamppihelsinki.fi/en/opening-hours",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -10448,11 +10495,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Kamppi's fifth-floor restaurant-area toilet is the part of the shopping centre identified by the original cruising guide, which describes its urinal and cubicle layout. The centre itself confirms that this restroom exists. Earlier 2025 comments mention activity, but the more recent March 2026 message asks whether encounters still happen, so current activity is uncertain.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0359_0363.json"
       ],
       "original_index": 361,
       "original_section": "B"
@@ -10590,15 +10638,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_needs_recent_verification",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/paavali_church_helsinki_finland_65887",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.helsinginseurakunnat.fi/yhteystietorekisteri/paikat/paavalinkirkko.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.myhelsinki.fi/fi/places/paavalinkirkko/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -10609,11 +10672,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Paavali / St Paul's Church grounds in Helsinki appear as a park-category entry on the cruising directory. The church and adjacent square are real, but the directory's May 2026 comment does not establish actual cruising, and the precise area is unspecified. Church services and visitors use the site.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0359_0363.json"
       ],
       "original_index": 363,
       "original_section": "B"
@@ -10674,15 +10738,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "crosssource_listed_recent_activity_unverified",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/park_laakso_helsinki_helsinki_finlandia_2897",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/helsinki/areas/13435-laakso-central-park/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.gaymapper.com/gay-cruising-spot/helsinki/park-laakso",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -10693,11 +10772,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Laakso's woodland beside the hospital and Central Park has a long-standing cruising reputation across three directories. The original site describes a summer crowd, and another listing refers to trails north of the hospital. There are May 2026 comments, but none unambiguously confirms an actual recent encounter.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0359_0363.json"
       ],
       "original_index": 362,
       "original_section": "B"
@@ -10763,15 +10843,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "crosssource_listed_recent_activity_unverified",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/rest_area_porvoo_highway_helsinki_finland_9481",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/helsinki/areas/13199-car-cruising-in-porvoo-motorway/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -10782,11 +10872,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An older cruising directory describes a rest stop on the Porvoo-to-Helsinki motorway, while another lists a similarly named roadside area on the same route. Those references seem to describe the same or nearby stop, but its precise contemporary interchange and legal access need confirmation; the one dated comment is from before the research cutoff.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0364_0368.json"
       ],
       "original_index": 365,
       "original_section": "B"
@@ -10799,15 +10890,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "single_source_needs_recent_verification",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/tripla_toilets_helsinki_finland_129658",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://malloftripla.fi/en/opening-hours",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://malloftripla.fi/en/info-en",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -10818,11 +10924,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Mall of Tripla in Pasila is an active commercial shopping and transport complex. Its washrooms appear in the original cruising directory, with a May 2026 message asking whether anyone is there. That is a dated inquiry, not proof that encounters happened; the exact toilets and floor require verification.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0364_0368.json"
       ],
       "original_index": 367,
       "original_section": "B"
@@ -10893,15 +11000,35 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "archive_city_conflict_needs_geolocation",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/oulainen_swimming_spot_kalajoki_finland_93009",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.oulainen.fi/ulkoliikuntapaikat",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.oulainen.fi/kadut-ja-puistot",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.kalajoki.fi/en/city-administration/information-about-kalajoki",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -10912,11 +11039,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The original directory labels an 'Oulainen swimming spot' as being in Kalajoki, but Oulainen and Kalajoki are separate Finnish municipalities. Oulainen officially lists a swimming site at Kurjenranta on Piipsjärvi. It is not confirmed that this is the archived cruising spot, and the location should not be plotted as Kalajoki without further checking.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0364_0368.json"
       ],
       "original_index": 368,
       "original_section": "B"
@@ -10929,15 +11057,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "single_source_no_recent_verified_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/tolsan_liittyman_parkkis_kirkkonummi_finland_23620",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -10948,11 +11081,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The directory refers to a parking area near the Tolsa interchange in Kirkkonummi. 'Liittymän parkkis' is an interchange car park, but I could not establish which precise parking lot or whether encounters still occur there.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0369_0373.json"
       ],
       "original_index": 369,
       "original_section": "B"
@@ -10965,15 +11099,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "single_source_no_recent_verified_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/pohto_seaside_oulu_finlandia_4186",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.ouka.fi/en",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -10984,11 +11128,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Pohto/Toppilansaari name points toward Oulu's waterfront. The original directory lists a seaside nature-area candidate, but a precise location, access arrangement and any recent activity remain unverified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0369_0373.json"
       ],
       "original_index": 370,
       "original_section": "B"
@@ -11001,15 +11146,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/tampere/areas/23053-alasjarvi/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/tampere/c/areas/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.tampere.fi/en/sports-and-exercise/sports-and-exercise-facilities/beaches",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -11020,11 +11175,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Alasjärvi has a public swimming beach, wooded surroundings and a car park. The original cruising directory describes the forest paths as an older cruising area, particularly away from family bathers in summer. Tampere officially confirms the lake's beach, toilets and facilities, but there are no dated encounters substantiating current use.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0374_0378.json"
       ],
       "original_index": 377,
       "original_section": "B"
@@ -11037,15 +11193,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/tampere/areas/23051-etelapuisto-southern-park/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.tampere.fi/en/nature-and-environment/parks/etelapuisto-park",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.tampere.fi/en/current/2026/07/23/accessible-fishing-piers-planned-etelapuisto-kaukajarvi-and-suolijarvi",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -11056,11 +11222,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Eteläpuisto is a public lakeside park at the southern end of Hämeenpuisto in Tampere. A legacy cruising page identifies the park and nearby shore as an evening spot without recent reports. The city still maintains Eteläpuisto as a public recreation landscape and has ongoing park-accessibility plans.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0374_0378.json"
       ],
       "original_index": 378,
       "original_section": "B"
@@ -11116,15 +11283,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/tampere/areas/58898-tuomikallio/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/tampere/c/areas/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://keskustelu.suomi24.fi/t/19432085/tampereella-nakuilu?sort=newest",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://ekokumppanit.fi/en/news/share-your-views-on-the-kauppi-niihama-hiking-trails/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -11135,11 +11317,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Tuomikallio refers to a rocky area in the Kauppi forest reached from Biokatu/Tuomikalliolenki in Tampere. A long-standing cruising directory describes sunbathing on rock outcrops and cruising on adjoining woodland trails, while a June 2026 forum reply mentions the place in response to a naturism query. That reply establishes continuing name recognition, not an encounter.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0374_0378.json"
       ],
       "original_index": 376,
       "original_section": "B"
@@ -11152,15 +11335,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "single_source_no_recent_verified_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/paavonurmi_stadion_turku_finland_19517",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.turku.fi/en/places/paavo-nurmi-stadium",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.suomi.fi/palvelut/palvelupiste/paavo-nurmen-stadion-turun-kaupunki/da2eb775-d81c-4a9f-be08-0a95f3438e3e",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -11171,11 +11369,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Paavo Nurmi Stadium is a public athletics facility in Turku. The cruising directory lists it, and comments in February 2026 ask about the location of a toilet and possible contacts; those messages do not verify actual recent activity. The stadium is gated outside hours and the changing rooms close for winter.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0369_0373.json"
       ],
       "original_index": 371,
       "original_section": "B"
@@ -11231,15 +11430,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "possible_area_match_not_exact",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/sandviken87_vaasa_finland_8090",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.vaasa.fi/sv/bo-och-lev/fritid/parker-och-gronomraden/parker/sando/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.vaasa.fi/en/living/freetime/beaches/hietasaari-beach/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -11250,11 +11464,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The directory's 'Sandviken87' probably relates to the Sandviken/Sandö district of Vaasa, a public park and shore area. Vaasa confirms Sandö as a municipal recreation island with a beach, but the unexplained '87' suffix and precise spot remain unverified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0369_0373.json"
       ],
       "original_index": 372,
       "original_section": "B"
@@ -11267,15 +11482,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "legacy_brand_identity_unresolved",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/siwa_vaasa_finland_7103",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.kesko.fi/en/media/news-and-releases/stock-exchange-releases/2017/keskos-interim-report-for-the-period-1-january-to-30-september-2017-keskos-profitability-improved/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://yle.fi/a/7-1167743",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -11286,11 +11516,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Siwa listing in Vaasa is very likely a historical store-name reference: Finland's Siwa chain was converted or closed by 2017. The directory does not specify which former shop, so a contemporary location or public toilet cannot be validated.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0369_0373.json"
       ],
       "original_index": 373,
       "original_section": "B"
@@ -11303,15 +11534,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/leppakorven_levahdysalue_2_vantaa_finland_5525",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.doria.fi/bitstream/handle/10024/119852/SQ_Raskaan_liikenteen_taukopaikat_Uudenmaan_ELY-keskuksen_alueella_loppuraportti.pdf?isAllowed=y&sequence=2",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -11322,11 +11563,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Leppäkorpi II is a motorway rest area on Finland's highway 4 north of Vantaa. Public transport-road documentation describes paired Leppäkorpi facilities on opposite carriageways, but the numbered II side and present operating conditions require confirmation. No dated evidence of recent cruising was found.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0374_0378.json"
       ],
       "original_index": 374,
       "original_section": "B"
@@ -11339,15 +11581,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "insufficient_identity_keep_candidate",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/finland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/nice_gay_park_vantaa_finland_10375",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/finland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -11358,11 +11605,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "This vaguely named Vantaa park appears in an older cruising-directory index but does not specify a uniquely identifiable site. Until an address or reliable map reference is recovered it should not be plotted as a particular park or recommended as active.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0374_0378.json"
       ],
       "original_index": 375,
       "original_section": "B"
@@ -35740,15 +35988,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/caserme_rosse_bologna_italia_42230",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://musicommission.emiliaromagnacultura.it/luogo/parco-delle-caserme-rosse/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.comune.bologna.it/novita/comunicati-stampa/tram-allo-svincolo-6-della-tangenziale-riapre-lingresso-da-di-corticella-resta-chiusa-luscita-fino",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -35759,11 +36022,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Parco delle Caserme Rosse is a real green space by Via di Corticella in Bologna's Navile district, associated with former military buildings that now host civic and community uses. The cruising directory lists Caserme Rosse as a nature-area lead, but its entry has no dated report of activity. Tram-line construction changed road approaches in late 2025 and 2026; park presence does not imply unrestricted building acces",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0384_0388.json"
       ],
       "original_index": 384,
       "original_section": "B"
@@ -35776,15 +36040,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "recent_queries_only_no_verified_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/parcheggio_cinema_the_space_bologna_italia_75190",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.thespacecinema.it/cinema/bologna/al-cinema",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -35795,11 +36069,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Space Cinema on Viale Europa has a large free visitor car park and is operating in 2026. A cruising-directory entry for the car park attracted May 2026 messages looking for contacts and asking if it gets busy, but these are questions rather than observed on-site activity. The car park remains primarily a cinema customer facility.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0379_0383.json"
       ],
       "original_index": 381,
       "original_section": "B"
@@ -35855,15 +36130,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/viii_de_agosto_bologna_italia_379",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://opendata.comune.bologna.it/explore/dataset/bagni-pubblici/table/?flg=it-it",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -35874,11 +36159,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Parco della Montagnola is Bologna's established central historic park near Piazza VIII Agosto. The source page has eight older visitor comments, with the newest on its own detail page in August 2025, plus a November 2025 question in the Bologna index asking whether cruising happens there. Neither provides verified recent in-person activity. A June 2025 commenter warned of unsafe drug-dealing activity; treat as an unv",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0384_0388.json"
       ],
       "original_index": 385,
       "original_section": "B"
@@ -35934,15 +36220,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/parco_villa_angeletti_bologna_italia_18802",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://atti9.comune.bologna.it/webpub/wpub_ordtraf.nsf/dettaglio.xsp?SessionID=EOT7Q0XK66&action=openDocument&documentId=E2EE92CDA5EED0E9C1258EA0004DBDA4",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://opendata.comune.bologna.it/explore/dataset/lavori-pubblici/table/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -35953,11 +36249,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Parco di Villa Angeletti is a public green space in Bologna's Navile area beside the canal. Its source page claims low evening traffic and the possibility of parking and walking, but has zero visitor comments, so there is no dated cruising confirmation. Bologna has ordered temporary closures of the cycle/walking approach along Via Bovi Campeggi during maintenance, extended to 13 November 2026.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0384_0388.json"
       ],
       "original_index": 386,
       "original_section": "B"
@@ -36013,15 +36310,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/ponte_fiume_reno_a_borgo_panigale_bologna_italia_6009",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.comune.bologna.it/novita/comunicati-stampa/replica-del-comune-di-bologna-sul-rilievo-anac-relativo-ai-lavori-sul-pontelungo",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36032,11 +36339,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A bridge across the Reno river in the Borgo Panigale area appears as a source-listed meeting place. A May 2026 message asks whether anyone will be there that night, but does not confirm an encounter. Bologna's Pontelungo is a documented bridge in this district, but the exact bridge meant by the source has not yet been verified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0379_0383.json"
       ],
       "original_index": 383,
       "original_section": "B"
@@ -36094,24 +36402,28 @@
         "auxiliary_verification",
         "independent_reference_pass"
       ],
-      "research_stage": "hold_access_or_outdated",
+      "research_stage": "historic_source_current_road_closure",
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/bologna/areas/13207-via-della-manifattura/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "original_directory_historic_comment_2009"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         },
         {
           "url": "https://atti9.comune.bologna.it/webpub/wpub_ordtraf.nsf/dettaglio.xsp?action=openDocument&documentId=4A4A57DC8464136CC1258E1E0030580A",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.italiamappe.it/stradario/bologna/via-della-manifattura/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -36132,11 +36444,12 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Via della Manifattura in Bologna's Navile area is associated with older car-based cruising references on the stretch between Via Stalingrado and Via Ferrarese. An archived first-person comment dates to September 2009. A current city ordinance closes the street to through vehicle traffic from July 2026 until March 2028 for Technopolo works, making the old guidance unreliable.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
         "research/Archive/verification_manifest_2026-11-06.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/B/batch_0379_0383.json"
       ],
       "original_index": 379,
       "original_section": "B"
@@ -36192,15 +36505,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "recent_negative_activity_report_no_current_confirmation",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/via_felice_battaglia_parco_barone_rampante_bologna_italia_6008",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.comune.bologna.it/myportal/C_A944/api/content/download?id=623465b0937b7f009a7a6ea0",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/sch-viabilita-come-cambia-via-molinelli-battaglia-e5mfvnkf/via-felice-battaglia-limite-dei-20-allora",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36211,11 +36539,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Parco del Barone Rampante is a public neighborhood park beside Via Felice Battaglia, with nearby schools and residential access. The original cruising directory still lists the park, but its 30 May 2026 comment explicitly advises against visiting because there was no activity. This is recent negative evidence, not confirmation of an active location.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0379_0383.json"
       ],
       "original_index": 382,
       "original_section": "B"
@@ -36228,15 +36557,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/bologna/areas/13206-via-zanardi/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://turismoinpianura.cittametropolitana.bo.it/it/itinerari/pedalando-lungo-la-ciclovia-del-reno",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36247,11 +36581,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Along Via Zanardi, an older CruisingGays entry points toward riverbank trails near the Reno and the railway tracks by Villa Clara. The site's listing states it was last updated in 2011, and the exact access path or current use has not been checked. This is a historical lead, not a confirmed active cruising area.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0379_0383.json"
       ],
       "original_index": 380,
       "original_section": "B"
@@ -36264,15 +36599,35 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "access_sensitive_seasonal_resort_not_verified_cruising",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/pra_delle_torri_caorle_italien_69035",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.pradelletorri.it/en/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.pradelletorri.it/en/faq/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.pradelletorri.it/en/contacts/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36283,11 +36638,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Pra delle Torri in Caorle is an operating family-oriented camping and holiday village, not an open public cruising park. The original directory lists its name as an Other-type candidate, with no dated public encounter evidence. The operator confirms the 2026 season has ended and the 2027 season is scheduled for 21 April to 27 September, with reception-controlled visitor access.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0384_0388.json"
       ],
       "original_index": 387,
       "original_section": "B"
@@ -36300,15 +36656,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "exact_rest_area_unidentified",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/fornace_crocicchio_carisio_italia_56434",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://busmaps.com/en/italy/public_transit-stop-Carisio-Localita-Crocicchio-Sp3-6264115563807322451",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36319,11 +36685,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Fornace Crocicchio is an identifiable locality around Carisio's Via Torino / SP3 and the A4 motorway connection. The original directory places a rest-area candidate there but does not specify the exact parking bay, service area or facility. Existing bus-stop records support the place name, not present-day cruising.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0384_0388.json"
       ],
       "original_index": 388,
       "original_section": "B"
@@ -36336,15 +36703,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "generic_sports_field_hold",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/campo_sportivo_cassina_rizzardi_italia_106991",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.laprovinciadicomo.it/stories/premium/olgiate-e-bassa-comasca/lidea-costruire-una-palestra-a-cielo-aperto-o_3984008_11/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36355,11 +36732,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Cassina Rizzardi has a municipal sports ground near Via Fratelli Nava and other public sports spaces. The original cruising directory simply calls the place 'Campo Sportivo', without specifying which football pitch or changing rooms or any current evidence. A local October 2026 article confirms sports facilities in the town, not cruising.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0389_0393.json"
       ],
       "original_index": 389,
       "original_section": "B"
@@ -36372,15 +36750,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "unlocated_source_candidate",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/jack_danner_cavallino_treporti_italien_58950",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/pineta_cavallino_treporti_italy_21222",
+          "page_type": "direct_cruising_entry",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36391,11 +36779,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The original regional cruising directory contains a natural-area entry called 'Jack Danner' in Cavallino-Treporti, near the Punta Sabbioni pine wood. The name is too ambiguous to identify a specific park or public place; the original detail page could not be retrieved. Keep this as an unlocated source candidate, not a verified destination.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0394_0398.json"
       ],
       "original_index": 394,
       "original_section": "B"
@@ -36408,15 +36797,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "private_seasonal_property_access_review",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/marina_camping_cavallino_treporti_italien_105432",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.marinadivenezia.it/en/holidays/camping-cavallino.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.marinadivenezia.it/en.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36427,11 +36831,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Marina Camping is likely the Marina di Venezia camping resort at Punta Sabbioni, a family camping village at Via Montello 6. The source's name is abbreviated and does not establish exactly which spot inside or near the holiday park it means. The operator closed after its October 2026 season, so no present visitor access should be inferred.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0389_0393.json"
       ],
       "original_index": 391,
       "original_section": "B"
@@ -36445,19 +36850,23 @@
         "research_candidate",
         "auxiliary_verification"
       ],
-      "research_stage": "needs_more_verification",
+      "research_stage": "two_websites_identity_supported_recent_activity_unverified",
       "live_status": null,
       "best_url": "https://mobile.squirt.org/cruise/display/229818/detail",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
+          "url": "https://www.gays-cruising.com/en/cruising/pineta_cavallino_treporti_italy_21222",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
           "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
-          "page_type": "directory_or_city_page",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 2,
@@ -36478,10 +36887,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Pineta Punta Sabbioni candidate is a pine-wooded beach/dune-edge area near the Punta Sabbioni shore and the Marina di Venezia resort, not necessarily within the resort. Gays-Cruising and Squirt independently name the area. The Squirt account describes access behind the dog beach and adjacent dunes; the Gays-Cruising page contains historic August 2025 conversations and no on-page reports after the 2025-11-06 cutof",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/B/batch_0389_0393.json"
       ],
       "original_index": 392,
       "original_section": "B"
@@ -36532,15 +36942,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "private_seasonal_property_access_review",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/union_lido_waschhaus_wc_8_cavallino_treporti_italien_19217",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://mare.unionlido.com/de/unterbringungen/camping/stellplaetze-cavallino/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.ukcampsite.co.uk/sites/details.asp?revid=20062",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36551,11 +36976,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "'Union Lido Waschhaus WC 8' identifies a toilet/shower building within Union Lido Mare, a holiday camping complex at Via Fausta in Cavallino. The original directory inexplicably classifies it as a park; the establishment states sanitary blocks open and close by occupancy and publish individual seasonal hours. This is private guest infrastructure, with no verification of cruising and no basis for walk-in access.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0389_0393.json"
       ],
       "original_index": 390,
       "original_section": "B"
@@ -36568,15 +36994,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "possible_nearby_alias_identity_unresolved",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/wald_hinter_den_dunen_cavallino_treporti_italien_68286",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/pineta_cavallino_treporti_italy_21222",
+          "page_type": "direct_cruising_entry",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36587,11 +37023,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A second source spot labelled in German 'Wald Hinter den Dünen' translates to 'woodland behind the dunes' in Cavallino-Treporti. It is listed separately, around 2.3 km from the Pineta Punta Sabbioni location according to the original site's nearby list, so it must not be automatically merged. Precise dunes, property boundaries, and any recent cruising are unresolved.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0389_0393.json"
       ],
       "original_index": 393,
       "original_section": "B"
@@ -36647,15 +37084,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/spiaggia_del_mort_a_eraclea_eraclea_italy_11092",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.comune.eraclea.ve.it/novita/ordinanza-di-disciplina-delle-attivita-balneari-2026/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.noodista.com/en/locations/laguna-del-mort",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36666,11 +37118,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Spiaggia del Mort near Eraclea Mare is a sandy coastal area alongside Laguna del Mort and a protected dune/lagoon environment. The source page describes naturist use and adjacent woodland as an old cruising area. Its last visible individual comment was 10 August 2025, before the twelve-month cutoff. Contemporary beach regulations apply, and any nudism or trail access must respect signs and designated areas.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0394_0398.json"
       ],
       "original_index": 395,
       "original_section": "B"
@@ -36683,15 +37136,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/argingrosso_firenze_italia_35798",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.feelflorence.it/it/punti-di-interesse/parco-dellargingrosso",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.comune.firenze.it/novita/area-stampa/comunicati-stampa/argingrosso-di-tutti-di-piu-il-parco-che-non-ti-aspetti-0",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36702,11 +37165,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Argingrosso is a large public green corridor on the Arno's left bank in Florence's Isolotto district, across from Cascine. The old directory says users walk in the park or park nearby, but its only two comments are from April and June 2025 and describe interest or intention, not verified encounters. Florence held a major community/sports park event in May 2026; that proves active public recreation, not current cruisi",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0399_0403.json"
       ],
       "original_index": 400,
       "original_section": "B"
@@ -36719,15 +37183,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "commercial_or_transit_facility_no_verified_cruising",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/bagni_centro_commerciale_careggi_firenze_italia_44445",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://immobilicareggi.it/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36738,11 +37207,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Careggi's NIC commercial centre publishes a basement-level toilet facility among its shopping services. A cruising directory lists 'Bagni centro commerciale Careggi', but the original record does not establish whether it refers to these exact toilets. There are no verified recent encounter accounts; this is an ordinary retail and healthcare-related facility.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0399_0403.json"
       ],
       "original_index": 399,
       "original_section": "B"
@@ -36755,15 +37225,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "commercial_or_transit_facility_no_verified_cruising",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://stagixtemp.serviziallastrada.it/servizi-al-cittadino/parcheggi-non-custoditi/parcheggio-scambiatore-t2-guidoni",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.comune.firenze.it/novita/area-stampa/comunicati-stampa/sicurezza-stradale-arrivo-nuovi-semafori-e-marciapiedi",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36774,11 +37254,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Guidoni is a busy public transport interchange at Florence's T2 tram/bus node, with a separate paid, barrier-controlled car park on Viale XI Agosto. The directory lists 'Hub T2 Guidoni' as a cruising candidate without identifying a toilet, platform or car park section. The car park operator confirms 24-hour access for parking; that does not imply access to all transit facilities or any recent cruising activity.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0399_0403.json"
       ],
       "original_index": 403,
       "original_section": "B"
@@ -36791,13 +37272,12 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "identity_and_access_unresolved_keep_candidate",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/lago_di_peretola_firenze_italia_91608",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -36810,11 +37290,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Lago di Peretola is listed as a park-type cruising candidate on Florence's original directory. Available external searches did not establish a unique lake, legally accessible shore, or dated activity report corresponding to that name. The spot must stay unlocated pending a reliable map or exact archival description.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0399_0403.json"
       ],
       "original_index": 402,
       "original_section": "B"
@@ -36827,15 +37308,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "location_city_label_mismatch_parking_identity_review",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/parcheggio_della_motorizzazione_firenze_italy_39869",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.ilportaledellautomobilista.it/gms/dovesiamo/42",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36846,11 +37337,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The parking area attached to the Motorizzazione Civile transport licensing office is listed in the original cruising directory as an evening car-cruising candidate. Its four detail-page comments are dated 2024–June 2025 and are mainly contact requests. A June 2026 Florence city index comment asks if anyone will be there, but confirms no visit. The real transport office is at Via Santa Croce dell'Osmannoro 8/10 in Ses",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0394_0398.json"
       ],
       "original_index": 398,
       "original_section": "B"
@@ -36865,29 +37357,43 @@
         "auxiliary_verification",
         "independent_reference_pass"
       ],
-      "research_stage": "priority_for_listing_build",
+      "research_stage": "recent_specific_2026_user_reports_needs_independent_verification",
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/firenze/areas/77769-cascine-park-florence/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
+          "url": "https://www.gays-cruising.com/en/cruising/parco_delle_cascine_firenze_italia_20550",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
           "url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://prefettura.interno.gov.it/it/prefetture/firenze/comunicati-stampa/firenze-focus-sulla-sicurezza-nei-5-quartieri-citta",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.gayout.com/europe/italy/florence",
-          "page_type": "context_or_official_source",
-          "source_status": "independent_specialist_directory_2026"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.comune.firenze.it/vivere-il-comune/luoghi/parco-delle-cascine",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://prefettura.interno.gov.it/it/prefetture/firenze/comunicati-stampa/situazione-sicurezza-pubblica-firenze",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -36905,14 +37411,15 @@
           "url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy"
         }
       ],
-      "activity_since_2025_11_06_verified": false,
+      "activity_since_2025_11_06_verified": true,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Parco delle Cascine is a major public park on Florence's Arno, and two independently archived cruising directories mention it. CruisingGays points towards Via della Catena and the riverbank; Gays-Cruising has a separate park-side description. Unlike most unverified entries, multiple comments on 16 May 2026 describe an evening crowd and encounters lasting into the night, including one personal statement calling it a f",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
         "research/Archive/verification_manifest_2026-11-06.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/B/batch_0394_0398.json"
       ],
       "original_index": 396,
       "original_section": "B"
@@ -36973,15 +37480,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/firenze_novoli_nel_parco_firenze_italia_15901",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.comune.firenze.it/novita/area-stampa/comunicati-stampa/parco-di-san-donato-grazzini-italia-viva-sui-lavori-mancano",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -36992,11 +37509,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Parco San Donato in Novoli is a public family-and-neighborhood park in northern Florence. The original directory entry associates it with cruising, but its July 2025 visitor comment says the park actually closes around 20:30–21:00 rather than remaining open overnight. A June 2026 city council account confirms several park pathways and play areas had been fenced off awaiting repair. No recent cruising activity is corr",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0394_0398.json"
       ],
       "original_index": 397,
       "original_section": "B"
@@ -37047,15 +37565,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/torrente_mugnone_firenze_italia_74570",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.055firenze.it/art/243557/mugnone-nuove-segnalazioni-di-degrado-lungo-la-ciclabile-di-viale-redi",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://mobilita.comune.fi.it/tramvia/sistema_tramviario/linea2.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37066,11 +37594,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Torrente Mugnone is a long watercourse passing Florence's Novoli and San Jacopino neighborhoods. The original listing has no exact bridge, path, or bank segment. Residents reported litter and potential hazards along the Viale Redi and Ponte all'Asse cycling corridor in September 2026, but those are third-party local concerns and have no verified connection to cruising.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0399_0403.json"
       ],
       "original_index": 401,
       "original_section": "B"
@@ -37083,15 +37612,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "exact_woodlot_unresolved",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.komoot.com/it-it/highlight/3880355",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37102,11 +37636,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Boschetto di Lacchiarella is an archived small woodland cruising candidate south of Milan. A cycling directory also names Boschetto di Villamaggiore near Lacchiarella, but the two names have not been demonstrated to refer to the same exact spot. The original cruising index lacks a precise pin and no dated, recent encounter has been verified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0404_0408.json"
       ],
       "original_index": 404,
       "original_section": "B"
@@ -37119,15 +37654,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "tollgate_parking_identity_and_access_review",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.regione.veneto.it/article-detail?articleId=340597",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.infoviaggiando.it/code/14324",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.tribunatreviso.it/cronaca/a4-due-nuove-aree-di-sosta-178-park-prima-del-casello-cnem7l05",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37138,11 +37688,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "'Casello A4' at Meolo likely refers to the Meolo–Roncade motorway toll interchange. Veneto official information confirms the plaza, adjoining park-and-ride and SR89 junction. Separate motorway rest areas nearer Roncade cannot be assumed to be this listing. No precise subarea or recent sexual activity has been demonstrated.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0404_0408.json"
       ],
       "original_index": 405,
       "original_section": "B"
@@ -37155,15 +37706,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "station_facility_activity_not_verified",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/bagni_di_centrale_milano_italia_54161",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.yesmilano.it/de/node/3002",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.rfi.it/it/stazioni/milano-centrale.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37174,11 +37740,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Bagni di Centrale denotes public toilets in Milano Centrale main railway station. An indexed individual cruising page describes a fee around €1 and has 274 comments, but the latest comment text is unavailable without an adult login; dates and actual encounters cannot be validated. The city tourism authority independently confirms paid public toilets with turnstiles and accessible facilities on the mezzanine and track",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0404_0408.json"
       ],
       "original_index": 408,
       "original_section": "B"
@@ -37239,15 +37806,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "recent_platform_checkin_only_no_onsite_confirmation",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www2.comune.milano.it/web/palazzo-reale-milano/la-tua-visita/accessibilita",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.palazzorealemilano.it/web/palazzo-reale-milano/la-tua-visita/orari",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37258,11 +37835,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Palazzo Reale is a historic exhibition museum near Piazza del Duomo in Milan. Its official website confirms two toilets (ground floor and first floor) and museum hours. A Gays-Cruising index marked 'Bagni Palazzo Reale' as a July 6, 2026 check-in. A check-in is a platform interaction, not evidence of a physical encounter; exact bathroom access depends on museum/exhibition rules.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0409_0413.json"
       ],
       "original_index": 413,
       "original_section": "B"
@@ -37318,15 +37896,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retail_managed_property_no_activity_verification",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.merlatabloommilano.com/newsevents/nuovi-orari/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.merlatabloommilano.com/newsevents/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37337,11 +37925,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Merlata Bloom is a modern, operating shopping mall in Milan near Cascina Merlata. It is a busy family-oriented retail and entertainment destination, with posted shops, restaurant and cinema hours. The cruising directory contains a generic commercial-area lead but does not specify a toilet or reliable recent encounter. Treat it as a privately managed shopping facility.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0409_0413.json"
       ],
       "original_index": 411,
       "original_section": "B"
@@ -37354,15 +37943,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "geographic_identity_broad_exact_site_unresolved",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://certosadimilano.com/contatti/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37373,11 +37967,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Certosa–Via Grosio is a loosely identified roadside candidate in north-western Milan near the motorway approach. The source classifies it as a rest area but gives no service station, exact parking lot, direction of travel or dated encounter. It cannot safely be mapped to an A4 shoulder or the nearby Certosa religious complex.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0409_0413.json"
       ],
       "original_index": 409,
       "original_section": "B"
@@ -37390,15 +37985,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retail_managed_property_no_activity_verification",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://citylifeshoppingdistrict.it/en/how-to-get-here/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.citylifeshoppingdistrict.it/en/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37409,11 +38014,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "CityLife Shopping District is an active mall at Tre Torri in Milan, with stores, restaurants, cinema and M5 subway access. The source calls it a shopping-area cruising candidate but does not identify any toilet or specific floor. The operator publishes differing hours for shops and restaurants; no independent recent activity evidence was found.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0409_0413.json"
       ],
       "original_index": 412,
       "original_section": "B"
@@ -37484,15 +38090,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "geographic_identity_broad_exact_site_unresolved",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.comune.milano.it/argomenti/ambiente-e-animali/parchi-e-aree-verdi-attrezzate-a-milano/boscoincitta",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.boscoincitta.it/giardino-dacqua/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.comune.milano.it/argomenti/ambiente-e-animali/parchi-e-aree-verdi-attrezzate-a-milano/parco-delle-cave",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37503,11 +38124,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Figino is a residential district on Milan's western outskirts, close to the public Boscoincittà woodland and the Parco delle Cave green network. A cruising directory lists 'Figino' as a park, without naming which path or exact greenspace. Boscoincittà's park management distinguishes always-open outer routes from core areas with shorter daylight access; this is geographic context, not proof that the original pin refer",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0409_0413.json"
       ],
       "original_index": 410,
       "original_section": "B"
@@ -37520,15 +38142,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_no_recent_verified_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.comune.milano.it/argomenti/ambiente-e-animali/parchi-e-aree-verdi-attrezzate-a-milano/parco-lambro",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37539,11 +38166,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Parco Lambro is a large riverside city park in Milan. The old cruising directory specifies Via Crescenzago, whereas Milan's official park page lists entrances via Feltre and Casiraghi. Those are possible different sides of the park. The municipality confirms freely accessible outdoor recreation, not any recent cruising encounters.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0404_0408.json"
       ],
       "original_index": 406,
       "original_section": "B"
@@ -37557,15 +38185,40 @@
         "research_candidate",
         "auxiliary_verification"
       ],
-      "research_stage": "priority_for_listing_build",
+      "research_stage": "strong_five_website_identity_no_verified_recent_encounter",
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/milan/areas/54762-parco-nord/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gay.it/cruising-milano",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.wearegaylyplanet.com/cruising-milano/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://parconord.milano.it/13551-a-partire-da-marzo-2026-via-giuditta-pasta-chiusa-al-traffico-nei-weekend/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://parconord.milano.it/14494-manutenzione-della-passerella-ciclopedonale-sulla-a52-possibili-chiusure-notturne-dal-3-luglio-2026/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://parconord.milano.it/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 5,
       "source_refs": [
         {
@@ -37584,10 +38237,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Parco Nord Milano is a large metropolitan park north of central Milan, named independently by CruisingGays, gay.it, Squirt, WeAreGaylyPlanet and Splashd. The Splashd description places the alleged meeting area in the southeast of the central park, but provides no GPS pin or verified encounter. A Squirt listing shows its last reply as 7 July 2026; the text of that reply is absent. One independent guide says the park h",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/B/batch_0414_0418.json"
       ],
       "original_index": 414,
       "original_section": "B"
@@ -37681,15 +38335,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "station_facility_activity_not_verified",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.rfi.it/en/stations/milano-porta-garibaldi.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.yesmilano.it/esplora/luoghi/stazione-milano-porta-garibaldi-accessibilita",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37700,11 +38364,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Milano Porta Garibaldi station is a functioning major railway and metro interchange on Piazza Freud. The old cruising index identifies the station, not a particular toilet or corridor. The railway operator and city guide confirm public toilets, including an accessible lower-level facility; neither confirms current cruising.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0404_0408.json"
       ],
       "original_index": 407,
       "original_section": "B"
@@ -37765,15 +38430,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "no_recent_verified_physical_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/bagno_stazione_napoli_centrale_napoli_italia_124097",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.rfi.it/it/stazioni/napoli-centrale.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.grandistazioni.it/it/le-nostre-stazioni/napoli-centrale.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37784,11 +38464,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Napoli Centrale railway station has public passenger toilets and active retail services. Its Gays-Cruising entry contains June 2026 messages looking for contacts, including one person offering to meet elsewhere, but no clear witnessed encounter. The station is monitored by police, staff and surveillance; its toilets are not a dedicated sex venue.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0414_0418.json"
       ],
       "original_index": 415,
       "original_section": "B"
@@ -37844,15 +38525,35 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "historic_reputation_only_no_2026_activity_proof",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/bosco_di_capodimonte_napoli_italia_110284",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://capodimonte.cultura.gov.it/orari/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://capodimonte.cultura.gov.it/useful-information/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.rivistastudio.com/napoli-citta-erotica/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37863,11 +38564,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Real Bosco di Capodimonte is a 134-hectare historic royal woodland on the slopes above Naples. It appears in Gays-Cruising and a 2021 magazine's account of Naples' older gay meeting places points to the park fountain. Those references establish a longstanding reputation, not a recent verified encounter. It is a managed daytime heritage park and entry times vary by season.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0419_0423.json"
       ],
       "original_index": 420,
       "original_section": "B"
@@ -37880,15 +38582,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "2026_negative_report_no_confirmed_cruising",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/giardini_del_molosiglio_napoli_italy_90221",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.comune.napoli.it/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37899,11 +38611,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Giardini del Molosiglio is a coastal public garden by Via Ammiraglio Ferdinando Acton and a marina in central Naples. Its cruising-directory description suggests meeting by the dog-area benches, but all five old on-page comments predate cutoff. A later June 16, 2026 Naples index comment explicitly says there was no activity and reports an unwanted solicitation for money. That is a recent subjective negative observati",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0414_0418.json"
       ],
       "original_index": 416,
       "original_section": "B"
@@ -37916,15 +38629,35 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "two_nearby_directory_sources_identity_review_no_recent_confirmed_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/parcheggio_brin_napoli_italy_118852",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://mobile.squirt.org/cruise/display/77725/detail",
+          "page_type": "direct_cruising_entry",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.anm.it/s/testtheme?language=it",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://osmopark.com/en/italy/napoli/car-park-parcheggio-brin-anm",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -37935,11 +38668,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Parcheggio Brin is a large public-pay car park at the junction of Via Benedetto Brin and Via Alessandro Volta in Naples. An older cruising index names the car park, while Squirt and Splashd separately name the adjoining Via Brin street; they are geographically close but not proof that all three describe the same precise meeting spot. No dated witnessed cruising in the parking structure was located.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0419_0423.json"
       ],
       "original_index": 419,
       "original_section": "B"
@@ -37995,15 +38729,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "no_recent_verified_physical_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/parco_mascagni_napoli_italia_41194",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://fondoambiente.it/luoghi/parco-mascagni",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.notiziaenapoli.it/denuncia-del-comitato-valori-collinari-sulle-condizioni-del-parco-mascagna-a-napoli/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38014,11 +38758,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Parco Mascagna, often misspelled 'Parco Mascagni', is a small municipal green space near Via Tino di Camaino and Via Ruoppolo in Vomero/Arenella. The directory suggests evening activity around hedges outside the park but has zero visitor comments. A 2026 local report says it closes at 20:00 and criticizes maintenance and safety of the children's facilities. This is a family recreation area with no verified recent cru",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0414_0418.json"
       ],
       "original_index": 417,
       "original_section": "B"
@@ -38032,19 +38777,33 @@
         "research_candidate",
         "independent_reference_pass"
       ],
-      "research_stage": null,
+      "research_stage": "crosssource_identity_access_recently_changed",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/villa_comunale_napoli_italy_38629",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
+          "url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
           "url": "https://www.piccoletrasgressioni.it/incontri.asp?pag=4",
-          "page_type": "context_or_official_source",
-          "source_status": "independent_local_meeting_place_directory"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://sia.comune.napoli.it/index.php?n=10841",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.rainews.it/tgr/campania/video/2026/09/villa-comunale-riapertura-a-meta-e55a5afc-102c-48f3-b059-4471be681834.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -38065,10 +38824,11 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Villa Comunale along Naples's Riviera di Chiaia waterfront has a long-standing source listing and an independent Splashd description of bushes near the Aquarium; neither provides a recent witnessed encounter. The park was disrupted by approximately two years of renovations but reopened partly in September 2026, while further work continued. The older source's claims about privacy or morning activity should not be tre",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/B/batch_0414_0418.json"
       ],
       "original_index": 418,
       "original_section": "B"
@@ -38124,15 +38884,35 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "two_website_exact_street_identity_historical_activity_unverified_current",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/italy",
+      "best_url": "https://www.cruisinggays.com/milan/areas/51888-le-ditte-peschiera-borromeo/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/italy",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://forum.gay.it/discussioni/battuage-peschiera",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.wearegaylyplanet.com/cruising-milano/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.blia.it/in/104294-32852",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38143,11 +38923,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Via Lambro in Peschiera Borromeo's industrial edge is named independently in two cruising directories, including a CruisingGays entry under 'Le ditte'. An old Gay.it discussion says vegetation was removed and fencing installed, with some people subsequently continuing to meet around the road; that thread last updated about 2019, so it cannot establish conditions today. Other online guides mention nearby Via Liguria, ",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0419_0423.json"
       ],
       "original_index": 421,
       "original_section": "B"
@@ -38160,15 +38941,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "unlocated_single_directory_reference_no_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://emiliaromagnaturismo.it/it/itinerari/piacenza-in-bicicletta",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://visitpiacenza.it/localita/calendasco/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38179,11 +38970,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "This general entry refers to the banks and embankments of the River Po around Piacenza, rather than an identifiable point. Emilia-Romagna's visitor guidance confirms publicly used riverside cycling and walking paths reached from Via del Pontiere, but that is an illustrative access route, not a confirmed cruising site. No independently corroborated or recently dated encounter was found.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0419_0423.json"
       ],
       "original_index": 422,
       "original_section": "B"
@@ -38196,15 +38988,35 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "single_website_repeated_location_needs_pin_review_no_recent_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/parco_dei_fontanili_rho_italia_36707",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/parco_fontanili_rho_italia_142278",
+          "page_type": "direct_cruising_entry",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/parco_dei_fontanili_rho_italia_71829",
+          "page_type": "direct_cruising_entry",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.comune.milano.it/argomenti/ambiente-e-animali/parchi-e-aree-verdi-attrezzate-a-milano/parco-dei-fontanili",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38215,11 +39027,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Parco dei Fontanili appears several times in Gays-Cruising listings around Rho and the Lucernate industrial district, but the near-identical names may refer to different approach roads or adjacent green strips. One page describes an older mature-oriented crowd; its most recent visible comment, from June 2025, merely asks if anyone is present. Another user said in May 2025 that their navigation led into private proper",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0419_0423.json"
       ],
       "original_index": 423,
       "original_section": "B"
@@ -38303,24 +39116,38 @@
         "research_candidate",
         "auxiliary_verification"
       ],
-      "research_stage": "priority_for_listing_build",
+      "research_stage": "multi_site_directory_identity_current_activity_unproven",
       "live_status": null,
       "best_url": "https://mobile.squirt.org/cruise/display/83841/detail",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.splashd.app/map/it/rm/roma",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         },
         {
           "url": "https://www.crusit.com/spots/villa-gordiani-rome",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.crusit.com/blog/cruising-in-rome",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://queereurope.com/lgbtq-guide-to-rome/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.turismoroma.it/it/luoghi/villa-dei-gordiani",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 4,
@@ -38347,10 +39174,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Villa Gordiani is a public archaeological park along Via Prenestina, Rome, with several independent gay-cruising directory mentions. Squirt's July 16 2026 latest-reply timestamp lacks comment text, and Splashd's 'Added 8 mo ago' marks listing age only. Crusit's September 2 2026 guide is a current editorial claim, not a dated firsthand encounter. Official Roma tourism says the park opens dawn to dusk, conflicting with",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/B/batch_0424_0428.json"
       ],
       "original_index": 424,
       "original_section": "B"
@@ -38464,15 +39292,40 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "single_source_cruising_claim_no_recent_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/spiaggia_bibione_faro_san_michele_al_tagliamento_italia_9460",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.bibione.com/en/pointsofinterestdetails/5-the-lighthouse/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.bibione.eu/escursioni/il-faro-e-la-foce-del-fiume-tagliamento/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.italia.it/it/veneto/bibione/faro-di-punta-al-tagliamento",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.extravillage.it/forum/viewtopic.php?f=38&sid=4173f22081268ad3a3205d21de856840&t=14781&view=previous",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38483,11 +39336,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Spiaggia Bibione Faro is the eastern end of Bibione beach by Punta Tagliamento lighthouse and the mouth of the Tagliamento river. It is a scenic public coastal and dune area, reached by foot or bicycle. One cruising index names it; an older naturist discussion concerns different activity and erosion, not a 2026 confirmed encounter.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0424_0428.json"
       ],
       "original_index": 425,
       "original_section": "B"
@@ -38500,15 +39354,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "single_directory_ambiguous_route",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/italy",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoi67ddd5567ba88bdeb09552105395d6f1.monte-pana---saltria.s-cristina-gherdeina-st-christina-in-groeden",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.suedtirol.info/de/de/erlebnisse-und-events/plp-erlebnisse/erlebnisse-suedtirol/pdp-erlebnisse.smgpoi8da43980682e03c6f4af7ee0b20fd1b8.verbindungsloipe-saltria---monte-pana.seiseralm",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38519,11 +39383,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Monte Pana–Saltria is a wooded mountain trail between Santa Cristina Valgardena and the Alpe di Siusi, not a small point location. Tourism authorities identify a 12-kilometre running/hiking loop and a separate shorter ski connection. Its cruising-directory entry has no detailed pin, reported meeting area, or dated encounter.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0424_0428.json"
       ],
       "original_index": 426,
       "original_section": "B"
@@ -38579,15 +39444,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "probable_two_source_alias_unverified_recent",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/italy",
+      "best_url": "https://www.cruisinggays.com/milan/areas/51712-turate/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/italy",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38598,11 +39468,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A small wooded space by industrial buildings in Turate appears as 'Boschetto' in Gays-Cruising's archive, and independently as 'Turate - via Strada di Mezzo' on CruisingGays. The road and woodland match is plausible, but the exact pin and whether the paths remain open need checking. The second site's claims about visitors and times are undated.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0424_0428.json"
       ],
       "original_index": 427,
       "original_section": "B"
@@ -38615,15 +39486,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "historic_2025_first_person_report_but_no_2026_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/aeroporto_marco_polo_venezia_italia_63231",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.veneziaairport.it/en_gb/assistance/faqs-services",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.veneziaairport.it/en_gb/at-the-airport/general-info",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38634,11 +39520,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Venice Marco Polo Airport's cruising-directory entry describes ground-floor toilets, though a June 2025 commenter instead refers to facilities after security. An August 2025 visitor writes about a fleeting personal encounter interrupted by cleaning, providing dated historical firsthand evidence but outside this cycle's 12-month window. The most recent comment, September 1 2025, is only a meeting request. The airport'",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0429_0433.json"
       ],
       "original_index": 432,
       "original_section": "B"
@@ -38651,15 +39538,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "facility_verified_single_site_cruising_claim_unverified",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/bagni_grill_bazzera_venezia_italia_29500",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://zanibellato.it/progetto/commerciale/bagni-stazione-puntogrill-bazzera-nord/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://restaurantguru.it/Punto-Grill-Venice",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38670,11 +39572,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The listing names washrooms at the Bazzera motorway rest stop on the Mestre ring road. A refurbishment contractor identifies Punto Grill Bazzera Nord toilets in Marcon in the Venice metropolitan area; these are real public customer facilities. A general business directory includes a July 2026 hygiene review, which says nothing about cruising. The exact North/South service-area side must be matched to the old director",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0424_0428.json"
       ],
       "original_index": 428,
       "original_section": "B"
@@ -38687,15 +39590,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "road_exists_single_cruising_directory_no_current_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/banchina_azoto_venezia_italia_78532",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.chiesura.it/contatti/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://ufficiotemporaneo.it/sede/banchina-dell-azoto-15/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38706,11 +39624,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Banchina dell'Azoto is a real industrial waterfront road in Porto Marghera on the Venice mainland, with offices, warehouses and port-related businesses. A directory lists it as an industrial-park cruising area, but that entry provides no accessible detail or dated comments. Independent company listings confirm the road and its commercial occupation, not whether it is used for cruising. Wharf and business-property acc",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0429_0433.json"
       ],
       "original_index": 433,
       "original_section": "B"
@@ -38723,15 +39642,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "public_facility_name_and_historic_contact_posts_no_recent_onsite_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/ccporte_di_mestre_venezia_italia_77685",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.portedimestre.it/contatti/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://live.comune.venezia.it/it/2025/12/joy-zone-il-divertimento-arriva-alle-porte-di-mestre",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38742,11 +39676,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Porte di Mestre is a large shopping centre in Mestre, formerly associated with the Auchan name. Its Gays-Cruising entry identifies ground-floor men's toilets near an optician, but every visible user comment is from October 2025 or earlier, with the latest seeking a meeting rather than recounting one. The complex continues to operate commercially in 2026, but that says nothing about cruising there or consented use of ",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0429_0433.json"
       ],
       "original_index": 429,
       "original_section": "B"
@@ -38759,15 +39694,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "single_directory_park_mentioned_no_verified_current_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/giardini_della_biennale_venezia_italia_11891",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.labiennale.org/en/art/2026/prepare-your-visit",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38778,11 +39723,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Giardini della Biennale is Venice's waterfront green space at Castello, including the gated international art exhibition grounds and adjacent publicly accessible paths. One cruising directory lists the garden, but its specific detail page was inaccessible when checked and no dated visitor report confirms activity. During the 2026 art exhibition, the fenced Giardini area follows paid-entry opening hours; this must not",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0429_0433.json"
       ],
       "original_index": 430,
       "original_section": "B"
@@ -38795,15 +39741,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "exact_unnamed_clearing_from_one_directory_not_activity_verified",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "best_url": "https://www.gays-cruising.com/en/cruising/radura_parco_san_giuliano_mestre_venezia_italia_66339",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.veneziaunica.it/en/things-to-do-in-venice/gardens-parks-natural-oases/parco-san-giuliano",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -38814,11 +39770,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A cruising-directory entry points to a clearing past the pedestrian/cycle bridge toward Campalto on the northern side of Mestre's Parco San Giuliano. The park itself is a large public waterfront recreation area, independently verified by Venice tourism. Its precise alleged meeting point remains dependent on the old directory directions; there are zero comments on that page and no evidence of recent use.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0429_0433.json"
       ],
       "original_index": 431,
       "original_section": "B"
@@ -49431,15 +50388,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_needs_recent_verification",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/serbia",
+      "best_url": "https://www.gays-cruising.com/en/cruising/kosutnjak_park_belgrade_serbia_65958",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/serbia",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://spd.rs/en/suma-kosutnjak/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://rzsport.gov.rs/sportska-rekreacija-u-jutarnjim-casovima-doprinosi-boljem-fizickom-i-mentalnom-zdravlju-2/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -49450,11 +50422,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Košutnjak is Belgrade's large wooded recreation area, with walking routes and sporting facilities. The archive identifies it as a cruising candidate without a particular meeting point. General public use of the park is documented, but not any recent encounter.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0359_0363.json"
       ],
       "original_index": 360,
       "original_section": "B"
@@ -49520,15 +50493,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "source_listed_needs_recent_verification",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/serbia",
+      "best_url": "https://www.gays-cruising.com/en/cruising/meadow_near_to_faculty_of_drama_arts_belgrade_serbia_57862",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/serbia",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.arts.bg.ac.rs/en/university/members/faculty-of-dramatic-arts/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://fdu.bg.ac.rs/en/faculty/projects/fist",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -49539,11 +50527,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Near the Faculty of Dramatic Arts in New Belgrade is a meadow that the faculty itself identifies as a community and art space. The original cruising directory names it, but I found no verifiable recent encounter report. It is not an established or private play venue.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0359_0363.json"
       ],
       "original_index": 359,
       "original_section": "B"
