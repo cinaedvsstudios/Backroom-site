@@ -10,8 +10,9 @@ function library(){
  function add(url,c={}){
   const exact=validURL(url),key=keyOf(url);if(!exact||!key)return false;
   let v=byKey.get(key);const fresh=!v;
-  if(!v){v={key,url:exact,name:clean(c.name)||new URL(exact).hostname,kind:c.kind||classify(exact),verification:'Source not live-rechecked',enabled:true,variants:[],origins:[],record_ids:[],countries:[],cities:[],workflows:[],notes:[],source_references:[]};byKey.set(key,v)}
+  if(!v){v={key,url:exact,name:clean(c.name)||new URL(exact).hostname,kind:c.kind||classify(exact),kinds:[],verification:'Source not live-rechecked',enabled:true,variants:[],origins:[],record_ids:[],countries:[],cities:[],workflows:[],notes:[],source_references:[]};byKey.set(key,v)}
   if(c.kind&&v.kind==='website')v.kind=c.kind;
+  if(c.kind&&!v.kinds.includes(c.kind))v.kinds.push(c.kind);
   if(c.name&&v.name===new URL(v.url).hostname)v.name=c.name;
   if(c.verification)v.verification=c.verification;
   if(typeof c.enabled==='boolean')v.enabled=c.enabled;
@@ -51,7 +52,7 @@ function ingestSeed(lib,seed){
   const refs=Array.isArray(x.source_references)&&x.source_references.length?x.source_references:[x];
   for(const ref of refs){
    lib.add(ref.url,{
-    name:x.name,kind:x.kind,verification:x.verification,enabled:x.enabled,
+    name:x.name,kind:ref.kind||x.kind,verification:x.verification,enabled:x.enabled,
     workflows:Array.isArray(ref.workflows)?ref.workflows:x.workflows||[],
     provenance:ref.provenance||x.provenance||'Base source catalogue',
     source_reference:{id:ref.id,url:ref.url,name:ref.name,kind:ref.kind,
@@ -109,7 +110,7 @@ function build(config,venues,events,sources,instructions){
  const size=Math.max(1,Math.min(300,Number(config.batchSize)||25)),limit=Math.max(1,Math.min(300,Number(config.sourceLimit)||60));
  const rules=(instructions||[]).filter(x=>x.id==='COMMON_RULES'||x.id==='WORLDWIDE_ZONES').map(x=>x.body).join('\n\n');
  const instruction=(instructions||[]).find(x=>x.id===flow.toUpperCase())?.body||'';
- const allow=src=>src.enabled!==false&&(!config.sourceKinds?.length||config.sourceKinds.includes(src.kind))&&
+ const allow=src=>src.enabled!==false&&(!config.sourceKinds?.length||[src.kind,...(src.kinds||[])].some(k=>config.sourceKinds.includes(k)))&&
    (!config.sourceKeys?.length||config.sourceKeys.includes(src.key))&&
    (!src.workflows.length||type==='all'||src.workflows.includes('all')||src.workflows.includes(type)||src.workflows.includes(flow));
  const candidates=sources.filter(allow),chunks=[];
