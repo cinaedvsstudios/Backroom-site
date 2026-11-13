@@ -281,14 +281,16 @@ function instructionHTML(){
 }
 function render(){
  if(!S.ready){get('br3-panel').innerHTML='<div class="br3-card">Loading the Phase 3 workspace…</div>';return;}
- for(const key of ['builder','sources','instructions'])get('br3-'+key)?.classList.toggle('br3-active',S.tab===key);
+ for(const key of ['wizard','builder','sources','instructions','help'])get('br3-'+key)?.classList.toggle('br3-active',S.tab===key);
+ if(S.tab==='wizard')get('br3-panel').innerHTML=wizardHTML();
  if(S.tab==='builder')renderBuilder();
  if(S.tab==='sources')get('br3-panel').innerHTML=sourceHTML();
  if(S.tab==='instructions')get('br3-panel').innerHTML=instructionHTML();
+ if(S.tab==='help')get('br3-panel').innerHTML=helpHTML();
  setMessage(S.error||'');
 }
 function selectTab(tab){
- if(!['builder','sources','instructions'].includes(tab))return;
+ if(!['wizard','builder','sources','instructions','help'].includes(tab))return;
  S.tab=tab;render();
  if(tab==='sources'&&!S.loadedResearch)researchSources();
 }
@@ -305,7 +307,7 @@ function saveConfigInputs(){
 function updateCityResults(){const el=get('br3-city-results');if(el)el.innerHTML=cityHTML()}
 function preview(){
  saveConfigInputs();
- const rows=D.selected(S.config,P.state.venues,P.state.events),count=D.kindOf(S.config.workflow);
+ const rows=D.selected(scopedConfig(),P.state.venues,P.state.events),count=D.kindOf(S.config.workflow);
  const node=get('br3-scope-preview');
  if(node)node.innerHTML='<span class="br3-pill"><strong>'+fmt(rows.length)+'</strong> existing '+esc(count)+' records selected</span>'+
   '<span class="br3-pill"><strong>'+fmt(S.config.cities.length)+'</strong> target cities selected</span>'+
@@ -318,12 +320,13 @@ async function generate(){
  if(S.config.zone==='8'&&S.config.workflow!=='cruising_updates'){notify('Zone 8 is reserved for public-space cruising areas. Use Auto or another zone for venue/event research.');return;}
  if(S.config.countries.some(c=>['united states','united states of america','usa','u.s.'].includes(D.norm(c)))){notify('The current European Zone 6 campaign excludes US locations. Remove the United States from this research scope.');return;}
  if(S.config.workflow==='cruising_updates'&&S.config.zone!=='auto'&&S.config.zone!=='8'){notify('Cruising areas belong in Zone 8. Choose Auto or Zone 8.');return;}
- if(!rows.length&&!S.config.countries.length&&!S.config.cities.length){notify('Select at least one country, city or record ID for this brief.');return;}
+ if(!S.config.countries.length&&!S.config.cities.length&&!S.config.ids.length){notify('Choose a geography preset, a country, a city, or a specific record ID before generating.');return;}
  if(!S.loadedResearch)await researchSources();
- const built=D.build(S.config,P.state.venues,P.state.events,S.lib.all(),S.rules);
+ const built=D.build(scopedConfig(),P.state.venues,P.state.events,S.lib.all(),S.rules);
  S.packet=built.packet;S.markdown=built.markdown;
  const out=get('br3-output');if(out)out.value=S.markdown;
  const node=get('br3-result-summary');if(node)node.innerHTML='<strong>'+built.batches.length+' batches · '+built.batches.reduce((a,b)=>a+b.record_ids.length,0)+' existing records · '+built.batches.reduce((a,b)=>a+b.sources.length,0)+' batch source references</strong>';
+ if(S.tab==='wizard')render();
  notify('Created '+built.batches.length+' research batches. Nothing was published.');
 }
 function storeCustom(){
@@ -371,6 +374,25 @@ async function importRules(file){
 }
 async function handleClick(button){
  const id=button.id;
+ if(button.dataset.br3Preset){
+  const selection=W.selection(button.dataset.br3Preset,{registry:P.state.registry,venues:P.state.venues,events:P.state.events});
+  S.wizardPreset=selection.id;
+  S.config.countries=selection.countries;S.config.cities=selection.cities;
+  S.config.text='';S.config.ids=[];S.config.status='';
+  S.config.zone=S.config.workflow==='cruising_updates'?'8':'auto';
+  S.config.sourceKeys=[];S.config.sourceKinds=[];S.packet=null;S.markdown='';
+  remember();render();notify('Preset applied: '+selection.countries.length+' countries and '+selection.cities.length+' cities.');return;
+ }
+ if(id==='br3-wizard-clear'){
+  S.wizardPreset='';S.config.countries=[];S.config.cities=[];S.packet=null;S.markdown='';
+  remember();render();return;
+ }
+ if(id==='br3-wizard-advanced'){selectTab('builder');return;}
+ if(id==='br3-wizard-preview'){preview();return;}
+ if(id==='br3-wizard-generate'){await generate();return;}
+ if(id==='br3-wizard-guide'){selectTab('help');return;}
+ if(id==='br3-guide-wizard'||id==='br3-open-wizard'){selectTab('wizard');return;}
+ if(id==='br3-guide-advanced'){selectTab('builder');return;}
  if(button.dataset.br3RemoveCountry){
   const country=button.dataset.br3RemoveCountry;S.config.countries=S.config.countries.filter(x=>x!==country);
   S.config.cities=S.config.cities.filter(x=>!x.startsWith(country+'|'));remember();renderBuilder();return;
@@ -424,6 +446,13 @@ function handleChange(target){
   S.config.cities=target.checked?D.uniq([...S.config.cities,city]):S.config.cities.filter(x=>x!==city);
   remember();return;
  }
+ if(id==='br3-wizard-workflow'){
+  S.config.workflow=target.value;S.config.zone=target.value==='cruising_updates'?'8':'auto';remember();render();return;
+ }
+ if(id==='br3-wizard-from'||id==='br3-wizard-to'||id==='br3-wizard-batch'){
+  const key={'br3-wizard-from':'from','br3-wizard-to':'to','br3-wizard-batch':'batchSize'}[id];
+  S.config[key]=key==='batchSize'?Number(target.value):target.value;remember();return;
+ }
  if(id==='br3-rule-picker'){S.selectedRule=target.value;render();return;}
  if(['br3-workflow','br3-zone','br3-from','br3-to','br3-status','br3-batch','br3-source-limit','br3-source-kinds'].includes(id)){saveConfigInputs();if(id==='br3-workflow'){if(S.config.workflow==='cruising_updates')S.config.zone='8';else if(S.config.zone==='8')S.config.zone='auto';renderBuilder();}return;}
  if(id==='br3-src-kind'){S.sourceKind=target.value;S.sourcePage=1;render();return;}
@@ -463,16 +492,20 @@ function install(){
  const view=document.createElement('section');view.id='br3-view';view.style.display='none';
  view.innerHTML='<header class="br3-header"><div><h1>🧭 Backroom Research Studio</h1><p>Generate source-backed research packets from the existing database and retained research files.</p></div><span class="br3-status">Phase 3 · Research-only</span></header>'+
  '<nav class="br3-tabs" aria-label="Research studio tabs">'+
- '<button id="br3-builder" type="button" class="br3-active">🧭 Scrape Builder</button>'+
+ '<button id="br3-wizard" type="button" class="br3-active">✨ Quick Setup</button>'+
+ '<button id="br3-builder" type="button">⚙ Advanced Builder</button>'+
  '<button id="br3-sources" type="button">🌐 Source Library</button>'+
- '<button id="br3-instructions" type="button">📜 Instructions</button></nav>'+
+ '<button id="br3-instructions" type="button">📜 Instructions</button>'+
+ '<button id="br3-help" type="button">❓ How It Works</button></nav>'+
  '<div id="br3-message" class="br3-message" role="status"></div><div id="br3-panel"></div>';
  main.appendChild(view);
  view.addEventListener('click',async e=>{
   const btn=e.target.closest('button');if(!btn)return;
+  if(btn.id==='br3-wizard')return selectTab('wizard');
   if(btn.id==='br3-builder')return selectTab('builder');
   if(btn.id==='br3-sources')return selectTab('sources');
   if(btn.id==='br3-instructions')return selectTab('instructions');
+  if(btn.id==='br3-help')return selectTab('help');
   try{await handleClick(btn)}catch(err){console.error(err);notify('Phase 3 action failed: '+err.message);}
  });
  view.addEventListener('change',async e=>{
@@ -484,6 +517,6 @@ function install(){
  view.addEventListener('input',e=>handleInput(e.target));
  document.addEventListener('click',e=>{if(e.target.closest('.sidebar-item')&&!e.target.closest('#nav-scrape-builder'))hide();},true);
 }
-window.BackroomAdminPhase3={show,hide,getState:()=>S,researchSources,render,version:'0.23.6'};
+window.BackroomAdminPhase3={show,hide,getState:()=>S,researchSources,render,version:'0.23.7'};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
