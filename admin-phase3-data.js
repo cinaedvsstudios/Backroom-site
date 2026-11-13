@@ -10,13 +10,17 @@ function library(){
  function add(url,c={}){
   const exact=validURL(url),key=keyOf(url);if(!exact||!key)return false;
   let v=byKey.get(key);const fresh=!v;
-  if(!v){v={key,url:exact,name:clean(c.name)||new URL(exact).hostname,kind:c.kind||classify(exact),verification:'Source not live-rechecked',enabled:true,variants:[],origins:[],record_ids:[],countries:[],cities:[],workflows:[],notes:[]};byKey.set(key,v)}
+  if(!v){v={key,url:exact,name:clean(c.name)||new URL(exact).hostname,kind:c.kind||classify(exact),verification:'Source not live-rechecked',enabled:true,variants:[],origins:[],record_ids:[],countries:[],cities:[],workflows:[],notes:[],source_references:[]};byKey.set(key,v)}
   if(c.kind&&v.kind==='website')v.kind=c.kind;
   if(c.name&&v.name===new URL(v.url).hostname)v.name=c.name;
   if(c.verification)v.verification=c.verification;
   if(typeof c.enabled==='boolean')v.enabled=c.enabled;
   for(const [prop,values] of [['variants',[exact]],['origins',[c.provenance]],['record_ids',[c.record_id]],['countries',[c.country]],['cities',[c.city]],['workflows',c.workflows||[]],['notes',[c.note]]]){
    for(const x of values){const t=clean(x);if(t&&!v[prop].includes(t)&&(prop!=='notes'||v.notes.length<25))v[prop].push(t.slice(0,450))}
+  }
+  const reference=c.source_reference;
+  if(reference&&typeof reference==='object'&&clean(reference.id)&&!v.source_references.some(r=>r.id===reference.id)){
+   v.source_references.push({...reference});
   }
   return fresh;
  }
@@ -41,7 +45,23 @@ function ingest(lib,data,origin,workflow='all'){
  }
  walk(data);return stats;
 }
-function ingestSeed(lib,seed){for(const x of seed?.sources||[])lib.add(x.url,{...x,provenance:x.provenance||'Base source catalogue'})}
+function ingestSeed(lib,seed){
+ for(const x of seed?.sources||[]){
+  lib.add(x.url,{...x,provenance:x.provenance||'Base source catalogue'});
+  const refs=Array.isArray(x.source_references)&&x.source_references.length?x.source_references:[x];
+  for(const ref of refs){
+   lib.add(ref.url,{
+    name:x.name,kind:x.kind,verification:x.verification,enabled:x.enabled,
+    workflows:Array.isArray(ref.workflows)?ref.workflows:x.workflows||[],
+    provenance:ref.provenance||x.provenance||'Base source catalogue',
+    source_reference:{id:ref.id,url:ref.url,name:ref.name,kind:ref.kind,
+      workflows:ref.workflows||[],regions:ref.regions||[],provenance:ref.provenance||'',
+      verification:ref.verification||'',enabled:ref.enabled!==false},
+    note:'Original seed '+(ref.id||'unidentified')+(ref.kind&&ref.kind!==x.kind?' · '+ref.kind:'')
+   });
+  }
+ }
+}
 function normalizeImport(data){
  const list=Array.isArray(data)?data:data?.sources||data?.urls||data?.entries||data?.records;
  if(!Array.isArray(list))throw Error('Expected array, or sources/urls/entries/records array.');
