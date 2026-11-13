@@ -2031,6 +2031,7 @@ function setupCriticalListeners() {
         localStorage.setItem('br_age_verified', 'true');
         ageGate?.classList.add('hidden');
         appShell?.classList.remove('hidden');
+        appShell?.removeAttribute('inert');
         
         showToast("Backroom " + APP_VERSION);
         handleRouting(); 
@@ -2041,6 +2042,7 @@ function setupCriticalListeners() {
     if(localStorage.getItem('br_age_verified') === 'true') {
         ageGate?.classList.add('hidden');
         appShell?.classList.remove('hidden');
+        appShell?.removeAttribute('inert');
         showToast("Backroom " + APP_VERSION);
     }
 
@@ -2102,7 +2104,7 @@ async function initApp() {
         loadSavedLocation();
          
         
-        if(localStorage.getItem('br_age_verified') === 'true') handleRouting();
+        handleRouting();
         
     } catch (error) {
         console.error("Data load failed:", error);
@@ -2139,8 +2141,8 @@ async function initApp() {
                 applyTheme(); populateSystemText(); setupEventListeners(); loadSavedLocation();  
                 if(localStorage.getItem('br_age_verified') === 'true') {
                     showToast("Backroom " + APP_VERSION);
-                    handleRouting();
                 }
+                handleRouting();
             };
 
             bypassBtn.addEventListener('click', bypassLogic);
