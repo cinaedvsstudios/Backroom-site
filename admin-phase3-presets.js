@@ -63,7 +63,7 @@ function backroomTop(venues,events,registry,limit=20){
  const byID=new Map((venues||[]).map(r=>[String(r.Venue_ID||''),r])),totals=new Map();
  function add(country,city,type){
   const canonical=standardCountry(country,registry),name=String(city||'').trim();
-  if(!canonical||!name||['europe','international','multiple locations','tba'].includes(norm(name)))return;
+  if(!canonical||!name||name.includes(',')||name.includes(';')||['europe','international','multiple locations','tba'].includes(norm(name)))return;
   const key=canonical+'|'+name;
   const entry=totals.get(key)||{country:canonical,city:name,venues:0,events:0,total:0};
   entry[type]++;entry.total++;totals.set(key,entry);
@@ -83,10 +83,18 @@ function emptyCities(venues,events,registry,limit=35){
   if(country&&city)checked.add(norm(country+'|'+city));
  }
  const countryByCode=new Map(availableCountries(registry).map(c=>[c.code,c.name]));
- return(registry?.cities||[]).filter(x=>countryByCode.has(x.country_code)).filter(x=>
-  !checked.has(norm(countryByCode.get(x.country_code)+'|'+x.name)))
-  .filter(x=>(x.kinds||[]).some(k=>['capital','secondary','tourist','travel-destination','resort'].some(s=>norm(k).includes(s))))
-  .slice(0,limit).map(x=>[countryByCode.get(x.country_code),x.name]);
+ const cityCandidates=(registry?.cities||[]).filter(x=>countryByCode.has(x.country_code)).filter(x=>
+  (x.kinds||[]).some(k=>['capital','secondary','tourist','travel-destination','resort'].some(s=>norm(k).includes(s))))
+  .map(x=>[countryByCode.get(x.country_code),x.name]);
+ const candidates=[...touristCities,...nightlifeCities,...islandCities,...cityCandidates];
+ const result=[],seen=new Set();
+ for(const [country,city] of candidates){
+  const key=norm(country+'|'+city);
+  if(seen.has(key)||checked.has(key)||!country||!city)continue;
+  seen.add(key);result.push([country,city]);
+  if(result.length>=limit)break;
+ }
+ return result;
 }
 const definitions=[
  {id:'tourist50',name:'50 popular tourist cities',icon:'🌆',description:'Curated European visitor destinations, including Canary Islands, Istanbul and Israel; not a measured 1–50 arrival ranking.',kind:'cities'},
