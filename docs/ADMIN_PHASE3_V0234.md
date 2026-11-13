@@ -37,7 +37,7 @@ The user can:
 - Export all assembled sources to JSON/CSV. No web availability checking is implied by a URL being indexed.
 - See per-source record and file associations.
 
-**Completeness qualifier:** The exact old **102-URL Collect Scraping URLs** export was not available as a separate GitHub file; the seed contains recovered original sources and can ingest that export by user import. Do not claim the 102 exact strings were all automatically imported.
+**Collector correction (13 Nov 2026):** Recovered the original **Backroom_scraping_source_URLs.txt** from ChatGPT Library (102 lines, 102 distinct exact URLs). Preserved every original line in **`scraping/Backroom_scraping_source_URLs_102_2026-11-06.txt`**, and included all 102 as provenance-tagged `COLLECTOR-001`…`COLLECTOR-102` entries in `admin-phase3-sources.json`. The consolidated seed now has **192 source entries** (90 earlier entries plus 102 collector lines). Many overlap, so the actual distinct-URL count is lower. This replaces the earlier unverified statement that the collector export was unavailable. The original paths, query strings and anchors are preserved; URL indexing is not a claim of current availability.
 
 The consolidated cruising registry reports 1,591 location records and 3,516 alternate references in its 2026-11-13 audit, but remains research evidence, not current venue verification. Source imports and database references do not constitute independent validation, legal-access confirmation or publication approval. Source archive files were not deleted.
 
@@ -52,7 +52,7 @@ Generate a Markdown brief or research-only JSON packet. JSON includes date windo
 ## Verification
 - Source data, UI JavaScript and integration script compiled with `new Function`.
 - URL tests: HTTP(S) only; retain path case and URL hash; collapse tracking variants without dropping record linkages; parse semicolon/comma separated Source_URLs.
-- Source test: 90 seed entries, URL-deduped into 61 distinct seed URLs in mock; imported nested source reference retains Venue_ID and provenance.
+- Source test: 192 source entries (including all 102 collector links) after 13 Nov update; URL-deduped into distinct keys; imported nested source reference retains Venue_ID and provenance.
 - Batch tests: Switzerland Zone 1, Slovakia/Slovenia Zone 4, cruising Zone 8, country-contiguous batches; zero-record city targets; all optional fields preserved.
 - Dedicated source selection, six-month configurable date ranges, combined venue/event rules, research-only marking and correct asset references.
 - Mock-DOM UI smoke: mounting sidebar, opening builder, source library, reading two research archives, showing imported URL origin and archived instructions, hiding/reopening screen.
