@@ -346,13 +346,18 @@ async function captureDataPoint(){
 }
 function buildGrowthSeries(history){
     const v=state.data.venues;
-    const firstVenueChange=history.find(x=>x.type==='change'&&x.mode==='venues');
-    const firstEventChange=history.find(x=>x.type==='change'&&x.mode==='events');
-    const firstCapture=history.find(x=>x.type==='snapshot');
+    // Seed each line with its earliest observed count, not a later pre-merge value.
+    const earliestCount=(field,fallback)=>{
+        for(const entry of history){
+            if(entry.type==='snapshot'&&Number.isFinite(entry.after?.[field]))return entry.after[field];
+            if(entry.type==='change'&&Number.isFinite(entry.before?.[field]))return entry.before[field];
+        }
+        return fallback;
+    };
     const baseline={
-        venues:firstVenueChange?.before?.venues??firstCapture?.after?.venues??v.filter(r=>!isCruising(r)).length,
-        cruising:firstVenueChange?.before?.cruising??firstCapture?.after?.cruising??v.filter(isCruising).length,
-        events:firstEventChange?.before?.events??firstCapture?.after?.events??state.data.events.length
+        venues:earliestCount('venues',v.filter(r=>!isCruising(r)).length),
+        cruising:earliestCount('cruising',v.filter(isCruising).length),
+        events:earliestCount('events',state.data.events.length)
     };
     const points=[{...baseline,date:history[0]?.date||now(),type:'baseline'}];
     let totals={...baseline};
