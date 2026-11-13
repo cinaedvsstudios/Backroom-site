@@ -167,7 +167,7 @@ function renderQuality(){
  '<label>Country<select data-quality="country">'+countryOptions(countries,q.country)+'</select></label>'+
  '<label>City contains<input data-quality="city" value="'+esc(q.city)+'"></label>'+
  '<label>Status<select data-quality="status">'+options(statuses,q.status,'Any status')+'</select></label></div>'+
- '<div class="br-p2-actions"><button id="br-p2-check-run" class="btn primary-btn pill-btn">▶ Run check</button>'+
+ '<div class="br-p2-actions"><button id="br-p2-check-run" class="btn primary-btn pill-btn">▶ Run check</button><button id="br-p2-open-jql" class="btn secondary-btn pill-btn">🔎 Open Query / JQL Maker</button>'+
  '<button id="br-p2-check-json" class="btn secondary-btn pill-btn" '+(!qResult?.rows.length?'disabled':'')+'>Export matching JSON</button>'+
  '<button id="br-p2-check-csv" class="btn secondary-btn pill-btn" '+(!qResult?.rows.length?'disabled':'')+'>Export matching CSV</button></div>';
  if(qResult){
@@ -189,7 +189,8 @@ function qualityChange(element){
  renderQuality();
 }
 function qualityClick(button){
- if(button.id==='br-p2-check-run')runCheck();
+ if(button.id==='br-p2-open-jql')get('br-phase2-nav')?.querySelector('[data-p2-tab="jql"]')?.click();
+ else if(button.id==='br-p2-check-run')runCheck();
  else if(button.id==='br-p2-check-json')exportQuality('json');
  else if(button.id==='br-p2-check-csv')exportQuality('csv');
  else if(button.dataset.qualityPage){q.page+=Number(button.dataset.qualityPage);renderQuality();}
