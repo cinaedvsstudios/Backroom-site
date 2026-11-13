@@ -45,6 +45,51 @@
       "count": 162,
       "files": 4,
       "errors": []
+    },
+    "raw_archive_scanned": [
+      {
+        "path": "research/Archive/scrape_1.json",
+        "records_seen": 672
+      },
+      {
+        "path": "research/Archive/scrape_2.json",
+        "records_seen": 260
+      },
+      {
+        "path": "research/Archive/scrape_3.json",
+        "records_seen": 116
+      },
+      {
+        "path": "research/Archive/scrape_4.json",
+        "records_seen": 41
+      },
+      {
+        "path": "research/Archive/scrape_6.json",
+        "records_seen": 20
+      },
+      {
+        "path": "research/Archive/scrape_8.json",
+        "records_seen": 71
+      },
+      {
+        "path": "research/Archive/gap_fill_scrape_1.json",
+        "records_seen": 142
+      },
+      {
+        "path": "research/Archive/gap_fill_scrape_2.json",
+        "records_seen": 24
+      },
+      {
+        "path": "research/Archive/gap_fill_scrape_3.json",
+        "records_seen": 23
+      }
+    ],
+    "raw_archive_status": {
+      "files_scanned": 9,
+      "expected": 23,
+      "unmatched_direct_leads": 25,
+      "discovery_pages": 121,
+      "last_errors": []
     }
   },
   "research_websites": [
@@ -13178,8 +13223,8 @@
       "live_status": null,
       "best_url": "https://www.popcorn.dating/france/alsace/seltz/locations/public-sex/parking%2Blot/trimm-dich-pfad-seltz-im-wald/20663/",
       "best_url_basis": {
-        "page_type": "directory_or_context",
-        "source_status": "saved_best"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [
         {
@@ -15745,13 +15790,23 @@
       ],
       "research_stage": null,
       "live_status": "Live",
-      "best_url": "https://www.gay-szene.net/gay-index/stadt/berlin.html",
+      "best_url": "https://www.cruisinggays.com/berlin/areas/53147-volkspark-hasenheide/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
-        "source_status": "current_site_source_field"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/berlin/areas/53147-volkspark-hasenheide/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        },
+        {
+          "url": "https://gay-szene.net/hasenheide-in-berlin/9485/eintrag.html",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        }
+      ],
       "source_count": 0,
       "source_refs": [],
       "activity_since_2025_11_06_verified": null,
@@ -18551,11 +18606,10 @@
       ],
       "research_stage": null,
       "live_status": "Live",
-      "best_url": "https://coupleofmen.com/40090-gay-straende-europa/",
+      "best_url": "https://gay-szene.net/strandbad-wannsee-fkk-strand-in-berlin/7478/eintrag.html",
       "best_url_basis": {
-        "page_type": "context_or_official_source",
-        "research_provenance": "current_listing_source",
-        "source_status": "current_site_source_field"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [
         {
@@ -18572,6 +18626,11 @@
           "url": "https://coupleofmen.com/39101-gay-beaches-europe/",
           "page_type": "context_or_official_source",
           "source_status": "specialist_guide_or_contextual"
+        },
+        {
+          "url": "https://gay-szene.net/strandbad-wannsee-fkk-strand-in-berlin/7478/eintrag.html",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
         }
       ],
       "source_count": 0,
@@ -18811,6 +18870,11 @@
           "url": "https://www.travelgay.com/editorial/gay-cruising-while-traveling",
           "page_type": "context_or_official_source",
           "source_status": "specialist_guide_or_contextual"
+        },
+        {
+          "url": "https://gay-szene.net/tiergarten-in-berlin/11561/eintrag.html",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
         }
       ],
       "source_count": 0,
@@ -19018,11 +19082,10 @@
       ],
       "research_stage": null,
       "live_status": "Flag",
-      "best_url": "https://www.gay-szene.net/gay-index/stadt/berlin.html",
+      "best_url": "https://www.cruisinggays.com/berlin/areas/40324-volkspark-friedricshain/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
-        "source_status": "current_site_source_field"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [
         {
@@ -19034,6 +19097,16 @@
           "url": "https://www.tagesspiegel.de/berlin/gezielte-jagd-auf-schwule-manner-in-berlin-erneut-queerfeindlicher-angriff-in-cruising-area-im-volkspark-friedrichshain-15661900.html",
           "page_type": "context_or_official_source",
           "source_status": "current_site_source_field"
+        },
+        {
+          "url": "https://www.cruisinggays.com/berlin/areas/40324-volkspark-friedricshain/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        },
+        {
+          "url": "https://gay-szene.net/volkspark-friedrichshain-in-berlin/11826/eintrag.html",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
         }
       ],
       "source_count": 0,
@@ -19654,13 +19727,18 @@
       ],
       "research_stage": null,
       "live_status": "Live",
-      "best_url": "https://www.inqueery.de/koeln/",
+      "best_url": "https://planet-randy.com/blog/en/eintrag/aachener-weiher/",
       "best_url_basis": {
-        "page_type": "context_or_official_source",
-        "research_provenance": "current_listing_source",
-        "source_status": "current_site_source_field"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://planet-randy.com/blog/en/eintrag/aachener-weiher/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        }
+      ],
       "source_count": 0,
       "source_refs": [],
       "activity_since_2025_11_06_verified": null,
@@ -29126,13 +29204,23 @@
       ],
       "research_stage": null,
       "live_status": "Live",
-      "best_url": "https://www.patroc.com/gay/munich/gayguide.html",
+      "best_url": "https://gay-szene.net/englischer-garten-in-muenchen/5502/eintrag.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
-        "source_status": "current_site_source_field"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://gay-szene.net/englischer-garten-in-muenchen/5502/eintrag.html",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        },
+        {
+          "url": "https://planet-randy.com/blog/eintrag/englischer-garten/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        }
+      ],
       "source_count": 0,
       "source_refs": [],
       "activity_since_2025_11_06_verified": null,
@@ -29557,6 +29645,11 @@
           "url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
           "page_type": "other_reference",
           "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://planet-randy.com/blog/eintrag/klappe-am-suedfriedhof-2/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
         }
       ],
       "source_count": 2,
@@ -29759,6 +29852,11 @@
           "url": "https://mapcarta.com/36269974",
           "page_type": "map_context",
           "source_status": "current_site_source_field"
+        },
+        {
+          "url": "https://planet-randy.com/blog/eintrag/luitpoldpark/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
         }
       ],
       "source_count": 0,
@@ -30029,6 +30127,11 @@
           "url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
           "page_type": "other_reference",
           "source_status": "saved_best"
+        },
+        {
+          "url": "https://planet-randy.com/blog/eintrag/parkplatz-brunnthal/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
         }
       ],
       "source_count": 1,
@@ -30071,6 +30174,11 @@
           "url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
           "page_type": "other_reference",
           "source_status": "saved_best"
+        },
+        {
+          "url": "https://planet-randy.com/blog/eintrag/parkplatz-kreuzlinger-forst/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
         }
       ],
       "source_count": 1,
@@ -30208,6 +30316,11 @@
           "url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
           "page_type": "other_reference",
           "source_status": "saved_other"
+        },
+        {
+          "url": "https://planet-randy.com/blog/eintrag/ammersee/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
         }
       ],
       "source_count": 1,
@@ -30420,12 +30533,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
+      "best_url": "https://planet-randy.com/blog/eintrag/innsbrucker-ring/",
       "best_url_basis": {
-        "page_type": "directory_or_context",
-        "source_status": "saved_best"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://planet-randy.com/blog/eintrag/innsbrucker-ring/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        }
+      ],
       "source_count": 2,
       "source_refs": [
         {
@@ -30456,12 +30575,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
+      "best_url": "https://planet-randy.com/blog/eintrag/klappe-in-der-adalberthalle/",
       "best_url_basis": {
-        "page_type": "directory_or_context",
-        "source_status": "saved_best"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://planet-randy.com/blog/eintrag/klappe-in-der-adalberthalle/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        }
+      ],
       "source_count": 2,
       "source_refs": [
         {
@@ -44866,11 +44991,10 @@
       ],
       "research_stage": "incomplete",
       "live_status": null,
-      "best_url": "https://www.popcorn.dating/locations/?page=2",
+      "best_url": "https://www.popcorn.dating/luxembourg/luxembourg/dippach/locations/public-sex/parking%2Blot/route-de-dippach/19535/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "archived_source",
-        "source_status": "site_state_blocked"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [
         {
@@ -47684,13 +47808,18 @@
       ],
       "research_stage": null,
       "live_status": "Live",
-      "best_url": "https://www.cruisinggays.com/amsterdam/c/areas/",
+      "best_url": "https://www.cruisinggays.com/amsterdam/areas/10412-gaasperplas/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
-        "source_status": "current_site_source_field"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/amsterdam/areas/10412-gaasperplas/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        }
+      ],
       "source_count": 0,
       "source_refs": [],
       "activity_since_2025_11_06_verified": null,
@@ -47712,13 +47841,18 @@
       ],
       "research_stage": null,
       "live_status": "Live",
-      "best_url": "https://www.cruisinggays.com/amsterdam/c/areas/",
+      "best_url": "https://www.cruisinggays.com/amsterdam/areas/14938-oosterpark/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
-        "source_status": "current_site_source_field"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/amsterdam/areas/14938-oosterpark/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        }
+      ],
       "source_count": 0,
       "source_refs": [],
       "activity_since_2025_11_06_verified": null,
@@ -47857,17 +47991,21 @@
       ],
       "research_stage": null,
       "live_status": "Live",
-      "best_url": "https://thegaypassport.com/community/amsterdam-cruising-guide/",
+      "best_url": "https://www.cruisinggays.com/amsterdam/areas/454-vondelpark/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
-        "source_status": "current_site_source_field"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [
         {
           "url": "https://coupleofmen.com/20908-amsterdam-gay-cruising-guide/",
           "page_type": "context_or_official_source",
           "source_status": "specialist_guide_or_contextual"
+        },
+        {
+          "url": "https://www.cruisinggays.com/amsterdam/areas/454-vondelpark/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
         }
       ],
       "source_count": 0,
@@ -47892,13 +48030,18 @@
       ],
       "research_stage": null,
       "live_status": "Live",
-      "best_url": "https://www.cruisinggays.com/amsterdam/c/areas/",
+      "best_url": "https://www.cruisinggays.com/amsterdam/areas/14941-westerpark/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
-        "source_status": "current_site_source_field"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/amsterdam/areas/14941-westerpark/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        }
+      ],
       "source_count": 0,
       "source_refs": [],
       "activity_since_2025_11_06_verified": null,
@@ -48467,8 +48610,8 @@
       "live_status": null,
       "best_url": "https://www.popcorn.dating/netherlands/overijssel/haaksbergen/locations/public-sex/parking%2Blot/buurse/17366/",
       "best_url_basis": {
-        "page_type": "directory_or_context",
-        "source_status": "linked_page_matched"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -48743,8 +48886,8 @@
       "live_status": null,
       "best_url": "https://www.popcorn.dating/netherlands/zuid-holland/oud-alblas/locations/public-sex/parking%2Blot/kippenbos/19840/",
       "best_url_basis": {
-        "page_type": "directory_or_context",
-        "source_status": "linked_page_matched"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [
         {
@@ -56884,8 +57027,8 @@
       "live_status": null,
       "best_url": "https://www.popcorn.dating/spain/islas%2Bbaleares/can%2Bpastilla/locations/public-sex/parking%2Blot/naturschutzgebiet-can-pastilla/22480/",
       "best_url_basis": {
-        "page_type": "directory_or_context",
-        "source_status": "saved_best"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [
         {
@@ -57605,8 +57748,8 @@
       "live_status": null,
       "best_url": "https://www.popcorn.dating/spain/tarragona/l%27infant/locations/public-sex/outdoor/platja-del-torn/18421/",
       "best_url_basis": {
-        "page_type": "directory_or_context",
-        "source_status": "saved_best"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [
         {
@@ -59782,8 +59925,8 @@
       "live_status": null,
       "best_url": "https://www.popcorn.dating/spain/islas%2Bbaleares/sa%2Bcoma/locations/public-sex/parking%2Blot/sa-coma/21790/",
       "best_url_basis": {
-        "page_type": "directory_or_context",
-        "source_status": "saved_best"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [
         {
@@ -69379,11 +69522,10 @@
       ],
       "research_stage": null,
       "live_status": "Live",
-      "best_url": "https://thegaypassport.com/community/london-cruising-guide/",
+      "best_url": "https://www.cruisinggays.com/london/areas/27940-hampstead-heath/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
-        "source_status": "current_site_source_field"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [
         {
@@ -69405,6 +69547,11 @@
           "url": "https://www.travelgay.com/editorial/popular-gay-cruising-areas-in-london",
           "page_type": "context_or_official_source",
           "source_status": "specialist_guide_or_contextual"
+        },
+        {
+          "url": "https://www.cruisinggays.com/london/areas/27940-hampstead-heath/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
         }
       ],
       "source_count": 0,
@@ -69710,17 +69857,21 @@
       ],
       "research_stage": null,
       "live_status": "Live",
-      "best_url": "https://thegaypassport.com/community/london-cruising-guide/",
+      "best_url": "https://www.cruisinggays.com/london/areas/30576-hyde-park/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
-        "source_status": "current_site_source_field"
+        "page_type": "direct_cruising_entry",
+        "source_status": "archived_raw_source"
       },
       "alternate_urls": [
         {
           "url": "https://www.royalparks.org.uk/visit/parks/hyde-park",
           "page_type": "context_or_official_source",
           "source_status": "official_or_contextual_site"
+        },
+        {
+          "url": "https://www.cruisinggays.com/london/areas/30576-hyde-park/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
         }
       ],
       "source_count": 0,
@@ -69928,7 +70079,13 @@
         "research_provenance": "current_listing_source",
         "source_status": "current_site_source_field"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/london/areas/56231-kensal-green-london-park/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "archived_raw_source"
+        }
+      ],
       "source_count": 0,
       "source_refs": [],
       "activity_since_2025_11_06_verified": null,
@@ -75093,5 +75250,1084 @@
       "GitHub history may keep past versions even after deletion.",
       "Do not delete any files outside the cruising-research archive."
     ]
-  }
+  },
+  "unmatched_direct_leads": [
+    {
+      "name": "Parking A10, both directions",
+      "city": "Salzburg",
+      "country": "Austria",
+      "url": "https://www.cruisinggays.com/salzburg/areas/6897-parking-a10-both-directions/",
+      "original_archive": "research/Archive/scrape_8.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "insufficient_location_precision"
+    },
+    {
+      "name": "WildesWäldle",
+      "city": "Salzburg",
+      "country": "Austria",
+      "url": "https://www.gays-cruising.com/de/cruising/wildeswaldle_salzburg_osterreich_80498",
+      "original_archive": "research/Archive/gap_fill_scrape_1.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "hold_needs_detail"
+    },
+    {
+      "name": "Parking Doornstraat",
+      "city": "Bruges",
+      "country": "Belgium",
+      "url": "https://www.gays-cruising.com/en/cruising/parking_doornstraat_jabbeke_belgie_21289",
+      "original_archive": "research/Archive/gap_fill_scrape_1.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "hold_needs_detail"
+    },
+    {
+      "name": "Saharabucht FKK",
+      "city": "Lopar",
+      "country": "Croatia",
+      "url": "https://www.popcorn.dating/croatia/primorsko-goranska/lopar/locations/public-sex/outdoor/saharabucht-fkk/18353/",
+      "original_archive": "research/Archive/scrape_6.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "insufficient_cruising_evidence"
+    },
+    {
+      "name": "Schweinchenstrand Rovinj",
+      "city": "Rovinj",
+      "country": "Croatia",
+      "url": "https://www.popcorn.dating/croatia/istarska/rovinj/locations/public-sex/outdoor/schweinchenstrand-rovinj/17556/",
+      "original_archive": "research/Archive/scrape_6.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "insufficient_cruising_evidence"
+    },
+    {
+      "name": "Koskipuisto",
+      "city": "Tampere",
+      "country": "Finland",
+      "url": "https://www.cruisinggays.com/tampere/areas/23052-koskipuisto/",
+      "original_archive": "research/Archive/scrape_8.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "insufficient_evidence"
+    },
+    {
+      "name": "Am Rhein auf der Französischen Seite im Wald",
+      "city": "Fort-Louis",
+      "country": "France",
+      "url": "https://www.popcorn.dating/france/alsace/fort-louis/locations/public-sex/parking%2Blot/am-rhein-auf-der-franzosischen-seite-im-wald/19149/",
+      "original_archive": "research/Archive/scrape_6.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "exclude_speculative"
+    },
+    {
+      "name": "Park gegenüber Hotel Berlin",
+      "city": "Hamburg",
+      "country": "Germany",
+      "url": "https://www.cruisinggays.com/hamburg/areas/75368-park-gegenuber-hotel-berlin/",
+      "original_archive": "research/Archive/scrape_8.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "insufficient_evidence"
+    },
+    {
+      "name": "Parkplatz Wörthsee",
+      "city": "Wörthsee",
+      "country": "Germany",
+      "url": "https://planet-randy.com/blog/eintrag/parkplatz-woerthsee/",
+      "original_archive": "research/Archive/gap_fill_scrape_3.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "hold_negative_activity_report"
+    },
+    {
+      "name": "Staffelsee",
+      "city": "Uffing am Staffelsee",
+      "country": "Germany",
+      "url": "https://planet-randy.com/blog/eintrag/staffelsee/",
+      "original_archive": "research/Archive/gap_fill_scrape_3.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "hold_wrong_city_and_vague_lake"
+    },
+    {
+      "name": "Tegernsee",
+      "city": "Tegernsee",
+      "country": "Germany",
+      "url": "https://planet-randy.com/blog/eintrag/tegernsee/",
+      "original_archive": "research/Archive/gap_fill_scrape_3.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "hold_vague_lake_and_detail_timeout"
+    },
+    {
+      "name": "Chiavari",
+      "city": "Chiavari",
+      "country": "Italy",
+      "url": "https://www.popcorn.dating/italy/liguria/chiavari/locations/public-sex/outdoor/chiavari/22086/",
+      "original_archive": "research/Archive/scrape_6.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "exclude_unsafe_access"
+    },
+    {
+      "name": "Isabellagriend",
+      "city": "Herten",
+      "country": "Netherlands",
+      "url": "https://www.popcorn.dating/netherlands/limburg/herten/locations/public-sex/outdoor/isabellagriend/17922/",
+      "original_archive": "research/Archive/scrape_6.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "insufficient_cruising_evidence"
+    },
+    {
+      "name": "Cartuja",
+      "city": "Granada",
+      "country": "Spain",
+      "url": "https://www.gays-cruising.com/en/cruising/cartuja_granada_espana_9001",
+      "original_archive": "research/Archive/gap_fill_scrape_1.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "hold_needs_detail"
+    },
+    {
+      "name": "FKK Strand Playa de Ingles",
+      "city": "Maspalomas",
+      "country": "Spain",
+      "url": "https://www.popcorn.dating/spain/las%2Bpalmas/maspalomas/locations/public-sex/outdoor/fkk-strand-playa-de-ingles/20763/",
+      "original_archive": "research/Archive/scrape_6.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "probable_existing_backroom"
+    },
+    {
+      "name": "La Raya",
+      "city": "Seville",
+      "country": "Spain",
+      "url": "https://www.gays-cruising.com/en/cruising/la_raya_sevilla_spain_58985",
+      "original_archive": "research/Archive/gap_fill_scrape_1.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "hold_needs_detail"
+    },
+    {
+      "name": "Playa de Sant Sebastiá",
+      "city": "Barcelona",
+      "country": "Spain",
+      "url": "https://www.cruisinggays.com/barcelona/areas/72825-playa-de-sant-sebastia/",
+      "original_archive": "research/Archive/scrape_8.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "insufficient_evidence"
+    },
+    {
+      "name": "Puente de los Vados",
+      "city": "Granada",
+      "country": "Spain",
+      "url": "https://www.gays-cruising.com/en/cruising/puente_de_los_vados_santa_fe_espana_9700",
+      "original_archive": "research/Archive/gap_fill_scrape_1.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "hold_needs_detail"
+    },
+    {
+      "name": "Luzern – Bundesplatz",
+      "city": "Lucerne",
+      "country": "Switzerland",
+      "url": "https://www.cruisinggays.com/luzern/areas/59457-luzern-bundesplatz/",
+      "original_archive": "research/Archive/scrape_8.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "insufficient_specific_evidence"
+    },
+    {
+      "name": "Finsbury Circus",
+      "city": "London",
+      "country": "United Kingdom",
+      "url": "https://www.cruisinggays.com/london/areas/42506-finsbury-circus/",
+      "original_archive": "research/Archive/scrape_8.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "insufficient_evidence"
+    },
+    {
+      "name": "Warriston Cemetery",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "url": "https://www.cruisinggays.com/edinburgh/areas/556-warriston-cemetery/",
+      "original_archive": "research/Archive/scrape_8.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "safety_access_review"
+    },
+    {
+      "name": "Yellow Craig Beach",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "url": "https://www.gays-cruising.com/en/cruising/yellow_craig_beach_edinburgh_reino_unido_32696",
+      "original_archive": "research/Archive/gap_fill_scrape_1.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "hold_needs_detail"
+    },
+    {
+      "name": "Big creek scenic area",
+      "city": "San Jacinto",
+      "country": "United States",
+      "url": "https://www.popcorn.dating/united%2Bstates/texas/san%2Bjacinto/locations/public-sex/outdoor/big-creek-scenic-area/19649/",
+      "original_archive": "research/Archive/scrape_6.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "insufficient_cruising_evidence"
+    },
+    {
+      "name": "Park",
+      "city": "Springfield",
+      "country": "United States",
+      "url": "https://www.popcorn.dating/united%2Bstates/kentucky/springfield/locations/public-sex/outdoor/park/20593/",
+      "original_archive": "research/Archive/scrape_6.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "exclude_non_specific"
+    },
+    {
+      "name": "Tulsa, Oklahoma",
+      "city": "Tulsa",
+      "country": "United States",
+      "url": "https://www.popcorn.dating/united%2Bstates/oklahoma/tulsa/locations/public-sex/outdoor/tulsa-oklahoma/22383/",
+      "original_archive": "research/Archive/scrape_6.json",
+      "source_status": "original_archived_source__not_individually_revalidated",
+      "assessment": "exclude_non_specific"
+    }
+  ],
+  "regional_discovery_pages": [
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json",
+        "research/Archive/gap_fill_scrape_2.json"
+      ],
+      "record_mentions": 29
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-muenchen/189/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json",
+        "research/Archive/gap_fill_scrape_2.json"
+      ],
+      "record_mentions": 28
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/2/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json",
+        "research/Archive/gap_fill_scrape_2.json"
+      ],
+      "record_mentions": 27
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/barcelona/spain",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 23
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/poland",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 20
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 20
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 20
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 20
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/belgium",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 19
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/netherlands",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 19
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/budapest/hungary",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 18
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/switzerland",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 18
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/luxembourg",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 16
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/italy",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 16
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/andorra",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/estonia",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/georgia",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/israel",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/serbia",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/lithuania",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/montenegro",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/slovakia",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/slovenia",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/sweden",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/turkey",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/united_states",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/bosnia_and_herzegovina",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/bulgaria",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/cyprus",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/czech_republic",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/hungary",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/romania",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/austria",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/ireland",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/malta",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/finland",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/veneto_venezia/italy",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/latvia",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/denmark",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/norway",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/portugal",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/greece",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/united_kingdom",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/germany",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/spain",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/france",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/brugge/west_vlaanderen/belgium",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/granada/granada/spain",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/napoli/campania_napoli/italy",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/bologna/emilia_romagna_bologna/italy",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/verona/veneto_verona/italy",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_1.json"
+      ],
+      "record_mentions": 15
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-hannover/117/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 14
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-duesseldorf/68/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 13
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-frankfurt-am-main/734/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 13
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-koeln/151/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 12
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-dortmund/64/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 12
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/firenze/toscana_firenze/italy",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_1.json"
+      ],
+      "record_mentions": 11
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/edinburgh/scotland_south/united_kingdom",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_1.json"
+      ],
+      "record_mentions": 11
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/3/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/3/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/4/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://www.popcorn.dating/locations/?page=2",
+      "source_archive_files": [
+        "research/Archive/scrape_6.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://www.popcorn.dating/locations/",
+      "source_archive_files": [
+        "research/Archive/scrape_6.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://planet-randy.com/blog/eintrag/tag/gay-cruising-muenchen/",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_3.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://planet-randy.com/blog/eintrag/tag/gay-cruising-muenchen/page/2/",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_3.json"
+      ],
+      "record_mentions": 10
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-dresden/65/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 9
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-duisburg/66/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 9
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 9
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/5/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 9
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-koeln/page/2/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 9
+    },
+    {
+      "url": "https://thegaypassport.com/community/london-cruising-guide/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 9
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-karlsruhe/140/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 8
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-mannheim/174/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 8
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-leipzig/157/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 7
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-nuernberg/201/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 7
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-saarbruecken/233/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 7
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/2/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 7
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-bremen/40/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 6
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/iceland",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 5
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/mykonos/kikladhes/greece",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 5
+    },
+    {
+      "url": "https://thegaypassport.com/community/berlin-cruising-guide/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 5
+    },
+    {
+      "url": "https://thegaypassport.com/community/new-york-city-cruising-guide/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 5
+    },
+    {
+      "url": "https://thegaypassport.com/community/puerto-vallarta-cruising-guide/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 5
+    },
+    {
+      "url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 4
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-bruehl/429/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 3
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-regensburg/220/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 3
+    },
+    {
+      "url": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 3
+    },
+    {
+      "url": "https://www.cruisinggays.com/edinburgh/c/areas/",
+      "source_archive_files": [
+        "research/Archive/scrape_8.json"
+      ],
+      "record_mentions": 3
+    },
+    {
+      "url": "https://www.cruisinggays.com/florence/c/areas/",
+      "source_archive_files": [
+        "research/Archive/scrape_8.json"
+      ],
+      "record_mentions": 3
+    },
+    {
+      "url": "https://planet-randy.com/blog/eintrag/tag/gay-cruising-munich/",
+      "source_archive_files": [
+        "research/Archive/gap_fill_scrape_3.json"
+      ],
+      "record_mentions": 3
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/liechtenstein",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 2
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-essen/79/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 2
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-hamburg/112/17/1/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 2
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-moerfelden-walldorf/357/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 2
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-rottweil/232/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 2
+    },
+    {
+      "url": "https://thegaypassport.com/community/paris-cruising-guide/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 2
+    },
+    {
+      "url": "https://thegaypassport.com/mykonos/mykonos-gay-beaches-guide/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 2
+    },
+    {
+      "url": "https://thegaypassport.com/community/sydney-cruising-guide/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 2
+    },
+    {
+      "url": "https://www.cruisinggays.com/map/?cityid=3733&filter=4",
+      "source_archive_files": [
+        "research/Archive/scrape_8.json"
+      ],
+      "record_mentions": 2
+    },
+    {
+      "url": "https://www.gays-cruising.com/en/armenia",
+      "source_archive_files": [
+        "research/Archive/scrape_1.json"
+      ],
+      "record_mentions": 1
+    },
+    {
+      "url": "https://gay-szene.net/gay-cruising-in-loerrach/167/17/rubrik.html",
+      "source_archive_files": [
+        "research/Archive/scrape_2.json"
+      ],
+      "record_mentions": 1
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/8/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 1
+    },
+    {
+      "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/5/",
+      "source_archive_files": [
+        "research/Archive/scrape_3.json"
+      ],
+      "record_mentions": 1
+    },
+    {
+      "url": "https://thegaypassport.com/community/amsterdam-cruising-guide/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 1
+    },
+    {
+      "url": "https://thegaypassport.com/destinations/gay-sitges/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 1
+    },
+    {
+      "url": "https://thegaypassport.com/destinations/gay-tel-aviv/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 1
+    },
+    {
+      "url": "https://thegaypassport.com/venue/leonardo-art-tel-aviv-by-the-beach/",
+      "source_archive_files": [
+        "research/Archive/scrape_4.json"
+      ],
+      "record_mentions": 1
+    },
+    {
+      "url": "https://www.cruisinggays.com/map/?cityid=4137&filter=4",
+      "source_archive_files": [
+        "research/Archive/scrape_8.json"
+      ],
+      "record_mentions": 1
+    },
+    {
+      "url": "https://www.cruisinggays.com/sitemap/locations.aspx?CityId=3733",
+      "source_archive_files": [
+        "research/Archive/scrape_8.json"
+      ],
+      "record_mentions": 1
+    },
+    {
+      "url": "https://www.cruisinggays.com/salzburg/c/areas/",
+      "source_archive_files": [
+        "research/Archive/scrape_8.json"
+      ],
+      "record_mentions": 1
+    },
+    {
+      "url": "https://www.cruisinggays.com/bologna/c/areas/",
+      "source_archive_files": [
+        "research/Archive/scrape_8.json"
+      ],
+      "record_mentions": 1
+    }
+  ]
 }
