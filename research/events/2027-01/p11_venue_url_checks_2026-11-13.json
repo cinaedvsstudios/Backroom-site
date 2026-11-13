@@ -1,0 +1,245 @@
+{
+  "research_month": "2027-01",
+  "batch": "P11",
+  "date_researched": "2026-11-13",
+  "batch_size": 20,
+  "scope": "Sequential pending Website_URL venue checks at audit indices 552–579 (skipping already checked/no-site entries), Croatia, Bosnia, Romania, Slovenia, Slovakia, Greece, Norway, Iceland, Malta, Cyprus",
+  "new_eligible_january_events": 0,
+  "publication": "No event import; official source dates are old or outside January 2027, mixed audience, or inaccessible. Q Club third-party January calendar conflicts with official address and lacks men-only darkroom confirmation.",
+  "highlights": [
+    {
+      "Venue_ID": "NOR-OSL-PRD-01",
+      "finding": "Oslo Pride 2027 is officially June 16–26, not January."
+    },
+    {
+      "Venue_ID": "ROU-BUH-PAR-01",
+      "finding": "January 2027 third-party listings conflict with the Q Club's official address and do not establish men-only darkroom eligibility."
+    },
+    {
+      "Venue_ID": "NOR-BGO-BAR-01",
+      "finding": "Fincken explicitly welcomes everyone regardless of gender/sexuality."
+    }
+  ],
+  "entries": [
+    {
+      "audit_index_zero_based": 552,
+      "Venue_ID": "HRV-ZAG-PRD-01",
+      "Name": "Zagreb Pride",
+      "City": "Zagreb",
+      "Country": "Croatia",
+      "Website_URL": "https://zagreb-pride.net/en/zagreb-pride-en/",
+      "checked_calendar_url": "https://zagreb-pride.net/en/zagreb-pride-en/",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Zagreb Pride official English site covers LGBTIQ rights, past marches and 2026 news; no individually dated January 2027 men-only darkroom event. Pride march itself is inclusive public activism."
+    },
+    {
+      "audit_index_zero_based": 554,
+      "Venue_ID": "HRV-ZAG-SAU-01",
+      "Name": "Sauna Centar Zagreb",
+      "City": "Zagreb",
+      "Country": "Croatia",
+      "Website_URL": "https://saunacentar.com/",
+      "checked_calendar_url": "https://saunacentar.com/",
+      "january_2027_check_status": "checked_access_limited",
+      "january_findings": "Official Zagreb Sauna Centar website returned a browser-verification challenge, so an independently dated January 2027 event cannot be checked from this page. Keep for alternate verified source review."
+    },
+    {
+      "audit_index_zero_based": 555,
+      "Venue_ID": "HRV-SPL-PRD-01",
+      "Name": "Split Pride",
+      "City": "Split",
+      "Country": "Croatia",
+      "Website_URL": "https://lgbtcentarsplit.org/pride/",
+      "checked_calendar_url": "https://lgbtcentarsplit.org/pride/",
+      "january_2027_check_status": "checked_access_limited",
+      "january_findings": "Split Pride source returned an anti-bot browser-verification challenge. No January 2027 men-only darkroom event confirmed from this official URL."
+    },
+    {
+      "audit_index_zero_based": 556,
+      "Venue_ID": "HRV-NOV-PAR-01",
+      "Name": "The Pride Beach",
+      "City": "Novalja",
+      "Country": "Croatia",
+      "Website_URL": "https://www.thepridebeach.com/",
+      "checked_calendar_url": "https://www.thepridebeach.com/",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Official Pride Beach Novalja festival homepage lists 26–29 August 2026 LGBTQ+ open beach parties, not January 2027 or men-only darkroom sessions."
+    },
+    {
+      "audit_index_zero_based": 557,
+      "Venue_ID": "BIH-SAR-PRD-01",
+      "Name": "BiH Pride March",
+      "City": "Sarajevo",
+      "Country": "Bosnia and Herzegovina",
+      "Website_URL": "https://povorkaponosa.ba/english-2/",
+      "checked_calendar_url": "https://povorkaponosa.ba/english-2/",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "BiH Pride March official site describes an inclusive public human-rights march; annual site navigation includes 2026 archive but no January 2027 men-only darkroom party."
+    },
+    {
+      "audit_index_zero_based": 558,
+      "Venue_ID": "ROU-BUH-PRD-01",
+      "Name": "Bucharest Pride",
+      "City": "Bucharest",
+      "Country": "Romania",
+      "Website_URL": "https://acceptromania.ro/bucharest-pride/",
+      "checked_calendar_url": "https://acceptromania.ro/bucharest-pride/",
+      "january_2027_check_status": "checked_access_failed",
+      "january_findings": "Official ACCEPT Romania Bucharest Pride URL returned HTTP 403. No event-specific January 2027 men's darkroom notice verified through this URL."
+    },
+    {
+      "audit_index_zero_based": 559,
+      "Venue_ID": "ROU-BUH-PAR-01",
+      "Name": "Q Club",
+      "City": "Bucharest",
+      "Country": "Romania",
+      "Website_URL": "https://www.theqclub.ro/",
+      "checked_calendar_url": "https://www.theqclub.ro/events",
+      "january_2027_check_status": "checked_secondary_only",
+      "january_findings": "Official Q Club Bucharest events page currently displays parties in July 2026 (other fetched version had Oct–Nov 2026), not January 2027. A third-party directory publishes Jan 3/4/10/11 dates with a different address (Bulevardul Carol I 61) versus official Strada Verzișori 20, and describes general nightclub events, not confirmed men-only darkroom. Do not import; hold date/location discrepancies for recheck."
+    },
+    {
+      "audit_index_zero_based": 560,
+      "Venue_ID": "SVN-LJU-PRD-01",
+      "Name": "Ljubljana Pride Festival",
+      "City": "Ljubljana",
+      "Country": "Slovenia",
+      "Website_URL": "https://ljubljanapridefestival.org/en/",
+      "checked_calendar_url": "https://ljubljanapridefestival.org/en/",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Official Ljubljana Pride Festival site advertises its 2026 festival and historical editions; no January 2027 men-only play party. Inclusive human-rights and cultural festival, not a cruising club."
+    },
+    {
+      "audit_index_zero_based": 561,
+      "Venue_ID": "SVN-LJU-BAR-01",
+      "Name": "Klub Tiffany",
+      "City": "Ljubljana",
+      "Country": "Slovenia",
+      "Website_URL": "https://www.kulturnicenterq.org/",
+      "checked_calendar_url": "https://www.kulturnicenterq.org/",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Official Kulturni Center Q / Klub Tiffany homepage displays Aug/Sep 2026 events and queer community activities. Its calendar endpoint timed out, and no January 2027 men-only darkroom event was confirmed."
+    },
+    {
+      "audit_index_zero_based": 562,
+      "Venue_ID": "SVK-BRA-PRD-01",
+      "Name": "Rainbow PRIDE Bratislava",
+      "City": "Bratislava",
+      "Country": "Slovakia",
+      "Website_URL": "https://duhovypride.sk/",
+      "checked_calendar_url": "https://duhovypride.sk/",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Official Bratislava Rainbow Pride homepage still promotes 18 July 2026 inclusive public Pride, without eligible January 2027 men-only darkroom event."
+    },
+    {
+      "audit_index_zero_based": 564,
+      "Venue_ID": "GRC-THS-PRD-01",
+      "Name": "Thessaloniki Pride",
+      "City": "Thessaloniki",
+      "Country": "Greece",
+      "Website_URL": "https://thessalonikipride.com/?lang=en",
+      "checked_calendar_url": "https://thessalonikipride.com/?lang=en",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Official Thessaloniki Pride site currently displays festival 15–20 June 2026 and 2026 news. No January 2027 men-only darkroom party."
+    },
+    {
+      "audit_index_zero_based": 565,
+      "Venue_ID": "GRC-THS-BAR-01",
+      "Name": "Enola",
+      "City": "Thessaloniki",
+      "Country": "Greece",
+      "Website_URL": "https://enola.gr/",
+      "checked_calendar_url": "https://enola.gr/",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "january_findings": "Official Enola Thessaloniki promotes daily LGBTQ+ nightclub opening and an 'Upcoming Event' heading without dated January 2027 listings; general mixed/inclusive queer club, no confirmed men-only darkroom event."
+    },
+    {
+      "audit_index_zero_based": 568,
+      "Venue_ID": "NOR-OSL-PRD-01",
+      "Name": "Oslo Pride",
+      "City": "Oslo",
+      "Country": "Norway",
+      "Website_URL": "https://www.oslopride.no/",
+      "checked_calendar_url": "https://www.oslopride.no/",
+      "january_2027_check_status": "checked_no_eligible_january_dates",
+      "january_findings": "Official Oslo Pride homepage explicitly announces 16–26 June 2027, with Pride Park 23 June and parade 26 June; no January 2027 men-only darkroom event."
+    },
+    {
+      "audit_index_zero_based": 572,
+      "Venue_ID": "NOR-BGO-PRD-01",
+      "Name": "Bergen Pride",
+      "City": "Bergen",
+      "Country": "Norway",
+      "Website_URL": "https://www.bergenpride.no/",
+      "checked_calendar_url": "https://www.bergenpride.no/",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Official Bergen Pride page remains focused on 29 May–6 June 2026 rainbow celebrations and 2026 programme, not January 2027 men-only darkroom parties."
+    },
+    {
+      "audit_index_zero_based": 573,
+      "Venue_ID": "NOR-BGO-BAR-01",
+      "Name": "Fincken",
+      "City": "Bergen",
+      "Country": "Norway",
+      "Website_URL": "https://www.fincken.no/",
+      "checked_calendar_url": "https://www.fincken.no/regular-events",
+      "january_2027_check_status": "checked_recurring_schedule_only",
+      "january_findings": "Official Fincken events page describes recurring inclusive queer bar/social/drag programmes and refers visitors to Facebook and Instagram for upcoming dates. Official statement welcomes any gender and orientation; no dated January 2027 men-only darkroom event."
+    },
+    {
+      "audit_index_zero_based": 574,
+      "Venue_ID": "ISL-REK-PRD-01",
+      "Name": "Reykjavík Pride",
+      "City": "Reykjavík",
+      "Country": "Iceland",
+      "Website_URL": "https://hinsegindagar.is/en/",
+      "checked_calendar_url": "https://hinsegindagar.is/en/",
+      "january_2027_check_status": "checked_access_limited",
+      "january_findings": "Reykjavík Pride official site timed out. Municipal tourism sources place the inclusive festival in August; published third-party 2027 dates conflict, so no January 2027 men-only darkroom date or festival-specific date is asserted."
+    },
+    {
+      "audit_index_zero_based": 575,
+      "Venue_ID": "ISL-REK-BAR-01",
+      "Name": "Kiki Queer Bar",
+      "City": "Reykjavík",
+      "Country": "Iceland",
+      "Website_URL": "https://kiki.is/",
+      "checked_calendar_url": "https://kiki.is/",
+      "january_2027_check_status": "checked_access_failed",
+      "january_findings": "Kiki Reykjavík official domain returned HTTP 403. No individually dated January 2027 men-only darkroom event established from the website."
+    },
+    {
+      "audit_index_zero_based": 576,
+      "Venue_ID": "MLT-VAL-PRD-01",
+      "Name": "Malta Pride",
+      "City": "Valletta",
+      "Country": "Malta",
+      "Website_URL": "https://maltapride.com/",
+      "checked_calendar_url": "https://maltapride.com/events/",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Official Malta Pride homepage and events section explicitly advertise 4–13 September 2026 and 2026 event calendar; no January 2027 men-only darkroom event."
+    },
+    {
+      "audit_index_zero_based": 578,
+      "Venue_ID": "MLT-VIC-PRD-01",
+      "Name": "Gozo Pride",
+      "City": "Victoria",
+      "Country": "Malta",
+      "Website_URL": "https://www.lgbtigozo.com/gozo-pride",
+      "checked_calendar_url": "https://www.lgbtigozo.com/gozo-pride",
+      "january_2027_check_status": "checked_stale_calendar",
+      "january_findings": "Official Gozo Pride site announces Saturday 5 September 2026 Pride Village and 30 August boat party; inclusive public programmes, no January 2027 qualifying men's-only event."
+    },
+    {
+      "audit_index_zero_based": 579,
+      "Venue_ID": "CYP-NIC-PRD-01",
+      "Name": "Cyprus Pride",
+      "City": "Nicosia",
+      "Country": "Cyprus",
+      "Website_URL": "https://accept.cy/home/",
+      "checked_calendar_url": "https://accept.cy/home/",
+      "january_2027_check_status": "checked_access_limited",
+      "january_findings": "Official Accept LGBTI Cyprus URL displays a browser-verification challenge; no January 2027 male-only darkroom event verified. Accept is a community/Pride organisation, not evidence of a cruising event."
+    }
+  ]
+}
