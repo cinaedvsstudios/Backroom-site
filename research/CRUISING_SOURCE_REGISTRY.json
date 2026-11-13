@@ -9,7 +9,7 @@
     "source_base_snapshot": "2026-11-06 to 2026-11-13",
     "data_not_proof": "Linked directory pages and old research notes do not prove present-day cruising, lawful access or recent visitors. A checked source URL is not a checked live activity claim.",
     "selection": "Prefer direct spot-specific cruising reference pages. Preserve supporting links, but rank directory indexes and contextual evidence lower. Source status is from archived research, not a fresh URL accessibility check.",
-    "work_status": "BASE_BUILD_VALIDATED__B_C_D_BATCH_ENRICHMENT_PENDING",
+    "work_status": "ENRICHMENT_IN_PROGRESS",
     "counts": {
       "total": 1591,
       "queue_candidates": 1172,
@@ -18,14 +18,20 @@
       "current_site_cruising_listings": 486,
       "auxiliary_manifest": 162,
       "reference_pass": 50,
-      "best_direct": 675,
+      "best_direct": 721,
       "best_index": 875,
       "no_best_url": 0
     },
     "cleanup_permission": "NO_DELETIONS_AUTHORISED_OR_PERFORMED; audit and retain essential production files separately.",
     "queue_sha": "74f6ddf1d75b7b26c5f8e5ff3557aecef9bce99f",
     "group_A_master_sha": "13e14c501fca766a0f62e9b7a265d09ca484dfb6",
-    "live_listings_sha": "f0a8dc88ad1440d0cb0a427e2914f13935077f52"
+    "live_listings_sha": "f0a8dc88ad1440d0cb0a427e2914f13935077f52",
+    "enrichment_B_progress": {
+      "batches_completed_through": 13,
+      "batches_total": 59,
+      "records_enriched_this_pass": 65,
+      "errors": []
+    }
   },
   "research_websites": [
     {
@@ -1023,15 +1029,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "needs_recent_visit_evidence",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/austria",
+      "best_url": "https://www.gays-cruising.com/en/cruising/kahlsdorf_sternweg_wildon_osterreich_21182",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/austria",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.meinbodenshop.de/blog/Meyer-an-neuem-Standort-in-Premstaetten",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -1042,11 +1059,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Wooded land around Sternweg near the Kalsdorf A9 exit, described by the primary directory as a cruising area. Its visible comments date to July 2025, outside the latest-activity window.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0294_0298.json"
       ],
       "original_index": 295,
       "original_section": "B"
@@ -1059,15 +1077,31 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "verify_alias_and_recent_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/austria",
+      "best_url": "https://www.gays-cruising.com/en/cruising/parkplatz_und_ufer_hawaii_innsbruck_osterreich_8835",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://gay-szene.net/innsbruck-zirl-hawaii-paradiesweg-in-innsbruck/12504/eintrag.html",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.cruisinggays.com/innsbruck/areas/2131-hawaiinudistbeach/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/austria",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -1078,11 +1112,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Riverside woods and naturist area on the Inn near Kranebitten, sometimes called Hawaii/Paradiesweg. Gay-szene.net and CruisingGays describe a likely overlapping riverbank corridor, but matching the exact parking place and section needs investigation.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0294_0298.json"
       ],
       "original_index": 296,
       "original_section": "B"
@@ -1095,15 +1130,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_exact_site_access",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/austria",
+      "best_url": "https://www.gays-cruising.com/en/cruising/a9_rastplatz_bei_spielfeld_leibnitz_osterreich_5116",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/austria",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.pundk.at/verkehr/Generalplanung_PDF/119620_A9-Rastplatz-Ortnerhof-Sued.pdf",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -1114,11 +1160,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Directory says the A9 motorway rest areas near Spielfeld are used for encounters and mentions washrooms on both sides. The precise rest stop on each side and current operating layout are not established.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0294_0298.json"
       ],
       "original_index": 297,
       "original_section": "B"
@@ -1169,15 +1216,36 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "needs_recent_activity_and_access_verification",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/austria",
+      "best_url": "https://www.gays-cruising.com/en/cruising/wc_unionkreuzung_linz_osterreich_12178",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "direct_research",
+        "source_status": "direct_research"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/austria",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.linz.at/stadtentwicklung/wc-anlagen-liste.php",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.hilfsgemeinschaft.at/kontakt/standorte",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.erotikforum.at/themen/linz-unionkreuzung.1040164/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -1188,11 +1256,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Public toilets in the level above the underground tram platforms at Unionkreuzung, Linz. The city lists their daily 05:00–21:00 hours, which supersede the generic all-day wording sometimes used in cruising directories.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0299_0303.json"
       ],
       "original_index": 299,
       "original_section": "B"
@@ -1258,15 +1327,41 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "needs_recent_activity_verification",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/austria",
+      "best_url": "https://www.gays-cruising.com/en/cruising/weikerlsee_linz_osterreich_12066",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/austria",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.linztourismus.at/freizeit/linz-entdecken/aktivitaeten/natur/seen-und-baeder/weikerlsee",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.land-oberoesterreich.gv.at/13077.htm",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.donauregion.at/ausflugstipps-mit-den-oeffis/radspass-mit-den-oeffis/oesterreich-poi/detail/201757/weikerlsee.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.linza.at/sexwc/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -1277,11 +1372,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Weikerlsee recreation lakes south of Linz; the Kleine Weikerlsee has a designated northern naturist area and a southern clothed-bathing area. The official lake information proves public access, not current cruising.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0294_0298.json"
       ],
       "original_index": 298,
       "original_section": "B"
@@ -1352,13 +1448,13 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "needs_precise_geo_and_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -1371,11 +1467,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A small wooded hill south of Kapuzinerberg, separated by Arenbergstraße. Although the name identifies a real Salzburg landform, no source supplies credible recent first-hand evidence of cruising or identifies a specific appropriate access path.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0304_0308.json"
       ],
       "original_index": 308,
       "original_section": "B"
@@ -1388,15 +1485,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_identity_and_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/de/cruising/fkk_an_det_saalach_salzburg_osterreich_24723",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "research_provenance": "direct_research",
+        "source_status": "direct_research"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.stadtgui.de/nacktbaden/artikel/fkk_regional/20250502_fkk_und_nacktbaden_salzach_bayern_oesterreich.php",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -1407,11 +1510,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An FKK/naturist lead along the Saalach near Salzburg, recorded under a typo-bearing original name. An independent 2025 guide describes unofficial riverbank naturist spots around Wals/Hammerau, but it is not established that the directory refers to precisely the same bank or section, and nudity alone does not imply cruising.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0299_0303.json"
       ],
       "original_index": 300,
       "original_section": "B"
@@ -1472,13 +1576,13 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_managed_property",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -1491,11 +1595,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Public-facing toilet facilities within the FORUM 1 shopping centre near Salzburg Hauptbahnhof. The operator explicitly places the toilets on the upper level, but the cruising-directory claim has no independently dated on-site confirmation.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0304_0308.json"
       ],
       "original_index": 306,
       "original_section": "B"
@@ -1508,13 +1613,13 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_location_and_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/de/cruising/josefiau_wald_salzburg_osterreich_93151",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -1527,11 +1632,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Wooded area around Salzburg's Josefiau district. Geographic references establish that woodland paths exist in the Josefiau area, but no trustworthy dated report establishes recent cruising in an identifiable subsection.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0304_0308.json"
       ],
       "original_index": 305,
       "original_section": "B"
@@ -1587,13 +1693,13 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_unspecified_spot",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -1606,11 +1712,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Kiesel Passage shopping centre between Salzburg's central station and old town. The structure and address are confirmed by official tourism material, while the primary cruising-directory reference has not been supported by a recent visitor account.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0304_0308.json"
       ],
       "original_index": 307,
       "original_section": "B"
@@ -1624,19 +1731,24 @@
         "research_candidate",
         "independent_reference_pass"
       ],
-      "research_stage": null,
+      "research_stage": "hold_managed_access_and_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/de/cruising/klos_europark_salzburg_austria_53073",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "research_provenance": "direct_research",
+        "source_status": "direct_research"
       },
       "alternate_urls": [
         {
           "url": "https://www.reddit.com/r/Salzburg/comments/1m7eih9",
-          "page_type": "context_or_official_source",
-          "source_status": "local_hearsay_2025"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.europark.at/de/opening-hours/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -1651,10 +1763,11 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Men's toilets at the EUROPARK Salzburg shopping centre are listed in a gay cruising directory. Official centre hours provide the practical access limits; the exact toilets and whether any activity currently occurs were not confirmed.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/B/batch_0299_0303.json"
       ],
       "original_index": 301,
       "original_section": "B"
@@ -1667,15 +1780,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_non_dedicated_bath_and_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/de/cruising/paracelsusbad_salzburg_osterreich_94994",
+      "best_url": "https://www.gays-cruising.com/en/cruising/paracelsusbad_salzburg_osterreich_94994",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/de/cruising/paracelsusbad_salzburg_osterreich_94994",
+          "page_type": "direct_cruising_entry",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -1686,11 +1805,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Municipal bath and sauna complex in central Salzburg, with a separate spa area. A cruising website describes communal shower and sauna facilities, but its directory listing does not independently verify cruising and falsely suggests all-day availability.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0304_0308.json"
       ],
       "original_index": 304,
       "original_section": "B"
@@ -1757,29 +1877,39 @@
         "research_candidate",
         "independent_reference_pass"
       ],
-      "research_stage": null,
+      "research_stage": "hold_access_and_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/de/cruising/rosenhugel_mirabellgarten_salzburg_austria_33440",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "research_provenance": "direct_research",
+        "source_status": "direct_research"
       },
       "alternate_urls": [
         {
           "url": "https://www.cruisinggays.com/salzburg/c/areas/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.queersalzburg.at/en/salzburg-queer/queer-city-tour/",
-          "page_type": "context_or_official_source",
-          "source_status": "salzburg_lgbtq_organization_updated_2023"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.reddit.com/r/Salzburg/comments/1m7eih9",
-          "page_type": "context_or_official_source",
-          "source_status": "local_discussion_hearsay_2025"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.queersalzburg.at/locations/kurgarten-salzburg/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.salzburg.info/de/reiseinfos/salzburg-a-z/schloss-mirabell-mirabellgarten_az_11350",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -1800,10 +1930,11 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A known landscaped hill within Salzburg's Kurgarten/Mirabell complex, with a long-standing gay cruising reputation in local queer guide material. Crucially, official Mirabellgarten access is generally restricted after dusk, while sources differ on whether the cruising claim refers to Mirabellgarten proper or adjoining Kurgarten.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/B/batch_0299_0303.json"
       ],
       "original_index": 303,
       "original_section": "B"
@@ -1816,15 +1947,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_no_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.salzburg.info/en/dining-shopping/shopping-center/shopping-arena",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -1835,11 +1972,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Toilets at Shopping Arena Salzburg appear on a cruising-directory city index. Shopping Arena is a two-building shopping complex connected by an underground passage. Its public existence and daytime shopping hours are verifiable; the exact toilets named in the directory and any current cruising use are unconfirmed.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0309_0313.json"
       ],
       "original_index": 309,
       "original_section": "B"
@@ -1852,15 +1990,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_managed_access_and_evidence",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+      "best_url": "https://www.gays-cruising.com/fr/cruising/wcs_designer_outlet_salzburg_austria_53074",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "direct_research",
+        "source_status": "direct_research"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/de/salzburg/salzburg/osterreich",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.mcarthurglen.com/en/outlets/at/designer-outlet-salzburg/plan-your-visit/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -1871,11 +2020,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A directory describes several toilet areas near the food court inside Designer Outlet Salzburg. The outlet is operated by McArthurGlen in Wals-Himmelreich, outside central Salzburg, and is not open overnight. No independently dated cruising report was verified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0299_0303.json"
       ],
       "original_index": 302,
       "original_section": "B"
@@ -1946,15 +2096,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_no_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/austria",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://webcams2.asfinag.at/webcamviewer/SingleScreenServlet/?restart=&ssid=0da2b75b-a4f5-4959-9eea-559974f7db53&token=IyMjIzM1MiMyODgjYXRERSNpbmZvIyNOb3RVc2VkIzQ4NTM2MzgyOA&user=windycom&wcsid=S033_015%2C654_1_00082418",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://help.asfinag.at/bau-betrieb-und-verkehr/rastanlagen/parken/?lng=de",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -1965,11 +2126,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An ASFINAG motorway rest-area lead labelled Herzogenburg near Sankt Pölten. Official motorway camera information places a Herzogenburg rest stop on the S33 at km 15.65 in the direction of St. Pölten. The user-supplied directory's name does not establish which side or facility is intended, and the cruising claim remains undated.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0309_0313.json"
       ],
       "original_index": 310,
       "original_section": "B"
@@ -2012,13 +2174,34 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/austria",
+      "best_url": "https://www.gays-cruising.com/en/cruising/donauinsel_nordstrand_wien_austria_1910",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/fkk_und_gay_cruising_wien_osterreich_52116",
+          "page_type": "direct_cruising_entry",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/austria",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.wien.gv.at/freizeit/fkk-donauinsel",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.rainbow.at/guide/1",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -2029,11 +2212,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The northern Danube Island riverside/naturist zone is described in a gay cruising directory, which includes June 2026 reports about being at or intending to visit the area. Separately, Vienna officially designates an FKK zone at the island's northern end. The name appears very close to another separately listed lead 'FKK und Gay Cruising', perhaps the same woodland section.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0314_0318.json"
       ],
       "original_index": 316,
       "original_section": "B"
@@ -2048,13 +2232,34 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/austria",
+      "best_url": "https://www.gays-cruising.com/en/cruising/donauinsel_toter_grund_wien_austria_1909",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/austria",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://gay-szene.net/gay-cruising-in-wien/287/17/rubrik.html",
+          "page_type": "other_reference",
+          "source_status": "possible_area_alias_only"
+        },
+        {
+          "url": "https://www.gayout.com/de/europe/austria/vienna/cruising/donauinsel-der-tote-grund-vienna",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.wien.gv.at/freizeit/fkk-donauinsel",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -2065,11 +2270,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A long-recognized summer gathering area called Toter Grund along Vienna's Donauinsel, described in a cruising directory and named in an archived Squirt search result. 2026 directory comments contain plans to visit, while a 2026 gay guide acknowledges the site as a gay-frequented FKK beach; actual activity on any particular date remains uncertain.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0314_0318.json"
       ],
       "original_index": 315,
       "original_section": "B"
@@ -2137,13 +2343,29 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/austria",
+      "best_url": "https://www.gays-cruising.com/en/cruising/fkk_und_gay_cruising_wien_osterreich_52116",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/cruising/donauinsel_nordstrand_wien_austria_1910",
+          "page_type": "direct_cruising_entry",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/austria",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.wien.gv.at/freizeit/fkk-donauinsel",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -2154,11 +2376,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Despite its generic name, this directory record explicitly identifies woodland within Donauinsel Nordstrand as the place. It is around 0.2 km from the separate Nordstrand record (#316), making same-area overlap very likely, but both research candidates are retained. Dated April 2026 remarks suggest some commenters had visited or observed other visitors, though no independent confirmation was found.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0314_0318.json"
       ],
       "original_index": 318,
       "original_section": "B"
@@ -2221,13 +2444,34 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/austria",
+      "best_url": "https://www.gays-cruising.com/en/cruising/konstantinteich_wien_austria_3414",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/austria",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.rainbow.at/guide/1",
+          "page_type": "other_reference",
+          "source_status": "possible_area_alias_only"
+        },
+        {
+          "url": "https://www.wien.gv.at/freizeit/prater",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.wien.gv.at/en/leisure/hiking-path9",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -2238,11 +2482,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Konstantinteich is a pond beside the Zirkuswiese in Vienna's Grüner Prater, close to Konstantinhügel. A separate older LGBT guide describes a gay meeting path near Konstantinhügel, but it has not been demonstrated that the pond directory entry refers to the same path or that cruising is active in 2026.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0314_0318.json"
       ],
       "original_index": 317,
       "original_section": "B"
@@ -2257,13 +2502,34 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/austria",
+      "best_url": "https://www.gays-cruising.com/en/cruising/lobau_wien_osterreich_62934",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/austria",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.wien.gv.at/freizeit/lobau-naturbadeplaetze",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.wien.gv.at/freizeit/dechantlacke",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.rainbow.at/guide/1",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -2274,11 +2540,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A large Danube floodplain/national-park region east of Vienna. This directory name is too broad to pinpoint a cruising site; Vienna's Dechantlacke is a recognised clothing-optional bathing place, but its existence cannot be used as proof that all Lobau is a cruising area.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0314_0318.json"
       ],
       "original_index": 314,
       "original_section": "B"
@@ -2350,24 +2617,44 @@
         "research_candidate",
         "auxiliary_verification"
       ],
-      "research_stage": "needs_more_verification",
+      "research_stage": "priority_historic_multisource_needs_current_verification",
       "live_status": null,
       "best_url": "https://mobile.squirt.org/cruise/display/458/detail",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
+          "url": "https://www.gays-cruising.com/en/cruising/rathauspark_wien_osterreich_18674",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://gay-szene.net/rathauspark-in-wien/5079/eintrag.html",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
           "url": "https://www.gays-cruising.com/en/austria",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.gayout.com/europe/austria/vienna/cruising",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://sammlung.wienmuseum.at/objekt/1074798-fotoserie-sex-und-raum-wiener-sexorte-gay-cruising-zone-im-rathausparkam-rathausplatz/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.wien.gv.at/freizeit/rathauspark",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -2388,10 +2675,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Historic gay cruising location in the southern, parliament-facing half of Vienna's Rathauspark. Two independent cruising directories and a Squirt archive describe the same park, and Wien Museum documented it in its 2016 exhibition. Reports are historical and do not prove recent attendance; city events frequently occupy Rathausplatz and change conditions.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/B/batch_0309_0313.json"
       ],
       "original_index": 313,
       "original_section": "B"
@@ -2485,15 +2773,31 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_no_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/austria",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://wienmitte-themall.at/en/services-en/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://wienmitte-themall.at/en/faq-2/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.wien.info/en/wien-mitte-the-mall-131368",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -2504,11 +2808,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The toilets at WIEN MITTE The Mall are listed on a cruising website. The shopping centre is integrated with the Wien Mitte–Landstraße transport hub. Operator services identify renovated accessible toilets on levels 0, 1 and 2; which, if any, the original cruising lead referred to is not demonstrated.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0309_0313.json"
       ],
       "original_index": 311,
       "original_section": "B"
@@ -2522,24 +2827,34 @@
         "research_candidate",
         "auxiliary_verification"
       ],
-      "research_stage": "needs_more_verification",
+      "research_stage": "priority_historic_multisource_needs_current_verification",
       "live_status": null,
       "best_url": "https://mobile.squirt.org/cruise/display/92169/detail",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
+          "url": "https://gay-szene.net/wienerberg-in-wien/9886/eintrag.html",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
           "url": "https://www.gays-cruising.com/en/austria",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         },
         {
           "url": "https://www.gayout.com/europe/austria/vienna/cruising",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.wien.gv.at/freizeit/naherholungsgebiet-wienerberg",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -2560,10 +2875,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Recreation and naturist area at the Wienerberg park in Vienna-Favoriten. Squirt's archived entry and gay-szene.net independently associate the northwest pond reedbed with cruising, distinct from the open naturist section. The archived messages support historical accounts, not contemporary attendance.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/B/batch_0309_0313.json"
       ],
       "original_index": 312,
       "original_section": "B"
@@ -2619,15 +2935,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "needs_current_geolocation_and_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/austria",
+      "best_url": "https://www.gays-cruising.com/en/cruising/figurteich_wiener_neudorf_austria_3707",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/austria",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -2638,11 +2960,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Figurteich, also known as Figurenteich or Brown-Boveri-Teich, is a pond on the industrial edge of Wiener Neudorf/Guntramsdorf, south of Vienna. A naturist guide describes long-established nude bathing; this and a cruising-directory listing do not independently establish active gay cruising.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0319_0323.json"
       ],
       "original_index": 319,
       "original_section": "B"
@@ -33561,15 +33884,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_heritage_site_access_and_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/swiss_cottage_cahir_woods_cahir_ireland_4801",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -33580,11 +33909,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A wooded riverside approach near Swiss Cottage on the River Suir outside Cahir. The country cruising directory lists nearby woods rather than the heritage house itself. The house is a ticketed state heritage property, and its official website currently says it is closed until 2027; that does not establish closure of the public Coronation riverside trail.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0319_0323.json"
       ],
       "original_index": 320,
       "original_section": "B"
@@ -33599,13 +33929,19 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/blanchardstown_shopping_centre_outside_toilets_dublin_ireland_65617",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -33616,11 +33952,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An undated cruising-directory listing points to 'outside toilets' at the large Blanchardstown Centre in west Dublin. The operator lists public toilets inside the shopping centre, on levels 1 and 2; this does not confirm any separate toilets outside the building or recent cruising.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0324_0328.json"
       ],
       "original_index": 324,
       "original_section": "B"
@@ -33635,13 +33972,19 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/bsq_toilets_dublin_ireland_76149",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -33652,11 +33995,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A directory lead to 'BSQ toilets' most plausibly refers to Beacon South Quarter (BSQ), a mixed residential, office and retail development in Sandyford, Dublin 18. The developer and complex operator confirm the abbreviation and location, but have not established which toilets are meant or whether public access to them is allowed.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0324_0328.json"
       ],
       "original_index": 327,
       "original_section": "B"
@@ -33669,15 +34013,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "needs_current_geolocation_and_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/cherrywood_dublin_ireland_35604",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -33688,11 +34038,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Cherrywood is a large, rapidly redeveloping district in southern Dublin with new parks, homes and transport links. A broad cruising directory lead has not been matched to a specific present-day park, woodland edge or path; substantial development means older advice may now be obsolete.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0319_0323.json"
       ],
       "original_index": 323,
       "original_section": "B"
@@ -33770,13 +34121,19 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/corkagh_park_dublin_ireland_38734",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -33787,11 +34144,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Corkagh Park is a large managed county park near Clondalkin, with wooded walks, fields, water features and public toilets. A broad cruising directory names the park without a verified subsection; operator hours exclude overnight public use and car parks may close earlier.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0324_0328.json"
       ],
       "original_index": 326,
       "original_section": "B"
@@ -33840,13 +34198,19 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/killiney_toilets_on_vico_road_to_vico_beach_dun_laoghaire_ireland_20240",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -33857,11 +34221,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An outdoor/public toilet lead along Vico Road toward the Vico/Whiterock bathing area south of Dublin. A county public-toilet inventory confirms a facility at Whiterock's entrance from Vico Road, but the directory's older claim of 10:00–18:00 daily does not match variable seasonal council opening times.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0324_0328.json"
       ],
       "original_index": 325,
       "original_section": "B"
@@ -33902,15 +34267,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "needs_current_geolocation_and_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/phoenix_park_military_road_dublin_ireland_25514",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -33921,11 +34292,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A car-park locality on Military Road within or alongside Dublin's Phoenix Park. The cruising directory names this as a gathering point, but dated comments for the specific site are restricted behind an account gate, and current visit evidence could not be verified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0319_0323.json"
       ],
       "original_index": 322,
       "original_section": "B"
@@ -34029,15 +34401,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_misleading_original_name_and_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/seapoint_western_cape_sudafrica_dublin_irlanda_3523",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -34048,11 +34426,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Despite an obviously erroneous suffix naming South Africa's Western Cape, the listed directions refer to Dublin's DART railway and a coastal Martello tower. That matches Seapoint beach near Dún Laoghaire, Dublin. The name should be corrected at publication stage, but the original identifier is preserved. 2026 comments are requests about visiting, not confirmed visits.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0319_0323.json"
       ],
       "original_index": 321,
       "original_section": "B"
@@ -34065,15 +34444,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_unspecified_premises",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/1st_floor_toilet_galway_ireland_110668",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.gays-cruising.com/fr/galway/irlande",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -34084,11 +34474,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A vague directory reference to a first-floor toilet somewhere in Galway. The source does not establish the building, facility owner, street or access conditions in the content available. Do not assume it is Galway Shopping Centre or another retail venue without a verified detail page.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0329_0333.json"
       ],
       "original_index": 329,
       "original_section": "B"
@@ -34101,15 +34492,41 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_access_safety",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/merlin_woods_car_park_galway_ireland_11172",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.galwaycity.ie/news/2026/merlin-woods-footpath-closure",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.galwaycity.ie/services/leisure-and-recreation/leisure-and-recreation-services/merlin-woods-restoration",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.galwaycity.ie/services/leisure-and-recreation/leisure-and-recreation-services/public-parks",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.visitgalway.ie/explore/outdoors-and-recreation/parks-gardens-woodlands/merlin-park-woodland/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -34120,11 +34537,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Car park at the entrance to Merlin Park Woods, an urban nature and woodland amenity in east Galway. The park is real, but several woodland pathways have been closed since Storm Eowyn and are undergoing restoration in autumn 2026. Council safety closures supersede undated cruising-directory descriptions.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0329_0333.json"
       ],
       "original_index": 330,
       "original_section": "B"
@@ -34139,13 +34557,19 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/riversideliosban_trails_galway_ireland_93793",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -34156,11 +34580,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A user-generated cruising lead titled 'Riverside/Liosban Trails' in Galway. Riverside business district and Liosbán industrial estate are real places north-east of Galway city, but the exact footpaths and any connection between those districts have not been corroborated. No recent dated visits were found.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0324_0328.json"
       ],
       "original_index": 328,
       "original_section": "B"
@@ -34236,15 +34661,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_identity_access_recent_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/truck_stop_toilets_rathcoole_irlanda_4546",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -34255,11 +34686,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An older directory entry to toilets around an unspecified truck stop in Rathcoole, Dublin/Kildare corridor. The original entry contains only a generic public-toilet description; nearby 'Truck Stop Applegreen' is separately listed approximately 2.5 km away and should not be automatically merged.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0329_0333.json"
       ],
       "original_index": 331,
       "original_section": "B"
@@ -34272,15 +34704,36 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_subarea_and_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/ireland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/tralee_town_park_tralee_ireland_58986",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/ireland",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.kerrycoco.ie/tralee-town-park/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://trips.ie/tralee-town-park/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.radiokerry.ie/news/paths-in-tralee-town-park-upgraded-422149",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -34291,11 +34744,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The substantial public town park in the centre of Tralee, County Kerry, including a rose garden, walking paths, family recreation and playground. The cruising directory names the entire park without a verified specific section; no independent recent male cruising report was established.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0329_0333.json"
       ],
       "original_index": 332,
       "original_section": "B"
@@ -41472,15 +41926,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_ambiguous_site",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/public_toilet_birkirkara_malta_55669",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41491,11 +41951,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A generically named public toilet in Birkirkara, Malta, included in the Gays-Cruising Malta country index. The published source provides no confidently identifiable toilet block, nearby street or landmark in the accessible content; no dated first-hand activity can be verified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0329_0333.json"
       ],
       "original_index": 333,
       "original_section": "B"
@@ -41510,13 +41971,24 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/public_toilet_birzebbuga_malta_94770",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://whichbeach.com.mt/beaches/pretty-bay/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41529,9 +42001,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A user-contributed entry for an unnamed public toilet somewhere in Birżebbuġa, a coastal town in southern Malta. It is not possible from the accessible directory index to associate this listing with the town's public beach toilets or a particular building; keep distinct from the second differently titled toilet entry.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0334_0338.json"
       ],
       "original_index": 334,
       "original_section": "B"
@@ -41546,13 +42019,24 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/public_toilets_birzebbuga_malta_124557",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.gov.mt/en/Government/DOI/Press%20Releases/Pages/2026/07/02/pr261119en.aspx",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41565,9 +42049,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A second generic listing for public toilets in Birżebbuġa, with a distinct directory ID from candidate #334. Place identity and actual public-access conditions are unverified, so neither merging the entries nor assigning them to Pretty Bay is justified yet.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0334_0338.json"
       ],
       "original_index": 335,
       "original_section": "B"
@@ -41582,13 +42067,34 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/sa_maison_gardens_floriana_malta_11370",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://maltabotanicgardens.gov.mt/contact/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://ambjentmalta.gov.mt/what-we-do/national-botanic-gardens/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://visitmaltanow.com/sa-maison-garden-a-quiet-floriana-escape/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41601,9 +42107,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Sa Maison is a terraced historic botanical garden on Floriana's fortifications, looking over Marsamxett Harbour. The original directory calls it a cruising spot, while official sources document heritage value and regulated visiting hours; current cruising remains unconfirmed.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0334_0338.json"
       ],
       "original_index": 336,
       "original_section": "B"
@@ -41671,13 +42178,24 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/public_urinals_gudja_malta_69886",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://toiletrix.com/malta/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41690,9 +42208,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An unlocated entry called Public urinals, assigned by the directory to Gudja near Malta International Airport. The available sources do not connect it to a specific WC structure; airport facilities or another nearby public toilet must not be substituted on name alone.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0334_0338.json"
       ],
       "original_index": 337,
       "original_section": "B"
@@ -41705,15 +42224,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_high_access_and_safety_risk",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/jerma_palace_glory_hole_mskala_malta_68016",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41726,9 +42251,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A directory lead claiming a glory-hole location associated with the former Jerma Palace hotel at Marsaskala. The hotel closed in 2007 and its ruins are derelict. A formal 2026 environmental consultation concerns its proposed demolition and redevelopment; none of this independently validates the claimed facility or present public access.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0339_0343.json"
       ],
       "original_index": 339,
       "original_section": "B"
@@ -41743,13 +42269,29 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/toilet_near_abandond_hotel_marsa_scala_malta_42028",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.gov.mt/en/publicconsultation/Pages/2026/NL-0040-2026.aspx",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.maltatoday.com.mt/news/national/145095/jermas_accidental_rewilding_bat_roosts_and_lizards",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41762,9 +42304,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A generic restroom allegedly near an abandoned hotel in Marsaskala. The former Jerma Palace Hotel is an important local derelict property, but the available source does not definitively identify it as the hotel meant. The Jerma site is the subject of an active October–November 2026 environmental consultation ahead of proposed demolition and redevelopment, so access cannot be presumed.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0334_0338.json"
       ],
       "original_index": 338,
       "original_section": "B"
@@ -41833,15 +42376,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_historic_location_changed_2026",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/white_rocks_baaar_ic_cagaaq_malta_65214",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41854,9 +42403,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "White Rocks is a large former military and holiday complex near Pembroke/Baħar iċ-Ċagħaq. Older directory comments describe exploring abandoned buildings, including one warning that night visits are unsafe. In 2026 the government cleared debris, fenced dangerous areas and reopened safe portions while planning a national park. Historic descriptions of abandoned corridors may now be obsolete.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0339_0343.json"
       ],
       "original_index": 340,
       "original_section": "B"
@@ -41869,15 +42419,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_location",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/garden_under_the_trees_qormi_malta_123629",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41890,9 +42446,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Another Qormi-area directory lead with an imprecise label that refers to a garden under trees, not a verifiable named park. Multiple June 2026 comments propose meetings, but the source does not identify a precise garden or provide independent on-site reports.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0339_0343.json"
       ],
       "original_index": 342,
       "original_section": "B"
@@ -41905,15 +42462,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_geolocation",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/public_toilet_qormi_malta_110077",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41926,9 +42489,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A generic public-toilet lead in Qormi, Malta. The directory's public index places it in Qormi but accessible material does not identify the restroom, its operator or exact coordinates. June 2026 online comments ask if anyone is there but do not establish a visit or cruising activity.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0339_0343.json"
       ],
       "original_index": 341,
       "original_section": "B"
@@ -41941,15 +42505,21 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_possible_closure_and_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/public_toilets_garden_of_serenity_santa_lucia_malta_55924",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41962,9 +42532,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An entry for public toilets associated with the Chinese Garden of Serenity in Santa Luċija, an enclosed landscaped garden in southern Malta. The garden's identity and location are documented by independent visitor information. A June 2026 directory comment reports that the toilet area is closed, possibly for refurbishment, but this unverified report does not confirm its current status or reopening.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0339_0343.json"
       ],
       "original_index": 343,
       "original_section": "B"
@@ -41979,13 +42550,19 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/fortizza_public_toilets_sliema_malta_7187",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -41996,11 +42573,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A source-directory entry to public toilets described as Fortizza in Sliema, probably along the Tower Road seafront. A June 2026 comment claims current presence at a toilet, but the precise WC block and its operating hours remain unknown.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0344_0348.json"
       ],
       "original_index": 345,
       "original_section": "B"
@@ -42068,13 +42646,19 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/public_toilets_sliema_malta_11383",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -42085,11 +42669,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Point is an indoor shopping centre at Tigné Point in Sliema. Its original gay cruising directory references ground-floor toilets and several recent online meeting queries. The shopping centre itself confirms public toilets and publishes 10:00–19:30 daily opening hours; claims that the location operates all day are incorrect for the mall.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0344_0348.json"
       ],
       "original_index": 346,
       "original_section": "B"
@@ -42167,13 +42752,19 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/torri_sliema_sliema_malta_66133",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -42184,11 +42775,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A directory spot named Torri near Sliema's seaside promenade. June 2026 comments on the Malta country index describe users claiming to be at a toilet, but the accessible sources do not specify which tower or public WC; it should not automatically be merged with the separate Fortizza toilet listing.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0344_0348.json"
       ],
       "original_index": 344,
       "original_section": "B"
@@ -42261,13 +42853,19 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/malta",
+      "best_url": "https://www.gays-cruising.com/en/cruising/baystreet_saint_julian_malta_66600",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/malta",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -42278,11 +42876,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Bay Street is a St Julian's shopping and leisure centre near St George's Bay, with restaurants and family entertainment. A cruising directory assigns an undated reputation to its public washrooms; the actual retailer hours are provided by the centre operator, and the directory discussion is behind an age-gated login so no dated report is available here.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0344_0348.json"
       ],
       "original_index": 347,
       "original_section": "B"
@@ -48505,15 +49104,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_identity_and_access",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/romania",
+      "best_url": "https://www.gays-cruising.com/en/cruising/parcare_de_tiruri_timisoara_romania_106889",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/romania",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://privabon.ro/parcare/timis/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -48524,11 +49134,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Directory identifies an unspecified lorry-parking area in or near Timișoara. Independent parking directories list multiple distinct truck parks nearby, so the exact facility and any right of public access are unresolved.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0294_0298.json"
       ],
       "original_index": 294,
       "original_section": "B"
@@ -48630,13 +49241,19 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/serbia",
+      "best_url": "https://www.gays-cruising.com/en/cruising/ada_lake_belgrade_serbia_and_montenegro_19897",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/serbia",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -48647,11 +49264,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Ada Ciganlija peninsula and Sava Lake are Belgrade's major recreation beaches. The directory describes historic gay encounters behind a nude beach at one end of the lake; reports from summer 2024 discuss such activity firsthand, while an April 2026 country-index comment is ambiguous. Beach rules and the exact woodland subsection must be independently verified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0344_0348.json"
       ],
       "original_index": 348,
       "original_section": "B"
@@ -48664,15 +49282,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_identity_or_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/serbia",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.parking-servis.co.rs/eng/parkiraliste-ada-ciganlija",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://beogradskiizlet.com/en/tour/ada-ciganlija-parking-belgrade/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -48683,11 +49312,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Ada Parking is a loosely specified parking-area lead near Ada Ciganlija's recreation peninsula. The city's Parking Servis operates a large 1,023-space car park at Ada Ciganlija bb, but no original record establishes whether the cruising-directory lead refers to that facility or a different nearby parking area.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0354_0358.json"
       ],
       "original_index": 357,
       "original_section": "B"
@@ -48700,15 +49330,31 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_identity_or_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/serbia",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.planplus.rs/en/belgrade/parks-and-picnic-areas",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.birdingplaces.eu/is/birdingplaces/serbia/byfords-forest",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.beograd.rs/lat/beoinfo-vesti/a113511/Posete-beogradskim-izletistima-i-odgovorno-ponasanje-u-prirodi.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -48719,11 +49365,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A cruising-directory record labelled only 'Banjica' in Belgrade. The area contains residential neighbourhoods, sports facilities and the protected Byford/Banjička Forest. Although nearby forest and public recreation land exist, the original generic name does not identify one of them as a cruising spot.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0354_0358.json"
       ],
       "original_index": 358,
       "original_section": "B"
@@ -48736,15 +49383,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "historic_crosssource_needs_recent_verification",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/serbia",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/map/?cityid=10255",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://beogradskipark.rs/en/belgrade-parks/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -48755,11 +49413,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Karađorđev Park is a maintained historic public park in Belgrade's Vračar municipality. It appears both in the original Gays-Cruising archive and in CruisingGays' Belgrade map with the historical road label 'JNA Street'. Neither entry verifies recent encounters.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0354_0358.json"
       ],
       "original_index": 354,
       "original_section": "B"
@@ -48897,15 +49556,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_recent_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/serbia",
+      "best_url": "https://www.gays-cruising.com/en/cruising/public_toilet_at_vracar_belgrade_serbia_20932",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/serbia",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://zelenilo.rs/delatnosti/odrzavanje-zelenih-povrsina/sanitarni-objekti",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -48916,11 +49586,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Underground public toilet said to lie between the Temple of Saint Sava and the National Library of Serbia in Vračar, Belgrade. The municipal sanitary services list a public WC named 'Hram' around this landmark, with seasonal opening times. Two dated comments from 2023 and January 2025 describe the location as empty during their visits.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0349_0353.json"
       ],
       "original_index": 353,
       "original_section": "B"
@@ -48961,15 +49632,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "priority_good_recent_firstperson_location",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/serbia",
+      "best_url": "https://www.gays-cruising.com/en/cruising/terazije_public_toilet_belgrade_serbia_and_montenegro_19898",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/serbia",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://zelenilo.rs/delatnosti/odrzavanje-zelenih-povrsina/sanitarni-objekti",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -48980,11 +49662,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A public underground toilet below the pedestrian passage at the intersection of Terazije, Sremska and Knez Mihailova, by Palata Albanija. Municipal sanitation records support a Palata Albanija facility with scheduled hours. Several 2026 comments describe recent meetings and at least one claims recurring actual encounters.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0349_0353.json"
       ],
       "original_index": 350,
       "original_section": "B"
@@ -49045,15 +49728,31 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_identity_or_recent_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/serbia",
+      "best_url": "https://www.gays-cruising.com/es/cruising/undeground_toilet_near_the_national_theater_belgrade_serbia_27207",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/serbia",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.belgradecitycard.rs/javni-toaleti-u-centru-beograda/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://vreme.com/en/mozaik/kad-prigusti-kakvo-je-stanje-javnih-toaleta-u-beogradu/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -49064,11 +49763,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An underground public toilet near Belgrade's National Theatre at Republic Square. The directory names a nearby WC sign and mentions an old approximate entry charge, but a 2026 independent site visit and the city public-toilet listing describe the National Theatre WC as publicly accessible and free. Exact entry and current payment should follow the operator, not directory copy.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0354_0358.json"
       ],
       "original_index": 356,
       "original_section": "B"
@@ -49129,15 +49829,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "keep_historical_with_recent_unverified_opinion",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/serbia",
+      "best_url": "https://www.gays-cruising.com/en/cruising/underground_toilet_2_belgrade_serbia_and_montenegro_19899",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/serbia",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://zelenilo.rs/delatnosti/odrzavanje-zelenih-povrsina/sanitarni-objekti",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -49148,11 +49859,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An underground public toilet in the pedestrian passage linking Nušićeva Street and the Dom omladine youth centre in central Belgrade. The municipal public-toilet operator separately lists a 'Nušićeva Passage – Dragstor' WC with seasonal hours, a plausible match to this entry. The original directory has 2026 and older positive comments, but the recent 2026 remark does not itself confirm a visit.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0349_0353.json"
       ],
       "original_index": 352,
       "original_section": "B"
@@ -49204,24 +49916,34 @@
         "research_candidate",
         "auxiliary_verification"
       ],
-      "research_stage": "priority_for_listing_build",
+      "research_stage": "keep_historical_multisource_with_recent_negative",
       "live_status": null,
-      "best_url": "https://www.cruisinggays.com/belgrade/areas/11253-usce-ushche/",
+      "best_url": "https://mobile.squirt.org/cruise/display/11253/detail",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
-          "url": "https://mobile.squirt.org/cruise/display/11253/detail",
+          "url": "https://www.gays-cruising.com/en/cruising/usce_park_belgrade_serbia_28912",
           "page_type": "direct_cruising_entry",
-          "source_status": "original_index_reference"
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.cruisinggays.com/belgrade/areas/11253-usce-ushche/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "saved_best"
         },
         {
           "url": "https://www.gays-cruising.com/en/serbia",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.rts.rs/lat/vesti/drustvo/6050674/skejt-park-usce.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -49242,10 +49964,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Ušće is a broad New Belgrade riverside park near Branko's Bridge, the former federal government building and Ušće Shopping Center. The original directory describes older after-dark cruising in paths or wooded areas, while Squirt independently lists the park as a historical meeting place. A May 2026 online comment explicitly says nothing was happening at that time.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/B/batch_0349_0353.json"
       ],
       "original_index": 351,
       "original_section": "B"
@@ -49302,24 +50025,39 @@
         "research_candidate",
         "auxiliary_verification"
       ],
-      "research_stage": "hold_access_or_outdated",
+      "research_stage": "priority_recent_first_person_multi_source_location",
       "live_status": null,
       "best_url": "https://mobile.squirt.org/cruise/display/114889/detail",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
+          "url": "https://www.gays-cruising.com/en/cruising/zeleni_venac_market_toilet_belgrade_serbia_and_montenegro_19900",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
           "url": "https://www.gays-cruising.com/en/serbia",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.belgradecitycard.rs/javni-toaleti-u-centru-beograda/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.bgpijace.rs/?cat=66&l=lat",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://zelenilo.rs/delatnosti/odrzavanje-zelenih-povrsina/sanitarni-objekti",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -49340,10 +50078,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The underground public toilets at Belgrade's Zeleni Venac market/bus interchange have matching records in the original directory and Squirt. The original source places them below the market beside parking, while the Squirt entry describes a Kamenicka-side approach. March 2026 comments include direct claims of activity and a conflicting complaint that entry costs money or the wrong toilet is being used.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/B/batch_0349_0353.json"
       ],
       "original_index": 349,
       "original_section": "B"
@@ -49404,15 +50143,26 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "hold_identity_or_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/serbia",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "research_provenance": "linked_page_matched",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.runbgd.com/sr/places/toilet-zemunski-kej",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://zelenilo.rs/delatnosti/odrzavanje-zelenih-povrsina/sanitarni-objekti",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -49423,11 +50173,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The original directory lists a 'Zemun Toilet' in Belgrade, without sufficient available detail to establish which toilet block is intended. There is a documented public toilet on Zemun quay and another municipal toilet named Gradski Park Zemun. These are plausible distinct places, so neither should be assigned to the directory record without matching directions.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/B/batch_0354_0358.json"
       ],
       "original_index": 355,
       "original_section": "B"
