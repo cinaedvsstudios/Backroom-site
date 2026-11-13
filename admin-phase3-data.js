@@ -10,13 +10,18 @@ function library(){
  function add(url,c={}){
   const exact=validURL(url),key=keyOf(url);if(!exact||!key)return false;
   let v=byKey.get(key);const fresh=!v;
-  if(!v){v={key,url:exact,name:clean(c.name)||new URL(exact).hostname,kind:c.kind||classify(exact),verification:'Source not live-rechecked',enabled:true,variants:[],origins:[],record_ids:[],countries:[],cities:[],workflows:[],notes:[]};byKey.set(key,v)}
+  if(!v){v={key,url:exact,name:clean(c.name)||new URL(exact).hostname,kind:c.kind||classify(exact),kinds:[],verification:'Source not live-rechecked',enabled:true,variants:[],origins:[],record_ids:[],countries:[],cities:[],workflows:[],notes:[],source_references:[]};byKey.set(key,v)}
   if(c.kind&&v.kind==='website')v.kind=c.kind;
+  if(c.kind&&!v.kinds.includes(c.kind))v.kinds.push(c.kind);
   if(c.name&&v.name===new URL(v.url).hostname)v.name=c.name;
   if(c.verification)v.verification=c.verification;
   if(typeof c.enabled==='boolean')v.enabled=c.enabled;
   for(const [prop,values] of [['variants',[exact]],['origins',[c.provenance]],['record_ids',[c.record_id]],['countries',[c.country]],['cities',[c.city]],['workflows',c.workflows||[]],['notes',[c.note]]]){
    for(const x of values){const t=clean(x);if(t&&!v[prop].includes(t)&&(prop!=='notes'||v.notes.length<25))v[prop].push(t.slice(0,450))}
+  }
+  const reference=c.source_reference;
+  if(reference&&typeof reference==='object'&&clean(reference.id)&&!v.source_references.some(r=>r.id===reference.id)){
+   v.source_references.push({...reference});
   }
   return fresh;
  }
@@ -41,7 +46,23 @@ function ingest(lib,data,origin,workflow='all'){
  }
  walk(data);return stats;
 }
-function ingestSeed(lib,seed){for(const x of seed?.sources||[])lib.add(x.url,{...x,provenance:x.provenance||'Base source catalogue'})}
+function ingestSeed(lib,seed){
+ for(const x of seed?.sources||[]){
+  lib.add(x.url,{...x,provenance:x.provenance||'Base source catalogue'});
+  const refs=Array.isArray(x.source_references)&&x.source_references.length?x.source_references:[x];
+  for(const ref of refs){
+   lib.add(ref.url,{
+    name:x.name,kind:ref.kind||x.kind,verification:x.verification,enabled:x.enabled,
+    workflows:Array.isArray(ref.workflows)?ref.workflows:x.workflows||[],
+    provenance:ref.provenance||x.provenance||'Base source catalogue',
+    source_reference:{id:ref.id,url:ref.url,name:ref.name,kind:ref.kind,
+      workflows:ref.workflows||[],regions:ref.regions||[],provenance:ref.provenance||'',
+      verification:ref.verification||'',enabled:ref.enabled!==false},
+    note:'Original seed '+(ref.id||'unidentified')+(ref.kind&&ref.kind!==x.kind?' · '+ref.kind:'')
+   });
+  }
+ }
+}
 function normalizeImport(data){
  const list=Array.isArray(data)?data:data?.sources||data?.urls||data?.entries||data?.records;
  if(!Array.isArray(list))throw Error('Expected array, or sources/urls/entries/records array.');
@@ -62,9 +83,10 @@ function location(row,venues){const host=venues.get(clean(row.Venue_ID))||{};ret
 function selected(config,venues,events){
  const type=kindOf(config.workflow),host=new Map(venues.map(x=>[clean(x.Venue_ID),x]));
  const all=type==='events'?events:type==='venues'?venues.filter(r=>!cruise(r)):type==='cruising'?venues.filter(cruise):[...venues,...events];
- const ids=new Set(config.ids||[]),countries=new Set((config.countries||[]).map(norm)),cities=new Set((config.cities||[]).map(norm));
+ const ids=new Set(config.ids||[]),countries=new Set((config.countries||[]).map(norm)),cities=new Set((config.cities||[]).map(norm)),coverage=new Set((config.allowedCountries||[]).map(norm));
  const query=norm(config.text),status=norm(config.status);
  return all.filter(r=>{const id=clean(r.Venue_ID||r.Event_ID),loc=location(r,host),date=clean(r.Event_Date);
+  if(coverage.size&&!coverage.has(norm(loc.country)))return false;
   if(ids.size&&!ids.has(id))return false;
   if(countries.size&&!countries.has(norm(loc.country)))return false;
   if(cities.size&&!cities.has(norm(loc.country+'|'+loc.city)))return false;
@@ -81,15 +103,20 @@ function build(config,venues,events,sources,instructions){
  const tasks=existing.map(record=>{const loc=location(record,host);return{record,id:clean(record.Event_ID||record.Venue_ID),
   country:loc.country,city:loc.city,zone:config.zone==='auto'?zone(loc.country,record.Event_ID?'events':cruise(record)?'cruising':'venues'):Number(config.zone)}});
  const found=new Set(tasks.map(x=>norm(x.country+'|'+x.city)));
+ const discovery=['venue_discovery','event_discovery','combined','cruising_updates'].includes(flow);
+ const coverage=new Set((config.allowedCountries||[]).map(norm));
  for(const loc of config.cities||[]){
   const [country,...rest]=loc.split('|'),city=rest.join('|');
-  if(!found.has(norm(loc)))tasks.push({country,city,id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
+  if((!coverage.size||coverage.has(norm(country)))&&(discovery||!found.has(norm(loc))))tasks.push({country,city,id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
  }
- if(!tasks.length)for(const country of config.countries||[])tasks.push({country,city:'(country-wide)',id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
+ if(!(config.cities||[]).length&&(discovery||!tasks.length)){
+  for(const country of config.countries||[])if(!coverage.size||coverage.has(norm(country)))
+   tasks.push({country,city:'(country-wide)',id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
+ }
  const size=Math.max(1,Math.min(300,Number(config.batchSize)||25)),limit=Math.max(1,Math.min(300,Number(config.sourceLimit)||60));
  const rules=(instructions||[]).filter(x=>x.id==='COMMON_RULES'||x.id==='WORLDWIDE_ZONES').map(x=>x.body).join('\n\n');
  const instruction=(instructions||[]).find(x=>x.id===flow.toUpperCase())?.body||'';
- const allow=src=>src.enabled!==false&&(!config.sourceKinds?.length||config.sourceKinds.includes(src.kind))&&
+ const allow=src=>src.enabled!==false&&(!config.sourceKinds?.length||[src.kind,...(src.kinds||[])].some(k=>config.sourceKinds.includes(k)))&&
    (!config.sourceKeys?.length||config.sourceKeys.includes(src.key))&&
    (!src.workflows.length||type==='all'||src.workflows.includes('all')||src.workflows.includes(type)||src.workflows.includes(flow));
  const candidates=sources.filter(allow),chunks=[];

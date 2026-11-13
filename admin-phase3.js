@@ -1,7 +1,7 @@
 /* Backroom Phase 3 — in-admin Scrape Builder, Source Library & Instructions. */
 (()=>{'use strict';
-const P=window.BRP2,D=window.BackroomPhase3Data;
-if(!P||!D)throw Error('Phase 3 requires Phase 2 and Phase 3 data modules.');
+const P=window.BRP2,D=window.BackroomPhase3Data,W=window.BackroomPhase3Presets;
+if(!P||!D||!W)throw Error('Phase 3 requires Phase 2, Phase 3 data and coverage presets.');
 if(window.BackroomAdminPhase3)return;
 const {esc,fmt,get,notify,downloadJSON,saveLocal,readLocal}=P;
 const KEY='br_admin_phase3_v1',SOURCE_KEY='br_admin_phase3_custom_sources_v1',EDIT_KEY='br_admin_phase3_source_edits_v1',RULE_KEY='br_admin_phase3_instruction_edits_v1';
@@ -10,13 +10,15 @@ const after6=()=>{const d=new Date(today()+'T12:00:00Z');d.setUTCMonth(d.getUTCM
 const workflows=[['event_discovery','📅 Event discovery'],['event_updates','📅 Event updates'],['venue_discovery','📍 Venue discovery'],['venue_updates','📍 Venue updates'],['cruising_updates','🗺️ Cruising area updates'],['combined','🔄 Combined venue + event research']];
 const zones=[['auto','Auto by country/workflow'],['0','0 · Germany'],['1','1 · France / Benelux / Switzerland'],['2','2 · UK & Ireland'],['3','3 · Iberia & Islands'],['4','4 · Italy / Austria / Central / Mediterranean'],['5','5 · Nordics / Baltics / Poland'],['6','6 · Other European / Touring'],['8','8 · Public-space cruising only']];
 const configDefault={workflow:'venue_updates',countries:[],cities:[],zone:'auto',from:today(),to:after6(),status:'',text:'',ids:[],batchSize:25,sourceLimit:60,sourceKinds:[],sourceKeys:[]};
-const S={active:false,tab:'builder',loading:false,ready:false,loadedResearch:false,lib:D.library(),seeds:null,rules:[],baseRules:[],
+const S={active:false,tab:'wizard',wizardPreset:'',loading:false,ready:false,loadedResearch:false,lib:D.library(),seeds:null,rules:[],baseRules:[],
  selected:new Set(),custom:readLocal(SOURCE_KEY,[]),edits:readLocal(EDIT_KEY,{}),ruleEdits:readLocal(RULE_KEY,{}),config:{...configDefault,...readLocal(KEY,{})},
  citySearch:'',sourceSearch:'',sourceKind:'',sourceCountry:'',sourceOrigin:'',sourcePage:1,sourceEditing:'',sourceStatus:[],
  fileReports:[],packet:null,markdown:'',countryChoice:'',selectedCountryChoice:'',error:'',countrySearch:'',sourceChosen:[]};
 if(!Array.isArray(S.config.countries))S.config.countries=[];
 if(!Array.isArray(S.config.cities))S.config.cities=[];
 if(!Array.isArray(S.config.ids))S.config.ids=[];
+if(!Array.isArray(S.config.sourceKinds))S.config.sourceKinds=[];
+if(!Array.isArray(S.config.sourceKeys))S.config.sourceKeys=[];
 function remember(){saveLocal(KEY,S.config)}
 const opt=(v,selected,label)=>'<option value="'+esc(v)+'" '+(String(v)===String(selected)?'selected':'')+'>'+esc(label??v)+'</option>';
 const group=(id,title,body)=>'<section class="br3-card" id="'+id+'"><h2>'+title+'</h2>'+body+'</section>';
@@ -30,7 +32,7 @@ async function copyText(s){
  catch{const input=get('br3-output');if(input){input.select();document.execCommand('copy');notify('Text selected for copying.');}}
 }
 function fetchData(path){
- return fetch(path+'?v=0.23.4&t='+Date.now(),{cache:'no-store'}).then(async r=>{
+ return fetch(path+'?v=0.23.7&t='+Date.now(),{cache:'no-store'}).then(async r=>{
  if(!r.ok)throw Error(path+' HTTP '+r.status);return r.json();
  });
 }
@@ -54,6 +56,11 @@ async function init(){
   const [seeds,rulePack]=await Promise.all([fetchData('admin-phase3-sources.json'),fetchData('admin-phase3-instructions.json')]);
   S.seeds=seeds;S.baseRules=rulePack.instructions||[];
   S.rules=S.baseRules.map(x=>({...x,body:S.ruleEdits[x.id]??x.body}));
+  S.config.countries=D.uniq(S.config.countries.map(name=>W.standardCountry(name,P.state.registry)).filter(Boolean));
+  S.config.cities=D.uniq(S.config.cities.map(value=>{
+   const [country,...rest]=String(value).split('|');const standard=W.standardCountry(country,P.state.registry);
+   return standard&&rest.length?standard+'|'+rest.join('|'):'';
+  }).filter(Boolean));
   rebuildSources();S.ready=true;S.error='';
  }catch(e){S.error=e.message;console.error('Backroom Phase 3 load failed',e);setMessage(e.message)}
  finally{S.loading=false;}
@@ -79,12 +86,11 @@ async function researchSources(){
  return researchPromise;
 }
 function countries(){
- const registry=P.state.registry||{countries:[],cities:[]};
- return(registry.countries||[]).map(x=>x.name).sort((a,b)=>a.localeCompare(b));
+ return W.availableCountries(P.state.registry).map(x=>x.name);
 }
 function cityRows(){
  const reg=P.state.registry||{countries:[],cities:[]};
- const names=new Map((reg.countries||[]).map(x=>[x.code,x.name]));
+ const names=new Map(W.availableCountries(reg).map(x=>[x.code,x.name]));
  const pool=new Map();
  for(const item of reg.cities||[]){
   const country=names.get(item.country_code);if(!country)continue;
@@ -92,8 +98,12 @@ function cityRows(){
  }
  const venues=P.state.venues||[],events=P.state.events||[],index=new Map(venues.map(x=>[x.Venue_ID,x]));
  for(const row of [...venues,...events]){
-  const {country,city}=D.location(row,index);if(!country||!city)continue;
+  const {country,city}=D.location(row,index);if(!country||!city||!W.permittedCountry(country,reg))continue;
   const id=country+'|'+city;if(!pool.has(D.norm(id)))pool.set(D.norm(id),{country,city,id,kind:'Existing Backroom record'});
+ }
+ for(const chosen of S.config.cities||[]){
+  const [country,...parts]=chosen.split('|'),city=parts.join('|');
+  if(W.permittedCountry(country,reg)&&city&&!pool.has(D.norm(chosen)))pool.set(D.norm(chosen),{country,city,id:chosen,kind:'Preset city'});
  }
  return[...pool.values()].sort((a,b)=>a.country.localeCompare(b.country)||a.city.localeCompare(b.city));
 }
@@ -103,7 +113,7 @@ function filteredCities(){
 }
 function cityHTML(){
  const full=filteredCities(),limit=110,chosen=new Set(S.config.cities);
- return '<div class="br3-city-count">'+fmt(full.length)+' matching destinations · '+fmt(chosen.size)+' selected'+(full.length>limit?' · showing first '+limit:'')+'</div>'+
+ return '<div class="br3-city-count">'+fmt(full.length)+' matching cities · '+fmt(chosen.size)+' selected'+(full.length>limit?' · showing first '+limit:'')+'</div>'+
   '<div class="br3-city-list">'+full.slice(0,limit).map(x=>
    '<label class="br3-choice"><input type="checkbox" data-br3-city="'+esc(x.id)+'" '+(chosen.has(x.id)?'checked':'')+'> '+
    (window.BackroomAdminFlags?.html(x.country)||'🌍')+' '+esc(x.city)+' <small>'+esc(x.country)+'</small></label>').join('')+'</div>';
@@ -123,8 +133,8 @@ function filtersHTML(){
   '<h3>🌍 Countries and cities</h3>'+
   '<div class="br3-inline"><select id="br3-country-pick" aria-label="Add country">'+opt('','','Select a country')+countries().map(x=>opt(x,'',x)).join('')+'</select>'+
   buttons([['br3-add-country','➕ Add country'],['br3-clear-countries','Clear countries']])+'</div>'+
-  '<div class="br3-chips">'+(c.countries.length?c.countries.map(country=>'<button type="button" class="br3-chip" data-br3-remove-country="'+esc(country)+'">'+(window.BackroomAdminFlags?.html(country)||'🌐')+' '+esc(country)+' <span>×</span></button>').join(''):'<span class="br3-muted">No country filter — all countries</span>')+'</div>'+
-  '<div class="br3-inline"><input id="br3-city-search" type="search" placeholder="Find city, island or destination" value="'+esc(S.citySearch)+'">'+
+  '<div class="br3-chips">'+(c.countries.length?c.countries.map(country=>'<button type="button" class="br3-chip" data-br3-remove-country="'+esc(country)+'">'+(window.BackroomAdminFlags?.html(country)||'🌐')+' '+esc(country)+' <span>×</span></button>').join(''):'<span class="br3-muted">No country selected — all eligible European countries + Israel/Turkey</span>')+'</div>'+
+  '<div class="br3-inline"><input id="br3-city-search" type="search" placeholder="Find a city or island town" value="'+esc(S.citySearch)+'">'+
   buttons([['br3-all-cities','✓ Select all filtered'],['br3-clear-cities','Clear selected cities']])+'</div>'+
   '<div id="br3-city-results">'+cityHTML()+'</div>'+
   '<h3>🎯 Existing IDs / content filters</h3>'+
@@ -133,8 +143,60 @@ function filtersHTML(){
   buttons([['br3-copy-ids','📋 Copy matching IDs'],['br3-preview','🔍 Preview matching records','primary-btn']])+
   '<div id="br3-scope-preview" class="br3-preview"></div>');
 }
+
+function scopedConfig(){return {...S.config,allowedCountries:countries()};}
+function wizardHTML(){
+ const c=S.config,info=W.definitions.find(x=>x.id===S.wizardPreset);
+ const rows=c.countries.length||c.cities.length?D.selected(scopedConfig(),P.state.venues,P.state.events):[];
+ const locations=c.cities.length,chosenCountry=c.countries.length;
+ const details=S.wizardPreset==='backroom20'?W.backroomTop(P.state.venues,P.state.events,P.state.registry,20):[];
+ const sortedCities=c.cities.slice(0,18).map(x=>x.replace('|',' — ')).join(' · ');
+ return group('br3-wizard-intro','✨ Quick Setup — research wizard',
+  '<p class="br3-muted">Three simple steps: choose what you want researched, pick a preset of countries or cities, and generate a reviewable research brief. Advanced filtering is optional.</p>'+
+  '<div class="br3-wizard-steps"><span>① What to research</span><span>② Where to look</span><span>③ Generate a brief</span></div>')+
+ group('br3-wizard-workflow','① What do you want to research?',
+  '<label>Choose the research task<select id="br3-wizard-workflow">'+workflows.map(x=>opt(x[0],c.workflow,x[1])).join('')+'</select></label>'+
+  '<p class="br3-muted">Discovery looks for new records; Updates checks existing records. Combined checks venues and their upcoming events together. Cruising Area Updates uses the separate Zone 8 rules.</p>')+
+ group('br3-wizard-places','② Choose a ready-made coverage preset',
+  '<p class="br3-muted">Click one preset to replace the current country/city selection. City presets search specific cities; country presets cover those whole countries. The <strong>Top 20 Backroom</strong> option is calculated from active listings, not estimated.</p>'+
+  '<div class="br3-preset-grid">'+W.definitions.map(item=>
+   '<button type="button" class="br3-preset '+(S.wizardPreset===item.id?'br3-preset-active':'')+'" data-br3-preset="'+esc(item.id)+'" aria-pressed="'+String(S.wizardPreset===item.id)+'">'+
+   '<span class="br3-preset-name">'+item.icon+' '+esc(item.name)+'</span><small>'+esc(item.description)+'</small></button>').join('')+'</div>'+
+  '<div class="br3-inline">'+buttons([['br3-wizard-clear','Clear geography'],['br3-wizard-advanced','⚙ Advanced country / city selection']])+'</div>'+
+  '<div class="br3-wizard-selected"><strong>'+(info?esc(info.name):'Custom selection')+'</strong><p>'+
+  (chosenCountry||locations?fmt(chosenCountry)+' countries · '+fmt(locations)+' selected cities.':'No selection yet. Choose a preset or open Advanced Builder.')+'</p>'+
+  (locations?'<div class="br3-preview-cities">'+esc(sortedCities)+(locations>18?' · … +'+fmt(locations-18)+' more':'')+'</div>':
+   chosenCountry?'<div class="br3-preview-cities">'+esc(c.countries.slice(0,18).join(' · '))+(chosenCountry>18?' · …':'')+'</div>':'')+
+  (details.length?'<p class="br3-muted">Backroom counts: '+esc(details.slice(0,6).map(x=>x.city+' '+x.total).join(' · '))+' …</p>':'')+
+  '</div>')+
+ group('br3-wizard-time','③ Research period and batch size',
+  '<div class="br3-grid br3-grid-3">'+
+  '<label>From date<input type="date" id="br3-wizard-from" value="'+esc(c.from||'')+'"></label>'+
+  '<label>Until date<input type="date" id="br3-wizard-to" value="'+esc(c.to||'')+'"></label>'+
+  '<label>Records / cities per batch<select id="br3-wizard-batch">'+[10,25,50,100].map(x=>opt(x,c.batchSize,x+' per batch')).join('')+'</select></label>'+
+  '</div>'+
+  '<p class="br3-muted">All applicable directory, record and cruising-research URLs are available automatically. The source limit and individual source choices can be changed in Advanced Builder and Source Library.</p>'+
+  '<div class="br3-inline">'+buttons([['br3-wizard-preview','🔍 Preview scope'],['br3-wizard-generate','🧪 Generate research brief','primary-btn'],['br3-wizard-guide','❓ How it works']])+'</div>'+
+  '<div id="br3-scope-preview" class="br3-preview"><span class="br3-pill"><strong>'+fmt(rows.length)+'</strong> matching existing records</span><span class="br3-pill"><strong>'+fmt(locations||chosenCountry)+'</strong> location targets</span></div>'+
+  '<p class="br3-muted"><strong>Important:</strong> Generating prepares a prompt and an evidence-oriented JSON packet. It does not automatically visit websites, independently verify sources or publish records.</p>')+
+ outputHTML();
+}
+function helpHTML(){
+ return group('br3-help','❓ How the research studio works',
+  '<p class="br3-muted">The Research Studio prepares work for a separate research run. It does not operate an automatic web crawler, check each URL by itself, or write to the public database.</p>'+
+  '<div class="br3-help-flow">'+
+  '<article><h3>① Choose a workflow</h3><p><strong>Discovery</strong> finds candidates not already in Backroom. <strong>Updates</strong> reviews records already listed. <strong>Combined</strong> checks venues and their event dates together. <strong>Cruising updates</strong> reviews public-space cruising areas under the stricter Zone 8 evidence rules.</p></article>'+
+  '<article><h3>② Choose geography</h3><p><strong>Country</strong> means the entire selected country. <strong>City</strong> means only that city. A preset replaces the selection; Advanced Builder can add or remove individual cities. Only Europe and its territories, plus Israel and Turkey, are offered for new research jobs. The Canary Islands remain under Spain.</p></article>'+
+  '<article><h3>③ Select a period</h3><p><strong>From/Until</strong> control which existing dated events are in scope and which future months the brief asks the researcher to verify. For venue and cruising-area updates, the dates are research context; they do not mean a venue opened on those dates.</p></article>'+
+  '<article><h3>④ Preview, then generate</h3><p><strong>Preview scope</strong> counts the existing records that match, without researching anything. <strong>Generate research brief</strong> creates instructions, a source list, original record snapshots and batches. Batches limit how many records or cities are handled together.</p></article>'+
+  '<article><h3>⑤ Carry out research separately</h3><p><strong>Copy brief</strong> gives you the human-readable instructions for a research chat. <strong>Markdown brief</strong> downloads the same instructions. <strong>Full JSON packet</strong> downloads complete existing records plus research sources. <strong>Download each batch</strong> saves separate smaller packets. None of these buttons scrapes or publishes.</p></article>'+
+  '<article><h3>⑥ Source Library and Instructions</h3><p><strong>Source Library</strong> combines known links with original record URLs, the cruising registry and audit files; use its search/filters to locate or manually select URLs. <strong>Instructions</strong> holds editable research rules. <strong>Advanced Builder</strong> adds status filters, exact IDs, country/city editing and source limits.</p></article>'+
+  '</div>'+
+  '<p class="br3-muted">Suggested routine: Quick Setup → pick “Combined venue + event research” → choose “Top 20 Backroom cities” → set the date range → Preview → Generate → Copy brief into a research chat. When the research produces verified updates, review them using Data & Analytics before publishing.</p>'+
+  '<div class="br3-inline">'+buttons([['br3-guide-wizard','✨ Open Quick Setup','primary-btn'],['br3-guide-advanced','⚙ Advanced Builder']])+'</div>');
+}
 function sourceKinds(){
- return D.uniq(S.lib.all().map(x=>x.kind)).sort();
+ return D.uniq(S.lib.all().flatMap(x=>x.kinds?.length?x.kinds:[x.kind])).sort();
 }
 function sourceConfigHTML(){
  const c=S.config;return group('br3-brief-controls','🔗 Sources & Brief Output',
@@ -160,7 +222,7 @@ function renderBuilder(){
 function allSources(){
  const q=D.norm(S.sourceSearch),kind=S.sourceKind,country=D.norm(S.sourceCountry),origin=D.norm(S.sourceOrigin);
  return S.lib.all().filter(x=>(!q||D.norm([x.name,x.url,x.kind,x.record_ids.join(' '),x.countries.join(' ')].join(' ')).includes(q))&&
-  (!kind||x.kind===kind)&&(!country||x.countries.some(v=>D.norm(v)===country))&&(!origin||x.origins.some(v=>D.norm(v).includes(origin))))
+  (!kind||x.kind===kind||x.kinds?.includes(kind))&&(!country||x.countries.some(v=>D.norm(v)===country))&&(!origin||x.origins.some(v=>D.norm(v).includes(origin))))
   .sort((a,b)=>a.url.localeCompare(b.url));
 }
 function sourceHTML(){
@@ -170,7 +232,7 @@ function sourceHTML(){
  const origins=S.fileReports.map(x=>'<span class="br3-pill '+(x.error?'br3-warning':'')+'">'+esc(x.origin.split('/').pop())+': '+(x.error?'unavailable':fmt(x.newUrls)+' new URLs')+'</span>').join('');
  return group('br3-library','🌐 Master Source Library',
   '<p class="br3-muted">Exact individual URLs are deduplicated, while original variants, record IDs and file provenance remain attached. Archive links are research leads — not proof of a live venue or recent cruising activity.</p>'+
-  '<div class="br3-chips">'+[['Source URLs',S.lib.size()],['Catalogue seeds',S.seeds?.sources?.length||0],['Production venues',P.state.venues.length],['Production events',P.state.events.length]].map(x=>'<span class="br3-pill"><strong>'+fmt(x[1])+'</strong> '+x[0]+'</span>').join('')+'</div>'+
+  '<div class="br3-chips">'+[['Source URLs',S.lib.size()],['Unique seed URLs',S.seeds?.sources?.length||0],['Original seed references',S.seeds?.deduplication?.source_entries_before||0],['Production venues',P.state.venues.length],['Production events',P.state.events.length]].map(x=>'<span class="br3-pill"><strong>'+fmt(x[1])+'</strong> '+x[0]+'</span>').join('')+'</div>'+
   '<div class="br3-chips">'+origins+'</div>'+
   '<div class="br3-inline">'+buttons([['br3-load-sources','↻ Load cruising + January research','primary-btn'],['br3-export-sources','⬇ Export all sources JSON'],['br3-export-csv','⬇ CSV'],['br3-import-sources-btn','⬆ Import URL list'],['br3-add-source','＋ Add source'],['br3-use-all-sources','Use all sources']])+
   '<input type="file" id="br3-source-file" accept=".json,.csv,.tsv,.txt" hidden></div>'+
@@ -182,13 +244,15 @@ function sourceHTML(){
   '<div class="br3-overflow"><table class="br3-table"><thead><tr><th>Use</th><th>Source / Website</th><th>Type</th><th>Research references</th><th>Actions</th></tr></thead><tbody>'+
   visible.map(x=>'<tr><td><input type="checkbox" aria-label="Include source in builder" data-br3-source-pick="'+esc(x.key)+'" '+(picked.has(x.key)?'checked':'')+'></td><td><strong>'+esc(x.name)+'</strong><div class="br3-url"><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+esc(x.url)+'</a></div>'+
    (x.enabled===false?'<span class="br3-warning">Disabled</span>':'')+'</td><td>'+esc(x.kind)+'</td><td>'+
-   '<span title="'+esc(x.origins.join('; ').slice(0,400))+'">'+fmt(x.record_ids.length)+' IDs · '+fmt(x.origins.length)+' origins</span>'+
-   '<details><summary>Provenance</summary><p>'+esc(x.origins.join(' · ').slice(0,1000))+'</p><p>'+esc(x.record_ids.slice(0,40).join(', '))+'</p></details></td><td>'+
+   '<span title="'+esc(x.origins.join('; ').slice(0,400))+'">'+fmt(x.record_ids.length)+' IDs · '+fmt(x.origins.length)+' origins · '+fmt(x.source_references?.length||0)+' original references</span>'+
+   '<details><summary>Provenance & original URL variants</summary><p>'+esc(x.origins.join(' · ').slice(0,1000))+'</p><p>'+esc(x.record_ids.slice(0,40).join(', '))+'</p>'+
+   (x.source_references?.length?'<ul class="br3-provenance-list">'+x.source_references.map(r=>'<li><strong>'+esc(r.id)+'</strong> · <a href="'+esc(r.url)+'" target="_blank" rel="noopener noreferrer">'+esc(r.url)+'</a> <small>('+esc(r.kind||'')+')</small></li>').join('')+'</ul>':'')+
+   '</details></td><td>'+
    '<button type="button" class="br3-action" data-br3-edit="'+esc(x.key)+'">Edit</button><button type="button" class="br3-action" data-br3-toggle="'+esc(x.key)+'">'+(x.enabled===false?'Enable':'Disable')+'</button></td></tr>').join('')+
   '</tbody></table></div>'+
   '<div class="br3-inline">'+buttons([['br3-prev-sources','← Previous'],['br3-next-sources','Next →']])+'</div>'+
   '<div id="br3-source-editor">'+sourceEditorHTML()+'</div>'+
-  '<p class="br3-muted">The original <strong>102-URL Collect Scraping URLs list</strong> is now included in this source library, with each URL linked to its original line number. The verbatim file is archived in <code>scraping/Backroom_scraping_source_URLs_102_2026-11-06.txt</code>. Duplicates with other source collections are grouped, without losing source provenance. Venue/event URLs, the cruising registry and January audit load alongside it.</p>'+ 
+  '<p class="br3-muted">The original <strong>102-URL Collect Scraping URLs list</strong> is now included in this source library, with each URL linked to its original line number. The verbatim file is archived in <code>scraping/Backroom_scraping_source_URLs_102_2026-11-06.txt</code>. The 192 original source entries are now grouped into 122 distinct seed URLs; all original links, source IDs and provenance remain accessible in the per-source details and deduplication audit. Venue/event URLs, the cruising registry and January audit load alongside it.</p>'+ 
   '<p class="br3-muted">Only user edits and small imported lists are saved in this browser. The large cruising registry and original research remain in their GitHub files; export a full library if you need a portable combined copy.</p>');
 }
 function sourceEditorHTML(){
@@ -217,14 +281,16 @@ function instructionHTML(){
 }
 function render(){
  if(!S.ready){get('br3-panel').innerHTML='<div class="br3-card">Loading the Phase 3 workspace…</div>';return;}
- for(const key of ['builder','sources','instructions'])get('br3-'+key)?.classList.toggle('br3-active',S.tab===key);
+ for(const key of ['wizard','builder','sources','instructions','help'])get('br3-'+key)?.classList.toggle('br3-active',S.tab===key);
+ if(S.tab==='wizard')get('br3-panel').innerHTML=wizardHTML();
  if(S.tab==='builder')renderBuilder();
  if(S.tab==='sources')get('br3-panel').innerHTML=sourceHTML();
  if(S.tab==='instructions')get('br3-panel').innerHTML=instructionHTML();
+ if(S.tab==='help')get('br3-panel').innerHTML=helpHTML();
  setMessage(S.error||'');
 }
 function selectTab(tab){
- if(!['builder','sources','instructions'].includes(tab))return;
+ if(!['wizard','builder','sources','instructions','help'].includes(tab))return;
  S.tab=tab;render();
  if(tab==='sources'&&!S.loadedResearch)researchSources();
 }
@@ -234,14 +300,14 @@ function saveConfigInputs(){
  for(const [key,id,min,max] of [['batchSize','br3-batch',1,300],['sourceLimit','br3-source-limit',1,300]]){
   const n=get(id);if(n)S.config[key]=Math.min(max,Math.max(min,Number(n.value)||min));
  }
- S.config.ids=D.uniq(String(get('br3-ids')?.value||'').split(/[\s,;]+/).map(D.clean));
- S.config.sourceKinds=[...get('br3-source-kinds')?.selectedOptions||[]].map(x=>x.value);
+ if(get('br3-ids'))S.config.ids=D.uniq(String(get('br3-ids').value||'').split(/[\s,;]+/).map(D.clean));
+ if(get('br3-source-kinds'))S.config.sourceKinds=[...get('br3-source-kinds').selectedOptions].map(x=>x.value);
  remember();
 }
 function updateCityResults(){const el=get('br3-city-results');if(el)el.innerHTML=cityHTML()}
 function preview(){
  saveConfigInputs();
- const rows=D.selected(S.config,P.state.venues,P.state.events),count=D.kindOf(S.config.workflow);
+ const rows=D.selected(scopedConfig(),P.state.venues,P.state.events),count=D.kindOf(S.config.workflow);
  const node=get('br3-scope-preview');
  if(node)node.innerHTML='<span class="br3-pill"><strong>'+fmt(rows.length)+'</strong> existing '+esc(count)+' records selected</span>'+
   '<span class="br3-pill"><strong>'+fmt(S.config.cities.length)+'</strong> target cities selected</span>'+
@@ -254,12 +320,13 @@ async function generate(){
  if(S.config.zone==='8'&&S.config.workflow!=='cruising_updates'){notify('Zone 8 is reserved for public-space cruising areas. Use Auto or another zone for venue/event research.');return;}
  if(S.config.countries.some(c=>['united states','united states of america','usa','u.s.'].includes(D.norm(c)))){notify('The current European Zone 6 campaign excludes US locations. Remove the United States from this research scope.');return;}
  if(S.config.workflow==='cruising_updates'&&S.config.zone!=='auto'&&S.config.zone!=='8'){notify('Cruising areas belong in Zone 8. Choose Auto or Zone 8.');return;}
- if(!rows.length&&!S.config.countries.length&&!S.config.cities.length){notify('Select at least one country, city or record ID for this brief.');return;}
+ if(!S.config.countries.length&&!S.config.cities.length&&!S.config.ids.length){notify('Choose a geography preset, a country, a city, or a specific record ID before generating.');return;}
  if(!S.loadedResearch)await researchSources();
- const built=D.build(S.config,P.state.venues,P.state.events,S.lib.all(),S.rules);
+ const built=D.build(scopedConfig(),P.state.venues,P.state.events,S.lib.all(),S.rules);
  S.packet=built.packet;S.markdown=built.markdown;
  const out=get('br3-output');if(out)out.value=S.markdown;
  const node=get('br3-result-summary');if(node)node.innerHTML='<strong>'+built.batches.length+' batches · '+built.batches.reduce((a,b)=>a+b.record_ids.length,0)+' existing records · '+built.batches.reduce((a,b)=>a+b.sources.length,0)+' batch source references</strong>';
+ if(S.tab==='wizard')render();
  notify('Created '+built.batches.length+' research batches. Nothing was published.');
 }
 function storeCustom(){
@@ -305,10 +372,32 @@ async function importRules(file){
  }
  saveLocal(RULE_KEY,S.ruleEdits);render();notify('Imported '+incoming.length+' instruction entries.');
 }
+function applyPreset(presetID){
+ const selection=W.selection(presetID,{registry:P.state.registry,venues:P.state.venues,events:P.state.events});
+ S.wizardPreset=selection.id;S.config.countries=selection.countries;S.config.cities=selection.cities;
+ S.config.text='';S.config.ids=[];S.config.status='';
+ S.config.zone=S.config.workflow==='cruising_updates'?'8':'auto';
+ S.config.sourceKeys=[];S.config.sourceKinds=[];S.packet=null;S.markdown='';
+ remember();render();return selection;
+}
 async function handleClick(button){
  const id=button.id;
+ if(button.dataset.br3Preset){
+  const selection=applyPreset(button.dataset.br3Preset);
+  notify('Preset applied: '+selection.countries.length+' countries and '+selection.cities.length+' cities.');return;
+ }
+ if(id==='br3-wizard-clear'){
+  S.wizardPreset='';S.config.countries=[];S.config.cities=[];S.packet=null;S.markdown='';
+  remember();render();return;
+ }
+ if(id==='br3-wizard-advanced'){selectTab('builder');return;}
+ if(id==='br3-wizard-preview'){preview();return;}
+ if(id==='br3-wizard-generate'){await generate();return;}
+ if(id==='br3-wizard-guide'){selectTab('help');return;}
+ if(id==='br3-guide-wizard'||id==='br3-open-wizard'){selectTab('wizard');return;}
+ if(id==='br3-guide-advanced'){selectTab('builder');return;}
  if(button.dataset.br3RemoveCountry){
-  const country=button.dataset.br3RemoveCountry;S.config.countries=S.config.countries.filter(x=>x!==country);
+  S.wizardPreset='';const country=button.dataset.br3RemoveCountry;S.config.countries=S.config.countries.filter(x=>x!==country);
   S.config.cities=S.config.cities.filter(x=>!x.startsWith(country+'|'));remember();renderBuilder();return;
  }
  if(button.dataset.br3Edit){S.sourceEditing=button.dataset.br3Edit;get('br3-source-editor').innerHTML=sourceEditorHTML();return;}
@@ -317,11 +406,11 @@ async function handleClick(button){
  }
  if(button.dataset.br3RemoveCity){S.config.cities=S.config.cities.filter(x=>x!==button.dataset.br3RemoveCity);remember();updateCityResults();return;}
  if(id==='br3-add-country'){
-  const value=get('br3-country-pick')?.value;if(value&&!S.config.countries.includes(value))S.config.countries.push(value);remember();renderBuilder();return;
+  S.wizardPreset='';const value=get('br3-country-pick')?.value;if(value&&!S.config.countries.includes(value))S.config.countries.push(value);remember();renderBuilder();return;
  }
- if(id==='br3-clear-countries'){S.config.countries=[];S.config.cities=[];remember();renderBuilder();return;}
- if(id==='br3-all-cities'){S.config.cities=D.uniq([...S.config.cities,...filteredCities().map(x=>x.id)]);remember();updateCityResults();return;}
- if(id==='br3-clear-cities'){S.config.cities=[];remember();updateCityResults();return;}
+ if(id==='br3-clear-countries'){S.wizardPreset='';S.config.countries=[];S.config.cities=[];remember();renderBuilder();return;}
+ if(id==='br3-all-cities'){S.wizardPreset='';S.config.cities=D.uniq([...S.config.cities,...filteredCities().map(x=>x.id)]);remember();updateCityResults();return;}
+ if(id==='br3-clear-cities'){S.wizardPreset='';S.config.cities=[];remember();updateCityResults();return;}
  if(id==='br3-copy-ids'){const rows=preview();await copyText(rows.map(x=>x.Event_ID||x.Venue_ID).join('\n'));return;}
  if(id==='br3-preview'){preview();return;}
  if(id==='br3-generate'){await generate();return;}
@@ -331,7 +420,7 @@ async function handleClick(button){
  if(id==='br3-save-packet'){if(S.packet)downloadJSON(S.packet,'backroom_research_packets_'+today()+'.json');return;}
  if(id==='br3-save-batches'){if(S.packet)for(const batch of S.packet.batches)downloadJSON({...S.packet,batches:[batch]},'backroom_research_batch_'+String(batch.batch).padStart(3,'0')+'.json');return;}
  if(id==='br3-export-sources'){downloadJSON({format:'backroom-phase3-sources',generated_at:new Date().toISOString(),sources:S.lib.all()},'backroom_master_source_library_'+today()+'.json');return;}
- if(id==='br3-export-csv'){P.downloadCSV(S.lib.all().map(x=>({Name:x.name,URL:x.url,Type:x.kind,Verification:x.verification,Enabled:x.enabled,Country:x.countries.join('; '),City:x.cities.join('; '),Record_IDs:x.record_ids.join('; '),Origins:x.origins.join('; '),Variants:x.variants.join('; ')})),'backroom_source_library_'+today()+'.csv');return;}
+ if(id==='br3-export-csv'){P.downloadCSV(S.lib.all().map(x=>({Name:x.name,URL:x.url,Type:x.kind,Verification:x.verification,Enabled:x.enabled,Country:x.countries.join('; '),City:x.cities.join('; '),Record_IDs:x.record_ids.join('; '),Origins:x.origins.join('; '),Variants:x.variants.join('; '),Original_Reference_IDs:(x.source_references||[]).map(r=>r.id).join('; '),Original_Source_URLs:(x.source_references||[]).map(r=>r.url).join('; '),Original_References_JSON:JSON.stringify(x.source_references||[])})),'backroom_source_library_'+today()+'.csv');return;}
  if(id==='br3-import-sources-btn'){get('br3-source-file')?.click();return;}
  if(id==='br3-use-all-sources'){S.config.sourceKeys=[];remember();render();return;}
  if(id==='br3-add-source'){S.sourceEditing='new';get('br3-source-editor').innerHTML=sourceEditorHTML();return;}
@@ -356,9 +445,16 @@ function handleChange(target){
  const id=target.id;
  if(target.dataset.br3SourcePick){const key=target.dataset.br3SourcePick;const set=new Set(S.config.sourceKeys||[]);if(target.checked)set.add(key);else set.delete(key);S.config.sourceKeys=[...set];remember();return;}
  if(target.dataset.br3City){
-  const city=target.dataset.br3City;
+  S.wizardPreset='';const city=target.dataset.br3City;
   S.config.cities=target.checked?D.uniq([...S.config.cities,city]):S.config.cities.filter(x=>x!==city);
   remember();return;
+ }
+ if(id==='br3-wizard-workflow'){
+  S.config.workflow=target.value;S.config.zone=target.value==='cruising_updates'?'8':'auto';remember();render();return;
+ }
+ if(id==='br3-wizard-from'||id==='br3-wizard-to'||id==='br3-wizard-batch'){
+  const key={'br3-wizard-from':'from','br3-wizard-to':'to','br3-wizard-batch':'batchSize'}[id];
+  S.config[key]=key==='batchSize'?Number(target.value):target.value;remember();return;
  }
  if(id==='br3-rule-picker'){S.selectedRule=target.value;render();return;}
  if(['br3-workflow','br3-zone','br3-from','br3-to','br3-status','br3-batch','br3-source-limit','br3-source-kinds'].includes(id)){saveConfigInputs();if(id==='br3-workflow'){if(S.config.workflow==='cruising_updates')S.config.zone='8';else if(S.config.zone==='8')S.config.zone='auto';renderBuilder();}return;}
@@ -399,16 +495,20 @@ function install(){
  const view=document.createElement('section');view.id='br3-view';view.style.display='none';
  view.innerHTML='<header class="br3-header"><div><h1>🧭 Backroom Research Studio</h1><p>Generate source-backed research packets from the existing database and retained research files.</p></div><span class="br3-status">Phase 3 · Research-only</span></header>'+
  '<nav class="br3-tabs" aria-label="Research studio tabs">'+
- '<button id="br3-builder" type="button" class="br3-active">🧭 Scrape Builder</button>'+
+ '<button id="br3-wizard" type="button" class="br3-active">✨ Quick Setup</button>'+
+ '<button id="br3-builder" type="button">⚙ Advanced Builder</button>'+
  '<button id="br3-sources" type="button">🌐 Source Library</button>'+
- '<button id="br3-instructions" type="button">📜 Instructions</button></nav>'+
+ '<button id="br3-instructions" type="button">📜 Instructions</button>'+
+ '<button id="br3-help" type="button">❓ How It Works</button></nav>'+
  '<div id="br3-message" class="br3-message" role="status"></div><div id="br3-panel"></div>';
  main.appendChild(view);
  view.addEventListener('click',async e=>{
   const btn=e.target.closest('button');if(!btn)return;
+  if(btn.id==='br3-wizard')return selectTab('wizard');
   if(btn.id==='br3-builder')return selectTab('builder');
   if(btn.id==='br3-sources')return selectTab('sources');
   if(btn.id==='br3-instructions')return selectTab('instructions');
+  if(btn.id==='br3-help')return selectTab('help');
   try{await handleClick(btn)}catch(err){console.error(err);notify('Phase 3 action failed: '+err.message);}
  });
  view.addEventListener('change',async e=>{
@@ -420,6 +520,6 @@ function install(){
  view.addEventListener('input',e=>handleInput(e.target));
  document.addEventListener('click',e=>{if(e.target.closest('.sidebar-item')&&!e.target.closest('#nav-scrape-builder'))hide();},true);
 }
-window.BackroomAdminPhase3={show,hide,getState:()=>S,researchSources,render,version:'0.23.5'};
+window.BackroomAdminPhase3={show,hide,getState:()=>S,researchSources,render,applyPreset,version:'0.23.7'};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
