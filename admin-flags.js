@@ -16,5 +16,67 @@ function flag(country) {
   return String.fromCodePoint(...[...value].map(letter=>127397+letter.charCodeAt(0)));
 }
 function label(country) {const name=String(country??'').trim();return name?flag(name)+' '+name:'🌍 Unknown';}
-window.BackroomAdminFlags={code,flag,label};
+const esc=value=>String(value??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+const validCode=country=>{
+  const c=code(country);
+  return c&&/^[A-Z]{2}$/.test(c)&&c!=='XK'?c.toLowerCase():null;
+};
+function iconUrl(country,size='24x18'){
+  const c=validCode(country);
+  return c?'https://flagcdn.com/'+size+'/'+c+'.png':null;
+}
+/* Actual flag image, not a Unicode regional-indicator emoji (Windows Chrome
+   commonly renders those as two letters, e.g. "de" instead of Germany's flag). */
+function html(country){
+  const name=String(country??'').trim();
+  const source=iconUrl(country);
+  if(!source)return '<span class="br-country-flag-missing" role="img" aria-label="Flag unavailable">🌐</span>';
+  return '<span class="br-country-flag-frame" title="'+esc(name||code(country))+'">'+
+    '<img class="br-country-flag-image" src="'+source+'" srcset="'+iconUrl(country,'48x36')+' 2x" width="24" height="18" loading="lazy" decoding="async" alt="'+esc(name||code(country))+' flag">'+
+    '<span class="br-country-flag-fallback" aria-hidden="true">🌐</span></span>';
+}
+const countrySelectQuery='select[data-cf="country"],select[data-quality="country"],select[data-cover="country"],#br-reg-country,#admin-json-country-filter,#admin-location-country-filter';
+function decorateCountrySelectors(root=document){
+  const nodes=[...(root.matches?.(countrySelectQuery)?[root]:[]),...root.querySelectorAll(countrySelectQuery)];
+  for(const select of nodes){
+    const url=iconUrl(select.value);
+    if(url){
+      // Inline important values override the admin's existing !important select
+      // background/padding styles while leaving its native change events intact.
+      select.style.setProperty('background-image','url("'+url+'")','important');
+      select.style.setProperty('background-position','10px center','important');
+      select.style.setProperty('background-repeat','no-repeat','important');
+      select.style.setProperty('background-size','24px 18px','important');
+      select.style.setProperty('padding-left','43px','important');
+      select.classList.add('br-flagged-select');
+    }else{
+      for(const prop of ['background-image','background-position','background-repeat','background-size','padding-left'])select.style.removeProperty(prop);
+      select.classList.remove('br-flagged-select');
+    }
+  }
+}
+function install(){
+  decorateCountrySelectors();
+  document.addEventListener('change',event=>{
+    if(event.target?.matches?.(countrySelectQuery))decorateCountrySelectors(event.target);
+  },true);
+  // Dynamic country selectors are recreated by the filters and country registry.
+  // Batch updates to one scan per microtask instead of repeatedly processing
+  // each table row from the MutationObserver.
+  let scheduled=false;
+  const observer=new MutationObserver(mutations=>{
+    if(!mutations.some(item=>item.addedNodes.length))return;
+    if(scheduled)return;
+    scheduled=true;
+    queueMicrotask(()=>{scheduled=false;decorateCountrySelectors();});
+  });
+  observer.observe(document.body,{childList:true,subtree:true});
+  document.addEventListener('error',event=>{
+    if(event.target?.classList?.contains('br-country-flag-image'))
+      event.target.parentElement?.classList?.add('br-country-flag-error');
+  },true);
+}
+window.BackroomAdminFlags={code,flag,label,html,iconUrl,decorateCountrySelectors};
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);
+else install();
 })();
