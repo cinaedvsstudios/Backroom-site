@@ -1,0 +1,236 @@
+{
+  "batch": "P5 continuation 2026-11-13",
+  "month": "2027-01",
+  "source": "Venue URL audit index 730 through 775, only 20 website-pending rows selected",
+  "previous_checked": 522,
+  "newly_checked": 20,
+  "checked_after": 542,
+  "next_index": 776,
+  "source_rows": [
+    {
+      "audit_index": 730,
+      "Venue_ID": "MDA-KIV-COM-01",
+      "Name": "GENDERDOC-M",
+      "status": "checked_no_january_dates_visible",
+      "verification_url": "https://gdm.md/old.gdm.md/ro/events-calendar/general?year=2027",
+      "findings": "Official GENDERDOC-M year-2027 event calendar loads but shows no individually described January 2027 events; old landing page contains undated January notices that cannot be taken as 2027."
+    },
+    {
+      "audit_index": 731,
+      "Venue_ID": "MNE-POD-COM-01",
+      "Name": "Queer Montenegro",
+      "status": "checked_access_limited",
+      "verification_url": "https://www.queermontenegro.org/",
+      "findings": "Official Queer Montenegro homepage is a JavaScript 'Loading...' shell, with no verifiable January 2027 event dates in accessible content."
+    },
+    {
+      "audit_index": 732,
+      "Venue_ID": "NOR-TOS-PRD-01",
+      "Name": "Arctic Pride",
+      "status": "checked_stale_calendar",
+      "verification_url": "https://www.arcticpride.no/",
+      "findings": "Official Arctic Pride site advertises 9–16 November 2026 festival; no January 2027 dated programme or eligible men-only cruising event."
+    },
+    {
+      "audit_index": 733,
+      "Venue_ID": "NOR-TRD-PRD-01",
+      "Name": "Trondheim Pride",
+      "status": "checked_stale_calendar",
+      "verification_url": "https://www.trondheimpride.no/",
+      "findings": "Official site search result describes Pride 2026 and September 12 parade; direct fetch failed. No verified January 2027 events."
+    },
+    {
+      "audit_index": 748,
+      "Venue_ID": "NUE-SAU-ACH-01",
+      "Name": "Achilleus Men's Spa & Sauna",
+      "status": "checked_january_dated",
+      "verification_url": "https://achilleus-sauna.de/events/kategorie/top-events",
+      "findings": "Official January 2027 events: Bären & Otter Zone on 2 Jan (13:00–02:00 next day), Youngster-Schaumparty on 8 Jan (13:00–02:00 next day), Farbenspiel on 23 Jan (13:00–02:00 next day); three newly staged for events.json. Official Thursday UNISEX sessions are excluded as mixed access. Normal recurring sauna/infusion schedules not expanded into individual listings."
+    },
+    {
+      "audit_index": 749,
+      "Venue_ID": "MUC-BAR-ZUN-01",
+      "Name": "Zunfthaus",
+      "status": "checked_no_eligible_january_dates",
+      "verification_url": "https://www.zunfthaus-muenchen.de/",
+      "findings": "Website explicitly advertises 31 Jan 2027 FASSzination Bavarian magic dinner at 18:00; it is a restaurant entertainment event, not qualifying men-only cruising/darkroom nightlife."
+    },
+    {
+      "audit_index": 750,
+      "Venue_ID": "BPL-BAR-FUNGIR-01",
+      "Name": "Funny Girls",
+      "status": "checked_stale_calendar",
+      "verification_url": "https://www.funnygirlsshow.co.uk/",
+      "findings": "Official cabaret/drag venue promotes 2026 show schedules; no January 2027 dated qualifying darkroom/cruising programme. Standard drag cabaret is outside this event audit's inclusion criteria."
+    },
+    {
+      "audit_index": 751,
+      "Venue_ID": "HAN-PAR-SCHSAU-01",
+      "Name": "Schwule Sau Hannover",
+      "status": "checked_stale_calendar",
+      "verification_url": "https://www.schwulesauhannover.de/saukerle",
+      "findings": "Official event programme accessible has Sep 2026 items; SAU:KERLE is described as a men-only fetish party twice yearly in late April and late October, with temporary darkroom areas. No exact January 2027 event verified."
+    },
+    {
+      "audit_index": 756,
+      "Venue_ID": "BCN-PAR-CIRCUIT-01",
+      "Name": "Circuit Festival Barcelona",
+      "status": "checked_access_limited",
+      "verification_url": "https://circuitfestival.net/",
+      "findings": "Official Circuit Festival homepage yields only a Matinée/Circuit interactive splash; no readable January 2027 event programme confirmed."
+    },
+    {
+      "audit_index": 758,
+      "Venue_ID": "BTN-PRD-01",
+      "Name": "Brighton & Hove Pride",
+      "status": "checked_no_eligible_january_dates",
+      "verification_url": "https://www.brighton-pride.org/",
+      "findings": "Official Brighton Pride festival/ticket pages have no verified January 2027 men-only cruising parties; Pride street/park programming is not qualifying without a specific men-only darkroom event."
+    },
+    {
+      "audit_index": 759,
+      "Venue_ID": "ORK-PRD-01",
+      "Name": "Cork Community Pride",
+      "status": "checked_stale_calendar",
+      "verification_url": "https://www.corkcommunitypride.ie/",
+      "findings": "Official Cork Community Pride page gives 1–2 August 2026 dates and explicitly says no upcoming events; no January 2027 programme."
+    },
+    {
+      "audit_index": 760,
+      "Venue_ID": "GWY-PRD-01",
+      "Name": "Galway Community Pride",
+      "status": "checked_stale_calendar",
+      "verification_url": "https://www.galwaypride.ie/",
+      "findings": "Official Galway Community Pride homepage lists 2–8 August 2026, not January 2027; no dated January programming."
+    },
+    {
+      "audit_index": 761,
+      "Venue_ID": "BEN-PRD-01",
+      "Name": "Benidorm Pride Festival",
+      "status": "checked_access_limited",
+      "verification_url": "https://www.benidormpride.com/en/",
+      "findings": "Official Benidorm Pride English page returned no readable calendar text; January 2027 event details could not be verified."
+    },
+    {
+      "audit_index": 762,
+      "Venue_ID": "NOLA-FES-DECADENCE-01",
+      "Name": "Southern Decadence",
+      "status": "checked_stale_calendar",
+      "verification_url": "https://www.southerndecadence.com/",
+      "findings": "Official Southern Decadence home shows August 28–September 2 2025 information and describes the Labor Day event; no verified January 2027 event."
+    },
+    {
+      "audit_index": 770,
+      "Venue_ID": "HAM-PRD-HAMCSD-01",
+      "Name": "Hamburg Pride / CSD Hamburg",
+      "status": "checked_stale_calendar",
+      "verification_url": "https://www.hamburg-pride.de/veranstaltungen",
+      "findings": "Hamburg Pride event page is focused on Pride Week 2026, not January 2027. No eligible January event confirmed."
+    },
+    {
+      "audit_index": 771,
+      "Venue_ID": "HAM-FES-PINKPAULI-01",
+      "Name": "Pink Pauli Festival",
+      "status": "checked_stale_calendar",
+      "verification_url": "https://pinkpaulifestival.de/",
+      "findings": "Official Pink Pauli CSD afterparty page advertises 1 August 2026; its Babylon men-only darkroom ticket is a 2026 festival feature, not an announced January 2027 edition."
+    },
+    {
+      "audit_index": 772,
+      "Venue_ID": "HAM-PAR-NORDBAEREN-01",
+      "Name": "Nordbären Hamburg",
+      "status": "checked_stale_calendar",
+      "verification_url": "https://nordbaeren-hamburg.de/wp-content/uploads/2026/04/NB-HH-Kalender2026.pdf",
+      "findings": "Official Nordbären Hamburg calendar PDF covers January–December 2026 only; no 2027 dated schedule yet. 2026 bear-sauna and Bärenpaadiie sessions must not be duplicated into 2027."
+    },
+    {
+      "audit_index": 773,
+      "Venue_ID": "HAM-VEN-FRIEDAB-01",
+      "Name": "Frieda B.",
+      "status": "checked_stale_calendar",
+      "verification_url": "https://www.friedab.de/",
+      "findings": "Official Frieda B. site displays event posts from February–March 2024, not January 2027; the venue is a mixed music bar/disco without confirmed men-only darkroom sessions."
+    },
+    {
+      "audit_index": 774,
+      "Venue_ID": "HAM-VEN-UHRLAUB-01",
+      "Name": "Café Uhrlaub",
+      "status": "checked_not_calendar_source",
+      "verification_url": "https://www.cafeuhrlaub.de/",
+      "findings": "Official Café Uhrlaub site is a restaurant/café menu and opening-hours page, without a public event calendar or January 2027 darkroom/men-only events."
+    },
+    {
+      "audit_index": 775,
+      "Venue_ID": "MAD-PAR-MADBEAR-01",
+      "Name": "MAD.BEAR Madrid",
+      "status": "checked_no_eligible_january_dates",
+      "verification_url": "https://madbear.org/",
+      "findings": "MAD.BEAR official website promotes festivals and 2026 tickets; Madrid's 2026 winter bear week is in early December (3–10 Dec). No verified January 2027 MAD.BEAR Madrid event."
+    }
+  ],
+  "events_added": [
+    {
+      "Event_ID": "EVT-JAN27-P5B-NUE-SAU-ACH-01-20270102-01",
+      "Venue_ID": "NUE-SAU-ACH-01",
+      "Venue_Name": "Achilleus Men's Spa & Sauna",
+      "City": "Nuremberg",
+      "Country": "Germany",
+      "Event_Name": "Bären & Otter Zone",
+      "Event_Date": "2027-01-02",
+      "Event_Start_Time": "13:00",
+      "Event_End_Time": "02:00",
+      "Status": "Live",
+      "Event_Category": "Sauna",
+      "Event_Description": "First Saturday's bear and otter get-together at Achilleus Men's Spa & Sauna. The programme welcomes admirers of bigger, hairy men and otters, with a small warm snack offered between 18:00 and 20:00 while supplies last. The official calendar gives a 13:00 start and a 02:00 finish the following morning.",
+      "Dresscode_Info": "No special mandatory outfit stated; standard sauna rules apply.",
+      "Audience_Info": "Men's sauna, adults 18+.",
+      "Vibe_Tags": "Men Only, Sauna, Bears, Otters, Cruising",
+      "Event_URL": "https://achilleus-sauna.de/event/baeren-otter-zone-2-3-2-2-3/2027-01-02",
+      "Source_URLs": "https://achilleus-sauna.de/event/baeren-otter-zone-2-3-2-2-3/2027-01-02 | https://achilleus-sauna.de/events/kategorie/bearen/liste",
+      "Last_Updated": "2026-11-13",
+      "Flag_Reason": ""
+    },
+    {
+      "Event_ID": "EVT-JAN27-P5B-NUE-SAU-ACH-01-20270108-02",
+      "Venue_ID": "NUE-SAU-ACH-01",
+      "Venue_Name": "Achilleus Men's Spa & Sauna",
+      "City": "Nuremberg",
+      "Country": "Germany",
+      "Event_Name": "Youngster-Schaumparty – Freitag",
+      "Event_Date": "2027-01-08",
+      "Event_Start_Time": "13:00",
+      "Event_End_Time": "02:00",
+      "Status": "Live",
+      "Event_Category": "Sauna",
+      "Event_Description": "Achilleus's second-Friday foam-party special combines the men's sauna with a livelier, playful atmosphere. Friday also includes discounted admission for guests aged 26 or younger; older adult men can attend. The official event calendar lists the sauna's programme window from 13:00 to 02:00 the following day.",
+      "Dresscode_Info": "Standard men's sauna rules; check the official page for foam-party details.",
+      "Audience_Info": "Men's sauna, adults 18+; younger guests receive a discount, not an exclusive age restriction.",
+      "Vibe_Tags": "Men Only, Sauna, Foam, Youngsters, Cruising",
+      "Event_URL": "https://achilleus-sauna.de/events/kategorie/youngsters-schaumparty/liste",
+      "Source_URLs": "https://achilleus-sauna.de/events/kategorie/youngsters-schaumparty/liste | https://achilleus-sauna.de/programm",
+      "Last_Updated": "2026-11-13",
+      "Flag_Reason": ""
+    },
+    {
+      "Event_ID": "EVT-JAN27-P5B-NUE-SAU-ACH-01-20270123-03",
+      "Venue_ID": "NUE-SAU-ACH-01",
+      "Venue_Name": "Achilleus Men's Spa & Sauna",
+      "City": "Nuremberg",
+      "Country": "Germany",
+      "Event_Name": "Farbenspiel – Schaum, Farben, Spannung",
+      "Event_Date": "2027-01-23",
+      "Event_Start_Time": "13:00",
+      "Event_End_Time": "02:00",
+      "Status": "Live",
+      "Event_Category": "Sauna",
+      "Event_Description": "Farbenspiel returns to Achilleus for an evening of foam, colour-coded signals and cruising in the men's spa. The venue's official series calendar names Saturday 23 January 2027, opening from 13:00 with the listed finish at 02:00 on Sunday.",
+      "Dresscode_Info": "Sauna event; check official Farbenspiel guidance for its colour/bracelet system.",
+      "Audience_Info": "Men's sauna, adults 18+.",
+      "Vibe_Tags": "Men Only, Sauna, Foam, Cruising, Fetish",
+      "Event_URL": "https://achilleus-sauna.de/serien/%F0%9F%8C%88-farbenspiel-bei-achilleus",
+      "Source_URLs": "https://achilleus-sauna.de/serien/%F0%9F%8C%88-farbenspiel-bei-achilleus | https://achilleus-sauna.de/",
+      "Last_Updated": "2026-11-13",
+      "Flag_Reason": ""
+    }
+  ]
+}
