@@ -97,7 +97,7 @@ function renderCompact(rows){
       '<td class="br-p1-tags">'+(tags?esc(tags):'<span class="br-p1-muted">No tags</span>')+'</td></tr>';
   }).join('');
   const pages=Math.max(1,Math.ceil(compact.rows.length/compact.size));
-  queueMicrotask(updateSelectionToolbar);
+  updateSelectionToolbar();
   return '<table class="br-p1-compact-table"><thead><tr><th style="width:46px">✓</th><th>Record</th><th>Tags</th></tr></thead><tbody>'+
     (html||'<tr><td colspan="3" class="br-p1-muted">No matching records. Adjust the filters to see more.</td></tr>')+
     '</tbody></table><div class="br-p1-pagination"><button class="btn secondary-btn pill-btn" data-compact-page="-1" '+(compact.page===1?'disabled':'')+'>Previous</button>'+
