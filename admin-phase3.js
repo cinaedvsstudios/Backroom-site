@@ -188,7 +188,7 @@ function sourceHTML(){
   '</tbody></table></div>'+
   '<div class="br3-inline">'+buttons([['br3-prev-sources','← Previous'],['br3-next-sources','Next →']])+'</div>'+
   '<div id="br3-source-editor">'+sourceEditorHTML()+'</div>'+
-  '<p class="br3-muted">Original 102-URL Collector note: its exact downloadable file is not present in this source-seed bundle. Use <strong>Import URL list</strong> to add those historic paths and anchors verbatim if you have its export. The other original P1 sources, production URLs, cruising registry and January venue audit load here without altering research files.</p>'+ 
+  '<p class="br3-muted">The original <strong>102-URL Collect Scraping URLs list</strong> is now included in this source library, with each URL linked to its original line number. The verbatim file is archived in <code>scraping/Backroom_scraping_source_URLs_102_2026-11-06.txt</code>. Duplicates with other source collections are grouped, without losing source provenance. Venue/event URLs, the cruising registry and January audit load alongside it.</p>'+ 
   '<p class="br3-muted">Only user edits and small imported lists are saved in this browser. The large cruising registry and original research remain in their GitHub files; export a full library if you need a portable combined copy.</p>');
 }
 function sourceEditorHTML(){
@@ -420,6 +420,6 @@ function install(){
  view.addEventListener('input',e=>handleInput(e.target));
  document.addEventListener('click',e=>{if(e.target.closest('.sidebar-item')&&!e.target.closest('#nav-scrape-builder'))hide();},true);
 }
-window.BackroomAdminPhase3={show,hide,getState:()=>S,researchSources,render,version:'0.23.4'};
+window.BackroomAdminPhase3={show,hide,getState:()=>S,researchSources,render,version:'0.23.5'};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
