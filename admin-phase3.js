@@ -188,6 +188,7 @@ function sourceHTML(){
   '</tbody></table></div>'+
   '<div class="br3-inline">'+buttons([['br3-prev-sources','← Previous'],['br3-next-sources','Next →']])+'</div>'+
   '<div id="br3-source-editor">'+sourceEditorHTML()+'</div>'+
+  '<p class="br3-muted">Original 102-URL Collector note: its exact downloadable file is not present in this source-seed bundle. Use <strong>Import URL list</strong> to add those historic paths and anchors verbatim if you have its export. The other original P1 sources, production URLs, cruising registry and January venue audit load here without altering research files.</p>'+ 
   '<p class="br3-muted">Only user edits and small imported lists are saved in this browser. The large cruising registry and original research remain in their GitHub files; export a full library if you need a portable combined copy.</p>');
 }
 function sourceEditorHTML(){
