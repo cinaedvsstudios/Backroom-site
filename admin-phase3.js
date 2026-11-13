@@ -134,7 +134,7 @@ function filtersHTML(){
   '<div id="br3-scope-preview" class="br3-preview"></div>');
 }
 function sourceKinds(){
- return D.uniq(S.lib.all().map(x=>x.kind)).sort();
+ return D.uniq(S.lib.all().flatMap(x=>x.kinds?.length?x.kinds:[x.kind])).sort();
 }
 function sourceConfigHTML(){
  const c=S.config;return group('br3-brief-controls','🔗 Sources & Brief Output',
@@ -160,7 +160,7 @@ function renderBuilder(){
 function allSources(){
  const q=D.norm(S.sourceSearch),kind=S.sourceKind,country=D.norm(S.sourceCountry),origin=D.norm(S.sourceOrigin);
  return S.lib.all().filter(x=>(!q||D.norm([x.name,x.url,x.kind,x.record_ids.join(' '),x.countries.join(' ')].join(' ')).includes(q))&&
-  (!kind||x.kind===kind)&&(!country||x.countries.some(v=>D.norm(v)===country))&&(!origin||x.origins.some(v=>D.norm(v).includes(origin))))
+  (!kind||x.kind===kind||x.kinds?.includes(kind))&&(!country||x.countries.some(v=>D.norm(v)===country))&&(!origin||x.origins.some(v=>D.norm(v).includes(origin))))
   .sort((a,b)=>a.url.localeCompare(b.url));
 }
 function sourceHTML(){
@@ -170,7 +170,7 @@ function sourceHTML(){
  const origins=S.fileReports.map(x=>'<span class="br3-pill '+(x.error?'br3-warning':'')+'">'+esc(x.origin.split('/').pop())+': '+(x.error?'unavailable':fmt(x.newUrls)+' new URLs')+'</span>').join('');
  return group('br3-library','🌐 Master Source Library',
   '<p class="br3-muted">Exact individual URLs are deduplicated, while original variants, record IDs and file provenance remain attached. Archive links are research leads — not proof of a live venue or recent cruising activity.</p>'+
-  '<div class="br3-chips">'+[['Source URLs',S.lib.size()],['Catalogue seeds',S.seeds?.sources?.length||0],['Production venues',P.state.venues.length],['Production events',P.state.events.length]].map(x=>'<span class="br3-pill"><strong>'+fmt(x[1])+'</strong> '+x[0]+'</span>').join('')+'</div>'+
+  '<div class="br3-chips">'+[['Source URLs',S.lib.size()],['Unique seed URLs',S.seeds?.sources?.length||0],['Original seed references',S.seeds?.deduplication?.source_entries_before||0],['Production venues',P.state.venues.length],['Production events',P.state.events.length]].map(x=>'<span class="br3-pill"><strong>'+fmt(x[1])+'</strong> '+x[0]+'</span>').join('')+'</div>'+
   '<div class="br3-chips">'+origins+'</div>'+
   '<div class="br3-inline">'+buttons([['br3-load-sources','↻ Load cruising + January research','primary-btn'],['br3-export-sources','⬇ Export all sources JSON'],['br3-export-csv','⬇ CSV'],['br3-import-sources-btn','⬆ Import URL list'],['br3-add-source','＋ Add source'],['br3-use-all-sources','Use all sources']])+
   '<input type="file" id="br3-source-file" accept=".json,.csv,.tsv,.txt" hidden></div>'+
@@ -182,13 +182,15 @@ function sourceHTML(){
   '<div class="br3-overflow"><table class="br3-table"><thead><tr><th>Use</th><th>Source / Website</th><th>Type</th><th>Research references</th><th>Actions</th></tr></thead><tbody>'+
   visible.map(x=>'<tr><td><input type="checkbox" aria-label="Include source in builder" data-br3-source-pick="'+esc(x.key)+'" '+(picked.has(x.key)?'checked':'')+'></td><td><strong>'+esc(x.name)+'</strong><div class="br3-url"><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+esc(x.url)+'</a></div>'+
    (x.enabled===false?'<span class="br3-warning">Disabled</span>':'')+'</td><td>'+esc(x.kind)+'</td><td>'+
-   '<span title="'+esc(x.origins.join('; ').slice(0,400))+'">'+fmt(x.record_ids.length)+' IDs · '+fmt(x.origins.length)+' origins</span>'+
-   '<details><summary>Provenance</summary><p>'+esc(x.origins.join(' · ').slice(0,1000))+'</p><p>'+esc(x.record_ids.slice(0,40).join(', '))+'</p></details></td><td>'+
+   '<span title="'+esc(x.origins.join('; ').slice(0,400))+'">'+fmt(x.record_ids.length)+' IDs · '+fmt(x.origins.length)+' origins · '+fmt(x.source_references?.length||0)+' original references</span>'+
+   '<details><summary>Provenance & original URL variants</summary><p>'+esc(x.origins.join(' · ').slice(0,1000))+'</p><p>'+esc(x.record_ids.slice(0,40).join(', '))+'</p>'+
+   (x.source_references?.length?'<ul class="br3-provenance-list">'+x.source_references.map(r=>'<li><strong>'+esc(r.id)+'</strong> · <a href="'+esc(r.url)+'" target="_blank" rel="noopener noreferrer">'+esc(r.url)+'</a> <small>('+esc(r.kind||'')+')</small></li>').join('')+'</ul>':'')+
+   '</details></td><td>'+
    '<button type="button" class="br3-action" data-br3-edit="'+esc(x.key)+'">Edit</button><button type="button" class="br3-action" data-br3-toggle="'+esc(x.key)+'">'+(x.enabled===false?'Enable':'Disable')+'</button></td></tr>').join('')+
   '</tbody></table></div>'+
   '<div class="br3-inline">'+buttons([['br3-prev-sources','← Previous'],['br3-next-sources','Next →']])+'</div>'+
   '<div id="br3-source-editor">'+sourceEditorHTML()+'</div>'+
-  '<p class="br3-muted">The original <strong>102-URL Collect Scraping URLs list</strong> is now included in this source library, with each URL linked to its original line number. The verbatim file is archived in <code>scraping/Backroom_scraping_source_URLs_102_2026-11-06.txt</code>. Duplicates with other source collections are grouped, without losing source provenance. Venue/event URLs, the cruising registry and January audit load alongside it.</p>'+ 
+  '<p class="br3-muted">The original <strong>102-URL Collect Scraping URLs list</strong> is now included in this source library, with each URL linked to its original line number. The verbatim file is archived in <code>scraping/Backroom_scraping_source_URLs_102_2026-11-06.txt</code>. The 192 original source entries are now grouped into 122 distinct seed URLs; all original links, source IDs and provenance remain accessible in the per-source details and deduplication audit. Venue/event URLs, the cruising registry and January audit load alongside it.</p>'+ 
   '<p class="br3-muted">Only user edits and small imported lists are saved in this browser. The large cruising registry and original research remain in their GitHub files; export a full library if you need a portable combined copy.</p>');
 }
 function sourceEditorHTML(){
@@ -331,7 +333,7 @@ async function handleClick(button){
  if(id==='br3-save-packet'){if(S.packet)downloadJSON(S.packet,'backroom_research_packets_'+today()+'.json');return;}
  if(id==='br3-save-batches'){if(S.packet)for(const batch of S.packet.batches)downloadJSON({...S.packet,batches:[batch]},'backroom_research_batch_'+String(batch.batch).padStart(3,'0')+'.json');return;}
  if(id==='br3-export-sources'){downloadJSON({format:'backroom-phase3-sources',generated_at:new Date().toISOString(),sources:S.lib.all()},'backroom_master_source_library_'+today()+'.json');return;}
- if(id==='br3-export-csv'){P.downloadCSV(S.lib.all().map(x=>({Name:x.name,URL:x.url,Type:x.kind,Verification:x.verification,Enabled:x.enabled,Country:x.countries.join('; '),City:x.cities.join('; '),Record_IDs:x.record_ids.join('; '),Origins:x.origins.join('; '),Variants:x.variants.join('; ')})),'backroom_source_library_'+today()+'.csv');return;}
+ if(id==='br3-export-csv'){P.downloadCSV(S.lib.all().map(x=>({Name:x.name,URL:x.url,Type:x.kind,Verification:x.verification,Enabled:x.enabled,Country:x.countries.join('; '),City:x.cities.join('; '),Record_IDs:x.record_ids.join('; '),Origins:x.origins.join('; '),Variants:x.variants.join('; '),Original_Reference_IDs:(x.source_references||[]).map(r=>r.id).join('; '),Original_Source_URLs:(x.source_references||[]).map(r=>r.url).join('; '),Original_References_JSON:JSON.stringify(x.source_references||[])})),'backroom_source_library_'+today()+'.csv');return;}
  if(id==='br3-import-sources-btn'){get('br3-source-file')?.click();return;}
  if(id==='br3-use-all-sources'){S.config.sourceKeys=[];remember();render();return;}
  if(id==='br3-add-source'){S.sourceEditing='new';get('br3-source-editor').innerHTML=sourceEditorHTML();return;}
@@ -420,6 +422,6 @@ function install(){
  view.addEventListener('input',e=>handleInput(e.target));
  document.addEventListener('click',e=>{if(e.target.closest('.sidebar-item')&&!e.target.closest('#nav-scrape-builder'))hide();},true);
 }
-window.BackroomAdminPhase3={show,hide,getState:()=>S,researchSources,render,version:'0.23.5'};
+window.BackroomAdminPhase3={show,hide,getState:()=>S,researchSources,render,version:'0.23.6'};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
