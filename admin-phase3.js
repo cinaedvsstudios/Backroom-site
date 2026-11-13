@@ -32,7 +32,7 @@ async function copyText(s){
  catch{const input=get('br3-output');if(input){input.select();document.execCommand('copy');notify('Text selected for copying.');}}
 }
 function fetchData(path){
- return fetch(path+'?v=0.23.4&t='+Date.now(),{cache:'no-store'}).then(async r=>{
+ return fetch(path+'?v=0.23.7&t='+Date.now(),{cache:'no-store'}).then(async r=>{
  if(!r.ok)throw Error(path+' HTTP '+r.status);return r.json();
  });
 }
