@@ -146,6 +146,7 @@ function makePlan(currentRows,uploadedRows,fields,mode,operation,venueRows=[]){
   if(!Array.isArray(currentRows)||!Array.isArray(uploadedRows))throw Error('Import requires two arrays.');
   const key=idField(mode),inputFields=fields?.length?fields:allKeys(uploadedRows);
   if(!inputFields.includes(key))throw Error('Upload is missing '+key+' column.');
+  if(inputFields.some(field=>['__proto__','prototype','constructor'].includes(field)))throw Error('Unsafe CSV/JSON column name detected.');
   const originals=new Map(),errors=[],warnings=[],changes=[];
   currentRows.forEach((row,i)=>{
     const id=norm(row[key]);
