@@ -51,8 +51,8 @@ function normalizeImport(data){
 function zone(country,kind){
  if(kind==='cruising')return 8;
  const c=norm(country);
- const values={0:['germany','de','deutschland'],1:['france','belgium','netherlands','luxembourg'],2:['united kingdom','uk','ireland'],
- 3:['spain','portugal'],4:['italy','austria','switzerland','greece','czechia','czech republic','hungary'],
+ const values={0:['germany','de','deutschland'],1:['france','belgium','netherlands','luxembourg','switzerland'],2:['united kingdom','uk','ireland','england','scotland','wales','northern ireland'],
+ 3:['spain','portugal'],4:['italy','austria','greece','czechia','czech republic','hungary','slovakia','slovenia'],
  5:['poland','denmark','sweden','finland','estonia','latvia','lithuania']};
  return Number(Object.keys(values).find(x=>values[x].includes(c))??6);
 }
@@ -95,8 +95,10 @@ function build(config,venues,events,sources,instructions){
  const candidates=sources.filter(allow),chunks=[];for(let i=0;i<tasks.length;i+=size)chunks.push(tasks.slice(i,i+size));
  const batches=chunks.map((part,i)=>{
   const ids=uniq(part.map(x=>x.id)),countries=uniq(part.map(x=>x.country)),cities=uniq(part.map(x=>x.country+'|'+x.city));
-  const included=candidates.filter(src=>!src.record_ids.length||src.record_ids.some(id=>ids.includes(id))||
-   src.origins.some(p=>/seed|source catalogue/i.test(p))||src.countries.some(c=>countries.map(norm).includes(norm(c))));
+  const included=candidates.filter(src=>(config.sourceKeys?.length&&config.sourceKeys.includes(src.key))||
+   !src.record_ids.length||src.record_ids.some(id=>ids.includes(id))||
+   src.origins.some(p=>/seed|source catalogue|recovered original/i.test(p))||
+   src.countries.some(c=>countries.map(norm).includes(norm(c))));
   return{batch:i+1,zone:uniq(part.map(x=>String(x.zone))).join(', '),countries,cities,record_ids:ids,
    existing_records:part.filter(x=>x.record).map(x=>({...x.record})),
    research_locations:part.filter(x=>!x.record).map(x=>({country:x.country,city:x.city,zone:x.zone,status:'discovery_target_unverified'})),
