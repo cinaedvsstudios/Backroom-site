@@ -8,15 +8,16 @@
     <meta name="description" content="Backroom is a gay nightlife guide for finding gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe.">
     <meta name="keywords" content="gay nightlife guide, gay bars, gay clubs, gay saunas, cruising venues, darkrooms, fetish venues, gay events, Europe gay travel">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="application-name" content="Backroom">
+    <meta name="application-name" content="Backroom Gay Nightlife Guide">
     <meta name="author" content="Cinaedvs Studios">
     <meta name="theme-color" content="#000000">
 
     <link rel="canonical" href="https://cinaedvsstudios.github.io/Backroom-site/">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+    <link rel="me" href="https://www.instagram.com/the.backroom.guide/">
 
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Backroom">
+    <meta property="og:site_name" content="Backroom Gay Nightlife Guide">
     <meta property="og:title" content="Backroom | Gay Nightlife, Cruising & Events Guide">
     <meta property="og:description" content="Find gay bars, clubs, saunas, cruising venues, darkrooms and events across Europe with Backroom.">
     <meta property="og:url" content="https://cinaedvsstudios.github.io/Backroom-site/">
@@ -39,7 +40,19 @@
       "inLanguage": "en",
       "sameAs": [
         "https://www.instagram.com/the.backroom.guide/"
-      ]
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Backroom Gay Nightlife Guide",
+        "url": "https://cinaedvsstudios.github.io/Backroom-site/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cinaedvsstudios.github.io/Backroom-site/backdoorlogo.png"
+        },
+        "sameAs": [
+          "https://www.instagram.com/the.backroom.guide/"
+        ]
+      }
     }
     </script>
 
@@ -88,7 +101,7 @@
                 <img src="https://raw.githubusercontent.com/cinaedvsstudios/Backroom-site/refs/heads/main/backdoorlogo.png" alt="Backroom Logo" style="height: 75px; vertical-align: middle; margin-right: 10px;">
                 <img src="backdoortitle.png" alt="Backroom Title" style="height: 65px; vertical-align: middle;" onerror="this.style.display='none';">
             </div>
-            <h1 id="ag-title" class="display-font">18+ ENTRY</h1>
+            <h2 id="ag-title" class="display-font" style="font-size:2em;">18+ ENTRY</h2>
             <p id="ag-text" class="body-font disclaimer-white">Loading...</p>
             <p id="ag-disclaimer" class="body-font disclaimer">Loading...</p>
             <div class="ag-controls">
@@ -110,6 +123,7 @@
         try { localStorage.setItem('br_age_verified', 'true'); } catch (error) {}
         document.getElementById('age-gate')?.classList.add('hidden');
         document.getElementById('app-shell')?.classList.remove('hidden');
+        document.getElementById('app-shell')?.removeAttribute('inert');
       }
       button.addEventListener('click', enter);
       try { if (localStorage.getItem('br_age_verified') === 'true')
@@ -119,13 +133,13 @@
 
     <div id="error-panel" class="fullscreen-overlay hidden">
         <div class="age-gate-content">
-            <h1 class="display-font" style="color: var(--bright-red-orange);">SYSTEM ERROR</h1>
+            <h2 class="display-font" style="color: var(--bright-red-orange); font-size:2em;">SYSTEM ERROR</h2>
             <p id="error-text" class="body-font disclaimer-white">Failed to load core system files due to local browser restrictions (CORS).</p>
             <div id="bypass-container" style="margin-top: 15px;"></div>
         </div>
     </div>
 
-    <div id="app-shell" class="hidden">
+    <div id="app-shell" inert>
         <button id="br-mobile-back-to-top" class="br-mobile-back-to-top" type="button" title="Back to top" aria-label="Back to top">↑</button>
         <a class="br-skip-link" href="#main-content">Skip to main content</a>
         <header id="top-bar">
@@ -169,8 +183,8 @@
                     <div class="sidebar-item tooltip" role="button" tabindex="0" id="btn-sidebar-events" title="Events" onclick="window.openCalendarScreen();"><span class="icon">📅</span><span class="sidebar-text display-font">Events</span></div>
                     <div class="sidebar-item tooltip" role="button" tabindex="0" id="btn-sidebar-festivals" title="Festivals" onclick="window.openFestivalScreen();"><span class="icon">🎪</span><span class="sidebar-text display-font">Festivals</span></div>
 
-                    <div class="sidebar-item tooltip" role="button" tabindex="0" title="Cruising Guide" onclick="window.location.hash='#cruising-guide';"><span class="icon">🔥</span><span class="sidebar-text display-font">Cruising Guide</span></div>
-                    <div class="sidebar-item tooltip" role="button" tabindex="0" title="Terminology & Dress Codes" onclick="window.location.hash='#dress-codes';"><span class="icon">⛓️</span><span class="sidebar-text display-font">Terminology & Dress Codes</span></div>
+                    <a class="sidebar-item tooltip" href="cruising-guide.html" title="Cruising Guide" onclick="event.preventDefault(); window.location.hash='#cruising-guide';" style="text-decoration:none;"><span class="icon">🔥</span><span class="sidebar-text display-font">Cruising Guide</span></a>
+                    <a class="sidebar-item tooltip" href="dress-codes.html" title="Terminology & Dress Codes" onclick="event.preventDefault(); window.location.hash='#dress-codes';" style="text-decoration:none;"><span class="icon">⛓️</span><span class="sidebar-text display-font">Terminology & Dress Codes</span></a>
                     
                 </div>
                 <div class="sidebar-footer body-font"><span id="sidebar-version-display"></span></div>
@@ -185,7 +199,7 @@
     </button>
   </div>
   <div class="welcome-content-container">
-    <h2 class="display-font" style="font-size:2.5rem;color:var(--primary-blue);margin-bottom:6px;">WELCOME <span id="welcome-name">GUEST</span>!</h2>
+    <h1 class="display-font" style="font-size:2.5rem;color:var(--primary-blue);margin-bottom:6px;">BACKROOM — GAY NIGHTLIFE, CRUISING & EVENTS ACROSS EUROPE</h1><p class="display-font" style="font-size:1.45rem;color:var(--primary-blue);margin-bottom:6px;">WELCOME <span id="welcome-name">GUEST</span>!</p>
     <p class="body-font" style="font-size:1.1rem;margin:0 0 12px;color:#d5dde9;">Explore gay nightlife across Europe. Find places, discover what's on and save the nights you don't want to miss.</p>
     <div class="features-list welcome-features-scroll" style="margin-top:0;" tabindex="0" aria-label="Scrollable Backroom features"><h3>EXPLORE BACKROOM</h3><ul>
       <li>📍 <strong>Location:</strong> Choose a city or country once; that location follows you through the venue and event calendars, festival listings and cruising directory.</li>
