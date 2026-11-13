@@ -78,6 +78,7 @@ function checkList(){
         ['status:Closed','Status is Closed'],['status:Review','Status is Review'],['status:!Live','Status is not Live']
     ];
     const e=[
+        ['event-month','Event date is'],
         ['empty:Event_Start_Time','Missing start time'],['empty:Event_End_Time','Missing end time'],['empty:Event_Date','Missing event date'],
         ['empty:Event_URL','Missing event URL'],['empty:Ticket_URL','Missing ticket URL'],['empty:Source_URLs','Missing source URLs'],
         ['empty:Price_Info','Missing price information'],['empty:Dresscode_Info','Missing dress code'],
@@ -112,8 +113,45 @@ function checkList(){
     const cities=[...new Set(records.flatMap(r=>String(r.City||'').split(',').map(s=>s.trim()).filter(Boolean)))].sort();
     return [...applicable,...common,...countries.map(x=>['country:'+x,'Country is '+x]),...cities.map(x=>['city:'+x,'City is '+x])].map(([key,label])=>({key,label}));
 }
-function conditionLabel(key){return checkList().find(c=>c.key===key)?.label||key;}
-function predicate(row,key){
+function monthValue(value) {
+    const match=String(value||'').match(/^(\d{4})-(0[1-9]|1[0-2])$/);
+    if(!match)return null;
+    return {year:Number(match[1]),month:Number(match[2])};
+}
+function defaultMonth(){
+    const d=new Date();
+    return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');
+}
+function monthTitle(value){
+    const selected=monthValue(value);
+    if(!selected)return 'Select a month';
+    return new Date(selected.year,selected.month-1,1).toLocaleDateString('en-GB',{month:'long',year:'numeric'});
+}
+function conditionLabel(key,value){
+    if(key==='event-month')return 'Event date is '+monthTitle(value);
+    return checkList().find(c=>c.key===key)?.label||key;
+}
+function occursInMonth(row,value){
+    const month=monthValue(value);
+    if(!month)return false;
+    const startDate=dateOnly(row.Event_Date);
+    if(!startDate)return false;
+    const toUtc=d=>Date.UTC(d.getFullYear(),d.getMonth(),d.getDate());
+    const start=toUtc(startDate);
+    const monthStart=Date.UTC(month.year,month.month-1,1);
+    const monthEnd=Date.UTC(month.year,month.month,1);
+    if(String(row.Recurrence_Type||'').trim().toLowerCase()!=='weekly'){
+        return start>=monthStart&&start<monthEnd;
+    }
+    const finalDate=dateOnly(row.Recurrence_Until);
+    const last=finalDate?toUtc(finalDate):Infinity;
+    if(start>=monthEnd||last<monthStart||last<start)return false;
+    const step=7*86400000;
+    const first=start>=monthStart?start:start+Math.ceil((monthStart-start)/step)*step;
+    return first<monthEnd&&first<=last;
+}
+function predicate(row,key,value){
+    if(key==='event-month')return occursInMonth(row,value);
     if(key.startsWith('empty:'))return blank(row[key.slice(6)]);
     if(key.startsWith('short:')){const s=key.split(':');return String(row[s[1]]||'').trim().length<Number(s[2]);}
     if(key.startsWith('rating:')){const v=row[key.slice(7)];return blank(v)||Number(v)<=0||!Number.isFinite(Number(v));}
@@ -132,16 +170,16 @@ function predicate(row,key){
 }
 function generatedQuery(conditions=state.conditions){
     if(!conditions.length)return'';
-    let q='('+conditionLabel(conditions[0].key)+')';
+    let q='('+conditionLabel(conditions[0].key,conditions[0].value)+')';
     conditions.slice(1).forEach(c=>{
-        q=c.op==='EXCLUDE'?'('+q+' AND NOT ('+conditionLabel(c.key)+'))':'('+q+' '+c.op+' ('+conditionLabel(c.key)+'))';
+        q=c.op==='EXCLUDE'?'('+q+' AND NOT ('+conditionLabel(c.key,c.value)+'))':'('+q+' '+c.op+' ('+conditionLabel(c.key,c.value)+'))';
     });
     return q;
 }
 function match(row,conditions){
     if(!conditions.length)return false;
-    let value=predicate(row,conditions[0].key);
-    for(const c of conditions.slice(1)){const next=predicate(row,c.key);if(c.op==='AND')value=value&&next;else if(c.op==='EXCLUDE')value=value&&!next;else value=value||next;}
+    let value=predicate(row,conditions[0].key,conditions[0].value);
+    for(const c of conditions.slice(1)){const next=predicate(row,c.key,c.value);if(c.op==='AND')value=value&&next;else if(c.op==='EXCLUDE')value=value&&!next;else value=value||next;}
     return value;
 }
 function renderScope(){
@@ -152,13 +190,15 @@ function resetInvalidConditions(){
     const list=checkList();
     state.conditions=state.conditions.filter(c=>list.some(o=>o.key===c.key));
     if(!state.conditions.length&&list.length)state.conditions=[{op:'OR',key:list[0].key}];
+    state.conditions.forEach(c=>{if(c.key==='event-month'&&!monthValue(c.value))c.value=defaultMonth();});
     state.results=null;
 }
 function renderBuilder(){
     renderScope();const list=checkList(),wrap=document.getElementById('br-condition-rows');
     wrap.innerHTML=state.conditions.map((c,i)=>'<div class="br-condition-row" data-row="'+i+'">'+
         '<select data-operator="'+i+'" aria-label="Operator '+(i+1)+'">'+['OR','AND','EXCLUDE'].map(op=>'<option '+(c.op===op?'selected ':'')+'value="'+op+'">'+op+'</option>').join('')+'</select>'+
-        '<select data-condition="'+i+'" aria-label="Condition '+(i+1)+'">'+list.map(x=>'<option '+(x.key===c.key?'selected ':'')+'value="'+esc(x.key)+'">'+esc(x.label)+'</option>').join('')+'</select>'+
+        '<div class="br-condition-controls"><select data-condition="'+i+'" aria-label="Condition '+(i+1)+'">'+list.map(x=>'<option '+(x.key===c.key?'selected ':'')+'value="'+esc(x.key)+'">'+esc(x.label)+'</option>').join('')+'</select>'+
+        (c.key==='event-month'?'<input type="month" class="br-month-choice" data-condition-value="'+i+'" aria-label="Event month and year" value="'+esc(monthValue(c.value)?c.value:defaultMonth())+'">':'')+'</div>'+
         (state.conditions.length>1?'<button class="btn secondary-btn" type="button" data-remove-condition="'+i+'" title="Remove condition">×</button>':'')+'</div>').join('');
     const target=document.getElementById('br-query-preview');
     target.textContent=generatedQuery()||'Select a dataset and condition to begin.';
@@ -211,7 +251,7 @@ function renderMonths(){
 }
 function overview(){
     const holder=document.getElementById('br-completeness-overview'),rows=scopedRows();
-    const list=checkList().filter(o=>!o.key.startsWith('status:')&&!o.key.startsWith('country:')&&!o.key.startsWith('city:'));
+    const list=checkList().filter(o=>o.key!=='event-month'&&!o.key.startsWith('status:')&&!o.key.startsWith('country:')&&!o.key.startsWith('city:'));
     if(!rows.length){holder.innerHTML='<p class="br-muted">Select a dataset to view completeness counts.</p>';return;}
     const sorted=list.map(x=>({...x,count:rows.filter(r=>predicate(r,x.key)).length})).sort((a,b)=>b.count-a.count);
     holder.innerHTML='<table class="br-table"><thead><tr><th>Check (click to add)</th><th>Matching</th><th>Percent</th></tr></thead><tbody>'+
@@ -219,7 +259,7 @@ function overview(){
 }
 async function execute(){
     const rows=scopedRows(),conditions=state.conditions.map(c=>({...c}));const matched=rows.filter(r=>match(r,conditions));
-    const counts=conditions.map(c=>({condition:conditionLabel(c.key),matching:rows.filter(r=>predicate(r,c.key)).length}));
+    const counts=conditions.map(c=>({condition:conditionLabel(c.key,c.value),matching:rows.filter(r=>predicate(r,c.key,c.value)).length}));
     const query=generatedQuery(conditions);
     state.results={rows:matched,examined:rows.length,query,counts,scope:typeLabel(),date:now()};state.groupCount=1;
     const log={type:'query',date:state.results.date,scope:state.results.scope,query,conditions,examined:rows.length,matched:matched.length,conditionCounts:counts,downloaded:false,groups:0};
@@ -392,7 +432,7 @@ function install(){
     '.br-table td,.br-table th{padding:8px;text-align:left;border-bottom:1px solid #354156}.br-table th{color:#49d2ff;background:#202838;position:sticky;top:0}#br-country-table th{cursor:pointer}',
     '.br-bar{height:9px;background:#49d2ff;border-radius:6px;margin:3px 8px 3px 0;display:inline-block;max-width:55%;min-width:2px}',
     '.br-scopes{display:flex;gap:20px;flex-wrap:wrap;margin:15px 0}.br-scopes label{display:flex;gap:8px;align-items:center;cursor:pointer}',
-    '.br-builder{margin-top:16px}.br-headrow,.br-condition-row{display:grid;grid-template-columns:125px minmax(180px,1fr) 36px;gap:10px;margin:7px 0}',
+    '.br-builder{margin-top:16px}.br-headrow,.br-condition-row{display:grid;grid-template-columns:125px minmax(180px,1fr) 36px;gap:10px;margin:7px 0}.br-condition-controls{display:flex;gap:10px;align-items:center;min-width:0}.br-condition-controls select{flex:1;min-width:140px}.br-condition-controls input[type=month]{flex:0 0 170px;max-width:38%;background:#202838;color:#fff;border:1px solid #506079;border-radius:7px;padding:9px;min-width:130px}',
     '.br-condition-row select,.br-group-box input,.br-panel select{background:#202838;color:#fff;border:1px solid #506079;border-radius:7px;padding:9px;min-width:0}',
     '.br-headrow{font-size:.85rem;color:#aab4c5}.br-query-label{display:block;margin-top:17px;font-size:.8rem;text-transform:uppercase;color:#aab4c5}',
     '.br-query{padding:13px;white-space:normal;overflow-wrap:anywhere;background:#0b0f19;border:1px solid #384155;border-radius:7px;color:#eef5ff}',
@@ -414,7 +454,17 @@ function install(){
             resetInvalidConditions();renderBuilder();overview();
         }
         if(target.dataset.operator!==undefined){state.conditions[Number(target.dataset.operator)].op=target.value;state.results=null;renderBuilder();}
-        if(target.dataset.condition!==undefined){state.conditions[Number(target.dataset.condition)].key=target.value;state.results=null;renderBuilder();}
+        if(target.dataset.condition!==undefined){
+            const row=state.conditions[Number(target.dataset.condition)];
+            row.key=target.value;
+            if(row.key==='event-month'&&!monthValue(row.value))row.value=defaultMonth();
+            else if(row.key!=='event-month')delete row.value;
+            state.results=null;renderBuilder();
+        }
+        if(target.dataset.conditionValue!==undefined){
+            const row=state.conditions[Number(target.dataset.conditionValue)];
+            if(row&&row.key==='event-month'){row.value=target.value;state.results=null;renderBuilder();}
+        }
         if(target.id==='br-group-count'&&state.results){state.groupCount=Math.max(1,Math.min(Number(target.value)||1,state.results.rows.length||1));renderResults();}
         if(target.id==='br-history-query-select')refreshLogViews();
         if(target.id==='br-restore'){restoreHistory(target.files?.[0]);target.value='';}
