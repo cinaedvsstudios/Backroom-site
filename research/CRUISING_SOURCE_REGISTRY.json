@@ -18,7 +18,7 @@
       "current_site_cruising_listings": 486,
       "auxiliary_manifest": 162,
       "reference_pass": 50,
-      "best_direct": 857,
+      "best_direct": 872,
       "best_index": 875,
       "no_best_url": 0
     },
@@ -27,9 +27,13 @@
     "group_A_master_sha": "13e14c501fca766a0f62e9b7a265d09ca484dfb6",
     "live_listings_sha": "f0a8dc88ad1440d0cb0a427e2914f13935077f52",
     "enrichment_B_progress": {
-      "batches_completed_through": 58,
+      "batches_completed_through": 59,
       "batches_total": 59,
-      "records_enriched_this_pass": 75,
+      "errors": []
+    },
+    "enrichment_C_progress": {
+      "batches_completed_through": 12,
+      "batches_total": 59,
       "errors": []
     }
   },
@@ -13802,11 +13806,21 @@
       "live_status": null,
       "best_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.sh-tourismus.de/poi-detail-ansicht/baden-im-naturbad-bredenbeker-teich-162794",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.hamburg-tourism.de/sehen-erleben/freizeit-sport/baeder-wellness/bredenbeker-teich/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -13819,9 +13833,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Bredenbeker Teich ('Bredenbek pond' in the archive) lies between Ahrensburg and Ammersbek. It has a naturist shore and seasonal paid bathing facility; 2026 public tourism info gives June 6 to September 13 operating season with weekend hours and advises no car access near the naturbad. Planet Randy lists gay cruising but no dated present-day visitor evidence was located.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0622_0626.json"
       ],
       "original_index": 623,
       "original_section": "C"
@@ -13881,11 +13896,16 @@
       "live_status": null,
       "best_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/2/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.holstein-tourismus.de/baggersee-appen?type=5100",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -13898,9 +13918,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Appen-Etz Baggersee is a recognised bathing lake near Appen/Holm in Schleswig-Holstein. Regional tourism details a June–September 2026 swimming season and parking facilities. Planet Randy independently calls 'Dredging lake in Appen' a gay cruising lead; this directory claim is undated and may not specify which of the lake's shores is intended.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0622_0626.json"
       ],
       "original_index": 624,
       "original_section": "C"
@@ -13992,13 +14013,28 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+      "best_url": "https://gay-szene.net/autobahnparkplaetze-borker-heide-und-zauche-an-der-a-9-in-beelitz/9470/eintrag.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://planet-randy.com/blog/eintrag/parkplatz-borker-heide/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://viafrei.de/de/place/beelitz",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -14011,9 +14047,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Borker Heide is a real A9 motorway parking rest area by Beelitz/Schäpe. A second gay directory, gay-szene.net, corroborates the identity and discusses both Borker Heide and the opposite-direction Zauche rest area; these must not be merged. The newest clearly dated forum post found is July 2021, and Planet Randy's visitor question dates September 2022, so current cruising is not established.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0622_0626.json"
       ],
       "original_index": 625,
       "original_section": "C"
@@ -14107,13 +14144,23 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
+      "best_url": "https://planet-randy.com/blog/eintrag/arkenberger-baggersee/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.berlin.de/tourismus/seen/4796031-4299185-arkenberger-baggersee.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -14126,9 +14173,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Arkenberger Baggersee is a former gravel quarry lake at Berlin's northern edge near Pankow. Both gay-szene.net and Planet Randy list the wooded shore as cruising terrain, but their asserted crowd patterns are undated; an older July 2025 Planet Randy review flags poor water quality. Crucially, Berlin's official tourism page identifies a general swimming ban due to inadequate water quality, contrary to directory langua",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0622_0626.json"
       ],
       "original_index": 626,
       "original_section": "C"
@@ -14217,15 +14265,14 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         }
       ],
       "source_count": 2,
@@ -14246,9 +14293,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Südkreuz station has two separate Deutsche Bahn rail & fresh WC sites, and an active gay-szene.net forum specifically discusses cruising in one of the station toilets. Multiple first-person posts from January–February 2026 report visits, activity and renovation/reopening, followed by an October 2026 question about which side is meant. This is substantive recent activity evidence, but later 2026 operating specifics an",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0627_0631.json"
       ],
       "original_index": 627,
       "original_section": "C"
@@ -14385,15 +14433,14 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/3/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         }
       ],
       "source_count": 2,
@@ -14414,9 +14461,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A historic octagonal 'Café Achteck' public urinal stands on Friedenstraße near U Alt-Mariendorf; map inventories independently identify the restroom and its public access. Berlin's city administration still documents the Café Achteck heritage model, but the last first-person cruising reports on the matching directory page are 2022 or older. Older comments conflict on whether it was busy or empty.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0627_0631.json"
       ],
       "original_index": 628,
       "original_section": "C"
@@ -14482,19 +14530,18 @@
       "best_url": "https://gay-szene.net/cruising-am-teltowkanal-in-berlin/8837/eintrag.html",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         },
         {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/3/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         }
       ],
       "source_count": 2,
@@ -14521,9 +14568,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A historic directory cruising lead refers to the banks of the Teltow Canal in Lichterfelde along Paul-Schwarz-Promenade and Eduard-Spranger-Promenade between Bäkebrücke and Krahmersteg. June 2025 first-person user reported finding nobody and no contact, outside freshness cutoff. Another user in May 2024 also reported unsuccessful visits. A potentially distinct Bäkepark place is mentioned as an alternative in the foru",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0627_0631.json"
       ],
       "original_index": 629,
       "original_section": "C"
@@ -14578,9 +14626,8 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -14595,9 +14642,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Ernst-Thälmann-Park is a large urban park in Prenzlauer Berg, with the forum describing a possible cruising zone around a bridge and pond. Most detailed first-person reports date from 2017–2022, while the newest identified forum entry from 26 October 2025 describes a meeting but falls 11 days outside this project's November 2025 cutoff. Earlier comments disagree over how busy or safe it is.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0627_0631.json"
       ],
       "original_index": 630,
       "original_section": "C"
@@ -14612,17 +14660,21 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
+      "best_url": "https://planet-randy.com/blog/eintrag/fennpfuhlpark/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
+          "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 2,
@@ -14643,9 +14695,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Fennpfuhl Park in Lichtenberg has a wind sculpture and lake near which gay-szene.net and Planet Randy claim evening cruising. The most recent source-specific post dated 5 March 2026 merely asks whether the area is still active, not a report. A November 2024 first-person Planet Randy review complained of harassment and difficulty finding partners; other dated 2024 visitors found no activity.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0627_0631.json"
       ],
       "original_index": 631,
       "original_section": "C"
@@ -14832,15 +14885,14 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/3/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         }
       ],
       "source_count": 2,
@@ -14861,9 +14913,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Flughafensee Tegel is a lake with FKK bathing areas and nearby woodland in Reinickendorf. Two gay-site directories list possible cruising. On 31 July 2026 a source visitor reported the FKK shore accessible again; 2026 comments are questions about privacy, not positive reports of cruising. Earlier accounts of activity date to June–July 2023 and are out of the required freshness window. A 2024 user report described slo",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0632_0636.json"
       ],
       "original_index": 632,
       "original_section": "C"
@@ -14918,9 +14971,8 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -14935,9 +14987,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Freizeitpark Marienfelde is a formally designated public natural park on a reclaimed landfill at Diedersdorfer Weg, with protected wildlife habitats, fields, ponds and a wildlife trail. Gay-szene.net calls it a cruising lead but latest first-person sexual encounter claims are from 18 February 2019 (and older). A source comment expressly distinguishes it from Volkspark Mariendorf, a DIFFERENT park several kilometres a",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0632_0636.json"
       ],
       "original_index": 633,
       "original_section": "C"
@@ -14955,19 +15008,18 @@
       "best_url": "https://gay-szene.net/fritz-schloss-park-in-berlin/12733/eintrag.html",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         },
         {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         }
       ],
       "source_count": 2,
@@ -14994,9 +15046,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Fritz-Schloß-Park in Berlin-Moabit is a public park with sports and walking routes around a hill. Two gay listings describe possible cruising, but the latest source comment dated 23 May 2022 says a regular visitor with a dog saw no such activity. Other older descriptions are generic. No confirmed current cruising in the last twelve months.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0632_0636.json"
       ],
       "original_index": 634,
       "original_section": "C"
@@ -15130,9 +15183,8 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -15147,9 +15199,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Goldfischteich is a specific pond within the central Tiergarten south of Straße des 17. Juni. Gay-szene.net describes nearby wooded tracks and an open shelter. Its newest dated source comment is 11 June 2019, describing occasional meetings, with older anecdotes from 2017 and earlier. The site itself places a separate 'Tiergarten II' entry about 340 metres away; they may overlap within a larger park zone but must not ",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0632_0636.json"
       ],
       "original_index": 635,
       "original_section": "C"
@@ -15167,19 +15220,18 @@
       "best_url": "https://gay-szene.net/grunewald-in-berlin/5615/eintrag.html",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         },
         {
           "url": "https://thegaypassport.com/community/berlin-cruising-guide/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         }
       ],
       "source_count": 3,
@@ -15212,9 +15264,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Grunewald is a large Berlin forest with many separate cruising entries. The gay-szene page for this candidate specifies Pappelplatz beside S-Bahnhof Grunewald, a tree-nursery car park and nearby former sports field—not the separate named locations at Jagen 87, Jagen 90, or Teufelssee. A 4 August 2026 first-person report describes visiting by the Pappelplatz side, noticing men walking there on weekday days but little ",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0632_0636.json"
       ],
       "original_index": 636,
       "original_section": "C"
@@ -15274,15 +15327,14 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 2,
@@ -15303,9 +15355,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Jagen 90 is a meadow/forest section in Berlin's Grunewald, historically called Dahlemer Feld, with alternating grazed areas. Gay-szene.net and Planet Randy name the site. Two May 2026 source users reported visits and a possibly wrong map pin; one found the clearing difficult to locate, the other described occasional activity without saying they had a sexual encounter. Do not conflate with Jagen 87, Jagen 86, Teufelss",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0637_0641.json"
       ],
       "original_index": 637,
       "original_section": "C"
@@ -15394,14 +15447,13 @@
       "best_url": "https://gay-szene.net/humboldthain-in-berlin/8915/eintrag.html",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 2,
@@ -15428,9 +15480,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Volkspark Humboldthain is a large public park by Gesundbrunnen. Gay-szene.net lists the Rosengarten as a historic cruising site, but its gates are reportedly closed overnight. Most recent firsthand park observation in the source on 23 October 2025 is before the cutoff and describes very limited activity, with people gathering outside the garden. Splashd carries an area name but no independent current visitor report. ",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0637_0641.json"
       ],
       "original_index": 638,
       "original_section": "C"
@@ -15447,15 +15500,14 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 2,
@@ -15476,9 +15528,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A small landscaped park with three fountain columns at Innsbrucker Platz is listed by gay-szene.net and Planet Randy. The source forum contains mixed experiences; 25 May 2023 poster describes an occasional encounter, while others in 2018 dispute that the small, overlooked public area is suitable for cruising. No 2026 eyewitness reports or evidence of legal public sex.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0637_0641.json"
       ],
       "original_index": 639,
       "original_section": "C"
@@ -15539,19 +15592,18 @@
       "best_url": "https://gay-szene.net/insulaner-in-berlin/6060/eintrag.html",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 2,
@@ -15578,9 +15630,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Insulaner parkland surrounds the Wilhelm-Foerster-Observatory on the former debris hill near Prellerweg. Gay-szene.net and Planet Randy describe male cruising on surrounding pathways; the newest source comment is 25 August 2025 and a detailed 17 June 2025 report describes a mixed range of visitors. Both precede the current cutoff. No corroborated 2026 visitor report was found, so avoid promising crowds or hours.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0637_0641.json"
       ],
       "original_index": 640,
       "original_section": "C"
@@ -15641,14 +15694,13 @@
       "best_url": "https://gay-szene.net/karlshorst-treskowallee-in-berlin/11594/eintrag.html",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -15669,9 +15721,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A historical cruising entry at Treskowallee 200 points to former institutional land adjoining the Albatros school area in Karlshorst. The source listing itself says the site was sold and closed. On 29 March 2026 a first-person visitor reported both old houses and a storage hall demolished, leaving foundations. An 8 November 2025 forum report described earlier activity before closure but is not proof the site remains ",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0637_0641.json"
       ],
       "original_index": 641,
       "original_section": "C"
@@ -15688,15 +15741,14 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/4/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         }
       ],
       "source_count": 2,
@@ -15715,11 +15767,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Habermannsee in the Kaulsdorfer Seen is a former gravel pit beside protected reed beds and a drinking-water protection zone. The gay directory has multiple first-person posts in January–June 2026: some claim male cruising activity and encounters; one 19 June visitor found numerous bathers but no cruising, and 17 June another reports non-consenting families seeing sex. Berlin's official site states swimming is prohibi",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0642_0646.json"
       ],
       "original_index": 642,
       "original_section": "C"
@@ -15827,15 +15880,14 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/6/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         }
       ],
       "source_count": 2,
@@ -15854,11 +15906,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A historical men's WC at Am Schäfersee / Residenzstraße near U Franz-Neumann-Platz is a gay-szene and Planet Randy cruising reference. Latest dated first-person encounter reported 18 July 2024; earlier reports date 2023 and before. Directory claims 08:00–20:00 public availability but actual 2026 operation has not been verified independently. A separate 'Franz-Neumann-Platz' alias is named in a historical comment.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0642_0646.json"
       ],
       "original_index": 643,
       "original_section": "C"
@@ -15875,15 +15928,14 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/3/",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
         }
       ],
       "source_count": 2,
@@ -15902,11 +15954,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Klappe Elbestraße is a small public restroom around Elbestraße/Sonnenallee in Neukölln. The 2018 most recent gay-szene comment reports a visit and no other visitors; earlier 2017 post says some encounters. Planet Randy maintains an undated descriptive page, but it has no posted visitor reviews. The older directory's conflicting 'always open' claim is unreliable without official present-day hours.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0642_0646.json"
       ],
       "original_index": 644,
       "original_section": "C"
@@ -15971,9 +16024,8 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -15986,11 +16038,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Historical cruising references identify public student/restroom facilities inside the FU Berlin history building at Koserstraße 20. A first-person comment dated 22 March 2024 reports metal partitions, no meaningful activity and a largely inactive site; older 2015 comments discuss different campus toilets such as the Silberlaube, not necessarily this room. The source's access instructions reflect historic conditions, ",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0642_0646.json"
       ],
       "original_index": 645,
       "original_section": "C"
@@ -16007,9 +16060,8 @@
       "live_status": null,
       "best_url": "https://gay-szene.net/gay-cruising-in-berlin/25/17/1/rubrik.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -16022,11 +16074,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Leuthener Platz 'Café Achteck' is a historic male public urinal near Naumannstraße in Schöneberg. Gay-szene.net has only two comments, January 2021 negative activity and November 2017 low visitor frequency. The unverified directory claims it stays open around the clock, with no independent 2026 operational status or recorded cruising.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0642_0646.json"
       ],
       "original_index": 646,
       "original_section": "C"
@@ -45969,9 +46022,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -45984,11 +46036,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0602_0606.json"
       ],
       "original_index": 602,
       "original_section": "C"
@@ -46114,20 +46167,19 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.amsterdam.nl/projecten/oeverlanden/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.amsterdam.nl/stadsdelen/nieuw-west/nieuws/gerichte-aanpak-brengt-rust-terug/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -46146,7 +46198,8 @@
       "archive_data_keys": [
         "research/Archive/master_queue.json",
         "research/Archive/verification_manifest_2026-11-06.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/C/batch_0602_0606.json"
       ],
       "original_index": 603,
       "original_section": "C"
@@ -46163,9 +46216,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -46178,11 +46230,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0602_0606.json"
       ],
       "original_index": 604,
       "original_section": "C"
@@ -46319,9 +46372,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -46334,11 +46386,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0602_0606.json"
       ],
       "original_index": 605,
       "original_section": "C"
@@ -46413,9 +46466,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -46428,11 +46480,12 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": null,
+      "last_researched_berlin": "2026-11-06",
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0602_0606.json"
       ],
       "original_index": 606,
       "original_section": "C"
@@ -46512,11 +46565,21 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.beleefbest.nl/nl/waar-te-gaan/natuur-in-best/de-nieuwe-heide",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gemeentebest.nl/data/downloadables/1/0/9/5/1/beheerplan-bos-en-natuur-2016-2026.pdf",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -46531,7 +46594,8 @@
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0607_0611.json"
       ],
       "original_index": 607,
       "original_section": "C"
@@ -46611,11 +46675,26 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.naaktstrandje.nl/v2/naaktstrand/galdersemeren/gastenboek/en",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://nfn.nl/nieuws/naaktrecreatie-verbieden-dat-mag-wettelijk-helemaal-niet/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://nos.nl/artikel/2622306-verwarring-over-verbod-op-naakt-zonnen-bij-breda-pictogram-wordt-aangepast",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -46630,7 +46709,8 @@
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0607_0611.json"
       ],
       "original_index": 608,
       "original_section": "C"
@@ -46695,9 +46775,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -46714,7 +46793,8 @@
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0607_0611.json"
       ],
       "original_index": 609,
       "original_section": "C"
@@ -46758,11 +46838,26 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://spannendeplekken.nl/buitenplekken/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://daten-in.nl/parkeerplaats/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://parkerendelft.com/parkeren/speciale-voertuigen/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -46777,7 +46872,8 @@
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0607_0611.json"
       ],
       "original_index": 610,
       "original_section": "C"
@@ -46794,9 +46890,8 @@
       "live_status": null,
       "best_url": "https://www.popcorn.dating/netherlands/overijssel/haaksbergen/locations/public-sex/parking%2Blot/buurse/17366/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -46813,7 +46908,8 @@
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0617_0621.json"
       ],
       "original_index": 621,
       "original_section": "C"
@@ -46830,11 +46926,31 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.popcorn.dating/netherlands/zeeland/vrouwenpolder/locations/public-sex/outdoor/neeltje-jans/20308/",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.naaktstrandje.nl/v2/naaktstrand/neeltje-jans/gastenboek/en",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.natuurmonumenten.nl/natuurgebieden/neeltje-jans",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.hetzeeuwselandschap.nl/natuurgebieden/neeltje-jans",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 2,
       "source_refs": [
         {
@@ -46849,7 +46965,8 @@
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0607_0611.json"
       ],
       "original_index": 611,
       "original_section": "C"
@@ -46919,9 +47036,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -46936,9 +47052,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The label 'Bastion' probably refers to a fortification on Naarden's UNESCO-listed defensive walls, but Naarden has multiple named bastions and the directory does not identify which. Fortification paths exist; the exact claimed cruising subarea and present use remain unverified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0612_0616.json"
       ],
       "original_index": 612,
       "original_section": "C"
@@ -46955,9 +47072,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -46972,9 +47088,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Gays-Cruising index names Kanaaldijk at Nieuwegein. A recently updated mixed-orientation directory separately calls Kanaaldijk an encounter place but assigns it a warning-level profile without dated visitor confirmation. Kanaaldijk can refer to a long road and waterfront section, so exact location remains uncertain.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0612_0616.json"
       ],
       "original_index": 613,
       "original_section": "C"
@@ -47049,11 +47166,21 @@
       "live_status": null,
       "best_url": "https://www.popcorn.dating/netherlands/zuid-holland/oud-alblas/locations/public-sex/parking%2Blot/kippenbos/19840/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://heterobos.nl/het-kippenbos/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://sexin.nl/sexparkeerplaatsen/parkeerplaats-seks-in-zuid-holland/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -47066,9 +47193,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Kippenbos (Het Kippenbos) is described by a Popcorn.dating archived parking-lot listing and a 2026 update on Heterobos as an informal meeting car park around Oud-Alblas. The available source focuses on mixed/heterosexual visitors rather than an independently established gay male cruising area. Live-style widgets and ratings on the secondary directory are not reliable dated visitor counts.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0622_0626.json"
       ],
       "original_index": 622,
       "original_section": "C"
@@ -47119,9 +47247,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -47136,9 +47263,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Paulinapolder is a large agricultural-and-wetland polder near Biervliet within the municipality of Terneuzen, not necessarily the city centre. The Westerschelde side includes protected mudflats and salt marsh. Only an undated cruising-directory lead links it to encounters; no current activity verified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0612_0616.json"
       ],
       "original_index": 614,
       "original_section": "C"
@@ -47155,9 +47283,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -47172,9 +47299,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Meer en Bos is a public park and historic estate in the Loosduinen district of The Hague. The platform contains a check-in dated 4 July 2026, but that only documents user interaction with the listing, not a verified cruise or a sustained meeting pattern.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0612_0616.json"
       ],
       "original_index": 615,
       "original_section": "C"
@@ -47285,9 +47413,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -47302,9 +47429,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Kreekraksluizen is an active shipping-lock complex on the Schelde–Rhine Canal near Tholen/Rilland. Rijkswaterstaat documents 2026 maintenance and waterway traffic. A separate adult-directory article published early November 2026 repeats a general male meeting claim but reports no dated visitor observations; another source speaks of a nearby Surfplas car park rather than the locks themselves.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0612_0616.json"
       ],
       "original_index": 616,
       "original_section": "C"
@@ -47321,11 +47449,16 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.popcorn.dating/netherlands/limburg/guttecoven/locations/public-sex/parking%2Blot/swentibold-a2/20415/",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 2,
       "source_refs": [
         {
@@ -47340,7 +47473,8 @@
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0617_0621.json"
       ],
       "original_index": 617,
       "original_section": "C"
@@ -47357,9 +47491,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -47376,7 +47509,8 @@
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0617_0621.json"
       ],
       "original_index": 618,
       "original_section": "C"
@@ -47393,9 +47527,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -47412,7 +47545,8 @@
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0617_0621.json"
       ],
       "original_index": 619,
       "original_section": "C"
@@ -47480,9 +47614,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/netherlands",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -47499,7 +47632,8 @@
       "review_flags": [],
       "research_summary": null,
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0617_0621.json"
       ],
       "original_index": 620,
       "original_section": "C"
@@ -60744,29 +60878,33 @@
         "auxiliary_verification",
         "independent_reference_pass"
       ],
-      "research_stage": "needs_more_verification",
+      "research_stage": "retain_unverified_candidate_pending_activity_access_and_safety_review",
       "live_status": null,
       "best_url": "https://mobile.squirt.org/cruise/display/208802/detail",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.cruisinggays.com/map/?cityid=4173&filter=4",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_secondary_specialist_directory"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.gaymeboys.com/guide/Schweiz/de",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.stadtluzern.ch/dienstleistungeninformation/85756",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -60785,13 +60923,14 @@
         }
       ],
       "activity_since_2025_11_06_verified": false,
-      "last_researched_berlin": "2026-11-06",
+      "last_researched_berlin": "2026-11-07",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Bundesplatz is a public square in Lucerne and has appeared in an earlier city WC inventory. The source queue contains both a Gays-Cruising entry and Squirt record for this candidate; neither supplies verified 2025–2026 firsthand activity. Confirm exact facility before publication.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
         "research/Archive/verification_manifest_2026-11-06.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/B/batch_0584_0586.json"
       ],
       "original_index": 586,
       "original_section": "B"
@@ -60847,15 +60986,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_candidate_research_only_no_verified_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/eichwald_luzern_schweiz_18819",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/de/cruising/eichwald_bunker_luzern_schweiz_56106",
+          "page_type": "direct_cruising_entry",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -60868,9 +61017,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Eichwald is a small wooded area in Lucerne. Its Gays-Cruising entry calls it a secluded woodland location and labels the afternoon period, medium visitor influx and high privacy; these are undated directory claims, not verified current patterns.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0587_0591.json"
       ],
       "original_index": 587,
       "original_section": "C"
@@ -60884,19 +61034,23 @@
         "research_candidate",
         "auxiliary_verification"
       ],
-      "research_stage": "hold_access_or_outdated",
+      "research_stage": "retain_unverified_candidate_pending_activity_access_and_safety_review",
       "live_status": null,
       "best_url": "https://www.cruisinggays.com/luzern/areas/33988-lucerne/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.gays-cruising.com/en/cruising/luzern_inseli_luzern_schweiz_39321",
           "page_type": "direct_cruising_entry",
-          "source_status": "original_index_reference"
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.stadtluzern.ch/dienstleistungeninformation/85756",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -60915,12 +61069,13 @@
         }
       ],
       "activity_since_2025_11_06_verified": false,
-      "last_researched_berlin": "2026-11-06",
+      "last_researched_berlin": "2026-11-07",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Lucerne's Inseliquai/Inseli public-toilet facilities appear in the municipal WC inventory near the station. Two cruising directories refer to an Inseli/Lucerne location, but historic and current access details may differ and no dated recent witness report was verified.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/B/batch_0584_0586.json"
       ],
       "original_index": 584,
       "original_section": "B"
@@ -60976,15 +61131,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_candidate_research_only_no_verified_recent_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/offentliches_pissoirmaihof_bushaltestelle_maihof_luzern_schweiz_44503",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.stadtluzern.ch/dienstleistungeninformation/85756",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -60997,9 +61162,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A Gays-Cruising index points to a purported public urinal near the Maihof bus stop in Lucerne. The exact facility, its precise position, access and continued operation could not be independently confirmed; the named neighbourhood alone is insufficient.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0587_0591.json"
       ],
       "original_index": 589,
       "original_section": "C"
@@ -61012,15 +61178,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_candidate_research_only_no_verified_recent_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/parkhaus_gutsch_luzern_schweiz_71493",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.parking-luzern.ch/de/Parkhaeuser/Am-Guetsch2",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.parking-luzern.ch/de/Parkvarianten/Variante/short-term-parking",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61033,9 +61214,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Parkhaus am Gütsch is an operating multistorey garage at Baselstrasse 61A in Lucerne. The official operator documents 24-hour vehicle access and paid parking; the cruising claim remains an unsupported undated directory entry.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0587_0591.json"
       ],
       "original_index": 590,
       "original_section": "C"
@@ -61048,15 +61230,25 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_candidate_research_only_no_verified_recent_activity",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/reusszopf_luzern_schweiz_41900",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.luzernnord.ch/gebietsmanagement/gebiete/reusszopf",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61069,9 +61261,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Reusszopf is a riverside leisure area where the Kleine Emme joins the Reuss, with green space, a play area, picnic facilities and public toilets. The cruising-specific mention is an undated single-directory entry; no current cruising or attendance pattern was verified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0587_0591.json"
       ],
       "original_index": 588,
       "original_section": "C"
@@ -61084,15 +61277,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_for_later_filtering_not_verified_for_publication",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/tribschen_offentlicher_wc_luzern_switzerland_43864",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61105,9 +61303,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A Lucerne cruising directory names a public toilet in the Tribschen area. Lucerne maintains a municipal WC network and has documented facilities in Tribschen, but the precise toilet named by this directory is not separately identified or confirmed as a cruising location.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0592_0596.json"
       ],
       "original_index": 592,
       "original_section": "C"
@@ -61121,19 +61320,23 @@
         "research_candidate",
         "independent_reference_pass"
       ],
-      "research_stage": null,
+      "research_stage": "retain_unverified_candidate_pending_activity_access_and_safety_review",
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/cruising/ufschotti_luzern_suiza_4483",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.gaymeboys.com/guide/Schweiz/de",
-          "page_type": "context_or_official_source",
-          "source_status": "independent_swiss_gay_directory"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.luzern.com/de/poi/ufschoetti-luzern",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -61146,12 +61349,13 @@
         }
       ],
       "activity_since_2025_11_06_verified": null,
-      "last_researched_berlin": "2026-11-06",
+      "last_researched_berlin": "2026-11-07",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Ufschötti is a lakeside recreation area at Alpenquai with beach, lawns and WC facilities. Official Luzern tourism guidance describes summer access and a seasonal closure from early November to Easter, making November activity assumptions especially unreliable.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/B/batch_0584_0586.json"
       ],
       "original_index": 585,
       "original_section": "B"
@@ -61164,15 +61368,30 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_candidate_research_only_no_verified_recent_activity",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/wc_manor_luzern_svizzera_131658",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/luzern/luzern/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.manor.ch/de/store-finder/store/luz",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.nau.ch/news/schweiz/angewiderte-manor-kundin-hinterlasst-zettel-auf-laden-toilette-66474774",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61185,9 +61404,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A directory refers to toilets at the Manor department store in Lucerne. Manor confirms its current store at Weggisgasse 5, and independent historical reports confirm toilets existed there, but no credible current cruising evidence or unrestricted restroom access has been verified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0587_0591.json"
       ],
       "original_index": 591,
       "original_section": "C"
@@ -61200,15 +61420,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_for_later_filtering_not_verified_for_publication",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/am_fluss_obfelden_schweiz_54302",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61221,9 +61446,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The source labels a location simply 'Am Fluss' ('by the river') in Obfelden. This name is too broad to identify a safe, exact access point without additional directions. A site user checked in on 4 July 2026, but a check-in alone cannot verify cruising or a real visit.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0592_0596.json"
       ],
       "original_index": 593,
       "original_section": "C"
@@ -61269,15 +61495,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_for_later_filtering_not_verified_for_publication",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/rastplatz_waldchen_mit_tur_zu_mehr_sevelen_schweiz_97200",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61290,9 +61521,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The directory records a vaguely named Sevelen rest-area/woodland location. Its title suggests a wooded section with an entrance, but the exact road, boundary and legal access are unknown. A platform check-in dated 4 July 2026 is recent yet does not establish confirmed cruising activity.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0592_0596.json"
       ],
       "original_index": 594,
       "original_section": "C"
@@ -61305,15 +61537,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_for_later_filtering_not_verified_for_publication",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/rastplatz_gerenau_wadenswil_schweiz_8897",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61326,9 +61563,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Gerenau is an A3 motorway rest area at Wädenswil. The Swiss Federal Roads Office includes it in the Wädenswil–Wollerau works corridor. Gay directory references exist, including a separate direction-of-travel label, but no post-cutoff visitor report was confirmed.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0592_0596.json"
       ],
       "original_index": 595,
       "original_section": "C"
@@ -61404,15 +61642,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_for_later_filtering_not_verified_for_publication",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/rastplatz_hexentobel_wangi_schweiz_17770",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61425,9 +61668,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Hexentobel is a real A1 rest-area name near Wängi, with separate north/south carriageway facilities. An older Gays-Cruising description says the neighbouring woodland is used for cruising; dated discussion visible in the retained page is from September 2025, before this cycle's 12-month cutoff. Recent activity is not independently verified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0592_0596.json"
       ],
       "original_index": 596,
       "original_section": "C"
@@ -61440,15 +61684,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_for_later_filtering_not_verified_for_publication",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/rastplatz_stegen_wiesendangen_schweiz_14228",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61461,9 +61710,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Stegen is an A1 rest area near Wiesendangen. The Gays-Cruising listing describes a wooded area beside it and labels unspecified daytime activity; the latest visible dated messages are August–September 2025, before the current evidence cutoff.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0597_0601.json"
       ],
       "original_index": 597,
       "original_section": "C"
@@ -61510,15 +61760,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_for_later_filtering_not_verified_for_publication",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/europaallee_zurich_schweiz_43940",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61531,9 +61786,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The directory uses the broad place-name Europaallee but describes alleged activity in a first-floor restroom with security checks. Those timing and traffic assertions are undated. Visible messages from July 2025 do not meet the present 12-month freshness threshold.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0597_0601.json"
       ],
       "original_index": 600,
       "original_section": "C"
@@ -61546,15 +61802,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_for_later_filtering_not_verified_for_publication",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/friedhof_sihlfeld_wc_zurich_schweiz_27309",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61567,9 +61828,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Friedhof Sihlfeld is an active cemetery with public toilets. Historic municipal and neighbourhood sources acknowledge cruising problems, and describe patrols, evening WC closures and restrictions; none verifies activity within this cycle's last 12 months.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0597_0601.json"
       ],
       "original_index": 601,
       "original_section": "C"
@@ -61616,15 +61878,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_for_later_filtering_not_verified_for_publication",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/wcs_in_parkhaus_hardturm_zurich_schweiz_57720",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61637,9 +61904,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "This is a claimed cruising reference to the toilets at Hardturm park-and-ride garage. Zurich city administration confirms toilets in the blue building on ground and first levels, with 24-hour parking, but does not support or permit the cruising claim.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0597_0601.json"
       ],
       "original_index": 598,
       "original_section": "C"
@@ -61652,15 +61920,20 @@
       "kinds": [
         "research_candidate"
       ],
-      "research_stage": null,
+      "research_stage": "retain_for_later_filtering_not_verified_for_publication",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/switzerland",
+      "best_url": "https://www.gays-cruising.com/en/cruising/werdinsel_zurich_suiza_1902",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/switzerland",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -61673,9 +61946,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Werdinsel on the Limmat is a city-managed leisure island with a designated seasonal naturist section. Gays-Cruising lists the island and shows undated or relative check-in totals, but independent gay-travel guidance explicitly says the gay nudist area is not a cruising site; Zurich's published usage guidance says sexual acts are unwelcome.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/C/batch_0597_0601.json"
       ],
       "original_index": 599,
       "original_section": "C"
