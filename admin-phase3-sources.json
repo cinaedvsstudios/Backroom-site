@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "created": "2026-11-13",
-  "scope": "Phase 3 source seeds combine explicitly supplied P1 sources, recovered archived P1 scraping and zone instructions, and the original verified-as-saved 102-line Collect Scraping URLs file dated 2026-11-06. All original URL strings and order are retained verbatim in scraping/Backroom_scraping_source_URLs_102_2026-11-06.txt. Production record URLs and research archive URLs load from existing JSON on demand; presence in this library does not imply live/current verification.",
+  "scope": "Deduplicated Phase 3 seed Source Library: one canonical research URL per row, with all 192 original source entries retained in source_references; 102 exact Collector lines remain in their archival text file. Venue/event record links and cruising research registry URLs load dynamically; no URL has been live-checked by this deduplication.",
   "sources": [
     {
       "id": "SEED-001",
@@ -13,11 +13,47 @@
         "events"
       ],
       "regions": [
-        "international"
+        "international",
+        "as listed"
       ],
       "provenance": "P1 explicit source",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-001",
+          "url": "https://www.travelgay.com/",
+          "name": "TravelGay",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "P1 explicit source",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-033",
+          "url": "https://www.travelgay.com/",
+          "name": "travelgay.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 33",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "SEED-002",
@@ -29,11 +65,47 @@
         "events"
       ],
       "regions": [
-        "europe"
+        "europe",
+        "as listed"
       ],
       "provenance": "P1 explicit source",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-002",
+          "url": "https://europe.gaycities.com/",
+          "name": "GayCities Europe",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "europe"
+          ],
+          "provenance": "P1 explicit source",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-034",
+          "url": "https://europe.gaycities.com/",
+          "name": "europe.gaycities.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 34",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "SEED-003",
@@ -48,7 +120,25 @@
       ],
       "provenance": "Zone 8 worklist",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-003",
+          "url": "https://www.gaycities.com/places",
+          "name": "GayCities Places",
+          "kind": "directory",
+          "workflows": [
+            "venues"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "Zone 8 worklist",
+          "verification": "Not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "SEED-004",
@@ -60,11 +150,47 @@
         "events"
       ],
       "regions": [
-        "international"
+        "international",
+        "as listed"
       ],
       "provenance": "P1 explicit source",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-004",
+          "url": "https://nomadicboys.com/destinations/",
+          "name": "Nomadic Boys",
+          "kind": "travel-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "P1 explicit source",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-035",
+          "url": "https://nomadicboys.com/destinations/",
+          "name": "nomadicboys.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 35",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "SEED-005",
@@ -76,11 +202,47 @@
         "venues"
       ],
       "regions": [
-        "europe"
+        "europe",
+        "as listed"
       ],
       "provenance": "P1 explicit source",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-005",
+          "url": "https://www.nighttours.com/",
+          "name": "Nighttours",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "europe"
+          ],
+          "provenance": "P1 explicit source",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-036",
+          "url": "https://www.nighttours.com/",
+          "name": "nighttours.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 36",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "SEED-006",
@@ -96,7 +258,26 @@
       ],
       "provenance": "P1 explicit source",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-006",
+          "url": "https://www.theglobetrotterguys.com/category/gay-travel-destinations/gay-europe/",
+          "name": "Globetrotter Guys — Gay Europe",
+          "kind": "travel-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "europe"
+          ],
+          "provenance": "P1 explicit source",
+          "verification": "Not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "SEED-007",
@@ -108,11 +289,47 @@
         "events"
       ],
       "regions": [
-        "spain"
+        "spain",
+        "as listed"
       ],
       "provenance": "P1 explicit source",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-007",
+          "url": "https://gaymap.es/en/gay-sites/",
+          "name": "GayMap Spain",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "spain"
+          ],
+          "provenance": "P1 explicit source",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-001",
+          "url": "https://gaymap.es/en/gay-sites/",
+          "name": "gaymap.es",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 1",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "SEED-008",
@@ -124,11 +341,64 @@
         "events"
       ],
       "regions": [
-        "germany"
+        "germany",
+        "Europe",
+        "as listed"
       ],
       "provenance": "P1 recovered catalogue",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-008",
+          "url": "https://www.siegessaeule.de/",
+          "name": "Siegessäule",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "germany"
+          ],
+          "provenance": "P1 recovered catalogue",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-013",
+          "url": "http://www.siegessaeule.de",
+          "name": "siegessaeule.de",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-016",
+          "url": "https://www.siegessaeule.de/",
+          "name": "siegessaeule.de",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 16",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "SEED-009",
@@ -144,7 +414,26 @@
       ],
       "provenance": "P1 recovered catalogue",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-009",
+          "url": "https://www.patroc.com/gay/",
+          "name": "Patroc",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "europe"
+          ],
+          "provenance": "P1 recovered catalogue",
+          "verification": "Not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "SEED-010",
@@ -156,11 +445,64 @@
         "venues"
       ],
       "regions": [
-        "germany"
+        "germany",
+        "Europe",
+        "as listed"
       ],
       "provenance": "P1 recovered catalogue",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-010",
+          "url": "https://queergoingout.de/",
+          "name": "Queergoingout",
+          "kind": "city-guide",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "germany"
+          ],
+          "provenance": "P1 recovered catalogue",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-001",
+          "url": "https://www.queergoingout.de/",
+          "name": "queergoingout.de",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-018",
+          "url": "https://www.queergoingout.de/",
+          "name": "queergoingout.de",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 18",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "SEED-011",
@@ -172,11 +514,47 @@
         "events"
       ],
       "regions": [
-        "international"
+        "international",
+        "as listed"
       ],
       "provenance": "P1 recovered catalogue",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-011",
+          "url": "https://spartacus.gayguide.travel/",
+          "name": "Spartacus Gay Guide",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "P1 recovered catalogue",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-020",
+          "url": "https://spartacus.gayguide.travel/",
+          "name": "spartacus.gayguide.travel",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 20",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "SEED-012",
@@ -184,14 +562,50 @@
       "url": "https://www.gaytravel4u.com/",
       "kind": "events-directory",
       "workflows": [
-        "events"
+        "events",
+        "venues"
       ],
       "regions": [
-        "international"
+        "international",
+        "as listed"
       ],
       "provenance": "P1 recovered catalogue",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-012",
+          "url": "https://www.gaytravel4u.com/",
+          "name": "GayTravel4u",
+          "kind": "events-directory",
+          "workflows": [
+            "events"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "P1 recovered catalogue",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-021",
+          "url": "https://www.gaytravel4u.com/",
+          "name": "gaytravel4u.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 21",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "SEED-013",
@@ -202,11 +616,45 @@
         "events"
       ],
       "regions": [
-        "international"
+        "international",
+        "as listed"
       ],
       "provenance": "P1 recovered catalogue",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-013",
+          "url": "https://ra.co/",
+          "name": "Resident Advisor",
+          "kind": "events-directory",
+          "workflows": [
+            "events"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "P1 recovered catalogue",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-022",
+          "url": "https://ra.co/",
+          "name": "ra.co",
+          "kind": "ticket-event",
+          "workflows": [
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 22",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "SEED-014",
@@ -222,7 +670,26 @@
       ],
       "provenance": "P1 recovered catalogue",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-014",
+          "url": "https://www.iglta.org/",
+          "name": "IGLTA",
+          "kind": "travel-guide",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "P1 recovered catalogue",
+          "verification": "Not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "SEED-015",
@@ -231,14 +698,51 @@
       "kind": "travel-guide",
       "workflows": [
         "venues",
-        "cruising"
+        "cruising",
+        "events"
       ],
       "regions": [
-        "international"
+        "international",
+        "as listed"
       ],
       "provenance": "Zone 8 worklist",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-015",
+          "url": "https://thegaypassport.com/",
+          "name": "The Gay Passport",
+          "kind": "travel-guide",
+          "workflows": [
+            "venues",
+            "cruising"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "Zone 8 worklist",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-101",
+          "url": "https://thegaypassport.com/",
+          "name": "thegaypassport.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 101",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "SEED-016",
@@ -249,11 +753,45 @@
         "cruising"
       ],
       "regions": [
-        "international"
+        "international",
+        "as listed"
       ],
       "provenance": "Zone 8 worklist",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-016",
+          "url": "https://www.gays-cruising.com/",
+          "name": "Gays-Cruising",
+          "kind": "cruising-directory",
+          "workflows": [
+            "cruising"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "Zone 8 worklist",
+          "verification": "Not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-102",
+          "url": "https://www.gays-cruising.com/",
+          "name": "gays-cruising.com",
+          "kind": "cruising-directory",
+          "workflows": [
+            "cruising"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 102",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "SEED-017",
@@ -268,7 +806,25 @@
       ],
       "provenance": "Zone 8 worklist",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-017",
+          "url": "https://www.cruisinggays.com/",
+          "name": "CruisingGays",
+          "kind": "cruising-directory",
+          "workflows": [
+            "cruising"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "Zone 8 worklist",
+          "verification": "Not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "SEED-018",
@@ -285,7 +841,27 @@
       ],
       "provenance": "Zone 8 worklist",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-018",
+          "url": "https://gay-szene.net/gay-index/stadt.html",
+          "name": "Gay-Szene City Index",
+          "kind": "cruising-directory",
+          "workflows": [
+            "cruising"
+          ],
+          "regions": [
+            "germany",
+            "austria",
+            "switzerland"
+          ],
+          "provenance": "Zone 8 worklist",
+          "verification": "Not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "SEED-019",
@@ -300,7 +876,25 @@
       ],
       "provenance": "Archived cruise research (mixed orientation)",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-019",
+          "url": "https://www.popcorn.dating/locations/public-sex/outdoor/",
+          "name": "Popcorn Dating — Outdoor",
+          "kind": "mixed-directory",
+          "workflows": [
+            "cruising"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "Archived cruise research (mixed orientation)",
+          "verification": "Not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "SEED-020",
@@ -315,7 +909,25 @@
       ],
       "provenance": "Archived cruise research (mixed orientation)",
       "verification": "Not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-020",
+          "url": "https://www.popcorn.dating/locations/",
+          "name": "Popcorn Dating — Locations",
+          "kind": "mixed-directory",
+          "workflows": [
+            "cruising"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "Archived cruise research (mixed orientation)",
+          "verification": "Not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "SEED-021",
@@ -330,23 +942,25 @@
       ],
       "provenance": "User-provided Squirt research link",
       "verification": "Not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-001",
-      "name": "queergoingout.de",
-      "url": "https://www.queergoingout.de/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "SEED-021",
+          "url": "https://mobile.squirt.org/",
+          "name": "Squirt Mobile",
+          "kind": "cruising-directory",
+          "workflows": [
+            "cruising"
+          ],
+          "regions": [
+            "international"
+          ],
+          "provenance": "User-provided Squirt research link",
+          "verification": "Not live-checked",
+          "enabled": true
+        }
       ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "duplicate_reference_count": 0
     },
     {
       "id": "RECOVERED-002",
@@ -358,11 +972,47 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-002",
+          "url": "https://pinksider.com/en/",
+          "name": "pinksider.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-019",
+          "url": "https://pinksider.com/en/",
+          "name": "pinksider.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 19",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-003",
@@ -374,11 +1024,46 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-003",
+          "url": "https://de.ra.co/",
+          "name": "de.ra.co",
+          "kind": "events-directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-023",
+          "url": "https://de.ra.co/",
+          "name": "de.ra.co",
+          "kind": "ticket-event",
+          "workflows": [
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 23",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-004",
@@ -390,11 +1075,47 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-004",
+          "url": "https://www.iglta.org/events/pride-calendar/",
+          "name": "iglta.org",
+          "kind": "events-directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-024",
+          "url": "https://www.iglta.org/events/pride-calendar/",
+          "name": "iglta.org",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 24",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-005",
@@ -406,11 +1127,47 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-005",
+          "url": "https://www.iglta.org/events/festivals-annual-events/",
+          "name": "iglta.org",
+          "kind": "events-directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-025",
+          "url": "https://www.iglta.org/events/festivals-annual-events/",
+          "name": "iglta.org",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 25",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-006",
@@ -422,11 +1179,47 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-006",
+          "url": "https://www.grind-frankfurt.de/",
+          "name": "grind-frankfurt.de",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-026",
+          "url": "https://www.grind-frankfurt.de/",
+          "name": "grind-frankfurt.de",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 26",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-007",
@@ -438,11 +1231,47 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-007",
+          "url": "https://www.instagram.com/gaypartysfrankfurt/",
+          "name": "instagram.com",
+          "kind": "social",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-027",
+          "url": "https://www.instagram.com/gaypartysfrankfurt/",
+          "name": "instagram.com",
+          "kind": "social",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 27",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-008",
@@ -454,11 +1283,47 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-008",
+          "url": "https://www.facebook.com/PUREgayclubbing/",
+          "name": "facebook.com",
+          "kind": "social",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-028",
+          "url": "https://www.facebook.com/PUREgayclubbing/",
+          "name": "facebook.com",
+          "kind": "social",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 28",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-009",
@@ -470,11 +1335,47 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-009",
+          "url": "https://www.misterbandb.com/gay-guide/poland",
+          "name": "misterbandb.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-029",
+          "url": "https://www.misterbandb.com/gay-guide/poland",
+          "name": "misterbandb.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 29",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-010",
@@ -486,11 +1387,47 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-010",
+          "url": "https://thefabryk.com/tags/gay-travel-guide",
+          "name": "thefabryk.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-030",
+          "url": "https://thefabryk.com/tags/gay-travel-guide",
+          "name": "thefabryk.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 30",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-011",
@@ -502,11 +1439,47 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-011",
+          "url": "https://www.tripadvisor.com/Attractions-g274723-Activities-c20-t103-Poland.html",
+          "name": "tripadvisor.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-031",
+          "url": "https://www.tripadvisor.com/Attractions-g274723-Activities-c20-t103-Poland.html",
+          "name": "tripadvisor.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 31",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-012",
@@ -518,27 +1491,47 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-013",
-      "name": "siegessaeule.de",
-      "url": "http://www.siegessaeule.de",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-012",
+          "url": "https://gaypartyhamburg.de/",
+          "name": "gaypartyhamburg.de",
+          "kind": "events-directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-032",
+          "url": "https://gaypartyhamburg.de/",
+          "name": "gaypartyhamburg.de",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 32",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
       ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-014",
@@ -554,7 +1547,42 @@
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-014",
+          "url": "http://www.hinnerk.de",
+          "name": "hinnerk.de",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-043",
+          "url": "https://www.hinnerk.de/",
+          "name": "hinnerk.de",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-015",
@@ -566,11 +1594,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-015",
+          "url": "http://www.queer.de",
+          "name": "queer.de",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-044",
+          "url": "https://www.queer.de/",
+          "name": "queer.de",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-038",
+          "url": "https://www.queer.de/",
+          "name": "queer.de",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 38",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-016",
@@ -582,11 +1662,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-016",
+          "url": "http://overline.tv/events",
+          "name": "overline.tv",
+          "kind": "events-directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-045",
+          "url": "https://overline.tv/events",
+          "name": "overline.tv",
+          "kind": "events-directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-039",
+          "url": "https://overline.tv/events",
+          "name": "overline.tv",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 39",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-017",
@@ -602,7 +1734,42 @@
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-017",
+          "url": "http://www.leo-magazin.de",
+          "name": "leo-magazin.de",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-046",
+          "url": "https://www.leo-magazin.de/",
+          "name": "leo-magazin.de",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-018",
@@ -618,7 +1785,42 @@
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-018",
+          "url": "http://www.transit-magazin.de",
+          "name": "transit-magazin.de",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-047",
+          "url": "https://www.transit-magazin.de/",
+          "name": "transit-magazin.de",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-019",
@@ -634,7 +1836,42 @@
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-019",
+          "url": "http://www.jock.fr",
+          "name": "jock.fr",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-048",
+          "url": "https://www.jock.fr/",
+          "name": "jock.fr",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-020",
@@ -646,11 +1883,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-020",
+          "url": "http://www.heteroclite.org",
+          "name": "heteroclite.org",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-049",
+          "url": "https://www.heteroclite.org/",
+          "name": "heteroclite.org",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-040",
+          "url": "https://www.heteroclite.org/",
+          "name": "heteroclite.org",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 40",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-021",
@@ -666,7 +1955,42 @@
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-021",
+          "url": "http://queer.be",
+          "name": "queer.be",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-050",
+          "url": "https://queer.be/",
+          "name": "queer.be",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-022",
@@ -678,11 +2002,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-022",
+          "url": "http://antwerppride.com",
+          "name": "antwerppride.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-051",
+          "url": "https://antwerppride.com/",
+          "name": "antwerppride.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-041",
+          "url": "https://antwerppride.com/",
+          "name": "antwerppride.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 41",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-023",
@@ -698,7 +2074,42 @@
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-023",
+          "url": "http://queeramsterdam.nl",
+          "name": "queeramsterdam.nl",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-052",
+          "url": "https://queeramsterdam.nl/",
+          "name": "queeramsterdam.nl",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-024",
@@ -710,11 +2121,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-024",
+          "url": "http://www.qxmagazine.com",
+          "name": "qxmagazine.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-054",
+          "url": "https://www.qxmagazine.com/",
+          "name": "qxmagazine.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-043",
+          "url": "https://www.qxmagazine.com/",
+          "name": "qxmagazine.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 43",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-025",
@@ -726,11 +2189,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-025",
+          "url": "http://www.canal-st.co.uk",
+          "name": "canal-st.co.uk",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-055",
+          "url": "https://www.canal-st.co.uk/",
+          "name": "canal-st.co.uk",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-044",
+          "url": "https://www.canal-st.co.uk/",
+          "name": "canal-st.co.uk",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 44",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-026",
@@ -746,7 +2261,42 @@
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-026",
+          "url": "http://www.brightonscene.co.uk",
+          "name": "brightonscene.co.uk",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-056",
+          "url": "https://www.brightonscene.co.uk/",
+          "name": "brightonscene.co.uk",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-027",
@@ -758,11 +2308,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-027",
+          "url": "http://gcn.ie",
+          "name": "gcn.ie",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-057",
+          "url": "https://gcn.ie/",
+          "name": "gcn.ie",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-045",
+          "url": "https://gcn.ie/",
+          "name": "gcn.ie",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 45",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-028",
@@ -774,11 +2376,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-028",
+          "url": "http://shangay.com",
+          "name": "shangay.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-058",
+          "url": "https://shangay.com/",
+          "name": "shangay.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-046",
+          "url": "https://shangay.com/",
+          "name": "shangay.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 46",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-029",
@@ -794,7 +2448,42 @@
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-029",
+          "url": "http://www.guiagaybarcelona.com",
+          "name": "guiagaybarcelona.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-059",
+          "url": "https://www.guiagaybarcelona.com/",
+          "name": "guiagaybarcelona.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-030",
@@ -806,11 +2495,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-030",
+          "url": "http://dezanove.pt",
+          "name": "dezanove.pt",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-060",
+          "url": "https://dezanove.pt/",
+          "name": "dezanove.pt",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-047",
+          "url": "https://dezanove.pt/",
+          "name": "dezanove.pt",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 47",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-031",
@@ -822,11 +2563,47 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-031",
+          "url": "http://www.patroc.com",
+          "name": "patroc.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-017",
+          "url": "https://www.patroc.com/",
+          "name": "patroc.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 17",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-032",
@@ -838,11 +2615,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-032",
+          "url": "http://www.rainbow.at",
+          "name": "rainbow.at",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-061",
+          "url": "https://www.rainbow.at/",
+          "name": "rainbow.at",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-048",
+          "url": "https://www.rainbow.at/",
+          "name": "rainbow.at",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 48",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-033",
@@ -854,11 +2683,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-033",
+          "url": "http://mannschaft.com",
+          "name": "mannschaft.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-053",
+          "url": "https://mannschaft.com/",
+          "name": "mannschaft.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-049",
+          "url": "https://mannschaft.com/",
+          "name": "mannschaft.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 49",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-034",
@@ -874,7 +2755,42 @@
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-034",
+          "url": "http://www.qgay.it",
+          "name": "qgay.it",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-062",
+          "url": "https://www.qgay.it/",
+          "name": "qgay.it",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-035",
@@ -886,11 +2802,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-035",
+          "url": "http://humenonline.hu",
+          "name": "humenonline.hu",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-063",
+          "url": "https://humenonline.hu/",
+          "name": "humenonline.hu",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-050",
+          "url": "https://humenonline.hu/",
+          "name": "humenonline.hu",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 50",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-036",
@@ -906,7 +2874,42 @@
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-036",
+          "url": "http://www.praguepride.cz",
+          "name": "praguepride.cz",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-064",
+          "url": "https://www.praguepride.cz/",
+          "name": "praguepride.cz",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 1
     },
     {
       "id": "RECOVERED-037",
@@ -918,11 +2921,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-037",
+          "url": "http://replika-online.pl",
+          "name": "replika-online.pl",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-065",
+          "url": "https://replika-online.pl/",
+          "name": "replika-online.pl",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-052",
+          "url": "https://replika-online.pl/",
+          "name": "replika-online.pl",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 52",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-038",
@@ -934,11 +2989,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-038",
+          "url": "http://outandabout.dk",
+          "name": "outandabout.dk",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-066",
+          "url": "https://outandabout.dk/",
+          "name": "outandabout.dk",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-053",
+          "url": "https://outandabout.dk/",
+          "name": "outandabout.dk",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 53",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-039",
@@ -950,11 +3057,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-039",
+          "url": "http://www.qx.se",
+          "name": "qx.se",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-067",
+          "url": "https://www.qx.se/",
+          "name": "qx.se",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-054",
+          "url": "https://www.qx.se/",
+          "name": "qx.se",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 54",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-040",
@@ -966,11 +3125,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-040",
+          "url": "http://www.qx.fi",
+          "name": "qx.fi",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-068",
+          "url": "https://www.qx.fi/",
+          "name": "qx.fi",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-055",
+          "url": "https://www.qx.fi/",
+          "name": "qx.fi",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 55",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-041",
@@ -982,11 +3193,63 @@
         "events"
       ],
       "regions": [
-        "Europe"
+        "Europe",
+        "as listed"
       ],
       "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-041",
+          "url": "http://www.pride.lv",
+          "name": "pride.lv",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "RECOVERED-069",
+          "url": "https://www.pride.lv/",
+          "name": "pride.lv",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        },
+        {
+          "id": "COLLECTOR-056",
+          "url": "https://www.pride.lv/",
+          "name": "pride.lv",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 56",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 2
     },
     {
       "id": "RECOVERED-042",
@@ -1002,455 +3265,26 @@
       ],
       "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
       "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-043",
-      "name": "hinnerk.de",
-      "url": "https://www.hinnerk.de/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "RECOVERED-042",
+          "url": "https://www.gayout.com/",
+          "name": "gayout.com",
+          "kind": "city-guide",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "Europe"
+          ],
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+          "verification": "Archived reference, not live-checked",
+          "enabled": true
+        }
       ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-044",
-      "name": "queer.de",
-      "url": "https://www.queer.de/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-045",
-      "name": "overline.tv",
-      "url": "https://overline.tv/events",
-      "kind": "events-directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-046",
-      "name": "leo-magazin.de",
-      "url": "https://www.leo-magazin.de/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-047",
-      "name": "transit-magazin.de",
-      "url": "https://www.transit-magazin.de/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-048",
-      "name": "jock.fr",
-      "url": "https://www.jock.fr/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-049",
-      "name": "heteroclite.org",
-      "url": "https://www.heteroclite.org/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-050",
-      "name": "queer.be",
-      "url": "https://queer.be/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-051",
-      "name": "antwerppride.com",
-      "url": "https://antwerppride.com/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-052",
-      "name": "queeramsterdam.nl",
-      "url": "https://queeramsterdam.nl/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-053",
-      "name": "mannschaft.com",
-      "url": "https://mannschaft.com/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-054",
-      "name": "qxmagazine.com",
-      "url": "https://www.qxmagazine.com/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-055",
-      "name": "canal-st.co.uk",
-      "url": "https://www.canal-st.co.uk/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-056",
-      "name": "brightonscene.co.uk",
-      "url": "https://www.brightonscene.co.uk/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-057",
-      "name": "gcn.ie",
-      "url": "https://gcn.ie/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-058",
-      "name": "shangay.com",
-      "url": "https://shangay.com/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-059",
-      "name": "guiagaybarcelona.com",
-      "url": "https://www.guiagaybarcelona.com/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-060",
-      "name": "dezanove.pt",
-      "url": "https://dezanove.pt/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-061",
-      "name": "rainbow.at",
-      "url": "https://www.rainbow.at/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-062",
-      "name": "qgay.it",
-      "url": "https://www.qgay.it/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-063",
-      "name": "humenonline.hu",
-      "url": "https://humenonline.hu/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-064",
-      "name": "praguepride.cz",
-      "url": "https://www.praguepride.cz/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-065",
-      "name": "replika-online.pl",
-      "url": "https://replika-online.pl/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-066",
-      "name": "outandabout.dk",
-      "url": "https://outandabout.dk/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-067",
-      "name": "qx.se",
-      "url": "https://www.qx.se/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-068",
-      "name": "qx.fi",
-      "url": "https://www.qx.fi/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "RECOVERED-069",
-      "name": "pride.lv",
-      "url": "https://www.pride.lv/",
-      "kind": "city-guide",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
-      "verification": "Archived reference, not live-checked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-001",
-      "name": "gaymap.es",
-      "url": "https://gaymap.es/en/gay-sites/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 1",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-002",
@@ -1466,7 +3300,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 2",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-002",
+          "url": "https://www.stosszeit-party.com/termine/",
+          "name": "stosszeit-party.com",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 2",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-003",
@@ -1482,7 +3335,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 3",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-003",
+          "url": "https://nextdoor-party.com/",
+          "name": "nextdoor-party.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 3",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-004",
@@ -1498,7 +3370,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 4",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-004",
+          "url": "https://pluto-essen.tv/",
+          "name": "pluto-essen.tv",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 4",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-005",
@@ -1514,7 +3405,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 5",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-005",
+          "url": "https://babylon-cologne.de/#hours",
+          "name": "babylon-cologne.de",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 5",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-006",
@@ -1530,7 +3440,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 6",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-006",
+          "url": "https://www.clubchurch.nl/",
+          "name": "clubchurch.nl",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 6",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-007",
@@ -1546,7 +3475,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 7",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-007",
+          "url": "https://www.jails-mannheim.de/",
+          "name": "jails-mannheim.de",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 7",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-008",
@@ -1562,7 +3510,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 8",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-008",
+          "url": "https://www.sauna-david.cz/en/",
+          "name": "sauna-david.cz",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 8",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-009",
@@ -1578,7 +3545,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 9",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-009",
+          "url": "https://www.heavenclub.cz/en/program-en12/",
+          "name": "heavenclub.cz",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 9",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-010",
@@ -1594,7 +3580,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 10",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-010",
+          "url": "https://www.muccassassina.com/events/",
+          "name": "muccassassina.com",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 10",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-011",
@@ -1610,7 +3615,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 11",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-011",
+          "url": "https://www.depotmilano.com/",
+          "name": "depotmilano.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 11",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-012",
@@ -1626,7 +3650,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 12",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-012",
+          "url": "https://www.sweatboxsoho.com/events/",
+          "name": "sweatboxsoho.com",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 12",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-013",
@@ -1642,7 +3685,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 13",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-013",
+          "url": "https://saunatlv.com/",
+          "name": "saunatlv.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 13",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-014",
@@ -1658,7 +3720,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 14",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-014",
+          "url": "https://www.misterbandb.com/gay-pride",
+          "name": "misterbandb.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 14",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-015",
@@ -1674,341 +3755,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 15",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-016",
-      "name": "siegessaeule.de",
-      "url": "https://www.siegessaeule.de/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-015",
+          "url": "https://www.misterbandb.com/gay-sauna",
+          "name": "misterbandb.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 15",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
       ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 16",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-017",
-      "name": "patroc.com",
-      "url": "https://www.patroc.com/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 17",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-018",
-      "name": "queergoingout.de",
-      "url": "https://www.queergoingout.de/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 18",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-019",
-      "name": "pinksider.com",
-      "url": "https://pinksider.com/en/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 19",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-020",
-      "name": "spartacus.gayguide.travel",
-      "url": "https://spartacus.gayguide.travel/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 20",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-021",
-      "name": "gaytravel4u.com",
-      "url": "https://www.gaytravel4u.com/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 21",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-022",
-      "name": "ra.co",
-      "url": "https://ra.co/",
-      "kind": "ticket-event",
-      "workflows": [
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 22",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-023",
-      "name": "de.ra.co",
-      "url": "https://de.ra.co/",
-      "kind": "ticket-event",
-      "workflows": [
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 23",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-024",
-      "name": "iglta.org",
-      "url": "https://www.iglta.org/events/pride-calendar/",
-      "kind": "events-directory",
-      "workflows": [
-        "events",
-        "venues"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 24",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-025",
-      "name": "iglta.org",
-      "url": "https://www.iglta.org/events/festivals-annual-events/",
-      "kind": "events-directory",
-      "workflows": [
-        "events",
-        "venues"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 25",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-026",
-      "name": "grind-frankfurt.de",
-      "url": "https://www.grind-frankfurt.de/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 26",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-027",
-      "name": "instagram.com",
-      "url": "https://www.instagram.com/gaypartysfrankfurt/",
-      "kind": "social",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 27",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-028",
-      "name": "facebook.com",
-      "url": "https://www.facebook.com/PUREgayclubbing/",
-      "kind": "social",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 28",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-029",
-      "name": "misterbandb.com",
-      "url": "https://www.misterbandb.com/gay-guide/poland",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 29",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-030",
-      "name": "thefabryk.com",
-      "url": "https://thefabryk.com/tags/gay-travel-guide",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 30",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-031",
-      "name": "tripadvisor.com",
-      "url": "https://www.tripadvisor.com/Attractions-g274723-Activities-c20-t103-Poland.html",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 31",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-032",
-      "name": "gaypartyhamburg.de",
-      "url": "https://gaypartyhamburg.de/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 32",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-033",
-      "name": "travelgay.com",
-      "url": "https://www.travelgay.com/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 33",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-034",
-      "name": "europe.gaycities.com",
-      "url": "https://europe.gaycities.com/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 34",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-035",
-      "name": "nomadicboys.com",
-      "url": "https://nomadicboys.com/destinations/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 35",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-036",
-      "name": "nighttours.com",
-      "url": "https://www.nighttours.com/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 36",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-037",
@@ -2024,71 +3790,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 37",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-038",
-      "name": "queer.de",
-      "url": "https://www.queer.de/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-037",
+          "url": "https://www.theglobetrotterguys.com/",
+          "name": "theglobetrotterguys.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 37",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
       ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 38",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-039",
-      "name": "overline.tv",
-      "url": "https://overline.tv/events",
-      "kind": "events-directory",
-      "workflows": [
-        "events",
-        "venues"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 39",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-040",
-      "name": "heteroclite.org",
-      "url": "https://www.heteroclite.org/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 40",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-041",
-      "name": "antwerppride.com",
-      "url": "https://antwerppride.com/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 41",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-042",
@@ -2104,135 +3825,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 42",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-043",
-      "name": "qxmagazine.com",
-      "url": "https://www.qxmagazine.com/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-042",
+          "url": "https://queer-amsterdam.org/en/",
+          "name": "queer-amsterdam.org",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 42",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
       ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 43",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-044",
-      "name": "canal-st.co.uk",
-      "url": "https://www.canal-st.co.uk/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 44",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-045",
-      "name": "gcn.ie",
-      "url": "https://gcn.ie/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 45",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-046",
-      "name": "shangay.com",
-      "url": "https://shangay.com/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 46",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-047",
-      "name": "dezanove.pt",
-      "url": "https://dezanove.pt/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 47",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-048",
-      "name": "rainbow.at",
-      "url": "https://www.rainbow.at/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 48",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-049",
-      "name": "mannschaft.com",
-      "url": "https://mannschaft.com/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 49",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-050",
-      "name": "humenonline.hu",
-      "url": "https://humenonline.hu/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 50",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-051",
@@ -2248,87 +3860,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 51",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-052",
-      "name": "replika-online.pl",
-      "url": "https://replika-online.pl/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-051",
+          "url": "https://www.praguepride.com/",
+          "name": "praguepride.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 51",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
       ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 52",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-053",
-      "name": "outandabout.dk",
-      "url": "https://outandabout.dk/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 53",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-054",
-      "name": "qx.se",
-      "url": "https://www.qx.se/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 54",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-055",
-      "name": "qx.fi",
-      "url": "https://www.qx.fi/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 55",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-056",
-      "name": "pride.lv",
-      "url": "https://www.pride.lv/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 56",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-057",
@@ -2344,7 +3895,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 57",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-057",
+          "url": "https://spartacus.gayguide.travel/goingout/europe/croatia/zagreb/",
+          "name": "spartacus.gayguide.travel",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 57",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-058",
@@ -2360,7 +3930,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 58",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-058",
+          "url": "https://spartacus.gayguide.travel/goingout/europe/hungary/budapest/",
+          "name": "spartacus.gayguide.travel",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 58",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-059",
@@ -2376,7 +3965,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 59",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-059",
+          "url": "https://www.skapisriga.com/",
+          "name": "skapisriga.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 59",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-060",
@@ -2392,7 +4000,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 60",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-060",
+          "url": "https://nomadicboys.com/gay-tbilisi-travel-guide/",
+          "name": "nomadicboys.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 60",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-061",
@@ -2408,7 +4035,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 61",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-061",
+          "url": "https://nomadicboys.com/prague-gay-travel-guide/",
+          "name": "nomadicboys.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 61",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-062",
@@ -2424,7 +4070,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 62",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-062",
+          "url": "https://www.gay-travel.net/themes/fetish-leather-events",
+          "name": "gay-travel.net",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 62",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-063",
@@ -2440,7 +4105,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 63",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-063",
+          "url": "https://www.gay-travel.net/festivals",
+          "name": "gay-travel.net",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 63",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-064",
@@ -2456,7 +4140,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 64",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-064",
+          "url": "https://nomadicboys.com/gay-nude-beaches-world/",
+          "name": "nomadicboys.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 64",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-065",
@@ -2472,7 +4175,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 65",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-065",
+          "url": "https://nomadicboys.com/gay-mykonos-guide/",
+          "name": "nomadicboys.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 65",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-066",
@@ -2488,7 +4210,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 66",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-066",
+          "url": "https://xlsiorfestival.com/xlsior-athens-event/",
+          "name": "xlsiorfestival.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 66",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-067",
@@ -2504,7 +4245,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 67",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-067",
+          "url": "https://xlsiorfestival.com/world-tour/",
+          "name": "xlsiorfestival.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 67",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-068",
@@ -2520,7 +4280,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 68",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-068",
+          "url": "https://www.apollopartycrete.com/",
+          "name": "apollopartycrete.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 68",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-069",
@@ -2536,7 +4315,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 69",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-069",
+          "url": "https://hrdr.ch/#21-11-26",
+          "name": "hrdr.ch",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 69",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-070",
@@ -2552,7 +4350,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 70",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-070",
+          "url": "https://warsaw.gaycities.com/",
+          "name": "warsaw.gaycities.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 70",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-071",
@@ -2568,7 +4385,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 71",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-071",
+          "url": "https://darkangels.pl/en/events.html",
+          "name": "darkangels.pl",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 71",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-072",
@@ -2584,7 +4420,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 72",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-072",
+          "url": "https://www.lademence.com/",
+          "name": "lademence.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 72",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-073",
@@ -2600,7 +4455,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 73",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-073",
+          "url": "https://stammbarbxl.com/events/",
+          "name": "stammbarbxl.com",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 73",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-074",
@@ -2616,7 +4490,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 74",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-074",
+          "url": "https://www.machosauna.be/",
+          "name": "machosauna.be",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 74",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-075",
@@ -2632,7 +4525,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 75",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-075",
+          "url": "https://www.myguidetenerife.com/usefulinfo/gay-tenerife",
+          "name": "myguidetenerife.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 75",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-076",
@@ -2648,7 +4560,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 76",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-076",
+          "url": "https://www.patroc.com/de/gay/ibiza/straende.html",
+          "name": "patroc.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 76",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-077",
@@ -2664,7 +4595,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 77",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-077",
+          "url": "https://nomadicboys.com/gay-dublin/",
+          "name": "nomadicboys.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 77",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-078",
@@ -2680,7 +4630,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 78",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-078",
+          "url": "https://www.patroc.com/de/gay/ibiza/gayguide.html",
+          "name": "patroc.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 78",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-079",
@@ -2696,7 +4665,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 79",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-079",
+          "url": "https://www.patroc.com/de/gay/sevilla/gayguide.html",
+          "name": "patroc.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 79",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-080",
@@ -2712,7 +4700,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 80",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-080",
+          "url": "https://www.patroc.com/de/gay/valencia/gayguide.html",
+          "name": "patroc.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 80",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-081",
@@ -2728,7 +4735,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 81",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-081",
+          "url": "https://www.patroc.com/de/gay/torremolinos/gayguide.html",
+          "name": "patroc.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 81",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-082",
@@ -2744,7 +4770,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 82",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-082",
+          "url": "https://maenner.media/regional/cityguide",
+          "name": "maenner.media",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 82",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-083",
@@ -2760,7 +4805,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 83",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-083",
+          "url": "https://gaylondonlife.co.uk/events/",
+          "name": "gaylondonlife.co.uk",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 83",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-084",
@@ -2776,7 +4840,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 84",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-084",
+          "url": "https://www.scenemag.co.uk/",
+          "name": "scenemag.co.uk",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 84",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-085",
@@ -2792,7 +4875,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 85",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-085",
+          "url": "https://avmag.gr/",
+          "name": "avmag.gr",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 85",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-086",
@@ -2808,7 +4910,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 86",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-086",
+          "url": "https://www.blikk.no/veiviseren",
+          "name": "blikk.no",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 86",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-087",
@@ -2824,7 +4945,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 87",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-087",
+          "url": "https://gaylive.be/articles/browse-Evenementen-1.html",
+          "name": "gaylive.be",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 87",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-088",
@@ -2840,7 +4980,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 88",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-088",
+          "url": "https://gay.ch/parties",
+          "name": "gay.ch",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 88",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-089",
@@ -2855,7 +5014,25 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 89",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-089",
+          "url": "https://www.cruisingamsterdam.com/agenda",
+          "name": "cruisingamsterdam.com",
+          "kind": "cruising-directory",
+          "workflows": [
+            "cruising"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 89",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-090",
@@ -2871,7 +5048,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 90",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-090",
+          "url": "https://www.gaysite.nl/agenda",
+          "name": "gaysite.nl",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 90",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-091",
@@ -2887,7 +5083,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 91",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-091",
+          "url": "https://www.gay-party.de/frankfurt/upcoming",
+          "name": "gay-party.de",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 91",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-092",
@@ -2903,7 +5118,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 92",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-092",
+          "url": "https://www.parislgbt.com/agenda/",
+          "name": "parislgbt.com",
+          "kind": "events-directory",
+          "workflows": [
+            "events",
+            "venues"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 92",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-093",
@@ -2919,7 +5153,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 93",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-093",
+          "url": "https://queer.paris/",
+          "name": "queer.paris",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 93",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-094",
@@ -2935,7 +5188,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 94",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-094",
+          "url": "https://agendalgbt.com/",
+          "name": "agendalgbt.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 94",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-095",
@@ -2951,7 +5223,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 95",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-095",
+          "url": "https://praguepromoter.com/en",
+          "name": "praguepromoter.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 95",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-096",
@@ -2967,7 +5258,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 96",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-096",
+          "url": "https://www.queerprague.cz/",
+          "name": "queerprague.cz",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 96",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-097",
@@ -2983,7 +5293,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 97",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-097",
+          "url": "https://outsavvy.com/guide",
+          "name": "outsavvy.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 97",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-098",
@@ -2999,7 +5328,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 98",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-098",
+          "url": "https://bearinbcn.com/",
+          "name": "bearinbcn.com",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 98",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-099",
@@ -3015,7 +5363,26 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 99",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-099",
+          "url": "https://www.qalendar.cz/?lang=en",
+          "name": "qalendar.cz",
+          "kind": "directory",
+          "workflows": [
+            "venues",
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 99",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
+      ],
+      "duplicate_reference_count": 0
     },
     {
       "id": "COLLECTOR-100",
@@ -3030,38 +5397,25 @@
       ],
       "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 100",
       "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-101",
-      "name": "thegaypassport.com",
-      "url": "https://thegaypassport.com/",
-      "kind": "directory",
-      "workflows": [
-        "venues",
-        "events"
+      "enabled": true,
+      "source_references": [
+        {
+          "id": "COLLECTOR-100",
+          "url": "https://purequeerclubbing.ticket.io/",
+          "name": "purequeerclubbing.ticket.io",
+          "kind": "ticket-event",
+          "workflows": [
+            "events"
+          ],
+          "regions": [
+            "as listed"
+          ],
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 100",
+          "verification": "Archived original URL; not independently rechecked",
+          "enabled": true
+        }
       ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 101",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
-    },
-    {
-      "id": "COLLECTOR-102",
-      "name": "gays-cruising.com",
-      "url": "https://www.gays-cruising.com/",
-      "kind": "cruising-directory",
-      "workflows": [
-        "cruising"
-      ],
-      "regions": [
-        "as listed"
-      ],
-      "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 102",
-      "verification": "Archived original URL; not independently rechecked",
-      "enabled": true
+      "duplicate_reference_count": 0
     }
   ],
   "collector_snapshot": {
@@ -3071,5 +5425,18 @@
     "source_line_count": 102,
     "unique_exact_urls": 102,
     "entry_ids": "COLLECTOR-001 through COLLECTOR-102"
+  },
+  "deduplication": {
+    "method": "Use same canonical URL key as admin-phase3-data.js: normalize http/https and www, drop trailing slash, remove utm_/fbclid/gclid query tracking. Preserve path case, meaningful query strings and fragments; retain exact URLs and all source IDs in source_references.",
+    "source_entries_before": 192,
+    "canonical_url_count": 122,
+    "duplicate_entry_count": 70,
+    "exact_string_duplicate_count": 40,
+    "normalized_variant_duplicate_count": 30,
+    "duplicate_groups": 51,
+    "original_collector_entries": 102,
+    "original_entries_preserved_in_references": 192,
+    "original_102_url_archival_path": "scraping/Backroom_scraping_source_URLs_102_2026-11-06.txt",
+    "note": "Deduplication here applies only to the built-in seed catalogue. Live record URLs, cruising research registry and venue audit are deduplicated dynamically when loaded, with original files unchanged."
   }
 }
