@@ -1,0 +1,126 @@
+/* Phase 3 Backroom Research Studio — v0.23.4 */
+#admin-shell #nav-scrape-builder{
+ cursor:pointer;margin:6px 11px 6px 0;padding:13px 12px 13px 17px;
+ border-radius:0 10px 10px 0;border-left:4px solid #467b81!important;
+ background:#1b303a!important;color:#b7eff2!important;
+ transition:background .2s ease,box-shadow .2s ease;
+}
+#admin-shell #nav-scrape-builder:hover,#admin-shell #nav-scrape-builder.br-nav-active{
+ border-left-color:#72e5de!important;background:#24484d!important;color:#fff!important;
+ box-shadow:inset 0 0 0 1px #3d797e,0 3px 12px #0003;font-weight:700;
+}
+#br3-view{min-width:0;max-width:100%;font-family:inherit;color:#e9f4ff;padding-bottom:40px}
+#br3-view .br3-header{
+ display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;
+ background:linear-gradient(120deg,#17494d,#172739 72%);border:1px solid #367e82;border-left:5px solid #72e5de;
+ border-radius:17px;padding:21px 24px;margin:0 0 14px;box-shadow:0 5px 22px #0003;
+}
+#br3-view .br3-header h1{font-family:Antonio,Arial,sans-serif;font-size:1.7rem;letter-spacing:.03em;color:#aaf4ee;margin:0 0 6px}
+#br3-view .br3-header p{color:#cbdfeb;margin:0;font-size:.9rem}
+#br3-view .br3-status{font-size:.8rem;font-weight:700;white-space:nowrap;padding:10px 12px;border-radius:11px;background:#15383f;border:1px solid #4e8c8f;color:#b3f8e9}
+#br3-view .br3-tabs{display:flex;gap:9px;background:#111d2e;border:1px solid #314962;border-radius:14px;padding:9px;margin-bottom:15px;flex-wrap:wrap}
+#br3-view .br3-tabs button{
+ flex:1 1 150px;min-height:43px;background:#27364a;color:#d4e3f2;border-radius:11px;
+ border:1px solid #44576c;font:700 .94rem inherit;cursor:pointer;padding:11px 14px;
+}
+#br3-view .br3-tabs button:nth-child(1){background:#21595b;border-color:#3c9894}
+#br3-view .br3-tabs button:nth-child(2){background:#245376;border-color:#3c81af}
+#br3-view .br3-tabs button:nth-child(3){background:#544875;border-color:#8571af}
+#br3-view .br3-tabs button:hover{filter:brightness(1.12)}
+#br3-view .br3-tabs .br3-active{outline:2px solid #b7faff;outline-offset:1px;color:#fff;box-shadow:0 0 12px #75edd42c}
+#br3-view .br3-message{color:#b7eee6;font-size:.85rem;line-height:1.5;margin:0 0 8px}
+#br3-view .br3-card{
+ border:1px solid #3e566c;background:#142236;border-radius:16px;
+ padding:20px 21px;margin:0 0 15px;box-shadow:0 7px 25px #0003;
+}
+#br3-view .br3-card h2{color:#7bdef0;font-family:Antonio,Arial,sans-serif;letter-spacing:.025em;font-size:1.34rem;margin:0 0 11px}
+#br3-view .br3-card h3{font-size:1.07rem;color:#dceeff;margin:19px 0 11px;font-family:inherit}
+#br3-view .br3-muted{font-size:.86rem;line-height:1.5;color:#b8cbe0;margin:6px 0 13px}
+#br3-view .br3-grid{display:grid;grid-template-columns:repeat(3,minmax(155px,1fr));gap:12px 14px;margin:12px 0}
+#br3-view .br3-grid-2{grid-template-columns:repeat(2,minmax(170px,1fr))}
+#br3-view .br3-grid-3{grid-template-columns:repeat(3,minmax(140px,1fr))}
+#br3-view label{display:flex;flex-direction:column;gap:7px;font-size:.81rem;color:#b9d0e3;font-weight:700;min-width:0}
+#br3-view label small{font-size:.75rem;color:#a2b9c9;font-weight:400}
+#br3-view input:not([type="checkbox"]),#br3-view select,#br3-view textarea{
+ background:#0c1a2b!important;color:#eef8ff!important;border:1px solid #506b82;
+ border-radius:10px;padding:10px 12px;outline:none;min-width:0;width:100%;
+ box-sizing:border-box;font-family:inherit;font-size:.89rem;
+}
+#br3-view select{min-height:42px;cursor:pointer}
+#br3-view select[multiple]{min-height:138px}
+#br3-view input:focus-visible,#br3-view select:focus-visible,#br3-view textarea:focus-visible{outline:2px solid #78dfeb;outline-offset:1px}
+#br3-view textarea{line-height:1.5;resize:vertical;white-space:pre-wrap}
+#br3-view #br3-output{font-family:Consolas,Monaco,monospace;font-size:.83rem;background:#091622!important;min-height:250px}
+#br3-view #br3-rule-body{font-family:Consolas,Monaco,monospace;min-height:400px}
+#br3-view .br3-inline{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:11px 0}
+#br3-view .br3-inline>.btn,#br3-view .br3-inline>button{
+ min-height:39px;padding:9px 13px!important;width:auto!important;
+ border-radius:10px!important;white-space:normal;
+}
+#br3-view .br3-inline>select{flex:1 1 190px}
+#br3-view .br3-inline>input{flex:1 1 230px}
+#br3-view .primary-btn{background:#126e79!important;border-color:#4193a0!important;color:#fff!important}
+#br3-view .primary-btn:hover{background:#19899a!important}
+#br3-view .secondary-btn{background:#243d53!important;border-color:#3e7189!important;color:#e6f6ff!important}
+#br3-view .secondary-btn:hover{background:#335971!important}
+#br3-view .br3-chips{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:9px 0 13px}
+#br3-view .br3-chip{
+ background:#1e3b4a;color:#dff7ff;border:1px solid #50879d;
+ padding:8px 11px;border-radius:24px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;font-size:.87rem;
+}
+#br3-view .br3-chip:hover{background:#2c5568}
+#br3-view .br3-chip span{font-size:1.15rem;color:#ffaab0}
+#br3-view .br3-pill{
+ display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border:1px solid #345b73;
+ background:#18324a;border-radius:10px;font-size:.8rem;color:#d3e9fc;white-space:normal;
+}
+#br3-view .br3-pill strong{color:#8ee5ef;font-size:.96rem}
+#br3-view .br3-warning{color:#ffbbab!important}
+#br3-view .br3-city-count{font-size:.82rem;color:#a9c5d9;padding:7px 0}
+#br3-view .br3-city-list{
+ max-height:256px;overflow:auto;display:grid;grid-template-columns:repeat(3,minmax(170px,1fr));gap:5px 10px;
+ padding:11px;background:#0e1d2e;border:1px solid #36536d;border-radius:12px;
+}
+#br3-view .br3-city-list .br3-choice{
+ min-width:0;padding:7px 8px;cursor:pointer;background:#192a40;border-radius:9px;
+ display:flex;flex-direction:row;align-items:center;gap:8px;font-size:.85rem;
+ font-weight:500;color:#e1f2fd;flex-wrap:wrap;
+}
+#br3-view .br3-city-list .br3-choice:hover{background:#254460}
+#br3-view .br3-city-list .br3-choice small{color:#9dc0d2;font-size:.74rem}
+#br3-view .br3-city-list input[type="checkbox"]{height:17px;width:17px;accent-color:#55c4d7;flex:0 0 auto}
+#br3-view .br3-preview,#br3-view #br3-result-summary{margin:12px 0;display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:.87rem;color:#d6e8f4}
+#br3-view #br3-result-summary{padding:11px 13px;background:#0b1f2b;border-radius:10px}
+#br3-view .br3-overflow{border:1px solid #3b5d73;border-radius:13px;overflow:auto;max-height:620px;background:#111d30;margin:13px 0}
+#br3-view .br3-table{border-collapse:separate;border-spacing:0;width:100%;min-width:670px;font-size:.84rem}
+#br3-view .br3-table th{
+ position:sticky;top:0;z-index:2;background:#1e5268;color:#b9f4ff;
+ border-bottom:2px solid #55bdd0;padding:12px;text-align:left;
+}
+#br3-view .br3-table th:first-child{border-top-left-radius:11px}
+#br3-view .br3-table th:last-child{border-top-right-radius:11px}
+#br3-view .br3-table td{padding:11px 12px;border-bottom:1px solid #34475e;vertical-align:top;line-height:1.45}
+#br3-view .br3-table tbody tr:nth-child(odd){background:#16253a}
+#br3-view .br3-table tbody tr:nth-child(even){background:#1d2d43}
+#br3-view .br3-table tbody tr:hover{background:#2b4159}
+#br3-view .br3-table td:first-child{max-width:440px;overflow-wrap:anywhere}
+#br3-view .br3-url{font-size:.79rem;margin-top:4px}
+#br3-view .br3-url a{color:#86d9f4;text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
+#br3-view .br3-table details summary{cursor:pointer;color:#a2d7e7;font-size:.77rem}
+#br3-view .br3-table details p{font-size:.76rem;overflow-wrap:anywhere;color:#bfd0e1}
+#br3-view .br3-action{padding:6px 8px;cursor:pointer;border:1px solid #4c8197;border-radius:8px;background:#20445b;color:#d8f1ff;margin:3px}
+#br3-view .br3-action:hover{background:#2e637f}
+#br3-view .br3-edit{background:#1c354a;border:1px solid #5a8699;border-radius:12px;padding:14px;margin:15px 0}
+#br3-view .br3-edit h3{margin:0 0 8px;color:#a5ebf1}
+@media(max-width:1370px){
+ #br3-view .br3-grid{grid-template-columns:repeat(2,minmax(165px,1fr))}
+ #br3-view .br3-city-list{grid-template-columns:repeat(2,minmax(150px,1fr))}
+}
+@media(max-width:800px){
+ #br3-view .br3-card{padding:14px 12px}
+ #br3-view .br3-grid,#br3-view .br3-grid-2,#br3-view .br3-grid-3{grid-template-columns:1fr}
+ #br3-view .br3-city-list{grid-template-columns:1fr;max-height:310px}
+ #br3-view .br3-header{padding:16px 12px}
+ #br3-view .br3-status{white-space:normal}
+ #br3-view .br3-tabs button{flex:1 1 100px;padding:8px;font-size:.84rem}
+}
