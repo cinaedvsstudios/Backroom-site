@@ -228,7 +228,7 @@
         }
 
         const countryHtml = '<option value="">🌐 Country</option>'
-            + countries.map((country) => `<option value="${escapeHtml(country)}">${escapeHtml((window.BackroomAdminFlags?.flag(country)||'🌍')+' '+country)}</option>`).join('');
+            + countries.map((country) => `<option value="${escapeHtml(country)}">${escapeHtml(country)}</option>`).join('');
         if (countrySelect.innerHTML !== countryHtml) countrySelect.innerHTML = countryHtml;
         countrySelect.value = state.country;
 

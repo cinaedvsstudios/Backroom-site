@@ -88,7 +88,7 @@ function checkList(){
     ];
     const v=[
         ['empty:Website_URL','Missing website'],['empty:Instagram_URL','Missing Instagram'],
-        ['empty:Source_URLs','Missing source URLs'],['empty:Image_URL','Missing image'],
+        ['empty:Source_URLs','Missing source URLs'],['empty:Vibe_Tags','Missing vibe tags'],['empty:Image_URL','Missing image'],
         ['empty:Address','Missing address'],['empty:Google_Maps_URL','Missing Google Maps URL'],
         ['maps','Missing usable map location'],['gps','Missing GPS coordinates'],
         ['empty:Opening_Days','Missing opening days'],['empty:Opening_Open_Time','Missing opening time'],
@@ -100,7 +100,7 @@ function checkList(){
         ['rating:Rating_Location','Missing location rating'],['rating:Rating_Busyness','Missing popularity rating']
     ];
     const c=[
-        ['empty:Source_URLs','Missing source URLs'],['maps','Missing usable map location'],['gps','Missing GPS coordinates'],
+        ['empty:Source_URLs','Missing source URLs'],['empty:Vibe_Tags','Missing vibe tags'],['maps','Missing usable map location'],['gps','Missing GPS coordinates'],
         ['empty:Google_Maps_URL','Missing Google Maps URL'],['empty:Opening_Notes','Missing access / opening notes'],
         ['empty:Description','Missing description'],['short:Description:100','Description under 100 characters'],
         ['short:Description:200','Description under 200 characters'],['rating:Rating_General','Missing overall rating'],
@@ -222,7 +222,7 @@ function refreshScopeStats(){
         return state.countryAsc?result:-result;
     });
     table.innerHTML='<thead><tr><th data-country-sort="country">Country ↕</th><th data-country-sort="venue">Venues ↕</th><th data-country-sort="cruise">Cruising ↕</th><th data-country-sort="events">Events ↕</th><th data-country-sort="total">Total ↕</th></tr></thead><tbody>'+
-      entries.map(([country,n])=>'<tr><td>'+esc((window.BackroomAdminFlags?.flag(country)||'🌍')+' '+country)+'</td><td>'+fmt(n.venue)+'</td><td>'+fmt(n.cruise)+'</td><td>'+fmt(n.events)+'</td><td>'+fmt(n.venue+n.cruise+n.events)+'</td></tr>').join('')+'</tbody>';
+      entries.map(([country,n])=>'<tr><td>'+(window.BackroomAdminFlags?.html(country)||'<span aria-hidden="true">🌐</span>')+' '+esc(country)+'</td><td>'+fmt(n.venue)+'</td><td>'+fmt(n.cruise)+'</td><td>'+fmt(n.events)+'</td><td>'+fmt(n.venue+n.cruise+n.events)+'</td></tr>').join('')+'</tbody>';
     renderMonths();
 }
 function dateOnly(v){if(!v)return null;const s=String(v).trim(),d=s.match(/^(\d{1,2})-(\d{1,2})-(\d{4})/);const t=d?new Date(Number(d[3]),Number(d[2])-1,Number(d[1])):new Date(s);return Number.isNaN(t.getTime())?null:t;}
@@ -493,6 +493,7 @@ async function backupReminder(){
     }catch{}
 }
 async function open(){
+    if(state.opened){const existing=document.getElementById('br-reporting-view');if(existing)existing.style.display='block';return;}
     state.opened=true;
     const root=document.getElementById('br-reporting-view');if(root)root.style.display='block';
     try{
