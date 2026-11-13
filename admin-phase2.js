@@ -89,7 +89,12 @@ function show(tab){
 function render(){
  if(!state.registry)return;
  const summary=get('br-p2-summary');
- if(summary)summary.textContent=fmt(state.venues.length)+' venue/area records · '+fmt(state.events.length)+' events · '+fmt(state.registry.countries.length)+' countries · '+fmt(state.registry.cities.length)+' destinations';
+ if(summary)summary.innerHTML=[
+   ['📍','Venues + areas',state.venues.length],
+   ['📅','Events',state.events.length],
+   ['🌍','Countries',state.registry.countries.length],
+   ['🗺️','Destinations',state.registry.cities.length]
+  ].map(([icon,label,value])=>'<span class="br-p3-stat-chip"><span aria-hidden="true">'+icon+'</span><strong>'+fmt(value)+'</strong> '+label+'</span>').join('');
  for(const tab of ['imports','quality','reporting','registry','coverage','zones'])get('br-p2-'+tab)?.classList.toggle('hidden',state.tab!==tab);
  document.querySelectorAll('#br-phase2-nav button').forEach(button=>button.classList.toggle('br-p2-active',button.dataset.p2Tab===state.tab));
  sections[state.tab]?.render?.();
