@@ -80,7 +80,7 @@ function commitDataset(mode,after,before,operation,counts){
 }
 function hide(){state.active=false;if(get('br-phase2-view'))get('br-phase2-view').style.display='none';get('nav-data-quality')?.classList.remove('br-nav-active');}
 function show(tab){
- if(typeof tab==='string'&&['imports','quality','registry','coverage','zones'].includes(tab))state.tab=tab;
+ if(typeof tab==='string'&&['imports','quality','reporting','registry','coverage','zones'].includes(tab))state.tab=tab;
  state.active=true;get('br-phase2-view').style.display='block';
  for(const id of ['view-tables','view-editor','view-terminology','view-avatars','br-reporting-view']){const node=get(id);if(node){node.style.display='none';if(id!=='br-reporting-view')node.classList.add('hidden');}}
  document.querySelectorAll('#nav-venues,#nav-events,#nav-cruising,#nav-reporting').forEach(x=>x.classList.remove('br-nav-active'));
@@ -90,7 +90,7 @@ function render(){
  if(!state.registry)return;
  const summary=get('br-p2-summary');
  if(summary)summary.textContent=fmt(state.venues.length)+' venue/area records · '+fmt(state.events.length)+' events · '+fmt(state.registry.countries.length)+' countries · '+fmt(state.registry.cities.length)+' destinations';
- for(const tab of ['imports','quality','registry','coverage','zones'])get('br-p2-'+tab)?.classList.toggle('hidden',state.tab!==tab);
+ for(const tab of ['imports','quality','reporting','registry','coverage','zones'])get('br-p2-'+tab)?.classList.toggle('hidden',state.tab!==tab);
  document.querySelectorAll('#br-phase2-nav button').forEach(button=>button.classList.toggle('br-p2-active',button.dataset.p2Tab===state.tab));
  sections[state.tab]?.render?.();
 }
@@ -99,15 +99,25 @@ function install(){
  const main=document.querySelector('#admin-shell > main.admin-main'),after=get('nav-reporting')||get('nav-events');
  if(!main||!after){console.error('Phase 2 admin shell not found');return;}
  const nav=document.createElement('div');nav.id='nav-data-quality';nav.className='sidebar-item';
- nav.innerHTML='<span class="icon">🗂️</span><span class="sidebar-text">Data Quality & Coverage</span>';after.after(nav);
+ nav.innerHTML='<span class="icon">🗂️</span><span class="sidebar-text">Data & Analytics</span>';after.after(nav);
  nav.addEventListener('click',show);
+ after.style.display='none';after.setAttribute('aria-hidden','true');
  document.addEventListener('click',event=>{if(event.target.closest('.sidebar-item')&&!event.target.closest('#nav-data-quality'))hide();},true);
  const root=document.createElement('section');root.id='br-phase2-view';root.style.display='none';
- root.innerHTML='<div class="br-p2-top"><h1>🗂️ Data Management & Geographic Coverage</h1><p class="br-p2-muted">Phase 2 — complete schemas, safer imports, data quality and worldwide coverage. Local drafts only.</p>'+
+ root.innerHTML='<div class="br-p2-top"><h1>🗂️ Data & Analytics</h1><p class="br-p2-muted">One workspace for importing, checking, exploring and researching your Backroom records.</p>'+
  '<div class="br-p2-actions"><button type="button" id="br-p2-refresh" class="btn secondary-btn pill-btn">↻ Refresh data</button><span id="br-p2-summary"></span></div></div><p class="br-p2-error" id="br-p2-error"></p>'+
- '<nav id="br-phase2-nav">'+[['imports','Spreadsheet Tools'],['quality','Completeness'],['registry','City Registry'],['coverage','City Coverage'],['zones','Zone Rules']].map(x=>'<button class="btn secondary-btn pill-btn" type="button" data-p2-tab="'+x[0]+'">'+x[1]+'</button>').join('')+'</nav>'+
- '<section id="br-p2-imports"></section><section id="br-p2-quality" class="hidden"></section><section id="br-p2-registry" class="hidden"></section><section id="br-p2-coverage" class="hidden"></section><section id="br-p2-zones" class="hidden"></section>';
+ '<nav id="br-phase2-nav">'+[['imports','📥 Data Tools'],['quality','✅ Quality Checks'],['reporting','📊 Reporting & Stats'],['registry','🌍 City Registry'],['coverage','🗺️ Coverage'],['zones','📚 Zone Rules']].map(x=>'<button class="btn secondary-btn pill-btn br-p3-tab-'+x[0]+'" type="button" data-p2-tab="'+x[0]+'">'+x[1]+'</button>').join('')+'</nav>'+
+ '<section id="br-p2-imports"></section><section id="br-p2-quality" class="hidden"></section><section id="br-p2-reporting" class="hidden"></section><section id="br-p2-registry" class="hidden"></section><section id="br-p2-coverage" class="hidden"></section><section id="br-p2-zones" class="hidden"></section>';
  main.appendChild(root);
+ const existingReport=get('br-reporting-view');
+ if(existingReport){
+   get('br-p2-reporting').appendChild(existingReport);
+   existingReport.style.display='none';
+ }
+ register('reporting',{render(){
+   const report=get('br-reporting-view');
+   if(report){report.style.display='block';window.BackroomAdminReporting?.open?.();}
+ }});
  // Link the expanded checks back to Reporting's existing completeness overview,
  // keeping one overview and one detailed workflow rather than disconnected tools.
  const summary=get('br-completeness-overview')?.closest('.br-panel-inner');
@@ -134,6 +144,6 @@ function install(){
  },true);
 }
 window.BRP2={state,D,get,esc,fmt,clean,norm,notify,saveLocal,readLocal,downloadCSV,downloadJSON,options,stat,pagination,location,countriesInUse,commitDataset,fetchRegistry,refresh,render,register,show,hide};
-window.BackroomAdminPhase2={show,hide,refresh,getState:()=>state,version:'0.22.0'};
+window.BackroomAdminPhase2={show,hide,refresh,getState:()=>state,version:'0.23.0'};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
