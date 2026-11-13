@@ -4,7 +4,8 @@
 if (window.BackroomAdminPhase1) return;
 const esc = value => String(value ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const fmt = n => Number(n || 0).toLocaleString('en-GB');
-const flag = country => window.BackroomAdminFlags?.flag(country) || '🌍';
+const flag = country => window.BackroomAdminFlags?.flag(country) || '🌐';
+const flagHTML = country => window.BackroomAdminFlags?.html(country) || '<span aria-hidden="true">🌐</span>';
 const idField = () => currentMode === 'events' ? 'Event_ID' : 'Venue_ID';
 const msg = value => typeof showToast === 'function' ? showToast(value) : window.alert(value);
 const compact = {
@@ -39,7 +40,7 @@ function compactFilterRows(rows) {
 function optionSelect(key,values,title){
   const chosen=compact.filters[key];
   return '<label>'+esc(title)+'<select data-cf="'+key+'"><option value="">All</option>'+
-    values.map(v=>'<option value="'+esc(v)+'" '+(v===chosen?'selected':'')+'>'+esc(key==='country'?flag(v)+' '+v:v)+'</option>').join('')+'</select></label>';
+    values.map(v=>'<option value="'+esc(v)+'" '+(v===chosen?'selected':'')+'>'+esc(v)+'</option>').join('')+'</select></label>';
 }
 function compactControls() {
   const host=document.getElementById('br-compact-filters');
@@ -86,7 +87,7 @@ function renderCompact(rows){
     const id=String(row[field]??'');
     const name=String(row.Name||row.Event_Name||id);
     const status=String(row.Status||'Unknown');
-    const location=[row.Country?flag(row.Country):'',row.City||(!row.Country?'':'')].filter(Boolean).join(' ') || String(row.City||'');
+    const location=(row.Country?flagHTML(row.Country)+' ':'')+esc(row.City||'');
     const category=currentMode==='events'?String(row.Venue_ID||'No linked venue'):String(row.Category||'');
     const date=currentMode==='events'?String(row.Event_Date||''):String(row.Last_Updated||'').slice(0,10);
     const times=currentMode==='events'?[row.Event_Start_Time,row.Event_End_Time].filter(Boolean).join('–'):'';
@@ -94,7 +95,7 @@ function renderCompact(rows){
     return '<tr data-id="'+esc(id)+'" class="br-p1-row" onmousedown="selectAdminRecord(this.dataset.id)">'+
       '<td class="br-p1-checkbox"><input type="checkbox" aria-label="Select '+esc(id)+'" data-compact-select="'+esc(id)+'" '+(selected.has(id)?'checked':'')+'></td>'+
       '<td><div class="br-p1-row-top"><strong>'+esc(name)+'</strong><span class="br-p1-status '+(status.toLowerCase()==='live'?'br-p1-live':'br-p1-alert')+'">'+esc(status)+'</span></div>'+
-      '<div class="br-p1-row-meta">'+[id,location,category,date,times].filter(Boolean).map(esc).join(' · ')+'</div></td>'+
+      '<div class="br-p1-row-meta">'+[esc(id),location,esc(category),esc(date),esc(times)].filter(Boolean).join(' · ')+'</div></td>'+
       '<td class="br-p1-tags">'+(tags?esc(tags):'<span class="br-p1-muted">No tags</span>')+'</td></tr>';
   }).join('');
   const pages=Math.max(1,Math.ceil(compact.rows.length/compact.size));
@@ -317,7 +318,7 @@ function renderExplorer(){
       '<div class="br-p1-overflow"><table class="br-table"><thead><tr><th>'+esc([explorer.group1,explorer.group2,explorer.group3].filter(Boolean).join(' / ')||'All records')+'</th><th>Count</th><th>Share</th></tr></thead><tbody>'+
       groups.map(g=>'<tr><td>'+g.names.map(esc).join(' / ')+'</td><td>'+fmt(g.count)+'</td><td>'+((g.count/Math.max(1,rows.length))*100).toFixed(1)+'%</td></tr>').join('')+'</tbody></table></div>')+
     '<h4>Records in this view</h4><div class="br-p1-overflow"><table class="br-table"><thead><tr><th>ID</th><th>Name</th><th>Location</th><th>Status</th><th>Date</th></tr></thead><tbody>'+
-    rows.slice(first,first+100).map(r=>'<tr><td>'+esc(r.Event_ID||r.Venue_ID||'')+'</td><td>'+esc(r.Event_Name||r.Name||'')+'</td><td>'+esc([r.Country?flag(r.Country):'',r.City||r.Country].filter(Boolean).join(' '))+'</td><td>'+esc(r.Status||'')+'</td><td>'+esc(r.Event_Date||r.Last_Updated||'')+'</td></tr>').join('')+
+    rows.slice(first,first+100).map(r=>'<tr><td>'+esc(r.Event_ID||r.Venue_ID||'')+'</td><td>'+esc(r.Event_Name||r.Name||'')+'</td><td>'+(r.Country?flagHTML(r.Country)+' ':'')+esc(r.City||r.Country||'')+'</td><td>'+esc(r.Status||'')+'</td><td>'+esc(r.Event_Date||r.Last_Updated||'')+'</td></tr>').join('')+
     '</tbody></table></div><div class="br-p1-pagination"><button class="btn secondary-btn pill-btn" data-explorer-page="-1" '+(explorer.page===1?'disabled':'')+'>Previous</button><span>Page '+explorer.page+' / '+pages+' (100 records per page)</span><button class="btn secondary-btn pill-btn" data-explorer-page="1" '+(explorer.page===pages?'disabled':'')+'>Next</button></div>'+
     '<details id="br-p1-copy-panel" class="br-p1-collapsible" '+(explorer.copyOpen?'open':'')+'><summary>📋 Selective Copy Results</summary>'+
     '<p class="br-p1-muted">Choose the columns to copy from the current filtered results. This does not modify or rerun the original query.</p><div class="br-p1-copy-fields">'+
