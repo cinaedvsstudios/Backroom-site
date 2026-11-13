@@ -1,0 +1,100 @@
+{
+  "research_month": "2027-01",
+  "created_at": "2026-11-13",
+  "project": "Backroom",
+  "purpose": "New eligible or potential January 2027 event venues absent from current listings.json. Staged for venue identity checks and import together, avoiding orphan Event.Venue_ID. Do not treat staged items as published events.",
+  "candidates": [
+    {
+      "venue_candidate_id": "CH-SG-SAU-MANNOMANN-01",
+      "venue_name": "Mann-o-Mann",
+      "city": "St. Gallen",
+      "country": "Switzerland",
+      "address": "St. Jakob-Strasse 91, 9000 St. Gallen, Switzerland",
+      "category": "Sauna",
+      "website_url": "https://www.mann-o-mann.ch/",
+      "other_url": "https://www.mparty.ch/",
+      "source_urls": [
+        "https://www.mann-o-mann.ch/events",
+        "https://www.neonparty.ch/",
+        "https://eventfrog.ch/en/p/parties/lgbtiq/neon-party-winter-edition-st-gallen-7522371877018277052.html"
+      ],
+      "gender_access": "Official site calls the January party for all men 18+, distinct from a separate Nov 2026 mixed-gender Fish and Chips party.",
+      "feature_men_only": true,
+      "feature_darkroom": true,
+      "feature_sauna": true,
+      "feature_cruise_focused": true,
+      "verification_status": "ready_for_venue_import",
+      "event": {
+        "suggested_event_id": "EVT-JAN27-CH-SG-MANNOMANN-20270130-NEON",
+        "name": "Neon Party – Winter Edition",
+        "date": "2027-01-30",
+        "start_time": "20:00",
+        "end_time": "04:00",
+        "ticket_url": "https://eventfrog.ch/en/p/parties/lgbtiq/neon-party-winter-edition-st-gallen-7522371877018277052.html",
+        "price_info": "CHF 35 presale / CHF 40 door per organiser",
+        "description": "Men-only 18+ neon-lit winter party at the Mann-o-Mann sauna in St. Gallen, with DJ music, blacklights, cruising/darkroom area and wellness spaces. Date and hours confirmed by venue and ticket seller.",
+        "evidence_level": "official_venue_and_organizer_plus_ticket_provider",
+        "publication": "not_added_to_events_json_because_venue_id_missing"
+      }
+    },
+    {
+      "venue_candidate_id": "BEL-LIE-CRU-CHAPS-01",
+      "venue_name": "The Chap's",
+      "city": "Liège",
+      "country": "Belgium",
+      "address": "Rue Bonne-Femme 68, 4030 Liège, Belgium",
+      "category": "Club / Darkroom",
+      "website_url": "https://www.the-chaps.info/V2/",
+      "source_urls": [
+        "https://www.the-chaps.info/V2/",
+        "https://gaycation.eu/belgium/liege/events/cruising-party-special-1er-janvier-2027-01-01",
+        "https://gaycation.eu/fr/belgium/liege/bars/the-chaps"
+      ],
+      "gender_access": "Official club website explicitly says men 18+ only.",
+      "feature_men_only": true,
+      "feature_darkroom": true,
+      "feature_cruise_focused": true,
+      "verification_status": "official_venue_verified_january_date_secondary_only",
+      "event": {
+        "suggested_event_id": "EVT-JAN27-BEL-LIE-CHAPS-20270101-CRUISING",
+        "name": "Cruising Party – Spécial 1er Janvier",
+        "date": "2027-01-01",
+        "start_time": "14:00",
+        "end_time": "04:30",
+        "description": "Gaycation's dated editorial report says The Chap's opens 1 January for a long men-only cruising session, following its New Year's Eve closure. Official club verifies male-only access and darkroom facilities but January event date is not visible on its accessible website.",
+        "evidence_level": "venue_official_eligibility_date_secondary_only",
+        "publication": "held_for_date_crosscheck_and_venue_import"
+      }
+    },
+    {
+      "venue_candidate_id": "NL-DHA-CRU-THEBOSS-01",
+      "venue_name": "The Boss",
+      "city": "The Hague",
+      "country": "Netherlands",
+      "address": "Rijswijkseweg 536, 2516 HT Den Haag, Netherlands",
+      "category": "Club / Darkroom",
+      "website_url": "https://therealboss.nl/",
+      "source_urls": [
+        "https://therealboss.nl/",
+        "https://therealboss.nl/blog/evenement/donderdag-1-januari-2026-vandaag-gesloten/",
+        "https://gaycation.eu/netherlands/the-hague/events/happy-new-year-party-at-the-boss-2027-01-01"
+      ],
+      "gender_access": "Website describes itself as gay/bi-man cruising club, but also explicitly tells visitors that T-girl presentation is welcome. Confirm men-only admissions rather than assuming.",
+      "feature_men_only": null,
+      "feature_darkroom": true,
+      "feature_cruise_focused": true,
+      "verification_status": "requires_eligibility_and_stale_copy_recheck",
+      "event": {
+        "suggested_event_id": "EVT-JAN27-NL-DHA-THEBOSS-20270101-NEWYEAR",
+        "name": "Happy New Year at The Boss",
+        "date": "2027-01-01",
+        "start_time": "15:00",
+        "end_time": "01:00",
+        "price_info": "€15 entry credited as bar voucher on official event notice",
+        "description": "Official headline lists 1 Jan 2027 and 15:00–01:00; body still wishes customers Happy 2026 and slug references 2026. Gaycation separately lists 2027 date. Date and restricted admission require further confirmation before live import.",
+        "evidence_level": "official_date_with_stale_copy_conflict",
+        "publication": "held_not_imported"
+      }
+    }
+  ]
+}
