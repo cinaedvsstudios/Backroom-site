@@ -4,8 +4,9 @@
 const P=window.BRP2;if(!P)throw Error('Phase 2 shell missing');
 const {state:S,get,esc,fmt,clean,norm,notify,saveLocal,downloadCSV,downloadJSON,options,stat,pagination,location}=P;
 const REG_KEY='br_admin_city_registry_working_v1';
-const flag=name=>window.BackroomAdminFlags?.flag(name)||'🌍';
-const countryOptions=(items,selected)=>'<option value="">🌐 All countries</option>'+items.map(name=>'<option value="'+esc(name)+'" '+(selected===name?'selected':'')+'>'+esc(flag(name)+' '+name)+'</option>').join('');
+const flag=name=>window.BackroomAdminFlags?.flag(name)||'🌐';
+const flagHTML=name=>window.BackroomAdminFlags?.html(name)||'<span aria-hidden="true">🌐</span>';
+const countryOptions=(items,selected)=>'<option value="">🌐 All countries</option>'+items.map(name=>'<option value="'+esc(name)+'" '+(selected===name?'selected':'')+'>'+esc(name)+'</option>').join('');
 const reg={country:'DE',search:'',page:1,edit:-1};
 const cov={country:'',search:'',filter:'all',page:1};
 let coverageAll=[],coverageVisible=[];
@@ -40,7 +41,7 @@ function renderRegistry(){
  '<div class="br-p2-actions"><button type="button" id="br-reg-export" class="btn primary-btn pill-btn">⬇ Export registry JSON</button>'+
  '<label class="btn secondary-btn pill-btn">Import registry JSON<input type="file" id="br-reg-import" accept=".json" hidden></label>'+
  '<button id="br-reg-reset" class="btn secondary-btn pill-btn">Reset to published registry</button></div>'+
- '<div class="br-p2-filters"><label>Country<select id="br-reg-country">'+S.registry.countries.map(c=>'<option value="'+esc(c.code)+'" '+(reg.country===c.code?'selected':'')+'>'+esc(flag(c.code)+' '+c.name)+' ('+esc(c.code)+')</option>').join('')+'</select></label>'+
+ '<div class="br-p2-filters"><label>Country<select id="br-reg-country">'+S.registry.countries.map(c=>'<option value="'+esc(c.code)+'" '+(reg.country===c.code?'selected':'')+'>'+esc(c.name)+' ('+esc(c.code)+')</option>').join('')+'</select></label>'+
  '<label>City search<input id="br-reg-search" value="'+esc(reg.search)+'" placeholder="City name"></label></div>'+
  '<div class="br-p2-inline"><label>Country name<input id="br-reg-country-name" value="'+esc(current.name)+'"></label>'+
  '<label>Capital / administrative seat<input id="br-reg-country-capital" value="'+esc(current.capital||'')+'"></label>'+
@@ -194,7 +195,7 @@ function renderCoverage(){
  '<button id="br-cover-export" class="btn secondary-btn pill-btn">Download Coverage CSV</button></div>'+
  '<div class="br-p2-scroll"><table class="br-p2-table"><thead><tr><th>✓</th><th>Country</th><th>Destination</th><th>Venues</th><th>Cruising</th><th>Events</th><th>Total</th><th>Registry</th></tr></thead><tbody>'+
  showing.map(x=>'<tr><td><input type="checkbox" data-cover-select="'+esc(key(x.code,x.city))+'" '+(S.selected.has(key(x.code,x.city))?'checked':'')+'></td>'+
- '<td class="br-p3-flag" title="'+esc(x.country)+'" aria-label="'+esc(x.country)+'">'+esc(flag(x.country))+'</td><td>'+esc(x.city)+'</td><td>'+fmt(x.venues)+'</td><td>'+fmt(x.cruising)+'</td><td>'+fmt(x.events)+'</td><td><strong>'+fmt(x.total)+'</strong></td>'+
+ '<td class="br-p3-flag" title="'+esc(x.country)+'" aria-label="'+esc(x.country)+'">'+flagHTML(x.country)+'</td><td>'+esc(x.city)+'</td><td>'+fmt(x.venues)+'</td><td>'+fmt(x.cruising)+'</td><td>'+fmt(x.events)+'</td><td><strong>'+fmt(x.total)+'</strong></td>'+
  '<td>'+(x.registered?esc(x.kinds.join(', ')):'<span class="br-p2-warn">Unregistered</span>')+'</td></tr>').join('')+'</tbody></table></div>'+pagination('coverage',cov.page,pages);
 }
 function applySelection(mode){
