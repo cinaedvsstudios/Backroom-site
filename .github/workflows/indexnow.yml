@@ -1,0 +1,175 @@
+name: Notify IndexNow of Backroom public updates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'venue/**'
+      - 'events.json'
+      - 'listings.json'
+      - 'festivals.json'
+      - 'picks.json'
+      - 'dress-codes-data.json'
+      - 'cruising_research.json'
+      - 'cruising-area-map.js'
+      - 'travel-*.js'
+      - '.github/workflows/indexnow.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-main
+  cancel-in-progress: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build changed public URL list
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import pathlib
+          import subprocess
+
+          base = "https://cinaedvsstudios.github.io/Backroom-site/"
+          before = os.environ.get("BEFORE_SHA", "")
+          current = os.environ.get("CURRENT_SHA", "")
+          event = os.environ.get("EVENT_NAME", "")
+
+          if event == "workflow_dispatch":
+              changed = [".github/workflows/indexnow.yml"]
+          else:
+              zero = "0" * 40
+              try:
+                  if before and before != zero:
+                      output = subprocess.check_output(
+                          ["git", "diff", "--name-only", "--diff-filter=ACDMRT", before, current],
+                          text=True,
+                      )
+                  else:
+                      output = subprocess.check_output(
+                          ["git", "show", "--pretty=", "--name-only", current],
+                          text=True,
+                      )
+                  changed = [line.strip() for line in output.splitlines() if line.strip()]
+              except subprocess.CalledProcessError:
+                  changed = []
+
+          urls = set()
+
+          for path in changed:
+              p = pathlib.PurePosixPath(path)
+
+              if path == "index.html":
+                  urls.add(base)
+              elif p.suffix == ".html" and (len(p.parts) == 1 or p.parts[0] == "venue"):
+                  urls.add(base + path)
+              elif path in {"events.json", "listings.json", "festivals.json"}:
+                  urls.add(base)
+              elif path == "picks.json":
+                  urls.add(base)
+                  urls.add(base + "featured.html")
+              elif path == "dress-codes-data.json":
+                  urls.add(base + "dress-codes.html")
+              elif path in {"cruising_research.json", "cruising-area-map.js"}:
+                  urls.add(base + "cruising-guide.html")
+              elif path.startswith("travel-") and path.endswith(".js"):
+                  urls.add(base + "travel.html")
+              elif path == ".github/workflows/indexnow.yml":
+                  # Initial/maintenance test targets two recently maintained public pages.
+                  urls.add(base)
+                  urls.add(base + "welcome.html")
+
+          out = pathlib.Path(os.environ["RUNNER_TEMP"]) / "indexnow_urls.txt"
+          out.write_text("\n".join(sorted(urls)) + ("\n" if urls else ""), encoding="utf-8")
+
+          print("Changed files:")
+          for path in changed:
+              print(f"  {path}")
+          print("IndexNow URLs:")
+          for url in sorted(urls):
+              print(f"  {url}")
+          PY
+
+      - name: Wait until IndexNow key is publicly reachable
+        env:
+          INDEXNOW_KEY: 9446e951c1a0170f99e93d78b7542066
+          KEY_LOCATION: https://cinaedvsstudios.github.io/Backroom-site/9446e951c1a0170f99e93d78b7542066.txt
+        run: |
+          if [ ! -s "$RUNNER_TEMP/indexnow_urls.txt" ]; then
+            echo "No search-visible URLs changed; nothing to submit."
+            exit 0
+          fi
+
+          key_ready=0
+          for attempt in $(seq 1 18); do
+            status=$(curl -L -sS -o "$RUNNER_TEMP/indexnow_key.txt" -w "%{http_code}" "$KEY_LOCATION" || true)
+            if [ "$status" = "200" ] && grep -Fxq "$INDEXNOW_KEY" "$RUNNER_TEMP/indexnow_key.txt"; then
+              key_ready=1
+              break
+            fi
+            echo "Key not published yet (HTTP $status); checking again."
+            sleep 10
+          done
+
+          if [ "$key_ready" != "1" ]; then
+            echo "IndexNow key file is not publicly reachable at the expected location."
+            exit 1
+          fi
+
+      - name: Notify IndexNow
+        env:
+          INDEXNOW_KEY: 9446e951c1a0170f99e93d78b7542066
+          KEY_LOCATION: https://cinaedvsstudios.github.io/Backroom-site/9446e951c1a0170f99e93d78b7542066.txt
+        run: |
+          if [ ! -s "$RUNNER_TEMP/indexnow_urls.txt" ]; then
+            exit 0
+          fi
+
+          python3 - <<'PY'
+          import json
+          import os
+          import pathlib
+
+          urls_path = pathlib.Path(os.environ["RUNNER_TEMP"]) / "indexnow_urls.txt"
+          urls = [line.strip() for line in urls_path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+          if len(urls) > 10000:
+              raise SystemExit(f"IndexNow supports at most 10,000 URLs per request; got {len(urls)}")
+
+          payload = {
+              "host": "cinaedvsstudios.github.io",
+              "key": os.environ["INDEXNOW_KEY"],
+              "keyLocation": os.environ["KEY_LOCATION"],
+              "urlList": urls,
+          }
+
+          payload_path = pathlib.Path(os.environ["RUNNER_TEMP"]) / "indexnow_payload.json"
+          payload_path.write_text(json.dumps(payload), encoding="utf-8")
+          print(f"Submitting {len(urls)} URL(s) to IndexNow.")
+          PY
+
+          status=$(curl -sS -o "$RUNNER_TEMP/indexnow_response.txt" -w "%{http_code}" \
+            -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data-binary "@$RUNNER_TEMP/indexnow_payload.json")
+
+          echo "IndexNow HTTP status: $status"
+          cat "$RUNNER_TEMP/indexnow_response.txt" || true
+
+          if [ "$status" != "200" ] && [ "$status" != "202" ]; then
+            exit 1
+          fi
