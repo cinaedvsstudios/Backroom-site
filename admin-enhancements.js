@@ -1,5 +1,5 @@
 /* Backroom Admin v0.19 enhancements loader and live coverage statistics. */
-document.write('<script src="admin-performance.js?v=0.20.1"><\/script>');
+document.write('<script src="admin-performance.js?v=0.20.2"><\/script>');
 document.write('<script src="admin-enhancements-core.js?v=0.20.1"><\/script>');
 document.write('<script src="admin-location-json.js?v=0.18"><\/script>');
 document.write('<script src="admin-reset.js?v=0.17"><\/script>');

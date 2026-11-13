@@ -3,7 +3,7 @@
 'use strict';
 const DB_NAME='backroom_admin_reporting_v1', DB_VERSION=1;
 let database=null;
-const state={data:{venues:[],events:[]},scope:{events:true,venues:false,cruising:false},conditions:[{op:'OR',key:'status:Live'}],results:null,lastQueryId:null,groupCount:1,logs:[],opened:false,countrySort:'total',countryAsc:false};
+const state={data:{venues:[],events:[]},scope:{events:true,venues:false,cruising:false},conditions:[{op:'OR',key:'status:Live'}],results:null,lastQueryId:null,groupCount:1,logs:[],opened:false,capturing:false,countrySort:'total',countryAsc:false};
 const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const fmt=n=>Number(n||0).toLocaleString('en-GB');
 const isCruising=r=>String(r?.Category||'').trim().toLowerCase()==='cruising area';
@@ -78,6 +78,7 @@ function checkList(){
         ['status:Closed','Status is Closed'],['status:Review','Status is Review'],['status:!Live','Status is not Live']
     ];
     const e=[
+        ['event-month','Event date is'],
         ['empty:Event_Start_Time','Missing start time'],['empty:Event_End_Time','Missing end time'],['empty:Event_Date','Missing event date'],
         ['empty:Event_URL','Missing event URL'],['empty:Ticket_URL','Missing ticket URL'],['empty:Source_URLs','Missing source URLs'],
         ['empty:Price_Info','Missing price information'],['empty:Dresscode_Info','Missing dress code'],
@@ -112,8 +113,45 @@ function checkList(){
     const cities=[...new Set(records.flatMap(r=>String(r.City||'').split(',').map(s=>s.trim()).filter(Boolean)))].sort();
     return [...applicable,...common,...countries.map(x=>['country:'+x,'Country is '+x]),...cities.map(x=>['city:'+x,'City is '+x])].map(([key,label])=>({key,label}));
 }
-function conditionLabel(key){return checkList().find(c=>c.key===key)?.label||key;}
-function predicate(row,key){
+function monthValue(value) {
+    const match=String(value||'').match(/^(\d{4})-(0[1-9]|1[0-2])$/);
+    if(!match)return null;
+    return {year:Number(match[1]),month:Number(match[2])};
+}
+function defaultMonth(){
+    const d=new Date();
+    return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');
+}
+function monthTitle(value){
+    const selected=monthValue(value);
+    if(!selected)return 'Select a month';
+    return new Date(selected.year,selected.month-1,1).toLocaleDateString('en-GB',{month:'long',year:'numeric'});
+}
+function conditionLabel(key,value){
+    if(key==='event-month')return 'Event date is '+monthTitle(value);
+    return checkList().find(c=>c.key===key)?.label||key;
+}
+function occursInMonth(row,value){
+    const month=monthValue(value);
+    if(!month)return false;
+    const startDate=dateOnly(row.Event_Date);
+    if(!startDate)return false;
+    const toUtc=d=>Date.UTC(d.getFullYear(),d.getMonth(),d.getDate());
+    const start=toUtc(startDate);
+    const monthStart=Date.UTC(month.year,month.month-1,1);
+    const monthEnd=Date.UTC(month.year,month.month,1);
+    if(String(row.Recurrence_Type||'').trim().toLowerCase()!=='weekly'){
+        return start>=monthStart&&start<monthEnd;
+    }
+    const finalDate=dateOnly(row.Recurrence_Until);
+    const last=finalDate?toUtc(finalDate):Infinity;
+    if(start>=monthEnd||last<monthStart||last<start)return false;
+    const step=7*86400000;
+    const first=start>=monthStart?start:start+Math.ceil((monthStart-start)/step)*step;
+    return first<monthEnd&&first<=last;
+}
+function predicate(row,key,value){
+    if(key==='event-month')return occursInMonth(row,value);
     if(key.startsWith('empty:'))return blank(row[key.slice(6)]);
     if(key.startsWith('short:')){const s=key.split(':');return String(row[s[1]]||'').trim().length<Number(s[2]);}
     if(key.startsWith('rating:')){const v=row[key.slice(7)];return blank(v)||Number(v)<=0||!Number.isFinite(Number(v));}
@@ -132,16 +170,16 @@ function predicate(row,key){
 }
 function generatedQuery(conditions=state.conditions){
     if(!conditions.length)return'';
-    let q='('+conditionLabel(conditions[0].key)+')';
+    let q='('+conditionLabel(conditions[0].key,conditions[0].value)+')';
     conditions.slice(1).forEach(c=>{
-        q=c.op==='EXCLUDE'?'('+q+' AND NOT ('+conditionLabel(c.key)+'))':'('+q+' '+c.op+' ('+conditionLabel(c.key)+'))';
+        q=c.op==='EXCLUDE'?'('+q+' AND NOT ('+conditionLabel(c.key,c.value)+'))':'('+q+' '+c.op+' ('+conditionLabel(c.key,c.value)+'))';
     });
     return q;
 }
 function match(row,conditions){
     if(!conditions.length)return false;
-    let value=predicate(row,conditions[0].key);
-    for(const c of conditions.slice(1)){const next=predicate(row,c.key);if(c.op==='AND')value=value&&next;else if(c.op==='EXCLUDE')value=value&&!next;else value=value||next;}
+    let value=predicate(row,conditions[0].key,conditions[0].value);
+    for(const c of conditions.slice(1)){const next=predicate(row,c.key,c.value);if(c.op==='AND')value=value&&next;else if(c.op==='EXCLUDE')value=value&&!next;else value=value||next;}
     return value;
 }
 function renderScope(){
@@ -152,13 +190,15 @@ function resetInvalidConditions(){
     const list=checkList();
     state.conditions=state.conditions.filter(c=>list.some(o=>o.key===c.key));
     if(!state.conditions.length&&list.length)state.conditions=[{op:'OR',key:list[0].key}];
+    state.conditions.forEach(c=>{if(c.key==='event-month'&&!monthValue(c.value))c.value=defaultMonth();});
     state.results=null;
 }
 function renderBuilder(){
     renderScope();const list=checkList(),wrap=document.getElementById('br-condition-rows');
     wrap.innerHTML=state.conditions.map((c,i)=>'<div class="br-condition-row" data-row="'+i+'">'+
         '<select data-operator="'+i+'" aria-label="Operator '+(i+1)+'">'+['OR','AND','EXCLUDE'].map(op=>'<option '+(c.op===op?'selected ':'')+'value="'+op+'">'+op+'</option>').join('')+'</select>'+
-        '<select data-condition="'+i+'" aria-label="Condition '+(i+1)+'">'+list.map(x=>'<option '+(x.key===c.key?'selected ':'')+'value="'+esc(x.key)+'">'+esc(x.label)+'</option>').join('')+'</select>'+
+        '<div class="br-condition-controls"><select data-condition="'+i+'" aria-label="Condition '+(i+1)+'">'+list.map(x=>'<option '+(x.key===c.key?'selected ':'')+'value="'+esc(x.key)+'">'+esc(x.label)+'</option>').join('')+'</select>'+
+        (c.key==='event-month'?'<input type="month" class="br-month-choice" data-condition-value="'+i+'" aria-label="Event month and year" value="'+esc(monthValue(c.value)?c.value:defaultMonth())+'">':'')+'</div>'+
         (state.conditions.length>1?'<button class="btn secondary-btn" type="button" data-remove-condition="'+i+'" title="Remove condition">×</button>':'')+'</div>').join('');
     const target=document.getElementById('br-query-preview');
     target.textContent=generatedQuery()||'Select a dataset and condition to begin.';
@@ -211,7 +251,7 @@ function renderMonths(){
 }
 function overview(){
     const holder=document.getElementById('br-completeness-overview'),rows=scopedRows();
-    const list=checkList().filter(o=>!o.key.startsWith('status:')&&!o.key.startsWith('country:')&&!o.key.startsWith('city:'));
+    const list=checkList().filter(o=>o.key!=='event-month'&&!o.key.startsWith('status:')&&!o.key.startsWith('country:')&&!o.key.startsWith('city:'));
     if(!rows.length){holder.innerHTML='<p class="br-muted">Select a dataset to view completeness counts.</p>';return;}
     const sorted=list.map(x=>({...x,count:rows.filter(r=>predicate(r,x.key)).length})).sort((a,b)=>b.count-a.count);
     holder.innerHTML='<table class="br-table"><thead><tr><th>Check (click to add)</th><th>Matching</th><th>Percent</th></tr></thead><tbody>'+
@@ -219,7 +259,7 @@ function overview(){
 }
 async function execute(){
     const rows=scopedRows(),conditions=state.conditions.map(c=>({...c}));const matched=rows.filter(r=>match(r,conditions));
-    const counts=conditions.map(c=>({condition:conditionLabel(c.key),matching:rows.filter(r=>predicate(r,c.key)).length}));
+    const counts=conditions.map(c=>({condition:conditionLabel(c.key,c.value),matching:rows.filter(r=>predicate(r,c.key,c.value)).length}));
     const query=generatedQuery(conditions);
     state.results={rows:matched,examined:rows.length,query,counts,scope:typeLabel(),date:now()};state.groupCount=1;
     const log={type:'query',date:state.results.date,scope:state.results.scope,query,conditions,examined:rows.length,matched:matched.length,conditionCounts:counts,downloaded:false,groups:0};
@@ -268,35 +308,113 @@ function chartSvg(series){
     const points=series.map((d,i)=>(p+(w-2*p)*i/(series.length-1)).toFixed(1)+','+(h-p-(d.y-min)/(max-min)*(h-2*p)).toFixed(1)).join(' ');
     return '<svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Historical trend" class="br-chart"><line x1="'+p+'" y1="'+(h-p)+'" x2="'+(w-p)+'" y2="'+(h-p)+'" stroke="#8392a8"/><polyline fill="none" stroke="#49d2ff" stroke-width="3" points="'+points+'"/><text x="22" y="17" fill="#e4edf8">'+fmt(max)+'</text><text x="22" y="'+(h-5)+'" fill="#e4edf8">'+fmt(min)+'</text></svg>';
 }
-function growthChart(changes){
-    if(!changes.length)return '<p class="br-muted">The first data-changing operation will establish a growth history. Existing counts appear in Database Overview.</p>';
+async function captureDataPoint(){
+    if(state.capturing)return;
+    state.capturing=true;
+    const button=document.getElementById('br-capture-point');
+    if(button){button.disabled=true;button.textContent='Reading published JSON…';}
+    try{
+        // A manual capture must read the currently published files, not possibly stale Admin drafts.
+        // Query strings and no-store bypass browser caching; both files must load before logging.
+        const stamp=Date.now();
+        const readPublished=async filename=>{
+            const response=await fetch(filename+'?report_capture='+stamp,{cache:'no-store'});
+            if(!response.ok)throw Error(filename+' returned HTTP '+response.status);
+            const rows=await response.json();
+            if(!Array.isArray(rows))throw Error(filename+' does not contain a JSON array.');
+            return rows;
+        };
+        const [venues,events]=await Promise.all([readPublished('listings.json'),readPublished('events.json')]);
+        const counts={
+            venues:venues.filter(row=>!isCruising(row)).length,
+            cruising:venues.filter(isCruising).length,
+            events:events.length
+        };
+        const entry={type:'snapshot',mode:'published',operation:'Capture Data Point',source:'Published JSON (GitHub Pages)',date:now(),after:counts};
+        const id=await writeLog(entry);
+        if(id===null)throw Error('Could not save the data point in Reporting history.');
+        await refreshLogViews();
+        message('Captured published totals: '+fmt(counts.venues)+' venues, '+fmt(counts.cruising)+' cruising areas and '+fmt(counts.events)+' events.');
+    }catch(error){
+        console.error('Backroom Reporting capture failed:',error);
+        message('Capture failed; nothing was recorded. '+(error?.message||String(error)));
+    }finally{
+        state.capturing=false;
+        const refreshed=document.getElementById('br-capture-point');
+        if(refreshed){refreshed.disabled=false;refreshed.textContent='📌 Capture Data Point';}
+    }
+}
+function buildGrowthSeries(history){
     const v=state.data.venues;
-    const initialVenue=changes.find(x=>x.mode==='venues');
-    const initialEvents=changes.find(x=>x.mode==='events');
-    const first={venues:initialVenue?.before.venues??v.filter(r=>!isCruising(r)).length,cruising:initialVenue?.before.cruising??v.filter(isCruising).length,events:initialEvents?.before.events??state.data.events.length};
-    const points=[{...first}];
-    let totals={...first};
-    changes.forEach(x=>{
-        totals={...totals,...x.after};points.push({...totals});
+    // Seed each line with its earliest observed count, not a later pre-merge value.
+    const earliestCount=(field,fallback)=>{
+        for(const entry of history){
+            if(entry.type==='snapshot'&&Number.isFinite(entry.after?.[field]))return entry.after[field];
+            if(entry.type==='change'&&Number.isFinite(entry.before?.[field]))return entry.before[field];
+        }
+        return fallback;
+    };
+    const baseline={
+        venues:earliestCount('venues',v.filter(r=>!isCruising(r)).length),
+        cruising:earliestCount('cruising',v.filter(isCruising).length),
+        events:earliestCount('events',state.data.events.length)
+    };
+    const points=[{...baseline,date:history[0]?.date||now(),type:'baseline'}];
+    let totals={...baseline};
+    history.forEach(entry=>{
+        totals={...totals,...entry.after};
+        points.push({...totals,date:entry.date,type:entry.type,operation:entry.operation,entry});
     });
-    const w=740,h=205,p=30,min=0,max=Math.max(1,...points.flatMap(x=>[x.venues,x.cruising,x.events]));
+    return points;
+}
+function growthChart(points){
+    if(points.length<2)return '<p class="br-muted">Capture a data point to establish a published baseline, or change the data through Admin to begin the history.</p>';
+    const drawn=points.slice(-80);
+    const w=740,h=215,p=30,max=Math.max(1,...drawn.flatMap(x=>[x.venues,x.cruising,x.events]));
     const lines=[['venues','Venues','#49d2ff'],['cruising','Cruising Areas','#ef6957'],['events','Events','#f0c94c']];
-    const path=(key)=>points.map((x,i)=>(p+(w-2*p)*i/Math.max(1,points.length-1)).toFixed(2)+','+(h-p-(x[key]/max)*(h-2*p)).toFixed(2)).join(' ');
+    const xy=(point,index,key)=>({
+        x:p+(w-2*p)*index/Math.max(1,drawn.length-1),
+        y:h-p-(point[key]/max)*(h-2*p)
+    });
+    const path=key=>drawn.map((point,i)=>{const pt=xy(point,i,key);return pt.x.toFixed(2)+','+pt.y.toFixed(2);}).join(' ');
+    const markers=drawn.map((point,i)=>{
+        if(point.type!=='snapshot')return '';
+        return lines.map(([key,label,color])=>{
+            const pt=xy(point,i,key);
+            const tooltip=esc(new Date(point.date).toLocaleString('en-GB')+' — '+label+': '+fmt(point[key])+' (published JSON)');
+            return '<circle cx="'+pt.x.toFixed(2)+'" cy="'+pt.y.toFixed(2)+'" r="5" fill="'+color+'" stroke="#151b29" stroke-width="2"><title>'+tooltip+'</title></circle>';
+        }).join('');
+    }).join('');
+    const labels=drawn.length>1
+        ? '<text x="'+p+'" y="'+(h-3)+'" fill="#aab4c5" font-size="11">'+esc(new Date(drawn[0].date).toLocaleDateString('en-GB'))+'</text>'+
+          '<text x="'+(w-p)+'" y="'+(h-3)+'" fill="#aab4c5" text-anchor="end" font-size="11">'+esc(new Date(drawn[drawn.length-1].date).toLocaleDateString('en-GB'))+'</text>'
+        : '';
     return '<div class="br-growth-legend">'+lines.map(x=>'<span style="color:'+x[2]+'">● '+x[1]+'</span>').join('')+'</div>'+
       '<svg class="br-chart" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Venues, cruising areas and events over time">'+
       '<line x1="'+p+'" y1="'+(h-p)+'" x2="'+(w-p)+'" y2="'+(h-p)+'" stroke="#8392a8"/>'+
       lines.map(x=>'<polyline fill="none" stroke="'+x[2]+'" stroke-width="3" points="'+path(x[0])+'"/>').join('')+
-      '<text x="'+p+'" y="18" fill="#e4edf8">'+fmt(max)+'</text>'+
-      '</svg><p class="br-muted">Each point represents a recorded data change; the lines are separate totals for each listing type.</p>';
+      markers+'<text x="'+p+'" y="18" fill="#e4edf8">'+fmt(max)+'</text>'+labels+'</svg>'+
+      '<p class="br-muted">Lines show recorded totals. Circles mark manually captured <strong>published</strong> JSON totals; Admin merges may reflect unsaved working-draft changes.</p>';
 }
 async function refreshLogViews(){
     try{state.logs=await getAllLogs();}catch(error){console.error(error);state.logs=[];}
     const logs=state.logs.slice().sort((a,b)=>String(b.date).localeCompare(String(a.date)));
-    const changes=state.logs.filter(x=>x.type==='change').sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+    const history=state.logs.filter(x=>x.type==='change'||x.type==='snapshot').sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+    const points=buildGrowthSeries(history);
     const growth=document.getElementById('br-growth');
-    if(growth)growth.innerHTML='<h3>Database Growth History</h3>'+growthChart(changes)+
-      '<table class="br-table"><thead><tr><th>Date</th><th>Operation</th><th>Added</th><th>Modified</th><th>Removed</th></tr></thead><tbody>'+
-      logs.filter(x=>x.type==='change').slice(0,50).map(x=>'<tr><td>'+esc(new Date(x.date).toLocaleString('en-GB'))+'</td><td>'+esc(x.mode+' · '+x.operation)+'</td><td>'+fmt(x.added)+'</td><td>'+fmt(x.modified)+'</td><td>'+fmt(x.removed)+'</td></tr>').join('')+'</tbody></table>';
+    if(growth)growth.innerHTML='<h3>Database Growth History</h3>'+
+      '<div class="br-capture-tools"><button type="button" id="br-capture-point" class="btn primary-btn pill-btn" '+(state.capturing?'disabled':'')+'>📌 Capture Data Point</button>'+
+      '<span class="br-muted">Reads current published listings.json and events.json; saves the three totals and capture date locally. No record IDs or copies are stored.</span></div>'+
+      growthChart(history.length?points:[])+
+      '<div class="br-scroll"><table class="br-table"><thead><tr><th>Date</th><th>Operation</th><th>Venues</th><th>Cruising</th><th>Events</th><th>Added</th><th>Modified</th><th>Removed</th></tr></thead><tbody>'+
+      points.slice(1).reverse().slice(0,50).map(point=>{
+          const entry=point.entry;
+          const snapshot=entry.type==='snapshot';
+          const action=snapshot?'📌 Published · Capture Data Point':(entry.mode+' · '+entry.operation);
+          return '<tr><td>'+esc(new Date(entry.date).toLocaleString('en-GB'))+'</td><td>'+esc(action)+'</td>'+
+            '<td>'+fmt(point.venues)+'</td><td>'+fmt(point.cruising)+'</td><td>'+fmt(point.events)+'</td>'+
+            '<td>'+(snapshot?'—':fmt(entry.added))+'</td><td>'+(snapshot?'—':fmt(entry.modified))+'</td><td>'+(snapshot?'—':fmt(entry.removed))+'</td></tr>';
+      }).join('')+'</tbody></table></div>';
     const queryLogs=logs.filter(x=>x.type==='query');
     const qbox=document.getElementById('br-query-history');
     if(qbox){
@@ -362,7 +480,7 @@ function install(){
     if(!main) { console.error('Backroom Reporting: main admin container missing'); return; }
     const root=document.createElement('section');root.id='br-reporting-view';root.style.display='none';
     root.innerHTML=[
-    '<div class="br-report-head"><h1>📊 Reporting & Statistics</h1><p>Local working-data statistics, research queries and history.</p></div>',
+    '<div class="br-report-head"><h1>📊 Reporting & Statistics</h1><p>Working-draft statistics, research queries and history. Capture Data Point reads the published JSON files independently.</p></div>',
     '<div id="br-backup-reminder" class="br-notice hidden">Reporting history has unsaved changes older than seven days. <button class="btn primary-btn pill-btn" id="br-reminder-save">Save Report</button></div>',
     '<div id="br-stats" class="br-stats"></div>',
     '<details class="br-panel"><summary>🌍 Country Statistics</summary><div class="br-scroll"><table id="br-country-table" class="br-table"></table></div></details>',
@@ -392,7 +510,7 @@ function install(){
     '.br-table td,.br-table th{padding:8px;text-align:left;border-bottom:1px solid #354156}.br-table th{color:#49d2ff;background:#202838;position:sticky;top:0}#br-country-table th{cursor:pointer}',
     '.br-bar{height:9px;background:#49d2ff;border-radius:6px;margin:3px 8px 3px 0;display:inline-block;max-width:55%;min-width:2px}',
     '.br-scopes{display:flex;gap:20px;flex-wrap:wrap;margin:15px 0}.br-scopes label{display:flex;gap:8px;align-items:center;cursor:pointer}',
-    '.br-builder{margin-top:16px}.br-headrow,.br-condition-row{display:grid;grid-template-columns:125px minmax(180px,1fr) 36px;gap:10px;margin:7px 0}',
+    '.br-builder{margin-top:16px}.br-headrow,.br-condition-row{display:grid;grid-template-columns:125px minmax(180px,1fr) 36px;gap:10px;margin:7px 0}.br-condition-controls{display:flex;gap:10px;align-items:center;min-width:0}.br-condition-controls select{flex:1;min-width:140px}.br-condition-controls input[type=month]{flex:0 0 170px;max-width:38%;background:#202838;color:#fff;border:1px solid #506079;border-radius:7px;padding:9px;min-width:130px}',
     '.br-condition-row select,.br-group-box input,.br-panel select{background:#202838;color:#fff;border:1px solid #506079;border-radius:7px;padding:9px;min-width:0}',
     '.br-headrow{font-size:.85rem;color:#aab4c5}.br-query-label{display:block;margin-top:17px;font-size:.8rem;text-transform:uppercase;color:#aab4c5}',
     '.br-query{padding:13px;white-space:normal;overflow-wrap:anywhere;background:#0b0f19;border:1px solid #384155;border-radius:7px;color:#eef5ff}',
@@ -401,7 +519,7 @@ function install(){
     '#br-group-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:5px;margin:10px 0;max-height:250px;overflow:auto}',
     '#br-group-preview div{padding:7px;background:#202838;border-radius:4px}.br-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}',
     '.br-actions .btn,.br-group-box .btn{width:auto}.br-link{border:0;background:none;color:#49d2ff;text-decoration:underline;cursor:pointer;text-align:left}',
-    '.br-growth-legend{display:flex;gap:15px;flex-wrap:wrap;font-size:.9rem;margin:10px 0}',
+    '.br-growth-legend{display:flex;gap:15px;flex-wrap:wrap;font-size:.9rem;margin:10px 0}.br-capture-tools{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:10px 0 16px}.br-capture-tools .btn{width:auto;flex-shrink:0}.br-capture-tools .br-muted{max-width:780px}',
     '.br-chart{width:100%;height:auto;max-height:205px}.br-notice{border:1px solid #f0c94c;padding:12px;margin:10px 0;border-radius:8px;color:#f0c94c}',
     '@media(max-width:720px){.br-stats{grid-template-columns:1fr}.br-headrow,.br-condition-row{grid-template-columns:85px minmax(120px,1fr) 30px}}'
     ].join('\n');document.head.appendChild(style);
@@ -414,7 +532,17 @@ function install(){
             resetInvalidConditions();renderBuilder();overview();
         }
         if(target.dataset.operator!==undefined){state.conditions[Number(target.dataset.operator)].op=target.value;state.results=null;renderBuilder();}
-        if(target.dataset.condition!==undefined){state.conditions[Number(target.dataset.condition)].key=target.value;state.results=null;renderBuilder();}
+        if(target.dataset.condition!==undefined){
+            const row=state.conditions[Number(target.dataset.condition)];
+            row.key=target.value;
+            if(row.key==='event-month'&&!monthValue(row.value))row.value=defaultMonth();
+            else if(row.key!=='event-month')delete row.value;
+            state.results=null;renderBuilder();
+        }
+        if(target.dataset.conditionValue!==undefined){
+            const row=state.conditions[Number(target.dataset.conditionValue)];
+            if(row&&row.key==='event-month'){row.value=target.value;state.results=null;renderBuilder();}
+        }
         if(target.id==='br-group-count'&&state.results){state.groupCount=Math.max(1,Math.min(Number(target.value)||1,state.results.rows.length||1));renderResults();}
         if(target.id==='br-history-query-select')refreshLogViews();
         if(target.id==='br-restore'){restoreHistory(target.files?.[0]);target.value='';}
@@ -447,6 +575,7 @@ function install(){
         if(target.id==='br-download-results'&&state.results){writeFile(JSON.stringify(state.results.rows,null,2),'identified_records.json');markDownloaded(1);}
         if(target.id==='br-download-groups')saveGroups();
         if(target.id==='br-backup'||target.id==='br-reminder-save')backupHistory();
+        if(target.id==='br-capture-point')captureDataPoint();
     });
     backupReminder();
 }
