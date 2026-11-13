@@ -12,7 +12,7 @@ const compact = {
   page:1, size:50, rows:[], scopeKey:'',
   selected:{venues:new Set(),events:new Set()}
 };
-const explorer = {result:null,identity:'',group1:'Country',group2:'',group3:'',filterField:'',filterValue:'',search:'',view:'table',chart:'bar',page:1};
+const explorer = {result:null,identity:'',group1:'Country',group2:'',group3:'',filterField:'',filterValue:'',search:'',view:'table',chart:'bar',page:1,copyFields:null,copyOpen:false};
 let reportLogs=[], growthView='line', queryHistoryView='line';
 
 function scopedDraftRows() {
@@ -283,6 +283,7 @@ function renderExplorer(){
   const holder=document.getElementById('br-p1-explorer');
   if(!holder||!explorer.result)return;
   const all=explorer.result.rows,fields=fieldNames(all),rows=exploredRows(),groups=grouped(rows);
+  if(!explorer.copyFields)explorer.copyFields=new Set([all.some(r=>r.Event_ID)?'Event_ID':'Venue_ID',all.some(r=>r.Event_Name)?'Event_Name':'Name','City','Country','Status','Event_Date'].filter(x=>fields.includes(x)));
   const pages=Math.max(1,Math.ceil(rows.length/100));explorer.page=Math.max(1,Math.min(explorer.page,pages));
   const first=(explorer.page-1)*100;
   holder.innerHTML='<h3>🔎 Results Explorer</h3><p class="br-p1-muted">Explore the executed result without running the query again. Filters never alter the original matches.</p>'+
@@ -305,13 +306,18 @@ function renderExplorer(){
       groups.map(g=>'<tr><td>'+g.names.map(esc).join(' / ')+'</td><td>'+fmt(g.count)+'</td><td>'+((g.count/Math.max(1,rows.length))*100).toFixed(1)+'%</td></tr>').join('')+'</tbody></table></div>')+
     '<h4>Records in this view</h4><div class="br-p1-overflow"><table class="br-table"><thead><tr><th>ID</th><th>Name</th><th>Location</th><th>Status</th><th>Date</th></tr></thead><tbody>'+
     rows.slice(first,first+100).map(r=>'<tr><td>'+esc(r.Event_ID||r.Venue_ID||'')+'</td><td>'+esc(r.Event_Name||r.Name||'')+'</td><td>'+esc([r.City,r.Country].filter(Boolean).join(', '))+'</td><td>'+esc(r.Status||'')+'</td><td>'+esc(r.Event_Date||r.Last_Updated||'')+'</td></tr>').join('')+
-    '</tbody></table></div><div class="br-p1-pagination"><button class="btn secondary-btn pill-btn" data-explorer-page="-1" '+(explorer.page===1?'disabled':'')+'>Previous</button><span>Page '+explorer.page+' / '+pages+' (100 records per page)</span><button class="btn secondary-btn pill-btn" data-explorer-page="1" '+(explorer.page===pages?'disabled':'')+'>Next</button></div>';
+    '</tbody></table></div><div class="br-p1-pagination"><button class="btn secondary-btn pill-btn" data-explorer-page="-1" '+(explorer.page===1?'disabled':'')+'>Previous</button><span>Page '+explorer.page+' / '+pages+' (100 records per page)</span><button class="btn secondary-btn pill-btn" data-explorer-page="1" '+(explorer.page===pages?'disabled':'')+'>Next</button></div>'+
+    '<details id="br-p1-copy-panel" class="br-p1-collapsible" '+(explorer.copyOpen?'open':'')+'><summary>📋 Selective Copy Results</summary>'+
+    '<p class="br-p1-muted">Choose the columns to copy from the current filtered results. This does not modify or rerun the original query.</p><div class="br-p1-copy-fields">'+
+    fields.map(key=>'<label><input type="checkbox" data-br-copy-field="'+esc(key)+'" '+(explorer.copyFields.has(key)?'checked':'')+'>'+esc(key.replace(/_/g,' '))+'</label>').join('')+
+    '</div><div class="br-p1-explorer-actions"><button type="button" class="btn primary-btn pill-btn" id="br-p1-copy-rows" '+(!rows.length?'disabled':'')+'>Copy selected columns (TSV)</button>'+
+    '<button type="button" class="btn secondary-btn pill-btn" id="br-p1-copy-groups" '+(!groups.length?'disabled':'')+'>Copy grouped totals</button></div></details>';
 }
 function onResultsRendered(result){
   if(!result)return;
   if(explorer.identity!==result.date){
     explorer.identity=result.date;explorer.result=result;explorer.group1=result.rows.some(r=>r.Country!==undefined)?'Country':'Record Type';
-    explorer.group2='';explorer.group3='';explorer.filterField='';explorer.filterValue='';explorer.search='';explorer.page=1;explorer.view='table';explorer.chart='bar';
+    explorer.group2='';explorer.group3='';explorer.filterField='';explorer.filterValue='';explorer.search='';explorer.page=1;explorer.view='table';explorer.chart='bar';explorer.copyFields=null;explorer.copyOpen=false;
   }else explorer.result=result;
   const results=document.getElementById('br-results');if(!results)return;
   const section=document.createElement('section');section.id='br-p1-explorer';section.className='br-panel';
@@ -324,6 +330,28 @@ function applyExplorerControl(target){
   if(key==='group1'&&explorer.group2===explorer.group1)explorer.group2='';
   if(key==='group2'&&explorer.group3===explorer.group2)explorer.group3='';
   renderExplorer();
+}
+async function copyExplorer(kind){
+  const rows=exploredRows(),groups=grouped(rows);
+  let output='';
+  if(kind==='groups'){
+    const names=[explorer.group1,explorer.group2,explorer.group3].filter(Boolean);
+    output=[names.join('\t')+'\tCount',...groups.map(g=>g.names.join('\t')+'\t'+g.count)].join('\n');
+  }else{
+    const fields=[...explorer.copyFields];
+    if(!fields.length){msg('Select at least one column to copy.');return;}
+    const clean=value=>String(value??'').replace(/[\t\r\n]+/g,' ');
+    output=[fields.join('\t'),...rows.map(r=>fields.map(k=>clean(dimension(r,k)==='(Blank)'?'':dimension(r,k))).join('\t'))].join('\n');
+  }
+  if(!output){msg('There is nothing to copy.');return;}
+  try{
+    if(!navigator.clipboard?.writeText)throw Error('Clipboard API unavailable');
+    await navigator.clipboard.writeText(output);msg('Copied '+(kind==='groups'?groups.length+' groups':rows.length+' filtered records')+'.');
+  }catch{
+    const modal=document.getElementById('clipboard-text');
+    if(modal){modal.value=output;document.getElementById('clipboard-float')?.classList.remove('hidden');modal.dispatchEvent(new Event('input'));modal.focus();modal.select();msg('Results placed in Admin Clipboard. Use Copy there.');}
+    else window.prompt('Copy results:',output);
+  }
 }
 function downloadExplorer(kind){
   const rows=exploredRows(),groups=grouped(rows);
@@ -440,9 +468,17 @@ function install(){
     root.addEventListener('change',event=>{
       const target=event.target;
       if(target.dataset.explorer)applyExplorerControl(target);
+      if(target.dataset.brCopyField!==undefined){
+        if(!explorer.copyFields)explorer.copyFields=new Set();
+        if(target.checked)explorer.copyFields.add(target.dataset.brCopyField);
+        else explorer.copyFields.delete(target.dataset.brCopyField);
+      }
       if(target.id==='br-p1-growth-type'){growthView=target.value;chartHistoryEnhancementsReapply();}
       if(target.id==='br-p1-query-type'){queryHistoryView=target.value;chartHistoryEnhancementsReapply();}
     });
+    root.addEventListener('toggle',event=>{
+      if(event.target.id==='br-p1-copy-panel')explorer.copyOpen=event.target.open;
+    },true);
     root.addEventListener('click',event=>{
       const button=event.target.closest('button');if(!button)return;
       if(button.dataset.brRestore!==undefined){
@@ -454,6 +490,8 @@ function install(){
       else if(button.id==='br-p1-export-json')downloadExplorer('json');
       else if(button.id==='br-p1-export-csv')downloadExplorer('csv');
       else if(button.id==='br-p1-export-group-csv')downloadExplorer('groups');
+      else if(button.id==='br-p1-copy-rows')copyExplorer('rows');
+      else if(button.id==='br-p1-copy-groups')copyExplorer('groups');
     });
   }
   // Some earlier releases dynamically insert the selective-copy module after load.
@@ -490,7 +528,7 @@ style.textContent=[
 '.br-p1-pagination{display:flex;justify-content:center;align-items:center;gap:13px;flex-wrap:wrap;margin:12px}.br-p1-pagination button{width:auto}',
 '.br-p1-explorer-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}.br-p1-explorer-controls input,.br-p1-explorer-controls select{width:100%;max-width:none}',
 '.br-p1-explorer-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:12px 0}.br-p1-explorer-actions .btn{width:auto}.br-p1-overflow{max-height:400px;overflow:auto}.br-p1-svg{width:100%;height:auto;max-height:700px;display:block;margin:12px 0}.br-p1-pie{display:grid;grid-template-columns:minmax(170px,310px) 1fr;gap:15px}.br-p1-pie svg{width:100%}.br-p1-pie p{margin:4px 0;font-size:.88rem}.br-p1-history-tools{display:flex;align-items:center;margin:10px 0}.br-p1-legend{color:#969CAE;font-size:.85rem}',
-'.br-p1-collapsible{border:1px solid #313748;padding:8px;border-radius:8px}.br-p1-collapsible summary{color:#2CA8D4;cursor:pointer}',
+'.br-p1-collapsible{border:1px solid #313748;padding:8px;border-radius:8px;margin:16px 0}.br-p1-collapsible summary{color:#2CA8D4;cursor:pointer}.br-p1-copy-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:6px;padding:12px}.br-p1-copy-fields label{font-size:.88rem;display:flex;gap:7px;align-items:center}.br-p1-copy-fields input{accent-color:#2CA8D4}',
 '@media(max-width:650px){.br-p1-compact-table th:last-child,.br-p1-compact-table td:last-child{display:none}.br-p1-pie{grid-template-columns:1fr}.br-p1-filters label{flex:1 1 125px}}'
 ].join('\n');
 document.head.appendChild(style);
