@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "created": "2026-11-13",
-  "scope": "Confirmed URL seeds from P1 and repository worklists. NOT an assertion that the older ~102-link Collector was archived verbatim. Other production/research URLs are loaded from existing JSON files at runtime; import the Collector file to retain its exact paths.",
+  "scope": "Confirmed URL seeds from P1 and repository worklists. NOT an assertion that the older ~102-link Collector was archived verbatim. Other production/research URLs are loaded from existing JSON files at runtime; import the Collector file to retain its exact paths. Additional exact URLs recovered from the user's original P1 instruction archive and Oct 2026 zone plan in the Library; historical original instructions are retained verbatim in the Instruction Library. The separate 102-URL collector export is not automatically accessible and can be imported.",
   "sources": [
     {
       "id": "SEED-001",
@@ -330,6 +330,1110 @@
       ],
       "provenance": "User-provided Squirt research link",
       "verification": "Not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-001",
+      "name": "queergoingout.de",
+      "url": "https://www.queergoingout.de/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-002",
+      "name": "pinksider.com",
+      "url": "https://pinksider.com/en/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-003",
+      "name": "de.ra.co",
+      "url": "https://de.ra.co/",
+      "kind": "events-directory",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-004",
+      "name": "iglta.org",
+      "url": "https://www.iglta.org/events/pride-calendar/",
+      "kind": "events-directory",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-005",
+      "name": "iglta.org",
+      "url": "https://www.iglta.org/events/festivals-annual-events/",
+      "kind": "events-directory",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-006",
+      "name": "grind-frankfurt.de",
+      "url": "https://www.grind-frankfurt.de/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-007",
+      "name": "instagram.com",
+      "url": "https://www.instagram.com/gaypartysfrankfurt/",
+      "kind": "social",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-008",
+      "name": "facebook.com",
+      "url": "https://www.facebook.com/PUREgayclubbing/",
+      "kind": "social",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-009",
+      "name": "misterbandb.com",
+      "url": "https://www.misterbandb.com/gay-guide/poland",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-010",
+      "name": "thefabryk.com",
+      "url": "https://thefabryk.com/tags/gay-travel-guide",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-011",
+      "name": "tripadvisor.com",
+      "url": "https://www.tripadvisor.com/Attractions-g274723-Activities-c20-t103-Poland.html",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-012",
+      "name": "gaypartyhamburg.de",
+      "url": "https://gaypartyhamburg.de/",
+      "kind": "events-directory",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-013",
+      "name": "siegessaeule.de",
+      "url": "http://www.siegessaeule.de",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-014",
+      "name": "hinnerk.de",
+      "url": "http://www.hinnerk.de",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-015",
+      "name": "queer.de",
+      "url": "http://www.queer.de",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-016",
+      "name": "overline.tv",
+      "url": "http://overline.tv/events",
+      "kind": "events-directory",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-017",
+      "name": "leo-magazin.de",
+      "url": "http://www.leo-magazin.de",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-018",
+      "name": "transit-magazin.de",
+      "url": "http://www.transit-magazin.de",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-019",
+      "name": "jock.fr",
+      "url": "http://www.jock.fr",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-020",
+      "name": "heteroclite.org",
+      "url": "http://www.heteroclite.org",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-021",
+      "name": "queer.be",
+      "url": "http://queer.be",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-022",
+      "name": "antwerppride.com",
+      "url": "http://antwerppride.com",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-023",
+      "name": "queeramsterdam.nl",
+      "url": "http://queeramsterdam.nl",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-024",
+      "name": "qxmagazine.com",
+      "url": "http://www.qxmagazine.com",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-025",
+      "name": "canal-st.co.uk",
+      "url": "http://www.canal-st.co.uk",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-026",
+      "name": "brightonscene.co.uk",
+      "url": "http://www.brightonscene.co.uk",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-027",
+      "name": "gcn.ie",
+      "url": "http://gcn.ie",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-028",
+      "name": "shangay.com",
+      "url": "http://shangay.com",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-029",
+      "name": "guiagaybarcelona.com",
+      "url": "http://www.guiagaybarcelona.com",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-030",
+      "name": "dezanove.pt",
+      "url": "http://dezanove.pt",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-031",
+      "name": "patroc.com",
+      "url": "http://www.patroc.com",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-032",
+      "name": "rainbow.at",
+      "url": "http://www.rainbow.at",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-033",
+      "name": "mannschaft.com",
+      "url": "http://mannschaft.com",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-034",
+      "name": "qgay.it",
+      "url": "http://www.qgay.it",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-035",
+      "name": "humenonline.hu",
+      "url": "http://humenonline.hu",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-036",
+      "name": "praguepride.cz",
+      "url": "http://www.praguepride.cz",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-037",
+      "name": "replika-online.pl",
+      "url": "http://replika-online.pl",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-038",
+      "name": "outandabout.dk",
+      "url": "http://outandabout.dk",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-039",
+      "name": "qx.se",
+      "url": "http://www.qx.se",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-040",
+      "name": "qx.fi",
+      "url": "http://www.qx.fi",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-041",
+      "name": "pride.lv",
+      "url": "http://www.pride.lv",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-042",
+      "name": "gayout.com",
+      "url": "https://www.gayout.com/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-043",
+      "name": "hinnerk.de",
+      "url": "https://www.hinnerk.de/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-044",
+      "name": "queer.de",
+      "url": "https://www.queer.de/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-045",
+      "name": "overline.tv",
+      "url": "https://overline.tv/events",
+      "kind": "events-directory",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-046",
+      "name": "leo-magazin.de",
+      "url": "https://www.leo-magazin.de/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-047",
+      "name": "transit-magazin.de",
+      "url": "https://www.transit-magazin.de/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-048",
+      "name": "jock.fr",
+      "url": "https://www.jock.fr/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-049",
+      "name": "heteroclite.org",
+      "url": "https://www.heteroclite.org/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-050",
+      "name": "queer.be",
+      "url": "https://queer.be/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-051",
+      "name": "antwerppride.com",
+      "url": "https://antwerppride.com/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-052",
+      "name": "queeramsterdam.nl",
+      "url": "https://queeramsterdam.nl/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-053",
+      "name": "mannschaft.com",
+      "url": "https://mannschaft.com/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-054",
+      "name": "qxmagazine.com",
+      "url": "https://www.qxmagazine.com/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-055",
+      "name": "canal-st.co.uk",
+      "url": "https://www.canal-st.co.uk/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-056",
+      "name": "brightonscene.co.uk",
+      "url": "https://www.brightonscene.co.uk/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-057",
+      "name": "gcn.ie",
+      "url": "https://gcn.ie/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-058",
+      "name": "shangay.com",
+      "url": "https://shangay.com/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-059",
+      "name": "guiagaybarcelona.com",
+      "url": "https://www.guiagaybarcelona.com/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-060",
+      "name": "dezanove.pt",
+      "url": "https://dezanove.pt/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-061",
+      "name": "rainbow.at",
+      "url": "https://www.rainbow.at/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-062",
+      "name": "qgay.it",
+      "url": "https://www.qgay.it/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-063",
+      "name": "humenonline.hu",
+      "url": "https://humenonline.hu/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-064",
+      "name": "praguepride.cz",
+      "url": "https://www.praguepride.cz/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-065",
+      "name": "replika-online.pl",
+      "url": "https://replika-online.pl/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-066",
+      "name": "outandabout.dk",
+      "url": "https://outandabout.dk/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-067",
+      "name": "qx.se",
+      "url": "https://www.qx.se/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-068",
+      "name": "qx.fi",
+      "url": "https://www.qx.fi/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
+      "enabled": true
+    },
+    {
+      "id": "RECOVERED-069",
+      "name": "pride.lv",
+      "url": "https://www.pride.lv/",
+      "kind": "city-guide",
+      "workflows": [
+        "venues",
+        "events"
+      ],
+      "regions": [
+        "Europe"
+      ],
+      "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md",
+      "verification": "Archived reference, not live-checked",
       "enabled": true
     }
   ]
