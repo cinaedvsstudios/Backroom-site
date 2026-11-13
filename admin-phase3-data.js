@@ -103,11 +103,16 @@ function build(config,venues,events,sources,instructions){
  const tasks=existing.map(record=>{const loc=location(record,host);return{record,id:clean(record.Event_ID||record.Venue_ID),
   country:loc.country,city:loc.city,zone:config.zone==='auto'?zone(loc.country,record.Event_ID?'events':cruise(record)?'cruising':'venues'):Number(config.zone)}});
  const found=new Set(tasks.map(x=>norm(x.country+'|'+x.city)));
+ const discovery=['venue_discovery','event_discovery','combined','cruising_updates'].includes(flow);
+ const coverage=new Set((config.allowedCountries||[]).map(norm));
  for(const loc of config.cities||[]){
   const [country,...rest]=loc.split('|'),city=rest.join('|');
-  if((!config.allowedCountries?.length||config.allowedCountries.map(norm).includes(norm(country)))&&!found.has(norm(loc)))tasks.push({country,city,id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
+  if((!coverage.size||coverage.has(norm(country)))&&(discovery||!found.has(norm(loc))))tasks.push({country,city,id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
  }
- if(!tasks.length)for(const country of config.countries||[])if(!config.allowedCountries?.length||config.allowedCountries.map(norm).includes(norm(country)))tasks.push({country,city:'(country-wide)',id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
+ if(!(config.cities||[]).length&&(discovery||!tasks.length)){
+  for(const country of config.countries||[])if(!coverage.size||coverage.has(norm(country)))
+   tasks.push({country,city:'(country-wide)',id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
+ }
  const size=Math.max(1,Math.min(300,Number(config.batchSize)||25)),limit=Math.max(1,Math.min(300,Number(config.sourceLimit)||60));
  const rules=(instructions||[]).filter(x=>x.id==='COMMON_RULES'||x.id==='WORLDWIDE_ZONES').map(x=>x.body).join('\n\n');
  const instruction=(instructions||[]).find(x=>x.id===flow.toUpperCase())?.body||'';
