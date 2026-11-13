@@ -250,6 +250,8 @@ function preview(){
 async function generate(){
  const rows=preview();
  if(S.config.from&&S.config.to&&S.config.from>S.config.to){notify('From date must be on or before Until date.');return;}
+ if(S.config.zone==='8'&&S.config.workflow!=='cruising_updates'){notify('Zone 8 is reserved for public-space cruising areas. Use Auto or another zone for venue/event research.');return;}
+ if(S.config.workflow==='cruising_updates'&&S.config.zone!=='auto'&&S.config.zone!=='8'){notify('Cruising areas belong in Zone 8. Choose Auto or Zone 8.');return;}
  if(!rows.length&&!S.config.countries.length&&!S.config.cities.length){notify('Select at least one country, city or record ID for this brief.');return;}
  if(!S.loadedResearch)await researchSources();
  const built=D.build(S.config,P.state.venues,P.state.events,S.lib.all(),S.rules);
