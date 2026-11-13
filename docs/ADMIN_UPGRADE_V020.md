@@ -45,3 +45,28 @@ In desktop Chrome, verify:
 ## Scope boundaries
 
 No automatic URL checking, server-side account, duplicate undo/snapshot system, or research-record IDs stored in Reporting. Existing legacy date strings can be read; new and edited `Last_Updated` values use ISO 8601 timestamps.
+
+
+## v0.20.2 — event month queries and published count captures
+
+**Advanced Query Builder — Event date is**
+
+- With **Events** selected, choose **Event date is** from a condition dropdown. An adjacent month/year selector appears (e.g. January 2027).
+- Combine the condition with **Country is Germany** and **Status is Live** using **AND** operators, then press **Execute Query**. Conditions do not run automatically while you change them.
+- Fixed-date events match their \`Event_Date\` month. Weekly recurring events also match if a seven-day occurrence based on \`Event_Date\` falls within the selected month before any \`Recurrence_Until\` date. This is consistent with the existing monthly recurrence projection.
+- The generated query, individual count, execution log, and downloaded JSON retain the selected month/year. **Event date is** is a query filter rather than a missing-data check, so it does not appear in the Completeness Overview.
+
+**Database Growth History — Capture Data Point**
+
+- **Capture Data Point** reads fresh copies of the **published** \`listings.json\` and \`events.json\` files on GitHub Pages (not potentially stale working drafts or cached browser data).
+- It stores one timestamped, summary-only entry containing counts for non-cruising venues, cruising areas, and events; no record IDs, names, or database copies are kept.
+- The history graph marks published captures with circles and the history table displays all three captured totals. They can be compared with regular Admin merge/change history; remember that Admin merges may represent unsaved local drafts rather than published data.
+- The capture button refuses to record an entry if either published JSON fetch fails, and history entries are included automatically in **Save Report** / **Restore Report** backups.
+- A direct GitHub edit appears in a capture **after GitHub Pages has published the changed JSON**. If deployment is still in progress, use Capture Data Point again later.
+
+**Acceptance checks**
+
+1. Events → Status is Live **AND** Country is Germany **AND** Event date is January 2027, then Execute. Confirm the month appears in Generated Query and the results contain only the matching events.
+2. Change the month to February. Confirm previous results are cleared and no new query is logged before Execute.
+3. Record a Capture Data Point. Confirm the table includes the date, the three published totals, and a coloured marker on the graph.
+4. Save Report, reopen Admin and restore the backup to confirm the captured entry persists. No records in \`listings.json\` or \`events.json\` should be modified by a capture.
