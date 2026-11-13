@@ -1,7 +1,7 @@
 /* Backroom Phase 3 — in-admin Scrape Builder, Source Library & Instructions. */
 (()=>{'use strict';
-const P=window.BRP2,D=window.BackroomPhase3Data;
-if(!P||!D)throw Error('Phase 3 requires Phase 2 and Phase 3 data modules.');
+const P=window.BRP2,D=window.BackroomPhase3Data,W=window.BackroomPhase3Presets;
+if(!P||!D||!W)throw Error('Phase 3 requires Phase 2, Phase 3 data and coverage presets.');
 if(window.BackroomAdminPhase3)return;
 const {esc,fmt,get,notify,downloadJSON,saveLocal,readLocal}=P;
 const KEY='br_admin_phase3_v1',SOURCE_KEY='br_admin_phase3_custom_sources_v1',EDIT_KEY='br_admin_phase3_source_edits_v1',RULE_KEY='br_admin_phase3_instruction_edits_v1';
@@ -10,13 +10,15 @@ const after6=()=>{const d=new Date(today()+'T12:00:00Z');d.setUTCMonth(d.getUTCM
 const workflows=[['event_discovery','📅 Event discovery'],['event_updates','📅 Event updates'],['venue_discovery','📍 Venue discovery'],['venue_updates','📍 Venue updates'],['cruising_updates','🗺️ Cruising area updates'],['combined','🔄 Combined venue + event research']];
 const zones=[['auto','Auto by country/workflow'],['0','0 · Germany'],['1','1 · France / Benelux / Switzerland'],['2','2 · UK & Ireland'],['3','3 · Iberia & Islands'],['4','4 · Italy / Austria / Central / Mediterranean'],['5','5 · Nordics / Baltics / Poland'],['6','6 · Other European / Touring'],['8','8 · Public-space cruising only']];
 const configDefault={workflow:'venue_updates',countries:[],cities:[],zone:'auto',from:today(),to:after6(),status:'',text:'',ids:[],batchSize:25,sourceLimit:60,sourceKinds:[],sourceKeys:[]};
-const S={active:false,tab:'builder',loading:false,ready:false,loadedResearch:false,lib:D.library(),seeds:null,rules:[],baseRules:[],
+const S={active:false,tab:'wizard',wizardPreset:'',loading:false,ready:false,loadedResearch:false,lib:D.library(),seeds:null,rules:[],baseRules:[],
  selected:new Set(),custom:readLocal(SOURCE_KEY,[]),edits:readLocal(EDIT_KEY,{}),ruleEdits:readLocal(RULE_KEY,{}),config:{...configDefault,...readLocal(KEY,{})},
  citySearch:'',sourceSearch:'',sourceKind:'',sourceCountry:'',sourceOrigin:'',sourcePage:1,sourceEditing:'',sourceStatus:[],
  fileReports:[],packet:null,markdown:'',countryChoice:'',selectedCountryChoice:'',error:'',countrySearch:'',sourceChosen:[]};
 if(!Array.isArray(S.config.countries))S.config.countries=[];
 if(!Array.isArray(S.config.cities))S.config.cities=[];
 if(!Array.isArray(S.config.ids))S.config.ids=[];
+if(!Array.isArray(S.config.sourceKinds))S.config.sourceKinds=[];
+if(!Array.isArray(S.config.sourceKeys))S.config.sourceKeys=[];
 function remember(){saveLocal(KEY,S.config)}
 const opt=(v,selected,label)=>'<option value="'+esc(v)+'" '+(String(v)===String(selected)?'selected':'')+'>'+esc(label??v)+'</option>';
 const group=(id,title,body)=>'<section class="br3-card" id="'+id+'"><h2>'+title+'</h2>'+body+'</section>';
@@ -54,6 +56,11 @@ async function init(){
   const [seeds,rulePack]=await Promise.all([fetchData('admin-phase3-sources.json'),fetchData('admin-phase3-instructions.json')]);
   S.seeds=seeds;S.baseRules=rulePack.instructions||[];
   S.rules=S.baseRules.map(x=>({...x,body:S.ruleEdits[x.id]??x.body}));
+  S.config.countries=D.uniq(S.config.countries.map(name=>W.standardCountry(name,P.state.registry)).filter(Boolean));
+  S.config.cities=D.uniq(S.config.cities.map(value=>{
+   const [country,...rest]=String(value).split('|');const standard=W.standardCountry(country,P.state.registry);
+   return standard&&rest.length?standard+'|'+rest.join('|'):'';
+  }).filter(Boolean));
   rebuildSources();S.ready=true;S.error='';
  }catch(e){S.error=e.message;console.error('Backroom Phase 3 load failed',e);setMessage(e.message)}
  finally{S.loading=false;}
@@ -79,12 +86,11 @@ async function researchSources(){
  return researchPromise;
 }
 function countries(){
- const registry=P.state.registry||{countries:[],cities:[]};
- return(registry.countries||[]).map(x=>x.name).sort((a,b)=>a.localeCompare(b));
+ return W.availableCountries(P.state.registry).map(x=>x.name);
 }
 function cityRows(){
  const reg=P.state.registry||{countries:[],cities:[]};
- const names=new Map((reg.countries||[]).map(x=>[x.code,x.name]));
+ const names=new Map(W.availableCountries(reg).map(x=>[x.code,x.name]));
  const pool=new Map();
  for(const item of reg.cities||[]){
   const country=names.get(item.country_code);if(!country)continue;
@@ -92,8 +98,12 @@ function cityRows(){
  }
  const venues=P.state.venues||[],events=P.state.events||[],index=new Map(venues.map(x=>[x.Venue_ID,x]));
  for(const row of [...venues,...events]){
-  const {country,city}=D.location(row,index);if(!country||!city)continue;
+  const {country,city}=D.location(row,index);if(!country||!city||!W.permittedCountry(country,reg))continue;
   const id=country+'|'+city;if(!pool.has(D.norm(id)))pool.set(D.norm(id),{country,city,id,kind:'Existing Backroom record'});
+ }
+ for(const chosen of S.config.cities||[]){
+  const [country,...parts]=chosen.split('|'),city=parts.join('|');
+  if(W.permittedCountry(country,reg)&&city&&!pool.has(D.norm(chosen)))pool.set(D.norm(chosen),{country,city,id:chosen,kind:'Preset city'});
  }
  return[...pool.values()].sort((a,b)=>a.country.localeCompare(b.country)||a.city.localeCompare(b.city));
 }
@@ -103,7 +113,7 @@ function filteredCities(){
 }
 function cityHTML(){
  const full=filteredCities(),limit=110,chosen=new Set(S.config.cities);
- return '<div class="br3-city-count">'+fmt(full.length)+' matching destinations · '+fmt(chosen.size)+' selected'+(full.length>limit?' · showing first '+limit:'')+'</div>'+
+ return '<div class="br3-city-count">'+fmt(full.length)+' matching cities · '+fmt(chosen.size)+' selected'+(full.length>limit?' · showing first '+limit:'')+'</div>'+
   '<div class="br3-city-list">'+full.slice(0,limit).map(x=>
    '<label class="br3-choice"><input type="checkbox" data-br3-city="'+esc(x.id)+'" '+(chosen.has(x.id)?'checked':'')+'> '+
    (window.BackroomAdminFlags?.html(x.country)||'🌍')+' '+esc(x.city)+' <small>'+esc(x.country)+'</small></label>').join('')+'</div>';
@@ -123,8 +133,8 @@ function filtersHTML(){
   '<h3>🌍 Countries and cities</h3>'+
   '<div class="br3-inline"><select id="br3-country-pick" aria-label="Add country">'+opt('','','Select a country')+countries().map(x=>opt(x,'',x)).join('')+'</select>'+
   buttons([['br3-add-country','➕ Add country'],['br3-clear-countries','Clear countries']])+'</div>'+
-  '<div class="br3-chips">'+(c.countries.length?c.countries.map(country=>'<button type="button" class="br3-chip" data-br3-remove-country="'+esc(country)+'">'+(window.BackroomAdminFlags?.html(country)||'🌐')+' '+esc(country)+' <span>×</span></button>').join(''):'<span class="br3-muted">No country filter — all countries</span>')+'</div>'+
-  '<div class="br3-inline"><input id="br3-city-search" type="search" placeholder="Find city, island or destination" value="'+esc(S.citySearch)+'">'+
+  '<div class="br3-chips">'+(c.countries.length?c.countries.map(country=>'<button type="button" class="br3-chip" data-br3-remove-country="'+esc(country)+'">'+(window.BackroomAdminFlags?.html(country)||'🌐')+' '+esc(country)+' <span>×</span></button>').join(''):'<span class="br3-muted">No country selected — all eligible European countries + Israel/Turkey</span>')+'</div>'+
+  '<div class="br3-inline"><input id="br3-city-search" type="search" placeholder="Find a city or island town" value="'+esc(S.citySearch)+'">'+
   buttons([['br3-all-cities','✓ Select all filtered'],['br3-clear-cities','Clear selected cities']])+'</div>'+
   '<div id="br3-city-results">'+cityHTML()+'</div>'+
   '<h3>🎯 Existing IDs / content filters</h3>'+
@@ -236,8 +246,8 @@ function saveConfigInputs(){
  for(const [key,id,min,max] of [['batchSize','br3-batch',1,300],['sourceLimit','br3-source-limit',1,300]]){
   const n=get(id);if(n)S.config[key]=Math.min(max,Math.max(min,Number(n.value)||min));
  }
- S.config.ids=D.uniq(String(get('br3-ids')?.value||'').split(/[\s,;]+/).map(D.clean));
- S.config.sourceKinds=[...get('br3-source-kinds')?.selectedOptions||[]].map(x=>x.value);
+ if(get('br3-ids'))S.config.ids=D.uniq(String(get('br3-ids').value||'').split(/[\s,;]+/).map(D.clean));
+ if(get('br3-source-kinds'))S.config.sourceKinds=[...get('br3-source-kinds').selectedOptions].map(x=>x.value);
  remember();
 }
 function updateCityResults(){const el=get('br3-city-results');if(el)el.innerHTML=cityHTML()}
