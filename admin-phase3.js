@@ -58,19 +58,25 @@ async function init(){
  }catch(e){S.error=e.message;console.error('Backroom Phase 3 load failed',e);setMessage(e.message)}
  finally{S.loading=false;}
 }
+let researchPromise=null;
 async function researchSources(){
- if(S.loadedResearch||S.loading)return;
- S.loading=true;setMessage('Reading cruising research registry and January venue-URL audit…');
- const targets=[['research/CRUISING_SOURCE_REGISTRY.json','Cruising source registry','cruising'],
- ['research/events/2027-01/venue_url_audit.json','January venue URL audit','events']];
- const completed=await Promise.allSettled(targets.map(async([path,label,kind])=>{
-  const payload=await fetchData(path);
-  return D.ingest(S.lib,payload,path,kind);
- }));
- S.fileReports=completed.map((r,i)=>r.status==='fulfilled'?r.value:{origin:targets[i][0],error:String(r.reason?.message||r.reason)});
- S.loadedResearch=true;S.loading=false;
- for(const item of S.lib.all())sourceOverride(item);
- if(S.active){render();setMessage(S.fileReports.some(x=>x.error)?'Some source archives could not load. Import a local copy if needed.':'Research registries loaded. Original sources remain unchanged.');}
+ if(S.loadedResearch)return;
+ if(researchPromise)return researchPromise;
+ researchPromise=(async()=>{
+  S.loading=true;setMessage('Reading cruising research registry and January venue-URL audit…');
+  const targets=[['research/CRUISING_SOURCE_REGISTRY.json','Cruising source registry','cruising'],
+   ['research/events/2027-01/venue_url_audit.json','January venue URL audit','events']];
+  try{
+   const completed=await Promise.allSettled(targets.map(async([path,label,kind])=>{
+    const payload=await fetchData(path);return D.ingest(S.lib,payload,path,kind);
+   }));
+   S.fileReports=completed.map((r,i)=>r.status==='fulfilled'?r.value:{origin:targets[i][0],error:String(r.reason?.message||r.reason)});
+   S.loadedResearch=completed.every(x=>x.status==='fulfilled');
+   for(const item of S.lib.all())sourceOverride(item);
+   if(S.active){render();setMessage(S.fileReports.some(x=>x.error)?'Some archives could not load; available URLs were retained. Retry or import a local copy.':'Research registries loaded. Original source files are unchanged.');}
+  }finally{S.loading=false;researchPromise=null;}
+ })();
+ return researchPromise;
 }
 function countries(){
  const registry=P.state.registry||{countries:[],cities:[]};
