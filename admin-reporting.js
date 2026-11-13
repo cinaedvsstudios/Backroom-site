@@ -280,6 +280,7 @@ function renderResults(){
       Array.from({length:groups},(_,i)=>'<div>'+groupName(i)+' — '+fmt(base+(i<extra?1:0))+' records</div>').join('')+'</div>'+
       '<button type="button" class="btn primary-btn pill-btn" id="br-download-groups" '+(!n?'disabled':'')+'>⬇ Choose Folder & Save '+groups+' JSON '+(groups===1?'File':'Files')+'</button></div>'+
       '<p class="br-muted">Each file contains complete matching records. Records are not duplicated or modified.</p>';
+    window.BackroomAdminPhase1?.onResultsRendered?.(state.results);
 }
 async function markDownloaded(groups){
     if(!state.lastQueryId)return;
@@ -428,6 +429,7 @@ async function refreshLogViews(){
           '<table class="br-table"><thead><tr><th>Executed</th><th>Dataset / Query</th><th>Examined</th><th>Matched</th><th>JSON saved</th></tr></thead><tbody>'+
           queryLogs.slice(0,60).map(x=>'<tr><td>'+esc(new Date(x.date).toLocaleString('en-GB'))+'</td><td>'+esc(x.scope+' — '+x.query)+'</td><td>'+fmt(x.examined)+'</td><td>'+fmt(x.matched)+'</td><td>'+(x.downloaded?'Yes ('+fmt(x.groups)+')':'No')+'</td></tr>').join('')+'</tbody></table>';
     }
+    window.BackroomAdminPhase1?.onHistoryRendered?.(state.logs);
 }
 async function backupHistory(){
     try{
@@ -579,6 +581,38 @@ function install(){
     });
     backupReminder();
 }
-window.BackroomAdminReporting={open,recordOperation,execute,generatedQuery,predicate};
+function restoreSavedQuery(entry){
+    if(!entry || entry.type!=='query' || !Array.isArray(entry.conditions))return false;
+    const scope=String(entry.scope||'');
+    const requested=scope==='Events'?{events:true,venues:false,cruising:false}:
+        scope==='Venues + Cruising Areas'?{events:false,venues:true,cruising:true}:
+        scope==='Cruising Areas'?{events:false,venues:false,cruising:true}:
+        scope==='Venues'?{events:false,venues:true,cruising:false}:null;
+    if(!requested)return false;
+    state.scope=requested;
+    const allowed=new Set(checkList().map(x=>x.key));
+    const conditions=entry.conditions.filter(x=>x&&allowed.has(x.key)).map(x=>({
+        op:['OR','AND','EXCLUDE'].includes(x.op)?x.op:'OR',
+        key:x.key,
+        ...(x.key==='event-month'?{value:monthValue(x.value)?x.value:defaultMonth()}:{})
+    }));
+    if(!conditions.length){message('That saved query no longer has compatible conditions.');return false;}
+    state.conditions=conditions;
+    // Keep the last executed results visible until the newly configured query is executed.
+    renderBuilder();
+    overview();
+    const preview=document.getElementById('br-query-preview');
+    if(preview){
+        const note=document.createElement('p');
+        note.id='br-restore-notice';
+        note.className='br-muted';
+        note.textContent='Saved conditions restored. Previous results remain unchanged until you press Execute Query.';
+        document.getElementById('br-restore-notice')?.remove();
+        preview.after(note);
+        preview.scrollIntoView({behavior:'smooth',block:'center'});
+    }
+    return true;
+}
+window.BackroomAdminReporting={open,recordOperation,execute,generatedQuery,predicate,restoreSavedQuery};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();

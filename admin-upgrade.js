@@ -76,7 +76,7 @@ function addSidebar() {
     ['nav-venues','nav-events'].forEach(id=>document.getElementById(id)?.addEventListener('click',()=>showSection(id.slice(4)),true));
     ['nav-editor','nav-avatars','nav-terminology'].forEach(id=>document.getElementById(id)?.addEventListener('click',()=>showSection('other'),true));
     document.getElementById('btn-view-record')?.replaceChildren(document.createTextNode('👁️ View / Edit Record'));
-    const version=document.getElementById('admin-sidebar-version'); if(version)version.textContent='v0.20.2';
+    const version=document.getElementById('admin-sidebar-version'); if(version)version.textContent='v0.21.0';
 }
 function allDataFilter(rows){
     if(state.section==='cruising')rows=rows.filter(isCruising);
@@ -215,6 +215,6 @@ function getScopeRows(rows) {
 function getScopeTotal() {
     return getScopeRows(Array.isArray(draftData) ? draftData : []).length;
 }
-window.BackroomAdminUpgrade={state,savePreview,readStored,esc,totals,isCruising,openPreview,getScopeRows,getScopeTotal};
+window.BackroomAdminUpgrade={state,savePreview,readStored,esc,totals,isCruising,openPreview,getScopeRows,getScopeTotal,applyFilters:allDataFilter};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
