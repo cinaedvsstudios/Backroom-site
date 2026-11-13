@@ -1,0 +1,216 @@
+/* Backroom Admin v0.23.3 — unmistakable section colours, with dark readable fills. */
+#admin-shell {
+ --br-theme-accent:#72deff;--br-theme-text:#ebfaff;--br-theme-muted:#bad9ec;
+ --br-theme-surface:#173d52;--br-theme-surface-end:#132638;
+ --br-theme-border:#398db5;--br-theme-table:#1a4c67;
+ --br-theme-shadow:rgba(48,166,210,.15);
+}
+#admin-shell[data-br-section="venues"] {
+ --br-theme-accent:#72deff;--br-theme-text:#e9faff;--br-theme-muted:#b8dcec;
+ --br-theme-surface:#194358;--br-theme-surface-end:#102738;
+ --br-theme-border:#398db5;--br-theme-table:#1b4c66;
+ --br-theme-shadow:rgba(48,166,210,.17);
+}
+#admin-shell[data-br-section="events"] {
+ --br-theme-accent:#ffd477;--br-theme-text:#fff4dc;--br-theme-muted:#e9d6ae;
+ --br-theme-surface:#53401e;--br-theme-surface-end:#2a241c;
+ --br-theme-border:#b99143;--br-theme-table:#5a441d;
+ --br-theme-shadow:rgba(241,181,69,.15);
+}
+#admin-shell[data-br-section="cruising"] {
+ --br-theme-accent:#ffa6ac;--br-theme-text:#ffe9e9;--br-theme-muted:#e2bcc0;
+ --br-theme-surface:#55242e;--br-theme-surface-end:#2c1923;
+ --br-theme-border:#b75b68;--br-theme-table:#542631;
+ --br-theme-shadow:rgba(195,66,80,.16);
+}
+#admin-shell[data-br-section="analytics"] {
+ --br-theme-accent:#d6b7ff;--br-theme-text:#f4eaff;--br-theme-muted:#d9c8ee;
+ --br-theme-surface:#43305f;--br-theme-surface-end:#241c36;
+ --br-theme-border:#8a69b9;--br-theme-table:#46305d;
+ --br-theme-shadow:rgba(142,105,201,.18);
+}
+
+/* Sidebar: subdued permanent colour tags; strong selected colour for orientation. */
+#admin-shell .admin-sidebar .sidebar-item#nav-venues,
+#admin-shell .admin-sidebar .sidebar-item#nav-events,
+#admin-shell .admin-sidebar .sidebar-item#nav-cruising,
+#admin-shell .admin-sidebar .sidebar-item#nav-data-quality {
+ border-radius:0 10px 10px 0;
+ margin:4px 11px 4px 0;padding:12px 11px 12px 17px;
+ border-left:4px solid var(--br-nav-border)!important;
+ background:var(--br-nav-rest)!important;
+ color:var(--br-nav-label)!important;
+ cursor:pointer;
+ transition:background .17s ease,border-color .17s ease;
+}
+#admin-shell #nav-venues{
+ --br-nav-border:#247b9e;--br-nav-label:#89d6ed;--br-nav-rest:#172c3e;
+ --br-nav-active:#1b4b64;--br-nav-active-border:#64d6f5;
+}
+#admin-shell #nav-events{
+ --br-nav-border:#99752d;--br-nav-label:#f0cf83;--br-nav-rest:#342b22;
+ --br-nav-active:#57431f;--br-nav-active-border:#ffd477;
+}
+#admin-shell #nav-cruising{
+ --br-nav-border:#873d4a;--br-nav-label:#f3a2aa;--br-nav-rest:#31212a;
+ --br-nav-active:#512630;--br-nav-active-border:#ff9ca6;
+}
+#admin-shell #nav-data-quality{
+ --br-nav-border:#6c518f;--br-nav-label:#d4b8f2;--br-nav-rest:#292336;
+ --br-nav-active:#44315e;--br-nav-active-border:#d1a7ff;
+}
+#admin-shell .admin-sidebar .sidebar-item#nav-venues:hover,
+#admin-shell .admin-sidebar .sidebar-item#nav-events:hover,
+#admin-shell .admin-sidebar .sidebar-item#nav-cruising:hover,
+#admin-shell .admin-sidebar .sidebar-item#nav-data-quality:hover{
+ background:var(--br-nav-active)!important;
+ color:#ffffff!important;
+}
+#admin-shell .admin-sidebar .sidebar-item#nav-venues.br-nav-active,
+#admin-shell .admin-sidebar .sidebar-item#nav-events.br-nav-active,
+#admin-shell .admin-sidebar .sidebar-item#nav-cruising.br-nav-active,
+#admin-shell .admin-sidebar .sidebar-item#nav-data-quality.br-nav-active{
+ background:var(--br-nav-active)!important;
+ border-left-color:var(--br-nav-active-border)!important;
+ color:#ffffff!important;
+ box-shadow:inset 0 0 0 1px var(--br-nav-border),0 2px 12px #0003;
+ font-weight:700;
+}
+#admin-shell .admin-sidebar .sidebar-item[aria-current="page"] .sidebar-text{
+ text-decoration:none;letter-spacing:.015em;
+}
+#admin-shell .admin-sidebar .sidebar-item#nav-venues:focus-visible,
+#admin-shell .admin-sidebar .sidebar-item#nav-events:focus-visible,
+#admin-shell .admin-sidebar .sidebar-item#nav-cruising:focus-visible,
+#admin-shell .admin-sidebar .sidebar-item#nav-data-quality:focus-visible{
+ outline:2px solid var(--br-nav-active-border);outline-offset:2px;
+}
+#admin-shell .admin-sidebar .sidebar-item#nav-data-quality .icon{filter:saturate(.9)}
+
+/* Main dataset header: deliberately filled with the section hue, not a thin outline. */
+#admin-shell[data-br-section="venues"] #data-summary-bar,
+#admin-shell[data-br-section="events"] #data-summary-bar,
+#admin-shell[data-br-section="cruising"] #data-summary-bar{
+ --primary-blue:var(--br-theme-accent);
+ background:linear-gradient(115deg,var(--br-theme-surface),var(--br-theme-surface-end))!important;
+ border:1px solid var(--br-theme-border)!important;
+ border-left:5px solid var(--br-theme-accent)!important;
+ border-radius:16px!important;
+ padding:18px 20px!important;
+ box-shadow:0 4px 20px var(--br-theme-shadow),inset 0 1px 0 #ffffff10!important;
+ gap:18px;
+ color:var(--br-theme-text)!important;
+}
+#admin-shell[data-br-section="venues"] #summary-title,
+#admin-shell[data-br-section="events"] #summary-title,
+#admin-shell[data-br-section="cruising"] #summary-title{
+ color:var(--br-theme-accent)!important;
+ letter-spacing:.045em;
+ font-size:1.35rem!important;
+}
+#admin-shell[data-br-section="venues"] #summary-timestamp,
+#admin-shell[data-br-section="events"] #summary-timestamp,
+#admin-shell[data-br-section="cruising"] #summary-timestamp{
+ color:var(--br-theme-muted)!important;
+ font-size:.87rem;line-height:1.6;
+}
+#admin-shell[data-br-section="venues"] #data-summary-bar #summary-mismatch,
+#admin-shell[data-br-section="events"] #data-summary-bar #summary-mismatch,
+#admin-shell[data-br-section="cruising"] #data-summary-bar #summary-mismatch{
+ text-underline-offset:3px;
+ font-size:.91rem;
+}
+/* Keep actual mismatches red, but use the active section colour for "all match". */
+#admin-shell #data-summary-bar #summary-mismatch[style*="--primary-blue"]{
+ color:var(--br-theme-accent)!important;
+}
+#admin-shell #data-summary-bar #summary-mismatch[style*="--bright-red-orange"]{
+ color:#ffaaa4!important;
+}
+#admin-shell[data-br-section="venues"] #btn-highlight-changes,
+#admin-shell[data-br-section="events"] #btn-highlight-changes,
+#admin-shell[data-br-section="cruising"] #btn-highlight-changes{
+ background:#172335!important;
+ border:1px solid var(--br-theme-border)!important;
+ color:var(--br-theme-text)!important;
+ border-radius:10px!important;
+ min-height:31px;
+}
+#admin-shell[data-br-section="venues"] #btn-highlight-changes:hover,
+#admin-shell[data-br-section="events"] #btn-highlight-changes:hover,
+#admin-shell[data-br-section="cruising"] #btn-highlight-changes:hover{
+ background:var(--br-theme-surface)!important;
+}
+/* Tie the toolbar and table header to the same visual section. */
+#admin-shell[data-br-section="venues"] #br-p3-action-panel,
+#admin-shell[data-br-section="events"] #br-p3-action-panel,
+#admin-shell[data-br-section="cruising"] #br-p3-action-panel{
+ border-color:var(--br-theme-border)!important;
+ border-top:3px solid var(--br-theme-accent)!important;
+ box-shadow:0 4px 15px var(--br-theme-shadow)!important;
+}
+#admin-shell[data-br-section="venues"] #admin-table-container .br-p1-compact-table thead th,
+#admin-shell[data-br-section="events"] #admin-table-container .br-p1-compact-table thead th,
+#admin-shell[data-br-section="cruising"] #admin-table-container .br-p1-compact-table thead th,
+#admin-shell[data-br-section="venues"] #admin-table-container table:not(.br-p1-compact-table) thead th,
+#admin-shell[data-br-section="events"] #admin-table-container table:not(.br-p1-compact-table) thead th,
+#admin-shell[data-br-section="cruising"] #admin-table-container table:not(.br-p1-compact-table) thead th{
+ background:var(--br-theme-table)!important;
+ color:var(--br-theme-accent)!important;
+ border-bottom:2px solid var(--br-theme-border)!important;
+}
+#admin-shell[data-br-section="venues"] #admin-table-container,
+#admin-shell[data-br-section="events"] #admin-table-container,
+#admin-shell[data-br-section="cruising"] #admin-table-container{
+ border-color:var(--br-theme-border)!important;
+}
+#admin-shell[data-br-section="venues"] #br-phase1-bar .br-p1-active,
+#admin-shell[data-br-section="events"] #br-phase1-bar .br-p1-active,
+#admin-shell[data-br-section="cruising"] #br-phase1-bar .br-p1-active{
+ background:var(--br-theme-table)!important;
+ color:var(--br-theme-text)!important;
+ border:1px solid var(--br-theme-border)!important;
+}
+
+/* Data & Analytics is purple throughout its parent frame; the individual tabs
+   retain their secondary action colours, except Reporting & Stats (also purple). */
+#admin-shell[data-br-section="analytics"] #br-phase2-view .br-p2-top{
+ background:linear-gradient(115deg,var(--br-theme-surface),var(--br-theme-surface-end))!important;
+ border:1px solid var(--br-theme-border)!important;
+ border-left:5px solid var(--br-theme-accent)!important;
+ border-radius:16px!important;
+ box-shadow:0 4px 20px var(--br-theme-shadow),inset 0 1px 0 #ffffff0e!important;
+}
+#admin-shell[data-br-section="analytics"] #br-phase2-view .br-p2-top h1{
+ color:var(--br-theme-accent)!important;
+}
+#admin-shell[data-br-section="analytics"] #br-phase2-view .br-p2-top .br-p2-muted{
+ color:var(--br-theme-muted)!important;
+}
+#admin-shell[data-br-section="analytics"] #br-p2-summary .br-p3-stat-chip{
+ background:#2b2440!important;color:#f3eaff!important;border-color:#735694!important;
+}
+#admin-shell[data-br-section="analytics"] #br-p2-summary .br-p3-stat-chip strong{
+ color:#e0beff!important;
+}
+#admin-shell[data-br-section="analytics"] #br-phase2-nav{
+ border-color:#6b527f!important;
+ background:#1b1929!important;
+}
+#admin-shell #br-phase2-nav .br-p3-tab-reporting{
+ background:#4c376b!important;
+ border-color:#8363ae!important;
+ color:#f3e9ff!important;
+}
+#admin-shell #br-phase2-nav .br-p3-tab-reporting.br-p2-active{
+ background:#654888!important;
+ border-color:#ae8ce0!important;
+}
+#admin-shell[data-br-section="analytics"] #br-p2-reporting #br-reporting-view h2,
+#admin-shell[data-br-section="analytics"] #br-p2-reporting #br-reporting-view h3{
+ color:#d6b7ff;
+}
+@media(max-width:850px){
+ #admin-shell #data-summary-bar{align-items:flex-start;flex-wrap:wrap}
+ #admin-shell #data-summary-bar>div:last-child{text-align:left!important}
+}
