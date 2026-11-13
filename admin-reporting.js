@@ -3,7 +3,7 @@
 'use strict';
 const DB_NAME='backroom_admin_reporting_v1', DB_VERSION=1;
 let database=null;
-const state={data:{venues:[],events:[]},scope:{events:true,venues:false,cruising:false},conditions:[{op:'OR',key:'status:Live'}],results:null,lastQueryId:null,groupCount:1,logs:[],opened:false,countrySort:'total',countryAsc:false};
+const state={data:{venues:[],events:[]},scope:{events:true,venues:false,cruising:false},conditions:[{op:'OR',key:'status:Live'}],results:null,lastQueryId:null,groupCount:1,logs:[],opened:false,capturing:false,countrySort:'total',countryAsc:false};
 const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const fmt=n=>Number(n||0).toLocaleString('en-GB');
 const isCruising=r=>String(r?.Category||'').trim().toLowerCase()==='cruising area';
@@ -308,35 +308,108 @@ function chartSvg(series){
     const points=series.map((d,i)=>(p+(w-2*p)*i/(series.length-1)).toFixed(1)+','+(h-p-(d.y-min)/(max-min)*(h-2*p)).toFixed(1)).join(' ');
     return '<svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Historical trend" class="br-chart"><line x1="'+p+'" y1="'+(h-p)+'" x2="'+(w-p)+'" y2="'+(h-p)+'" stroke="#8392a8"/><polyline fill="none" stroke="#49d2ff" stroke-width="3" points="'+points+'"/><text x="22" y="17" fill="#e4edf8">'+fmt(max)+'</text><text x="22" y="'+(h-5)+'" fill="#e4edf8">'+fmt(min)+'</text></svg>';
 }
-function growthChart(changes){
-    if(!changes.length)return '<p class="br-muted">The first data-changing operation will establish a growth history. Existing counts appear in Database Overview.</p>';
+async function captureDataPoint(){
+    if(state.capturing)return;
+    state.capturing=true;
+    const button=document.getElementById('br-capture-point');
+    if(button){button.disabled=true;button.textContent='Reading published JSON…';}
+    try{
+        // A manual capture must read the currently published files, not possibly stale Admin drafts.
+        // Query strings and no-store bypass browser caching; both files must load before logging.
+        const stamp=Date.now();
+        const readPublished=async filename=>{
+            const response=await fetch(filename+'?report_capture='+stamp,{cache:'no-store'});
+            if(!response.ok)throw Error(filename+' returned HTTP '+response.status);
+            const rows=await response.json();
+            if(!Array.isArray(rows))throw Error(filename+' does not contain a JSON array.');
+            return rows;
+        };
+        const [venues,events]=await Promise.all([readPublished('listings.json'),readPublished('events.json')]);
+        const counts={
+            venues:venues.filter(row=>!isCruising(row)).length,
+            cruising:venues.filter(isCruising).length,
+            events:events.length
+        };
+        const entry={type:'snapshot',mode:'published',operation:'Capture Data Point',source:'Published JSON (GitHub Pages)',date:now(),after:counts};
+        const id=await writeLog(entry);
+        if(id===null)throw Error('Could not save the data point in Reporting history.');
+        await refreshLogViews();
+        message('Captured published totals: '+fmt(counts.venues)+' venues, '+fmt(counts.cruising)+' cruising areas and '+fmt(counts.events)+' events.');
+    }catch(error){
+        console.error('Backroom Reporting capture failed:',error);
+        message('Capture failed; nothing was recorded. '+(error?.message||String(error)));
+    }finally{
+        state.capturing=false;
+        const refreshed=document.getElementById('br-capture-point');
+        if(refreshed){refreshed.disabled=false;refreshed.textContent='📌 Capture Data Point';}
+    }
+}
+function buildGrowthSeries(history){
     const v=state.data.venues;
-    const initialVenue=changes.find(x=>x.mode==='venues');
-    const initialEvents=changes.find(x=>x.mode==='events');
-    const first={venues:initialVenue?.before.venues??v.filter(r=>!isCruising(r)).length,cruising:initialVenue?.before.cruising??v.filter(isCruising).length,events:initialEvents?.before.events??state.data.events.length};
-    const points=[{...first}];
-    let totals={...first};
-    changes.forEach(x=>{
-        totals={...totals,...x.after};points.push({...totals});
+    const firstVenueChange=history.find(x=>x.type==='change'&&x.mode==='venues');
+    const firstEventChange=history.find(x=>x.type==='change'&&x.mode==='events');
+    const firstCapture=history.find(x=>x.type==='snapshot');
+    const baseline={
+        venues:firstVenueChange?.before?.venues??firstCapture?.after?.venues??v.filter(r=>!isCruising(r)).length,
+        cruising:firstVenueChange?.before?.cruising??firstCapture?.after?.cruising??v.filter(isCruising).length,
+        events:firstEventChange?.before?.events??firstCapture?.after?.events??state.data.events.length
+    };
+    const points=[{...baseline,date:history[0]?.date||now(),type:'baseline'}];
+    let totals={...baseline};
+    history.forEach(entry=>{
+        totals={...totals,...entry.after};
+        points.push({...totals,date:entry.date,type:entry.type,operation:entry.operation,entry});
     });
-    const w=740,h=205,p=30,min=0,max=Math.max(1,...points.flatMap(x=>[x.venues,x.cruising,x.events]));
+    return points;
+}
+function growthChart(points){
+    if(points.length<2)return '<p class="br-muted">Capture a data point to establish a published baseline, or change the data through Admin to begin the history.</p>';
+    const drawn=points.slice(-80);
+    const w=740,h=215,p=30,max=Math.max(1,...drawn.flatMap(x=>[x.venues,x.cruising,x.events]));
     const lines=[['venues','Venues','#49d2ff'],['cruising','Cruising Areas','#ef6957'],['events','Events','#f0c94c']];
-    const path=(key)=>points.map((x,i)=>(p+(w-2*p)*i/Math.max(1,points.length-1)).toFixed(2)+','+(h-p-(x[key]/max)*(h-2*p)).toFixed(2)).join(' ');
+    const xy=(point,index,key)=>({
+        x:p+(w-2*p)*index/Math.max(1,drawn.length-1),
+        y:h-p-(point[key]/max)*(h-2*p)
+    });
+    const path=key=>drawn.map((point,i)=>{const pt=xy(point,i,key);return pt.x.toFixed(2)+','+pt.y.toFixed(2);}).join(' ');
+    const markers=drawn.map((point,i)=>{
+        if(point.type!=='snapshot')return '';
+        return lines.map(([key,label,color])=>{
+            const pt=xy(point,i,key);
+            const tooltip=esc(new Date(point.date).toLocaleString('en-GB')+' — '+label+': '+fmt(point[key])+' (published JSON)');
+            return '<circle cx="'+pt.x.toFixed(2)+'" cy="'+pt.y.toFixed(2)+'" r="5" fill="'+color+'" stroke="#151b29" stroke-width="2"><title>'+tooltip+'</title></circle>';
+        }).join('');
+    }).join('');
+    const labels=drawn.length>1
+        ? '<text x="'+p+'" y="'+(h-3)+'" fill="#aab4c5" font-size="11">'+esc(new Date(drawn[0].date).toLocaleDateString('en-GB'))+'</text>'+
+          '<text x="'+(w-p)+'" y="'+(h-3)+'" fill="#aab4c5" text-anchor="end" font-size="11">'+esc(new Date(drawn[drawn.length-1].date).toLocaleDateString('en-GB'))+'</text>'
+        : '';
     return '<div class="br-growth-legend">'+lines.map(x=>'<span style="color:'+x[2]+'">● '+x[1]+'</span>').join('')+'</div>'+
       '<svg class="br-chart" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Venues, cruising areas and events over time">'+
       '<line x1="'+p+'" y1="'+(h-p)+'" x2="'+(w-p)+'" y2="'+(h-p)+'" stroke="#8392a8"/>'+
       lines.map(x=>'<polyline fill="none" stroke="'+x[2]+'" stroke-width="3" points="'+path(x[0])+'"/>').join('')+
-      '<text x="'+p+'" y="18" fill="#e4edf8">'+fmt(max)+'</text>'+
-      '</svg><p class="br-muted">Each point represents a recorded data change; the lines are separate totals for each listing type.</p>';
+      markers+'<text x="'+p+'" y="18" fill="#e4edf8">'+fmt(max)+'</text>'+labels+'</svg>'+
+      '<p class="br-muted">Lines show recorded totals. Circles mark manually captured <strong>published</strong> JSON totals; Admin merges may reflect unsaved working-draft changes.</p>';
 }
 async function refreshLogViews(){
     try{state.logs=await getAllLogs();}catch(error){console.error(error);state.logs=[];}
     const logs=state.logs.slice().sort((a,b)=>String(b.date).localeCompare(String(a.date)));
-    const changes=state.logs.filter(x=>x.type==='change').sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+    const history=state.logs.filter(x=>x.type==='change'||x.type==='snapshot').sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+    const points=buildGrowthSeries(history);
     const growth=document.getElementById('br-growth');
-    if(growth)growth.innerHTML='<h3>Database Growth History</h3>'+growthChart(changes)+
-      '<table class="br-table"><thead><tr><th>Date</th><th>Operation</th><th>Added</th><th>Modified</th><th>Removed</th></tr></thead><tbody>'+
-      logs.filter(x=>x.type==='change').slice(0,50).map(x=>'<tr><td>'+esc(new Date(x.date).toLocaleString('en-GB'))+'</td><td>'+esc(x.mode+' · '+x.operation)+'</td><td>'+fmt(x.added)+'</td><td>'+fmt(x.modified)+'</td><td>'+fmt(x.removed)+'</td></tr>').join('')+'</tbody></table>';
+    if(growth)growth.innerHTML='<h3>Database Growth History</h3>'+
+      '<div class="br-capture-tools"><button type="button" id="br-capture-point" class="btn primary-btn pill-btn" '+(state.capturing?'disabled':'')+'>📌 Capture Data Point</button>'+
+      '<span class="br-muted">Reads current published listings.json and events.json; saves the three totals and capture date locally. No record IDs or copies are stored.</span></div>'+
+      growthChart(history.length?points:[])+
+      '<div class="br-scroll"><table class="br-table"><thead><tr><th>Date</th><th>Operation</th><th>Venues</th><th>Cruising</th><th>Events</th><th>Added</th><th>Modified</th><th>Removed</th></tr></thead><tbody>'+
+      points.slice(1).reverse().slice(0,50).map(point=>{
+          const entry=point.entry;
+          const snapshot=entry.type==='snapshot';
+          const action=snapshot?'📌 Published · Capture Data Point':(entry.mode+' · '+entry.operation);
+          return '<tr><td>'+esc(new Date(entry.date).toLocaleString('en-GB'))+'</td><td>'+esc(action)+'</td>'+
+            '<td>'+fmt(point.venues)+'</td><td>'+fmt(point.cruising)+'</td><td>'+fmt(point.events)+'</td>'+
+            '<td>'+(snapshot?'—':fmt(entry.added))+'</td><td>'+(snapshot?'—':fmt(entry.modified))+'</td><td>'+(snapshot?'—':fmt(entry.removed))+'</td></tr>';
+      }).join('')+'</tbody></table></div>';
     const queryLogs=logs.filter(x=>x.type==='query');
     const qbox=document.getElementById('br-query-history');
     if(qbox){
@@ -441,7 +514,7 @@ function install(){
     '#br-group-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:5px;margin:10px 0;max-height:250px;overflow:auto}',
     '#br-group-preview div{padding:7px;background:#202838;border-radius:4px}.br-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}',
     '.br-actions .btn,.br-group-box .btn{width:auto}.br-link{border:0;background:none;color:#49d2ff;text-decoration:underline;cursor:pointer;text-align:left}',
-    '.br-growth-legend{display:flex;gap:15px;flex-wrap:wrap;font-size:.9rem;margin:10px 0}',
+    '.br-growth-legend{display:flex;gap:15px;flex-wrap:wrap;font-size:.9rem;margin:10px 0}.br-capture-tools{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:10px 0 16px}.br-capture-tools .btn{width:auto;flex-shrink:0}.br-capture-tools .br-muted{max-width:780px}',
     '.br-chart{width:100%;height:auto;max-height:205px}.br-notice{border:1px solid #f0c94c;padding:12px;margin:10px 0;border-radius:8px;color:#f0c94c}',
     '@media(max-width:720px){.br-stats{grid-template-columns:1fr}.br-headrow,.br-condition-row{grid-template-columns:85px minmax(120px,1fr) 30px}}'
     ].join('\n');document.head.appendChild(style);
@@ -497,6 +570,7 @@ function install(){
         if(target.id==='br-download-results'&&state.results){writeFile(JSON.stringify(state.results.rows,null,2),'identified_records.json');markDownloaded(1);}
         if(target.id==='br-download-groups')saveGroups();
         if(target.id==='br-backup'||target.id==='br-reminder-save')backupHistory();
+        if(target.id==='br-capture-point')captureDataPoint();
     });
     backupReminder();
 }
