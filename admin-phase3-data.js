@@ -92,7 +92,15 @@ function build(config,venues,events,sources,instructions){
  const allow=src=>src.enabled!==false&&(!config.sourceKinds?.length||config.sourceKinds.includes(src.kind))&&
    (!config.sourceKeys?.length||config.sourceKeys.includes(src.key))&&
    (!src.workflows.length||src.workflows.includes('all')||src.workflows.includes(type)||src.workflows.includes(flow));
- const candidates=sources.filter(allow),chunks=[];for(let i=0;i<tasks.length;i+=size)chunks.push(tasks.slice(i,i+size));
+ const candidates=sources.filter(allow),chunks=[];
+ tasks.sort((a,b)=>a.zone-b.zone||a.country.localeCompare(b.country)||a.city.localeCompare(b.city)||a.id.localeCompare(b.id));
+ let current=[],bucketKey='';
+ for(const row of tasks){
+  const nextKey=row.zone+'|'+row.country;
+  if(current.length&&(nextKey!==bucketKey||current.length>=size)){chunks.push(current);current=[];}
+  current.push(row);bucketKey=nextKey;
+ }
+ if(current.length)chunks.push(current);
  const batches=chunks.map((part,i)=>{
   const ids=uniq(part.map(x=>x.id)),countries=uniq(part.map(x=>x.country)),cities=uniq(part.map(x=>x.country+'|'+x.city));
   const included=candidates.filter(src=>(config.sourceKeys?.length&&config.sourceKeys.includes(src.key))||
