@@ -4,6 +4,8 @@
 const P=window.BRP2;if(!P)throw Error('Phase 2 shell missing');
 const {state:S,get,esc,fmt,clean,norm,notify,saveLocal,downloadCSV,downloadJSON,options,stat,pagination,location}=P;
 const REG_KEY='br_admin_city_registry_working_v1';
+const flag=name=>window.BackroomAdminFlags?.flag(name)||'🌍';
+const countryOptions=(items,selected)=>'<option value="">🌐 All countries</option>'+items.map(name=>'<option value="'+esc(name)+'" '+(selected===name?'selected':'')+'>'+esc(flag(name)+' '+name)+'</option>').join('');
 const reg={country:'DE',search:'',page:1,edit:-1};
 const cov={country:'',search:'',filter:'all',page:1};
 let coverageAll=[],coverageVisible=[];
@@ -38,7 +40,7 @@ function renderRegistry(){
  '<div class="br-p2-actions"><button type="button" id="br-reg-export" class="btn primary-btn pill-btn">⬇ Export registry JSON</button>'+
  '<label class="btn secondary-btn pill-btn">Import registry JSON<input type="file" id="br-reg-import" accept=".json" hidden></label>'+
  '<button id="br-reg-reset" class="btn secondary-btn pill-btn">Reset to published registry</button></div>'+
- '<div class="br-p2-filters"><label>Country<select id="br-reg-country">'+S.registry.countries.map(c=>'<option value="'+esc(c.code)+'" '+(reg.country===c.code?'selected':'')+'>'+esc(c.name)+' ('+esc(c.code)+')</option>').join('')+'</select></label>'+
+ '<div class="br-p2-filters"><label>Country<select id="br-reg-country">'+S.registry.countries.map(c=>'<option value="'+esc(c.code)+'" '+(reg.country===c.code?'selected':'')+'>'+esc(flag(c.code)+' '+c.name)+' ('+esc(c.code)+')</option>').join('')+'</select></label>'+
  '<label>City search<input id="br-reg-search" value="'+esc(reg.search)+'" placeholder="City name"></label></div>'+
  '<div class="br-p2-inline"><label>Country name<input id="br-reg-country-name" value="'+esc(current.name)+'"></label>'+
  '<label>Capital / administrative seat<input id="br-reg-country-capital" value="'+esc(current.capital||'')+'"></label>'+
@@ -183,7 +185,7 @@ function renderCoverage(){
  const showing=coverageVisible.slice((cov.page-1)*100,cov.page*100);
  h.innerHTML='<h2>City Coverage Manager</h2><p class="br-p2-muted">Counts use current working records. Events inherit their linked venue country/city when needed. Zero coverage means no Backroom records — it does not mean there are no venues.</p>'+
  '<div class="br-p2-grid">'+stat('Destinations considered',coverageAll.length)+stat('Without records',coverageAll.filter(x=>!x.total).length)+stat('Outside registry',coverageAll.filter(x=>!x.registered).length)+'</div>'+
- '<div class="br-p2-filters"><label>Country<select data-cover="country">'+options(countries,cov.country,'All countries')+'</select></label>'+
+ '<div class="br-p2-filters"><label>Country<select data-cover="country">'+countryOptions(countries,cov.country)+'</select></label>'+
  '<label>City contains<input data-cover="search" value="'+esc(cov.search)+'" placeholder="All cities"></label>'+
  '<label>Coverage<select data-cover="filter">'+[['all','All destinations'],['covered','With records'],['uncovered','No records'],['low','2 or fewer records'],['unregistered','Not yet in registry']].map(x=>'<option value="'+x[0]+'" '+(cov.filter===x[0]?'selected':'')+'>'+x[1]+'</option>').join('')+'</select></label></div>'+
  '<div class="br-p2-actions"><span id="br-coverage-selected">'+fmt(coverageVisible.length)+' matching destinations · '+fmt(S.selected.size)+' selected</span>'+
@@ -192,7 +194,7 @@ function renderCoverage(){
  '<button id="br-cover-export" class="btn secondary-btn pill-btn">Download Coverage CSV</button></div>'+
  '<div class="br-p2-scroll"><table class="br-p2-table"><thead><tr><th>✓</th><th>Country</th><th>Destination</th><th>Venues</th><th>Cruising</th><th>Events</th><th>Total</th><th>Registry</th></tr></thead><tbody>'+
  showing.map(x=>'<tr><td><input type="checkbox" data-cover-select="'+esc(key(x.code,x.city))+'" '+(S.selected.has(key(x.code,x.city))?'checked':'')+'></td>'+
- '<td>'+esc(x.country)+'</td><td>'+esc(x.city)+'</td><td>'+fmt(x.venues)+'</td><td>'+fmt(x.cruising)+'</td><td>'+fmt(x.events)+'</td><td><strong>'+fmt(x.total)+'</strong></td>'+
+ '<td class="br-p3-flag" title="'+esc(x.country)+'" aria-label="'+esc(x.country)+'">'+esc(flag(x.country))+'</td><td>'+esc(x.city)+'</td><td>'+fmt(x.venues)+'</td><td>'+fmt(x.cruising)+'</td><td>'+fmt(x.events)+'</td><td><strong>'+fmt(x.total)+'</strong></td>'+
  '<td>'+(x.registered?esc(x.kinds.join(', ')):'<span class="br-p2-warn">Unregistered</span>')+'</td></tr>').join('')+'</tbody></table></div>'+pagination('coverage',cov.page,pages);
 }
 function applySelection(mode){
@@ -234,13 +236,30 @@ function coverageChange(input){
 }
 function renderZones(){
  const host=get('br-p2-zones');if(!host)return;
- host.innerHTML='<h2>Zone Splitting & Geographic Rules</h2><p>Use the worldwide master registry as the source for geographical research targets. Population is not an eligibility threshold.</p>'+
- '<div class="br-p2-zonerules"><p><strong>1.</strong> Group by country and meaningful travel regions while preserving already established Backroom zone IDs.</p>'+
- '<p><strong>2.</strong> Include capitals, secondary cities and tourist destinations such as Ibiza, Venice, Sitges, Mykonos and island destinations.</p>'+
- '<p><strong>3.</strong> Use City Coverage to identify destinations with no or few records, select them and copy the exact names for later research.</p>'+
- '<p><strong>4.</strong> Split by source availability and realistic batch sizes rather than simply by population.</p>'+
- '<p><strong>5.</strong> Candidate locations are not automatically published; verification and existing database matching still apply.</p></div>'+
- '<p><a class="br-p2-link" href="docs/ZONE_SPLITTING_V2.md" target="_blank" rel="noopener">Open Zone Splitting v2 guidelines</a></p>';
+ host.innerHTML='<div class="br-p3-zone-intro"><h2>📚 Zone Splitting & Geographic Research Rules</h2>'+
+ '<p>Keep the research structure consistent across the whole Backroom database. The registry is a worldwide list of places worth considering, <strong>not</strong> evidence that a venue or cruising location exists.</p>'+
+ '<div class="br-p2-grid">'+stat('Countries / territories in registry',S.registry?.countries?.length||0)+stat('City / destination entries',S.registry?.cities?.length||0)+'</div></div>'+
+ '<div class="br-p3-zone-grid">'+
+ '<details class="br-p3-zone-card" open><summary>🌍 1. Geographic coverage</summary>'+
+ '<p>Start with countries rather than restricting research to Europe. Include capitals, relevant secondary cities and visitor destinations even when they are small.</p>'+
+ '<p><strong>Examples:</strong> 🇪🇸 Ibiza, Sitges and Torremolinos; 🇮🇹 Venice; 🇬🇷 Mykonos; 🇭🇷 Hvar; and coastal/island areas with nightlife or travel significance.</p>'+
+ '<p>City size by itself must <strong>never</strong> decide whether a location is included or excluded.</p></details>'+
+ '<details class="br-p3-zone-card" open><summary>🧩 2. Preserve existing Backroom zones</summary>'+
+ '<p>Use the established Backroom zone identifier when one exists. For new research, group by country and logical travel regions, preserving the exact cities included in each group.</p>'+
+ '<p>If a country has many candidates, divide it into independently manageable batches (for example Group A, Group B and Group C). Do not silently drop any city.</p></details>'+
+ '<details class="br-p3-zone-card"><summary>🗺️ 3. Regional boundaries & duplicate prevention</summary>'+
+ '<p>A source may refer to a suburb, island, destination or metro area differently from the registry. Keep its original location text in research notes and match it to the best canonical country/city without inventing a second venue.</p>'+
+ '<p>Check accents, translated city names and neighboring administrative boundaries before considering two candidate records separate.</p></details>'+
+ '<details class="br-p3-zone-card"><summary>📋 4. Prioritize gaps using City Coverage</summary>'+
+ '<p>Open the 🗺️ Coverage tab and use the <strong>No records</strong> or <strong>2 or fewer records</strong> filter. Select cities and copy the country/city list into your research brief.</p>'+
+ '<p>Zero Backroom entries means <em>no records currently represented in our database</em>. It does not prove that no venues exist locally.</p></details>'+
+ '<details class="br-p3-zone-card"><summary>🔎 5. Research and verification boundaries</summary>'+
+ '<p>City Registry is a planning tool, not an approved publication list. Retain source URLs, previous IDs and research notes. Verify new venues and cruising areas against relevant evidence before importing them.</p>'+
+ '<p>Keep uncertain candidates separate from existing published records, and do not manufacture venue IDs or events just because a destination was selected.</p></details>'+
+ '<details class="br-p3-zone-card"><summary>📦 6. Handover to the Scrape Builder</summary>'+
+ '<p>The upcoming Scrape Builder should read this same registry, support selecting entire countries or specific cities, and accept the exact copied list from City Coverage.</p>'+
+ '<p>Batch membership, source selection and existing permanent Venue_ID / Event_ID matching must remain explicit and reusable.</p></details>'+
+ '</div><p class="br-p2-muted">Everything needed for Zone Splitting is available here; you do not need to open a separate document.</p>';
 }
 P.register('registry',{render:renderRegistry,click:registryClick,change:registryChange,input:registryInput});
 P.register('coverage',{render:renderCoverage,click:coverageClick,change:coverageChange});
