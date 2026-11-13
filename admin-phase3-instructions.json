@@ -44,6 +44,14 @@
       "body": "Zone 8: research PUBLIC-space cruising areas only (parks, beaches, forests, public toilets, promenades, rest areas, parking areas). Exclude commercial venues, private homes, event sessions and hotels. Use the normal Backroom venue schema: Category = 'Cruising Area', Feature_Cruise_Focused = true and Vibe_Tags contains 'Cruising'. Match existing Venue_ID and preserve all research leads without interpreting old directory pages as current activity. Compare source dates and access rules, availability, seasonality, safety and public access; when newest genuine public activity evidence is older than 12 months or undated, retain Hold/Flag pending review. Last_Public_Confirmation must be the newest dated PUBLIC activity evidence; Last_Checked is review time, not proof of activity. Avoid publishing secluded micro-locations, hidden paths, detailed routes or identities; use broad location/entry points only. Preserve source URLs, source-specific report dates, restrictions and uncertainty. Scrape Builder input may link to the consolidated cruising URL registry, but a link is not independent verification."
     },
     {
+      "id": "COMBINED",
+      "title": "🔄 Combined Venue + Event Research",
+      "workflow": "all",
+      "source": "Reconstructed from the current Backroom combined scraping rules and zone plan; not a verbatim archived prompt",
+      "editable": true,
+      "body": "Research existing and potential men-only gay cruising/darkroom venues alongside their verified dated party schedules, using the selected cities, date window and zone. For each fixed venue, confirm identity, exact address and current access first; then look for confirmed event editions at that venue, preserving the Venue_ID relationship. Avoid adding events whose host venue cannot be verified, and flag unresolved new hosts as research candidates instead of inventing IDs. Do not duplicate touring parent listings across zone files. Check official venue/organiser calendar, ticket page, verified socials and specialist sources; retain all precise source URLs and publication/evidence dates. Distinguish venue changes from event additions, date edits, cancellations and unverified leads. Keep venue, cruising-area and event production schemas separate, preserving every existing field and permanent ID. Use the supplied source pack and selected output date window. Return independently reviewable venue proposals, event proposals, unchanged records and holds. Never publish or modify the production database automatically."
+    },
+    {
       "id": "WORLDWIDE_ZONES",
       "title": "🌍 Geographic Zones & Coverage",
       "workflow": "all",
