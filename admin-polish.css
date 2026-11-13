@@ -249,3 +249,38 @@
  #br-phase2-view>section{padding:11px!important}
  #br-p3-chart-tooltip{max-width:min(280px,calc(100vw - 25px))}
 }
+
+/* v0.23.1 — Windows Chrome-compatible real flag icons. */
+.br-country-flag-frame{
+ display:inline-flex;position:relative;vertical-align:-3px;align-items:center;justify-content:center;
+ width:25px;height:19px;flex:0 0 25px;overflow:hidden;border-radius:3px;
+ background:#34465a;border:1px solid #ffffff33;box-shadow:0 1px 3px #0006;
+}
+.br-country-flag-image{width:24px!important;height:18px!important;max-width:24px!important;max-height:18px!important;
+ object-fit:cover;display:block;position:relative;z-index:1;border:0!important;border-radius:2px}
+.br-country-flag-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+ font-size:14px;z-index:0}
+.br-country-flag-error .br-country-flag-image{display:none!important}
+.br-country-flag-missing{font-size:1rem}
+#admin-table-container .br-p1-row-meta .br-country-flag-frame,
+#br-p1-explorer .br-country-flag-frame,
+#br-phase2-view .br-country-flag-frame,
+#br-reporting-view .br-country-flag-frame{margin-right:3px}
+#br-phase2-view .br-p3-flag .br-country-flag-frame{margin:0 auto;vertical-align:middle}
+#br-phase2-view #br-phase2-nav{grid-template-columns:repeat(7,minmax(105px,1fr))}
+#br-phase2-nav .br-p3-tab-jql{background:#52608c!important;border-color:#788dcb!important}
+#br-p3-jql-heading{
+ margin:0 0 13px;padding:14px 18px;
+ background:linear-gradient(115deg,#183a58,#15263e);
+ border:1px solid #487b9d;border-radius:14px;
+}
+#br-p3-jql-heading h2{color:#7ddcf7!important;margin:0 0 5px!important}
+#br-p3-jql-heading p{margin:0!important;color:#c4d5e6}
+#br-p3-jql-heading[hidden]{display:none!important}
+#br-p2-reporting.br-p3-jql-mode #br-reporting-view > :not(.br-p3-query-panel){display:none!important}
+#br-p2-reporting.br-p3-jql-mode #br-reporting-view > .br-p3-query-panel{
+ display:block!important;margin-top:0!important}
+#br-p2-reporting.br-p3-jql-mode #br-reporting-view{padding-top:0!important}
+@media(max-width:1450px){#br-phase2-view #br-phase2-nav{grid-template-columns:repeat(4,minmax(120px,1fr))}}
+@media(max-width:870px){#br-phase2-view #br-phase2-nav{grid-template-columns:repeat(2,minmax(120px,1fr))}}
+@media(max-width:500px){#br-phase2-view #br-phase2-nav{grid-template-columns:repeat(2,minmax(100px,1fr))}}
