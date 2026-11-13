@@ -5,6 +5,8 @@ const P=window.BRP2;if(!P)throw Error('Phase 2 shell missing');
 const {state:S,D,get,esc,fmt,clean,norm,notify,saveLocal,readLocal,downloadCSV,downloadJSON,options,stat,pagination,location}=P;
 const upload={mode:'venues',operation:'add',parsed:null,plan:null,error:''};
 const HIST_KEY='br_admin_completeness_log_v2';
+const flag=name=>window.BackroomAdminFlags?.flag(name)||'🌍';
+const countryOptions=(items,selected)=>'<option value="">🌐 All countries</option>'+items.map(name=>'<option value="'+esc(name)+'" '+(selected===name?'selected':'')+'>'+esc(flag(name)+' '+name)+'</option>').join('');
 const q={type:'all',check:'any',country:'',city:'',status:'',page:1};
 let qResult=null;let history=readLocal(HIST_KEY,[]);
 function renderImports(){
@@ -159,7 +161,7 @@ function renderQuality(){
  let html='<h2>Data Quality & Completeness</h2><p class="br-p2-muted">Filter and run checks on working records. Only the timestamp, filters, examined/matching counts, percentage and download state are kept in history.</p>'+
  '<div class="br-p2-filters"><label>Record type<select data-quality="type">'+[['all','All records'],['venues','Venues'],['cruising','Cruising Areas'],['events','Events']].map(x=>'<option value="'+x[0]+'" '+(q.type===x[0]?'selected':'')+'>'+x[1]+'</option>').join('')+'</select></label>'+
  '<label>Check<select data-quality="check">'+available.map(x=>'<option value="'+x.id+'" '+(q.check===x.id?'selected':'')+'>'+esc(x.name)+'</option>').join('')+'</select></label>'+
- '<label>Country<select data-quality="country">'+options(countries,q.country,'All countries')+'</select></label>'+
+ '<label>Country<select data-quality="country">'+countryOptions(countries,q.country)+'</select></label>'+
  '<label>City contains<input data-quality="city" value="'+esc(q.city)+'"></label>'+
  '<label>Status<select data-quality="status">'+options(statuses,q.status,'Any status')+'</select></label></div>'+
  '<div class="br-p2-actions"><button id="br-p2-check-run" class="btn primary-btn pill-btn">▶ Run check</button>'+
@@ -170,7 +172,7 @@ function renderQuality(){
    html+='<h3>'+fmt(total)+' matches / '+fmt(qResult.examined)+' examined ('+(qResult.examined?(total/qResult.examined*100).toFixed(1):'0.0')+'%)</h3>'+
    '<p class="br-p2-muted">Results are from the last executed check. Filter changes require running again. Exports contain complete matching records.</p>'+
    '<div class="br-p2-scroll"><table class="br-p2-table"><thead><tr><th>ID</th><th>Name</th><th>City / Country</th><th>Status</th><th>Issues</th></tr></thead><tbody>'+
-   qResult.rows.slice((q.page-1)*100,q.page*100).map(x=>'<tr><td>'+esc(x.row.Event_ID||x.row.Venue_ID||'Missing')+'</td><td>'+esc(x.row.Event_Name||x.row.Name||'')+'</td><td>'+esc([...x.loc.cities,x.loc.country].join(', '))+'</td><td>'+esc(x.row.Status||'')+'</td><td>'+esc(x.issues.map(id=>CHECKS.find(c=>c.id===id)?.name||id).join('; '))+'</td></tr>').join('')+'</tbody></table></div>'+pagination('quality',q.page,pages);
+   qResult.rows.slice((q.page-1)*100,q.page*100).map(x=>'<tr><td>'+esc(x.row.Event_ID||x.row.Venue_ID||'Missing')+'</td><td>'+esc(x.row.Event_Name||x.row.Name||'')+'</td><td>'+esc([flag(x.loc.country),...x.loc.cities].filter(Boolean).join(' '))+'</td><td>'+esc(x.row.Status||'')+'</td><td>'+esc(x.issues.map(id=>CHECKS.find(c=>c.id===id)?.name||id).join('; '))+'</td></tr>').join('')+'</tbody></table></div>'+pagination('quality',q.page,pages);
  }
  html+='<details class="br-p2-details"><summary>Check history ('+history.length+')</summary><div class="br-p2-scroll"><table class="br-p2-table"><thead><tr><th>Executed</th><th>Filter</th><th>Examined</th><th>Matches</th><th>Percent</th><th>JSON/CSV exported</th></tr></thead><tbody>'+
  history.slice().reverse().slice(0,40).map(x=>'<tr><td>'+esc(x.date.slice(0,16).replace('T',' '))+'</td><td>'+esc(x.type+' · '+x.check)+'</td><td>'+fmt(x.examined)+'</td><td>'+fmt(x.matched)+'</td><td>'+x.percent+'%</td><td>'+(x.downloaded?'Yes':'No')+'</td></tr>').join('')+'</tbody></table></div></details>';
