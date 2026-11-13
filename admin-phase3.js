@@ -397,7 +397,7 @@ async function handleClick(button){
  if(id==='br3-guide-wizard'||id==='br3-open-wizard'){selectTab('wizard');return;}
  if(id==='br3-guide-advanced'){selectTab('builder');return;}
  if(button.dataset.br3RemoveCountry){
-  const country=button.dataset.br3RemoveCountry;S.config.countries=S.config.countries.filter(x=>x!==country);
+  S.wizardPreset='';const country=button.dataset.br3RemoveCountry;S.config.countries=S.config.countries.filter(x=>x!==country);
   S.config.cities=S.config.cities.filter(x=>!x.startsWith(country+'|'));remember();renderBuilder();return;
  }
  if(button.dataset.br3Edit){S.sourceEditing=button.dataset.br3Edit;get('br3-source-editor').innerHTML=sourceEditorHTML();return;}
@@ -406,11 +406,11 @@ async function handleClick(button){
  }
  if(button.dataset.br3RemoveCity){S.config.cities=S.config.cities.filter(x=>x!==button.dataset.br3RemoveCity);remember();updateCityResults();return;}
  if(id==='br3-add-country'){
-  const value=get('br3-country-pick')?.value;if(value&&!S.config.countries.includes(value))S.config.countries.push(value);remember();renderBuilder();return;
+  S.wizardPreset='';const value=get('br3-country-pick')?.value;if(value&&!S.config.countries.includes(value))S.config.countries.push(value);remember();renderBuilder();return;
  }
- if(id==='br3-clear-countries'){S.config.countries=[];S.config.cities=[];remember();renderBuilder();return;}
- if(id==='br3-all-cities'){S.config.cities=D.uniq([...S.config.cities,...filteredCities().map(x=>x.id)]);remember();updateCityResults();return;}
- if(id==='br3-clear-cities'){S.config.cities=[];remember();updateCityResults();return;}
+ if(id==='br3-clear-countries'){S.wizardPreset='';S.config.countries=[];S.config.cities=[];remember();renderBuilder();return;}
+ if(id==='br3-all-cities'){S.wizardPreset='';S.config.cities=D.uniq([...S.config.cities,...filteredCities().map(x=>x.id)]);remember();updateCityResults();return;}
+ if(id==='br3-clear-cities'){S.wizardPreset='';S.config.cities=[];remember();updateCityResults();return;}
  if(id==='br3-copy-ids'){const rows=preview();await copyText(rows.map(x=>x.Event_ID||x.Venue_ID).join('\n'));return;}
  if(id==='br3-preview'){preview();return;}
  if(id==='br3-generate'){await generate();return;}
@@ -445,7 +445,7 @@ function handleChange(target){
  const id=target.id;
  if(target.dataset.br3SourcePick){const key=target.dataset.br3SourcePick;const set=new Set(S.config.sourceKeys||[]);if(target.checked)set.add(key);else set.delete(key);S.config.sourceKeys=[...set];remember();return;}
  if(target.dataset.br3City){
-  const city=target.dataset.br3City;
+  S.wizardPreset='';const city=target.dataset.br3City;
   S.config.cities=target.checked?D.uniq([...S.config.cities,city]):S.config.cities.filter(x=>x!==city);
   remember();return;
  }
