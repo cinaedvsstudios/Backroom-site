@@ -1,7 +1,7 @@
 {
   "_meta": {
     "title": "Backroom Cruising Area — Retained URL Research Registry",
-    "version": "2026-11-13-enriched",
+    "version": "2026-11-13-final-url-consolidation",
     "created_berlin": "2026-11-13",
     "scope": "One retained research URLs file for future update checks, including production cruising listings, queued candidates, archived source research and independent research leads.",
     "source_repository": "cinaedvsstudios/Backroom-site",
@@ -9,7 +9,7 @@
     "source_base_snapshot": "2026-11-06 to 2026-11-13",
     "data_not_proof": "Linked directory pages and old research notes do not prove present-day cruising, lawful access or recent visitors. A checked source URL is not a checked live activity claim.",
     "selection": "Prefer direct spot-specific cruising reference pages. Preserve supporting links, but rank directory indexes and contextual evidence lower. Source status is from archived research, not a fresh URL accessibility check.",
-    "work_status": "A_B_C_D_AND_AUXILIARY_ENRICHED__FINAL_AUDIT_PENDING",
+    "work_status": "URL_CONSOLIDATION_COMPLETE__ORIGINAL_RESEARCH_NOT_DELETED",
     "counts": {
       "total": 1591,
       "queue_candidates": 1172,
@@ -18,9 +18,20 @@
       "current_site_cruising_listings": 486,
       "auxiliary_manifest": 162,
       "reference_pass": 50,
-      "best_direct": 1082,
-      "best_index": 875,
-      "no_best_url": 0
+      "best_direct": 1106,
+      "best_index": 485,
+      "no_best_url": 0,
+      "all_record_ids": 1591,
+      "original_queue_candidates": 1172,
+      "current_public_cruising_listings": 486,
+      "best_specific_spot_urls": 1106,
+      "best_broad_or_contextual_urls": 485,
+      "remaining_homepage_best_urls": 0,
+      "without_any_best_url": 0,
+      "alternate_url_references": 3516,
+      "additional_unmatched_direct_leads": 161,
+      "regional_research_urls": 123,
+      "general_research_websites": 20
     },
     "cleanup_permission": "NO_DELETIONS_AUTHORISED_OR_PERFORMED; audit and retain essential production files separately.",
     "queue_sha": "74f6ddf1d75b7b26c5f8e5ff3557aecef9bce99f",
@@ -146,6 +157,23 @@
       "unmatched_direct_leads": 161,
       "discovery_pages": 123,
       "last_errors": []
+    },
+    "audited_berlin": "2026-11-13",
+    "final_audit": {
+      "group_B_batches": 59,
+      "group_C_batches": 59,
+      "group_D_batches": 59,
+      "total_BCD_batches": 177,
+      "original_raw_archives": 23,
+      "original_raw_archive_errors": [],
+      "additional_verification_batches": 4,
+      "group_A_master_included": true,
+      "group_A_substantive_research_incomplete": true,
+      "homepages_replaced": 6,
+      "source_url_accessibility_live_rechecked": false,
+      "all_original_research_safely_represented_in_full": false,
+      "destructive_cleanup_performed": false,
+      "warning": "This registry preserves candidate identities, select spot and alternate URLs, research statuses, a few short summaries and research source families; it is NOT a lossless replacement for all archived reports, provenance and chronology. Group A research remains partially incomplete. Archive deletion should await dependency review and a separate user-approved cleanup."
     }
   },
   "research_websites": [
@@ -283,13 +311,18 @@
       ],
       "research_stage": "incomplete",
       "live_status": "Live",
-      "best_url": "https://cruisinggays.com",
+      "best_url": "https://www.gays-cruising.com/en/andorra",
       "best_url_basis": {
         "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
+        "research_provenance": "final_audit_prioritized_more_specific_url",
         "source_status": "current_site_source_field"
       },
       "alternate_urls": [
+        {
+          "url": "https://cruisinggays.com",
+          "page_type": "directory_or_city_page",
+          "source_status": "current_site_source_field"
+        },
         {
           "url": "https://gay-szene.net",
           "page_type": "directory_or_city_page",
@@ -317,11 +350,6 @@
         },
         {
           "url": "https://thegaypassport.com",
-          "page_type": "directory_or_city_page",
-          "source_status": "current_site_source_field"
-        },
-        {
-          "url": "https://www.gays-cruising.com/en/andorra",
           "page_type": "directory_or_city_page",
           "source_status": "current_site_source_field"
         }
@@ -618,13 +646,18 @@
       ],
       "research_stage": "incomplete",
       "live_status": "Live",
-      "best_url": "https://cruisinggays.com",
+      "best_url": "https://www.gays-cruising.com/en/andorra",
       "best_url_basis": {
         "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
+        "research_provenance": "final_audit_prioritized_more_specific_url",
         "source_status": "current_site_source_field"
       },
       "alternate_urls": [
+        {
+          "url": "https://cruisinggays.com",
+          "page_type": "directory_or_city_page",
+          "source_status": "current_site_source_field"
+        },
         {
           "url": "https://gay-szene.net",
           "page_type": "directory_or_city_page",
@@ -652,11 +685,6 @@
         },
         {
           "url": "https://thegaypassport.com",
-          "page_type": "directory_or_city_page",
-          "source_status": "current_site_source_field"
-        },
-        {
-          "url": "https://www.gays-cruising.com/en/andorra",
           "page_type": "directory_or_city_page",
           "source_status": "current_site_source_field"
         }
@@ -9352,16 +9380,17 @@
       ],
       "research_stage": "two_directory_identity_match_geography_verified_but_recent_activity_not",
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/denmark",
+      "best_url": "https://www.popcorn.dating/denmark/syddanmark/n%C3%B8rre%2Bnebel/locations/public-sex/outdoor/houstrup-strand/22002/",
       "best_url_basis": {
-        "page_type": "directory_or_context",
-        "source_status": "saved_best"
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "final_audit_prioritized_more_specific_url",
+        "source_status": "linked_page_matched_archived_detail_live_unavailable"
       },
       "alternate_urls": [
         {
-          "url": "https://www.popcorn.dating/denmark/syddanmark/n%C3%B8rre%2Bnebel/locations/public-sex/outdoor/houstrup-strand/22002/",
-          "page_type": "other_reference",
-          "source_status": "linked_page_matched_archived_detail_live_unavailable"
+          "url": "https://www.gays-cruising.com/en/denmark",
+          "page_type": "directory_or_context",
+          "source_status": "saved_best"
         },
         {
           "url": "https://www.visitdenmark.com/denmark/plan-your-trip/houstrup-beach-gdk602687",
@@ -48700,15 +48729,16 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/netherlands",
+      "best_url": "https://www.popcorn.dating/netherlands/zeeland/vrouwenpolder/locations/public-sex/outdoor/neeltje-jans/20308/",
       "best_url_basis": {
-        "page_type": "directory_or_context",
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "final_audit_prioritized_more_specific_url",
         "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
-          "url": "https://www.popcorn.dating/netherlands/zeeland/vrouwenpolder/locations/public-sex/outdoor/neeltje-jans/20308/",
-          "page_type": "other_reference",
+          "url": "https://www.gays-cruising.com/en/netherlands",
+          "page_type": "directory_or_context",
           "source_status": "linked_page_matched"
         },
         {
@@ -48757,15 +48787,15 @@
       ],
       "research_stage": null,
       "live_status": "Live",
-      "best_url": "https://www.gays-cruising.com/en/netherlands",
+      "best_url": "https://www.popcorn.dating/netherlands/zeeland/vrouwenpolder/locations/public-sex/outdoor/neeltje-jans/20308/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "current_listing_source",
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "final_audit_prioritized_more_specific_url",
         "source_status": "current_site_source_field"
       },
       "alternate_urls": [
         {
-          "url": "https://www.popcorn.dating/netherlands/zeeland/vrouwenpolder/locations/public-sex/outdoor/neeltje-jans/20308/",
+          "url": "https://www.gays-cruising.com/en/netherlands",
           "page_type": "directory_or_city_page",
           "source_status": "current_site_source_field"
         },
@@ -49223,15 +49253,16 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/netherlands",
+      "best_url": "https://www.popcorn.dating/netherlands/limburg/guttecoven/locations/public-sex/parking%2Blot/swentibold-a2/20415/",
       "best_url_basis": {
-        "page_type": "directory_or_context",
+        "page_type": "direct_cruising_entry",
+        "research_provenance": "final_audit_prioritized_more_specific_url",
         "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
-          "url": "https://www.popcorn.dating/netherlands/limburg/guttecoven/locations/public-sex/parking%2Blot/swentibold-a2/20415/",
-          "page_type": "other_reference",
+          "url": "https://www.gays-cruising.com/en/netherlands",
+          "page_type": "directory_or_context",
           "source_status": "linked_page_matched"
         }
       ],
@@ -75305,7 +75336,10 @@
       "Source notes, historical reports and access context would be lost if all original research were deleted; this registry preserves compact links/statuses but not all old prose.",
       "GitHub history may keep past versions even after deletion.",
       "Do not delete any files outside the cruising-research archive."
-    ]
+    ],
+    "completion": "Consolidated URL registry complete; deletion not performed. Before deleting archives, check dependents and whether original dated comments and access evidence must also be retained.",
+    "potential_delete_scope": "research/Archive only after separate review; do not delete listings.json, events.json, admin scripts, site assets, or any active research operations.",
+    "publication_warning": "Sources may be old, blocked, unavailable or merely directory references; do not treat these URLs as proof of active cruising or legal access."
   },
   "unmatched_direct_leads": [
     {
