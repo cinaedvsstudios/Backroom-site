@@ -74,7 +74,7 @@ const CHECKS=[
  {id:'description',name:'Missing description',scope:'all'},
  {id:'short',name:'Description shorter than 100 characters',scope:'all'},
  {id:'sources',name:'Missing source URLs',scope:'all'},
- {id:'tags',name:'Missing tags (Vibe_Tags)',scope:'venues'},
+ {id:'tags',name:'Missing tags (Vibe_Tags)',scope:'all'},
  {id:'image',name:'Missing image URL',scope:'all'},
  {id:'website',name:'Missing official website',scope:'venues'},
  {id:'address',name:'Missing venue address/location',scope:'venues'},
@@ -104,7 +104,7 @@ function checkedRecords(){
    if(!description)issues.push('description');
    if(description.length<100)issues.push('short');
    if(!r.Source_URLs)issues.push('sources');
-   if(!ev&&(r.Vibe_Tags==null||String(Array.isArray(r.Vibe_Tags)?r.Vibe_Tags.join(''):r.Vibe_Tags).trim()===''))issues.push('tags');
+   if(r.Vibe_Tags==null||String(Array.isArray(r.Vibe_Tags)?r.Vibe_Tags.join(''):r.Vibe_Tags).trim()==='')issues.push('tags');
    if(!(ev?r.Event_Image_URL:r.Image_URL))issues.push('image');
    if(!ev){
      if(!r.Website_URL)issues.push('website');
