@@ -178,6 +178,7 @@ function installCompact() {
     compact.page+=Number(page.dataset.compactPage)||0;renderTable();
   });
   syncCompactUi();
+  if(Array.isArray(draftData)&&draftData.length)renderTable();
 }
 async function copyIDs(value) {
   if(!value)return;
@@ -186,7 +187,7 @@ async function copyIDs(value) {
     await navigator.clipboard.writeText(value);msg('Copied '+selectionSet().size+' selected IDs.');
   }catch(error){
     const modal=document.getElementById('clipboard-text');
-    if(modal){modal.value=value;modal.closest('.modal-overlay')?.classList.remove('hidden');modal.select();}
+    if(modal){modal.value=value;document.getElementById('clipboard-float')?.classList.remove('hidden');modal.dispatchEvent(new Event('input'));modal.focus();modal.select();msg('Selected IDs placed in Admin Clipboard. Use Copy there.');}
     else{
       const field=document.createElement('textarea');field.value=value;field.style.cssText='position:fixed;left:20px;top:20px;z-index:9999';document.body.appendChild(field);field.select();
       try{document.execCommand('copy');msg('Copied selected IDs.');}catch{window.prompt('Copy selected IDs:',value);}
@@ -197,7 +198,8 @@ async function copyIDs(value) {
 function fieldNames(rows){
   const keys=new Set(['Record Type','Event Month','Country','City','Status','Category','Vibe_Tags']);
   rows.slice(0,300).forEach(row=>Object.keys(row).forEach(k=>keys.add(k)));
-  return [...keys].filter(k=>['Record Type','Event Month'].includes(k)||rows.some(r=>Object.hasOwn(r,k))).sort((a,b)=>a.localeCompare(b));
+  const available=new Set(rows.slice(0,300).flatMap(Object.keys));
+  return [...keys].filter(k=>['Record Type','Event Month'].includes(k)||available.has(k)).sort((a,b)=>a.localeCompare(b));
 }
 function dimension(row,field){
   if(!field)return'';
@@ -454,9 +456,6 @@ function install(){
       else if(button.id==='br-p1-export-group-csv')downloadExplorer('groups');
     });
   }
-  document.body.addEventListener('change',event=>{
-    if(event.target.closest('#br-p1-explorer')&&event.target.dataset.explorer)applyExplorerControl(event.target);
-  });
   // Some earlier releases dynamically insert the selective-copy module after load.
   collapseSelectiveCopy();
   document.addEventListener('click',event=>{
