@@ -18,7 +18,7 @@
       "current_site_cruising_listings": 486,
       "auxiliary_manifest": 162,
       "reference_pass": 50,
-      "best_direct": 1047,
+      "best_direct": 1067,
       "best_index": 875,
       "no_best_url": 0
     },
@@ -37,8 +37,9 @@
       "errors": []
     },
     "enrichment_D_progress": {
-      "batches_completed_through": 11,
+      "batches_completed_through": 26,
       "batches_total": 59,
+      "records_enriched_this_pass": 75,
       "errors": []
     }
   },
@@ -13942,17 +13943,16 @@
       ],
       "research_stage": "priority_for_listing_build",
       "live_status": null,
-      "best_url": "https://planet-randy.com/blog/en/eintrag/parkplatz-aschheim/",
+      "best_url": "https://planet-randy.com/blog/eintrag/parkplatz-aschheim/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
-          "url": "https://planet-randy.com/blog/eintrag/parkplatz-aschheim/",
+          "url": "https://planet-randy.com/blog/en/eintrag/parkplatz-aschheim/",
           "page_type": "direct_cruising_entry",
-          "source_status": "original_index_reference"
+          "source_status": "saved_best"
         }
       ],
       "source_count": 1,
@@ -13967,10 +13967,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Roadside motorway parking facility on the A99 northeast of Munich. Planet Randy has five dated comments, but the two most recent (30 November 2025) are invitations to meet, not evidence that any meeting took place.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_0940_0944.json"
       ],
       "original_index": 943,
       "original_section": "D"
@@ -30452,22 +30453,21 @@
       ],
       "research_stage": "priority_for_listing_build",
       "live_status": null,
-      "best_url": "https://planet-randy.com/blog/en/eintrag/paradiesparkplatz/",
+      "best_url": "https://planet-randy.com/blog/eintrag/paradiesparkplatz/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "direct_research_url",
-        "source_status": "auxiliary_reference_not_activity"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
-          "url": "https://planet-randy.com/blog/eintrag/paradiesparkplatz/",
+          "url": "https://planet-randy.com/blog/en/eintrag/paradiesparkplatz/",
           "page_type": "direct_cruising_entry",
-          "source_status": "original_index_reference"
+          "source_status": "saved_best"
         },
         {
           "url": "https://gay-szene.net/paradies-waldparkplatz-in-starnberg/6646/eintrag.html",
           "page_type": "direct_cruising_entry",
-          "source_status": "auxiliary_reference_not_activity"
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -30482,10 +30482,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Woodland parking and lakeshore near Possenhofen, with many regular summer visitors. A 30 January 2026 post said the WC was locked, while adjacent posts sought personal dates and were not confirmation of a gathering. Source's description groups lake beach, parking lot and toilet which may not share access.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_0940_0944.json"
       ],
       "original_index": 944,
       "original_section": "D"
@@ -30539,8 +30540,7 @@
       "best_url": "https://www.cruisinggays.com/wiesbaden/areas/13286-raunheim/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -30555,9 +30555,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Older CruisingGays directory calls Raunheim an A3 lay-by on both motorway sides near Frankfurt airport; the written location is inconsistent and lacks verifiable coordinates or recent reports.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0940_0944.json"
       ],
       "original_index": 940,
       "original_section": "D"
@@ -32035,13 +32036,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html",
+      "best_url": "https://gay-szene.net/mineralbad-leuze-in-stuttgart/8433/eintrag.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -32054,9 +32060,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Large thermal pool and wellness centre with mixed visitors. Older forum comments make inconsistent claims of male encounters in saunas and pools; the last March 2024 firsthand review said no encounters observed. The official site confirms the operating facility, NOT sanctioned sexual activity, and notes temporary shower-section maintenance on 2–6 and 9–13 November 2026.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0935_0939.json"
       ],
       "original_index": 935,
       "original_section": "D"
@@ -32197,13 +32204,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html",
+      "best_url": "https://gay-szene.net/schwaben-quellen-in-stuttgart/6102/eintrag.html",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://gay-szene.net/gay-cruising-in-stuttgart/262/17/rubrik.html",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -32216,9 +32228,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "7,000 m² mixed wellness and sauna facility; standard operation is naturist apart from designated textile days. The old gay directory describes discreet cruising, but the newest specific forum story is from 2018 and nothing since proves activity. The current operator confirms standard winter opening and several separate areas that may temporarily close.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0935_0939.json"
       ],
       "original_index": 936,
       "original_section": "D"
@@ -32359,19 +32372,18 @@
       "best_url": "https://planet-randy.com/blog/eintrag/isar-strandbank/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://gay-szene.net/isarauen-freimann-in-unterfoehring/6626/eintrag.html",
           "page_type": "direct_cruising_entry",
-          "source_status": "auxiliary_reference_not_activity"
+          "source_status": "saved_other"
         },
         {
           "url": "https://planet-randy.com/blog/eintrag/tag/gay-cruising-a99/",
-          "page_type": "directory_or_city_page",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -32386,10 +32398,11 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Isar riverbank, swimming and walking paths in Unterföhring. Planet Randy describes a historical gay meeting reputation but its only 2021 review is a brief compliment, not identifiable as an observed encounter.",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_manifest_2026-11-06.json"
+        "research/Archive/verification_manifest_2026-11-06.json",
+        "research/Archive/D/batch_0940_0944.json"
       ],
       "original_index": 942,
       "original_section": "D"
@@ -32404,13 +32417,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/3/",
+      "best_url": "https://planet-randy.com/blog/en/eintrag/parkplatz-holmer-sandberge/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-hamburg/page/3/",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -32423,9 +32441,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Landscape parking around inland dunes near Wedel, listed in a Hamburg-tagged directory though physically outside Hamburg. Planet Randy has a generic undated cruising description and ZERO user reviews. Conservation authority says the landscape may be used via marked trails and is protected habitat.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0935_0939.json"
       ],
       "original_index": 937,
       "original_section": "D"
@@ -32481,8 +32500,7 @@
       "best_url": "https://www.cruisinggays.com/wiesbaden/areas/44436-kurhaus-park/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -32497,9 +32515,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Historic cruising entry for a public spa garden near Wiesbaden Kurhaus. Source contains no dated visitor proof and an approximate map marker, so its assertion of all-day attendance should not be relied upon.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0940_0944.json"
       ],
       "original_index": 941,
       "original_section": "D"
@@ -32514,13 +32533,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/2/",
+      "best_url": "https://planet-randy.com/blog/eintrag/rastplatz-a10-kalkberge/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://planet-randy.com/blog/en/eintrag/tag/gay-cruising-berlin/page/2/",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -32533,9 +32557,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A10 motorway rest areas represented collectively in Planet Randy: Kalkberge Ost (toward Rüdersdorf) and Kranichberge West (toward Erkner). Its self-promotional narrative includes no dated user reviews; German and English versions are one source.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0935_0939.json"
       ],
       "original_index": 938,
       "original_section": "D"
@@ -32553,8 +32578,7 @@
       "best_url": "https://www.cruisinggays.com/wurzburg/areas/16746-a7-parking-area/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -32569,9 +32593,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "CruisingGays directory lists an A7 parking area on the northbound return toward Würzburg after Marktbreit. Claims about visitor mix and nighttime activity are unverified legacy copy, and page shows 'Last verified: Not known yet' and zero comments.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0935_0939.json"
       ],
       "original_index": 939,
       "original_section": "D"
@@ -55646,9 +55671,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -55663,9 +55687,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Retail shopping centre whose toilets were included in one Spanish cruising directory. The archive contains no detail link, firsthand dated visit or independent gay-cruising corroboration. Normal retail toilet access does not imply permission for sexual activity.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0945_0949.json"
       ],
       "original_index": 945,
       "original_section": "D"
@@ -55682,9 +55707,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -55699,9 +55723,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Beachside reed-bed/nudist-area location named in several historical travel guides. A CruisingMap entry was created in November 2009 without visitor messages; independent 2016 and 2018 regional guides mention the same Las Cañas coastal location. No confirmation of 2026 activity or current environmental access.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0945_0949.json"
       ],
       "original_index": 946,
       "original_section": "D"
@@ -55762,9 +55787,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -55779,9 +55803,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A cruising directory names a C-25 rest area at Avinyó. Its city page also separately lists 'Área de descanso C 25', making a duplicate possible, but no exact carriageway or location verifies they refer to one parking area. Public camper parking sites near town are NOT assumed to be the same place.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0945_0949.json"
       ],
       "original_index": 947,
       "original_section": "D"
@@ -55798,9 +55823,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -55815,9 +55839,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Green corridor around the Pomar seasonal river. One gay directory lists it as a natural-area candidate; a publicly documented 2026 urban-park restoration changes vegetation, walking paths and nearby facilities. None of that confirms present cruising activity or exact historical spot.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0945_0949.json"
       ],
       "original_index": 948,
       "original_section": "D"
@@ -55834,9 +55859,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -55851,9 +55875,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "One Spanish regional cruising index names a fish hatchery ('Piscifactoria') near Bagà as a park-type candidate. No detailed location, public access document, independent spot verification or visitor date is available. The name might denote a functioning aquaculture or former industrial site rather than a public park.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0945_0949.json"
       ],
       "original_index": 949,
       "original_section": "D"
@@ -55868,17 +55893,16 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+      "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_other"
       },
       "alternate_urls": [
         {
-          "url": "https://www.gays-cruising.com/en/barcelona/spain",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
         }
       ],
       "source_count": 2,
@@ -55899,9 +55923,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Two independent gay directories identify toilets in the Las Arenas shopping centre; the venue identity is corroborated as the same Barcelona mall. The Gay Passport 2026-labelled article includes unverified general crowd claims; neither source supplies dated firsthand use or current WC conditions.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0950_0954.json"
       ],
       "original_index": 953,
       "original_section": "D"
@@ -55966,9 +55991,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -55983,9 +56007,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Single source's July 18 2026 comment mentions market toilets as a potential meeting place, but it is only an inquiry. The Barcelona municipal market authority has a 2026 public tender to rebuild/reconfigure toilet facilities, meaning exact accessibility could change. Market operation confirmed; cruising not.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0950_0954.json"
       ],
       "original_index": 954,
       "original_section": "D"
@@ -56045,9 +56070,8 @@
       "live_status": null,
       "best_url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -56062,9 +56086,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Secondary gay guide identifies the passenger toilets around rail platforms 6 and 7 as a historic cruising reference; does not provide direct dated traveller evidence. Station is an operating rail hub, but ticketing/access, supervision and present toilet existence were not independently checked.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0950_0954.json"
       ],
       "original_index": 952,
       "original_section": "D"
@@ -56122,15 +56147,14 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [
         {
           "url": "https://www.gays-cruising.com/en/spain",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         }
       ],
       "source_count": 1,
@@ -56151,9 +56175,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Historic outdoor gay cruising area on Montjuïc, repeatedly referenced by guides. September 2026 local reporting independently describes an ongoing cruising scene, but not safe predictable venues, timings or exact subarea. A 2026 Barcelona guide warns against visiting isolated trails because of theft and changed civic restrictions.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0950_0954.json"
       ],
       "original_index": 950,
       "original_section": "D"
@@ -56170,9 +56195,8 @@
       "live_status": null,
       "best_url": "https://thegaypassport.com/barcelona/barcelona-cruising-guide/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -56187,9 +56211,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Major public city park with gardens, monuments, an ornamental fountain and family facilities. The Gay Passport 2026-labelled article calls the northeastern park near the cascade a cruising area, but its suggested after-22:00 peak conflicts with city council's actual public opening 07:00 until dusk. Publication year is not a dated firsthand visitor report.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0950_0954.json"
       ],
       "original_index": 951,
       "original_section": "D"
@@ -56204,13 +56229,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
+      "best_url": "https://www.gays-cruising.com/pl/cruising/parque_sagrada_familia_barcelona_espana_621",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -56223,9 +56253,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Public green space beside Sagrada Família. A July 2026 comment referenced the park, but the archive describes it as an inquiry, not an observed encounter; the separately indexed venue page contains undated promotional claims about evening attendance.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0955_0959.json"
       ],
       "original_index": 955,
       "original_section": "D"
@@ -56306,13 +56337,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/spain",
+      "best_url": "https://www.gays-cruising.com/de/cruising/beneixida_la_llosa_de_ranes_espana_7767",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -56325,9 +56361,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Abandoned or formerly abandoned A-7 roadside rest area near Beneixida. Its entry says there is a pine stand next to the parking stop; page age, exact carriageway, road access and present status cannot be inferred from an undated crowd claim.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0955_0959.json"
       ],
       "original_index": 956,
       "original_section": "D"
@@ -56342,13 +56379,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
+      "best_url": "https://www.gays-cruising.com/en/calella/barcelona/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -56361,9 +56403,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Rocky coves at Roca Grossa / Platja de les Roques on the Calella–Sant Pol municipal border. Source1 names a cruising place, while both councils describe the public beach and designated naturist areas, which do not themselves prove cruising.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0955_0959.json"
       ],
       "original_index": 957,
       "original_section": "D"
@@ -56503,9 +56546,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -56520,9 +56562,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Bridge area around Castellbisbal and the Llobregat corridor, likely one of several nearby source1 spots under A-7/AP-7 crossings. Another listed picnic-table-and-bridge site is reportedly 0.2 km away, so exact identity is ambiguous.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0955_0959.json"
       ],
       "original_index": 958,
       "original_section": "D"
@@ -56539,9 +56582,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -56556,9 +56598,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Named Bellaterra motorway service station on the AP-7 in Cerdanyola del Vallès. Existence is confirmed by historic motorway infrastructure material but a public road services facility is not itself evidence of consensual cruising.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0955_0959.json"
       ],
       "original_index": 959,
       "original_section": "D"
@@ -56575,9 +56618,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -56592,9 +56634,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "One Barcelona regional directory lists a riverside parking area in El Prat. Its August 2026 city-level check-in index shows someone checked in under the location name; this is digital user activity, not observation of cruising or proof the stop was legally accessible.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0960_0964.json"
       ],
       "original_index": 960,
       "original_section": "D"
@@ -56642,13 +56685,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
+      "best_url": "https://www.gays-cruising.com/fr/cruising/area_de_servicio_ap7_gelida_espana_6972",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -56661,9 +56709,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The source's own page describes an AP-7 service stop and nearby natural area; no independent dated firsthand visitor report was accessible. The source lists a second 'Parking AP-7' about half a kilometre away, so a nearby duplicate or adjacent carriageway may exist.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0960_0964.json"
       ],
       "original_index": 961,
       "original_section": "D"
@@ -57063,13 +57112,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/spain",
+      "best_url": "https://www.gays-cruising.com/en/cruising/playa_de_el_rebollo_la_marina_espana_4439",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57082,9 +57136,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Large public beach, pines and dunes popular with naturists; a heavily commented cruising directory describes historic gay male meetings but site text does not supply validated recent first-person examples. Elche's 2026 municipal report describes an active monitored public beach and extensive visitor safety patrols, not sexual permission.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0960_0964.json"
       ],
       "original_index": 962,
       "original_section": "D"
@@ -57101,9 +57156,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -57118,9 +57172,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Operating shopping and leisure complex beside the Santa Catalina cruise terminal, included as 'Baños CC. El Muelle' by a single gay cruising index. The centre's official website confirms active shops and restaurants, but there is no direct dated visitor evidence of sexual activity or permission to use customer bathrooms for that purpose.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0965_0969.json"
       ],
       "original_index": 966,
       "original_section": "D"
@@ -57137,9 +57192,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -57154,9 +57208,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Single cruising-site index uses the generic name 'Baños Corte Inglés', but the department-store chain operates at least two centres in Las Palmas. Without a detailed address or source pin, this cannot be assigned to one of the current shop buildings.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0965_0969.json"
       ],
       "original_index": 967,
       "original_section": "D"
@@ -57173,11 +57228,21 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.bibliotecadecanarias.org/las-palmas/preguntas-frecuentes",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.bibliotecadecanarias.org/biblioteca/gran-canaria/biblioteca-publica-del-estado-en-las-palmas",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57190,9 +57255,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The source names a 'San Telmo library' in Las Palmas without any address or floor. The State Public Library stands immediately beside San Telmo's bus station, making it a plausible match, but its official name is Biblioteca Pública del Estado en Las Palmas. A similarly named Biblioteca de San Telmo also exists in Donostia/San Sebastián; do not assign its official hours or coordinates to this Canary Islands listing. N",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0975_0979.json"
       ],
       "original_index": 976,
       "original_section": "D"
@@ -57209,11 +57275,16 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://laspalmasgcdeportes.sigho.es/web/noticias/26",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57226,9 +57297,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Regional gay directory refers to fields near La Ballena. Municipal sports website speaks of 'former La Ballena football pitches' adapted for outdoor activities, so its original physical layout may have changed; not an active football complex without verification.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0970_0974.json"
       ],
       "original_index": 971,
       "original_section": "D"
@@ -57245,11 +57317,21 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://cclasarenas.com/el-centro/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://cclasarenas.com/contactar/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57262,9 +57344,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Operating Las Palmas shopping mall by Las Canteras beach. Original gay directory lists it as a broad shopping-area cruising candidate but supplies no toilet floor, dated encounter or proof that the business allows cruising. Not to be confused with the Barcelona Arenas shopping centre.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0970_0974.json"
       ],
       "original_index": 970,
       "original_section": "D"
@@ -57281,11 +57364,21 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://calendarioeventos.com/en/event/musica-savia-nueva",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://concanarias.com/agenda/e/las-ramblas-caso-abierto-cena-con-misterio-y-teatro-interactivo-20ad80.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57298,9 +57391,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Active public shopping/leisure centre included in single-source cruising index. Public events in September and November 2026 confirm normal retail, family and restaurant operations but no visitor cruising reports or designated facilities.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0970_0974.json"
       ],
       "original_index": 974,
       "original_section": "D"
@@ -57317,9 +57411,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -57334,9 +57427,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Commercial shopping centre referenced as a cruising spot only in a regional directory. Independent updated centre information confirms it is an operating mixed-age retail venue with family attractions, but gives no support for cruising or restroom operations. Nearby El Corte Inglés at number 46 is a different facility.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0960_0964.json"
       ],
       "original_index": 963,
       "original_section": "D"
@@ -57353,9 +57447,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -57370,9 +57463,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Operating retail and leisure centre named in single regional cruising directory. The operator's 2026 website confirms normal commercial and family programming, including an anniversary event on 6–7 November, not a sex venue. No specific restroom or dated positive cruising visitor account identified.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0965_0969.json"
       ],
       "original_index": 969,
       "original_section": "D"
@@ -57389,9 +57483,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -57406,9 +57499,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Historic local directory marks Doramas park as an informal place; no dated firsthand cruising encounter available. The city is currently holding a public ecology/art installation in the park from 29 October to 29 November 2026, confirming lively public recreation but not sexual activity.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0965_0969.json"
       ],
       "original_index": 965,
       "original_section": "D"
@@ -57425,11 +57519,16 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://contratos.gobierto.es/licitaciones/5105404",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57442,9 +57541,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Busy passenger bus station (Guaguas) identified as an alleged cruising area by a single directory. 2026 procurement covers renovation of its east entrance, gallery and transit areas, but the dates do not confirm that toilets are currently accessible or involved.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0970_0974.json"
       ],
       "original_index": 972,
       "original_section": "D"
@@ -57461,9 +57561,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -57478,9 +57577,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An extremely generic name appears in a Las Palmas gay directory as a natural beach cruising candidate. The city has several beaches, and the record cannot reliably be tied to Las Canteras, La Laja, Las Alcaravaneras or Maspalomas's designated gay beach on the south of a different municipality.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0970_0974.json"
       ],
       "original_index": 973,
       "original_section": "D"
@@ -57497,11 +57597,26 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://guaguasglobal.com/tarifas/puntos-venta/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.guaguas.com/lineas/41",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gobiernodecanarias.org/justicia/memoriahistorica/disidenciagenero/lugaressignificativos/grancanaria/parquesantacatalina/index.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57514,9 +57629,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The city bus interchange beside Santa Catalina Park is a genuine operating transit facility. Gays-Cruising's Las Palmas index labels the interchange as a cruising candidate, but supplies neither a named toilet nor a verifiable recent encounter. The broader Santa Catalina Park has a documented queer meeting history: Canary Islands government research mentions former public urinals, now a police premises, as historic e",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0975_0979.json"
       ],
       "original_index": 975,
       "original_section": "D"
@@ -57533,9 +57649,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "saved_best"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -57550,9 +57665,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "One regional directory combines the La Laja beach and Mercalaspalmas industrial/warehouse area in its name. These are not identical landmarks; current 2026 roadworks affect the southern GC-1 corridor but do not identify the historical meeting site.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0965_0969.json"
       ],
       "original_index": 968,
       "original_section": "D"
@@ -57569,9 +57685,8 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/las_palmas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [],
       "source_count": 1,
@@ -57586,9 +57701,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A single Las Palmas regional directory labels 'Tivoli' an industrial/park candidate. Independent 2025–2026 transport reporting places the former Tivoli land by La Laja and notes planned bus-depot works and GC-1 link resurfacing, but the exact original meeting area is unknown.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0960_0964.json"
       ],
       "original_index": 964,
       "original_section": "D"
@@ -57603,13 +57719,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/spain",
+      "best_url": "https://www.gays-cruising.com/en/cruising/calle_einstein_leganes_espana_53835",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57622,9 +57743,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The specific Gays-Cruising entry describes a patch of trees bordering industrial streets Calle Einstein and Calle Planck. It describes vehicle visits and meetings at different times, but these are undated claims from a community directory. The public detail page shows a large comment count, yet its comments are age/login restricted in the accessible result, so neither their dates nor the actual activity can be indepe",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0975_0979.json"
       ],
       "original_index": 977,
       "original_section": "D"
@@ -57669,11 +57791,26 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.madrid.es/portales/munimadrid/es/Intercambiador-de-transporte-Moncloa/?vgnextchannel=262f8fb9458fe410VgnVCM1000000b205a0aRCRD&vgnextfmt=default&vgnextoid=cc614a809078e110VgnVCM1000000b205a0aRCRD",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.crtm.es/tu-transporte-publico/intermodalidad/intercambiadores-crtm/moncloa/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://elpais.com/espana/madrid/2024-08-26/en-busca-de-sexo-anonimo-e-instantaneo-viaje-al-templo-del-cruising-en-madrid.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57686,9 +57823,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Large underground Madrid bus and Metro interchange. It is mentioned in a Gays-Cruising directory; independent reporting in El País (August 2024) also identified its toilets among places flagged by cruising forums. This confirms the historic reputation and venue identity, not a current on-site encounter or permission. Official transit sources confirm public access and services.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0980_0984.json"
       ],
       "original_index": 980,
       "original_section": "D"
@@ -57703,13 +57841,33 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/spain",
+      "best_url": "https://www.gays-cruising.com/en/cruising/parque_el_buen_retiro_madrid_espana_592",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.cruisinggays.com/madrid/areas/57898-el-retiro-park/",
+          "page_type": "direct_cruising_entry",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.gays-cruising.com/en/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://elpais.com/espana/madrid/2024-08-26/en-busca-de-sexo-anonimo-e-instantaneo-viaje-al-templo-del-cruising-en-madrid.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.esmadrid.com/informacion-turistica/parque-del-retiro",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57722,9 +57880,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The well-known city park has matching cruising references in Gays-Cruising and CruisingGays, both pointing to vegetation and paths around the Ángel Caído sector. El País independently described the same cruising area in August 2024. Gays-Cruising carries dated June 2026 messages seeking partners or proposing visits, which demonstrate current online interest, not independently confirmed on-site encounters. The older d",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0975_0979.json"
       ],
       "original_index": 978,
       "original_section": "D"
@@ -57826,13 +57985,18 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/spain",
+      "best_url": "https://www.gays-cruising.com/en/cruising/parque_detras_torre_negra_y_gasolinera_low_cost_ensanchedevallecas_vallecas_espana_5771",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57845,9 +58009,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Community directory identifies a treed area beyond a roundabout and petrol station near the La Gavia IKEA and an identifiable dark tower. The directory describes it as a cruising location but its public snapshot showed forum discussion from early 2024, not verified recent reports. A search result advertises larger comment totals, yet the text or dates of the newer comments could not be verified. Do not use the direct",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0975_0979.json"
       ],
       "original_index": 979,
       "original_section": "D"
@@ -57864,11 +58029,26 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gcgay.com/p/cruising-cancaneo.html?m=0",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.patroc.com/gay/grancanaria/cruising.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://gaycation.eu/spain/maspalomas/cruising/time-off",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57881,9 +58061,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A Cita shopping-centre toilet reference, separate from adult clubs renting commercial units in that same complex. An undated local GCGAY guide specifically describes historic cruising in Cita's gentlemen's toilets near Fund Grube on the ground floor. Its practical claims have not been verified for 2026; there is no verified recent visitor account. Current guides separately confirm a licensed club, TImE oFF, elsewhere",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0980_0984.json"
       ],
       "original_index": 981,
       "original_section": "D"
@@ -57898,13 +58079,28 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+      "best_url": "https://www.gays-cruising.com/de/cruising/banos_centro_comercial_faro_2_maspalomas_espana_32611",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.lopesan.com/es/corporativa",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.qdq.com/a/centros-comerciales/las-palmas/san-bartolome-de-tirajana",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57917,9 +58113,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A specific toilet candidate inside the Faro 2 retail centre. Its dedicated Gays-Cruising entry says the facilities were relatively quiet and had individual full-height cubicles; these details are undated and may no longer describe the interior. The retail complex remains in the Lopesan property portfolio and is described as having more than 70 units, but physical shopping-centre operations and toilet access need sepa",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0985_0989.json"
       ],
       "original_index": 986,
       "original_section": "D"
@@ -57936,11 +58133,21 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.maspalomas.com/mnutablonbandos",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.maspalomas.com/mnunotprensa/2660-cierre-del-parque-urbano-del-sur",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -57953,9 +58160,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Public municipal park toilet listing from one cruising directory. Independent municipality announcements confirm the park is operational but repeatedly closed for community events and installations. A notice published 5 November 2026 states closure 9–11 November, then weekday opening only from 16:00 during 14 November–7 December, with normal weekend hours. These restrictions concern the park, and there is no proof th",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0985_0989.json"
       ],
       "original_index": 987,
       "original_section": "D"
@@ -58013,13 +58221,28 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+      "best_url": "https://www.gays-cruising.com/de/cruising/detras_del_hospital_san_roque_en_el_frente_del_cementerio_maspalomas_espana_14892",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://www.maspalomas.com/index.php/notcementerios",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://maspalomasahora.com//art/76753/art/76781/canarias-percibe-la-desaceleracion-del-turismo-britanico-y-afronta-la-wtm-con-seis-millones-de-visitantes-en-el-horizonte",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -58032,9 +58255,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Gays-Cruising's detailed entry identifies parking on roads described as blocked behind San Roque hospital, opposite El Pedrazo cemetery, with an undated claim of local cruising, notably in the afternoon. A Maspalomas municipal notice and November 2026 cemetery reporting independently establish the hospital/cemetery pairing and nearby taxi stops, but there is no independent verification that a particular road is still",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0985_0989.json"
       ],
       "original_index": 989,
       "original_section": "D"
@@ -58099,11 +58323,21 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.holidayworldmaspalomas.com/en/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.atrapalo.com/entradas/holidayworld-maspalomas-center-wooland_e4945046/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -58116,9 +58350,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Operating entertainment centre with family attractions, bowling, a food hall and other leisure businesses. A Gays-Cruising listing uses its generic commercial name, but supplies no specific washroom or dated report of actual cruising. Its current official website validates existence, not sexual activity.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0985_0989.json"
       ],
       "original_index": 985,
       "original_section": "D"
@@ -58137,35 +58372,49 @@
       "live_status": null,
       "best_url": "https://thegaypassport.com/community/gran-canaria-gay-cruising-guide/",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://coupleofmen.com/39101-gay-beaches-europe/",
-          "page_type": "context_or_official_source",
-          "source_status": "specialist_guide_or_contextual"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://nomadicboys.com/gay-gran-canaria-guide/",
-          "page_type": "context_or_official_source",
-          "source_status": "specialist_guide_or_contextual"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://thegayatlas.com/en/locations/gay-beach-maspalomas-kiosco-7-en/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.gaygrancanarias.com/gay-beach/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.travelgay.com/venue/maspalomas-sand-dunes-and-gay-beach",
-          "page_type": "context_or_official_source",
-          "source_status": "specialist_guide_or_contextual"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://thegaypassport.com/venue/kiosk-7/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://gaycation.eu/spain/maspalomas/beaches/maspalomas-gay-beach",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gaygrancanarias.com/cruising-gran-canaria/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -58180,11 +58429,12 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The Gay Passport's 2026 Gran Canaria guide identifies the gay beach historically known as Kiosk 7. Recent local guides explain kiosk numbers and the social centre have moved or expanded; some locate gay men mainly between kiosks 5 and 6, while others still treat kiosk 7 itself as a gay beach bar. These conflicting labels do not undermine the established beach-area identity, but make a precisely numbered kiosk pin unr",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
         "research/Archive/verification_manifest_2026-11-06.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/D/batch_0990_0994.json"
       ],
       "original_index": 991,
       "original_section": "D"
@@ -58264,11 +58514,16 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.diariodenavarra.es/noticias/sucesos/2017/04/14/una_mujer_una_bebe_heridas_caerse_pozo_gran_canaria_526890_3204.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -58281,9 +58536,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A single-site directory calls a green space by the Global bus depot 'Parque Cocheras Global'. A 2017 local news report independently confirms the depot's rear surroundings and documents an unguarded shaft incident there; it does not locate the claimed cruising site or establish current hazards. The modern state of access and actual park identity remain unclear. Avoid mapping a specific entry point without confirmatio",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0980_0984.json"
       ],
       "original_index": 983,
       "original_section": "D"
@@ -58298,13 +58554,23 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+      "best_url": "https://www.gays-cruising.com/en/cruising/noxon_maspalomas_espagne_128511",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "other_reference"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.gcgay.com/p/cruising-cancaneo.html?m=0",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -58317,9 +58583,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Gays-Cruising lists the named urban park and other nearby entries near the Yumbo Centre, where adult venues operate. An undated local GCGAY article refers to outdoor gardens opposite a Yumbo pharmacy as a former meet-up site and notes that brighter lighting had reduced activity. Without a precise street or plan, this cannot conclusively be equated with the named park. No credible dated recent on-site record for this ",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0980_0984.json"
       ],
       "original_index": 984,
       "original_section": "D"
@@ -58336,11 +58603,26 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.maspalomas.com/playas",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://naturismo.org/playas-nudistas/canarias/gran-canaria/carpinteras/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://guiaislascanarias.com/gran-canaria/playa-de-las-carpinteras//",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -58353,9 +58635,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Rock-and-pebble shoreline on Gran Canaria's southern coast, officially documented by the municipality as Playa de Las Carpinteras. Independent naturist and beach guides also identify this as a nude bathing beach and sometimes call it Las Mujeres. Its Gays-Cruising entry is a standalone cruising directory reference, but no date-specific firsthand cruising reports at this beach were verified. Nudist use does not automa",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0990_0994.json"
       ],
       "original_index": 990,
       "original_section": "D"
@@ -58372,11 +58655,26 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.maspalomas.com/playas",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.maspalomas.com/notmedioambiente/992-senalizaciondunas",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.gayout.com/europe/spain/maspalomas/cruising",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -58389,9 +58687,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Popular resort beach, with long-established gay beach and nearby Maspalomas dunes meeting traditions, but the Gays-Cruising candidate gives only the broad beach name. Contemporary gay guides document the south-island gay scene and dunes; that is not evidence that every stretch of Playa del Inglés is currently a cruising area. The named beach, dunes, Kiosk 7 sector and Playa de Maspalomas require geographic separation",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0980_0984.json"
       ],
       "original_index": 982,
       "original_section": "D"
@@ -58408,11 +58707,21 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/maspalomas/las_palmas/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.spain.info/en/beach/cardon/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.maspalomas.com/playas",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -58425,9 +58734,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A shoreline or point named Punta del Cardón is listed as a cruising candidate but no independent indexed page corroborates that precise name. Spain's official tourism site describes a quiet, isolated stony El Cardón beach by GC-500, yet its name and topography do not prove that it is the same spot as the directory's Punta del Cardón. Keep the potential connection for later geolocation review and avoid a speculative p",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0985_0989.json"
       ],
       "original_index": 988,
       "original_section": "D"
@@ -58495,11 +58805,26 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://visitmataro.cat/en/discover/active-and-cultural/walking-areas/parc-central-2",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://cruisingmap.com/52146-lavabos-parque-central",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://mispicaderos.com/52146-lavabos-parque-central",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -58512,9 +58837,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The historic landscaped Parc Central is officially documented as a public park with play areas and an event court, but its generic Gays-Cruising entry does not identify a particular path or restroom. Independently published 'Lavabos parque central' cruising-place records from 15 March 2025 describe morning activity at a park toilet, which may refer to this park or specifically its older section. The listings are unda",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0990_0994.json"
       ],
       "original_index": 992,
       "original_section": "D"
@@ -58575,17 +58901,26 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
+      "best_url": "https://www.gays-cruising.com/es/cruising/area_de_bomberos_mollet_molle_del_valles_mollet_espana_3296",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
+          "url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
           "url": "https://www.gays-cruising.com/en/spain",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.gays-cruising.com/fr/mollet/barcelona/espagne",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -58606,9 +58941,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Original source describes a pullout or stopping place between the fire service building and Alstom train factory, toward Santa Perpètua. Its dedicated page displays hundreds of comments and large recent monthly check-in aggregate, suggesting ongoing interest on that platform, but public snapshots hide message dates and text; neither number independently verifies a 2026 witnessed encounter. Verify exact boundaries and",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0990_0994.json"
       ],
       "original_index": 993,
       "original_section": "D"
@@ -58775,11 +59111,26 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://cruisingmap.com/35481-saltoki-reus",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://forocruising.com/viewtopic.php?f=51&start=0&t=99200",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://forocruising.com/index.php?sid=db9d4871b15fcf6c2bca0a34780b250a",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -58792,9 +59143,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A locally named industrial cruising area appears in Gays-Cruising and a second independent cruisingmap listing, which dates its directory creation to March 2022. A Tarragona cruising forum named Saltoki as an existing recognised area in January 2023, and the forum homepage displayed a Saltoki-specific live discussion started and replied to on 19 July 2026. The latter proves dated active online interest in the named l",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0990_0994.json"
       ],
       "original_index": 994,
       "original_section": "D"
@@ -58893,13 +59245,23 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
+      "best_url": "https://www.gays-cruising.com/es/cruising/areatermal_club_tennis_sabadell_sabadell_espana_59052",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "other_reference"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://olvidalacama.com/resultados/sabadell-barcelona-espana",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -58912,9 +59274,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A fourth-floor restroom candidate inside a managed department store at Avenida Francesc Macià 58. Another Spanish cruising/dogging directory independently mentions El Corte Inglés washrooms on quieter floors but does not consistently specify the fourth floor or provide dated first-person reports. Store operations, toilet layout and access rules are not independently confirmed for this specific floor, and the listing ",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0995_0999.json"
       ],
       "original_index": 997,
       "original_section": "D"
@@ -58929,13 +59292,33 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
+      "best_url": "https://www.gays-cruising.com/pl/cruising/bosc_candeu_sabadell_espana_57473",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
+          "url": "https://web.sabadell.cat/index.php?id=107264&option=com_content&view=article",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://agricultura.gencat.cat/ca/ambits/ramaderia/sanitat-animal/programes-sanitaris/programes-sanitaris-porci/pesta-porcina-africana/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.isabadell.cat/politica/la-junta-de-portaveus-demana-revisar-les-restriccions-de-la-pesta-porcina-339299/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -58948,9 +59331,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A large wooded natural area north of Sabadell has an archived cruising entry describing paths near the masia. Directory platform check-in aggregates may show recent interest, but independent official reporting is decisive: Sabadell's 2026 African swine fever measures still prohibit access to natural areas, explicitly including Bosc de Can Deu. The municipal council sought a review of the restrictions in October 2026;",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0995_0999.json"
       ],
       "original_index": 996,
       "original_section": "D"
@@ -58965,17 +59349,46 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
+      "best_url": "https://www.gays-cruising.com/es/cruising/castellarnau_sabadell_espana_4286",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
+          "url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "page_type": "other_reference",
+          "source_status": "saved_best"
+        },
+        {
           "url": "https://www.gays-cruising.com/en/spain",
-          "page_type": "directory_or_city_page",
-          "source_status": "original_index_reference"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://cruisingmap.com/7107-castellarnau",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://gaycation.eu/spain/sabadell/cruising-areas/bosc-de-castellarnau",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.diaridesabadell.com/sabadell/2019/01/19/castellarnau-denuncia-episodis-de-sexe-al-carrer/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.diaridesabadell.com/sabadell/2022/03/24/cameres-videovigilancia-castellarnau-sabadell/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://agricultura.gencat.cat/ca/ambits/ramaderia/sanitat-animal/programes-sanitaris/programes-sanitaris-porci/pesta-porcina-africana/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 1,
@@ -58996,9 +59409,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Well documented historic cruising area in the pine woodland on the edge of Castellarnau. Gays-Cruising and Cruisingmap both refer to the same neighborhood and woodland, with Cruisingmap showing August–September 2026 dated invitations or planned visits, not eyewitness accounts of completed encounters. Independent Sabadell newspapers in 2019 and 2022 recorded neighbors' complaints and police responses, including suspec",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0995_0999.json"
       ],
       "original_index": 995,
       "original_section": "D"
@@ -59119,13 +59533,23 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
+      "best_url": "https://www.gays-cruising.com/en/cruising/circuito_de_rallys_castellbisbal_espana_121820",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "other_reference"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.gays-cruising.com/fr/sant_andreu_de_la_barca/barcelona/espagne",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -59138,9 +59562,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "The name is too broad to assign safely to a specific car park or street address. Gays-Cruising's municipality index lists an unnamed Parking as its first candidate, but also separate places named Parking de la ICA and Parking Centro Comercial. Without a more specific location identifier, the original archive's generic parking name is not enough for a reliable map pin or a claim of current activity.",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0995_0999.json"
       ],
       "original_index": 998,
       "original_section": "D"
@@ -59155,13 +59580,23 @@
       ],
       "research_stage": null,
       "live_status": null,
-      "best_url": "https://www.gays-cruising.com/en/barcelona/spain",
+      "best_url": "https://www.gays-cruising.com/de/cruising/playa_de_sant_pol_sant_pol_de_mar_espana_60694",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "direct_cruising_entry",
+        "source_status": "other_reference"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.gays-cruising.com/en/barcelona/spain",
+          "page_type": "other_reference",
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://naturismo.org/playas-nudistas/catalunya/barcelona/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -59174,9 +59609,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Naturist coastal pocket in Sant Pol de Mar that appears on Gays-Cruising as a cruising beach. Spain's Federation of Naturism identifies Playa de la Murtra as also known as El Molí or El Refugi, a strong name-level alias. The original cruising directory also lists a separate 'Playa de la Murtra' very close by, so these may duplicate one short coastline. Naturist designation and unnamed monthly directory check-ins do n",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_0995_0999.json"
       ],
       "original_index": 999,
       "original_section": "D"
@@ -59229,11 +59665,21 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://sevillagay2.blogspot.com/2016/07/cruising-gay-en-sevilla.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.us.es/estudiar/bibliotecas-salas-estudios",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -59246,9 +59692,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Directory label references toilets at the University of Seville's Reina Mercedes campus rather than a single identified faculty. A 2016 Sevilla gay guide repeated the allegation that students sometimes arrange encounters in university bathrooms; no precise faculty, dated eyewitness report or current security conditions were found. Official University of Seville records numerous buildings and 24-hour study facilities ",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_1005_1009.json"
       ],
       "original_index": 1008,
       "original_section": "D"
@@ -59301,11 +59748,31 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.carrefour.es/tiendas-carrefour/hipermercados/carrefour/macarena_sevilla.aspx",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.carrefourproperty.es/centre-commercial/carrefour-macarena/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://guiacruising.wordpress.com/2018/03/30/sevilla-zonas/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://radarsuper.com/c/sevilla/sevilla/carrefour-macarena-sevilla",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -59318,9 +59785,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Operating Carrefour retail centre with car parking and stores. A 2018 local cruising blog specifically describes historic cruising claims about first-floor car-park toilets; the original Gays-Cruising list matches the mall. The precise toilets, their layout, any modern access restrictions and whether the practice persists are unverified. A business listing published November 2026 confirms usual retail operations, not",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_1000_1004.json"
       ],
       "original_index": 1002,
       "original_section": "D"
@@ -59337,11 +59805,21 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://nervionplaza.com/horarios/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://nervionplaza.com/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -59354,9 +59832,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Large retail, cinema, restaurants and leisure centre operating in Seville's Nervión district. Gays-Cruising includes it as an unnamed shopping-area cruising candidate, without floor, restroom or dated encounters. The centre's official schedule confirms distinct shopping, dining, cinema and parking operations; none is an indication of permitted sexual activity. One should not confuse it with independently named Sauna ",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_1000_1004.json"
       ],
       "original_index": 1004,
       "original_section": "D"
@@ -59373,11 +59852,26 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.torre-sevilla.com/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.saba.es/es/parking-sevilla/parking-saba-torre-sevilla",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://visitasevilla.es/wp-content/uploads/2024/03/Sevilla-Centros-comerciales.pdf",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -59390,9 +59884,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "An undetailed Gays-Cruising candidate for a restroom at the Torre Sevilla shopping complex. Operator describes a large retail/culture destination with hotel, offices and a 24-hour car park, but these are distinct managed facilities. Original candidate does not identify which restroom or floor. Neither modern activity nor washroom access has been independently verified; 24-hour parking is not a statement that shopping",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_1005_1009.json"
       ],
       "original_index": 1005,
       "original_section": "D"
@@ -59409,11 +59904,26 @@
       "live_status": null,
       "best_url": "https://www.gays-cruising.com/en/sevilla/sevilla/spain",
       "best_url_basis": {
-        "page_type": "directory_or_city_page",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "page_type": "directory_or_context",
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://www.elcorteingles.es/centroscomerciales/es/eci/centros/centro-comercial-plaza-del-duque-de-la-victoria",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://guiacruising.wordpress.com/2018/03/30/sevilla-zonas/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.elcorteingles.es/centroscomerciales/es/eci/sevilla",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -59426,9 +59936,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Operating department store whose public toilets were mentioned in old city cruising guides. A March 2018 guide describes supposed third/fourth-floor use; present official store page lists the fifth-floor restaurant and active retail, but says nothing about the older bathroom claim or bathroom layout. A candidate named 'Baños del sótano Corte Inglés' appears separately in same Gays-Cruising city index and could concer",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_1005_1009.json"
       ],
       "original_index": 1009,
       "original_section": "D"
@@ -59448,19 +59959,28 @@
       "best_url": "https://www.cruisinggays.com/sevilla/areas/34493-estacion-santa-justa/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.gays-cruising.com/en/cruising/banos_de_la_estacion_santa_justa_sevilla_spain_11847",
           "page_type": "direct_cruising_entry",
-          "source_status": "original_index_reference"
+          "source_status": "linked_page_matched"
         },
         {
           "url": "https://guiacruising.wordpress.com/2018/03/30/sevilla-zonas/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.adif.es/w/51003-sevilla-sta.-justa",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.adif.es/w/adif_arranca_despliegue_nuevas_pantallas-informacion-viajero-estaciones-andaluzas",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -59481,11 +60001,12 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Operating main railway terminal with archive entries on CruisingGays and Gays-Cruising tied to restrooms in the station. CruisingGays mentions stalls and afternoon hours but has no comments and is undated; Gays-Cruising dedicated page was not retrievable through the public search, so no recent dated eyewitness posts confirmed. The rail infrastructure manager Adif confirms opening hours and an October 2026 passenger d",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
         "research/Archive/verification_manifest_2026-11-06.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/D/batch_1000_1004.json"
       ],
       "original_index": 1001,
       "original_section": "D"
@@ -59546,10 +60067,35 @@
       "best_url": "https://www.gays-cruising.com/en/cruising/jardines_del_guadalquivir_sevilla_espana_24963",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://cruisingmap.com/34981-jardines-del-guadalquivir",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.elespanol.com/sevilla/20250730/zona-cruising-pulmon-verde-quiere-ayuntamiento-recuperar-jardines-guadalquivir/1003743867424_0.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.diariodesevilla.es/sevilla/Jardines-Guadalquivir-nueva-oportunidad-joya-destrozada-Sevilla_0_1912009178.html",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/espacios/isla-de-la-cartuja",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.waze.com/es-419/live-map/directions/es/an/sevilla/jardines-del-guadalquivir?to=place.ChIJKwlSsPVrEg0RaI_00dE35wI",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -59562,9 +60108,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Post-Expo landscaped gardens on La Cartuja with a documented history of cruising. Gays-Cruising details former maze and several garden sections; independent Cruisingmap has an exact named record created in 2022. A July 2025 press investigation explicitly identified historic sexual encounters there, vandalism, and more than €90,000 of rehabilitation to improve pathways and safety. The directory's visible March 2026 co",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_1000_1004.json"
       ],
       "original_index": 1003,
       "original_section": "D"
@@ -59641,14 +60188,28 @@
       "best_url": "https://www.gays-cruising.com/en/cruising/parque_de_maria_luisa_sevilla_spain_29065",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.gayout.com/es/europe/spain/seville/cruising/cruising-parque-maria-luisa",
-          "page_type": "context_or_official_source",
-          "source_status": "editorial_listing_updated_oct_2026"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://cruisingmap.com/5145-parque-maria-luisa",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.sevilla.org/servicios/medio-ambiente-parques-jardines/parques",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.juntadeandalucia.es/cultura/agendaculturaldeandalucia/espacios/sevilla-parque-de-maria-luisa",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -59669,10 +60230,11 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Historic public garden and tourist park with multiple independent cruising-directory references. This research queue aligns Gays-Cruising and source 7 Squirt.org, although its archived Squirt record has no URL. Additional independent cruisingmap has forum messages dated August 2026 proposing encounters, and GayOut's current October 2026 description identifies the southern park paths. These are credible signs of ongoi",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/D/batch_1005_1009.json"
       ],
       "original_index": 1006,
       "original_section": "D"
@@ -59740,29 +60302,43 @@
       "best_url": "https://www.cruisinggays.com/sevilla/areas/35061-plaza-de-armas-bus-station/",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
       "alternate_urls": [
         {
           "url": "https://www.gays-cruising.com/en/cruising/estacion_de_autobuses_de_plaza_de_armas_sevilla_espana_54938",
           "page_type": "direct_cruising_entry",
-          "source_status": "original_index_reference"
+          "source_status": "linked_page_matched"
+        },
+        {
+          "url": "https://www.cruisinggays.com/sevilla/c/areas/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         },
         {
           "url": "https://guiacruising.wordpress.com/2018/03/30/sevilla-zonas/",
-          "page_type": "context_or_official_source",
-          "source_status": "specialist_blog_2018"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.autobusesplazadearmas.es/localizacion/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
         },
         {
           "url": "https://www.togayther.es/noticias/sevilla/cruising-gay-sevilla/",
-          "page_type": "context_or_official_source",
-          "source_status": "auxiliary_reference_not_activity"
+          "page_type": "other_reference",
+          "source_status": "saved_other"
+        },
+        {
+          "url": "https://www.autobusesplazadearmas.es/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://lavozdesevilla.es/obras-en-el-techo-de-la-estacion-de-plaza-de-armas-tras-arder-un-autobus/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
         }
       ],
       "source_count": 2,
@@ -59783,11 +60359,12 @@
       "activity_since_2025_11_06_verified": false,
       "last_researched_berlin": "2026-11-06",
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "Busy intercity and regional bus terminal. Both CruisingGays and Gays-Cruising's archived independent entries identify its public toilets; the latter points to the main hall and former forum comments. Public Gays-Cruising discussion visible on the original page is dated February–July 2025, all before this cycle's November 2025 cutoff. Operator's website confirms current station operation with different hours on weekda",
       "archive_data_keys": [
         "research/Archive/master_queue.json",
         "research/Archive/verification_manifest_2026-11-06.json",
-        "research/Archive/verification_reference_pass_2026-11-06.json"
+        "research/Archive/verification_reference_pass_2026-11-06.json",
+        "research/Archive/D/batch_1000_1004.json"
       ],
       "original_index": 1000,
       "original_section": "D"
@@ -59858,10 +60435,25 @@
       "best_url": "https://www.gays-cruising.com/en/cruising/wc_estacion_sevilla_espana_17568",
       "best_url_basis": {
         "page_type": "direct_cruising_entry",
-        "research_provenance": "queue_index",
-        "source_status": "original_index_reference"
+        "source_status": "linked_page_matched"
       },
-      "alternate_urls": [],
+      "alternate_urls": [
+        {
+          "url": "https://ctas.es/lineas-y-horarios/estaciones-y-aeropuerto",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://www.autobusesplazadearmas.es/alertas/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        },
+        {
+          "url": "https://guiacruising.wordpress.com/2018/03/30/sevilla-zonas/",
+          "page_type": "other_reference",
+          "source_status": "other_reference"
+        }
+      ],
       "source_count": 1,
       "source_refs": [
         {
@@ -59874,9 +60466,10 @@
       "activity_since_2025_11_06_verified": null,
       "last_researched_berlin": null,
       "review_flags": [],
-      "research_summary": null,
+      "research_summary": "A restroom listing inside the operating Prado de San Sebastián bus terminal. An independent 2018 guide also singles out hall and platform toilets as historic cruising spots; this is dated directory background rather than proof of 2026 encounters. Current metropolitan transport operator confirms station services and address, and some bus routes were transferred here from Plaza de Armas in July 2026. The stop also conn",
       "archive_data_keys": [
-        "research/Archive/master_queue.json"
+        "research/Archive/master_queue.json",
+        "research/Archive/D/batch_1005_1009.json"
       ],
       "original_index": 1007,
       "original_section": "D"
