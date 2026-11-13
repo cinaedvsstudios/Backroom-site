@@ -147,7 +147,7 @@ function filtersHTML(){
 function scopedConfig(){return {...S.config,allowedCountries:countries()};}
 function wizardHTML(){
  const c=S.config,info=W.definitions.find(x=>x.id===S.wizardPreset);
- const rows=D.selected(scopedConfig(),P.state.venues,P.state.events);
+ const rows=c.countries.length||c.cities.length?D.selected(scopedConfig(),P.state.venues,P.state.events):[];
  const locations=c.cities.length,chosenCountry=c.countries.length;
  const details=S.wizardPreset==='backroom20'?W.backroomTop(P.state.venues,P.state.events,P.state.registry,20):[];
  const sortedCities=c.cities.slice(0,18).map(x=>x.replace('|',' — ')).join(' · ');
@@ -372,16 +372,19 @@ async function importRules(file){
  }
  saveLocal(RULE_KEY,S.ruleEdits);render();notify('Imported '+incoming.length+' instruction entries.');
 }
+function applyPreset(presetID){
+ const selection=W.selection(presetID,{registry:P.state.registry,venues:P.state.venues,events:P.state.events});
+ S.wizardPreset=selection.id;S.config.countries=selection.countries;S.config.cities=selection.cities;
+ S.config.text='';S.config.ids=[];S.config.status='';
+ S.config.zone=S.config.workflow==='cruising_updates'?'8':'auto';
+ S.config.sourceKeys=[];S.config.sourceKinds=[];S.packet=null;S.markdown='';
+ remember();render();return selection;
+}
 async function handleClick(button){
  const id=button.id;
  if(button.dataset.br3Preset){
-  const selection=W.selection(button.dataset.br3Preset,{registry:P.state.registry,venues:P.state.venues,events:P.state.events});
-  S.wizardPreset=selection.id;
-  S.config.countries=selection.countries;S.config.cities=selection.cities;
-  S.config.text='';S.config.ids=[];S.config.status='';
-  S.config.zone=S.config.workflow==='cruising_updates'?'8':'auto';
-  S.config.sourceKeys=[];S.config.sourceKinds=[];S.packet=null;S.markdown='';
-  remember();render();notify('Preset applied: '+selection.countries.length+' countries and '+selection.cities.length+' cities.');return;
+  const selection=applyPreset(button.dataset.br3Preset);
+  notify('Preset applied: '+selection.countries.length+' countries and '+selection.cities.length+' cities.');return;
  }
  if(id==='br3-wizard-clear'){
   S.wizardPreset='';S.config.countries=[];S.config.cities=[];S.packet=null;S.markdown='';
@@ -517,6 +520,6 @@ function install(){
  view.addEventListener('input',e=>handleInput(e.target));
  document.addEventListener('click',e=>{if(e.target.closest('.sidebar-item')&&!e.target.closest('#nav-scrape-builder'))hide();},true);
 }
-window.BackroomAdminPhase3={show,hide,getState:()=>S,researchSources,render,version:'0.23.7'};
+window.BackroomAdminPhase3={show,hide,getState:()=>S,researchSources,render,applyPreset,version:'0.23.7'};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
