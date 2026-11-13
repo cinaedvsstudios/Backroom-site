@@ -14,6 +14,8 @@ The detailed Phase 3 research builder exposed all options at once — useful for
 
 The existing packet section still lets you Copy the research brief, download Markdown or export full JSON/individual batches for a separate research chat.
 
+**Coverage guarantee:** In Discovery/Combined workflows, a selected city is included as a citywide discovery task **even if Backroom already lists places there**. Whole-country presets similarly include explicit countrywide research tasks. Update-only workflows focus on current records and preserve zero-record targets for separately selected uncovered cities.
+
 ## Coverage boundaries
 
 The Phase 3 country selector now contains only **54 allowed countries and territories**. It covers Europe (including Iceland, the Faroe Islands, the entire UK, Åland, Isle of Man, Jersey, Guernsey, Gibraltar, Vatican City, etc.) plus **Turkey and Israel**. Spain includes Canary Island cities (Maspalomas, Playa del Inglés and Las Palmas) and the Balearics (Ibiza, Palma). Outside-area countries such as Australia, the United States, Morocco, Greenland and Kazakhstan are not offered.
