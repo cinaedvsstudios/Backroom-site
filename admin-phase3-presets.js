@@ -6,7 +6,7 @@ const norm=v=>String(v??'').trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'
 const uniq=values=>[...new Set(values.filter(Boolean))];
 const codes=new Set(('AL AD AT AX BY BE BA BG HR CY CZ DK EE FO FI FR DE GI GR GG HU IS IE IM IL IT JE XK LV LI LT LU MT MD MC ME NL MK NO PL PT RO RU SM RS SK SI ES SE CH TR UA GB VA').split(' '));
 const aliases=new Map([['türkiye','Turkey'],['turkiye','Turkey'],['great britain','United Kingdom'],['england','United Kingdom'],
- ['scotland','United Kingdom'],['wales','United Kingdom'],['northern ireland','United Kingdom'],
+ ['scotland','United Kingdom'],['wales','United Kingdom'],['northern ireland','United Kingdom'],['uk','United Kingdom'],['u.k.','United Kingdom'],['britain','United Kingdom'],['the netherlands','Netherlands'],
  ['bosnia and herzegovina','Bosnia & Herzegovina'],['macedonia','North Macedonia'],
  ['kosovo','Kosovo'],['czech republic','Czechia'],['republic of ireland','Ireland']]);
 const touristCities=[
