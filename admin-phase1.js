@@ -4,10 +4,11 @@
 if (window.BackroomAdminPhase1) return;
 const esc = value => String(value ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const fmt = n => Number(n || 0).toLocaleString('en-GB');
+const flag = country => window.BackroomAdminFlags?.flag(country) || '🌍';
 const idField = () => currentMode === 'events' ? 'Event_ID' : 'Venue_ID';
 const msg = value => typeof showToast === 'function' ? showToast(value) : window.alert(value);
 const compact = {
-  mode: (() => { try { return localStorage.getItem('br_admin_table_view') === 'compact' ? 'compact' : 'full'; } catch { return 'full'; } })(),
+  mode: (() => { try { return localStorage.getItem('br_admin_table_view_v023') === 'full' ? 'full' : 'compact'; } catch { return 'compact'; } })(),
   filters:{country:'',city:'',status:'',tags:'',from:'',to:''},
   page:1, size:50, rows:[], scopeKey:'',
   selected:{venues:new Set(),events:new Set()}
@@ -38,7 +39,7 @@ function compactFilterRows(rows) {
 function optionSelect(key,values,title){
   const chosen=compact.filters[key];
   return '<label>'+esc(title)+'<select data-cf="'+key+'"><option value="">All</option>'+
-    values.map(v=>'<option value="'+esc(v)+'" '+(v===chosen?'selected':'')+'>'+esc(v)+'</option>').join('')+'</select></label>';
+    values.map(v=>'<option value="'+esc(v)+'" '+(v===chosen?'selected':'')+'>'+esc(key==='country'?flag(v)+' '+v:v)+'</option>').join('')+'</select></label>';
 }
 function compactControls() {
   const host=document.getElementById('br-compact-filters');
@@ -85,7 +86,7 @@ function renderCompact(rows){
     const id=String(row[field]??'');
     const name=String(row.Name||row.Event_Name||id);
     const status=String(row.Status||'Unknown');
-    const location=[row.City,row.Country].filter(Boolean).join(', ');
+    const location=[row.Country?flag(row.Country):'',row.City||(!row.Country?'':'')].filter(Boolean).join(' ') || String(row.City||'');
     const category=currentMode==='events'?String(row.Venue_ID||'No linked venue'):String(row.Category||'');
     const date=currentMode==='events'?String(row.Event_Date||''):String(row.Last_Updated||'').slice(0,10);
     const times=currentMode==='events'?[row.Event_Start_Time,row.Event_End_Time].filter(Boolean).join('–'):'';
@@ -139,7 +140,7 @@ function installCompact() {
     const id=event.target.closest('button')?.id;
     if(id==='br-view-full'||id==='br-view-compact'){
       compact.mode=id==='br-view-full'?'full':'compact';
-      try{localStorage.setItem('br_admin_table_view',compact.mode);}catch{}
+      try{localStorage.setItem('br_admin_table_view_v023',compact.mode);}catch{}
       compact.page=1;renderTable();return;
     }
     if(id==='br-compact-all')compact.rows.forEach(r=>selectionSet().add(String(r[idField()]??'')));
@@ -249,35 +250,46 @@ function chartMarkup(groups,type){
   const shown=groups.slice(0,20),max=Math.max(1,...shown.map(x=>x.count));
   if(!shown.length)return'<p class="br-p1-muted">No chart data matches these filters.</p>';
   const title=x=>x.names.join(' / ');
+  const tip=(item)=>' data-br-chart-tip="'+esc(title(item)+' · '+fmt(item.count)+' records')+'" tabindex="0"';
   if(type==='pie'){
     const values=shown.slice(0,10),total=values.reduce((n,x)=>n+x.count,0),colors=['#2CA8D4','#D55036','#f0c94c','#58b6a0','#9176dd','#8494a9','#df85bd','#5aa5e9','#df9d68','#b0c97a'];
     let angle=-Math.PI/2;
     const slices=values.map((g,i)=>{
       const fraction=g.count/Math.max(1,total),start=angle,end=angle+fraction*Math.PI*2;angle=end;
-      if(fraction>=0.99999)return'<circle cx="140" cy="140" r="110" fill="'+colors[i]+'"><title>'+esc(title(g)+' '+fmt(g.count))+'</title></circle>';
+      if(fraction>=0.99999)return'<circle cx="140" cy="140" r="110" fill="'+colors[i]+'"'+tip(g)+'></circle>';
       const x1=140+110*Math.cos(start),y1=140+110*Math.sin(start),x2=140+110*Math.cos(end),y2=140+110*Math.sin(end);
-      return '<path fill="'+colors[i]+'" d="M140 140 L'+x1+' '+y1+' A110 110 0 '+(fraction>0.5?1:0)+' 1 '+x2+' '+y2+' Z"><title>'+esc(title(g)+' '+fmt(g.count))+'</title></path>';
+      return '<path fill="'+colors[i]+'" d="M140 140 L'+x1+' '+y1+' A110 110 0 '+(fraction>0.5?1:0)+' 1 '+x2+' '+y2+' Z"'+tip(g)+'></path>';
     }).join('');
     return '<div class="br-p1-pie"><svg viewBox="0 0 280 280" role="img" aria-label="Grouped records pie chart">'+slices+'</svg><div>'+values.map((g,i)=>'<p><span style="color:'+colors[i]+'">●</span> '+esc(title(g))+' — '+fmt(g.count)+'</p>').join('')+'</div></div><p class="br-p1-muted">Pie chart displays up to 10 groups.</p>';
   }
   if(type==='line'){
-    const w=850,h=270,margin=45,points=shown.map((g,i)=>[margin+i*(w-2*margin)/Math.max(1,shown.length-1),h-margin-g.count/max*(h-2*margin)]);
-    const poly=points.map(p=>p.join(',')).join(' ');
-    return '<svg class="br-p1-svg" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Matching record totals line chart">'+
-      '<line x1="'+margin+'" y1="'+(h-margin)+'" x2="'+(w-margin)+'" y2="'+(h-margin)+'" stroke="#969CAE"/>'+
-      '<polyline fill="none" stroke="#2CA8D4" stroke-width="3" points="'+poly+'"/>'+
-      points.map((p,i)=>'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="5" fill="#D55036"><title>'+esc(title(shown[i]))+': '+fmt(shown[i].count)+'</title></circle>').join('')+
-      '<text x="8" y="18" fill="#969CAE">'+fmt(max)+'</text>'+
-      '<text x="'+margin+'" y="'+(h-8)+'" fill="#969CAE">'+esc(title(shown[0]).slice(0,29))+'</text>'+
-      '<text x="'+(w-margin)+'" y="'+(h-8)+'" fill="#969CAE" text-anchor="end">'+esc(title(shown[shown.length-1]).slice(0,29))+'</text></svg>';
+    const w=850,h=300,left=76,right=20,top=25,bottom=62,chartH=h-top-bottom;
+    const ceiling=Math.ceil(max/4)*4||4;
+    const xy=shown.map((g,i)=>[left+i*(w-left-right)/Math.max(1,shown.length-1),top+(ceiling-g.count)/ceiling*chartH]);
+    const ticks=Array.from({length:5},(_,i)=>{
+      const value=Math.round(ceiling*i/4),y=top+chartH-i*chartH/4;
+      return '<line x1="'+left+'" y1="'+y+'" x2="'+(w-right)+'" y2="'+y+'" stroke="#36455b" stroke-dasharray="3 5"/>'+
+        '<text x="'+(left-12)+'" y="'+(y+4)+'" text-anchor="end" font-size="13" fill="#cad7e7">'+fmt(value)+'</text>';
+    }).join('');
+    const lines=xy.map(p=>p.join(',')).join(' ');
+    return '<svg class="br-p1-svg br-p3-chart" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Matching record counts: vertical axis shows number of records">'+
+      '<text x="16" y="'+(top+chartH/2)+'" fill="#a8c2dc" text-anchor="middle" font-size="13" transform="rotate(-90 16 '+(top+chartH/2)+')">Records</text>'+ticks+
+      '<line x1="'+left+'" y1="'+top+'" x2="'+left+'" y2="'+(top+chartH)+'" stroke="#a1b8cc"/>'+
+      '<polyline fill="none" stroke="#2CA8D4" stroke-width="3" stroke-linejoin="round" points="'+lines+'"/>'+
+      xy.map((p,i)=>'<circle cx="'+p[0]+'" cy="'+p[1]+'" r="7" fill="#2CA8D4" stroke="#111725" stroke-width="2"'+tip(shown[i])+'></circle>').join('')+
+      '<text x="'+left+'" y="'+(h-24)+'" fill="#b7c7db">'+esc(title(shown[0]).slice(0,30))+'</text>'+
+      '<text x="'+(w-right)+'" y="'+(h-24)+'" fill="#b7c7db" text-anchor="end">'+esc(title(shown[shown.length-1]).slice(0,30))+'</text></svg>';
   }
-  const height=shown.length*35+32;
-  return '<svg class="br-p1-svg" viewBox="0 0 850 '+height+'" role="img" aria-label="Matching record totals bar chart">'+shown.map((g,i)=>{
-    const y=13+i*35,w=Math.max(2,g.count/max*410);
+  const height=shown.length*35+75,left=335,w=850,right=85,chartW=w-left-right;
+  const ticks=Array.from({length:5},(_,i)=>{const value=max*i/4,x=left+chartW*i/4;return '<line x1="'+x+'" y1="12" x2="'+x+'" y2="'+(height-34)+'" stroke="#36455b" stroke-dasharray="3 5"/>'+
+    '<text x="'+x+'" y="'+(height-17)+'" fill="#b7c7db" text-anchor="middle" font-size="12">'+fmt(Math.round(value))+'</text>';}).join('');
+  return '<svg class="br-p1-svg br-p3-chart" viewBox="0 0 '+w+' '+height+'" role="img" aria-label="Matching record counts horizontal bar chart">'+ticks+shown.map((g,i)=>{
+    const y=13+i*35,barW=Math.max(2,g.count/max*chartW);
     return '<text x="8" y="'+(y+18)+'" font-size="14" fill="#d3d9e5">'+esc(title(g).slice(0,34))+'</text>'+
-      '<rect x="335" y="'+y+'" width="'+w+'" height="24" fill="'+(i%2?'#00547C':'#2CA8D4')+'"><title>'+esc(title(g))+': '+fmt(g.count)+'</title></rect>'+
-      '<text x="'+(342+w)+'" y="'+(y+18)+'" fill="#f4f7ff">'+fmt(g.count)+'</text>';
-  }).join('')+'</svg><p class="br-p1-muted">Chart displays up to 20 groups; the table/export includes them all.</p>';
+      '<rect x="'+left+'" y="'+y+'" width="'+barW+'" height="24" rx="5" fill="'+(i%2?'#25829f':'#2CA8D4')+'"'+tip(g)+'></rect>'+
+      '<text x="'+(left+barW+7)+'" y="'+(y+18)+'" fill="#f4f7ff">'+fmt(g.count)+'</text>';
+  }).join('')+'<text x="'+(left+chartW/2)+'" y="'+(height-1)+'" fill="#a8c2dc" text-anchor="middle" font-size="13">Records</text></svg>'+
+  '<p class="br-p1-muted">Chart displays up to 20 groups; the table/export includes them all.</p>';
 }
 function renderExplorer(){
   const holder=document.getElementById('br-p1-explorer');
@@ -305,7 +317,7 @@ function renderExplorer(){
       '<div class="br-p1-overflow"><table class="br-table"><thead><tr><th>'+esc([explorer.group1,explorer.group2,explorer.group3].filter(Boolean).join(' / ')||'All records')+'</th><th>Count</th><th>Share</th></tr></thead><tbody>'+
       groups.map(g=>'<tr><td>'+g.names.map(esc).join(' / ')+'</td><td>'+fmt(g.count)+'</td><td>'+((g.count/Math.max(1,rows.length))*100).toFixed(1)+'%</td></tr>').join('')+'</tbody></table></div>')+
     '<h4>Records in this view</h4><div class="br-p1-overflow"><table class="br-table"><thead><tr><th>ID</th><th>Name</th><th>Location</th><th>Status</th><th>Date</th></tr></thead><tbody>'+
-    rows.slice(first,first+100).map(r=>'<tr><td>'+esc(r.Event_ID||r.Venue_ID||'')+'</td><td>'+esc(r.Event_Name||r.Name||'')+'</td><td>'+esc([r.City,r.Country].filter(Boolean).join(', '))+'</td><td>'+esc(r.Status||'')+'</td><td>'+esc(r.Event_Date||r.Last_Updated||'')+'</td></tr>').join('')+
+    rows.slice(first,first+100).map(r=>'<tr><td>'+esc(r.Event_ID||r.Venue_ID||'')+'</td><td>'+esc(r.Event_Name||r.Name||'')+'</td><td>'+esc([r.Country?flag(r.Country):'',r.City||r.Country].filter(Boolean).join(' '))+'</td><td>'+esc(r.Status||'')+'</td><td>'+esc(r.Event_Date||r.Last_Updated||'')+'</td></tr>').join('')+
     '</tbody></table></div><div class="br-p1-pagination"><button class="btn secondary-btn pill-btn" data-explorer-page="-1" '+(explorer.page===1?'disabled':'')+'>Previous</button><span>Page '+explorer.page+' / '+pages+' (100 records per page)</span><button class="btn secondary-btn pill-btn" data-explorer-page="1" '+(explorer.page===pages?'disabled':'')+'>Next</button></div>'+
     '<details id="br-p1-copy-panel" class="br-p1-collapsible" '+(explorer.copyOpen?'open':'')+'><summary>📋 Selective Copy Results</summary>'+
     '<p class="br-p1-muted">Choose the columns to copy from the current filtered results. This does not modify or rerun the original query.</p><div class="br-p1-copy-fields">'+
