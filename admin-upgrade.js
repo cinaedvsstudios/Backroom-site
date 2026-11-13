@@ -76,7 +76,7 @@ function addSidebar() {
     ['nav-venues','nav-events'].forEach(id=>document.getElementById(id)?.addEventListener('click',()=>showSection(id.slice(4)),true));
     ['nav-editor','nav-avatars','nav-terminology'].forEach(id=>document.getElementById(id)?.addEventListener('click',()=>showSection('other'),true));
     document.getElementById('btn-view-record')?.replaceChildren(document.createTextNode('👁️ View / Edit Record'));
-    const version=document.getElementById('admin-sidebar-version'); if(version)version.textContent='v0.23.3';
+    const version=document.getElementById('admin-sidebar-version'); if(version)version.textContent='v0.23.4';
 }
 function allDataFilter(rows){
     if(state.section==='cruising')rows=rows.filter(isCruising);
