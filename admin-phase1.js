@@ -382,15 +382,26 @@ function historySnapshots(){
 function renderHistoryBars(snapshots){
   if(!snapshots.length)return'<p class="br-p1-muted">Capture at least one published data point to display grouped historical bars.</p>';
   const shown=snapshots.slice(-10),max=Math.max(1,...shown.flatMap(x=>[x.after.venues||0,x.after.cruising||0,x.after.events||0]));
-  const w=850,h=290,left=42,right=28,base=244,bw=(w-left-right)/shown.length;
+  const ceiling=Math.max(4,Math.ceil(max/4)*4),w=850,h=315,left=72,right=27,top=25,bottom=63,chartH=h-top-bottom,bw=(w-left-right)/shown.length;
   const colors=['#2CA8D4','#D55036','#f0c94c'],names=['venues','cruising','events'];
-  return '<div class="br-p1-legend">🔵 Venues · 🟠 Cruising Areas · 🟡 Events (published totals)</div><svg class="br-p1-svg" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Published counts by capture date">'+
-    '<line x1="'+left+'" y1="'+base+'" x2="'+(w-right)+'" y2="'+base+'" stroke="#969CAE"/>'+
-    shown.map((x,i)=>names.map((name,k)=>{
-      const value=Number(x.after[name]||0),height=value/max*190,bwOne=Math.max(4,(bw-12)/3),pos=left+i*bw+5+k*bwOne;
-      return '<rect x="'+pos+'" y="'+(base-height)+'" width="'+bwOne+'" height="'+height+'" fill="'+colors[k]+'"><title>'+esc(x.date.slice(0,10))+' · '+name+': '+fmt(value)+'</title></rect>';
-    }).join('')+'<text x="'+(left+i*bw+bw/2)+'" y="263" text-anchor="middle" fill="#d3d9e5" font-size="10">'+esc(String(x.date||'').slice(5,10))+'</text>').join('')+
-    '<text x="5" y="18" fill="#d3d9e5">'+fmt(max)+'</text></svg>';
+  const grid=Array.from({length:5},(_,i)=>{
+    const value=ceiling*i/4,y=top+chartH-i*chartH/4;
+    return '<line x1="'+left+'" y1="'+y+'" x2="'+(w-right)+'" y2="'+y+'" stroke="#3c5066" stroke-dasharray="3 5"/>'+
+      '<text x="'+(left-10)+'" y="'+(y+5)+'" fill="#c9d6e6" text-anchor="end" font-size="13">'+fmt(Math.round(value))+'</text>';
+  }).join('');
+  return '<div class="br-p1-legend">🔵 Venues · 🟠 Cruising Areas · 🟡 Events (published totals)</div>'+
+    '<svg class="br-p1-svg br-p3-chart" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Published counts by capture date with labelled vertical axis">'+
+    '<text x="16" y="'+(top+chartH/2)+'" text-anchor="middle" font-size="14" fill="#a8c2dc" transform="rotate(-90 16 '+(top+chartH/2)+')">Total records</text>'+grid+
+    '<line x1="'+left+'" y1="'+top+'" x2="'+left+'" y2="'+(h-bottom)+'" stroke="#a3b8ce"/>'+
+    shown.map((x,i)=>{
+      const day=String(x.date||'').slice(0,10);
+      const bars=names.map((name,k)=>{
+        const value=Number(x.after[name]||0),height=value/ceiling*chartH,bwOne=Math.max(5,(bw-13)/3),pos=left+i*bw+6+k*bwOne;
+        const tooltip=day+' · Published JSON\n'+name.replace(/^./,v=>v.toUpperCase())+': '+fmt(value);
+        return '<rect x="'+pos+'" y="'+(top+chartH-height)+'" width="'+bwOne+'" height="'+height+'" rx="3" fill="'+colors[k]+'" tabindex="0" data-br-chart-tip="'+esc(tooltip)+'"></rect>';
+      }).join('');
+      return bars+'<text x="'+(left+i*bw+bw/2)+'" y="'+(h-22)+'" text-anchor="middle" fill="#c3d5e6" font-size="11">'+esc(day.slice(5))+'</text>';
+    }).join('')+'</svg>';
 }
 function improveHistoryTotals() {
   const history=reportLogs.filter(x=>x.type==='snapshot'||x.type==='change').sort((a,b)=>String(a.date).localeCompare(String(b.date)));
