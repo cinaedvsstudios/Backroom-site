@@ -80,7 +80,7 @@ function commitDataset(mode,after,before,operation,counts){
 }
 function hide(){state.active=false;if(get('br-phase2-view'))get('br-phase2-view').style.display='none';get('nav-data-quality')?.classList.remove('br-nav-active');}
 function show(tab){
- if(typeof tab==='string'&&['imports','quality','reporting','registry','coverage','zones'].includes(tab))state.tab=tab;
+ if(typeof tab==='string'&&['imports','quality','reporting','jql','registry','coverage','zones'].includes(tab))state.tab=tab;
  state.active=true;get('br-phase2-view').style.display='block';
  for(const id of ['view-tables','view-editor','view-terminology','view-avatars','br-reporting-view']){const node=get(id);if(node){node.style.display='none';if(id!=='br-reporting-view')node.classList.add('hidden');}}
  document.querySelectorAll('#nav-venues,#nav-events,#nav-cruising,#nav-reporting').forEach(x=>x.classList.remove('br-nav-active'));
@@ -95,7 +95,7 @@ function render(){
    ['🌍','Countries',state.registry.countries.length],
    ['🗺️','Destinations',state.registry.cities.length]
   ].map(([icon,label,value])=>'<span class="br-p3-stat-chip"><span aria-hidden="true">'+icon+'</span><strong>'+fmt(value)+'</strong> '+label+'</span>').join('');
- for(const tab of ['imports','quality','reporting','registry','coverage','zones'])get('br-p2-'+tab)?.classList.toggle('hidden',state.tab!==tab);
+ for(const tab of ['imports','quality','reporting','registry','coverage','zones'])get('br-p2-'+tab)?.classList.toggle('hidden',state.tab!==tab&&!(tab==='reporting'&&state.tab==='jql'));
  document.querySelectorAll('#br-phase2-nav button').forEach(button=>button.classList.toggle('br-p2-active',button.dataset.p2Tab===state.tab));
  sections[state.tab]?.render?.();
 }
@@ -111,7 +111,7 @@ function install(){
  const root=document.createElement('section');root.id='br-phase2-view';root.style.display='none';
  root.innerHTML='<div class="br-p2-top"><h1>🗂️ Data & Analytics</h1><p class="br-p2-muted">One workspace for importing, checking, exploring and researching your Backroom records.</p>'+
  '<div class="br-p2-actions"><button type="button" id="br-p2-refresh" class="btn secondary-btn pill-btn">↻ Refresh data</button><span id="br-p2-summary"></span></div></div><p class="br-p2-error" id="br-p2-error"></p>'+
- '<nav id="br-phase2-nav">'+[['imports','📥 Data Tools'],['quality','✅ Quality Checks'],['reporting','📊 Reporting & Stats'],['registry','🌍 City Registry'],['coverage','🗺️ Coverage'],['zones','📚 Zone Rules']].map(x=>'<button class="btn secondary-btn pill-btn br-p3-tab-'+x[0]+'" type="button" data-p2-tab="'+x[0]+'">'+x[1]+'</button>').join('')+'</nav>'+
+ '<nav id="br-phase2-nav">'+[['imports','📥 Data Tools'],['quality','✅ Quality Checks'],['reporting','📊 Reporting & Stats'],['jql','🔎 Query / JQL Maker'],['registry','🌍 City Registry'],['coverage','🗺️ Coverage'],['zones','📚 Zone Rules']].map(x=>'<button class="btn secondary-btn pill-btn br-p3-tab-'+x[0]+'" type="button" data-p2-tab="'+x[0]+'">'+x[1]+'</button>').join('')+'</nav>'+
  '<section id="br-p2-imports"></section><section id="br-p2-quality" class="hidden"></section><section id="br-p2-reporting" class="hidden"></section><section id="br-p2-registry" class="hidden"></section><section id="br-p2-coverage" class="hidden"></section><section id="br-p2-zones" class="hidden"></section>';
  main.appendChild(root);
  const existingReport=get('br-reporting-view');
@@ -119,10 +119,25 @@ function install(){
    get('br-p2-reporting').appendChild(existingReport);
    existingReport.style.display='none';
  }
- register('reporting',{render(){
+ const queryPanel=existingReport?.querySelector('.br-builder')?.closest('.br-panel');
+ queryPanel?.classList.add('br-p3-query-panel');
+ if(existingReport){
+   const heading=document.createElement('div');
+   heading.id='br-p3-jql-heading';
+   heading.innerHTML='<h2>🔎 Query / JQL Maker</h2><p class="br-p2-muted">Build record queries, combine conditions and explore or export matching results.</p>';
+   get('br-p2-reporting').prepend(heading);
+ }
+ const renderReporting=onlyQuery=>{
    const report=get('br-reporting-view');
-   if(report){report.style.display='block';window.BackroomAdminReporting?.open?.();}
- }});
+   if(!report)return;
+   report.style.display='block';
+   get('br-p2-reporting')?.classList.toggle('br-p3-jql-mode',onlyQuery);
+   const heading=get('br-p3-jql-heading');
+   if(heading)heading.hidden=!onlyQuery;
+   window.BackroomAdminReporting?.open?.();
+ };
+ register('reporting',{render(){renderReporting(false);}});
+ register('jql',{render(){renderReporting(true);}});
  // Link the expanded checks back to Reporting's existing completeness overview,
  // keeping one overview and one detailed workflow rather than disconnected tools.
  const summary=get('br-completeness-overview')?.closest('.br-panel-inner');
