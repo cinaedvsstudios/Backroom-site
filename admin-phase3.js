@@ -6,10 +6,10 @@ if(window.BackroomAdminPhase3)return;
 const {esc,fmt,get,notify,downloadJSON,saveLocal,readLocal}=P;
 const KEY='br_admin_phase3_v1',SOURCE_KEY='br_admin_phase3_custom_sources_v1',EDIT_KEY='br_admin_phase3_source_edits_v1',RULE_KEY='br_admin_phase3_instruction_edits_v1';
 const today=()=>new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Berlin',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-const after3=()=>{const d=new Date(today()+'T12:00:00Z');d.setUTCMonth(d.getUTCMonth()+3);return d.toISOString().slice(0,10)};
+const after6=()=>{const d=new Date(today()+'T12:00:00Z');d.setUTCMonth(d.getUTCMonth()+6);return d.toISOString().slice(0,10)};
 const workflows=[['event_discovery','📅 Event discovery'],['event_updates','📅 Event updates'],['venue_discovery','📍 Venue discovery'],['venue_updates','📍 Venue updates'],['cruising_updates','🗺️ Cruising area updates'],['combined','🔄 Combined venue + event research']];
-const zones=[['auto','Auto by country/workflow'],['0','0 · Germany'],['1','1 · France & Benelux'],['2','2 · UK & Ireland'],['3','3 · Iberia & Islands'],['4','4 · Italy / Alps / Central / Mediterranean'],['5','5 · Nordics / Baltics / Poland'],['6','6 · Other / Touring'],['8','8 · Public-space cruising only']];
-const configDefault={workflow:'venue_updates',countries:[],cities:[],zone:'auto',from:today(),to:after3(),status:'',text:'',ids:[],batchSize:25,sourceLimit:60,sourceKinds:[],sourceKeys:[]};
+const zones=[['auto','Auto by country/workflow'],['0','0 · Germany'],['1','1 · France / Benelux / Switzerland'],['2','2 · UK & Ireland'],['3','3 · Iberia & Islands'],['4','4 · Italy / Austria / Central / Mediterranean'],['5','5 · Nordics / Baltics / Poland'],['6','6 · Other European / Touring'],['8','8 · Public-space cruising only']];
+const configDefault={workflow:'venue_updates',countries:[],cities:[],zone:'auto',from:today(),to:after6(),status:'',text:'',ids:[],batchSize:25,sourceLimit:60,sourceKinds:[],sourceKeys:[]};
 const S={active:false,tab:'builder',loading:false,ready:false,loadedResearch:false,lib:D.library(),seeds:null,rules:[],baseRules:[],
  selected:new Set(),custom:readLocal(SOURCE_KEY,[]),edits:readLocal(EDIT_KEY,{}),ruleEdits:readLocal(RULE_KEY,{}),config:{...configDefault,...readLocal(KEY,{})},
  citySearch:'',sourceSearch:'',sourceKind:'',sourceCountry:'',sourceOrigin:'',sourcePage:1,sourceEditing:'',sourceStatus:[],
@@ -251,6 +251,7 @@ async function generate(){
  const rows=preview();
  if(S.config.from&&S.config.to&&S.config.from>S.config.to){notify('From date must be on or before Until date.');return;}
  if(S.config.zone==='8'&&S.config.workflow!=='cruising_updates'){notify('Zone 8 is reserved for public-space cruising areas. Use Auto or another zone for venue/event research.');return;}
+ if(S.config.countries.some(c=>['united states','united states of america','usa','u.s.'].includes(D.norm(c)))){notify('The current European Zone 6 campaign excludes US locations. Remove the United States from this research scope.');return;}
  if(S.config.workflow==='cruising_updates'&&S.config.zone!=='auto'&&S.config.zone!=='8'){notify('Cruising areas belong in Zone 8. Choose Auto or Zone 8.');return;}
  if(!rows.length&&!S.config.countries.length&&!S.config.cities.length){notify('Select at least one country, city or record ID for this brief.');return;}
  if(!S.loadedResearch)await researchSources();
