@@ -493,12 +493,13 @@ async function backupReminder(){
     }catch{}
 }
 async function open(){
+    const firstOpen=!state.opened;
     state.opened=true;
     const root=document.getElementById('br-reporting-view');if(root)root.style.display='block';
     try{
         const [v,e]=await Promise.all([obtain('venues'),obtain('events')]);
         state.data={venues:v,events:e};
-        refreshScopeStats();resetInvalidConditions();renderBuilder();overview();
+        refreshScopeStats();if(firstOpen)resetInvalidConditions();renderBuilder();overview();
         await refreshLogViews();await backupReminder();
     }catch(error){message('Unable to load Reporting data: '+error.message);}
 }
