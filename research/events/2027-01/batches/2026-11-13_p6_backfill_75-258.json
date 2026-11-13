@@ -1,0 +1,1235 @@
+{
+  "batch": "P6 backfill 2026-11-13: audit indexes 75-258 (80 previously pending URLs)",
+  "date": "2026-11-13",
+  "month": "2027-01",
+  "previous_checked": 817,
+  "researched_website_rows": 80,
+  "checked_after": 897,
+  "next_index": 1639,
+  "backfill_next_index": null,
+  "new_events": 27,
+  "individually_dated_january_2027": 0,
+  "official_recurring_schedule_date": 27,
+  "notes": [
+    "All 80 older pending website entries have been reviewed. Current master venue inventory now has zero pending rows with Website_URL, but 742 entries are explicitly queued for other-source discovery because they lack actionable websites.",
+    "27 new January occurrences are projections from officially published weekly or monthly named programmes; none has been individually announced by an operator for January 2027. Recheck closures, holidays and one-off changes before promotion.",
+    "The venue flagged as permanently closed is Sauna Babylonia Prague (PRG-SAU-01). Its older indexed homepage still shows obsolete weekly party copy; newer official indexed closure notice and a 1 Sep 2026 LUI report confirm closure. No events created. listings.json was not modified.",
+    "Mixed-audience events excluded, particularly Sauna69 Friday Gender Free events and general Pride parties.",
+    "Already present Pullermanns Bear Bash event 2027-01-22 was retained without duplication.",
+    "Event descriptions clearly label the projected dates rather than misrepresenting them as independently announced."
+  ],
+  "source_rows": [
+    {
+      "audit_index": 75,
+      "Venue_ID": "CGN-BAR-03",
+      "Name": "Barcelon",
+      "City": "Cologne",
+      "Website_URL": "https://www.barcelon-colonia.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://www.barcelon-colonia.de/",
+      "january_findings": "Barcelon official homepage inaccessible through retrieval. The listing is a gay bar; no date-specific January 2027 men's cruising event could be verified."
+    },
+    {
+      "audit_index": 76,
+      "Venue_ID": "CGN-BAR-04",
+      "Name": "Baustelle 4U",
+      "City": "Cologne",
+      "Website_URL": "https://www.baustelle4u.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.baustelle4u.de/",
+      "january_findings": "Baustelle 4U website is a Cologne gay bar page, not a dated 2027-01 men-only playroom event calendar."
+    },
+    {
+      "audit_index": 77,
+      "Venue_ID": "CGN-BAR-05",
+      "Name": "Casino-Eck",
+      "City": "Cologne",
+      "Website_URL": "https://casino-eck.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://casino-eck.de/",
+      "january_findings": "Casino-Eck site lists bar details and past activities rather than male-only January 2027 darkroom nights."
+    },
+    {
+      "audit_index": 81,
+      "Venue_ID": "CGN-BAR-09",
+      "Name": "Kattwinkel",
+      "City": "Cologne",
+      "Website_URL": "https://kattwinkelcologne.chayns.site/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_limited",
+      "checked_calendar_url": "https://kattwinkelcologne.chayns.site/",
+      "january_findings": "Kattwinkel's chayns mobile page restricts event details to interactive content; no individual January cruising party confirmed."
+    },
+    {
+      "audit_index": 83,
+      "Venue_ID": "CGN-BAR-11",
+      "Name": "Mumu",
+      "City": "Cologne",
+      "Website_URL": "https://die-mumu.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://die-mumu.de/",
+      "january_findings": "Official Mumu site returned no readable dated events; no January men-only cruising party confirmed."
+    },
+    {
+      "audit_index": 86,
+      "Venue_ID": "CGN-BAR-14",
+      "Name": "Schampanja",
+      "City": "Cologne",
+      "Website_URL": "https://schampanja-koeln.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://schampanja-koeln.de/",
+      "january_findings": "Schampanja website advertises bar, arts and community activities; not a men's darkroom calendar."
+    },
+    {
+      "audit_index": 88,
+      "Venue_ID": "CGN-BAR-16",
+      "Name": "Zum Pitter",
+      "City": "Cologne",
+      "Website_URL": "https://pitter.cologne/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://pitter.cologne/",
+      "january_findings": "Zum Pitter official page promotes gay bar hospitality and socialising; no verified January male-only cruising event."
+    },
+    {
+      "audit_index": 89,
+      "Venue_ID": "CGN-BAR-17",
+      "Name": "Zur Kaiserin",
+      "City": "Cologne",
+      "Website_URL": "https://www.zurkaiserin.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://www.zurkaiserin.de/",
+      "january_findings": "Zur Kaiserin operator site returned 502; no confirmable January programme."
+    },
+    {
+      "audit_index": 91,
+      "Venue_ID": "CGN-BAR-19",
+      "Name": "Pullermanns",
+      "City": "Cologne",
+      "Website_URL": "https://pullermanns.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_recurring_schedule_only",
+      "checked_calendar_url": "https://pullermanns.de/",
+      "january_findings": "Pullermanns official schedule advertises every Monday from 18:00 Pullerarlarm (naked) and Sunday 14:00–20:00 themed events: first & third HOCHDRUCK, second SNEAKER/Sportswear, fourth TIEFROT. Eight January 2027 occurrences staged strictly as recurrence-derived, not individually announced. Jan 22 Bear Bash already exists and was not duplicated. Source: https://pullermanns.de/"
+    },
+    {
+      "audit_index": 94,
+      "Venue_ID": "CGN-SHP-01",
+      "Name": "Best Of",
+      "City": "Cologne",
+      "Website_URL": "https://best-of-fetish.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://best-of-fetish.com/",
+      "january_findings": "Best Of is a fetish goods shop, not a venue hosting dated January 2027 men-only cruising events."
+    },
+    {
+      "audit_index": 95,
+      "Venue_ID": "CGN-SHP-02",
+      "Name": "MGW",
+      "City": "Cologne",
+      "Website_URL": "https://www.mgw.cologne/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.mgw.cologne/",
+      "january_findings": "MGW is a fetish wear retailer and may sell tickets, but no on-premises eligible event dated January 2027."
+    },
+    {
+      "audit_index": 96,
+      "Venue_ID": "HAM-BAR-01",
+      "Name": "Minus",
+      "City": "Hamburg",
+      "Website_URL": "https://www.minus.bar/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.minus.bar/",
+      "january_findings": "Minus Hamburg is a drinks/gelato bar without evidence of male-only darkroom events."
+    },
+    {
+      "audit_index": 97,
+      "Venue_ID": "HAM-BAR-02",
+      "Name": "Bellini Bar",
+      "City": "Hamburg",
+      "Website_URL": "https://www.bellini-bar-hamburg.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.bellini-bar-hamburg.de/",
+      "january_findings": "Bellini Bar site lists bar/social information without a January 2027 men-only cruising programme."
+    },
+    {
+      "audit_index": 98,
+      "Venue_ID": "HAM-BAR-03",
+      "Name": "Daddys Bar",
+      "City": "Hamburg",
+      "Website_URL": "https://www.daddysbar.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.daddysbar.de/",
+      "january_findings": "Daddys Bar is inclusive and has no specifically advertised men-only darkroom party in January."
+    },
+    {
+      "audit_index": 99,
+      "Venue_ID": "HAM-BAR-04",
+      "Name": "Daniel's",
+      "City": "Hamburg",
+      "Website_URL": "https://www.daniels-hamburg.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.daniels-hamburg.de/",
+      "january_findings": "Daniel's venue information and general social nights do not establish January men-only cruising dates."
+    },
+    {
+      "audit_index": 102,
+      "Venue_ID": "HAM-BAR-07",
+      "Name": "Kyti Voo",
+      "City": "Hamburg",
+      "Website_URL": "https://kytivoo.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://kytivoo.com/",
+      "january_findings": "Kyti Voo official URL inaccessible; cannot establish a January 2027 eligible event."
+    },
+    {
+      "audit_index": 103,
+      "Venue_ID": "HAM-BAR-08",
+      "Name": "M&V Bar",
+      "City": "Hamburg",
+      "Website_URL": "https://www.mvbar.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.mvbar.de/",
+      "january_findings": "M&V Bar explicitly caters to diverse guests and has no confirmed male-only darkroom January 2027 programme."
+    },
+    {
+      "audit_index": 104,
+      "Venue_ID": "HAM-BAR-09",
+      "Name": "Piccadilly Bar",
+      "City": "Hamburg",
+      "Website_URL": "https://piccadilly-hamburg.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_limited",
+      "checked_calendar_url": "https://piccadilly-hamburg.de/",
+      "january_findings": "Piccadilly Hamburg page yielded no readable calendar; January dates could not be verified."
+    },
+    {
+      "audit_index": 106,
+      "Venue_ID": "HAM-BAR-11",
+      "Name": "Toom Peerstall",
+      "City": "Hamburg",
+      "Website_URL": "https://toom-peerstall.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://toom-peerstall.de/",
+      "january_findings": "Toom Peerstall operator URL inaccessible; no January eligible event verified."
+    },
+    {
+      "audit_index": 107,
+      "Venue_ID": "HAM-BAR-12",
+      "Name": "WunderBar",
+      "City": "Hamburg",
+      "Website_URL": "https://www.wunderbar-hamburg.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.wunderbar-hamburg.de/",
+      "january_findings": "WunderBar publishes gay-inclusive pop, drag and dancing rather than exclusively male darkroom nights."
+    },
+    {
+      "audit_index": 108,
+      "Venue_ID": "HAM-BAR-13",
+      "Name": "S.L.U.T. Club",
+      "City": "Hamburg",
+      "Website_URL": "https://slutclubhamburg.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://slutclubhamburg.de/",
+      "january_findings": "S.L.U.T. Club homepage inaccessible. Independent event references show dated 2026 fetish sessions, not confirmed January 2027 occurrences."
+    },
+    {
+      "audit_index": 109,
+      "Venue_ID": "HAM-BAR-14",
+      "Name": "Toms",
+      "City": "Hamburg",
+      "Website_URL": "https://toms-hamburg.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://toms-hamburg.de/",
+      "january_findings": "Toms Hamburg official URL inaccessible; no January 2027 event date confirmed."
+    },
+    {
+      "audit_index": 113,
+      "Venue_ID": "HAM-SHP-01",
+      "Name": "Mr. Chaps",
+      "City": "Hamburg",
+      "Website_URL": "https://mr-chaps.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://mr-chaps.de/",
+      "january_findings": "Mr. Chaps is a fetish goods retailer, not a scheduled men's darkroom event venue."
+    },
+    {
+      "audit_index": 114,
+      "Venue_ID": "CGN-PAR-01",
+      "Name": "HomOriental",
+      "City": "Cologne",
+      "Website_URL": "https://homoriental.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://homoriental.de/",
+      "january_findings": "HomOriental describes an LGBTQ+ mixed-gender party; no verified exclusively male cruising event, excluded."
+    },
+    {
+      "audit_index": 118,
+      "Venue_ID": "HAM-PAR-02",
+      "Name": "136° - The Club",
+      "City": "Hamburg",
+      "Website_URL": "https://136grad.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://136grad.com/",
+      "january_findings": "136° official party pages are older and audience is broad queer; no 2027 January eligible darkroom event."
+    },
+    {
+      "audit_index": 119,
+      "Venue_ID": "HAM-BAR-15",
+      "Name": "Olivia Jones Bar",
+      "City": "Hamburg",
+      "Website_URL": "https://www.olivia-jones.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.olivia-jones.de/",
+      "january_findings": "Olivia Jones Bar advertises inclusive cabaret/drag shows, not male-only sex-positive cruising dates."
+    },
+    {
+      "audit_index": 120,
+      "Venue_ID": "FFM-BAR-01",
+      "Name": "Lucky's",
+      "City": "Frankfurt",
+      "Website_URL": "https://www.luckys-frankfurt.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://www.luckys-frankfurt.com/",
+      "january_findings": "Lucky's website inaccessible; no independently verified January 2027 qualifying dates."
+    },
+    {
+      "audit_index": 125,
+      "Venue_ID": "FFM-BAR-06",
+      "Name": "Twist",
+      "City": "Frankfurt",
+      "Website_URL": "https://www.twist-frankfurt.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.twist-frankfurt.de/",
+      "january_findings": "Twist is a public gay bar and did not publish dated January men-only darkroom events."
+    },
+    {
+      "audit_index": 126,
+      "Venue_ID": "FFM-BAR-07",
+      "Name": "Zum Schwejk",
+      "City": "Frankfurt",
+      "Website_URL": "https://www.schwejk-frankfurt.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.schwejk-frankfurt.com/",
+      "january_findings": "Zum Schwejk is a gay pub/social club rather than a dated men's darkroom organiser."
+    },
+    {
+      "audit_index": 127,
+      "Venue_ID": "FFM-PAR-01",
+      "Name": "Approved (FLC)",
+      "City": "Offenbach am Main",
+      "Website_URL": "https://www.flc-frankfurt.de/events/approved",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://www.flc-frankfurt.de/events/approved",
+      "january_findings": "FLC Approved official 'www' URL blocked; Frankfurter Lederclub events landing page confirms party series, but no independently dated January 2027 Approved event was verified. Do not project monthly date."
+    },
+    {
+      "audit_index": 129,
+      "Venue_ID": "FFM-SAU-02",
+      "Name": "Sauna Amsterdam",
+      "City": "Frankfurt",
+      "Website_URL": "https://www.gaysauna-amsterdam.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.gaysauna-amsterdam.com/",
+      "january_findings": "Gay Sauna Amsterdam official site describes wellness and ordinary gay sauna access; no dated January 2027 themed programme established."
+    },
+    {
+      "audit_index": 130,
+      "Venue_ID": "FFM-SAU-03",
+      "Name": "Metropol Sauna",
+      "City": "Frankfurt",
+      "Website_URL": "https://metropol-sauna.de/frankfurt",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_recurring_schedule_only",
+      "checked_calendar_url": "https://www.metropol-sauna.de/frankfurt",
+      "january_findings": "Metropol Sauna Frankfurt's official /frankfurt page lists Saturday 22:00 GangBangCumDump in DarkZone, plus Tuesday/Friday foam and Sunday foam. Five Saturday dates staged for January 2027 as projections from recurring rules, not separately advertised. Venue states it opens weekends and holidays."
+    },
+    {
+      "audit_index": 131,
+      "Venue_ID": "FFM-SHP-01",
+      "Name": "RUFF",
+      "City": "Frankfurt",
+      "Website_URL": "https://ruffonline.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://ruffonline.de/",
+      "january_findings": "RUFF is an online fetish store; the site is not a dated men's cruising event calendar."
+    },
+    {
+      "audit_index": 132,
+      "Venue_ID": "MUC-BAR-01",
+      "Name": "Café Nil",
+      "City": "Munich",
+      "Website_URL": "https://www.cafenil.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.cafenil.com/",
+      "january_findings": "Café Nil gay bar venue information, not a January-specific male-only darkroom programme."
+    },
+    {
+      "audit_index": 137,
+      "Venue_ID": "MUC-BAR-08",
+      "Name": "Camp",
+      "City": "Munich",
+      "Website_URL": "https://www.camp-munich.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://www.camp-munich.de/",
+      "january_findings": "Camp Munich operator URL inaccessible; no dated January 2027 eligible events could be established."
+    },
+    {
+      "audit_index": 139,
+      "Venue_ID": "MUC-CIN-01",
+      "Name": "Duplexx München",
+      "City": "Munich",
+      "Website_URL": "https://shop.erotixx.eu/05-duplexx-muenchen-theresienstrasse/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://shop.erotixx.eu/05-duplexx-muenchen-theresienstrasse/",
+      "january_findings": "Duplexx adult shop/cinema retail ticket page with no January-exclusive men-only playroom event published."
+    },
+    {
+      "audit_index": 140,
+      "Venue_ID": "MUC-SAU-01",
+      "Name": "Sauna Deutsche Eiche",
+      "City": "Munich",
+      "Website_URL": "https://www.deutsche-eiche.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://www.deutsche-eiche.de/",
+      "january_findings": "Deutsche Eiche gay sauna site publishes general facility and holiday rooftop events; no January men-only themed cruising party verified."
+    },
+    {
+      "audit_index": 141,
+      "Venue_ID": "MUC-SAU-02",
+      "Name": "Schwabinger Men Sauna",
+      "City": "Munich",
+      "Website_URL": "https://www.mensauna.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_limited",
+      "checked_calendar_url": "https://www.mensauna.de/",
+      "january_findings": "Schwabinger Men Sauna's dedicated venue event page lists monthly UNISEX session; exclude as mixed. No verifiable separately dated January men-only themed event."
+    },
+    {
+      "audit_index": 142,
+      "Venue_ID": "MUC-SHP-01",
+      "Name": "Diburnium",
+      "City": "Munich",
+      "Website_URL": "https://shop.toy-versand.com/de/diburnium-store",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://shop.toy-versand.com/de/diburnium-store",
+      "january_findings": "Diburnium fetish shop website inaccessible; not a published January men's cruising programme."
+    },
+    {
+      "audit_index": 143,
+      "Venue_ID": "MUC-SHP-02",
+      "Name": "SpeXter",
+      "City": "Munich",
+      "Website_URL": "https://spexter.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://spexter.com/",
+      "january_findings": "SpeXter online shop URL inaccessible, no scheduled men-only darkroom event."
+    },
+    {
+      "audit_index": 145,
+      "Venue_ID": "MUC-BAR-03",
+      "Name": "Sub",
+      "City": "Munich",
+      "Website_URL": "https://subonline.org/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://subonline.org/",
+      "january_findings": "Sub München is an LGBTQ+ community centre and events organisation, not a verified men-only cruising party programme in January."
+    },
+    {
+      "audit_index": 146,
+      "Venue_ID": "MUC-PAR-01",
+      "Name": "NY.Club",
+      "City": "Munich",
+      "Website_URL": "https://www.nyclub.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://www.nyclub.de/",
+      "january_findings": "NY.Club 2026 club programme includes male-themed events, but accessible dates are stale. January 2027 men-only night cannot be asserted."
+    },
+    {
+      "audit_index": 147,
+      "Venue_ID": "HAM-PAR-03",
+      "Name": "Babylon",
+      "City": "Hamburg",
+      "Website_URL": "https://gaypartyhamburg.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://gaypartyhamburg.de/",
+      "january_findings": "Babylon Hamburg's official gaypartyhamburg events list has no January 2027 Babylon event published; do not infer."
+    },
+    {
+      "audit_index": 152,
+      "Venue_ID": "FFM-PAR-02",
+      "Name": "CirQonic",
+      "City": "Frankfurt",
+      "Website_URL": "https://www.cirqonic.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://www.cirqonic.de/",
+      "january_findings": "CirQonic party brand includes gay circuit play spaces, but site shows no January 2027 confirmed event."
+    },
+    {
+      "audit_index": 153,
+      "Venue_ID": "FFM-PAR-03",
+      "Name": "Glitter & Gear",
+      "City": "Frankfurt",
+      "Website_URL": "https://glitterandgear.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://glitterandgear.de/",
+      "january_findings": "Glitter & Gear's latest programme is dated 2026 and mixed gender; excluded from men-only darkroom research."
+    },
+    {
+      "audit_index": 154,
+      "Venue_ID": "STU-PAR-01",
+      "Name": "PUMP",
+      "City": "Stuttgart",
+      "Website_URL": "https://linktr.ee/pump.theparty",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://linktr.ee/pump.theparty",
+      "january_findings": "PUMP Linktree did not expose an individually dated January 2027 eligible party."
+    },
+    {
+      "audit_index": 155,
+      "Venue_ID": "MUC-PRD-01",
+      "Name": "Munich Pride",
+      "City": "Munich",
+      "Website_URL": "https://www.csdmuenchen.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://www.csdmuenchen.de/",
+      "january_findings": "Munich Pride official site deals with summer Pride; no confirmed men-only cruising party in January."
+    },
+    {
+      "audit_index": 156,
+      "Venue_ID": "MUC-PAR-04",
+      "Name": "Party2gether",
+      "City": "Munich",
+      "Website_URL": "https://party2gether.de/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://party2gether.de/",
+      "january_findings": "Party2gether official URL inaccessible, no January 2027 programme verified."
+    },
+    {
+      "audit_index": 157,
+      "Venue_ID": "MUC-PAR-05",
+      "Name": "HOLEY",
+      "City": "Munich",
+      "Website_URL": "https://www.instagram.com/holey.night/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://www.instagram.com/holey.night/",
+      "january_findings": "HOLEY Instagram profile inaccessible in web retrieval; no independently confirmed January men-only themed date."
+    },
+    {
+      "audit_index": 158,
+      "Venue_ID": "DUB-PRD-01",
+      "Name": "Dublin Pride",
+      "City": "Dublin",
+      "Website_URL": "https://dublinpride.ie/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://dublinpride.ie/",
+      "january_findings": "Dublin Pride official site confirms 2027 parade on June 26 and 2026 festival guide; no January cruising dates."
+    },
+    {
+      "audit_index": 159,
+      "Venue_ID": "BUD-PRD-01",
+      "Name": "Budapest Pride",
+      "City": "Budapest",
+      "Website_URL": "https://budapestpride.hu/en/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://budapestpride.hu/en/",
+      "january_findings": "Budapest Pride official main pages still present 2026 March and community events, not a January 2027 male-only darkroom event."
+    },
+    {
+      "audit_index": 161,
+      "Venue_ID": "MAD-PRD-01",
+      "Name": "Madrid Pride (MADO)",
+      "City": "Madrid",
+      "Website_URL": "https://madridorgullo.com/en/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://madridorgullo.com/en/",
+      "january_findings": "Madrid Pride site advertises MADO 2026 summer edition, not January 2027 male-only cruising."
+    },
+    {
+      "audit_index": 162,
+      "Venue_ID": "BCN-PRD-01",
+      "Name": "Pride Barcelona",
+      "City": "Barcelona",
+      "Website_URL": "https://www.pridebarcelona.org/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://www.pridebarcelona.org/",
+      "january_findings": "Pride Barcelona site advertises Pride 2026 summer programme only."
+    },
+    {
+      "audit_index": 164,
+      "Venue_ID": "STO-PRD-01",
+      "Name": "Stockholm Pride",
+      "City": "Stockholm",
+      "Website_URL": "https://www.stockholmpride.org/en/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://www.stockholmpride.org/en/",
+      "january_findings": "Stockholm Pride official dates are 27 July–1 August 2026; no January 2027 men-only darkroom entry."
+    },
+    {
+      "audit_index": 165,
+      "Venue_ID": "PRG-PRD-01",
+      "Name": "Prague Pride",
+      "City": "Prague",
+      "Website_URL": "https://www.praguepride.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://www.praguepride.com/",
+      "january_findings": "Prague Pride site includes LGBTQ+ community resources and summer festival information, not January men-only cruising dates."
+    },
+    {
+      "audit_index": 166,
+      "Venue_ID": "BER-FOL-01",
+      "Name": "Folsom Europe",
+      "City": "Berlin",
+      "Website_URL": "https://www.folsomeurope.berlin/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://www.folsomeurope.berlin/",
+      "january_findings": "Folsom Europe official URL inaccessible through retrieval; this is a September festival, no January 2027 dates verified."
+    },
+    {
+      "audit_index": 221,
+      "Venue_ID": "PRG-BAR-01",
+      "Name": "Q Café",
+      "City": "Prague",
+      "Website_URL": "https://q-cafe.cz/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_limited",
+      "checked_calendar_url": "https://q-cafe.cz/",
+      "january_findings": "Q Café official website shows opening hours, not a named men-only playroom/night event in January."
+    },
+    {
+      "audit_index": 222,
+      "Venue_ID": "PRG-BAR-02",
+      "Name": "Café Bar Flirt",
+      "City": "Prague",
+      "Website_URL": "https://flirt-cafe.cz/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_not_calendar_source",
+      "checked_calendar_url": "https://flirt-cafe.cz/",
+      "january_findings": "Café Bar Flirt's party subpage offers general bar and dancefloor rental, no January 2027 men-only darkroom dates."
+    },
+    {
+      "audit_index": 223,
+      "Venue_ID": "PRG-BAR-03",
+      "Name": "Friends Prague",
+      "City": "Prague",
+      "Website_URL": "https://friendsclub.cz/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://friendsclub.cz/",
+      "january_findings": "Friends Prague URL timed out; no readable January 2027 themed event."
+    },
+    {
+      "audit_index": 225,
+      "Venue_ID": "PRG-BAR-04",
+      "Name": "Klub 21",
+      "City": "Prague",
+      "Website_URL": "https://www.21klub.cz/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://www.21klub.cz/",
+      "january_findings": "Klub 21 Prague official event list currently displays only past or unspecified dates, no male-only January cruising programme."
+    },
+    {
+      "audit_index": 226,
+      "Venue_ID": "PRG-BAR-05",
+      "Name": "Piano Bar",
+      "City": "Prague",
+      "Website_URL": "https://piano-bar.cz/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://piano-bar.cz/",
+      "january_findings": "Piano Bar Prague official news lists Pride 2026 drag/bingo; general gay bar/drag performances, not a January 2027 men-only darkroom night."
+    },
+    {
+      "audit_index": 228,
+      "Venue_ID": "PRG-PAR-02",
+      "Name": "Up&Down Bar Prague",
+      "City": "Prague",
+      "Website_URL": "https://updownbarprague.cz/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://updownbarprague.cz/",
+      "january_findings": "Up&Down Bar Prague official URL inaccessible; no January men-only darkroom event verified."
+    },
+    {
+      "audit_index": 229,
+      "Venue_ID": "PRG-PAR-03",
+      "Name": "Club Termix",
+      "City": "Prague",
+      "Website_URL": "https://club-termix.cz/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_limited",
+      "checked_calendar_url": "https://club-termix.cz/",
+      "january_findings": "Club Termix site now advertises danceclub and venue hire for private events; no published male-only darkroom calendar."
+    },
+    {
+      "audit_index": 233,
+      "Venue_ID": "PRG-SAU-01",
+      "Name": "Sauna Babylonia",
+      "City": "Prague",
+      "Website_URL": "https://www.saunababylonia.cz/en/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_confirmed_closed",
+      "checked_calendar_url": "https://www.saunababylonia.cz/en/",
+      "january_findings": "CRITICAL VENUE STATUS: Sauna Babylonia permanently closed during 2026. Fresh official indexed pages explicitly say permanently closed, corroborated by contemporary LUI report dated 2026-09-01 and Patroc. Older cached homepage still displays historical Friday foam and Tuesday/Sunday naked sessions: MUST NOT infer January 2027 events from stale content. Venue listing should be independently corrected to Closed."
+    },
+    {
+      "audit_index": 234,
+      "Venue_ID": "BUD-BAR-01",
+      "Name": "Why Not Café & Bar",
+      "City": "Budapest",
+      "Website_URL": "https://www.whynotcafe.hu/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://www.whynotcafe.hu/",
+      "january_findings": "Why Not Café website booking widgets show 2026 and gay cafe/bar social events, no January 2027 male-only cruising night."
+    },
+    {
+      "audit_index": 236,
+      "Venue_ID": "BUD-BAR-03",
+      "Name": "Habroló",
+      "City": "Budapest",
+      "Website_URL": "https://www.habrolo.hu/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://www.habrolo.hu/",
+      "january_findings": "Habroló official homepage has social events and historic dated posts; no January male-only darkroom programme."
+    },
+    {
+      "audit_index": 237,
+      "Venue_ID": "BUD-PAR-01",
+      "Name": "Alterego Club",
+      "City": "Budapest",
+      "Website_URL": "https://alteregoclub.hu/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://alteregoclub.hu/",
+      "january_findings": "Alterego Club operator site returned a bad gateway; no date-specific January 2027 men-only darkroom evidence."
+    },
+    {
+      "audit_index": 238,
+      "Venue_ID": "BUD-CRU-01",
+      "Name": "coXx",
+      "City": "Budapest",
+      "Website_URL": "https://coxx.hu/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_recurring_schedule_only",
+      "checked_calendar_url": "https://coxx.hu/hu/",
+      "january_findings": "CoXx official site describes men-oriented cruising spaces and says Horny Friday Night EVERY Friday. Its displayed monthly theme dates are old (August); January 2027 specific themes not published. No January event added in this batch; follow up to confirm schedule."
+    },
+    {
+      "audit_index": 239,
+      "Venue_ID": "BUD-SAU-01",
+      "Name": "Magnum Sauna",
+      "City": "Budapest",
+      "Website_URL": "https://gaysaunabudapest.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_recurring_schedule_only",
+      "checked_calendar_url": "https://gaysaunabudapest.com/en/events/events-schedule",
+      "january_findings": "Magnum Sauna official programme says Dark and Naked every Friday 21:00–01:00 and Dark Sunday every Sunday 17:00–20:00, men-only with darkroom. Nine January 2027 occurrences staged from weekly recurrence (Jan 1 Friday omitted pending holiday confirmation); neither January programme nor dates individually published. Follow-up recheck required."
+    },
+    {
+      "audit_index": 240,
+      "Venue_ID": "BUD-SAU-02",
+      "Name": "Szauna69",
+      "City": "Budapest",
+      "Website_URL": "https://gaysaunabudapest.hu/en/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_recurring_schedule_only",
+      "checked_calendar_url": "https://gaysaunabudapest.hu/en/naked-sex-night/",
+      "january_findings": "Sauna69 official men-only gay sauna page advertises Naked Sex Night EVERY Saturday at 19:00. Five January 2027 Saturday occurrences staged from recurrence; its Friday Gender Free event welcomes all genders and is intentionally excluded. Check holiday changes."
+    },
+    {
+      "audit_index": 242,
+      "Venue_ID": "BUD-SHP-02",
+      "Name": "The Dragon",
+      "City": "Budapest",
+      "Website_URL": "https://thedragon.hu/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://thedragon.hu/",
+      "january_findings": "The Dragon retail fetish shop link inaccessible; no independent men-only January event."
+    },
+    {
+      "audit_index": 245,
+      "Venue_ID": "ATH-PAR-03",
+      "Name": "Shamone",
+      "City": "Athens",
+      "Website_URL": "https://www.shamone.gr/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_limited",
+      "checked_calendar_url": "https://www.shamone.gr/",
+      "january_findings": "Shamone Athens homepage lists past happenings and nightclub information without men-only cruising-specific dates."
+    },
+    {
+      "audit_index": 246,
+      "Venue_ID": "ATH-PAR-04",
+      "Name": "S-Cape",
+      "City": "Athens",
+      "Website_URL": "https://s-capeclub.gr/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_limited",
+      "checked_calendar_url": "https://s-capeclub.gr/",
+      "january_findings": "S-Cape operator website has verification gate and no January 2027 readable event details."
+    },
+    {
+      "audit_index": 249,
+      "Venue_ID": "ATH-SAU-01",
+      "Name": "Alexander Sauna",
+      "City": "Athens",
+      "Website_URL": "https://www.alexandersauna.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_limited",
+      "checked_calendar_url": "https://www.alexandersauna.com/",
+      "january_findings": "Alexander Sauna official site describes men's sauna and facilities; its EVENTS navigation did not yield a clearly dated January 2027 themed programme."
+    },
+    {
+      "audit_index": 250,
+      "Venue_ID": "ATH-SAU-02",
+      "Name": "Flex Sauna",
+      "City": "Athens",
+      "Website_URL": "https://www.flexsauna.com.gr/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_access_failed",
+      "checked_calendar_url": "https://www.flexsauna.com.gr/",
+      "january_findings": "Flex Sauna official URL returns 502; no January 2027 men-only themed programme confirmed."
+    },
+    {
+      "audit_index": 252,
+      "Venue_ID": "ATH-PRD-01",
+      "Name": "Athens Pride",
+      "City": "Athens",
+      "Website_URL": "https://athenspride.eu/en/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://athenspride.eu/en/",
+      "january_findings": "Athens Pride website advertises 2026 Pride, no January 2027 eligible men-only darkroom event."
+    },
+    {
+      "audit_index": 254,
+      "Venue_ID": "MYK-BAR-02",
+      "Name": "Jackie O' Mykonos Town Bar",
+      "City": "Mykonos",
+      "Website_URL": "https://www.jackieomykonos.com/town-bar",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://www.jackieomykonos.com/town-bar",
+      "january_findings": "Jackie O' Mykonos Town Bar sells mixed audience cocktails, drag, dancefloor; no January 2027 male-only darkroom night."
+    },
+    {
+      "audit_index": 256,
+      "Venue_ID": "MYK-BAR-04",
+      "Name": "Porta Bar Mykonos",
+      "City": "Mykonos",
+      "Website_URL": "https://portabarmykonos.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://portabarmykonos.com/",
+      "january_findings": "Porta Bar Mykonos presents gay club DJ sets and old blog content, no January 2027 men-only darkroom event."
+    },
+    {
+      "audit_index": 257,
+      "Venue_ID": "MYK-BAR-05",
+      "Name": "Jackie O' Beach Club",
+      "City": "Mykonos",
+      "Website_URL": "https://www.jackieomykonos.com/beach-club",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://www.jackieomykonos.com/beach-club",
+      "january_findings": "Jackie O' Beach Club official venue describes seaside restaurant/bar, not men-only darkroom parties in January."
+    },
+    {
+      "audit_index": 258,
+      "Venue_ID": "MYK-PAR-01",
+      "Name": "XLSIOR Mykonos",
+      "City": "Mykonos",
+      "Website_URL": "https://xlsiorfestival.com/",
+      "checked_at": "2026-11-13",
+      "january_2027_check_status": "checked_stale_calendar",
+      "checked_calendar_url": "https://xlsiorfestival.com/",
+      "january_findings": "XLSIOR Festival website promotes August 2026 Mykonos festival and summer programme, not January 2027 qualifying nights."
+    }
+  ],
+  "events_added": [
+    {
+      "Event_ID": "EVT-JAN27-P6B-CGN-BAR-19-20270104-PULLERARLARM-NAKED-MONDAY",
+      "Venue_ID": "CGN-BAR-19",
+      "Event_Date": "2027-01-04",
+      "Event_Name": "Pullerarlarm – Naked Monday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Monday from 18:00, holiday exceptions unconfirmed.",
+      "source_urls": [
+        "https://pullermanns.de/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-CGN-BAR-19-20270111-PULLERARLARM-NAKED-MONDAY",
+      "Venue_ID": "CGN-BAR-19",
+      "Event_Date": "2027-01-11",
+      "Event_Name": "Pullerarlarm – Naked Monday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Monday from 18:00, holiday exceptions unconfirmed.",
+      "source_urls": [
+        "https://pullermanns.de/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-CGN-BAR-19-20270118-PULLERARLARM-NAKED-MONDAY",
+      "Venue_ID": "CGN-BAR-19",
+      "Event_Date": "2027-01-18",
+      "Event_Name": "Pullerarlarm – Naked Monday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Monday from 18:00, holiday exceptions unconfirmed.",
+      "source_urls": [
+        "https://pullermanns.de/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-CGN-BAR-19-20270125-PULLERARLARM-NAKED-MONDAY",
+      "Venue_ID": "CGN-BAR-19",
+      "Event_Date": "2027-01-25",
+      "Event_Name": "Pullerarlarm – Naked Monday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Monday from 18:00, holiday exceptions unconfirmed.",
+      "source_urls": [
+        "https://pullermanns.de/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-CGN-BAR-19-20270103-HOCHDRUCK-GOLDEN-SHOWER",
+      "Venue_ID": "CGN-BAR-19",
+      "Event_Date": "2027-01-03",
+      "Event_Name": "HOCHDRUCK – Golden Shower",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "First and third Sunday each month, 14:00–20:00",
+      "source_urls": [
+        "https://pullermanns.de/",
+        "https://pinksider.com/koeln/termine/b1529/pullermanns/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-CGN-BAR-19-20270110-SNEAKER-SPORTSWEAR",
+      "Venue_ID": "CGN-BAR-19",
+      "Event_Date": "2027-01-10",
+      "Event_Name": "SNEAKER / SPORTSWEAR",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Second Sunday each month, 14:00–20:00",
+      "source_urls": [
+        "https://pullermanns.de/",
+        "https://pinksider.com/koeln/termine/b1529/pullermanns/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-CGN-BAR-19-20270117-HOCHDRUCK-GOLDEN-SHOWER",
+      "Venue_ID": "CGN-BAR-19",
+      "Event_Date": "2027-01-17",
+      "Event_Name": "HOCHDRUCK – Golden Shower",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "First and third Sunday each month, 14:00–20:00",
+      "source_urls": [
+        "https://pullermanns.de/",
+        "https://pinksider.com/koeln/termine/b1529/pullermanns/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-CGN-BAR-19-20270124-TIEFROT-FIST",
+      "Venue_ID": "CGN-BAR-19",
+      "Event_Date": "2027-01-24",
+      "Event_Name": "TIEFROT – Fist",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Fourth Sunday each month, 14:00–20:00",
+      "source_urls": [
+        "https://pullermanns.de/",
+        "https://pinksider.com/koeln/termine/b1529/pullermanns/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-01-20270108-DARK-AND-NAKED-FRIDAY",
+      "Venue_ID": "BUD-SAU-01",
+      "Event_Date": "2027-01-08",
+      "Event_Name": "Dark and Naked Friday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Friday 21:00–01:00, skipping January 1 because holiday details are unconfirmed.",
+      "source_urls": [
+        "https://gaysaunabudapest.com/en/events/events-schedule",
+        "https://gaysaunabudapest.com/en/events/dark-and-naked-friday"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-01-20270115-DARK-AND-NAKED-FRIDAY",
+      "Venue_ID": "BUD-SAU-01",
+      "Event_Date": "2027-01-15",
+      "Event_Name": "Dark and Naked Friday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Friday 21:00–01:00, skipping January 1 because holiday details are unconfirmed.",
+      "source_urls": [
+        "https://gaysaunabudapest.com/en/events/events-schedule",
+        "https://gaysaunabudapest.com/en/events/dark-and-naked-friday"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-01-20270122-DARK-AND-NAKED-FRIDAY",
+      "Venue_ID": "BUD-SAU-01",
+      "Event_Date": "2027-01-22",
+      "Event_Name": "Dark and Naked Friday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Friday 21:00–01:00, skipping January 1 because holiday details are unconfirmed.",
+      "source_urls": [
+        "https://gaysaunabudapest.com/en/events/events-schedule",
+        "https://gaysaunabudapest.com/en/events/dark-and-naked-friday"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-01-20270129-DARK-AND-NAKED-FRIDAY",
+      "Venue_ID": "BUD-SAU-01",
+      "Event_Date": "2027-01-29",
+      "Event_Name": "Dark and Naked Friday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Friday 21:00–01:00, skipping January 1 because holiday details are unconfirmed.",
+      "source_urls": [
+        "https://gaysaunabudapest.com/en/events/events-schedule",
+        "https://gaysaunabudapest.com/en/events/dark-and-naked-friday"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-01-20270103-DARK-SUNDAY",
+      "Venue_ID": "BUD-SAU-01",
+      "Event_Date": "2027-01-03",
+      "Event_Name": "Dark Sunday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Sunday 17:00–20:00",
+      "source_urls": [
+        "https://gaysaunabudapest.com/en/events/events-schedule",
+        "https://gaysaunabudapest.com/en/events/dark-sunday"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-01-20270110-DARK-SUNDAY",
+      "Venue_ID": "BUD-SAU-01",
+      "Event_Date": "2027-01-10",
+      "Event_Name": "Dark Sunday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Sunday 17:00–20:00",
+      "source_urls": [
+        "https://gaysaunabudapest.com/en/events/events-schedule",
+        "https://gaysaunabudapest.com/en/events/dark-sunday"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-01-20270117-DARK-SUNDAY",
+      "Venue_ID": "BUD-SAU-01",
+      "Event_Date": "2027-01-17",
+      "Event_Name": "Dark Sunday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Sunday 17:00–20:00",
+      "source_urls": [
+        "https://gaysaunabudapest.com/en/events/events-schedule",
+        "https://gaysaunabudapest.com/en/events/dark-sunday"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-01-20270124-DARK-SUNDAY",
+      "Venue_ID": "BUD-SAU-01",
+      "Event_Date": "2027-01-24",
+      "Event_Name": "Dark Sunday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Sunday 17:00–20:00",
+      "source_urls": [
+        "https://gaysaunabudapest.com/en/events/events-schedule",
+        "https://gaysaunabudapest.com/en/events/dark-sunday"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-01-20270131-DARK-SUNDAY",
+      "Venue_ID": "BUD-SAU-01",
+      "Event_Date": "2027-01-31",
+      "Event_Name": "Dark Sunday",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Sunday 17:00–20:00",
+      "source_urls": [
+        "https://gaysaunabudapest.com/en/events/events-schedule",
+        "https://gaysaunabudapest.com/en/events/dark-sunday"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-02-20270102-NAKED-SEX-NIGHT",
+      "Venue_ID": "BUD-SAU-02",
+      "Event_Date": "2027-01-02",
+      "Event_Name": "Naked Sex Night!",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Saturday 19:00 onward",
+      "source_urls": [
+        "https://gaysaunabudapest.hu/en/naked-sex-night/",
+        "https://gaysaunabudapest.hu/en/about-us/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-02-20270109-NAKED-SEX-NIGHT",
+      "Venue_ID": "BUD-SAU-02",
+      "Event_Date": "2027-01-09",
+      "Event_Name": "Naked Sex Night!",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Saturday 19:00 onward",
+      "source_urls": [
+        "https://gaysaunabudapest.hu/en/naked-sex-night/",
+        "https://gaysaunabudapest.hu/en/about-us/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-02-20270116-NAKED-SEX-NIGHT",
+      "Venue_ID": "BUD-SAU-02",
+      "Event_Date": "2027-01-16",
+      "Event_Name": "Naked Sex Night!",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Saturday 19:00 onward",
+      "source_urls": [
+        "https://gaysaunabudapest.hu/en/naked-sex-night/",
+        "https://gaysaunabudapest.hu/en/about-us/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-02-20270123-NAKED-SEX-NIGHT",
+      "Venue_ID": "BUD-SAU-02",
+      "Event_Date": "2027-01-23",
+      "Event_Name": "Naked Sex Night!",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Saturday 19:00 onward",
+      "source_urls": [
+        "https://gaysaunabudapest.hu/en/naked-sex-night/",
+        "https://gaysaunabudapest.hu/en/about-us/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-BUD-SAU-02-20270130-NAKED-SEX-NIGHT",
+      "Venue_ID": "BUD-SAU-02",
+      "Event_Date": "2027-01-30",
+      "Event_Name": "Naked Sex Night!",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Saturday 19:00 onward",
+      "source_urls": [
+        "https://gaysaunabudapest.hu/en/naked-sex-night/",
+        "https://gaysaunabudapest.hu/en/about-us/"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-FFM-SAU-03-20270102-GANGBANGCUMDUMP-DARKZONE",
+      "Venue_ID": "FFM-SAU-03",
+      "Event_Date": "2027-01-02",
+      "Event_Name": "GangBangCumDump – DarkZone",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Saturday from 22:00; site says weekends operate continuously including public holidays.",
+      "source_urls": [
+        "https://www.metropol-sauna.de/frankfurt",
+        "https://en.metropol-sauna.de/frankfurt"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-FFM-SAU-03-20270109-GANGBANGCUMDUMP-DARKZONE",
+      "Venue_ID": "FFM-SAU-03",
+      "Event_Date": "2027-01-09",
+      "Event_Name": "GangBangCumDump – DarkZone",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Saturday from 22:00; site says weekends operate continuously including public holidays.",
+      "source_urls": [
+        "https://www.metropol-sauna.de/frankfurt",
+        "https://en.metropol-sauna.de/frankfurt"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-FFM-SAU-03-20270116-GANGBANGCUMDUMP-DARKZONE",
+      "Venue_ID": "FFM-SAU-03",
+      "Event_Date": "2027-01-16",
+      "Event_Name": "GangBangCumDump – DarkZone",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Saturday from 22:00; site says weekends operate continuously including public holidays.",
+      "source_urls": [
+        "https://www.metropol-sauna.de/frankfurt",
+        "https://en.metropol-sauna.de/frankfurt"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-FFM-SAU-03-20270123-GANGBANGCUMDUMP-DARKZONE",
+      "Venue_ID": "FFM-SAU-03",
+      "Event_Date": "2027-01-23",
+      "Event_Name": "GangBangCumDump – DarkZone",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Saturday from 22:00; site says weekends operate continuously including public holidays.",
+      "source_urls": [
+        "https://www.metropol-sauna.de/frankfurt",
+        "https://en.metropol-sauna.de/frankfurt"
+      ]
+    },
+    {
+      "Event_ID": "EVT-JAN27-P6B-FFM-SAU-03-20270130-GANGBANGCUMDUMP-DARKZONE",
+      "Venue_ID": "FFM-SAU-03",
+      "Event_Date": "2027-01-30",
+      "Event_Name": "GangBangCumDump – DarkZone",
+      "date_basis": "official_recurring_schedule_date",
+      "recurrence_rule": "Every Saturday from 22:00; site says weekends operate continuously including public holidays.",
+      "source_urls": [
+        "https://www.metropol-sauna.de/frankfurt",
+        "https://en.metropol-sauna.de/frankfurt"
+      ]
+    }
+  ],
+  "important_venue_followup": [
+    {
+      "Venue_ID": "PRG-SAU-01",
+      "name": "Sauna Babylonia",
+      "reported_status": "Permanently closed",
+      "official_url": "https://www.saunababylonia.cz/en/",
+      "independent_confirmation": "https://www.lui.cz/en/news/22771-prague-has-lost-one-of-its-most-famous-gay-venues-after-28-years-sauna-babylonia-has-closed-its-doors-for-good-what-remains-in-its-wake",
+      "action": "Review and correct existing listings.json Status to Closed; avoid publishing obsolete themed nights."
+    }
+  ]
+}
