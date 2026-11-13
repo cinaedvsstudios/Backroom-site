@@ -5,8 +5,9 @@ const P=window.BRP2;if(!P)throw Error('Phase 2 shell missing');
 const {state:S,D,get,esc,fmt,clean,norm,notify,saveLocal,readLocal,downloadCSV,downloadJSON,options,stat,pagination,location}=P;
 const upload={mode:'venues',operation:'add',parsed:null,plan:null,error:''};
 const HIST_KEY='br_admin_completeness_log_v2';
-const flag=name=>window.BackroomAdminFlags?.flag(name)||'🌍';
-const countryOptions=(items,selected)=>'<option value="">🌐 All countries</option>'+items.map(name=>'<option value="'+esc(name)+'" '+(selected===name?'selected':'')+'>'+esc(flag(name)+' '+name)+'</option>').join('');
+const flag=name=>window.BackroomAdminFlags?.flag(name)||'🌐';
+const flagHTML=name=>window.BackroomAdminFlags?.html(name)||'<span aria-hidden="true">🌐</span>';
+const countryOptions=(items,selected)=>'<option value="">🌐 All countries</option>'+items.map(name=>'<option value="'+esc(name)+'" '+(selected===name?'selected':'')+'>'+esc(name)+'</option>').join('');
 const q={type:'all',check:'any',country:'',city:'',status:'',page:1};
 let qResult=null;let history=readLocal(HIST_KEY,[]);
 function renderImports(){
@@ -73,6 +74,7 @@ const CHECKS=[
  {id:'description',name:'Missing description',scope:'all'},
  {id:'short',name:'Description shorter than 100 characters',scope:'all'},
  {id:'sources',name:'Missing source URLs',scope:'all'},
+ {id:'tags',name:'Missing tags (Vibe_Tags)',scope:'venues'},
  {id:'image',name:'Missing image URL',scope:'all'},
  {id:'website',name:'Missing official website',scope:'venues'},
  {id:'address',name:'Missing venue address/location',scope:'venues'},
@@ -102,6 +104,7 @@ function checkedRecords(){
    if(!description)issues.push('description');
    if(description.length<100)issues.push('short');
    if(!r.Source_URLs)issues.push('sources');
+   if(!ev&&(r.Vibe_Tags==null||String(Array.isArray(r.Vibe_Tags)?r.Vibe_Tags.join(''):r.Vibe_Tags).trim()===''))issues.push('tags');
    if(!(ev?r.Event_Image_URL:r.Image_URL))issues.push('image');
    if(!ev){
      if(!r.Website_URL)issues.push('website');
@@ -172,7 +175,7 @@ function renderQuality(){
    html+='<h3>'+fmt(total)+' matches / '+fmt(qResult.examined)+' examined ('+(qResult.examined?(total/qResult.examined*100).toFixed(1):'0.0')+'%)</h3>'+
    '<p class="br-p2-muted">Results are from the last executed check. Filter changes require running again. Exports contain complete matching records.</p>'+
    '<div class="br-p2-scroll"><table class="br-p2-table"><thead><tr><th>ID</th><th>Name</th><th>City / Country</th><th>Status</th><th>Issues</th></tr></thead><tbody>'+
-   qResult.rows.slice((q.page-1)*100,q.page*100).map(x=>'<tr><td>'+esc(x.row.Event_ID||x.row.Venue_ID||'Missing')+'</td><td>'+esc(x.row.Event_Name||x.row.Name||'')+'</td><td>'+esc([flag(x.loc.country),...x.loc.cities].filter(Boolean).join(' '))+'</td><td>'+esc(x.row.Status||'')+'</td><td>'+esc(x.issues.map(id=>CHECKS.find(c=>c.id===id)?.name||id).join('; '))+'</td></tr>').join('')+'</tbody></table></div>'+pagination('quality',q.page,pages);
+   qResult.rows.slice((q.page-1)*100,q.page*100).map(x=>'<tr><td>'+esc(x.row.Event_ID||x.row.Venue_ID||'Missing')+'</td><td>'+esc(x.row.Event_Name||x.row.Name||'')+'</td><td>'+(x.loc.country?flagHTML(x.loc.country)+' ':'')+esc(x.loc.cities.join(', '))+'</td><td>'+esc(x.row.Status||'')+'</td><td>'+esc(x.issues.map(id=>CHECKS.find(c=>c.id===id)?.name||id).join('; '))+'</td></tr>').join('')+'</tbody></table></div>'+pagination('quality',q.page,pages);
  }
  html+='<details class="br-p2-details"><summary>Check history ('+history.length+')</summary><div class="br-p2-scroll"><table class="br-p2-table"><thead><tr><th>Executed</th><th>Filter</th><th>Examined</th><th>Matches</th><th>Percent</th><th>JSON/CSV exported</th></tr></thead><tbody>'+
  history.slice().reverse().slice(0,40).map(x=>'<tr><td>'+esc(x.date.slice(0,16).replace('T',' '))+'</td><td>'+esc(x.type+' · '+x.check)+'</td><td>'+fmt(x.examined)+'</td><td>'+fmt(x.matched)+'</td><td>'+x.percent+'%</td><td>'+(x.downloaded?'Yes':'No')+'</td></tr>').join('')+'</tbody></table></div></details>';
