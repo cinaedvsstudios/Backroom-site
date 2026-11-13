@@ -304,10 +304,27 @@ async function saveGroups(){
 }
 function message(value){if(typeof showToast==='function')showToast(value);else alert(value);}
 function chartSvg(series){
-    if(series.length<2)return'<p class="br-muted">More history points will appear here after subsequent changes.</p>';
-    const w=680,h=170,p=23,min=Math.min(...series.map(p=>p.y)),max=Math.max(...series.map(p=>p.y),min+1);
-    const points=series.map((d,i)=>(p+(w-2*p)*i/(series.length-1)).toFixed(1)+','+(h-p-(d.y-min)/(max-min)*(h-2*p)).toFixed(1)).join(' ');
-    return '<svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Historical trend" class="br-chart"><line x1="'+p+'" y1="'+(h-p)+'" x2="'+(w-p)+'" y2="'+(h-p)+'" stroke="#8392a8"/><polyline fill="none" stroke="#49d2ff" stroke-width="3" points="'+points+'"/><text x="22" y="17" fill="#e4edf8">'+fmt(max)+'</text><text x="22" y="'+(h-5)+'" fill="#e4edf8">'+fmt(min)+'</text></svg>';
+  if(series.length<2)return'<p class="br-muted">More history points will appear here after subsequent changes.</p>';
+  const w=800,h=274,left=68,right=20,top=20,bottom=52;
+  const values=series.map(p=>Number(p.y)||0),lowest=Math.min(0,...values),highest=Math.max(...values,lowest+1);
+  const max=Math.max(4,Math.ceil(highest/4)*4),chartH=h-top-bottom;
+  const xy=series.map((item,i)=>({x:left+(w-left-right)*i/Math.max(1,series.length-1),y:top+(max-item.y)/(max-lowest)*chartH}));
+  const points=xy.map(p=>p.x.toFixed(1)+','+p.y.toFixed(1)).join(' ');
+  const ticks=Array.from({length:5},(_,i)=>{
+    const value=lowest+(max-lowest)*i/4,y=top+chartH-(i/4)*chartH;
+    return '<line x1="'+left+'" y1="'+y+'" x2="'+(w-right)+'" y2="'+y+'" stroke="#33455e" stroke-dasharray="3 5"/>'+
+      '<text x="'+(left-10)+'" y="'+(y+5)+'" fill="#c1d0de" text-anchor="end" font-size="13">'+fmt(Math.round(value))+'</text>';
+  }).join('');
+  return '<svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Query result history, vertical axis shows matching records" class="br-chart br-p3-chart">'+
+    '<text x="17" y="'+(top+chartH/2)+'" fill="#a8c2dc" font-size="13" text-anchor="middle" transform="rotate(-90 17 '+(top+chartH/2)+')">Matches</text>'+ticks+
+    '<line x1="'+left+'" y1="'+top+'" x2="'+left+'" y2="'+(h-bottom)+'" stroke="#a3b8ce"/>'+
+    '<polyline fill="none" stroke="#49d2ff" stroke-width="3" points="'+points+'"/>'+
+    xy.map((point,i)=>{
+      const date=String(series[i].date||'Run '+(i+1)).replace('T',' ').slice(0,19);
+      return '<circle cx="'+point.x+'" cy="'+point.y+'" r="7" fill="#49d2ff" stroke="#151b29" stroke-width="2" tabindex="0" data-br-chart-tip="'+esc(date+' · '+fmt(values[i])+' matches')+'"></circle>';
+    }).join('')+
+    '<text x="'+left+'" y="'+(h-15)+'" fill="#b8c9df" font-size="12">'+esc(String(series[0].date||'First run').slice(0,10))+'</text>'+
+    '<text x="'+(w-right)+'" y="'+(h-15)+'" text-anchor="end" fill="#b8c9df" font-size="12">'+esc(String(series[series.length-1].date||'Latest run').slice(0,10))+'</text></svg>';
 }
 async function captureDataPoint(){
     if(state.capturing)return;
@@ -369,33 +386,41 @@ function buildGrowthSeries(history){
     return points;
 }
 function growthChart(points){
-    if(points.length<2)return '<p class="br-muted">Capture a data point to establish a published baseline, or change the data through Admin to begin the history.</p>';
-    const drawn=points.slice(-80);
-    const w=740,h=215,p=30,max=Math.max(1,...drawn.flatMap(x=>[x.venues,x.cruising,x.events]));
-    const lines=[['venues','Venues','#49d2ff'],['cruising','Cruising Areas','#ef6957'],['events','Events','#f0c94c']];
-    const xy=(point,index,key)=>({
-        x:p+(w-2*p)*index/Math.max(1,drawn.length-1),
-        y:h-p-(point[key]/max)*(h-2*p)
-    });
-    const path=key=>drawn.map((point,i)=>{const pt=xy(point,i,key);return pt.x.toFixed(2)+','+pt.y.toFixed(2);}).join(' ');
-    const markers=drawn.map((point,i)=>{
-        if(point.type!=='snapshot')return '';
-        return lines.map(([key,label,color])=>{
-            const pt=xy(point,i,key);
-            const tooltip=esc(new Date(point.date).toLocaleString('en-GB')+' — '+label+': '+fmt(point[key])+' (published JSON)');
-            return '<circle cx="'+pt.x.toFixed(2)+'" cy="'+pt.y.toFixed(2)+'" r="5" fill="'+color+'" stroke="#151b29" stroke-width="2"><title>'+tooltip+'</title></circle>';
-        }).join('');
-    }).join('');
-    const labels=drawn.length>1
-        ? '<text x="'+p+'" y="'+(h-3)+'" fill="#aab4c5" font-size="11">'+esc(new Date(drawn[0].date).toLocaleDateString('en-GB'))+'</text>'+
-          '<text x="'+(w-p)+'" y="'+(h-3)+'" fill="#aab4c5" text-anchor="end" font-size="11">'+esc(new Date(drawn[drawn.length-1].date).toLocaleDateString('en-GB'))+'</text>'
-        : '';
-    return '<div class="br-growth-legend">'+lines.map(x=>'<span style="color:'+x[2]+'">● '+x[1]+'</span>').join('')+'</div>'+
-      '<svg class="br-chart" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Venues, cruising areas and events over time">'+
-      '<line x1="'+p+'" y1="'+(h-p)+'" x2="'+(w-p)+'" y2="'+(h-p)+'" stroke="#8392a8"/>'+
-      lines.map(x=>'<polyline fill="none" stroke="'+x[2]+'" stroke-width="3" points="'+path(x[0])+'"/>').join('')+
-      markers+'<text x="'+p+'" y="18" fill="#e4edf8">'+fmt(max)+'</text>'+labels+'</svg>'+
-      '<p class="br-muted">Lines show recorded totals. Circles mark manually captured <strong>published</strong> JSON totals; Admin merges may reflect unsaved working-draft changes.</p>';
+  if(points.length<2)return '<p class="br-muted">Capture a data point to establish a published baseline, or change the data through Admin to begin the history.</p>';
+  const drawn=points.slice(-80),w=850,h=315,left=73,right=22,top=25,bottom=61,chartH=h-top-bottom;
+  const rawMax=Math.max(1,...drawn.flatMap(x=>[x.venues||0,x.cruising||0,x.events||0]));
+  const ceiling=Math.max(4,Math.ceil(rawMax/4)*4);
+  const lines=[['venues','Venues','#49d2ff'],['cruising','Cruising Areas','#ef6957'],['events','Events','#f0c94c']];
+  const xy=(point,index,key)=>({
+    x:left+(w-left-right)*index/Math.max(1,drawn.length-1),
+    y:top+(ceiling-(Number(point[key])||0))/ceiling*chartH
+  });
+  const series=key=>drawn.map((point,i)=>{const pos=xy(point,i,key);return pos.x.toFixed(2)+','+pos.y.toFixed(2);}).join(' ');
+  const grid=Array.from({length:5},(_,i)=>{
+    const v=ceiling*i/4,y=top+chartH-i/4*chartH;
+    return '<line x1="'+left+'" y1="'+y+'" x2="'+(w-right)+'" y2="'+y+'" stroke="#354359" stroke-dasharray="3 5"/>'+
+      '<text x="'+(left-12)+'" y="'+(y+4)+'" text-anchor="end" font-size="13" fill="#cad9e8">'+fmt(Math.round(v))+'</text>';
+  }).join('');
+  const tooltip=point=>{
+    const date=String(point.date||'').replace('T',' ').slice(0,19);
+    const source=point.type==='snapshot'?'Published JSON capture':point.operation||'Historical totals';
+    return date+' · '+source+'\nVenues: '+fmt(point.venues||0)+'\nCruising areas: '+fmt(point.cruising||0)+'\nEvents: '+fmt(point.events||0);
+  };
+  const markers=drawn.map((point,i)=>lines.map(([key,label,color])=>{
+    const p=xy(point,i,key),published=point.type==='snapshot';
+    return '<circle cx="'+p.x.toFixed(2)+'" cy="'+p.y.toFixed(2)+'" r="'+(published?7:5)+'" fill="'+color+'" stroke="#151b29" stroke-width="2" tabindex="0" data-br-chart-tip="'+esc(tooltip(point))+'"></circle>';
+  }).join('')).join('');
+  const first=String(drawn[0].date||'').slice(0,10);
+  const last=String(drawn[drawn.length-1].date||'').slice(0,10);
+  return '<div class="br-growth-legend">'+lines.map(x=>'<span style="color:'+x[2]+'">● '+x[1]+'</span>').join('')+'</div>'+
+    '<svg class="br-chart br-p3-chart" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Venues, cruising areas and events over time with labelled vertical axis">'+
+    '<text x="18" y="'+(top+chartH/2)+'" font-size="14" fill="#a8c2dc" text-anchor="middle" transform="rotate(-90 18 '+(top+chartH/2)+')">Total records</text>'+grid+
+    '<line x1="'+left+'" y1="'+top+'" x2="'+left+'" y2="'+(h-bottom)+'" stroke="#a3b8ce"/>'+
+    lines.map(x=>'<polyline fill="none" stroke="'+x[2]+'" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="'+series(x[0])+'"/>').join('')+
+    markers+
+    '<text x="'+left+'" y="'+(h-19)+'" font-size="12" fill="#b8c9df">'+esc(first)+'</text>'+
+    '<text x="'+(w-right)+'" y="'+(h-19)+'" font-size="12" fill="#b8c9df" text-anchor="end">'+esc(last)+'</text></svg>'+
+    '<p class="br-muted">Hover over or focus a chart point to see its date and exact totals. Published captures are recorded independently of working-draft changes.</p>';
 }
 async function refreshLogViews(){
     try{state.logs=await getAllLogs();}catch(error){console.error(error);state.logs=[];}
@@ -425,7 +450,7 @@ async function refreshLogViews(){
         const comparison=queryLogs.filter(x=>x.scope+' | '+x.query===chosen).sort((a,b)=>String(a.date).localeCompare(String(b.date)));
         qbox.innerHTML='<h3>Completeness Check History</h3><label>Compare identical queries</label>'+
           '<select id="br-history-query-select">'+queries.map(q=>'<option value="'+esc(q)+'" '+(q===chosen?'selected':'')+'>'+esc(q)+'</option>').join('')+'</select>'+
-          chartSvg(comparison.map(x=>({y:x.matched})))+
+          chartSvg(comparison.map(x=>({y:x.matched,date:x.date})))+
           '<table class="br-table"><thead><tr><th>Executed</th><th>Dataset / Query</th><th>Examined</th><th>Matched</th><th>JSON saved</th></tr></thead><tbody>'+
           queryLogs.slice(0,60).map(x=>'<tr><td>'+esc(new Date(x.date).toLocaleString('en-GB'))+'</td><td>'+esc(x.scope+' — '+x.query)+'</td><td>'+fmt(x.examined)+'</td><td>'+fmt(x.matched)+'</td><td>'+(x.downloaded?'Yes ('+fmt(x.groups)+')':'No')+'</td></tr>').join('')+'</tbody></table>';
     }
