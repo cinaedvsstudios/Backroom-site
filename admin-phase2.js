@@ -79,7 +79,8 @@ function commitDataset(mode,after,before,operation,counts){
  state[mode]=clone(after);
 }
 function hide(){state.active=false;if(get('br-phase2-view'))get('br-phase2-view').style.display='none';get('nav-data-quality')?.classList.remove('br-nav-active');}
-function show(){
+function show(tab){
+ if(typeof tab==='string'&&['imports','quality','registry','coverage','zones'].includes(tab))state.tab=tab;
  state.active=true;get('br-phase2-view').style.display='block';
  for(const id of ['view-tables','view-editor','view-terminology','view-avatars','br-reporting-view']){const node=get(id);if(node){node.style.display='none';if(id!=='br-reporting-view')node.classList.add('hidden');}}
  document.querySelectorAll('#nav-venues,#nav-events,#nav-cruising,#nav-reporting').forEach(x=>x.classList.remove('br-nav-active'));
@@ -107,6 +108,15 @@ function install(){
  '<nav id="br-phase2-nav">'+[['imports','Spreadsheet Tools'],['quality','Completeness'],['registry','City Registry'],['coverage','City Coverage'],['zones','Zone Rules']].map(x=>'<button class="btn secondary-btn pill-btn" type="button" data-p2-tab="'+x[0]+'">'+x[1]+'</button>').join('')+'</nav>'+
  '<section id="br-p2-imports"></section><section id="br-p2-quality" class="hidden"></section><section id="br-p2-registry" class="hidden"></section><section id="br-p2-coverage" class="hidden"></section><section id="br-p2-zones" class="hidden"></section>';
  main.appendChild(root);
+ // Link the expanded checks back to Reporting's existing completeness overview,
+ // keeping one overview and one detailed workflow rather than disconnected tools.
+ const summary=get('br-completeness-overview')?.closest('.br-panel-inner');
+ if(summary&&!get('br-p2-report-link')){
+   const link=document.createElement('button');
+   link.id='br-p2-report-link';link.type='button';link.className='btn secondary-btn pill-btn';
+   link.style.width='auto';link.textContent='↗ Open detailed data-quality checks';
+   link.addEventListener('click',()=>show('quality'));summary.appendChild(link);
+ }
  root.addEventListener('click',event=>{
    const btn=event.target.closest('button');if(!btn)return;
    if(btn.dataset.p2Tab){state.tab=btn.dataset.p2Tab;render();return;}
