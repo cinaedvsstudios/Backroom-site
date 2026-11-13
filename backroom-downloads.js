@@ -133,12 +133,46 @@
     'lebanon':'LB','argentina':'AR','brazil':'BR','mexico':'MX','japan':'JP',
     'south korea':'KR','republic of korea':'KR','thailand':'TH'
   });
-  function storyCountryFlag(country) {
+  function storyCountryCode(country) {
     const name = clean(country).normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
       .toLowerCase().replace(/^the\s+/, '').replace(/\s+/g, ' ').trim();
     const code = STORY_COUNTRY_CODES[name] || (/^[a-z]{2}$/.test(name) ? name.toUpperCase() : '');
-    if (!/^[A-Z]{2}$/.test(code)) return '';
-    return [...code].map(letter => String.fromCodePoint(0x1F1E6 + letter.charCodeAt(0) - 65)).join('');
+    return /^[A-Z]{2}$/.test(code) ? code : '';
+  }
+
+
+  // SVG flag artwork is downloaded only from our own site and used as an image.
+  // Windows does not reliably render Unicode flag emojis in a canvas.
+  const STORY_FLAG_GROUPS = [
+    'AL AD AM AT AZ BY BE BA BG HR CY CZ DK EE FI FR',
+    'GE DE GR HU IS IE IT KZ XK LV LI LT LU MT MD MC',
+    'ME NL MK NO PL PT RO RU SM RS SK SI ES SE CH TR',
+    'UA GB VA US AU CA NZ IL MA LB AR BR MX JP KR TH'
+  ].map(group => group.split(' '));
+  const storyFlagPartLoads = new Map();
+  async function storyFlagImage(code) {
+    if (!code) return null;
+    let svg = window.BACKROOM_STORY_FLAG_SVGS?.[code];
+    if (!svg) {
+      const index = STORY_FLAG_GROUPS.findIndex(group => group.includes(code));
+      if (index < 0) return null;
+      if (!storyFlagPartLoads.has(index)) {
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = asset('story-flags-0' + (index + 1) + '.js?v=1.0.0');
+          script.onload = resolve;
+          script.onerror = () => reject(new Error('Flag artwork could not be loaded'));
+          document.head.append(script);
+        }).catch(error => {
+          storyFlagPartLoads.delete(index);
+          throw error;
+        });
+        storyFlagPartLoads.set(index, promise);
+      }
+      await storyFlagPartLoads.get(index);
+      svg = window.BACKROOM_STORY_FLAG_SVGS?.[code];
+    }
+    return svg ? loadImage('data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg)) : null;
   }
 
   // Only these generic images can be chosen using the Story Card image cycle.
@@ -188,8 +222,53 @@
     ctx.restore();
   }
 
+
+  function paintStoryLocation(ctx, label, flagImage, code, y) {
+    const showFlag = Boolean(flagImage || code);
+    const flagW = 48, flagH = 36, gap = 13;
+    let size = 32, lines;
+    do {
+      setFont(ctx, size);
+      lines = wrap(ctx, label, 810 - (showFlag ? flagW + gap : 0));
+      if (lines.length <= 2 || size <= 20) break;
+      size -= 2;
+    } while (true);
+    ctx.textBaseline = 'top';
+    ctx.textAlign = 'left';
+    lines.forEach((line, index) => {
+      const finalLine = index === lines.length - 1;
+      const textWidth = ctx.measureText(line).width;
+      const extra = showFlag && finalLine ? flagW + gap : 0;
+      const x = 540 - (textWidth + extra) / 2;
+      const lineY = y + index * size * 1.08;
+      ctx.fillStyle = C.muted;
+      ctx.fillText(line, x, lineY);
+      if (!extra) return;
+      const fx = x + textWidth + gap, fy = lineY - 2;
+      if (flagImage) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.roundRect(fx, fy, flagW, flagH, 4);
+        ctx.clip();
+        ctx.drawImage(flagImage, fx, fy, flagW, flagH);
+        ctx.restore();
+      } else {
+        // Keep a readable country-code badge if an asset fails to load.
+        ctx.save();
+        ctx.lineWidth = 2;
+        rounded(ctx, fx, fy, flagW, flagH, 4, '#22475e', C.cyan);
+        ctx.fillStyle = C.white;
+        ctx.textBaseline = 'middle';
+        ctx.textAlign = 'center';
+        setFont(ctx, 24, 600);
+        ctx.fillText(code, fx + flagW / 2, fy + flagH / 2);
+        ctx.restore();
+      }
+    });
+  }
+
   // One renderer is used for both the editable live preview and the downloaded JPEG.
-  function paintStory(canvas, event, venue, logo, state) {
+  function paintStory(canvas, event, venue, logo, state, flagImage, countryCode) {
     const ctx = canvas.getContext('2d');
     const uploaded = state.uploaded;
     const frame = storyFrame(state);
@@ -231,16 +310,13 @@
       ? 1195 + Math.max(0, (182 - titleLines.length * titleSize * 1.08) / 2)
       : 1125 + Math.max(0, (225 - titleLines.length * titleSize * 1.08) / 2);
     const titleBottom = centerLines(ctx, title, titleTop, 820, titleSize, C.red, 600, 2);
-    const city = clean(event.City || venue?.City);
-    const flag = storyCountryFlag(event.Country) || storyCountryFlag(venue?.Country);
     const location = [
       venue?.Name || event.Venue_Name || event.Venue,
-      city ? city + (flag ? ' ' + flag : '') : ''
+      event.City || venue?.City
     ].filter(Boolean).join(' / ');
-    centerLines(
-      ctx, '📍 ' + location,
-      uploaded ? Math.max(1388, titleBottom + 8) : Math.max(1365, titleBottom + 14),
-      810, 32, C.muted, 400, 2
+    paintStoryLocation(
+      ctx, '📍 ' + location, flagImage, countryCode,
+      uploaded ? Math.max(1388, titleBottom + 8) : Math.max(1365, titleBottom + 14)
     );
 
     const tags = storyTags(event);
@@ -314,6 +390,12 @@
         initialPhoto = await loadImage(asset('placeholder_venue.jpg'));
       }
 
+      const countryCode = storyCountryCode(event.Country) || storyCountryCode(venue?.Country);
+      const flagImage = await storyFlagImage(countryCode).catch(error => {
+        console.warn('Story Card country flag:', error);
+        return null;
+      });
+
       document.getElementById('backroom-story-preview')?.remove();
       const dialog = document.createElement('dialog');
       dialog.id = 'backroom-story-preview';
@@ -381,7 +463,7 @@
       document.body.append(dialog);
 
       function refresh() {
-        paintStory(canvas, event, venue, logo, state);
+        paintStory(canvas, event, venue, logo, state, flagImage, countryCode);
         minusButton.disabled = state.zoom <= 1.0001;
         plusButton.disabled = state.zoom >= STORY_MAX_ZOOM - 0.0001;
         moveButton.setAttribute('aria-pressed', String(state.moving));
@@ -511,7 +593,7 @@
         refresh();
       };
       download.onclick = () => busy(download, async () => {
-        paintStory(canvas, event, venue, logo, state);
+        paintStory(canvas, event, venue, logo, state, flagImage, countryCode);
         saveBlob(await storyJpeg(canvas), fileName(event.Event_Name) + '-story.jpg');
       });
       close.onclick = () => dialog.close();
