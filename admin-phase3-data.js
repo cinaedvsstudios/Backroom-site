@@ -83,9 +83,10 @@ function location(row,venues){const host=venues.get(clean(row.Venue_ID))||{};ret
 function selected(config,venues,events){
  const type=kindOf(config.workflow),host=new Map(venues.map(x=>[clean(x.Venue_ID),x]));
  const all=type==='events'?events:type==='venues'?venues.filter(r=>!cruise(r)):type==='cruising'?venues.filter(cruise):[...venues,...events];
- const ids=new Set(config.ids||[]),countries=new Set((config.countries||[]).map(norm)),cities=new Set((config.cities||[]).map(norm));
+ const ids=new Set(config.ids||[]),countries=new Set((config.countries||[]).map(norm)),cities=new Set((config.cities||[]).map(norm)),coverage=new Set((config.allowedCountries||[]).map(norm));
  const query=norm(config.text),status=norm(config.status);
  return all.filter(r=>{const id=clean(r.Venue_ID||r.Event_ID),loc=location(r,host),date=clean(r.Event_Date);
+  if(coverage.size&&!coverage.has(norm(loc.country)))return false;
   if(ids.size&&!ids.has(id))return false;
   if(countries.size&&!countries.has(norm(loc.country)))return false;
   if(cities.size&&!cities.has(norm(loc.country+'|'+loc.city)))return false;
@@ -104,9 +105,9 @@ function build(config,venues,events,sources,instructions){
  const found=new Set(tasks.map(x=>norm(x.country+'|'+x.city)));
  for(const loc of config.cities||[]){
   const [country,...rest]=loc.split('|'),city=rest.join('|');
-  if(!found.has(norm(loc)))tasks.push({country,city,id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
+  if((!config.allowedCountries?.length||config.allowedCountries.map(norm).includes(norm(country)))&&!found.has(norm(loc)))tasks.push({country,city,id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
  }
- if(!tasks.length)for(const country of config.countries||[])tasks.push({country,city:'(country-wide)',id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
+ if(!tasks.length)for(const country of config.countries||[])if(!config.allowedCountries?.length||config.allowedCountries.map(norm).includes(norm(country)))tasks.push({country,city:'(country-wide)',id:'',record:null,zone:config.zone==='auto'?zone(country,type):Number(config.zone)});
  const size=Math.max(1,Math.min(300,Number(config.batchSize)||25)),limit=Math.max(1,Math.min(300,Number(config.sourceLimit)||60));
  const rules=(instructions||[]).filter(x=>x.id==='COMMON_RULES'||x.id==='WORLDWIDE_ZONES').map(x=>x.body).join('\n\n');
  const instruction=(instructions||[]).find(x=>x.id===flow.toUpperCase())?.body||'';
