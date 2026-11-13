@@ -222,7 +222,7 @@ function refreshScopeStats(){
         return state.countryAsc?result:-result;
     });
     table.innerHTML='<thead><tr><th data-country-sort="country">Country ↕</th><th data-country-sort="venue">Venues ↕</th><th data-country-sort="cruise">Cruising ↕</th><th data-country-sort="events">Events ↕</th><th data-country-sort="total">Total ↕</th></tr></thead><tbody>'+
-      entries.map(([country,n])=>'<tr><td>'+esc(country)+'</td><td>'+fmt(n.venue)+'</td><td>'+fmt(n.cruise)+'</td><td>'+fmt(n.events)+'</td><td>'+fmt(n.venue+n.cruise+n.events)+'</td></tr>').join('')+'</tbody>';
+      entries.map(([country,n])=>'<tr><td>'+esc((window.BackroomAdminFlags?.flag(country)||'🌍')+' '+country)+'</td><td>'+fmt(n.venue)+'</td><td>'+fmt(n.cruise)+'</td><td>'+fmt(n.events)+'</td><td>'+fmt(n.venue+n.cruise+n.events)+'</td></tr>').join('')+'</tbody>';
     renderMonths();
 }
 function dateOnly(v){if(!v)return null;const s=String(v).trim(),d=s.match(/^(\d{1,2})-(\d{1,2})-(\d{4})/);const t=d?new Date(Number(d[3]),Number(d[2])-1,Number(d[1])):new Date(s);return Number.isNaN(t.getTime())?null:t;}
