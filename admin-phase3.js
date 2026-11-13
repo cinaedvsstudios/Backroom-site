@@ -160,20 +160,21 @@ function allSources(){
 function sourceHTML(){
  const filtered=allSources(),pages=Math.max(1,Math.ceil(filtered.length/70));S.sourcePage=Math.min(S.sourcePage,pages);
  const visible=filtered.slice((S.sourcePage-1)*70,S.sourcePage*70);
+ const picked=new Set(S.config.sourceKeys||[]);
  const origins=S.fileReports.map(x=>'<span class="br3-pill '+(x.error?'br3-warning':'')+'">'+esc(x.origin.split('/').pop())+': '+(x.error?'unavailable':fmt(x.newUrls)+' new URLs')+'</span>').join('');
  return group('br3-library','🌐 Master Source Library',
   '<p class="br3-muted">Exact individual URLs are deduplicated, while original variants, record IDs and file provenance remain attached. Archive links are research leads — not proof of a live venue or recent cruising activity.</p>'+
   '<div class="br3-chips">'+[['Source URLs',S.lib.size()],['Catalogue seeds',S.seeds?.sources?.length||0],['Production venues',P.state.venues.length],['Production events',P.state.events.length]].map(x=>'<span class="br3-pill"><strong>'+fmt(x[1])+'</strong> '+x[0]+'</span>').join('')+'</div>'+
   '<div class="br3-chips">'+origins+'</div>'+
-  '<div class="br3-inline">'+buttons([['br3-load-sources','↻ Load cruising + January research','primary-btn'],['br3-export-sources','⬇ Export all sources JSON'],['br3-export-csv','⬇ CSV'],['br3-import-sources-btn','⬆ Import URL list'],['br3-add-source','＋ Add source']])+
+  '<div class="br3-inline">'+buttons([['br3-load-sources','↻ Load cruising + January research','primary-btn'],['br3-export-sources','⬇ Export all sources JSON'],['br3-export-csv','⬇ CSV'],['br3-import-sources-btn','⬆ Import URL list'],['br3-add-source','＋ Add source'],['br3-use-all-sources','Use all sources']])+
   '<input type="file" id="br3-source-file" accept=".json,.csv,.tsv,.txt" hidden></div>'+
   '<div class="br3-grid br3-grid-3"><label>Find URL, record ID or domain<input id="br3-src-search" type="search" value="'+esc(S.sourceSearch)+'" placeholder="e.g. patroc / BER-LAB"></label>'+
   '<label>Type<select id="br3-src-kind">'+opt('','','All types')+sourceKinds().map(x=>opt(x,S.sourceKind)).join('')+'</select></label>'+
   '<label>Country<input id="br3-src-country" placeholder="All countries" value="'+esc(S.sourceCountry)+'"></label>'+
   '<label>Origin contains<input id="br3-src-origin" placeholder="Archive, seed, events..." value="'+esc(S.sourceOrigin)+'"></label></div>'+
-  '<div class="br3-muted">'+fmt(filtered.length)+' matching URLs · page '+S.sourcePage+'/'+pages+'. Preserve archive sources even if their current status is uncertain.</div>'+
-  '<div class="br3-overflow"><table class="br3-table"><thead><tr><th>Source / Website</th><th>Type</th><th>Research references</th><th>Actions</th></tr></thead><tbody>'+
-  visible.map(x=>'<tr><td><strong>'+esc(x.name)+'</strong><div class="br3-url"><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+esc(x.url)+'</a></div>'+
+  '<div class="br3-muted">'+fmt(filtered.length)+' matching URLs · page '+S.sourcePage+'/'+pages+' · '+fmt(picked.size)+' explicitly selected for briefs. When none are selected, all eligible sources are considered.</div>'+
+  '<div class="br3-overflow"><table class="br3-table"><thead><tr><th>Use</th><th>Source / Website</th><th>Type</th><th>Research references</th><th>Actions</th></tr></thead><tbody>'+
+  visible.map(x=>'<tr><td><input type="checkbox" aria-label="Include source in builder" data-br3-source-pick="'+esc(x.key)+'" '+(picked.has(x.key)?'checked':'')+'></td><td><strong>'+esc(x.name)+'</strong><div class="br3-url"><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+esc(x.url)+'</a></div>'+
    (x.enabled===false?'<span class="br3-warning">Disabled</span>':'')+'</td><td>'+esc(x.kind)+'</td><td>'+
    '<span title="'+esc(x.origins.join('; ').slice(0,400))+'">'+fmt(x.record_ids.length)+' IDs · '+fmt(x.origins.length)+' origins</span>'+
    '<details><summary>Provenance</summary><p>'+esc(x.origins.join(' · ').slice(0,1000))+'</p><p>'+esc(x.record_ids.slice(0,40).join(', '))+'</p></details></td><td>'+
@@ -272,8 +273,8 @@ async function importSources(file){
  else if(/\.txt$/i.test(file.name))payload=D.urlsFrom(text).map(url=>({url}));
  else payload=JSON.parse(text.replace(/^\ufeff/,''));
  let rows;
- try{rows=D.normalizeImport(payload)}
- catch{if(typeof payload==='object'){const report=D.ingest(S.lib,payload,'Imported '+file.name,'all');S.sourceStatus.push(report);render();notify('Imported nested research references: '+report.newUrls+' new URLs.');return;}throw Error('Import does not contain URLs.')}
+ try{rows=D.normalizeImport(payload);if(!rows.some(x=>D.validURL(x.url)))throw Error('No flat URL entries found')}
+ catch{if(typeof payload==='object'){const report=D.ingest(S.lib,payload,'Imported '+file.name,'all');S.sourceStatus.push(report);render();notify('Imported nested research references: '+report.newUrls+' new URLs. Save a library export to keep this large imported file.');return;}throw Error('Import does not contain URLs.')}
  let added=0;
  for(const item of rows){
   const url=D.validURL(item.url);if(!url)continue;
@@ -322,6 +323,7 @@ async function handleClick(button){
  if(id==='br3-export-sources'){downloadJSON({format:'backroom-phase3-sources',generated_at:new Date().toISOString(),sources:S.lib.all()},'backroom_master_source_library_'+today()+'.json');return;}
  if(id==='br3-export-csv'){P.downloadCSV(S.lib.all().map(x=>({Name:x.name,URL:x.url,Type:x.kind,Verification:x.verification,Enabled:x.enabled,Country:x.countries.join('; '),City:x.cities.join('; '),Record_IDs:x.record_ids.join('; '),Origins:x.origins.join('; '),Variants:x.variants.join('; ')})),'backroom_source_library_'+today()+'.csv');return;}
  if(id==='br3-import-sources-btn'){get('br3-source-file')?.click();return;}
+ if(id==='br3-use-all-sources'){S.config.sourceKeys=[];remember();render();return;}
  if(id==='br3-add-source'){S.sourceEditing='new';get('br3-source-editor').innerHTML=sourceEditorHTML();return;}
  if(id==='br3-cancel-source'){S.sourceEditing='';get('br3-source-editor').innerHTML='';return;}
  if(id==='br3-save-source'){
@@ -342,6 +344,7 @@ async function handleClick(button){
 }
 function handleChange(target){
  const id=target.id;
+ if(target.dataset.br3SourcePick){const key=target.dataset.br3SourcePick;const set=new Set(S.config.sourceKeys||[]);if(target.checked)set.add(key);else set.delete(key);S.config.sourceKeys=[...set];remember();return;}
  if(target.dataset.br3City){
   const city=target.dataset.br3City;
   S.config.cities=target.checked?D.uniq([...S.config.cities,city]):S.config.cities.filter(x=>x!==city);
