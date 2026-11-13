@@ -91,7 +91,7 @@ function build(config,venues,events,sources,instructions){
  const instruction=(instructions||[]).find(x=>x.id===flow.toUpperCase())?.body||'';
  const allow=src=>src.enabled!==false&&(!config.sourceKinds?.length||config.sourceKinds.includes(src.kind))&&
    (!config.sourceKeys?.length||config.sourceKeys.includes(src.key))&&
-   (!src.workflows.length||src.workflows.includes('all')||src.workflows.includes(type)||src.workflows.includes(flow));
+   (!src.workflows.length||type==='all'||src.workflows.includes('all')||src.workflows.includes(type)||src.workflows.includes(flow));
  const candidates=sources.filter(allow),chunks=[];
  tasks.sort((a,b)=>a.zone-b.zone||a.country.localeCompare(b.country)||a.city.localeCompare(b.city)||a.id.localeCompare(b.id));
  let current=[],bucketKey='';
