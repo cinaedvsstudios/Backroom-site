@@ -3,6 +3,7 @@
 'use strict';
 const DB_NAME='backroom_admin_reporting_v1', DB_VERSION=1;
 let database=null;
+const conditionSearch=[];
 const state={data:{venues:[],events:[]},scope:{events:true,venues:false,cruising:false},conditions:[{op:'OR',key:'status:Live'}],results:null,lastQueryId:null,groupCount:1,logs:[],opened:false,capturing:false,countrySort:'total',countryAsc:false};
 const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const fmt=n=>Number(n||0).toLocaleString('en-GB');
@@ -82,7 +83,7 @@ function checkList(){
         ['empty:Event_Start_Time','Missing start time'],['empty:Event_End_Time','Missing end time'],['empty:Event_Date','Missing event date'],
         ['empty:Event_URL','Missing event URL'],['empty:Ticket_URL','Missing ticket URL'],['empty:Source_URLs','Missing source URLs'],
         ['empty:Price_Info','Missing price information'],['empty:Dresscode_Info','Missing dress code'],
-        ['empty:Event_Description','Missing description'],['short:Event_Description:100','Description under 100 characters'],
+        ['empty:Event_Description','Missing description'],['empty:Vibe_Tags','Missing tags (Vibe_Tags)'],['short:Event_Description:100','Description under 100 characters'],
         ['short:Event_Description:200','Description under 200 characters'],['broken:Venue_ID','Unlinked venue ID'],
         ['recurrence','Weekly event missing recurrence day'],['invalid:Event_Date','Invalid date']
     ];
@@ -187,19 +188,58 @@ function renderScope(){
     wrap.innerHTML=['events','venues','cruising'].map(k=>'<label><input type="checkbox" data-scope="'+k+'" '+(state.scope[k]?'checked ':'')+((k==='events'&&(state.scope.venues||state.scope.cruising))||(k!=='events'&&state.scope.events)?'disabled ':'')+'>'+({events:'Events',venues:'Venues',cruising:'Cruising Areas'}[k])+'</label>').join('');
 }
 function resetInvalidConditions(){
+    conditionSearch.length=0;
     const list=checkList();
     state.conditions=state.conditions.filter(c=>list.some(o=>o.key===c.key));
     if(!state.conditions.length&&list.length)state.conditions=[{op:'OR',key:list[0].key}];
     state.conditions.forEach(c=>{if(c.key==='event-month'&&!monthValue(c.value))c.value=defaultMonth();});
     state.results=null;
 }
+function findConditions(list,search){
+    const query=String(search||'').trim().toLocaleLowerCase('en');
+    return query?list.filter(x=>x.label.toLocaleLowerCase('en').includes(query)||x.key.toLocaleLowerCase('en').includes(query)):list;
+}
+function conditionOptions(list,chosen,search){
+    const matches=findConditions(list,search),containsSelected=matches.some(x=>x.key===chosen);
+    return (!containsSelected?'<option value="" disabled selected>'+(matches.length?'Choose a matching condition':'No matching conditions')+'</option>':'')+
+        matches.map(x=>'<option '+(x.key===chosen?'selected ':'')+'value="'+esc(x.key)+'">'+esc(x.label)+'</option>').join('');
+}
+function renderConditionSearchResults(index){
+    const query=conditionSearch[index]||'',list=checkList(),matches=findConditions(list,query);
+    const select=document.querySelector('#br-condition-rows select[data-condition="'+index+'"]');
+    if(select)select.innerHTML=conditionOptions(list,state.conditions[index]?.key,query);
+    const results=document.getElementById('br-condition-results-'+index);
+    if(!results)return;
+    results.hidden=!query.trim();
+    const input=document.querySelector('#br-condition-rows input[data-condition-search="'+index+'"]');
+    if(input)input.setAttribute('aria-expanded',String(!results.hidden));
+    if(results.hidden){results.innerHTML='';return;}
+    results.innerHTML=matches.length?
+      '<div class="br-condition-match-count">'+matches.length+' matching condition'+(matches.length===1?'':'s')+'</div>'+
+      matches.map(x=>'<button type="button" role="option" class="br-condition-suggestion" data-pick-condition="'+index+'" data-pick-key="'+esc(x.key)+'">'+esc(x.label)+'</button>').join(''):
+      '<p class="br-condition-match-empty">No matching conditions</p>';
+}
+function chooseCondition(index,key){
+    const row=state.conditions[index];
+    if(!row||!checkList().some(x=>x.key===key))return;
+    row.key=key;
+    if(row.key==='event-month'&&!monthValue(row.value))row.value=defaultMonth();
+    else if(row.key!=='event-month')delete row.value;
+    conditionSearch[index]='';
+    state.results=null;
+    renderBuilder();
+}
 function renderBuilder(){
     renderScope();const list=checkList(),wrap=document.getElementById('br-condition-rows');
     wrap.innerHTML=state.conditions.map((c,i)=>'<div class="br-condition-row" data-row="'+i+'">'+
         '<select data-operator="'+i+'" aria-label="Operator '+(i+1)+'">'+['OR','AND','EXCLUDE'].map(op=>'<option '+(c.op===op?'selected ':'')+'value="'+op+'">'+op+'</option>').join('')+'</select>'+
-        '<div class="br-condition-controls"><select data-condition="'+i+'" aria-label="Condition '+(i+1)+'">'+list.map(x=>'<option '+(x.key===c.key?'selected ':'')+'value="'+esc(x.key)+'">'+esc(x.label)+'</option>').join('')+'</select>'+
+        '<div class="br-condition-controls"><div class="br-condition-choice">'+
+        '<input type="search" class="br-condition-search" data-condition-search="'+i+'" aria-label="Search conditions '+(i+1)+'" aria-controls="br-condition-results-'+i+'" aria-expanded="false" autocomplete="off" placeholder="🔎 Search conditions (e.g. missing)" value="'+esc(conditionSearch[i]||'')+'">'+
+        '<div id="br-condition-results-'+i+'" class="br-condition-results" role="listbox" hidden></div>'+
+        '<select data-condition="'+i+'" aria-label="Condition '+(i+1)+'">'+conditionOptions(list,c.key,conditionSearch[i])+'</select></div>'+
         (c.key==='event-month'?'<input type="month" class="br-month-choice" data-condition-value="'+i+'" aria-label="Event month and year" value="'+esc(monthValue(c.value)?c.value:defaultMonth())+'">':'')+'</div>'+
         (state.conditions.length>1?'<button class="btn secondary-btn" type="button" data-remove-condition="'+i+'" title="Remove condition">×</button>':'')+'</div>').join('');
+    state.conditions.forEach((_,i)=>{if(conditionSearch[i])renderConditionSearchResults(i);});
     const target=document.getElementById('br-query-preview');
     target.textContent=generatedQuery()||'Select a dataset and condition to begin.';
     document.getElementById('br-execute').disabled=!state.conditions.length||!scopedRows().length;
@@ -560,13 +600,7 @@ function install(){
             resetInvalidConditions();renderBuilder();overview();
         }
         if(target.dataset.operator!==undefined){state.conditions[Number(target.dataset.operator)].op=target.value;state.results=null;renderBuilder();}
-        if(target.dataset.condition!==undefined){
-            const row=state.conditions[Number(target.dataset.condition)];
-            row.key=target.value;
-            if(row.key==='event-month'&&!monthValue(row.value))row.value=defaultMonth();
-            else if(row.key!=='event-month')delete row.value;
-            state.results=null;renderBuilder();
-        }
+        if(target.dataset.condition!==undefined)chooseCondition(Number(target.dataset.condition),target.value);
         if(target.dataset.conditionValue!==undefined){
             const row=state.conditions[Number(target.dataset.conditionValue)];
             if(row&&row.key==='event-month'){row.value=target.value;state.results=null;renderBuilder();}
@@ -584,6 +618,12 @@ function install(){
         refreshScopeStats();
     });
     root.addEventListener('input',event=>{
+        if(event.target.dataset.conditionSearch!==undefined){
+            const index=Number(event.target.dataset.conditionSearch);
+            conditionSearch[index]=event.target.value;
+            renderConditionSearchResults(index);
+            return;
+        }
         if(event.target.id!=='br-group-count'||!state.results)return;
         const n=state.results.rows.length;
         const count=Math.max(1,Math.min(Number(event.target.value)||1,Math.max(1,n)));
@@ -596,14 +636,22 @@ function install(){
     });
     root.addEventListener('click',event=>{
         const target=event.target.closest('button');if(!target)return;
-        if(target.id==='br-add-condition'){const list=checkList();if(list.length){state.conditions.push({op:'OR',key:list[0].key});state.results=null;renderBuilder();}}
-        if(target.dataset.removeCondition!==undefined){state.conditions.splice(Number(target.dataset.removeCondition),1);state.results=null;renderBuilder();}
+        if(target.dataset.pickCondition!==undefined){chooseCondition(Number(target.dataset.pickCondition),target.dataset.pickKey);return;}
+        if(target.id==='br-add-condition'){const list=checkList();if(list.length){state.conditions.push({op:'OR',key:list[0].key});conditionSearch.push('');state.results=null;renderBuilder();}}
+        if(target.dataset.removeCondition!==undefined){const index=Number(target.dataset.removeCondition);state.conditions.splice(index,1);conditionSearch.splice(index,1);state.results=null;renderBuilder();}
         if(target.dataset.addCheck){if(state.conditions.length===1&&state.conditions[0].key==='status:Live'&&!state.results)state.conditions[0]={op:'OR',key:target.dataset.addCheck};else state.conditions.push({op:'OR',key:target.dataset.addCheck});state.results=null;renderBuilder();document.getElementById('br-query-preview')?.scrollIntoView({behavior:'smooth',block:'nearest'});}
         if(target.id==='br-execute')execute();
         if(target.id==='br-download-results'&&state.results){writeFile(JSON.stringify(state.results.rows,null,2),'identified_records.json');markDownloaded(1);}
         if(target.id==='br-download-groups')saveGroups();
         if(target.id==='br-backup'||target.id==='br-reminder-save')backupHistory();
         if(target.id==='br-capture-point')captureDataPoint();
+    });
+    root.addEventListener('keydown',event=>{
+        if(event.key==='Escape'&&event.target.dataset.conditionSearch!==undefined){
+            const index=Number(event.target.dataset.conditionSearch);
+            conditionSearch[index]='';event.target.value='';
+            renderConditionSearchResults(index);
+        }
     });
     backupReminder();
 }
@@ -625,6 +673,7 @@ function restoreSavedQuery(entry){
     if(!conditions.length){message('That saved query no longer has compatible conditions.');return false;}
     state.conditions=conditions;
     // Keep the last executed results visible until the newly configured query is executed.
+    conditionSearch.length=0;
     renderBuilder();
     overview();
     const preview=document.getElementById('br-query-preview');
