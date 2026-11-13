@@ -126,7 +126,12 @@
  border-radius:17px;padding:19px 20px;margin:0 0 16px;
 }
 #br-phase2-view .br-p2-top h1{font-size:1.55rem!important;letter-spacing:.02em;color:#65d3f2!important;margin:0 0 7px}
-#br-phase2-view #br-p2-summary{color:#c0d8e8;font-size:.86rem;display:inline-flex;align-items:center;border:1px solid #39546b;border-radius:11px;padding:9px 11px;background:#0e2030}
+#br-phase2-view #br-p2-summary{color:#c0d8e8;font-size:.86rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#br-phase2-view .br-p3-stat-chip{
+ display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border-radius:11px;
+ background:#0e2334;border:1px solid #42627b;color:#c3dded;white-space:nowrap;
+}
+#br-phase2-view .br-p3-stat-chip strong{font-weight:800;color:#78dcf5;font-size:1rem}
 #br-phase2-nav{
  display:grid!important;grid-template-columns:repeat(6,minmax(110px,1fr));gap:9px!important;
  background:#121e2d;border:1px solid #34495f;padding:9px;border-radius:15px;
