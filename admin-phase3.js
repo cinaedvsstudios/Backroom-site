@@ -143,6 +143,58 @@ function filtersHTML(){
   buttons([['br3-copy-ids','📋 Copy matching IDs'],['br3-preview','🔍 Preview matching records','primary-btn']])+
   '<div id="br3-scope-preview" class="br3-preview"></div>');
 }
+
+function scopedConfig(){return {...S.config,allowedCountries:countries()};}
+function wizardHTML(){
+ const c=S.config,info=W.definitions.find(x=>x.id===S.wizardPreset);
+ const rows=D.selected(scopedConfig(),P.state.venues,P.state.events);
+ const locations=c.cities.length,chosenCountry=c.countries.length;
+ const details=S.wizardPreset==='backroom20'?W.backroomTop(P.state.venues,P.state.events,P.state.registry,20):[];
+ const sortedCities=c.cities.slice(0,18).map(x=>x.replace('|',' — ')).join(' · ');
+ return group('br3-wizard-intro','✨ Quick Setup — research wizard',
+  '<p class="br3-muted">Three simple steps: choose what you want researched, pick a preset of countries or cities, and generate a reviewable research brief. Advanced filtering is optional.</p>'+
+  '<div class="br3-wizard-steps"><span>① What to research</span><span>② Where to look</span><span>③ Generate a brief</span></div>')+
+ group('br3-wizard-workflow','① What do you want to research?',
+  '<label>Choose the research task<select id="br3-wizard-workflow">'+workflows.map(x=>opt(x[0],c.workflow,x[1])).join('')+'</select></label>'+
+  '<p class="br3-muted">Discovery looks for new records; Updates checks existing records. Combined checks venues and their upcoming events together. Cruising Area Updates uses the separate Zone 8 rules.</p>')+
+ group('br3-wizard-places','② Choose a ready-made coverage preset',
+  '<p class="br3-muted">Click one preset to replace the current country/city selection. City presets search specific cities; country presets cover those whole countries. The <strong>Top 20 Backroom</strong> option is calculated from active listings, not estimated.</p>'+
+  '<div class="br3-preset-grid">'+W.definitions.map(item=>
+   '<button type="button" class="br3-preset '+(S.wizardPreset===item.id?'br3-preset-active':'')+'" data-br3-preset="'+esc(item.id)+'" aria-pressed="'+String(S.wizardPreset===item.id)+'">'+
+   '<span class="br3-preset-name">'+item.icon+' '+esc(item.name)+'</span><small>'+esc(item.description)+'</small></button>').join('')+'</div>'+
+  '<div class="br3-inline">'+buttons([['br3-wizard-clear','Clear geography'],['br3-wizard-advanced','⚙ Advanced country / city selection']])+'</div>'+
+  '<div class="br3-wizard-selected"><strong>'+(info?esc(info.name):'Custom selection')+'</strong><p>'+
+  (chosenCountry||locations?fmt(chosenCountry)+' countries · '+fmt(locations)+' selected cities.':'No selection yet. Choose a preset or open Advanced Builder.')+'</p>'+
+  (locations?'<div class="br3-preview-cities">'+esc(sortedCities)+(locations>18?' · … +'+fmt(locations-18)+' more':'')+'</div>':
+   chosenCountry?'<div class="br3-preview-cities">'+esc(c.countries.slice(0,18).join(' · '))+(chosenCountry>18?' · …':'')+'</div>':'')+
+  (details.length?'<p class="br3-muted">Backroom counts: '+esc(details.slice(0,6).map(x=>x.city+' '+x.total).join(' · '))+' …</p>':'')+
+  '</div>')+
+ group('br3-wizard-time','③ Research period and batch size',
+  '<div class="br3-grid br3-grid-3">'+
+  '<label>From date<input type="date" id="br3-wizard-from" value="'+esc(c.from||'')+'"></label>'+
+  '<label>Until date<input type="date" id="br3-wizard-to" value="'+esc(c.to||'')+'"></label>'+
+  '<label>Records / cities per batch<select id="br3-wizard-batch">'+[10,25,50,100].map(x=>opt(x,c.batchSize,x+' per batch')).join('')+'</select></label>'+
+  '</div>'+
+  '<p class="br3-muted">All applicable directory, record and cruising-research URLs are available automatically. The source limit and individual source choices can be changed in Advanced Builder and Source Library.</p>'+
+  '<div class="br3-inline">'+buttons([['br3-wizard-preview','🔍 Preview scope'],['br3-wizard-generate','🧪 Generate research brief','primary-btn'],['br3-wizard-guide','❓ How it works']])+'</div>'+
+  '<div id="br3-scope-preview" class="br3-preview"><span class="br3-pill"><strong>'+fmt(rows.length)+'</strong> matching existing records</span><span class="br3-pill"><strong>'+fmt(locations||chosenCountry)+'</strong> location targets</span></div>'+
+  '<p class="br3-muted"><strong>Important:</strong> Generating prepares a prompt and an evidence-oriented JSON packet. It does not automatically visit websites, independently verify sources or publish records.</p>')+
+ outputHTML();
+}
+function helpHTML(){
+ return group('br3-help','❓ How the research studio works',
+  '<p class="br3-muted">The Research Studio prepares work for a separate research run. It does not operate an automatic web crawler, check each URL by itself, or write to the public database.</p>'+
+  '<div class="br3-help-flow">'+
+  '<article><h3>① Choose a workflow</h3><p><strong>Discovery</strong> finds candidates not already in Backroom. <strong>Updates</strong> reviews records already listed. <strong>Combined</strong> checks venues and their event dates together. <strong>Cruising updates</strong> reviews public-space cruising areas under the stricter Zone 8 evidence rules.</p></article>'+
+  '<article><h3>② Choose geography</h3><p><strong>Country</strong> means the entire selected country. <strong>City</strong> means only that city. A preset replaces the selection; Advanced Builder can add or remove individual cities. Only Europe and its territories, plus Israel and Turkey, are offered for new research jobs. The Canary Islands remain under Spain.</p></article>'+
+  '<article><h3>③ Select a period</h3><p><strong>From/Until</strong> control which existing dated events are in scope and which future months the brief asks the researcher to verify. For venue and cruising-area updates, the dates are research context; they do not mean a venue opened on those dates.</p></article>'+
+  '<article><h3>④ Preview, then generate</h3><p><strong>Preview scope</strong> counts the existing records that match, without researching anything. <strong>Generate research brief</strong> creates instructions, a source list, original record snapshots and batches. Batches limit how many records or cities are handled together.</p></article>'+
+  '<article><h3>⑤ Carry out research separately</h3><p><strong>Copy brief</strong> gives you the human-readable instructions for a research chat. <strong>Markdown brief</strong> downloads the same instructions. <strong>Full JSON packet</strong> downloads complete existing records plus research sources. <strong>Download each batch</strong> saves separate smaller packets. None of these buttons scrapes or publishes.</p></article>'+
+  '<article><h3>⑥ Source Library and Instructions</h3><p><strong>Source Library</strong> combines known links with original record URLs, the cruising registry and audit files; use its search/filters to locate or manually select URLs. <strong>Instructions</strong> holds editable research rules. <strong>Advanced Builder</strong> adds status filters, exact IDs, country/city editing and source limits.</p></article>'+
+  '</div>'+
+  '<p class="br3-muted">Suggested routine: Quick Setup → pick “Combined venue + event research” → choose “Top 20 Backroom cities” → set the date range → Preview → Generate → Copy brief into a research chat. When the research produces verified updates, review them using Data & Analytics before publishing.</p>'+
+  '<div class="br3-inline">'+buttons([['br3-guide-wizard','✨ Open Quick Setup','primary-btn'],['br3-guide-advanced','⚙ Advanced Builder']])+'</div>');
+}
 function sourceKinds(){
  return D.uniq(S.lib.all().flatMap(x=>x.kinds?.length?x.kinds:[x.kind])).sort();
 }
