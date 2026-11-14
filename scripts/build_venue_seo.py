@@ -197,7 +197,7 @@ def main():
     for path in VENUES.glob("*.html"):
         if path.name not in expected and "Backroom SEO: GENERATED" in path.read_text(encoding="utf-8")[:5000]:
             path.unlink()
-    static_paths = ("", "about.html", "dress-codes.html", "cruising-guide.html",
+    static_paths = ("", "welcome.html", "about.html", "dress-codes.html", "cruising-guide.html",
                     "heatmap.html", "featured.html", "privacy.html")
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
