@@ -1,0 +1,1460 @@
+{
+  "title": "Backroom Phase 3 Source Seed Catalogue — Deduplication Audit",
+  "audit_date_berlin": "2026-11-13",
+  "source_file": "admin-phase3-sources.json",
+  "original_collector_archive": "scraping/Backroom_scraping_source_URLs_102_2026-11-06.txt",
+  "counts": {
+    "method": "Use same canonical URL key as admin-phase3-data.js: normalize http/https and www, drop trailing slash, remove utm_/fbclid/gclid query tracking. Preserve path case, meaningful query strings and fragments; retain exact URLs and all source IDs in source_references.",
+    "source_entries_before": 192,
+    "canonical_url_count": 122,
+    "duplicate_entry_count": 70,
+    "exact_string_duplicate_count": 40,
+    "normalized_variant_duplicate_count": 30,
+    "duplicate_groups": 51,
+    "original_collector_entries": 102,
+    "original_entries_preserved_in_references": 192,
+    "original_102_url_archival_path": "scraping/Backroom_scraping_source_URLs_102_2026-11-06.txt",
+    "note": "Deduplication here applies only to the built-in seed catalogue. Live record URLs, cruising research registry and venue audit are deduplicated dynamically when loaded, with original files unchanged."
+  },
+  "duplicates": [
+    {
+      "canonical_key": "https://travelgay.com",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://www.travelgay.com/"
+      ],
+      "original_ids": [
+        "SEED-001",
+        "COLLECTOR-033"
+      ],
+      "references": [
+        {
+          "id": "SEED-001",
+          "url": "https://www.travelgay.com/",
+          "kind": "directory",
+          "provenance": "P1 explicit source"
+        },
+        {
+          "id": "COLLECTOR-033",
+          "url": "https://www.travelgay.com/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 33"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://europe.gaycities.com",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://europe.gaycities.com/"
+      ],
+      "original_ids": [
+        "SEED-002",
+        "COLLECTOR-034"
+      ],
+      "references": [
+        {
+          "id": "SEED-002",
+          "url": "https://europe.gaycities.com/",
+          "kind": "directory",
+          "provenance": "P1 explicit source"
+        },
+        {
+          "id": "COLLECTOR-034",
+          "url": "https://europe.gaycities.com/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 34"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://nomadicboys.com/destinations",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://nomadicboys.com/destinations/"
+      ],
+      "original_ids": [
+        "SEED-004",
+        "COLLECTOR-035"
+      ],
+      "references": [
+        {
+          "id": "SEED-004",
+          "url": "https://nomadicboys.com/destinations/",
+          "kind": "travel-guide",
+          "provenance": "P1 explicit source"
+        },
+        {
+          "id": "COLLECTOR-035",
+          "url": "https://nomadicboys.com/destinations/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 35"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://nighttours.com",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://www.nighttours.com/"
+      ],
+      "original_ids": [
+        "SEED-005",
+        "COLLECTOR-036"
+      ],
+      "references": [
+        {
+          "id": "SEED-005",
+          "url": "https://www.nighttours.com/",
+          "kind": "events-directory",
+          "provenance": "P1 explicit source"
+        },
+        {
+          "id": "COLLECTOR-036",
+          "url": "https://www.nighttours.com/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 36"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://gaymap.es/en/gay-sites",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://gaymap.es/en/gay-sites/"
+      ],
+      "original_ids": [
+        "SEED-007",
+        "COLLECTOR-001"
+      ],
+      "references": [
+        {
+          "id": "SEED-007",
+          "url": "https://gaymap.es/en/gay-sites/",
+          "kind": "directory",
+          "provenance": "P1 explicit source"
+        },
+        {
+          "id": "COLLECTOR-001",
+          "url": "https://gaymap.es/en/gay-sites/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 1"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://siegessaeule.de",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "https://www.siegessaeule.de/",
+        "http://www.siegessaeule.de"
+      ],
+      "original_ids": [
+        "SEED-008",
+        "RECOVERED-013",
+        "COLLECTOR-016"
+      ],
+      "references": [
+        {
+          "id": "SEED-008",
+          "url": "https://www.siegessaeule.de/",
+          "kind": "city-guide",
+          "provenance": "P1 recovered catalogue"
+        },
+        {
+          "id": "RECOVERED-013",
+          "url": "http://www.siegessaeule.de",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-016",
+          "url": "https://www.siegessaeule.de/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 16"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://queergoingout.de",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "https://queergoingout.de/",
+        "https://www.queergoingout.de/"
+      ],
+      "original_ids": [
+        "SEED-010",
+        "RECOVERED-001",
+        "COLLECTOR-018"
+      ],
+      "references": [
+        {
+          "id": "SEED-010",
+          "url": "https://queergoingout.de/",
+          "kind": "city-guide",
+          "provenance": "P1 recovered catalogue"
+        },
+        {
+          "id": "RECOVERED-001",
+          "url": "https://www.queergoingout.de/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-018",
+          "url": "https://www.queergoingout.de/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 18"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://spartacus.gayguide.travel",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://spartacus.gayguide.travel/"
+      ],
+      "original_ids": [
+        "SEED-011",
+        "COLLECTOR-020"
+      ],
+      "references": [
+        {
+          "id": "SEED-011",
+          "url": "https://spartacus.gayguide.travel/",
+          "kind": "directory",
+          "provenance": "P1 recovered catalogue"
+        },
+        {
+          "id": "COLLECTOR-020",
+          "url": "https://spartacus.gayguide.travel/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 20"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://gaytravel4u.com",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://www.gaytravel4u.com/"
+      ],
+      "original_ids": [
+        "SEED-012",
+        "COLLECTOR-021"
+      ],
+      "references": [
+        {
+          "id": "SEED-012",
+          "url": "https://www.gaytravel4u.com/",
+          "kind": "events-directory",
+          "provenance": "P1 recovered catalogue"
+        },
+        {
+          "id": "COLLECTOR-021",
+          "url": "https://www.gaytravel4u.com/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 21"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://ra.co",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://ra.co/"
+      ],
+      "original_ids": [
+        "SEED-013",
+        "COLLECTOR-022"
+      ],
+      "references": [
+        {
+          "id": "SEED-013",
+          "url": "https://ra.co/",
+          "kind": "events-directory",
+          "provenance": "P1 recovered catalogue"
+        },
+        {
+          "id": "COLLECTOR-022",
+          "url": "https://ra.co/",
+          "kind": "ticket-event",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 22"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://thegaypassport.com",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://thegaypassport.com/"
+      ],
+      "original_ids": [
+        "SEED-015",
+        "COLLECTOR-101"
+      ],
+      "references": [
+        {
+          "id": "SEED-015",
+          "url": "https://thegaypassport.com/",
+          "kind": "travel-guide",
+          "provenance": "Zone 8 worklist"
+        },
+        {
+          "id": "COLLECTOR-101",
+          "url": "https://thegaypassport.com/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 101"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://gays-cruising.com",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://www.gays-cruising.com/"
+      ],
+      "original_ids": [
+        "SEED-016",
+        "COLLECTOR-102"
+      ],
+      "references": [
+        {
+          "id": "SEED-016",
+          "url": "https://www.gays-cruising.com/",
+          "kind": "cruising-directory",
+          "provenance": "Zone 8 worklist"
+        },
+        {
+          "id": "COLLECTOR-102",
+          "url": "https://www.gays-cruising.com/",
+          "kind": "cruising-directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 102"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://pinksider.com/en",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://pinksider.com/en/"
+      ],
+      "original_ids": [
+        "RECOVERED-002",
+        "COLLECTOR-019"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-002",
+          "url": "https://pinksider.com/en/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-019",
+          "url": "https://pinksider.com/en/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 19"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://de.ra.co",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://de.ra.co/"
+      ],
+      "original_ids": [
+        "RECOVERED-003",
+        "COLLECTOR-023"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-003",
+          "url": "https://de.ra.co/",
+          "kind": "events-directory",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-023",
+          "url": "https://de.ra.co/",
+          "kind": "ticket-event",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 23"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://iglta.org/events/pride-calendar",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://www.iglta.org/events/pride-calendar/"
+      ],
+      "original_ids": [
+        "RECOVERED-004",
+        "COLLECTOR-024"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-004",
+          "url": "https://www.iglta.org/events/pride-calendar/",
+          "kind": "events-directory",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-024",
+          "url": "https://www.iglta.org/events/pride-calendar/",
+          "kind": "events-directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 24"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://iglta.org/events/festivals-annual-events",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://www.iglta.org/events/festivals-annual-events/"
+      ],
+      "original_ids": [
+        "RECOVERED-005",
+        "COLLECTOR-025"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-005",
+          "url": "https://www.iglta.org/events/festivals-annual-events/",
+          "kind": "events-directory",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-025",
+          "url": "https://www.iglta.org/events/festivals-annual-events/",
+          "kind": "events-directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 25"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://grind-frankfurt.de",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://www.grind-frankfurt.de/"
+      ],
+      "original_ids": [
+        "RECOVERED-006",
+        "COLLECTOR-026"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-006",
+          "url": "https://www.grind-frankfurt.de/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-026",
+          "url": "https://www.grind-frankfurt.de/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 26"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://instagram.com/gaypartysfrankfurt",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://www.instagram.com/gaypartysfrankfurt/"
+      ],
+      "original_ids": [
+        "RECOVERED-007",
+        "COLLECTOR-027"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-007",
+          "url": "https://www.instagram.com/gaypartysfrankfurt/",
+          "kind": "social",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-027",
+          "url": "https://www.instagram.com/gaypartysfrankfurt/",
+          "kind": "social",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 27"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://facebook.com/PUREgayclubbing",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://www.facebook.com/PUREgayclubbing/"
+      ],
+      "original_ids": [
+        "RECOVERED-008",
+        "COLLECTOR-028"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-008",
+          "url": "https://www.facebook.com/PUREgayclubbing/",
+          "kind": "social",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-028",
+          "url": "https://www.facebook.com/PUREgayclubbing/",
+          "kind": "social",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 28"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://misterbandb.com/gay-guide/poland",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://www.misterbandb.com/gay-guide/poland"
+      ],
+      "original_ids": [
+        "RECOVERED-009",
+        "COLLECTOR-029"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-009",
+          "url": "https://www.misterbandb.com/gay-guide/poland",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-029",
+          "url": "https://www.misterbandb.com/gay-guide/poland",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 29"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://thefabryk.com/tags/gay-travel-guide",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://thefabryk.com/tags/gay-travel-guide"
+      ],
+      "original_ids": [
+        "RECOVERED-010",
+        "COLLECTOR-030"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-010",
+          "url": "https://thefabryk.com/tags/gay-travel-guide",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-030",
+          "url": "https://thefabryk.com/tags/gay-travel-guide",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 30"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://tripadvisor.com/Attractions-g274723-Activities-c20-t103-Poland.html",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://www.tripadvisor.com/Attractions-g274723-Activities-c20-t103-Poland.html"
+      ],
+      "original_ids": [
+        "RECOVERED-011",
+        "COLLECTOR-031"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-011",
+          "url": "https://www.tripadvisor.com/Attractions-g274723-Activities-c20-t103-Poland.html",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-031",
+          "url": "https://www.tripadvisor.com/Attractions-g274723-Activities-c20-t103-Poland.html",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 31"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://gaypartyhamburg.de",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "https://gaypartyhamburg.de/"
+      ],
+      "original_ids": [
+        "RECOVERED-012",
+        "COLLECTOR-032"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-012",
+          "url": "https://gaypartyhamburg.de/",
+          "kind": "events-directory",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-032",
+          "url": "https://gaypartyhamburg.de/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 32"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://hinnerk.de",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "http://www.hinnerk.de",
+        "https://www.hinnerk.de/"
+      ],
+      "original_ids": [
+        "RECOVERED-014",
+        "RECOVERED-043"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-014",
+          "url": "http://www.hinnerk.de",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-043",
+          "url": "https://www.hinnerk.de/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://queer.de",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://www.queer.de",
+        "https://www.queer.de/"
+      ],
+      "original_ids": [
+        "RECOVERED-015",
+        "RECOVERED-044",
+        "COLLECTOR-038"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-015",
+          "url": "http://www.queer.de",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-044",
+          "url": "https://www.queer.de/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-038",
+          "url": "https://www.queer.de/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 38"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://overline.tv/events",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://overline.tv/events",
+        "https://overline.tv/events"
+      ],
+      "original_ids": [
+        "RECOVERED-016",
+        "RECOVERED-045",
+        "COLLECTOR-039"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-016",
+          "url": "http://overline.tv/events",
+          "kind": "events-directory",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-045",
+          "url": "https://overline.tv/events",
+          "kind": "events-directory",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-039",
+          "url": "https://overline.tv/events",
+          "kind": "events-directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 39"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://leo-magazin.de",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "http://www.leo-magazin.de",
+        "https://www.leo-magazin.de/"
+      ],
+      "original_ids": [
+        "RECOVERED-017",
+        "RECOVERED-046"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-017",
+          "url": "http://www.leo-magazin.de",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-046",
+          "url": "https://www.leo-magazin.de/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://transit-magazin.de",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "http://www.transit-magazin.de",
+        "https://www.transit-magazin.de/"
+      ],
+      "original_ids": [
+        "RECOVERED-018",
+        "RECOVERED-047"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-018",
+          "url": "http://www.transit-magazin.de",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-047",
+          "url": "https://www.transit-magazin.de/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://jock.fr",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "http://www.jock.fr",
+        "https://www.jock.fr/"
+      ],
+      "original_ids": [
+        "RECOVERED-019",
+        "RECOVERED-048"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-019",
+          "url": "http://www.jock.fr",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-048",
+          "url": "https://www.jock.fr/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://heteroclite.org",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://www.heteroclite.org",
+        "https://www.heteroclite.org/"
+      ],
+      "original_ids": [
+        "RECOVERED-020",
+        "RECOVERED-049",
+        "COLLECTOR-040"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-020",
+          "url": "http://www.heteroclite.org",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-049",
+          "url": "https://www.heteroclite.org/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-040",
+          "url": "https://www.heteroclite.org/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 40"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://queer.be",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "http://queer.be",
+        "https://queer.be/"
+      ],
+      "original_ids": [
+        "RECOVERED-021",
+        "RECOVERED-050"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-021",
+          "url": "http://queer.be",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-050",
+          "url": "https://queer.be/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://antwerppride.com",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://antwerppride.com",
+        "https://antwerppride.com/"
+      ],
+      "original_ids": [
+        "RECOVERED-022",
+        "RECOVERED-051",
+        "COLLECTOR-041"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-022",
+          "url": "http://antwerppride.com",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-051",
+          "url": "https://antwerppride.com/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-041",
+          "url": "https://antwerppride.com/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 41"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://queeramsterdam.nl",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "http://queeramsterdam.nl",
+        "https://queeramsterdam.nl/"
+      ],
+      "original_ids": [
+        "RECOVERED-023",
+        "RECOVERED-052"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-023",
+          "url": "http://queeramsterdam.nl",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-052",
+          "url": "https://queeramsterdam.nl/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://qxmagazine.com",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://www.qxmagazine.com",
+        "https://www.qxmagazine.com/"
+      ],
+      "original_ids": [
+        "RECOVERED-024",
+        "RECOVERED-054",
+        "COLLECTOR-043"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-024",
+          "url": "http://www.qxmagazine.com",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-054",
+          "url": "https://www.qxmagazine.com/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-043",
+          "url": "https://www.qxmagazine.com/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 43"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://canal-st.co.uk",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://www.canal-st.co.uk",
+        "https://www.canal-st.co.uk/"
+      ],
+      "original_ids": [
+        "RECOVERED-025",
+        "RECOVERED-055",
+        "COLLECTOR-044"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-025",
+          "url": "http://www.canal-st.co.uk",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-055",
+          "url": "https://www.canal-st.co.uk/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-044",
+          "url": "https://www.canal-st.co.uk/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 44"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://brightonscene.co.uk",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "http://www.brightonscene.co.uk",
+        "https://www.brightonscene.co.uk/"
+      ],
+      "original_ids": [
+        "RECOVERED-026",
+        "RECOVERED-056"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-026",
+          "url": "http://www.brightonscene.co.uk",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-056",
+          "url": "https://www.brightonscene.co.uk/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://gcn.ie",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://gcn.ie",
+        "https://gcn.ie/"
+      ],
+      "original_ids": [
+        "RECOVERED-027",
+        "RECOVERED-057",
+        "COLLECTOR-045"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-027",
+          "url": "http://gcn.ie",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-057",
+          "url": "https://gcn.ie/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-045",
+          "url": "https://gcn.ie/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 45"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://shangay.com",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://shangay.com",
+        "https://shangay.com/"
+      ],
+      "original_ids": [
+        "RECOVERED-028",
+        "RECOVERED-058",
+        "COLLECTOR-046"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-028",
+          "url": "http://shangay.com",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-058",
+          "url": "https://shangay.com/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-046",
+          "url": "https://shangay.com/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 46"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://guiagaybarcelona.com",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "http://www.guiagaybarcelona.com",
+        "https://www.guiagaybarcelona.com/"
+      ],
+      "original_ids": [
+        "RECOVERED-029",
+        "RECOVERED-059"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-029",
+          "url": "http://www.guiagaybarcelona.com",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-059",
+          "url": "https://www.guiagaybarcelona.com/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://dezanove.pt",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://dezanove.pt",
+        "https://dezanove.pt/"
+      ],
+      "original_ids": [
+        "RECOVERED-030",
+        "RECOVERED-060",
+        "COLLECTOR-047"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-030",
+          "url": "http://dezanove.pt",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-060",
+          "url": "https://dezanove.pt/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-047",
+          "url": "https://dezanove.pt/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 47"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://patroc.com",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "http://www.patroc.com",
+        "https://www.patroc.com/"
+      ],
+      "original_ids": [
+        "RECOVERED-031",
+        "COLLECTOR-017"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-031",
+          "url": "http://www.patroc.com",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "COLLECTOR-017",
+          "url": "https://www.patroc.com/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 17"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://rainbow.at",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://www.rainbow.at",
+        "https://www.rainbow.at/"
+      ],
+      "original_ids": [
+        "RECOVERED-032",
+        "RECOVERED-061",
+        "COLLECTOR-048"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-032",
+          "url": "http://www.rainbow.at",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-061",
+          "url": "https://www.rainbow.at/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-048",
+          "url": "https://www.rainbow.at/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 48"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://mannschaft.com",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://mannschaft.com",
+        "https://mannschaft.com/"
+      ],
+      "original_ids": [
+        "RECOVERED-033",
+        "RECOVERED-053",
+        "COLLECTOR-049"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-033",
+          "url": "http://mannschaft.com",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-053",
+          "url": "https://mannschaft.com/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-049",
+          "url": "https://mannschaft.com/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 49"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://qgay.it",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "http://www.qgay.it",
+        "https://www.qgay.it/"
+      ],
+      "original_ids": [
+        "RECOVERED-034",
+        "RECOVERED-062"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-034",
+          "url": "http://www.qgay.it",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-062",
+          "url": "https://www.qgay.it/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://humenonline.hu",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://humenonline.hu",
+        "https://humenonline.hu/"
+      ],
+      "original_ids": [
+        "RECOVERED-035",
+        "RECOVERED-063",
+        "COLLECTOR-050"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-035",
+          "url": "http://humenonline.hu",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-063",
+          "url": "https://humenonline.hu/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-050",
+          "url": "https://humenonline.hu/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 50"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://praguepride.cz",
+      "reference_count": 2,
+      "exact_url_variants": [
+        "http://www.praguepride.cz",
+        "https://www.praguepride.cz/"
+      ],
+      "original_ids": [
+        "RECOVERED-036",
+        "RECOVERED-064"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-036",
+          "url": "http://www.praguepride.cz",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-064",
+          "url": "https://www.praguepride.cz/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://replika-online.pl",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://replika-online.pl",
+        "https://replika-online.pl/"
+      ],
+      "original_ids": [
+        "RECOVERED-037",
+        "RECOVERED-065",
+        "COLLECTOR-052"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-037",
+          "url": "http://replika-online.pl",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-065",
+          "url": "https://replika-online.pl/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-052",
+          "url": "https://replika-online.pl/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 52"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://outandabout.dk",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://outandabout.dk",
+        "https://outandabout.dk/"
+      ],
+      "original_ids": [
+        "RECOVERED-038",
+        "RECOVERED-066",
+        "COLLECTOR-053"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-038",
+          "url": "http://outandabout.dk",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-066",
+          "url": "https://outandabout.dk/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-053",
+          "url": "https://outandabout.dk/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 53"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://qx.se",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://www.qx.se",
+        "https://www.qx.se/"
+      ],
+      "original_ids": [
+        "RECOVERED-039",
+        "RECOVERED-067",
+        "COLLECTOR-054"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-039",
+          "url": "http://www.qx.se",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-067",
+          "url": "https://www.qx.se/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-054",
+          "url": "https://www.qx.se/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 54"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://qx.fi",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://www.qx.fi",
+        "https://www.qx.fi/"
+      ],
+      "original_ids": [
+        "RECOVERED-040",
+        "RECOVERED-068",
+        "COLLECTOR-055"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-040",
+          "url": "http://www.qx.fi",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-068",
+          "url": "https://www.qx.fi/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-055",
+          "url": "https://www.qx.fi/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 55"
+        }
+      ]
+    },
+    {
+      "canonical_key": "https://pride.lv",
+      "reference_count": 3,
+      "exact_url_variants": [
+        "http://www.pride.lv",
+        "https://www.pride.lv/"
+      ],
+      "original_ids": [
+        "RECOVERED-041",
+        "RECOVERED-069",
+        "COLLECTOR-056"
+      ],
+      "references": [
+        {
+          "id": "RECOVERED-041",
+          "url": "http://www.pride.lv",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_JSON_Scrape_Rules_Recovered(2).txt"
+        },
+        {
+          "id": "RECOVERED-069",
+          "url": "https://www.pride.lv/",
+          "kind": "city-guide",
+          "provenance": "Recovered original instruction source: Backroom_Zone_Scrape_Plan_Oct2026_Apr2027.md"
+        },
+        {
+          "id": "COLLECTOR-056",
+          "url": "https://www.pride.lv/",
+          "kind": "directory",
+          "provenance": "Original Collect Scraping URLs chat — Backroom_scraping_source_URLs.txt (2026-11-06), line 56"
+        }
+      ]
+    }
+  ],
+  "safety": "This is a source-seed cleanup, not a claim that URL targets redirect to the same live content. All exact original URLs and their source references are preserved; never delete original research archives on this basis."
+}
