@@ -1333,6 +1333,7 @@ function ensureSelectedDate() {
             window.promptAddEventToShortlist?.(button.dataset.calendarShortlist);
         }));
         document.querySelectorAll('[data-calendar-venue]').forEach(button => button.addEventListener('click', () => {
+            window.BackroomSetVenueReturnHash?.(window.location.hash);
             close(false);
             window.location.hash = `#venue=${button.dataset.calendarVenue}`;
         }));
