@@ -154,7 +154,7 @@ function validateRow(row,mode,options={}){
     }
     if(!blank(row.Venue_ID)){
       if(options.venueIDs&&options.venueIDs.size&&!options.venueIDs.has(norm(row.Venue_ID)))warnings.push('Venue_ID is not found in the venue database');
-    }else warnings.push('Event has no Venue_ID; link it to a venue where possible');
+    }else if(blank(row.Event_Location)&&blank(row.Venue_Name)) warnings.push('Event has no linked venue or event-level location details');
   }
   if(mode==='venues'&&blank(row.Website_URL))warnings.push('Missing website');
   return {errors,warnings,id:norm(row[id])};
