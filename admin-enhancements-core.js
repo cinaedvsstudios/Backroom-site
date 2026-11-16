@@ -15,6 +15,8 @@
         mergeStatus: '',
         mergeColumnFilters: {},
         mergeMode: false,
+        mergeView: 'compact',
+        mergeExpanded: new Set(),
         jsonHandles: { venues: null, events: null },
         mergeSourceMode: null,
         mergePage: 0,
@@ -307,6 +309,123 @@
         const table = document.getElementById('preview-table-container');
         table?.parentNode?.insertBefore(controls, table);
         return controls;
+    }
+
+    // Compact merge review uses the same indexed entry rows as Full Table.
+    // An expanded row exposes every supplied field without discarding original data.
+    function mergeValueText(value) {
+        if (value === undefined || value === null) return '';
+        return typeof value === 'object' ? JSON.stringify(value) : String(value);
+    }
+
+    function mergeTags(value) {
+        const values = Array.isArray(value) ? value : String(value ?? '').split(',');
+        return values.map(v => String(v ?? '').trim()).filter(Boolean).slice(0, 5).join(' · ');
+    }
+
+    function mergePublicLinks(row) {
+        const eventMode = state.mergeSourceMode === 'events';
+        const venueId = String(row?.Venue_ID ?? '').trim();
+        const eventId = String(row?.Event_ID ?? '').trim();
+        const venueLink = venueId ? '<a class="br-merge-public-link" href="index.html#venue=' + encodeURIComponent(venueId) +
+            '" title="Open venue on Backroom" target="_blank" rel="noopener noreferrer" aria-label="Open venue on Backroom">📍</a>' : '';
+        const eventLink = eventMode && eventId ? '<a class="br-merge-public-link" href="index.html#event=' + encodeURIComponent(eventId) +
+            '" title="Open event on Backroom" target="_blank" rel="noopener noreferrer" aria-label="Open event on Backroom">🎟️</a>' : '';
+        return (eventLink + venueLink) || '<span class="br-merge-empty">—</span>';
+    }
+
+    function renderMergeEditor(entry) {
+        const fields = state.mergeColumns.filter(column => Object.prototype.hasOwnProperty.call(entry.row || {}, column));
+        return '<tr class="br-merge-edit-row" data-merge-editor="' + entry.index +
+            '"><td colspan="4"><div class="br-merge-field-grid">' +
+            fields.map(column => {
+                const value = mergeValueText(entry.row?.[column]);
+                const id = 'br-merge-field-' + entry.index + '-' + column;
+                const multi = /(?:Description|Notes|Source_URLs|_Info|_Tags)$/.test(column) || value.length > 130;
+                return '<label class="br-merge-field" for="' + escapeHtml(id) + '"><span>' +
+                    escapeHtml(column) + '</span>' +
+                    (multi ? '<textarea rows="3" ' : '<input type="text" ') +
+                    'class="br-merge-edit-value" data-index="' + entry.index +
+                    '" data-column="' + escapeHtml(column) + '" id="' + escapeHtml(id) + '"' +
+                    (multi ? '>' + escapeHtml(value) + '</textarea>' : ' value="' + escapeHtml(value) + '">') +
+                    '</label>';
+            }).join('') +
+            '</div><p class="br-merge-edit-hint">Changes to these fields are staged for this import. Blank values leave existing records unchanged; use __CLEAR__ to explicitly clear a field.</p></td></tr>';
+    }
+
+    function renderCompactMergeRows(displayed) {
+        const eventMode = state.mergeSourceMode === 'events';
+        let html = '<table class="br-p1-compact-table br-merge-compact-table' + (eventMode ? ' br-p1-event-table' : '') +
+            '"><thead><tr><th class="br-merge-check-header">✓</th><th>Record</th><th class="br-merge-open-header">Open</th><th>Tags</th></tr></thead><tbody>';
+        displayed.forEach(entry => {
+            const row = entry.row || {}, id = String(row[eventMode ? 'Event_ID' : 'Venue_ID'] ?? '').trim();
+            const status = String(row.Status || 'Unknown');
+            const name = String((eventMode ? row.Event_Name : row.Name) || id || 'Unnamed record');
+            const venueName = String(row.Venue_Name || row.Venue_ID || 'Venue unknown');
+            const country = String(row.Country || '');
+            const flag = country ? (window.BackroomAdminFlags?.html(country) || '🌐') + ' ' : '';
+            const city = escapeHtml(row.City || '');
+            const date = eventMode ? String(row.Event_Date || '') : String(row.Last_Updated || '').slice(0, 10);
+            const times = eventMode ? [row.Event_Start_Time, row.Event_End_Time].filter(Boolean).join('–') : '';
+            const category = eventMode ? String(row.Venue_ID || '') : String(row.Category || '');
+            const title = '<strong>' + escapeHtml(name) + '</strong>' +
+                (eventMode ? '<span class="br-p1-at-venue">@ ' + escapeHtml(venueName) + '</span>' : '');
+            const result = calculateMergeStatus(entry);
+            const expanded = state.mergeExpanded.has(entry.index);
+            const meta = [escapeHtml(id), (flag + city).trim(), escapeHtml(category),
+                escapeHtml(date), escapeHtml(times)].filter(Boolean).join(' · ');
+            html += '<tr class="br-merge-compact-record' + (entry.included ? '' : ' br-merge-excluded') +
+                '" data-merge-index="' + entry.index + '">' +
+                '<td class="br-p1-checkbox"><input type="checkbox" class="merge-include-toggle" data-index="' + entry.index +
+                '" aria-label="Include ' + escapeHtml(id || name) + ' in merge" ' + (entry.included ? 'checked' : '') + '></td>' +
+                '<td><div class="br-p1-row-top">' + title +
+                '<span class="br-p1-status ' + (status.toLowerCase() === 'live' ? 'br-p1-live' : 'br-p1-alert') + '">' + escapeHtml(status) + '</span>' +
+                '<span class="br-merge-result br-merge-result-' + result.toLowerCase() + '">' + escapeHtml(result) + '</span></div>' +
+                '<div class="br-p1-row-meta">' + meta + '</div>' +
+                '<button type="button" class="br-merge-edit-toggle" data-merge-expand="' + entry.index +
+                '" aria-expanded="' + expanded + '">' + (expanded ? '▴ Close fields' : '▾ Edit fields') + '</button></td>' +
+                '<td class="br-p1-public-links">' + mergePublicLinks(row) + '</td>' +
+                '<td class="br-p1-tags">' + (mergeTags(row.Vibe_Tags) ? escapeHtml(mergeTags(row.Vibe_Tags)) :
+                    '<span class="br-merge-empty">No tags</span>') + '</td></tr>';
+            if (expanded) html += renderMergeEditor(entry);
+        });
+        if (!displayed.length) html += '<tr><td colspan="4" class="br-merge-empty-row">No incoming records match these filters.</td></tr>';
+        return html + '</tbody></table>';
+    }
+
+    function setMergeField(entry, field, raw) {
+        if (!entry || !Object.prototype.hasOwnProperty.call(entry.row || {}, field)) return false;
+        const original = entry.row[field];
+        if (typeof original === 'object' && original !== null) {
+            if (!raw.trim()) {
+                entry.row[field] = '';
+                return true;
+            }
+            try {
+                const parsed = JSON.parse(raw);
+                if (Array.isArray(original) !== Array.isArray(parsed) || parsed === null ||
+                    typeof parsed !== 'object') throw Error('Expected original JSON type');
+                entry.row[field] = parsed;
+            } catch {
+                showToast('Invalid JSON in ' + field + '. Value not changed.');
+                return false;
+            }
+        } else if (typeof original === 'number') {
+            if (raw.trim() && !Number.isFinite(Number(raw))) {
+                showToast(field + ' must be a number. Value not changed.');
+                return false;
+            }
+            entry.row[field] = raw.trim() === '' ? '' : Number(raw);
+        } else if (typeof original === 'boolean') {
+            if (!/^(true|false|1|0)$/i.test(raw.trim())) {
+                showToast(field + ' must be true or false. Value not changed.');
+                return false;
+            }
+            entry.row[field] = /^(true|1)$/i.test(raw.trim());
+        } else {
+            entry.row[field] = raw;
+        }
+        return true;
     }
 
     function renderMergePreview() {
