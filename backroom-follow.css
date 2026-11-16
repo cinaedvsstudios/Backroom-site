@@ -1,0 +1,82 @@
+/* Backroom Follow & category exclusion controls. */
+#top-bar #btn-location.br-location-icon-only { justify-content:center; gap:0; }
+#top-bar #btn-location.br-location-icon-only .btn-text { display:none !important; }
+#top-bar #btn-location.br-location-icon-only img { width:16px; max-width:16px; }
+#btn-notifications { position:relative; justify-content:center; color:var(--text-light); }
+#btn-notifications svg { display:block; }
+#btn-notifications:hover { color:var(--primary-blue); }
+#br-follow-count {
+  position:absolute; top:-7px; right:-8px; min-width:17px; height:17px;
+  display:flex; align-items:center; justify-content:center; box-sizing:border-box;
+  padding:0 3px; border-radius:10px; font:700 10px Arial,sans-serif;
+  background:var(--bright-red-orange,#D55036); color:#fff; border:1px solid #141925;
+}
+#br-follow-count[hidden], .br-follow-panel[hidden] { display:none !important; }
+.br-follow-panel {
+  position:fixed; top:72px; right:16px; width:min(420px,calc(100vw - 20px));
+  max-height:min(76dvh,730px); overflow-y:auto; z-index:3100; box-sizing:border-box;
+  padding:16px; background:#111725; color:#fff; border:1px solid #2ca8d4;
+  border-radius:12px; box-shadow:0 20px 45px #000c;
+  font-family:'Barlow Condensed',Arial,sans-serif;
+}
+.br-follow-panel-header,.br-follow-panel-actions,.br-follow-manage-row {
+  display:flex; justify-content:space-between; align-items:center; gap:8px;
+}
+.br-follow-panel-header h2 { margin:0; color:#2ca8d4; font:700 1.25rem 'Antonio',Arial,sans-serif; }
+.br-follow-close { background:transparent; border:0; color:#fff; font:700 26px Arial; padding:0 7px; cursor:pointer; }
+.br-follow-panel-actions { flex-wrap:wrap; margin:14px 0; }
+.br-follow-panel-button {
+  cursor:pointer; border:1px solid #2ca8d4; background:#2ca8d4; color:#fff;
+  padding:7px 11px; border-radius:24px; font:600 .9rem 'Barlow Condensed',sans-serif;
+}
+.br-follow-panel-button:hover { filter:brightness(1.15); }
+.br-follow-secondary { background:#313748; border-color:#53596b; }
+.br-follow-clear { display:block; margin:13px 0 0 auto; background:transparent; border-color:#D55036; color:#ffb6a6; }
+.br-follow-clear:disabled { opacity:.35; cursor:default; }
+.br-follow-panel-note, .br-follow-privacy { color:#969CAE; margin:12px 0; line-height:1.4; }
+.br-follow-privacy { font-size:.77rem; }
+.br-follow-notices { display:grid; gap:8px; max-height:48dvh; overflow-y:auto; }
+.br-follow-notice {
+  display:flex; flex-direction:column; gap:5px; text-align:left;
+  cursor:pointer; padding:12px; border:1px solid #313748; background:#212530;
+  color:#fff; border-radius:8px;
+}
+.br-follow-notice strong { font-size:.96rem; }
+.br-follow-notice span { font-size:.84rem; color:#969CAE; }
+.br-follow-notice.is-unread { border-left:3px solid #2ca8d4; }
+.br-follow-notice.is-read { opacity:.7; }
+.br-follow-manage-list { display:grid; gap:8px; margin:12px 0; }
+.br-follow-manage-row { background:#212530; padding:10px; border-radius:8px; }
+.br-follow-venue-name { overflow-wrap:anywhere; flex:1; }
+.br-follow-panel-button.is-unfollowed { background:#313748; border-color:#969CAE; }
+.br-follow-toggle { display:inline-flex !important; align-items:center; justify-content:center; gap:4px; }
+.br-follow-toggle svg { display:block; width:17px; height:17px; flex:0 0 auto; }
+.br-follow-toggle.is-following { color:#69d9ff !important; border-color:#2ca8d4 !important; }
+.br-follow-toggle[data-br-follow-style="icon"] { cursor:pointer; background:transparent; border:0; padding:3px; color:#c2c6d1; }
+.br-follow-toggle[data-br-follow-style="icon"].is-following { color:#2ca8d4 !important; }
+.br-calendar-actions-pair { width:100%; display:grid; grid-template-columns:1fr 1fr; gap:4px; }
+.br-calendar-actions-pair .calendar-action {
+  width:100% !important; min-width:0; margin:0; padding:4px 2px !important;
+  font-size:.64rem !important; line-height:1.1; overflow:hidden;
+}
+.br-calendar-actions-pair .br-follow-toggle svg { width:12px; height:12px; }
+.br-calendar-actions-pair .br-follow-toggle { gap:2px; }
+.br-calendar-actions-pair .br-follow-toggle span { overflow:hidden; text-overflow:clip; white-space:nowrap; }
+.calendar-filter-chip.excluded,
+#filter-chips .chip.excluded {
+  background:#969CAE !important; border-color:#969CAE !important; color:#000 !important;
+  box-shadow:none !important; opacity:1 !important;
+}
+.calendar-filter-chip.excluded:hover,#filter-chips .chip.excluded:hover { background:#b9bec9 !important; }
+.calendar-filter-chip.excluded:focus-visible,#filter-chips .chip.excluded:focus-visible { outline:2px solid #fff; outline-offset:2px; }
+.card-quick-actions .br-follow-toggle { flex:0 0 auto; }
+#modal-follow.br-follow-toggle, #event-modal-follow.br-follow-toggle { width:28px; height:28px; }
+@media(max-width:768px){
+  .br-follow-panel { top:106px; right:8px; width:calc(100vw - 16px); max-height:calc(100dvh - 118px); }
+  #top-bar #btn-notifications { min-width:34px; }
+}
+@media(max-width:540px){
+  .br-calendar-actions-pair { gap:3px; }
+  .br-calendar-actions-pair .calendar-action { font-size:.55rem !important; padding:4px 1px !important; }
+  .br-calendar-actions-pair .br-follow-toggle svg { width:10px; height:10px; }
+}
