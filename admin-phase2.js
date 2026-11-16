@@ -89,11 +89,14 @@ function show(tab){
 function render(){
  if(!state.registry)return;
  const summary=get('br-p2-summary');
+ const allowed=window.BackroomPhase3Presets?.codes;
+ const coveredCountries=state.registry.countries.filter(x=>allowed?.has(x.code));
+ const coveredCities=state.registry.cities.filter(x=>allowed?.has(x.country_code));
  if(summary)summary.innerHTML=[
    ['📍','Venues + areas',state.venues.length],
    ['📅','Events',state.events.length],
-   ['🌍','Countries',state.registry.countries.length],
-   ['🗺️','Destinations',state.registry.cities.length]
+   ['🌍','Scope countries',coveredCountries.length],
+   ['🗺️','Scope destinations',coveredCities.length]
   ].map(([icon,label,value])=>'<span class="br-p3-stat-chip"><span aria-hidden="true">'+icon+'</span><strong>'+fmt(value)+'</strong> '+label+'</span>').join('');
  for(const tab of ['imports','quality','reporting','registry','coverage','zones'])get('br-p2-'+tab)?.classList.toggle('hidden',state.tab!==tab&&!(tab==='reporting'&&state.tab==='jql'));
  document.querySelectorAll('#br-phase2-nav button').forEach(button=>button.classList.toggle('br-p2-active',button.dataset.p2Tab===state.tab));
