@@ -71,6 +71,7 @@
     <link rel="stylesheet" href="style.css?v=1.5.27">
     <link rel="stylesheet" href="calendar.css?v=1.5.29">
     <link rel="stylesheet" href="event-detail.css?v=1.5.12">
+    <link rel="stylesheet" href="backroom-follow.css?v=1.0.0">
 </head>
 <body>
 
@@ -164,7 +165,8 @@
                     <button id="search-clear" class="search-clear hidden" type="button" aria-label="Clear search">✕</button>
                 </div>
                 <div class="nav-buttons-wrapper">
-                    <button id="btn-location" class="top-btn pill-btn tooltip" title="Set Location"><img src="location.png" alt="" style="width:16px; vertical-align:middle;"> <span class="btn-text"> Location</span></button>
+                    <button id="btn-location" class="top-btn pill-btn tooltip br-location-icon-only" title="Set Location" aria-label="Set Location"><img src="location.png" alt="" style="width:16px; vertical-align:middle;"></button>
+                    <button id="btn-notifications" class="top-btn icon-only pill-btn tooltip" type="button" title="Notifications" aria-label="Notifications"><svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg><span id="br-follow-count" hidden></span></button>
                     <button id="btn-favorites" class="top-btn pill-btn tooltip" title="My Venues" aria-label="My Venues"><span class="btn-icon">⚜️</span><span class="btn-text"> My Venues</span></button>
                     <button id="btn-top-my-events" class="top-btn pill-btn tooltip" title="My Events" onclick="window.location.hash='#myevents';"><span class="btn-icon">💖</span><span class="btn-text"> My Events</span></button>
                     <button id="btn-shortlists-menu" class="top-btn pill-btn tooltip" title="My Shortlists"><img src="shortlist.png" alt="" style="width:16px; vertical-align:middle;"> <span class="btn-text"> My Shortlists</span></button>
@@ -251,7 +253,7 @@
         </div>
     </div>
 
-    <div id="venue-modal" class="modal hidden"><div class="modal-content venue-modal-style"><div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;"><h2 id="modal-title" class="display-font" style="margin: 0; flex-grow: 1;">VENUE NAME</h2><div class="modal-actions-group" style="display: flex; gap: 10px; align-items: center; background: var(--panel-dark); border: 1px solid var(--panel-mid); padding: 5px 15px; border-radius: 50px; margin-right: 20px;"><button id="modal-star" class="icon-btn tooltip" title="Save or remove venue from My Venues" style="font-size: 1.8rem;">⚜️</button><button id="modal-shortlist" class="icon-btn tooltip" title="Add to Shortlist"><img src="shortlist.png" alt="" aria-hidden="true" style="width:24px;"></button><button id="modal-share" class="icon-btn tooltip" title="Share" style="font-size: 1.5rem;">📣</button><button id="modal-report" class="icon-btn tooltip" title="Report" style="display:flex; align-items:center; justify-content:center;"><img src="report.png" alt="" aria-hidden="true" style="width:24px; height:24px; object-fit:contain;"></button></div><button id="close-modal" class="btn-close" style="position: relative; top: auto; right: auto;">❌</button></div><div class="modal-body body-font"><div id="modal-dynamic-layout"></div></div></div></div>
+    <div id="venue-modal" class="modal hidden"><div class="modal-content venue-modal-style"><div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;"><h2 id="modal-title" class="display-font" style="margin: 0; flex-grow: 1;">VENUE NAME</h2><div class="modal-actions-group" style="display: flex; gap: 10px; align-items: center; background: var(--panel-dark); border: 1px solid var(--panel-mid); padding: 5px 15px; border-radius: 50px; margin-right: 20px;"><button id="modal-star" class="icon-btn tooltip" title="Save or remove venue from My Venues" style="font-size: 1.8rem;">⚜️</button><button id="modal-follow" type="button" class="icon-btn tooltip br-follow-toggle" data-br-follow-style="icon" data-br-follow-venue="" title="Follow venue"></button><button id="modal-shortlist" class="icon-btn tooltip" title="Add to Shortlist"><img src="shortlist.png" alt="" aria-hidden="true" style="width:24px;"></button><button id="modal-share" class="icon-btn tooltip" title="Share" style="font-size: 1.5rem;">📣</button><button id="modal-report" class="icon-btn tooltip" title="Report" style="display:flex; align-items:center; justify-content:center;"><img src="report.png" alt="" aria-hidden="true" style="width:24px; height:24px; object-fit:contain;"></button></div><button id="close-modal" class="btn-close" style="position: relative; top: auto; right: auto;">❌</button></div><div class="modal-body body-font"><div id="modal-dynamic-layout"></div></div></div></div>
     <div id="community-rating-modal" class="modal hidden" style="z-index: 3200;">
         <div class="modal-content small-modal community-rating-modal-content">
             <button type="button" class="btn-close close-modal-btn" onclick="window.closeCommunityRatingModal()">❌</button>
@@ -307,6 +309,8 @@
     <script src="backroom-layout-v1525.js?v=1.5.25"></script>
     <script src="calendar.js?v=1.5.30"></script>
     <script src="dress-codes-v153.js?v=1.5.10"></script>
+    <script src="backroom-follow.js?v=1.0.0"></script>
+    <script src="backroom-scroll.js?v=1.0.0"></script>
     <script>
     // Existing sidebar panels support Enter and Space as well as pointer input.
     document.querySelectorAll('.sidebar-menu .sidebar-item[role="button"]').forEach(item => {
