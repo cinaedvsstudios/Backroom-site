@@ -4,6 +4,10 @@
 const P=window.BRP2;if(!P)throw Error('Phase 2 shell missing');
 const {state:S,get,esc,fmt,clean,norm,notify,saveLocal,downloadCSV,downloadJSON,options,stat,pagination,location}=P;
 const REG_KEY='br_admin_city_registry_working_v1';
+// Share the Scrape Builder country scope. Never delete out-of-scope research or public records.
+const eligibleCode=code=>window.BackroomPhase3Presets?.codes?.has(code)===true;
+const visibleCountries=()=>S.registry?.countries.filter(c=>eligibleCode(c.code))||[];
+const visibleCities=()=>S.registry?.cities.filter(c=>eligibleCode(c.country_code))||[];
 const flag=name=>window.BackroomAdminFlags?.flag(name)||'🌐';
 const flagHTML=name=>window.BackroomAdminFlags?.html(name)||'<span aria-hidden="true">🌐</span>';
 const countryOptions=(items,selected)=>'<option value="">🌐 All countries</option>'+items.map(name=>'<option value="'+esc(name)+'" '+(selected===name?'selected':'')+'>'+esc(name)+'</option>').join('');
@@ -11,7 +15,7 @@ const reg={country:'DE',search:'',page:1,edit:-1};
 const cov={country:'',search:'',filter:'all',page:1};
 let coverageAll=[],coverageVisible=[];
 const key=(code,city)=>code+'|'+norm(city);
-function country(){return S.registry?.countries.find(c=>c.code===reg.country);}
+function country(){return visibleCountries().find(c=>c.code===reg.country);}
 function duplicateCity(code,name,skip=-1){return S.registry.cities.some((c,i)=>i!==skip&&c.country_code===code&&norm(c.name)===norm(name));}
 function saveRegistry(){saveLocal(REG_KEY,S.registry);}
 function types(selected){
@@ -32,16 +36,16 @@ function ensureCapital(c,capital){
 }
 function renderRegistry(){
  const h=get('br-p2-registry');if(!h||!S.registry)return;
- const current=country()||S.registry.countries[0];if(!current)return;reg.country=current.code;
+ const current=country()||visibleCountries()[0];if(!current)return;reg.country=current.code;
  const rows=S.registry.cities.map((row,index)=>({...row,index})).filter(r=>r.country_code===reg.country&&(!reg.search||norm(r.name).includes(norm(reg.search)))).sort((a,b)=>a.name.localeCompare(b.name));
  const pages=Math.max(1,Math.ceil(rows.length/100));reg.page=Math.max(1,Math.min(reg.page,pages));
  const editing=S.registry.cities[reg.edit];
- h.innerHTML='<h2>Master City Registry</h2><p class="br-p2-muted">250 country/territory seeds, capitals, secondary cities and tourist destinations. This is a research reference, not a claim that each city has an active venue. Edits are stored in this browser until exported and committed.</p>'+
- '<div class="br-p2-grid">'+stat('Countries / territories',S.registry.countries.length)+stat('Cities / destinations',S.registry.cities.length)+stat('Capital entries',S.registry.cities.filter(x=>(x.kinds||[]).includes('capital')).length)+'</div>'+
+ h.innerHTML='<h2>Master City Registry</h2><p class="br-p2-muted">Showing Europe, its eligible territories, Turkey and Israel only. Other worldwide research seeds remain in the underlying source file but are hidden here. These are research destinations, not claims that a venue exists. Edits remain in this browser until exported and committed.</p>'+
+ '<div class="br-p2-grid">'+stat('Countries / territories',visibleCountries().length)+stat('Cities / destinations',visibleCities().length)+stat('Capital entries',visibleCities().filter(x=>(x.kinds||[]).includes('capital')).length)+'</div>'+
  '<div class="br-p2-actions"><button type="button" id="br-reg-export" class="btn primary-btn pill-btn">⬇ Export registry JSON</button>'+
  '<label class="btn secondary-btn pill-btn">Import registry JSON<input type="file" id="br-reg-import" accept=".json" hidden></label>'+
  '<button id="br-reg-reset" class="btn secondary-btn pill-btn">Reset to published registry</button></div>'+
- '<div class="br-p2-filters"><label>Country<select id="br-reg-country">'+S.registry.countries.map(c=>'<option value="'+esc(c.code)+'" '+(reg.country===c.code?'selected':'')+'>'+esc(c.name)+' ('+esc(c.code)+')</option>').join('')+'</select></label>'+
+ '<div class="br-p2-filters"><label>Country<select id="br-reg-country">'+visibleCountries().map(c=>'<option value="'+esc(c.code)+'" '+(reg.country===c.code?'selected':'')+'>'+esc(c.name)+' ('+esc(c.code)+')</option>').join('')+'</select></label>'+
  '<label>City search<input id="br-reg-search" value="'+esc(reg.search)+'" placeholder="City name"></label></div>'+
  '<div class="br-p2-inline"><label>Country name<input id="br-reg-country-name" value="'+esc(current.name)+'"></label>'+
  '<label>Capital / administrative seat<input id="br-reg-country-capital" value="'+esc(current.capital||'')+'"></label>'+
@@ -64,6 +68,7 @@ function renderRegistry(){
 function addCountry(){
  const code=clean(get('br-reg-add-code')?.value).toUpperCase(),name=clean(get('br-reg-add-name')?.value),capital=clean(get('br-reg-add-capital')?.value);
  if(!/^[A-Z]{2,5}$/.test(code)||!name){notify('A 2–5-letter code and country name are required.');return;}
+ if(!eligibleCode(code)){notify('Backroom covers Europe, Turkey and Israel only. This country is outside the supported scope.');return;}
  if(S.registry.countries.some(x=>x.code===code||norm(x.name)===norm(name))){notify('Country code/name already exists.');return;}
  const c={code,name,capital:''};S.registry.countries.push(c);S.registry.countries.sort((a,b)=>a.name.localeCompare(b.name));ensureCapital(c,capital);
  reg.country=code;reg.search='';reg.page=1;saveRegistry();renderRegistry();
@@ -151,10 +156,11 @@ function codeFor(countryName){
 function getCoverage(){
  if(!S.registry)return[];
  const result=new Map(),countryNames=new Map(S.registry.countries.map(c=>[c.code,c.name]));
- for(const item of S.registry.cities)result.set(key(item.country_code,item.name),{code:item.country_code,city:item.name,kinds:item.kinds||[],registered:true,venues:0,cruising:0,events:0});
+ for(const item of visibleCities())result.set(key(item.country_code,item.name),{code:item.country_code,city:item.name,kinds:item.kinds||[],registered:true,venues:0,cruising:0,events:0});
  const venueMap=new Map(S.venues.map(v=>[clean(v.Venue_ID),v]));
  const count=(row,mode)=>{
    const loc=location(row,venueMap),code=codeFor(loc.country);
+   if(!eligibleCode(code))return; // Do not re-introduce out-of-scope records into the coverage view.
    for(const city of loc.cities.length?loc.cities:['(City unspecified)']){
      const id=key(code,city);
      const item=result.get(id)||{code,city,kinds:[],registered:false,venues:0,cruising:0,events:0};
@@ -168,6 +174,8 @@ function getCoverage(){
 }
 function filterCoverage(){
  const f=cov;coverageAll=getCoverage();
+ const allowedSelections=new Set(coverageAll.map(x=>key(x.code,x.city)));
+ for(const selected of S.selected)if(!allowedSelections.has(selected))S.selected.delete(selected);
  return coverageAll.filter(x=>{
    if(f.country&&x.country!==f.country)return false;
    if(f.search&&!norm(x.city).includes(norm(f.search)))return false;
@@ -184,7 +192,7 @@ function renderCoverage(){
  const countries=[...new Set(coverageAll.map(x=>x.country))].sort();
  const pages=Math.max(1,Math.ceil(coverageVisible.length/100));cov.page=Math.max(1,Math.min(cov.page,pages));
  const showing=coverageVisible.slice((cov.page-1)*100,cov.page*100);
- h.innerHTML='<h2>City Coverage Manager</h2><p class="br-p2-muted">Counts use current working records. Events inherit their linked venue country/city when needed. Zero coverage means no Backroom records — it does not mean there are no venues.</p>'+
+ h.innerHTML='<h2>City Coverage Manager</h2><p class="br-p2-muted">Shows Europe, Turkey and Israel only. Counts use current working records; events inherit linked venue locations. Out-of-scope records are not deleted. Zero coverage means no Backroom records, not necessarily no real venues.</p>'+
  '<div class="br-p2-grid">'+stat('Destinations considered',coverageAll.length)+stat('Without records',coverageAll.filter(x=>!x.total).length)+stat('Outside registry',coverageAll.filter(x=>!x.registered).length)+'</div>'+
  '<div class="br-p2-filters"><label>Country<select data-cover="country">'+countryOptions(countries,cov.country)+'</select></label>'+
  '<label>City contains<input data-cover="search" value="'+esc(cov.search)+'" placeholder="All cities"></label>'+
@@ -238,11 +246,11 @@ function coverageChange(input){
 function renderZones(){
  const host=get('br-p2-zones');if(!host)return;
  host.innerHTML='<div class="br-p3-zone-intro"><h2>📚 Zone Splitting & Geographic Research Rules</h2>'+
- '<p>Keep the research structure consistent across the whole Backroom database. The registry is a worldwide list of places worth considering, <strong>not</strong> evidence that a venue or cruising location exists.</p>'+
- '<div class="br-p2-grid">'+stat('Countries / territories in registry',S.registry?.countries?.length||0)+stat('City / destination entries',S.registry?.cities?.length||0)+'</div></div>'+
+ '<p>Keep the research structure consistent across the whole Backroom database. The source city registry retains worldwide research seeds, but active Backroom coverage is limited to Europe, Turkey and Israel. A registry entry is <strong>not</strong> evidence that a venue or cruising location exists.</p>'+
+ '<div class="br-p2-grid">'+stat('Eligible countries / territories',visibleCountries().length)+stat('Eligible destinations',visibleCities().length)+'</div></div>'+
  '<div class="br-p3-zone-grid">'+
  '<details class="br-p3-zone-card" open><summary>🌍 1. Geographic coverage</summary>'+
- '<p>Start with countries rather than restricting research to Europe. Include capitals, relevant secondary cities and visitor destinations even when they are small.</p>'+
+ '<p>Research only eligible European destinations, Turkey and Israel. Include capitals, relevant secondary cities and visitor destinations even when they are small.</p>'+
  '<p><strong>Examples:</strong> 🇪🇸 Ibiza, Sitges and Torremolinos; 🇮🇹 Venice; 🇬🇷 Mykonos; 🇭🇷 Hvar; and coastal/island areas with nightlife or travel significance.</p>'+
  '<p>City size by itself must <strong>never</strong> decide whether a location is included or excluded.</p></details>'+
  '<details class="br-p3-zone-card" open><summary>🧩 2. Preserve existing Backroom zones</summary>'+
@@ -258,7 +266,7 @@ function renderZones(){
  '<p>City Registry is a planning tool, not an approved publication list. Retain source URLs, previous IDs and research notes. Verify new venues and cruising areas against relevant evidence before importing them.</p>'+
  '<p>Keep uncertain candidates separate from existing published records, and do not manufacture venue IDs or events just because a destination was selected.</p></details>'+
  '<details class="br-p3-zone-card"><summary>📦 6. Handover to the Scrape Builder</summary>'+
- '<p>The upcoming Scrape Builder should read this same registry, support selecting entire countries or specific cities, and accept the exact copied list from City Coverage.</p>'+
+ '<p>The Scrape Builder reads this same scoped registry, support selecting entire countries or specific cities, and accept the exact copied list from City Coverage.</p>'+
  '<p>Batch membership, source selection and existing permanent Venue_ID / Event_ID matching must remain explicit and reusable.</p></details>'+
  '</div><p class="br-p2-muted">Everything needed for Zone Splitting is available here; you do not need to open a separate document.</p>';
 }
