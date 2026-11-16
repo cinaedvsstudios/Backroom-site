@@ -105,3 +105,19 @@
     font-size:11px; width:11px; height:12px;
   }
 }
+
+/* Follow pills: bold yellow ON state; original dark pill remains OFF. */
+.br-follow-toggle[data-br-follow-style="pill"].is-following,
+.br-calendar-actions-pair .br-follow-toggle.is-following {
+  background:#e8d900 !important;
+  border-color:#e8d900 !important;
+  color:#000 !important;
+  font-weight:700 !important;
+  box-shadow:0 0 9px rgba(232,217,0,.28);
+}
+.br-follow-toggle[data-br-follow-style="pill"].is-following:hover,
+.br-calendar-actions-pair .br-follow-toggle.is-following:hover {
+  background:#fff26d !important;
+  border-color:#fff26d !important;
+  color:#000 !important;
+}
