@@ -549,7 +549,8 @@
       button.className = 'btn primary-btn pill-btn calendar-action backroom-open-event-btn';
       button.dataset.backroomOpenEvent = eventId;
       button.textContent = 'Open Event';
-      media.insertBefore(button, media.querySelector('.calendar-action') || null);
+      const actionAnchor = media.querySelector('.br-calendar-actions-pair') || media.querySelector(':scope > .calendar-action');
+      media.insertBefore(button, actionAnchor && actionAnchor.parentNode === media ? actionAnchor : null);
     });
   }
 
