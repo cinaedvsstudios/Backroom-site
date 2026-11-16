@@ -631,6 +631,7 @@
     const id = clean(eventId);
     if (!id) return;
     eventReturnHash = options.returnHash || getCurrentEventReturnHash();
+    window.BackroomRememberListScroll?.();
     const target = `#event=${encodeURIComponent(id)}`;
     if (window.location.hash !== target) {
       history.pushState({ backroomEvent: id }, '', target);
