@@ -89,3 +89,19 @@
   .card-stats .card-quick-actions { gap:4px; }
   .card-stats .card-quick-actions .br-follow-toggle { min-width:22px; }
 }
+
+/* Ringing bell shows when a venue is followed; outline SVG remains the off state. */
+.br-follow-toggle .br-follow-active-bell {
+  display:inline-flex; align-items:center; justify-content:center;
+  font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;
+  font-size:20px; line-height:1;
+  width:19px; height:20px; flex:0 0 auto;
+}
+.br-calendar-actions-pair .br-follow-toggle .br-follow-active-bell {
+  font-size:13px; width:13px; height:14px;
+}
+@media(max-width:540px) {
+  .br-calendar-actions-pair .br-follow-toggle .br-follow-active-bell {
+    font-size:11px; width:11px; height:12px;
+  }
+}
