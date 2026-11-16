@@ -444,7 +444,7 @@
         controls.classList.remove('hidden');
         controls.innerHTML = `
             <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-                <input id="merge-global-search" class="filter-header-input" style="width:min(420px,100%);margin:0;" placeholder="Search all incoming event fields…" value="${escapeHtml(state.mergeSearch)}">
+                <input id="merge-global-search" class="filter-header-input" style="width:min(420px,100%);margin:0;" placeholder="Search all incoming ${state.mergeSourceMode === 'events' ? 'event' : 'venue'} fields…" value="${escapeHtml(state.mergeSearch)}">
                 <select id="merge-status-filter" class="filter-header-select filter-dropdown" style="width:auto;">
                     <option value="">All merge results</option>
                     ${['New','Updating','Unchanged','Invalid','Duplicate','Conflict','Excluded'].map((value) => `<option value="${value}" ${state.mergeStatus === value ? 'selected' : ''}>${value}</option>`).join('')}
@@ -472,10 +472,12 @@
 
         let html;
         tableContainer.classList.toggle('br-merge-compact-host', state.mergeView === 'compact');
+        tableContainer.classList.toggle('br-merge-venues', state.mergeSourceMode === 'venues');
+        tableContainer.classList.toggle('br-merge-events', state.mergeSourceMode === 'events');
         if (state.mergeView === 'compact') {
             html = renderCompactMergeRows(displayed);
         } else {
-            let html = '<table><thead id="preview-thead"><tr><th style="min-width:90px;">Include</th><th style="min-width:100px;">Result</th>';
+            html = '<table><thead id="preview-thead"><tr><th style="min-width:90px;">Include</th><th style="min-width:100px;">Result</th>';
             state.mergeColumns.forEach((column) => {
                 html += `<th><div>${escapeHtml(column)}</div><input class="filter-header-input merge-column-filter" data-column="${escapeHtml(column)}" placeholder="Filter…" value="${escapeHtml(state.mergeColumnFilters[column] || '')}"></th>`;
             });
