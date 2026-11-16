@@ -239,3 +239,8 @@
     color:#91e9f5!important;
     border-bottom-color:#2ba9c9!important;
 }
+
+/* Expanded per-record editor must override the checkbox-column alignment rule. */
+#preview-table-container .br-merge-compact-table .br-merge-edit-row>td{
+    text-align:left!important;
+}
