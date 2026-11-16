@@ -1063,8 +1063,9 @@ function ensureSelectedDate() {
 
     function renderEventCard(event, includeDate = false) {
         const venue = venueFor(event);
-        const venueName = venue?.Name || 'Venue not listed';
-        const location = [venue?.City || event?.City, venue?.Country || event?.Country].filter(Boolean).join(' · ');
+        const venueName = venue?.Name || event?.Event_Location || event?.Venue_Name || 'Location to be announced';
+        const location = !venue && event?.Event_Location ? '' :
+            [venue?.City || event?.City, venue?.Country || event?.Country].filter(Boolean).join(' · ');
         const times = [event.Event_Start_Time, event.Event_End_Time].filter(Boolean).join(' – ');
         const saved = savedEventIds().includes(event.Event_ID);
         const imageFallback = eventFallbackImage(event, venue, previousGenericEventFallback);
@@ -1107,11 +1108,17 @@ function ensureSelectedDate() {
             const matching = linked.filter(event => eventMatchesSharedLocation(event));
             if (!matching.length) continue;
             const occurrences = [];
+            const festivalStart = String(festival.Festival_Start_Date || '').trim();
+            const festivalEnd = String(festival.Festival_End_Date || festivalStart).trim();
             if (selected.length) {
                 for (const date of selected) {
-                    for (const event of matching) {
-                        const found = occurrenceForDate(event, parseDate(date));
-                        if (found) occurrences.push(found);
+                    if (festivalStart && date >= festivalStart && date <= festivalEnd) {
+                        occurrences.push({...matching[0], Display_Date: date, Is_Recurring: false});
+                    } else {
+                        for (const event of matching) {
+                            const found = occurrenceForDate(event, parseDate(date));
+                            if (found) occurrences.push(found);
+                        }
                     }
                 }
             } else {
@@ -1128,6 +1135,9 @@ function ensureSelectedDate() {
                         }
                     }
                 }
+                if (!occurrences.length && festivalStart && festivalEnd >= today) {
+                    occurrences.push({...matching[0], Display_Date: festivalStart < today ? today : festivalStart, Is_Recurring: false});
+                }
             }
             if (occurrences.length) results.push({
                 festival, occurrences,
@@ -1143,6 +1153,9 @@ function ensureSelectedDate() {
         return (window.BackroomV15?.festivals || []).filter(festival => {
             const linked = linkedFestivalEvents(festival);
             if (!linked.length || !matchesFestivalSearch(festival,linked)) return false;
+            const start = String(festival.Festival_Start_Date || '').trim();
+            const end = String(festival.Festival_End_Date || start).trim();
+            if (start && key >= start && key <= end) return linked.some(event => eventMatchesSharedLocation(event));
             return linked.some(event => eventMatchesSharedLocation(event) && occurrenceForDate(event,date));
         });
     }
@@ -1154,7 +1167,9 @@ function ensureSelectedDate() {
         if (!all.length) return '';
         const dates=all.map(e=>e.Event_Date).filter(Boolean).sort();
         const city=cityFor(all[0]);
-        const range=dates.length?(dates[0]===dates[dates.length-1]?dates[0]:dates[0]+' – '+dates[dates.length-1]):'Dates TBC';
+        const first=String(festival.Festival_Start_Date||dates[0]||'');
+        const last=String(festival.Festival_End_Date||dates[dates.length-1]||first);
+        const range=first?(first===last?first:first+' – '+last):'Dates TBC';
         const description=String(festival.Festival_Description||'');
         const url=String(festival.Festival_URL||'').trim();
         const website=/^https?:\/\//i.test(url)?'<a class="v15-festival-url" target="_blank" rel="noopener noreferrer" href="'+escapeHTML(url)+'">Official festival website ↗</a>':'';
