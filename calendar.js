@@ -224,7 +224,7 @@
         const matches=eventsForActiveDateFilter().filter(e=>!state.featuredOnly||window.BackroomV15?.isFeaturedEvent(e.Event_ID,e.Display_Date||e.Event_Date));if(matches.length)return;
         const box=document.querySelector('#calendar-container .calendar-empty');if(!box)return;
         const target=nextMatchingDate();
-        const signature=JSON.stringify([state.selectedDate,state.location,state.vibeFilter,state.featuredOnly,state.dateFilter]);
+        const signature=JSON.stringify([state.selectedDate,state.location,state.categoryFilters,state.featuredOnly,state.dateFilter]);
         emptyJump.signature=signature;
         if(!target){box.innerHTML='<p>No events match your filters on this day, and no later matching events are currently listed.</p><button type="button" class="btn secondary-btn pill-btn" id="calendar-clear-empty-filters">Clear category and Featured filters</button>';box.querySelector('button').onclick=()=>activateFilter('all');return;}
         if(emptyJump.cancelled.has(signature)){box.textContent='No events match your filters on this day. Automatic navigation cancelled.';return;}
@@ -1378,6 +1378,7 @@ function ensureSelectedDate() {
         if (results) results.style.display = '';
     }
 
+    window.BackroomCalendarRememberScroll = () => { rememberScroll(); savedScroll.returning = true; };
     window.closeCalendarScreen = close;
     window.openCalendarScreen = async function (requestedMode) {
         stopSelection(); stopEmptyJump();
