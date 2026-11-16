@@ -231,6 +231,7 @@
           <h2 id="event-modal-title" class="display-font">EVENT</h2>
           <div class="modal-actions-group event-modal-actions">
             <button id="event-modal-save" class="icon-btn tooltip" type="button" title="Save Event">💖</button>
+            <button id="event-modal-follow" class="icon-btn tooltip br-follow-toggle" data-br-follow-style="icon" data-br-follow-venue="" type="button" title="Follow venue"></button>
             <button id="event-modal-shortlist" class="icon-btn tooltip" type="button" title="Add Event to Shortlist"><img src="shortlist.png" alt="" aria-hidden="true"></button>
             <button id="event-modal-share" class="icon-btn tooltip" type="button" title="↗ Send to a friend">📣</button>
              <button id="event-download-story" class="icon-btn tooltip" type="button" title="Share / Download Story Card" aria-label="Share / Download Story Card"><img src="Emoji/story-card.png" alt="" aria-hidden="true" width="24" height="24"></button>
@@ -446,6 +447,12 @@
     body.innerHTML = renderEventDetail(event, venue);
     updateSaveButton(event);
     updateShortlistButton(event);
+    const followButton = document.getElementById('event-modal-follow');
+    if (followButton) {
+      followButton.dataset.brFollowVenue = String(venue?.Venue_ID || '');
+      followButton.hidden = !venue?.Venue_ID;
+      window.BackroomFollow?.syncButtons(modal);
+    }
     bindEventModalActions(event, venue);
     modal.classList.remove('hidden');
     return true;
