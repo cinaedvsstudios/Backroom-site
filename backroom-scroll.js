@@ -9,6 +9,7 @@
   const detailRoute = hash => /^#(venue|event)=/.test(hash || '');
   let previousHash = window.location.hash;
   let lastListRoute = listRoute(previousHash);
+  let pendingReturnRoute = '';
   let saved = {};
 
   try {
@@ -22,6 +23,11 @@
     lastListRoute = route;
     saved[route] = window.scrollY || window.pageYOffset || 0;
     try { sessionStorage.setItem(KEY, JSON.stringify(saved)); } catch (_) {}
+  };
+
+  window.BackroomRememberListScroll = () => {
+    const route = listRoute(window.location.hash);
+    if (route) { remember(route); pendingReturnRoute = route; }
   };
 
   window.addEventListener('scroll', () => {
@@ -51,8 +57,9 @@
     if (detailRoute(next) && listRoute(previousHash)) {
       lastListRoute = previousHash;
       if (!Number.isFinite(saved[previousHash])) remember(previousHash);
-    } else if (route && detailRoute(previousHash) && lastListRoute === route) {
+    } else if (route && (detailRoute(previousHash) || pendingReturnRoute === route) && lastListRoute === route) {
       restore(route);
+      pendingReturnRoute = '';
     }
     previousHash = next;
   });
