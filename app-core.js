@@ -4178,6 +4178,7 @@ function renderSearchEventResults(items, targetContainer) {
 
         container.appendChild(card);
     });
+    window.BackroomFollow?.syncButtons(container);
 }
 
 function renderMixedSearchResults(venueResults, eventResults) {
