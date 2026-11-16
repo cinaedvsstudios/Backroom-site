@@ -8,7 +8,46 @@ let currentReviewFilter = 'all';
 let showHiddenFields = false; 
 
 let avatarAdminData = [];
-let tempMergeData = []; 
+let tempMergeData = [];
+
+/* Reject a JSON merge if its primary IDs identify the other dataset.
+   Events legitimately contain Venue_ID as a foreign key, so Event_ID takes precedence.
+   Validate the entire file before changing any working rows. */
+function validateAdminMergeRecords(rows, mode) {
+    if (!['venues', 'events'].includes(mode)) {
+        return {ok: false, message: 'Open the Venues or Events area before merging a JSON file. No records were changed.'};
+    }
+    if (!Array.isArray(rows)) {
+        return {ok: false, message: 'Merge cancelled: the JSON file must contain an array of records. No records were changed.'};
+    }
+
+    const expectedField = mode === 'venues' ? 'Venue_ID' : 'Event_ID';
+    const otherField = mode === 'venues' ? 'Event_ID' : 'Venue_ID';
+    const selectedArea = mode === 'venues' ? 'Venues' : 'Events';
+    const otherArea = mode === 'venues' ? 'Events' : 'Venues';
+    const validId = value => value !== null && value !== undefined && String(value).trim() !== '';
+    const included = rows.map((row, index) => ({row, number: index + 1})).filter(item => item.row !== null);
+    if (!included.length) {
+        return {ok: false, message: 'Merge cancelled: this file has no records to merge. No records were changed.'};
+    }
+    for (const {row, number} of included) {
+        if (!row || typeof row !== 'object' || Array.isArray(row)) {
+            return {ok: false, message: `Merge cancelled: row ${number} is not a valid record. No records were changed.`};
+        }
+        const hasExpectedId = validId(row[expectedField]);
+        const hasOtherId = validId(row[otherField]);
+        // In Events, Venue_ID is a venue reference, not proof of a venue record.
+        const belongsToOtherArea = mode === 'venues' ? hasOtherId : (!hasExpectedId && hasOtherId);
+        if (belongsToOtherArea) {
+            return {ok: false, message: `Wrong merge area: row ${number} has ${otherField}, identifying an ${otherArea} record. You are in ${selectedArea}. Please merge this file in the ${otherArea} area instead. No records were changed.`};
+        }
+        if (!hasExpectedId) {
+            return {ok: false, message: `Merge cancelled: row ${number} is missing ${expectedField}. A ${selectedArea} merge requires a valid ${expectedField} in every record. No records were changed.`};
+        }
+    }
+    return {ok: true, records: included.map(item => item.row)};
+}
+window.validateAdminMergeRecords = validateAdminMergeRecords;
 
 let editorHistory = [];
 let historyIndex = -1;
@@ -1251,6 +1290,15 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 tempMergeData = JSON.parse(text);
                 if(!Array.isArray(tempMergeData)) throw new Error("File is not an array");
+                if (isMergeAction) {
+                    const check = validateAdminMergeRecords(tempMergeData, currentMode);
+                    if (!check.ok) {
+                        tempMergeData = [];
+                        document.getElementById('preview-import-modal')?.classList.add('hidden');
+                        window.alert(check.message);
+                        return;
+                    }
+                }
                 
                 document.getElementById('preview-table-container').innerHTML = generateTableHTML(tempMergeData, false);
                 document.getElementById('preview-modal-title').innerText = isMergeAction ? "👁️ REVIEW & MERGE IMPORT" : "👁️ PREVIEW DATA";
@@ -1266,7 +1314,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.getElementById('btn-apply-merge')?.addEventListener('click', () => {
-        const validMergeData = tempMergeData.filter(d => d !== null);
+        // Recheck after preview edits or switching tabs: never merge a partial or wrong-type batch.
+        const check = validateAdminMergeRecords(tempMergeData, currentMode);
+        if (!check.ok) {
+            window.alert(check.message);
+            return;
+        }
+        const validMergeData = check.records;
         const idField = currentMode === 'venues' ? 'Venue_ID' : 'Event_ID';
         let mCount = 0, aCount = 0;
         

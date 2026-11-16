@@ -29,7 +29,7 @@ function installToolbar(){
  toolbar.before(wrapper);
  const grouped=[
   ['load','📂','Load & Clear',['btn-fetch-live','btn-fetch-live-all']],
-  ['save','💾','Save & Merge',['btn-export-json','btn-save-json-as','btn-export-csv','file-upload-merge']],
+  ['save','💾','Save & Merge',['file-upload-merge','btn-export-json','btn-save-json-as','btn-export-csv']],
   ['view','👁️','View & Fields',['btn-view-record','btn-show-hidden-fields','unhideColumns']],
   ['remove','🗑️','Delete & Remove',['btn-delete-records','br-remove-json-label','btn-remove-old-events','file-upload-replace']]
  ];
@@ -86,8 +86,8 @@ function installToolbar(){
    if(event.key!=='Escape')return;
    controls.querySelectorAll('details[open]').forEach(details=>{details.open=false;});
  });
- const badge=get('admin-sidebar-version');if(badge)badge.textContent='v0.23.7';
- document.title='Backroom Admin Dashboard — v0.23.7';
+ const badge=get('admin-sidebar-version');if(badge)badge.textContent='v0.23.8';
+ document.title='Backroom Admin Dashboard — v0.23.8';
 }
 function tipPosition(x,y){
  const tip=state.tooltip;if(!tip)return;
@@ -144,6 +144,6 @@ function install(){
  installToolbar();
  installTooltips();
 }
-window.BackroomAdminPolish={install,installToolbar,installTooltips,getState:()=>state,version:'0.23.1'};
+window.BackroomAdminPolish={install,installToolbar,installTooltips,getState:()=>state,version:'0.23.8'};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
