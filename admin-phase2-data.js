@@ -7,6 +7,25 @@ const idField=mode=>mode==='events'?'Event_ID':'Venue_ID';
 const blank=v=>v===undefined||v===null||(typeof v==='string'&&v.trim()==='');
 const norm=v=>String(v??'').trim();
 const clone=v=>JSON.parse(JSON.stringify(v));
+/* Last_Updated accepts the production ISO timestamp (2026-05-13T04:10:00Z)
+   and valid ISO date-only legacy values. Reject blank, malformed and impossible dates. */
+function validLastUpdated(value){
+  if(typeof value!=='string')return false;
+  const stamp=value.trim();
+  const match=stamp.match(/^(\d{4}-\d{2}-\d{2})(?:T(\d{2}):(\d{2})(?::(\d{2})(?:\.\d{1,3})?)?(Z|[+-]\d{2}:\d{2})?)?$/);
+  if(!match)return false;
+  const date=match[1];
+  const parsed=new Date(date+'T12:00:00Z');
+  if(Number.isNaN(parsed.getTime())||parsed.toISOString().slice(0,10)!==date)return false;
+  if(match[2]===undefined)return true;
+  if(Number(match[2])>23||Number(match[3])>59)return false;
+  if(match[4]!==undefined&&Number(match[4])>59)return false;
+  if(match[5]&&match[5]!=='Z'){
+    const [hours,minutes]=match[5].slice(1).split(':').map(Number);
+    if(hours>14||minutes>59||(hours===14&&minutes!==0))return false;
+  }
+  return !Number.isNaN(Date.parse(stamp));
+}
 const allKeys=rows=>{
   const keys=new Set();
   (Array.isArray(rows)?rows:[]).forEach(row=>{
@@ -228,5 +247,5 @@ function makePlan(currentRows,uploadedRows,fields,mode,operation,venueRows=[]){
   const counts={existing:currentRows.length,uploaded:rows.length,after:output.length,added:changes.filter(x=>x.kind==='add').length,updated:changes.filter(x=>x.kind==='update').length,removed:changes.filter(x=>x.kind==='remove').length,unchanged:Math.max(0,operation==='replace'?rows.length-changes.filter(x=>x.kind!=='remove').length:rows.length-changes.filter(x=>x.kind!=='remove').length)};
   return {mode,operation,fields:inputFields,output,changes,errors:[...new Set(errors)],warnings:[...new Set(warnings)],counts,previewAt:stamp};
 }
-window.BackroomPhase2Data={idField,allKeys,csvEncode,csvParse,csvSerialize,readFile,schemaHints,convertCell,validateRow,makePlan,changed};
+window.BackroomPhase2Data={idField,allKeys,csvEncode,csvParse,csvSerialize,readFile,schemaHints,convertCell,validateRow,makePlan,changed,validLastUpdated};
 })();
