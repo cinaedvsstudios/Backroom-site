@@ -49,7 +49,8 @@
     const next = window.location.hash;
     const route = listRoute(next);
     if (detailRoute(next) && listRoute(previousHash)) {
-      remember(previousHash);
+      lastListRoute = previousHash;
+      if (!Number.isFinite(saved[previousHash])) remember(previousHash);
     } else if (route && detailRoute(previousHash) && lastListRoute === route) {
       restore(route);
     }
