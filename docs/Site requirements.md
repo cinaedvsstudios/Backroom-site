@@ -142,7 +142,7 @@ If a custom domain is added later, DNS and GitHub Pages custom domain settings m
 
 ### **6.4 events.json**
 
-`events.json` is the public events database. It is updated separately from `listings.json`. Events should reference venues by `Venue_ID` wherever possible, then add event-specific information such as event name, date, time, description, price, dress code, links, and event image if needed.
+`events.json` is the public events database. It is updated separately from `listings.json`. Link an event to an existing permanent venue by `Venue_ID` only when that relationship is meaningful. Festivals, citywide events, rotating parties and one-off events can be standalone records with their own `Event_Location`, city, country, date, description, price, dress code and source links. Do not create artificial venue entries merely to hold a single event.
 
 ### **6.5 history\_log.json**
 
@@ -299,14 +299,13 @@ Valid launch status values:
 
 Events should be stored separately in `events.json` so they can be updated independently from permanent venue listings.
 
-Each event should reference a venue by `Venue_ID` where possible. This keeps venue identity/location data in `listings.json` and event-specific data in `events.json`.
+Use `Venue_ID` for events at an existing permanent venue. Leave it empty for citywide/multi-venue festivals and one-off or travelling events where a separate permanent listing would add no value. Store their temporary location or venue/address in `Event_Location` (and City/Country) directly on the event. Multi-day festival parents in `events.json` should also be grouped in `festivals.json`, with the actual start/end dates and linked `Event_IDs`; add the constituent sessions as individual events when announced.
 
 Required minimum event fields:
 
 | Field Name | Description |
 | ----- | ----- |
 | `Event_ID` | Unique event code. |
-| `Venue_ID` | Venue where the event happens. |
 | `Event_Name` | Event or party name. |
 | `Event_Date` | Date of the event. |
 | `Event_Start_Time` | Start time. |
@@ -317,6 +316,9 @@ Recommended event fields:
 
 | Field Name | Description |
 | ----- | ----- |
+| `Venue_ID` | Optional link to an existing permanent venue; blank for standalone events. |
+| `Event_Location` | Event-specific location/address or multi-venue area, especially when `Venue_ID` is blank. |
+| `City` / `Country` | City and country for location filters when no permanent venue is linked. |
 | `Event_Description` | Public event description. |
 | `Event_Image_URL` | Event-specific image if different from the venue. |
 | `Ticket_URL` | Ticket or RSVP link. |
@@ -328,7 +330,7 @@ Recommended event fields:
 
 The admin dashboard should provide the same three import modes for events as for venues: Update / Add Events, Replace All Events, and Remove Events.
 
-On the public listing detail screen, events from `events.json` should display inside the related venue view after the venue description. The frontend must load both `listings.json` and `events.json`, then match event rows to the currently viewed venue using `Venue_ID`.
+On a venue detail screen, display events that have the matching `Venue_ID`. Standalone events with no linked venue must still appear in the calendar by their own location metadata, with full event details and without a misleading 'Venue not listed' label. Festival groupings use `festivals.json` and their date ranges.
 
 ## **10\. Traveler Frontend Logic**
 
