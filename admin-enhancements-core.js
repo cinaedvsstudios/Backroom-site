@@ -355,13 +355,28 @@
 
     function renderCompactMergeRows(displayed) {
         const eventMode = state.mergeSourceMode === 'events';
+        // The imported event file may only contain Venue_ID, not Venue_Name.
+        // Resolve names from the working venue collection where available.
+        const venues = eventMode ? [
+            window.BackroomAdminUpgrade?.readStored?.('venues'),
+            window.__backroomAdminLiveByMode?.venues,
+            window.__backroomAdminJsonLocations?.state?.venues
+        ] : [];
+        const venueNames = new Map();
+        for (const list of venues) if (Array.isArray(list)) {
+            for (const venue of list) {
+                const id = String(venue?.Venue_ID ?? '').trim();
+                const name = String(venue?.Name || venue?.Venue_Name || '').trim();
+                if (id && name && !venueNames.has(id)) venueNames.set(id, name);
+            }
+        }
         let html = '<table class="br-p1-compact-table br-merge-compact-table' + (eventMode ? ' br-p1-event-table' : '') +
             '"><thead><tr><th class="br-merge-check-header">✓</th><th>Record</th><th class="br-merge-open-header">Open</th><th>Tags</th></tr></thead><tbody>';
         displayed.forEach(entry => {
             const row = entry.row || {}, id = String(row[eventMode ? 'Event_ID' : 'Venue_ID'] ?? '').trim();
             const status = String(row.Status || 'Unknown');
             const name = String((eventMode ? row.Event_Name : row.Name) || id || 'Unnamed record');
-            const venueName = String(row.Venue_Name || row.Venue_ID || 'Venue unknown');
+            const venueName = String(row.Venue_Name || venueNames.get(String(row.Venue_ID || '').trim()) || row.Venue_ID || 'Venue unknown');
             const country = String(row.Country || '');
             const flag = country ? (window.BackroomAdminFlags?.html(country) || '🌐') + ' ' : '';
             const city = escapeHtml(row.City || '');
