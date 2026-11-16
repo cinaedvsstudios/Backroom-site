@@ -121,9 +121,9 @@
       for (const id of Object.keys(manageDraft)) {
         const row = el('div', 'br-follow-manage-row');
         row.append(el('span', 'br-follow-venue-name', venueName(id)));
-        const choice = makeButton(manageDraft[id] ? 'Unfollow' : 'Follow', () => {
+        const choice = makeButton(manageDraft[id] ? 'Follow' : 'Unfollow', () => {
           manageDraft[id] = !manageDraft[id];
-          choice.textContent = manageDraft[id] ? 'Unfollow' : 'Follow';
+          choice.textContent = manageDraft[id] ? 'Follow' : 'Unfollow';
           choice.classList.toggle('is-unfollowed', !manageDraft[id]);
         }, 'br-follow-panel-button');
         choice.classList.toggle('is-unfollowed', !manageDraft[id]);
@@ -162,7 +162,9 @@
         notice.read = true;
         store(); updateBadge();
         panel.hidden = true;
-        if (notice.eventId) window.openBackroomEvent?.(notice.eventId);
+        if (['cancelled', 'canceled', 'closed'].includes(notice.status)) {
+          window.showToast?.('This event is cancelled or no longer listed.');
+        } else if (notice.eventId) window.openBackroomEvent?.(notice.eventId);
       }, 'br-follow-notice' + (notice.read ? ' is-read' : ' is-unread'));
       const headline = el('strong', '', notice.eventName || 'Event updated');
       const info = el('span', '', (notice.venueName || venueName(notice.venueId)) + ' · Updated ' + format(notice.updatedAt));
@@ -222,7 +224,7 @@
         const eventId = validId(event?.Event_ID);
         if (!id || !eventId || !isFollowing(id)) continue;
         const status = safeString(event.Status).toLowerCase();
-        if (['hold', 'flag', 'closed', 'cancelled', 'canceled'].includes(status)) continue;
+        if (['hold', 'flag'].includes(status)) continue;
         const updated = safeTime(event.Last_Updated);
         if (!updated || updated > startedAt) continue;
         const followingSince = safeTime(state.follows[id]) || startedAt;
@@ -231,8 +233,9 @@
         if (seen.has(key)) continue;
         state.notifications.unshift({
           key, eventId, venueId: id,
-          eventName: safeString(event.Event_Name) || 'Event updated',
-          venueName: venueName(id),
+          eventName: (['cancelled', 'canceled', 'closed'].includes(status) ? 'Cancelled: ' : '') + (safeString(event.Event_Name) || 'Event updated'),
+          venueName: venueName(id) === id ? (safeString(event.Venue_Name || event.Venue) || id) : venueName(id),
+          status,
           updatedAt: new Date(updated).toISOString(), read: false
         });
         seen.add(key);
