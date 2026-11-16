@@ -80,3 +80,12 @@
   .br-calendar-actions-pair .calendar-action { font-size:.55rem !important; padding:4px 1px !important; }
   .br-calendar-actions-pair .br-follow-toggle svg { width:10px; height:10px; }
 }
+
+/* Keep the extra bell fitting beside the existing venue actions. */
+#event-modal-follow[hidden], #modal-follow[hidden] { display:none !important; }
+.card-stats .card-quick-actions { gap:6px; }
+@media(max-width:480px) {
+  .card-stats:has(.card-quick-actions) { flex-wrap:wrap; gap:7px; }
+  .card-stats .card-quick-actions { gap:4px; }
+  .card-stats .card-quick-actions .br-follow-toggle { min-width:22px; }
+}
