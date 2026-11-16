@@ -80,10 +80,13 @@
       button.disabled = !id;
       button.title = followed ? 'Unfollow ' + venueName(id) : 'Follow ' + venueName(id) + ' for event updates';
       button.setAttribute('aria-label', button.title);
+      const bell = followed
+        ? '<span class="br-follow-active-bell" aria-hidden="true">🔔</span>'
+        : svgBell;
       if (icon) {
-        button.innerHTML = svgBell;
+        button.innerHTML = bell;
       } else {
-        button.innerHTML = svgBell + '<span>' + (followed ? 'Following' : 'Follow') + '</span>';
+        button.innerHTML = bell + '<span>' + (followed ? 'Following' : 'Follow') + '</span>';
       }
     });
   }
