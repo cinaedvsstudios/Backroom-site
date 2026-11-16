@@ -1,0 +1,234 @@
+/* Backroom Admin v0.24.0 — compact Review & Merge Import table.
+   Only affects the import preview modal, not the normal Venues / Events table. */
+
+#preview-import-modal #merge-preview-controls .br-merge-view-switch{
+    margin-left:auto;
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    background:#101b2c;
+    border:1px solid #50647b;
+    border-radius:10px;
+    padding:4px;
+}
+#preview-import-modal .br-merge-view-switch .btn{
+    width:auto!important;
+    margin:0!important;
+    padding:7px 13px!important;
+    min-width:75px;
+    font-size:.88rem;
+    color:#c8d9ed!important;
+    background:transparent!important;
+    border:1px solid transparent!important;
+    border-radius:7px!important;
+}
+#preview-import-modal .br-merge-view-switch .btn.br-merge-view-active{
+    border-color:#53bbd2!important;
+    background:#19576d!important;
+    color:#fff!important;
+    font-weight:700;
+}
+#preview-import-modal .br-merge-view-switch .btn:focus-visible,
+#preview-import-modal .br-merge-edit-toggle:focus-visible,
+#preview-import-modal .br-merge-public-link:focus-visible{
+    outline:2px solid #86ecfa;
+    outline-offset:3px;
+}
+#preview-table-container.br-merge-compact-host{
+    background:#101a2a!important;
+}
+#preview-table-container .br-merge-compact-table{
+    width:100%;
+    min-width:650px;
+    border-collapse:separate;
+    border-spacing:0;
+    background:#111a2b!important;
+    color:#e8f2ff!important;
+    table-layout:fixed;
+    font-size:.9rem;
+}
+#preview-table-container .br-merge-compact-table thead th{
+    background:#614821!important;
+    color:#f4d18f!important;
+    border-bottom:2px solid #c89942!important;
+    padding:13px 12px!important;
+    font-weight:700!important;
+    text-align:left!important;
+    position:sticky!important;
+    top:0;
+    z-index:5;
+}
+#preview-table-container .br-merge-compact-table thead th:first-child{width:54px;}
+#preview-table-container .br-merge-compact-table thead th:nth-child(2){width:56%;}
+#preview-table-container .br-merge-compact-table thead th:nth-child(3){width:125px;}
+#preview-table-container .br-merge-compact-table thead th:nth-child(4){width:auto;}
+#preview-table-container .br-merge-compact-table tbody tr.br-merge-compact-record:nth-of-type(odd){
+    background:#152139!important;
+}
+#preview-table-container .br-merge-compact-table tbody tr.br-merge-compact-record:nth-of-type(even){
+    background:#1b2b43!important;
+}
+#preview-table-container .br-merge-compact-table tbody tr.br-merge-compact-record:hover{
+    background:#263a54!important;
+}
+#preview-table-container .br-merge-compact-table td{
+    position:static!important;
+    width:auto!important;
+    min-width:0!important;
+    max-width:none!important;
+    background:transparent!important;
+    border-right:1px solid #394b63!important;
+    border-bottom:1px solid #35445b!important;
+    padding:12px 11px!important;
+    text-align:left!important;
+    white-space:normal!important;
+    overflow-wrap:anywhere!important;
+    vertical-align:middle!important;
+    font-size:.88rem!important;
+    line-height:1.4;
+}
+#preview-table-container .br-merge-compact-table td:first-child{text-align:center!important;}
+#preview-table-container .br-merge-compact-table td:last-child{border-right:0!important;}
+#preview-table-container .br-merge-compact-table .br-p1-checkbox input{
+    width:18px;
+    height:18px;
+    accent-color:#24a7d0;
+    cursor:pointer;
+}
+#preview-table-container .br-merge-compact-table .br-p1-row-top{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    column-gap:9px;
+    row-gap:6px;
+    margin-bottom:5px;
+}
+#preview-table-container .br-merge-compact-table .br-p1-row-top strong{
+    color:#f2f7ff!important;
+    font-size:1.04rem;
+}
+#preview-table-container .br-merge-compact-table .br-p1-at-venue{
+    font-weight:700;
+    color:#85d8f3;
+}
+#preview-table-container .br-merge-compact-table .br-p1-row-meta{
+    color:#b5c4d9!important;
+    margin:4px 0;
+    font-size:.83rem;
+}
+#preview-table-container .br-merge-compact-table .br-p1-tags{
+    color:#d5e6f5!important;
+    line-height:1.55;
+    font-size:.82rem;
+}
+#preview-table-container .br-merge-compact-table .br-p1-status{
+    display:inline-flex;
+    color:#8ab5dc;
+    border:1px solid currentColor;
+    background:#13293a;
+    font-size:.72rem;
+    padding:2px 7px;
+    border-radius:5px;
+    white-space:nowrap;
+}
+#preview-table-container .br-merge-compact-table .br-p1-status.br-p1-live{color:#64d2f0;}
+#preview-table-container .br-merge-compact-table .br-p1-status.br-p1-alert{color:#f4b38c;}
+#preview-table-container .br-merge-result{
+    font-size:.73rem;
+    font-weight:800;
+    padding:3px 8px;
+    white-space:nowrap;
+    border-radius:5px;
+    background:#24324b;
+    color:#d6e6fa;
+}
+#preview-table-container .br-merge-result-new{background:#124a3d;color:#9df9b9;}
+#preview-table-container .br-merge-result-updating{background:#544226;color:#ffe5a1;}
+#preview-table-container .br-merge-result-excluded{background:#3c3549;color:#d6c6de;}
+#preview-table-container .br-merge-result-duplicate,
+#preview-table-container .br-merge-result-conflict,
+#preview-table-container .br-merge-result-invalid{background:#5d2735;color:#ffb9c7;}
+#preview-table-container .br-merge-excluded{opacity:.52;}
+#preview-table-container .br-merge-public-link{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:36px;
+    height:36px;
+    border-radius:9px;
+    border:1px solid #45607b;
+    background:#263950;
+    font-size:1.06rem;
+    text-decoration:none;
+    margin-right:5px;
+}
+#preview-table-container .br-merge-public-link:hover{
+    border-color:#80dbed;
+    background:#31516b;
+    text-decoration:none;
+}
+#preview-table-container .br-merge-edit-toggle{
+    background:transparent;
+    border:0;
+    padding:2px 0;
+    margin-top:6px;
+    font-size:.79rem;
+    color:#82d4f2;
+    text-decoration:underline;
+    text-underline-offset:3px;
+    cursor:pointer;
+}
+#preview-table-container .br-merge-edit-toggle:hover{color:#c4f4ff;}
+#preview-table-container .br-merge-edit-row>td{
+    background:#0f2335!important;
+    padding:16px 18px!important;
+}
+#preview-table-container .br-merge-field-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(170px,1fr));
+    gap:12px;
+}
+#preview-table-container .br-merge-field{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    min-width:0;
+    font-size:.79rem;
+    font-weight:700;
+    color:#abcce2;
+}
+#preview-table-container .br-merge-field :is(input,textarea){
+    width:100%;
+    min-height:37px;
+    padding:9px 10px;
+    box-sizing:border-box;
+    border-radius:7px;
+    background:#081724;
+    color:#f2f7ff;
+    border:1px solid #4a6880;
+    font-family:inherit;
+    font-size:.86rem;
+    line-height:1.35;
+    resize:vertical;
+}
+#preview-table-container .br-merge-field :is(input,textarea):focus{
+    outline:2px solid #62bcd8;
+    outline-offset:1px;
+}
+#preview-table-container .br-merge-edit-hint{
+    margin:12px 0 0;
+    font-size:.78rem;
+    color:#c2d6e6;
+}
+#preview-table-container .br-merge-empty{color:#91a7bc;}
+#preview-table-container .br-merge-empty-row{text-align:center!important;padding:24px!important;color:#a9bdcf!important;}
+@media(max-width:1080px){
+    #preview-table-container .br-merge-field-grid{grid-template-columns:repeat(2,minmax(160px,1fr));}
+    #preview-import-modal #merge-preview-controls .br-merge-view-switch{margin-left:0;}
+}
+@media(max-width:680px){
+    #preview-table-container .br-merge-field-grid{grid-template-columns:1fr;}
+    #preview-table-container .br-merge-compact-table{min-width:520px;}
+    #preview-table-container .br-merge-compact-table thead th:nth-child(3){width:98px;}
+    #preview-table-container .br-merge-public-link{width:32px;height:32px;}
+}
