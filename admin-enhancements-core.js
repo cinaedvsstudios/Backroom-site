@@ -15,6 +15,8 @@
         mergeStatus: '',
         mergeColumnFilters: {},
         mergeMode: false,
+        mergeView: 'compact',
+        mergeExpanded: new Set(),
         jsonHandles: { venues: null, events: null },
         mergeSourceMode: null,
         mergePage: 0,
@@ -309,6 +311,138 @@
         return controls;
     }
 
+    // Compact merge review uses the same indexed entry rows as Full Table.
+    // An expanded row exposes every supplied field without discarding original data.
+    function mergeValueText(value) {
+        if (value === undefined || value === null) return '';
+        return typeof value === 'object' ? JSON.stringify(value) : String(value);
+    }
+
+    function mergeTags(value) {
+        const values = Array.isArray(value) ? value : String(value ?? '').split(',');
+        return values.map(v => String(v ?? '').trim()).filter(Boolean).slice(0, 5).join(' · ');
+    }
+
+    function mergePublicLinks(row) {
+        const eventMode = state.mergeSourceMode === 'events';
+        const venueId = String(row?.Venue_ID ?? '').trim();
+        const eventId = String(row?.Event_ID ?? '').trim();
+        const venueLink = venueId ? '<a class="br-merge-public-link" href="index.html#venue=' + encodeURIComponent(venueId) +
+            '" title="Open venue on Backroom" target="_blank" rel="noopener noreferrer" aria-label="Open venue on Backroom">📍</a>' : '';
+        const eventLink = eventMode && eventId ? '<a class="br-merge-public-link" href="index.html#event=' + encodeURIComponent(eventId) +
+            '" title="Open event on Backroom" target="_blank" rel="noopener noreferrer" aria-label="Open event on Backroom">🎟️</a>' : '';
+        return (eventLink + venueLink) || '<span class="br-merge-empty">—</span>';
+    }
+
+    function renderMergeEditor(entry) {
+        const fields = state.mergeColumns.filter(column => Object.prototype.hasOwnProperty.call(entry.row || {}, column));
+        return '<tr class="br-merge-edit-row" data-merge-editor="' + entry.index +
+            '"><td colspan="4"><div class="br-merge-field-grid">' +
+            fields.map(column => {
+                const value = mergeValueText(entry.row?.[column]);
+                const id = 'br-merge-field-' + entry.index + '-' + column;
+                const multi = /(?:Description|Notes|Source_URLs|_Info|_Tags)$/.test(column) || value.length > 130;
+                return '<label class="br-merge-field" for="' + escapeHtml(id) + '"><span>' +
+                    escapeHtml(column) + '</span>' +
+                    (multi ? '<textarea rows="3" ' : '<input type="text" ') +
+                    'class="br-merge-edit-value" data-index="' + entry.index +
+                    '" data-column="' + escapeHtml(column) + '" id="' + escapeHtml(id) + '"' +
+                    (multi ? '>' + escapeHtml(value) + '</textarea>' : ' value="' + escapeHtml(value) + '">') +
+                    '</label>';
+            }).join('') +
+            '</div><p class="br-merge-edit-hint">Changes to these fields are staged for this import. Blank values leave existing records unchanged; use __CLEAR__ to explicitly clear a field.</p></td></tr>';
+    }
+
+    function renderCompactMergeRows(displayed) {
+        const eventMode = state.mergeSourceMode === 'events';
+        // The imported event file may only contain Venue_ID, not Venue_Name.
+        // Resolve names from the working venue collection where available.
+        const venues = eventMode ? [
+            window.BackroomAdminUpgrade?.readStored?.('venues'),
+            window.__backroomAdminLiveByMode?.venues,
+            window.__backroomAdminJsonLocations?.state?.venues
+        ] : [];
+        const venueNames = new Map();
+        for (const list of venues) if (Array.isArray(list)) {
+            for (const venue of list) {
+                const id = String(venue?.Venue_ID ?? '').trim();
+                const name = String(venue?.Name || venue?.Venue_Name || '').trim();
+                if (id && name && !venueNames.has(id)) venueNames.set(id, name);
+            }
+        }
+        let html = '<table class="br-p1-compact-table br-merge-compact-table' + (eventMode ? ' br-p1-event-table' : '') +
+            '"><thead><tr><th class="br-merge-check-header">✓</th><th>Record</th><th class="br-merge-open-header">Open</th><th>Tags</th></tr></thead><tbody>';
+        displayed.forEach(entry => {
+            const row = entry.row || {}, id = String(row[eventMode ? 'Event_ID' : 'Venue_ID'] ?? '').trim();
+            const status = String(row.Status || 'Unknown');
+            const name = String((eventMode ? row.Event_Name : row.Name) || id || 'Unnamed record');
+            const venueName = String(row.Venue_Name || venueNames.get(String(row.Venue_ID || '').trim()) || row.Venue_ID || 'Venue unknown');
+            const country = String(row.Country || '');
+            const flag = country ? (window.BackroomAdminFlags?.html(country) || '🌐') + ' ' : '';
+            const city = escapeHtml(row.City || '');
+            const date = eventMode ? String(row.Event_Date || '') : String(row.Last_Updated || '').slice(0, 10);
+            const times = eventMode ? [row.Event_Start_Time, row.Event_End_Time].filter(Boolean).join('–') : '';
+            const category = eventMode ? String(row.Venue_ID || '') : String(row.Category || '');
+            const title = '<strong>' + escapeHtml(name) + '</strong>' +
+                (eventMode ? '<span class="br-p1-at-venue">@ ' + escapeHtml(venueName) + '</span>' : '');
+            const result = calculateMergeStatus(entry);
+            const expanded = state.mergeExpanded.has(entry.index);
+            const meta = [escapeHtml(id), (flag + city).trim(), escapeHtml(category),
+                escapeHtml(date), escapeHtml(times)].filter(Boolean).join(' · ');
+            html += '<tr class="br-merge-compact-record' + (entry.included ? '' : ' br-merge-excluded') +
+                '" data-merge-index="' + entry.index + '">' +
+                '<td class="br-p1-checkbox"><input type="checkbox" class="merge-include-toggle" data-index="' + entry.index +
+                '" aria-label="Include ' + escapeHtml(id || name) + ' in merge" ' + (entry.included ? 'checked' : '') + '></td>' +
+                '<td><div class="br-p1-row-top">' + title +
+                '<span class="br-p1-status ' + (status.toLowerCase() === 'live' ? 'br-p1-live' : 'br-p1-alert') + '">' + escapeHtml(status) + '</span>' +
+                '<span class="br-merge-result br-merge-result-' + result.toLowerCase() + '">' + escapeHtml(result) + '</span></div>' +
+                '<div class="br-p1-row-meta">' + meta + '</div>' +
+                '<button type="button" class="br-merge-edit-toggle" data-merge-expand="' + entry.index +
+                '" aria-expanded="' + expanded + '">' + (expanded ? '▴ Close fields' : '▾ Edit fields') + '</button></td>' +
+                '<td class="br-p1-public-links">' + mergePublicLinks(row) + '</td>' +
+                '<td class="br-p1-tags">' + (mergeTags(row.Vibe_Tags) ? escapeHtml(mergeTags(row.Vibe_Tags)) :
+                    '<span class="br-merge-empty">No tags</span>') + '</td></tr>';
+            if (expanded) html += renderMergeEditor(entry);
+        });
+        if (!displayed.length) html += '<tr><td colspan="4" class="br-merge-empty-row">No incoming records match these filters.</td></tr>';
+        return html + '</tbody></table>';
+    }
+
+    function setMergeField(entry, field, raw) {
+        if (!entry || !Object.prototype.hasOwnProperty.call(entry.row || {}, field)) return false;
+        const original = entry.row[field];
+        if (typeof original === 'object' && original !== null) {
+            if (!raw.trim()) {
+                entry.row[field] = '';
+                return true;
+            }
+            try {
+                const parsed = JSON.parse(raw);
+                if (Array.isArray(original) !== Array.isArray(parsed) || parsed === null ||
+                    typeof parsed !== 'object') throw Error('Expected original JSON type');
+                entry.row[field] = parsed;
+            } catch {
+                showToast('Invalid JSON in ' + field + '. Value not changed.');
+                return false;
+            }
+        } else if (typeof original === 'number') {
+            if (raw.trim() && !Number.isFinite(Number(raw))) {
+                showToast(field + ' must be a number. Value not changed.');
+                return false;
+            }
+            entry.row[field] = raw.trim() === '' ? '' : Number(raw);
+        } else if (typeof original === 'boolean') {
+            if (!/^(true|false|1|0)$/i.test(raw.trim())) {
+                showToast(field + ' must be true or false. Value not changed.');
+                return false;
+            }
+            entry.row[field] = /^(true|1)$/i.test(raw.trim());
+        } else {
+            entry.row[field] = raw;
+        }
+        return true;
+    }
+
     function renderMergePreview() {
         const controls = ensureMergeControls();
         const tableContainer = document.getElementById('preview-table-container');
@@ -325,12 +459,16 @@
         controls.classList.remove('hidden');
         controls.innerHTML = `
             <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-                <input id="merge-global-search" class="filter-header-input" style="width:min(420px,100%);margin:0;" placeholder="Search all incoming event fields…" value="${escapeHtml(state.mergeSearch)}">
+                <input id="merge-global-search" class="filter-header-input" style="width:min(420px,100%);margin:0;" placeholder="Search all incoming ${state.mergeSourceMode === 'events' ? 'event' : 'venue'} fields…" value="${escapeHtml(state.mergeSearch)}">
                 <select id="merge-status-filter" class="filter-header-select filter-dropdown" style="width:auto;">
                     <option value="">All merge results</option>
                     ${['New','Updating','Unchanged','Invalid','Duplicate','Conflict','Excluded'].map((value) => `<option value="${value}" ${state.mergeStatus === value ? 'selected' : ''}>${value}</option>`).join('')}
                 </select>
                 <button id="merge-clear-filters" class="btn secondary-btn pill-btn" style="width:auto;">Clear Filters</button>
+                <div class="br-merge-view-switch" role="group" aria-label="Merge review layout">
+                    <button type="button" id="merge-view-compact" class="btn secondary-btn pill-btn ${state.mergeView === 'compact' ? 'br-merge-view-active' : ''}" aria-pressed="${state.mergeView === 'compact'}">Compact</button>
+                    <button type="button" id="merge-view-table" class="btn secondary-btn pill-btn ${state.mergeView === 'table' ? 'br-merge-view-active' : ''}" aria-pressed="${state.mergeView === 'table'}">Table</button>
+                </div>
             </div>
             <div id="merge-count-summary" style="display:flex;gap:12px;flex-wrap:wrap;color:var(--text-light);font-size:.9rem;">
                 <strong>Uploaded: ${counts.Uploaded}</strong><span>New: ${counts.New}</span><span>Updates: ${counts.Updating}</span><span>Unchanged: ${counts.Unchanged}</span><span>Invalid: ${counts.Invalid}</span><span>Duplicate: ${counts.Duplicate}</span><span>Conflict: ${counts.Conflict}</span><span>Excluded: ${counts.Excluded}</span><strong style="color:var(--primary-blue);">Will merge: ${counts.WillMerge}</strong><span>Matching filters: ${visible.length}</span>
@@ -347,28 +485,59 @@
                 <button id="merge-page-next" class="btn secondary-btn pill-btn" style="width:auto;" ${state.mergePage >= pageCount - 1 ? 'disabled' : ''}>Next ▶</button>
             </div>`;
 
-        let html = '<table><thead id="preview-thead"><tr><th style="min-width:90px;">Include</th><th style="min-width:100px;">Result</th>';
-        state.mergeColumns.forEach((column) => {
-            html += `<th><div>${escapeHtml(column)}</div><input class="filter-header-input merge-column-filter" data-column="${escapeHtml(column)}" placeholder="Filter…" value="${escapeHtml(state.mergeColumnFilters[column] || '')}"></th>`;
-        });
-        html += '</tr></thead><tbody>';
-        displayed.forEach((entry) => {
-            const status = calculateMergeStatus(entry);
-            html += `<tr data-merge-index="${entry.index}" style="${entry.included ? '' : 'opacity:.48;'}">
-                <td style="text-align:center;"><input type="checkbox" class="merge-include-toggle" data-index="${entry.index}" ${entry.included ? 'checked' : ''}></td>
-                <td style="font-weight:bold;color:${status === 'New' ? '#00ff00' : status === 'Updating' ? 'var(--bright-red-orange)' : status === 'Excluded' ? 'var(--label-grey)' : 'var(--primary-blue)'};">${status}</td>`;
+        let html;
+        tableContainer.classList.toggle('br-merge-compact-host', state.mergeView === 'compact');
+        tableContainer.classList.toggle('br-merge-venues', state.mergeSourceMode === 'venues');
+        tableContainer.classList.toggle('br-merge-events', state.mergeSourceMode === 'events');
+        if (state.mergeView === 'compact') {
+            html = renderCompactMergeRows(displayed);
+        } else {
+            html = '<table><thead id="preview-thead"><tr><th style="min-width:90px;">Include</th><th style="min-width:100px;">Result</th>';
             state.mergeColumns.forEach((column) => {
-                html += `<td class="preview-editable-cell" contenteditable="true" data-index="${entry.index}" data-column="${escapeHtml(column)}">${escapeHtml(entry.row?.[column] ?? '')}</td>`;
+                html += `<th><div>${escapeHtml(column)}</div><input class="filter-header-input merge-column-filter" data-column="${escapeHtml(column)}" placeholder="Filter…" value="${escapeHtml(state.mergeColumnFilters[column] || '')}"></th>`;
             });
-            html += '</tr>';
-        });
-        if (!visible.length) html += `<tr><td colspan="${state.mergeColumns.length + 2}" style="padding:20px;text-align:center;color:var(--label-grey);">No incoming rows match these filters.</td></tr>`;
-        html += '</tbody></table>';
+            html += '</tr></thead><tbody>';
+            displayed.forEach((entry) => {
+                const status = calculateMergeStatus(entry);
+                html += `<tr data-merge-index="${entry.index}" style="${entry.included ? '' : 'opacity:.48;'}">
+                    <td style="text-align:center;"><input type="checkbox" class="merge-include-toggle" data-index="${entry.index}" ${entry.included ? 'checked' : ''}></td>
+                    <td style="font-weight:bold;color:${status === 'New' ? '#00ff00' : status === 'Updating' ? 'var(--bright-red-orange)' : status === 'Excluded' ? 'var(--label-grey)' : 'var(--primary-blue)'};">${status}</td>`;
+                state.mergeColumns.forEach((column) => {
+                    html += `<td class="preview-editable-cell" contenteditable="true" data-index="${entry.index}" data-column="${escapeHtml(column)}">${escapeHtml(entry.row?.[column] ?? '')}</td>`;
+                });
+                html += '</tr>';
+            });
+            if (!visible.length) html += `<tr><td colspan="${state.mergeColumns.length + 2}" style="padding:20px;text-align:center;color:var(--label-grey);">No incoming rows match these filters.</td></tr>`;
+            html += '</tbody></table>';
+    
+        }
         tableContainer.innerHTML = html;
 
         applyButton.textContent = `Merge ${counts.WillMerge} Included Records`;
         applyButton.classList.remove('hidden');
 
+        for (const [buttonId, view] of [['merge-view-compact','compact'],['merge-view-table','table']]) {
+            document.getElementById(buttonId)?.addEventListener('click', () => {
+                if (state.mergeView === view) return;
+                state.mergeView = view;
+                renderMergePreview();
+            });
+        }
+        document.querySelectorAll('#preview-table-container .br-merge-edit-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const index = Number(button.dataset.mergeExpand);
+                if (state.mergeExpanded.has(index)) state.mergeExpanded.delete(index);
+                else state.mergeExpanded.add(index);
+                renderMergePreview();
+            });
+        });
+        document.querySelectorAll('#preview-table-container .br-merge-edit-value').forEach(input => {
+            input.addEventListener('change', event => {
+                const entry = state.mergeRows.find(item => item.index === Number(event.target.dataset.index));
+                setMergeField(entry, event.target.dataset.column, event.target.value);
+                renderMergePreview();
+            });
+        });
         document.getElementById('merge-global-search')?.addEventListener('input', (event) => {
             state.mergeSearch = event.target.value;
             renderMergePreview();
@@ -436,6 +605,8 @@
         state.mergeSearch = '';
         state.mergeStatus = '';
         state.mergeColumnFilters = {};
+        state.mergeView = 'compact';
+        state.mergeExpanded.clear();
         state.mergeSourceMode = null;
         state.mergePage = 0;
         state.mergeIdCounts.clear();
@@ -469,10 +640,19 @@
             try {
                 const parsed = JSON.parse(event.target.result);
                 if (!Array.isArray(parsed)) throw new Error('File is not an array');
+                // The legacy admin merge button is replaced by this preview handler.
+                // Run the same Events/Venues primary-ID guard here, before showing any rows.
+                const check = window.validateAdminMergeRecords?.(parsed, currentMode);
+                if (check && !check.ok) {
+                    window.alert(check.message);
+                    return;
+                }
                 state.mergeMode = true;
                 state.mergeRows = parsed.map((row, index) => ({ row, index, included: true }));
                 state.mergeSourceMode = currentMode;
                 state.mergePage = 0;
+                state.mergeView = 'compact';
+                state.mergeExpanded.clear();
                 state.mergeColumns = Array.from(new Set(parsed.flatMap((row) => Object.keys(row || {}))));
                 state.mergeSearch = '';
                 state.mergeStatus = '';
@@ -503,8 +683,21 @@
         const newApply = oldApply.cloneNode(true);
         oldApply.replaceWith(newApply);
         newApply.addEventListener('click', () => {
+            if (currentMode !== state.mergeSourceMode) {
+                window.alert('The active area changed after this import opened. Return to the original area or cancel the merge. No records were changed.');
+                return;
+            }
             rebuildMergeIndexes();
             const valid = state.mergeRows.filter((entry) => entry.included && !['Invalid', 'Duplicate', 'Conflict'].includes(calculateMergeStatus(entry)));
+            if (!valid.length) {
+                showToast('No included records are eligible to merge.');
+                return;
+            }
+            const check = window.validateAdminMergeRecords?.(valid.map(entry => entry.row), currentMode);
+            if (check && !check.ok) {
+                window.alert(check.message);
+                return;
+            }
             const idField = currentMode === 'venues' ? 'Venue_ID' : 'Event_ID';
             let updated = 0;
             let added = 0;
