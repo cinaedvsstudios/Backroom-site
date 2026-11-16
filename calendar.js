@@ -78,7 +78,7 @@
         if (event.target?.matches?.('#calendar-container .calendar-event-panel')) savedScroll.panel = event.target.scrollTop;
     }, true);
     window.addEventListener('scroll', () => {
-        if (isCalendarRouteHash()) savedScroll.page = window.scrollY;
+        if (isCalendarRouteHash() && !savedScroll.returning) savedScroll.page = window.scrollY;
     }, { passive: true });
     document.addEventListener('click', event => {
         if (isCalendarRouteHash() && event.target.closest?.('.calendar-event-card [data-backroom-open-event]')) {
@@ -1404,7 +1404,7 @@ function ensureSelectedDate() {
         if (!isCalendarRouteHash()) history.pushState(null, '', targetMode === 'festivals' ? '#festivals' : '#calendar');
         hideStandardPanels();
         const container = ensureContainer();
-        if (container.querySelector('.calendar-event-panel')) {
+        if (container.querySelector('.calendar-event-panel') && !savedScroll.returning) {
             rememberScroll(); savedScroll.returning = true;
         }
         container.classList.remove('hidden');
