@@ -2188,6 +2188,10 @@ function getCurrentListHashForVenueReturn() {
     return '#results';
 }
 
+window.BackroomSetVenueReturnHash = function (hash) {
+    if (hash && (hash === '#calendar' || hash.startsWith('#calendar?') || hash === '#festivals')) venueReturnHash = hash;
+};
+
 function closeVenueModalToPreviousView() {
     venueModal?.classList.add('hidden');
     const target = venueReturnHash || '#results';
