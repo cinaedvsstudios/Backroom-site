@@ -304,7 +304,8 @@
     const status = clean(event.Status || 'Live');
     const recurrence = clean(event.Recurrence_Label || event.Recurrence_Type || event.Recurrence_Day);
     const weekday = getEventWeekday(event);
-    const location = [venue?.Name || event.Venue_Name || event.Venue, venue?.City || event.City, venue?.Country || event.Country]
+    const eventLocation = venue?.Name || event.Event_Location || event.Venue_Name || event.Venue;
+    const location = [eventLocation, ...(!venue && event.Event_Location ? [] : [venue?.City || event.City, venue?.Country || event.Country])]
       .filter(Boolean)
       .join(' · ');
 
@@ -328,7 +329,7 @@
             <div class="event-detail-info-grid">
               ${infoRow('Date', getEventDate(event))}
               ${infoRow('Time', getEventTime(event))}
-              ${infoRow('Venue', venue?.Name || event.Venue_Name || event.Venue)}
+              ${infoRow(venue?.Name ? 'Venue' : 'Location', eventLocation)}
               ${infoRow('Dress code', event.Dresscode_Info)}
               ${infoRow('Price', event.Price_Info)}
               ${recurrence ? infoRow('Repeats', recurrence) : ''}
