@@ -83,13 +83,13 @@ function checkList(){
         ['empty:Event_Start_Time','Missing start time'],['empty:Event_End_Time','Missing end time'],['empty:Event_Date','Missing event date'],
         ['empty:Event_URL','Missing event URL'],['empty:Ticket_URL','Missing ticket URL'],['empty:Source_URLs','Missing source URLs'],
         ['empty:Price_Info','Missing price information'],['empty:Dresscode_Info','Missing dress code'],
-        ['empty:Event_Description','Missing description'],['empty:Vibe_Tags','Missing tags (Vibe_Tags)'],['short:Event_Description:100','Description under 100 characters'],
+        ['empty:Event_Description','Missing description'],['empty:Vibe_Tags','Missing tags (Vibe_Tags)'],['invalid:Last_Updated','Missing or invalid Last_Updated'],['short:Event_Description:100','Description under 100 characters'],
         ['short:Event_Description:200','Description under 200 characters'],['broken:Venue_ID','Unlinked venue ID'],
         ['recurrence','Weekly event missing recurrence day'],['invalid:Event_Date','Invalid date']
     ];
     const v=[
         ['empty:Website_URL','Missing website'],['empty:Instagram_URL','Missing Instagram'],
-        ['empty:Source_URLs','Missing source URLs'],['empty:Vibe_Tags','Missing vibe tags'],['empty:Image_URL','Missing image'],
+        ['empty:Source_URLs','Missing source URLs'],['empty:Vibe_Tags','Missing vibe tags'],['empty:Image_URL','Missing image'],['invalid:Last_Updated','Missing or invalid Last_Updated'],
         ['empty:Address','Missing address'],['empty:Google_Maps_URL','Missing Google Maps URL'],
         ['maps','Missing usable map location'],['gps','Missing GPS coordinates'],
         ['empty:Opening_Days','Missing opening days'],['empty:Opening_Open_Time','Missing opening time'],
@@ -101,7 +101,7 @@ function checkList(){
         ['rating:Rating_Location','Missing location rating'],['rating:Rating_Busyness','Missing popularity rating']
     ];
     const c=[
-        ['empty:Source_URLs','Missing source URLs'],['empty:Vibe_Tags','Missing vibe tags'],['maps','Missing usable map location'],['gps','Missing GPS coordinates'],
+        ['empty:Source_URLs','Missing source URLs'],['empty:Vibe_Tags','Missing vibe tags'],['invalid:Last_Updated','Missing or invalid Last_Updated'],['maps','Missing usable map location'],['gps','Missing GPS coordinates'],
         ['empty:Google_Maps_URL','Missing Google Maps URL'],['empty:Opening_Notes','Missing access / opening notes'],
         ['empty:Description','Missing description'],['short:Description:100','Description under 100 characters'],
         ['short:Description:200','Description under 200 characters'],['rating:Rating_General','Missing overall rating'],
@@ -153,6 +153,7 @@ function occursInMonth(row,value){
 }
 function predicate(row,key,value){
     if(key==='event-month')return occursInMonth(row,value);
+    if(key==='invalid:Last_Updated')return !window.BackroomPhase2Data.validLastUpdated(row.Last_Updated);
     if(key.startsWith('empty:'))return blank(row[key.slice(6)]);
     if(key.startsWith('short:')){const s=key.split(':');return String(row[s[1]]||'').trim().length<Number(s[2]);}
     if(key.startsWith('rating:')){const v=row[key.slice(7)];return blank(v)||Number(v)<=0||!Number.isFinite(Number(v));}

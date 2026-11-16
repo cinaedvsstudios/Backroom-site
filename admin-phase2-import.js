@@ -70,6 +70,7 @@ const CHECKS=[
  {id:'any',name:'Any missing / invalid information',scope:'all'},
  {id:'id',name:'Missing ID',scope:'all'},
  {id:'duplicate',name:'Duplicate ID',scope:'all'},
+ {id:'last_updated',name:'Missing or invalid Last_Updated',scope:'all'},
  {id:'status',name:'Missing or unknown status',scope:'all'},
  {id:'description',name:'Missing description',scope:'all'},
  {id:'short',name:'Description shorter than 100 characters',scope:'all'},
@@ -100,6 +101,7 @@ function checkedRecords(){
    const {row:r,mode}=item,ev=mode==='events',id=clean(r[D.idField(mode)]),issues=[],description=clean(ev?r.Event_Description:r.Description);
    if(!id)issues.push('id');
    if(id&&(counts[mode].get(id)||0)>1)issues.push('duplicate');
+   if(!D.validLastUpdated(r.Last_Updated))issues.push('last_updated');
    if(!allowedStatus.has(norm(r.Status)))issues.push('status');
    if(!description)issues.push('description');
    if(description.length<100)issues.push('short');
@@ -174,8 +176,8 @@ function renderQuality(){
    const total=qResult.rows.length,pages=Math.max(1,Math.ceil(total/100));q.page=Math.max(1,Math.min(q.page,pages));
    html+='<h3>'+fmt(total)+' matches / '+fmt(qResult.examined)+' examined ('+(qResult.examined?(total/qResult.examined*100).toFixed(1):'0.0')+'%)</h3>'+
    '<p class="br-p2-muted">Results are from the last executed check. Filter changes require running again. Exports contain complete matching records.</p>'+
-   '<div class="br-p2-scroll"><table class="br-p2-table"><thead><tr><th>ID</th><th>Name</th><th>City / Country</th><th>Status</th><th>Issues</th></tr></thead><tbody>'+
-   qResult.rows.slice((q.page-1)*100,q.page*100).map(x=>'<tr><td>'+esc(x.row.Event_ID||x.row.Venue_ID||'Missing')+'</td><td>'+esc(x.row.Event_Name||x.row.Name||'')+'</td><td>'+(x.loc.country?flagHTML(x.loc.country)+' ':'')+esc(x.loc.cities.join(', '))+'</td><td>'+esc(x.row.Status||'')+'</td><td>'+esc(x.issues.map(id=>CHECKS.find(c=>c.id===id)?.name||id).join('; '))+'</td></tr>').join('')+'</tbody></table></div>'+pagination('quality',q.page,pages);
+   '<div class="br-p2-scroll"><table class="br-p2-table"><thead><tr><th>ID</th><th>Name</th><th>City / Country</th><th>Status</th><th>Last_Updated</th><th>Issues</th></tr></thead><tbody>'+
+   qResult.rows.slice((q.page-1)*100,q.page*100).map(x=>'<tr><td>'+esc(x.row.Event_ID||x.row.Venue_ID||'Missing')+'</td><td>'+esc(x.row.Event_Name||x.row.Name||'')+'</td><td>'+(x.loc.country?flagHTML(x.loc.country)+' ':'')+esc(x.loc.cities.join(', '))+'</td><td>'+esc(x.row.Status||'')+'</td><td>'+esc(x.row.Last_Updated||'—')+'</td><td>'+esc(x.issues.map(id=>CHECKS.find(c=>c.id===id)?.name||id).join('; '))+'</td></tr>').join('')+'</tbody></table></div>'+pagination('quality',q.page,pages);
  }
  html+='<details class="br-p2-details"><summary>Check history ('+history.length+')</summary><div class="br-p2-scroll"><table class="br-p2-table"><thead><tr><th>Executed</th><th>Filter</th><th>Examined</th><th>Matches</th><th>Percent</th><th>JSON/CSV exported</th></tr></thead><tbody>'+
  history.slice().reverse().slice(0,40).map(x=>'<tr><td>'+esc(x.date.slice(0,16).replace('T',' '))+'</td><td>'+esc(x.type+' · '+x.check)+'</td><td>'+fmt(x.examined)+'</td><td>'+fmt(x.matched)+'</td><td>'+x.percent+'%</td><td>'+(x.downloaded?'Yes':'No')+'</td></tr>').join('')+'</tbody></table></div></details>';
