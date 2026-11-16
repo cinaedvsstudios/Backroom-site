@@ -232,3 +232,10 @@
     #preview-table-container .br-merge-compact-table thead th:nth-child(3){width:98px;}
     #preview-table-container .br-merge-public-link{width:32px;height:32px;}
 }
+
+/* Match the section distinction already used by the main Events/Venues tables. */
+#preview-table-container.br-merge-venues .br-merge-compact-table thead th{
+    background:#174059!important;
+    color:#91e9f5!important;
+    border-bottom-color:#2ba9c9!important;
+}
