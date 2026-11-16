@@ -562,6 +562,7 @@
       event.stopImmediatePropagation();
       const id = clean(button.dataset.backroomOpenEvent);
       if (!id) return;
+      window.BackroomCalendarRememberScroll?.();
       window.openBackroomEvent(id, { returnHash: getCurrentEventReturnHash() });
     }, true);
 
