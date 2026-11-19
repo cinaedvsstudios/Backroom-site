@@ -118,7 +118,9 @@ async function build(period){
  const newVenues=venues.filter(r=>windowed.inWindow(r.Created_At));
  const newEvents=events.filter(r=>windowed.inWindow(r.Created_At));
  const occurred=events.filter(r=>windowed.inWindow(r.Event_Date));
- const upcoming=events.filter(r=>{const d=readDate(r.Event_Date);return d!==null&&d>=at&&d<=forward90;});
+ const upcoming=events.filter(r=>{const d=readDate(r.Event_Date);return d!==null&&normalDate(r.Event_Date)>=day(at)&&normalDate(r.Event_Date)<=day(forward90);});
+ const upcomingLive=upcoming.filter(r=>norm(r.Status)==='live');
+ const upcomingPromotionReady=upcomingLive.filter(r=>!missing(r.Source_URLs)&&!missing(r.Event_Description)&&(!missing(r.Event_URL)||!missing(r.Ticket_URL)));
  const statusCounts=(arr)=>metricLines(tally(arr,status),arr.length);
  const nowYear=day(at).slice(0,4);
  const out=[];
@@ -155,7 +157,9 @@ async function build(period){
   'Venues/areas with usable Created_At in window: '+fmt(newVenues.length),
   'Events with usable Created_At in window: '+fmt(newEvents.length),
   'Stored event rows with Event_Date in window: '+fmt(occurred.length),
-  'Stored event rows scheduled in next 90 days (separate forward-looking period): '+fmt(upcoming.length),
+  'Stored event rows scheduled in next 90 days, all statuses: '+fmt(upcoming.length),
+  'Upcoming 90 days marked Live: '+fmt(upcomingLive.length),
+  'Live upcoming 90 days with source, description and event/ticket URL: '+fmt(upcomingPromotionReady.length),
   'NOTE: Edited records are not new-record counts; events with recurrent schedules are counted as stored records only.',
   '',
   'Activity by Last_Updated month:');
@@ -164,6 +168,8 @@ async function build(period){
   for(const r of list){const m=normalDate(r.Last_Updated).slice(0,7),key=m+' | '+type;counter(monthBuckets,key);}
  }
  out.push(...metricLines([...monthBuckets].sort((a,b)=>a[0].localeCompare(b[0]))));
+ out.push('Updated venues/areas by country:',...metricLines(tally(editedVenues,r=>venueLoc(r).country)));
+ out.push('Updated events by country:',...metricLines(tally(editedEvents,r=>eventLoc(r).country)));
  out.push('Scheduled event dates within selected period (monthly):');
  out.push(...metricLines(tally(occurred,r=>normalDate(r.Event_Date).slice(0,7))));
  section(out,'03 | DATABASE GROWTH, SAVED SNAPSHOTS AND QUERY HISTORY');
@@ -240,6 +246,8 @@ async function build(period){
   'Country overview (all countries with data, plus allowed registry countries):');
  const countryRows=[...perCountry.values()].sort((a,b)=>(b.venues+b.cruising+b.events)-(a.venues+a.cruising+a.events)||a.country.localeCompare(b.country));
  for(const x of countryRows)out.push('  '+line(x.country,x.eligible?'in scope':'outside scope','venues '+x.venues,'cruising '+x.cruising,'events '+x.events,'destinations '+x.cities,'zero '+x.zeros));
+ out.push('Top 30 cities by combined number of stored records:');
+ for(const x of geoRows.slice().sort((a,b)=>b.total-a.total||a.city.localeCompare(b.city)).slice(0,30))out.push('  '+line(x.city,x.country,'venues '+x.venues,'cruising '+x.cruising,'events '+x.events,'total '+x.total));
  out.push('ALL destinations with record counts (includes uncovered registry seeds):');
  for(const x of geoRows.sort((a,b)=>a.country.localeCompare(b.country)||a.city.localeCompare(b.city))){
   out.push('  '+line(x.country,x.city,'venues '+x.venues,'cruising '+x.cruising,'events '+x.events,x.registered?'in registry':'not in registry',x.eligible?'eligible':'outside scope'));
@@ -284,16 +292,31 @@ async function build(period){
  '  Event descriptions under 100 characters: '+fmt(events.filter(x=>text(x.Event_Description).length<100).length),
  '  Venues missing both image and official website: '+fmt(venues.filter(x=>missing(x.Image_URL)&&missing(x.Website_URL)).length),
  '  Events without venue link and without Event_Location: '+fmt(events.filter(x=>missing(x.Venue_ID)&&missing(x.Event_Location)).length));
+ out.push('Country-by-country content gaps (current records; useful for SEO/editorial priorities):');
+ const countriesForQuality=[...new Set([...venues.map(r=>venueLoc(r).country),...events.map(r=>eventLoc(r).country)])].sort();
+ for(const country of countriesForQuality){
+  const vs=venues.filter(r=>venueLoc(r).country===country),es=events.filter(r=>eventLoc(r).country===country);
+  out.push('  '+line(country,'venue/area records '+vs.length,'event records '+es.length,
+   'venue description missing '+vs.filter(r=>missing(r.Description)).length,
+   'venue image missing '+vs.filter(r=>missing(r.Image_URL)).length,
+   'venue website missing '+vs.filter(r=>missing(r.Website_URL)).length,
+   'venue Instagram missing '+vs.filter(r=>missing(r.Instagram_URL)).length,
+   'event descriptions missing '+es.filter(r=>missing(r.Event_Description)).length,
+   'event source URLs missing '+es.filter(r=>missing(r.Source_URLs)).length));
+ }
  out.push('FULL observed-field completeness (all keys found anywhere in dataset):',
  'Venue/area fields:',...keysCompleteness(venues),
  'Event fields:',...keysCompleteness(events));
  section(out,'07 | EVENT CALENDAR, SERIES AND CONTENT OPPORTUNITIES');
  out.push('Stored events with dates within selected past window: '+fmt(occurred.length),
- 'Stored events in upcoming 90 days: '+fmt(upcoming.length),
+ 'Stored events in upcoming 90 days (all statuses): '+fmt(upcoming.length),
+ 'Upcoming Live events: '+fmt(upcomingLive.length),
+ 'Upcoming Live events with description, source and event/ticket link: '+fmt(upcomingPromotionReady.length),
  'NOTE: This is not an attendance forecast. Weekly recurrence is not automatically expanded here.',
  'Past-window events by country:',...metricLines(tally(occurred,r=>eventLoc(r).country)),
  'Upcoming 90-day events by country:',...metricLines(tally(upcoming,r=>eventLoc(r).country)),
- 'Upcoming 90-day events by month:',...metricLines(tally(upcoming,r=>normalDate(r.Event_Date).slice(0,7))));
+ 'Upcoming 90-day events by month:',...metricLines(tally(upcoming,r=>normalDate(r.Event_Date).slice(0,7))),
+ 'Upcoming Live events by month:',...metricLines(tally(upcomingLive,r=>normalDate(r.Event_Date).slice(0,7))));
  const group=new Map();
  for(const e of events){
   const key=norm(eventLoc(e).country)+'|'+norm(e.Venue_ID)+'|'+norm(e.Event_Series||e.Event_Series_Name||e.Event_Name||'');
