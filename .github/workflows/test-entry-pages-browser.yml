@@ -1,0 +1,34 @@
+name: Browser smoke-test full-app entry pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - app.js
+      - app-core.js
+      - '*-app.html'
+      - tests/entry_pages_browser.mjs
+      - .github/workflows/test-entry-pages-browser.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out Backroom
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: npm install --no-save --no-audit --no-fund playwright
+      - name: Install Chromium and dependencies
+        run: npx playwright install --with-deps chromium
+      - name: Exercise all seven routes, storage, age gate and history
+        run: node tests/entry_pages_browser.mjs
