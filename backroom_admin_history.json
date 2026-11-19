@@ -1,6 +1,390 @@
 {
   "format": "backroom-admin-reporting",
   "version": 1,
-  "exportedAt": "2026-11-12T20:25:52.682Z",
-  "logs": []
+  "exportedAt": "2026-11-19T01:45:45.623Z",
+  "logs": [
+    {
+      "type": "change",
+      "date": "2026-11-12T20:57:28.368Z",
+      "mode": "venues",
+      "operation": "Merge JSON",
+      "before": {
+        "venues": 1151,
+        "cruising": 486
+      },
+      "after": {
+        "venues": 1153,
+        "cruising": 486
+      },
+      "added": 2,
+      "modified": 0,
+      "removed": 0,
+      "id": 1
+    },
+    {
+      "type": "change",
+      "date": "2026-11-12T20:58:01.413Z",
+      "mode": "events",
+      "operation": "Merge JSON",
+      "before": {
+        "events": 737
+      },
+      "after": {
+        "events": 864
+      },
+      "added": 127,
+      "modified": 0,
+      "removed": 0,
+      "id": 2
+    },
+    {
+      "type": "query",
+      "date": "2026-11-13T01:31:13.956Z",
+      "scope": "Events",
+      "query": "((Status is Live) AND (Country is Germany))",
+      "conditions": [
+        {
+          "op": "OR",
+          "key": "status:Live"
+        },
+        {
+          "op": "AND",
+          "key": "country:Germany"
+        }
+      ],
+      "examined": 882,
+      "matched": 276,
+      "conditionCounts": [
+        {
+          "condition": "Status is Live",
+          "matching": 882
+        },
+        {
+          "condition": "Country is Germany",
+          "matching": 276
+        }
+      ],
+      "downloaded": false,
+      "groups": 0,
+      "id": 3
+    },
+    {
+      "type": "query",
+      "date": "2026-11-13T01:32:55.011Z",
+      "scope": "Events",
+      "query": "(((Status is Live) AND (Country is Germany)) AND (Missing start time))",
+      "conditions": [
+        {
+          "op": "OR",
+          "key": "status:Live"
+        },
+        {
+          "op": "AND",
+          "key": "country:Germany"
+        },
+        {
+          "op": "AND",
+          "key": "empty:Event_Start_Time"
+        }
+      ],
+      "examined": 882,
+      "matched": 20,
+      "conditionCounts": [
+        {
+          "condition": "Status is Live",
+          "matching": 882
+        },
+        {
+          "condition": "Country is Germany",
+          "matching": 276
+        },
+        {
+          "condition": "Missing start time",
+          "matching": 84
+        }
+      ],
+      "downloaded": false,
+      "groups": 0,
+      "id": 4
+    },
+    {
+      "type": "snapshot",
+      "mode": "published",
+      "operation": "Capture Data Point",
+      "source": "Published JSON (GitHub Pages)",
+      "date": "2026-11-13T01:50:54.279Z",
+      "after": {
+        "venues": 1153,
+        "cruising": 486,
+        "events": 889
+      },
+      "id": 5
+    },
+    {
+      "type": "query",
+      "date": "2026-11-13T01:53:59.125Z",
+      "scope": "Events",
+      "query": "(Status is Live)",
+      "conditions": [
+        {
+          "op": "OR",
+          "key": "status:Live"
+        }
+      ],
+      "examined": 882,
+      "matched": 882,
+      "conditionCounts": [
+        {
+          "condition": "Status is Live",
+          "matching": 882
+        }
+      ],
+      "downloaded": false,
+      "groups": 0,
+      "id": 6
+    },
+    {
+      "type": "snapshot",
+      "mode": "published",
+      "operation": "Capture Data Point",
+      "source": "Published JSON (GitHub Pages)",
+      "date": "2026-11-13T05:13:47.829Z",
+      "after": {
+        "venues": 1153,
+        "cruising": 486,
+        "events": 936
+      },
+      "id": 7
+    },
+    {
+      "type": "snapshot",
+      "mode": "published",
+      "operation": "Capture Data Point",
+      "source": "Published JSON (GitHub Pages)",
+      "date": "2026-11-13T05:20:04.778Z",
+      "after": {
+        "venues": 1153,
+        "cruising": 486,
+        "events": 936
+      },
+      "id": 8
+    },
+    {
+      "type": "snapshot",
+      "mode": "published",
+      "operation": "Capture Data Point",
+      "source": "Published JSON (GitHub Pages)",
+      "date": "2026-11-13T05:20:22.398Z",
+      "after": {
+        "venues": 1153,
+        "cruising": 486,
+        "events": 936
+      },
+      "id": 9
+    },
+    {
+      "type": "snapshot",
+      "mode": "published",
+      "operation": "Capture Data Point",
+      "source": "Published JSON (GitHub Pages)",
+      "date": "2026-11-13T05:44:12.564Z",
+      "after": {
+        "venues": 1153,
+        "cruising": 486,
+        "events": 957
+      },
+      "id": 10
+    },
+    {
+      "type": "query",
+      "date": "2026-11-13T06:26:48.416Z",
+      "scope": "Events",
+      "query": "(Missing tags (Vibe_Tags))",
+      "conditions": [
+        {
+          "op": "OR",
+          "key": "empty:Vibe_Tags"
+        }
+      ],
+      "examined": 1022,
+      "matched": 60,
+      "conditionCounts": [
+        {
+          "condition": "Missing tags (Vibe_Tags)",
+          "matching": 60
+        }
+      ],
+      "downloaded": false,
+      "groups": 0,
+      "id": 11
+    },
+    {
+      "type": "snapshot",
+      "mode": "published",
+      "operation": "Capture Data Point",
+      "source": "Published JSON (GitHub Pages)",
+      "date": "2026-11-13T07:05:32.267Z",
+      "after": {
+        "venues": 1153,
+        "cruising": 486,
+        "events": 1049
+      },
+      "id": 12
+    },
+    {
+      "type": "change",
+      "date": "2026-11-13T09:57:16.221Z",
+      "mode": "venues",
+      "operation": "Merge JSON",
+      "before": {
+        "venues": 1153,
+        "cruising": 486
+      },
+      "after": {
+        "venues": 1153,
+        "cruising": 486
+      },
+      "added": 0,
+      "modified": 73,
+      "removed": 0,
+      "id": 13
+    },
+    {
+      "type": "snapshot",
+      "mode": "published",
+      "operation": "Capture Data Point",
+      "source": "Published JSON (GitHub Pages)",
+      "date": "2026-11-15T22:55:16.163Z",
+      "after": {
+        "venues": 1154,
+        "cruising": 486,
+        "events": 1051
+      },
+      "id": 14
+    },
+    {
+      "type": "change",
+      "date": "2026-11-16T05:19:19.456Z",
+      "mode": "venues",
+      "operation": "Merge JSON",
+      "before": {
+        "venues": 1154,
+        "cruising": 486
+      },
+      "after": {
+        "venues": 1154,
+        "cruising": 487
+      },
+      "added": 1,
+      "modified": 0,
+      "removed": 0,
+      "id": 15
+    },
+    {
+      "type": "change",
+      "date": "2026-11-16T05:19:39.629Z",
+      "mode": "events",
+      "operation": "Merge JSON",
+      "before": {
+        "events": 1051
+      },
+      "after": {
+        "events": 1052
+      },
+      "added": 1,
+      "modified": 0,
+      "removed": 0,
+      "id": 16
+    },
+    {
+      "type": "change",
+      "date": "2026-11-16T05:57:42.144Z",
+      "mode": "events",
+      "operation": "Merge JSON",
+      "before": {
+        "events": 1052
+      },
+      "after": {
+        "events": 1086
+      },
+      "added": 34,
+      "modified": 6,
+      "removed": 0,
+      "id": 17
+    },
+    {
+      "type": "change",
+      "date": "2026-11-16T06:13:09.658Z",
+      "mode": "events",
+      "operation": "Remove Old",
+      "before": {
+        "events": 1086
+      },
+      "after": {
+        "events": 994
+      },
+      "added": 0,
+      "modified": 0,
+      "removed": 92,
+      "id": 18
+    },
+    {
+      "type": "change",
+      "date": "2026-11-16T11:12:14.450Z",
+      "mode": "events",
+      "operation": "Merge JSON",
+      "before": {
+        "events": 1006
+      },
+      "after": {
+        "events": 1108
+      },
+      "added": 102,
+      "modified": 0,
+      "removed": 0,
+      "id": 19
+    },
+    {
+      "type": "change",
+      "date": "2026-11-16T11:13:31.721Z",
+      "mode": "events",
+      "operation": "Merge JSON",
+      "before": {
+        "events": 1006
+      },
+      "after": {
+        "events": 1108
+      },
+      "added": 102,
+      "modified": 0,
+      "removed": 0,
+      "id": 20
+    },
+    {
+      "type": "snapshot",
+      "mode": "published",
+      "operation": "Capture Data Point",
+      "source": "Published JSON (GitHub Pages)",
+      "date": "2026-11-16T11:16:13.645Z",
+      "after": {
+        "venues": 1154,
+        "cruising": 487,
+        "events": 1108
+      },
+      "id": 21
+    },
+    {
+      "type": "snapshot",
+      "mode": "published",
+      "operation": "Capture Data Point",
+      "source": "Published JSON (GitHub Pages)",
+      "date": "2026-11-19T01:45:25.880Z",
+      "after": {
+        "venues": 1154,
+        "cruising": 487,
+        "events": 1181
+      },
+      "id": 22
+    }
+  ]
 }
