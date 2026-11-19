@@ -128,13 +128,13 @@ if (BACKROOM_INITIAL_EMBEDDED_HASH) {
     const after = Array.from(menu.querySelectorAll('.sidebar-item')).find(item => clean(item.getAttribute('title')) === afterTitle);
     if (!after) return;
 
-    const item = document.createElement('div');
+    const item = document.createElement('a');
     item.className = 'sidebar-item tooltip';
     item.title = title;
+    item.href = pageKey === 'travel' ? 'travel-app.html' : 'heatmap-app.html';
+    item.style.textDecoration = 'none';
     item.dataset.extraPage = title;
     item.dataset.embeddedPage = pageKey;
-    item.tabIndex = 0;
-    item.setAttribute('role', 'link');
     item.innerHTML = `<span class="icon"><img src="${image}" alt="" style="width:25px;height:25px;object-fit:contain;vertical-align:middle;"></span><span class="sidebar-text display-font">${title}</span>`;
 
     const icon = item.querySelector('img');
@@ -152,7 +152,7 @@ if (BACKROOM_INITIAL_EMBEDDED_HASH) {
     };
     item.addEventListener('click', open);
     item.addEventListener('keydown', event => {
-      if (event.key === 'Enter' || event.key === ' ') open(event);
+      if (event.key === ' ') open(event);
     });
     after.insertAdjacentElement('afterend', item);
   }
