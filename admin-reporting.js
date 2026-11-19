@@ -689,6 +689,6 @@ function restoreSavedQuery(entry){
     }
     return true;
 }
-window.BackroomAdminReporting={open,recordOperation,execute,generatedQuery,predicate,restoreSavedQuery};
+window.BackroomAdminReporting={open,recordOperation,execute,generatedQuery,predicate,restoreSavedQuery,getHistory:getAllLogs};
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install);else install();
 })();
