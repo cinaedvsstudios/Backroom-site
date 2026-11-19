@@ -2652,6 +2652,11 @@ function handleRouting() {
     } else if (hash === '#cruising-guide') {
         recordUserInteraction();
         renderCruisingDirectory();
+    } else if (hash === '#travel' || hash === '#heatmap') {
+        // Travel and Heat Map are embedded inside the complete Backroom app shell.
+        // Recognise their hashes so startup and browser history never fall back to Results.
+        recordUserInteraction();
+        window.openBackroomEmbeddedPage?.(hash.slice(1));
     } else if (hash === '#featured') {
         window.location.hash = '#venues';
     } else if (hash.startsWith('#shortlist=')) {

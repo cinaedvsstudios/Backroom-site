@@ -198,7 +198,10 @@ def main():
         if path.name not in expected and "Backroom SEO: GENERATED" in path.read_text(encoding="utf-8")[:5000]:
             path.unlink()
     static_paths = ("", "welcome.html", "about.html", "dress-codes.html", "cruising-guide.html",
-                    "heatmap.html", "featured.html", "privacy.html")
+                    "travel.html", "heatmap.html", "featured.html", "privacy.html",
+                    "venues-app.html", "events-app.html", "festivals-app.html",
+                    "cruising-app.html", "travel-app.html", "heatmap-app.html",
+                    "terminology-app.html")
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for path in static_paths:
