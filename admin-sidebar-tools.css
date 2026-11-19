@@ -1,0 +1,17 @@
+/* Backroom Admin v0.24.3 — collapsible sidebar SEO / Other Tools menus. */
+#admin-shell .admin-sidebar .br-sidebar-fold{margin:4px 11px 4px 0;border:0;padding:0;min-width:0;color:#e7ecf6}
+#admin-shell .admin-sidebar .br-sidebar-fold>summary{display:flex;align-items:center;gap:10px;padding:12px 12px 12px 17px;border:0;border-left:4px solid #64758e;border-radius:0 10px 10px 0;background:#292f40;color:#dce4f2;cursor:pointer;list-style:none;user-select:none;font-size:.94rem;line-height:1.4}
+#admin-shell .admin-sidebar .br-sidebar-fold>summary::-webkit-details-marker{display:none}
+#admin-shell .admin-sidebar .br-sidebar-fold>summary::marker{content:''}
+#admin-shell .admin-sidebar #br-sidebar-seo>summary{border-left-color:#328c9b;background:#17363d;color:#9cdae9}
+#admin-shell .admin-sidebar #br-sidebar-other>summary{border-left-color:#686a95;background:#282b3d;color:#c9cbe8}
+#admin-shell .admin-sidebar .br-sidebar-fold>summary:hover,#admin-shell .admin-sidebar .br-sidebar-fold[open]>summary{filter:brightness(1.18);color:#fff}
+#admin-shell .admin-sidebar .br-sidebar-fold>summary:focus-visible,#admin-shell .admin-sidebar .br-sidebar-external:focus-visible,#admin-shell .admin-sidebar .br-sidebar-fold-items .sidebar-item:focus-visible{outline:2px solid #64d6f5;outline-offset:2px}
+#admin-shell .admin-sidebar .br-fold-chevron{margin-left:auto;color:#c9d3e0;transition:transform .15s ease;font-size:1.15rem;line-height:1}
+#admin-shell .admin-sidebar .br-sidebar-fold[open] .br-fold-chevron{transform:rotate(180deg)}
+#admin-shell .admin-sidebar .br-sidebar-fold-items{margin:2px 0 7px 8px;padding:7px 0 4px 8px;border-left:1px solid #3d5068;display:flex;flex-direction:column;gap:3px;min-width:0}
+#admin-shell .admin-sidebar .br-sidebar-fold-items .sidebar-item,#admin-shell .admin-sidebar .br-sidebar-fold-items .br-sidebar-external{display:flex;align-items:center;gap:8px;width:auto;min-width:0;padding:10px 8px!important;margin:0!important;border:0!important;border-radius:7px!important;background:#1c2839!important;color:#dce7f4!important;font-size:.85rem;line-height:1.35;text-decoration:none;cursor:pointer}
+#admin-shell .admin-sidebar .br-sidebar-fold-items .sidebar-item .icon,#admin-shell .admin-sidebar .br-sidebar-fold-items .br-sidebar-external .icon{flex:0 0 20px;text-align:center}
+#admin-shell .admin-sidebar .br-sidebar-fold-items .sidebar-item .sidebar-text,#admin-shell .admin-sidebar .br-sidebar-fold-items .br-sidebar-external span:nth-child(2){flex:1;min-width:0;white-space:normal;overflow-wrap:anywhere}
+#admin-shell .admin-sidebar .br-sidebar-fold-items .sidebar-item:hover,#admin-shell .admin-sidebar .br-sidebar-fold-items .br-sidebar-external:hover{background:#2a4963!important;color:#fff!important}
+#admin-shell .admin-sidebar .br-external-mark{flex:0 0 14px;text-align:right;color:#63b4d4;font-size:1rem}
