@@ -144,6 +144,7 @@
         state.archiveError = '';
         state.archiveMonthOnly = false;
         state.archiveLimit = 80;
+        archiveVisibleRecords = [];
         if (state.beforeArchive) {
             state.selectedDates = new Set(state.beforeArchive.dates);
             state.selectedDate = state.beforeArchive.date;
@@ -920,8 +921,14 @@
         return day === null ? 'Every week' : `Every ${WEEKDAY_LABELS[day]}`;
     }
 
+    let cachedVenueRows = null;
+    let venuesById = new Map();
     function venueFor(event) {
-        return state.venues.find(venue => venue.Venue_ID === event.Venue_ID) || null;
+        if (cachedVenueRows !== state.venues) {
+            cachedVenueRows = state.venues;
+            venuesById = new Map(state.venues.map(venue => [venue.Venue_ID, venue]));
+        }
+        return venuesById.get(event?.Venue_ID) || null;
     }
 
     function cityTokensFor(event) {
@@ -1200,7 +1207,7 @@ function ensureSelectedDate() {
         return `<div class="calendar-tag-row">${tags.map(tag => `<span class="calendar-tag ${tagClass(tag)}">${escapeHTML(tag)}</span>`).join('')}</div>`;
     }
 
-    function renderEventCard(event, includeDate = false) {
+    function renderEventCard(event, includeDate = false, archiveRecordIndex = -1) {
         const venue = venueFor(event);
         const venueName = venue?.Name || event?.Event_Location || event?.Venue_Name || 'Location to be announced';
         const location = !venue && event?.Event_Location ? '' :
@@ -1213,7 +1220,7 @@ function ensureSelectedDate() {
         const dateText = includeDate && event.Display_Date
             ? new Date(`${event.Display_Date}T12:00:00`).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }).toUpperCase()
             : '';
-        return `<article class="calendar-event-card${isMenOnlyEvent(event, venue) ? ' calendar-event-card--men-only' : ''}">${window.BackroomV15?.badge('event',event.Event_ID,event.Display_Date || event.Event_Date) || ''}<div class="calendar-event-layout"><div class="calendar-event-media"><img class="calendar-venue-thumb" src="${escapeHTML(image)}" alt="${escapeHTML(venueName)}" onerror="this.onerror=null;this.src='${escapeHTML(imageFallback)}';"><div class="br-calendar-actions-pair"><button type="button" class="btn primary-btn pill-btn calendar-action ${saved ? 'calendar-saved' : ''}" data-calendar-save="${escapeHTML(event.Event_ID)}">${saved ? '💖 Saved' : '💖 Save'}</button>${venue?.Venue_ID ? `<button type="button" class="btn secondary-btn pill-btn calendar-action br-follow-toggle" data-br-follow-style="pill" data-br-follow-venue="${escapeHTML(venue.Venue_ID)}" title="Follow venue">🔔 Follow</button>` : ''}</div><button type="button" class="btn secondary-btn pill-btn calendar-action" data-calendar-shortlist="${escapeHTML(event.Event_ID)}">📑 Shortlist</button>${venue ? `<button type="button" class="btn secondary-btn pill-btn calendar-action" data-calendar-venue="${escapeHTML(venue.Venue_ID)}">Open Venue</button>` : ''}</div><div class="calendar-event-body"><div class="calendar-event-top"><div><h3 class="calendar-event-name display-font">${escapeHTML(event.Event_Name || 'Event')}</h3><p class="calendar-event-meta">${escapeHTML(venueName)}${location ? ` · ${escapeHTML(location)}` : ''}</p>${dateText ? `<p class="calendar-event-date">${escapeHTML(dateText)}</p>` : ''}${times ? `<p class="calendar-event-time">${escapeHTML(times)}</p>` : ''}${event.Is_Recurring ? `<p class="calendar-event-recurrence">${escapeHTML(event.Recurrence_Label)}</p>` : ''}</div>${event.Dresscode_Info ? `<div class="calendar-event-dresscode">${escapeHTML(event.Dresscode_Info)}</div>` : ''}</div>${event.Event_Description ? `<div class="calendar-event-description">${formatEventDescription(event.Event_Description)}</div>` : ''}${renderEventTags(event)}</div></div></article>`;
+        return `<article class="calendar-event-card${isMenOnlyEvent(event, venue) ? ' calendar-event-card--men-only' : ''}"${archiveRecordIndex >= 0 ? ` data-backroom-archive-index="${archiveRecordIndex}"` : ''}>${window.BackroomV15?.badge('event',event.Event_ID,event.Display_Date || event.Event_Date) || ''}<div class="calendar-event-layout"><div class="calendar-event-media"><img class="calendar-venue-thumb" src="${escapeHTML(image)}" alt="${escapeHTML(venueName)}" onerror="this.onerror=null;this.src='${escapeHTML(imageFallback)}';"><div class="br-calendar-actions-pair"><button type="button" class="btn primary-btn pill-btn calendar-action ${saved ? 'calendar-saved' : ''}" data-calendar-save="${escapeHTML(event.Event_ID)}">${saved ? '💖 Saved' : '💖 Save'}</button>${venue?.Venue_ID ? `<button type="button" class="btn secondary-btn pill-btn calendar-action br-follow-toggle" data-br-follow-style="pill" data-br-follow-venue="${escapeHTML(venue.Venue_ID)}" title="Follow venue">🔔 Follow</button>` : ''}</div><button type="button" class="btn secondary-btn pill-btn calendar-action" data-calendar-shortlist="${escapeHTML(event.Event_ID)}">📑 Shortlist</button>${venue ? `<button type="button" class="btn secondary-btn pill-btn calendar-action" data-calendar-venue="${escapeHTML(venue.Venue_ID)}">Open Venue</button>` : ''}</div><div class="calendar-event-body"><div class="calendar-event-top"><div><h3 class="calendar-event-name display-font">${escapeHTML(event.Event_Name || 'Event')}</h3><p class="calendar-event-meta">${escapeHTML(venueName)}${location ? ` · ${escapeHTML(location)}` : ''}</p>${dateText ? `<p class="calendar-event-date">${escapeHTML(dateText)}</p>` : ''}${times ? `<p class="calendar-event-time">${escapeHTML(times)}</p>` : ''}${event.Is_Recurring ? `<p class="calendar-event-recurrence">${escapeHTML(event.Recurrence_Label)}</p>` : ''}</div>${event.Dresscode_Info ? `<div class="calendar-event-dresscode">${escapeHTML(event.Dresscode_Info)}</div>` : ''}</div>${event.Event_Description ? `<div class="calendar-event-description">${formatEventDescription(event.Event_Description)}</div>` : ''}${renderEventTags(event)}</div></div></article>`;
     }
 
 
@@ -1347,7 +1354,8 @@ function ensureSelectedDate() {
             const visible = entries.slice(0, state.archiveLimit);
             const count = '<p class="calendar-day-count">Showing '+visible.length+' of '+entries.length+
                 ' archived event'+(entries.length===1?'':'s')+'. Historical listings are for reference.</p>';
-            const cards = visible.map(event => renderEventCard(event, true)).join('');
+            archiveVisibleRecords = visible;
+            const cards = visible.map((event, index) => renderEventCard(event, true, index)).join('');
             const empty = '<div class="calendar-empty">No archived events match this date, location or filter.</div>';
             const more = entries.length > visible.length ?
                 '<button type="button" id="calendar-archive-more" class="btn secondary-btn pill-btn">Show more archived events ('+
@@ -1611,6 +1619,11 @@ function ensureSelectedDate() {
         if (results) results.style.display = '';
     }
 
+    window.BackroomCalendarGetArchivedRecord = index => {
+        const n = Number(index);
+        return state.archiveMode && state.mode === 'events' &&
+            Number.isInteger(n) && n >= 0 ? archiveVisibleRecords[n] || null : null;
+    };
     window.BackroomCalendarRememberScroll = () => { rememberScroll(); savedScroll.returning = true; };
     window.closeCalendarScreen = close;
     window.openCalendarScreen = async function (requestedMode) {
