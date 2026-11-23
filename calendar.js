@@ -1359,8 +1359,12 @@ function ensureSelectedDate() {
                 '<div class="calendar-empty" role="alert">'+escapeHTML(state.archiveError)+'</div></section>';
             const entries = eventsForActiveDateFilter();
             const visible = entries.slice(0, state.archiveLimit);
+            const hiddenNote = !state.archiveMonthOnly && !state.selectedDates.size && archiveIndex.futureExcluded
+                ? ' · ' + archiveIndex.futureExcluded + ' additional archive records have no past occurrence yet or an invalid date; they remain in the source file.'
+                : '';
             const count = '<p class="calendar-day-count">Showing '+visible.length+' of '+entries.length+
-                ' archived event'+(entries.length===1?'':'s')+'. Historical listings are for reference.</p>';
+                ' historical event'+(entries.length===1?'':'s')+'. Historical listings are for reference.'+
+                escapeHTML(hiddenNote)+'</p>';
             archiveVisibleRecords = visible;
             const cards = visible.map((event, index) => renderEventCard(event, true, index)).join('');
             const empty = '<div class="calendar-empty">No archived events match this date, location or filter.</div>';
