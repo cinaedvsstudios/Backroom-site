@@ -1094,15 +1094,16 @@ function ensureSelectedDate() {
         const isAll = value === 'all';
         const isDate = value === 'today' || value === 'week';
         const isFeatured = value === 'featured';
-        const isActive = isAll
-            ? !Object.keys(state.categoryFilters).length && state.dateFilter === 'all' && !state.featuredOnly
-            : isDate
-                ? state.dateFilter === value
-                : isFeatured ? state.featuredOnly : state.categoryFilters[value] === 'include';
-        const isExcluded = !isAll && !isDate && !isFeatured && state.categoryFilters[value] === 'exclude';
-        const className = isFeatured ? 'event-filter-featured'
+        const isArchive = value === 'archived';
+        const isActive = isArchive ? state.archiveMode
+            : isAll ? !state.archiveMode && !Object.keys(state.categoryFilters).length && state.dateFilter === 'all' && !state.featuredOnly
+            : isDate ? !state.archiveMode && state.dateFilter === value
+            : isFeatured ? !state.archiveMode && state.featuredOnly : state.categoryFilters[value] === 'include';
+        const isExcluded = !isAll && !isDate && !isFeatured && !isArchive && state.categoryFilters[value] === 'exclude';
+        const className = isArchive ? 'event-filter-archived'
+            : isFeatured ? 'event-filter-featured'
             : isDate ? 'event-filter-green' : (isAll ? 'event-filter-all' : tagClass(value));
-        return `<button type="button" class="calendar-filter-chip pill-btn ${className} ${isActive ? 'active' : ''} ${isExcluded ? 'excluded' : ''} ${extraClass}" data-calendar-filter="${escapeHTML(value)}" aria-pressed="${isActive}" title="${isExcluded ? 'Exclude ' : isActive ? 'Include ' : 'Filter by '}${escapeHTML(label)}">${escapeHTML(label)}</button>`;
+        return '<button type="button" class="calendar-filter-chip pill-btn '+className+' '+(isActive?'active':'')+' '+(isExcluded?'excluded':'')+' '+extraClass+'" data-calendar-filter="'+escapeHTML(value)+'" aria-pressed="'+isActive+'" title="'+escapeHTML(label)+'">'+escapeHTML(label)+'</button>';
     }
 
     function renderFilterStrip() {
@@ -1111,6 +1112,7 @@ function ensureSelectedDate() {
             filterChip('Today', 'today'),
             filterChip('This Week', 'week'),
             filterChip('★ Featured', 'featured'),
+            filterChip('Archived', 'archived'),
             ...EVENT_VIBE_TAGS.map(tag => filterChip(tag, tag))
         ].join('');
         return `<div class="calendar-filter-shell" aria-label="Event filters"><div class="calendar-filter-scroll"><div class="calendar-filter-grid">${filters}</div></div></div>`;
@@ -1267,6 +1269,31 @@ function ensureSelectedDate() {
     }
 
     function renderPanel() {
+        if (state.mode === 'events' && state.archiveMode) {
+            const heading = '<div class="calendar-panel-heading"><h2 class="display-font">'+
+                (state.archiveMonthOnly ? monthLabel() + ' ARCHIVE'
+                : state.selectedDates.size === 1 ? selectedLabel()
+                : state.selectedDates.size > 1 ? state.selectedDates.size + ' DATES SELECTED'
+                : 'ARCHIVED EVENTS')+'</h2></div>';
+            if (state.archiveLoading) return '<section class="calendar-event-panel">'+heading+
+                '<div class="calendar-loading">Loading archived events…</div></section>';
+            if (state.archiveError) return '<section class="calendar-event-panel">'+heading+
+                '<div class="calendar-empty" role="alert">'+escapeHTML(state.archiveError)+'</div></section>';
+            const entries = eventsForActiveDateFilter();
+            const visible = entries.slice(0, state.archiveLimit);
+            const count = '<p class="calendar-day-count">Showing '+visible.length+' of '+entries.length+
+                ' archived event'+(entries.length===1?'':'s')+'. Historical listings are for reference.</p>';
+            const cards = visible.map(event => renderEventCard(event, true)).join('');
+            const empty = '<div class="calendar-empty">No archived events match this date, location or filter.</div>';
+            const more = entries.length > visible.length ?
+                '<button type="button" id="calendar-archive-more" class="btn secondary-btn pill-btn">Show more archived events ('+
+                (entries.length-visible.length)+' remaining)</button>' : '';
+            const back = state.archiveMonthOnly || state.selectedDates.size ?
+                '<button type="button" id="calendar-archive-all" class="btn secondary-btn pill-btn">Show all archived events</button>' : '';
+            return '<section class="calendar-event-panel calendar-archive-panel">'+heading+count+
+                '<div class="calendar-archive-list">'+(cards||empty)+'</div>'+
+                '<div class="calendar-archive-actions">'+back+more+'</div></section>';
+        }
         if (state.mode === 'festivals') return renderFestivalPanel();
         const items=eventsForActiveDateFilter().filter(event =>
             !state.featuredOnly || Boolean(window.BackroomV15?.isFeaturedEvent(
@@ -1303,9 +1330,9 @@ function ensureSelectedDate() {
         const pageScroll = savedScroll.page;
         ensureSelectedDate();
         const festivalsMode = state.mode === 'festivals';
-        const heading = festivalsMode ? '<div class="v15-festivals-heading"><h1 class="display-font">🎪 FESTIVALS IN</h1>'+renderLocationPill()+'</div>' : '<h1 class="display-font">📅 EVENTS IN</h1>'+renderLocationPill();
+        const heading = festivalsMode ? '<div class="v15-festivals-heading"><h1 class="display-font">🎪 FESTIVALS IN</h1>'+renderLocationPill()+'</div>' : state.archiveMode ? '<h1 class="display-font calendar-archive-title"><span class="calendar-archive-word">ARCHIVED</span> EVENTS IN</h1>'+renderLocationPill() : '<h1 class="display-font">📅 EVENTS IN</h1>'+renderLocationPill();
         const right = festivalsMode ? '<div class="v15-festival-search"><label for="v15-festival-search-input">SEARCH FESTIVALS</label><input id="v15-festival-search-input" class="form-input pill-input" type="search" placeholder="Search festival names, descriptions, events or cities…" value="'+escapeHTML(state.festivalSearch)+'" autocomplete="off"></div>' : renderFilterStrip();
-        container.innerHTML = `<div class="calendar-page ${festivalsMode?'calendar-page--festivals':''}"><div class="calendar-title-row"><div class="calendar-title-block">${heading}</div>${right}</div><div class="calendar-layout"><section class="calendar-selector"><div class="calendar-month-row"><button type="button" class="calendar-month-button" id="calendar-prev-month" aria-label="Previous month">‹</button><h2 class="display-font">${monthLabel()}</h2><button type="button" class="calendar-month-button" id="calendar-next-month" aria-label="Next month">›</button></div>${renderGrid()}<p class="calendar-key"><span class="calendar-dot"></span> ${festivalsMode?'Festivals with events on this date':'Events listed on this date'}</p></section>${renderPanel()}</div></div>`;
+        container.innerHTML = `<div class="calendar-page ${festivalsMode?'calendar-page--festivals':''} ${!festivalsMode && state.archiveMode ? 'calendar-page--archived' : ''}"><div class="calendar-title-row"><div class="calendar-title-block">${heading}</div>${right}</div><div class="calendar-layout"><section class="calendar-selector"><div class="calendar-month-row"><button type="button" class="calendar-month-button" id="calendar-prev-month" aria-label="Previous month">‹</button><h2 class="display-font">${monthLabel()}</h2><button type="button" class="calendar-month-button" id="calendar-next-month" aria-label="Next month">›</button></div>${renderGrid()}<p class="calendar-key"><span class="calendar-dot"></span> ${festivalsMode?'Festivals with events on this date':'Events listed on this date'}</p></section>${renderPanel()}</div></div>`;
         window.BackroomCalendarLayout?.apply(container, festivalsMode);
         bindControls();
         window.BackroomFollow?.syncButtons(container);
@@ -1411,6 +1438,11 @@ function ensureSelectedDate() {
             else document.getElementById('btn-location')?.click();
         });
         document.getElementById('calendar-share-day')?.addEventListener('click', shareSelectedCalendarDay);
+        document.getElementById('calendar-archive-more')?.addEventListener('click', () => {state.archiveLimit += 80; render();});
+        document.getElementById('calendar-archive-all')?.addEventListener('click', () => {
+            stopSelection(); state.selectedDates = new Set(); state.archiveMonthOnly = false;
+            state.archiveLimit = 80; render();
+        });
         document.querySelectorAll('[data-calendar-filter]').forEach(button => button.addEventListener('click', () => activateFilter(button.dataset.calendarFilter)));
         bindDateSelection();
         document.querySelectorAll('[data-calendar-save]').forEach(button => button.addEventListener('click', () => {
