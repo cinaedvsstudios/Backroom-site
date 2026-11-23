@@ -704,3 +704,107 @@
 .calendar-empty-actions { display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px; }
 .calendar-empty-actions .btn { width:auto;min-width:100px; }
 #calendar-clear-empty-filters { width:auto;max-width:100%;white-space:normal; }
+
+
+/* v1.5.31 — public historical Events filter. The accent and archive title
+   are deliberately distinct; existing Events and Festivals are unaffected. */
+.calendar-filter-chip.pill-btn.event-filter-archived {
+  border-color:#bd6262!important;color:#f1b0b0!important;background:#251b1b!important;
+  font-weight:700;
+}
+.calendar-filter-chip.pill-btn.event-filter-archived.active {
+  border-color:#ea7777!important;color:#fff!important;background:#903a3a!important;
+  box-shadow:0 0 10px rgba(178,59,59,.32)!important;
+}
+#calendar-container .calendar-page--archived {
+  background:#1b1b1b!important;border:1px solid #777!important;
+  box-shadow:inset 0 0 0 1px #333,0 6px 22px rgba(0,0,0,.26)!important;
+}
+.calendar-page--archived .calendar-archive-title {
+  color:#ec6969!important;
+}
+.calendar-page--archived .calendar-archive-word {
+  display:inline-block;color:#ff7373;
+  animation:backroom-archive-title-pulse 2.1s ease-in-out infinite;
+}
+@keyframes backroom-archive-title-pulse {
+  0%,100%{opacity:1;text-shadow:0 0 2px rgba(255,85,85,.1);}
+  50%{opacity:.35;text-shadow:0 0 12px rgba(255,85,85,.35);}
+}
+@media (prefers-reduced-motion:reduce) {
+  .calendar-page--archived .calendar-archive-word {animation:none;opacity:1;}
+}
+.calendar-page--archived .calendar-selector,
+.calendar-page--archived .calendar-event-panel,
+.calendar-page--archived .br-event-category-panel,
+.calendar-page--archived .calendar-filter-shell {
+  background:#161616!important;border-color:#646464!important;
+  box-shadow:none!important;
+}
+.calendar-page--archived .calendar-day {
+  background:#292929;border-color:#303030;color:#eee;
+}
+.calendar-page--archived .calendar-day.outside-month {
+  background:#212121;color:#aaa;border-color:#363636;
+}
+.calendar-page--archived .calendar-day.selected,
+.calendar-page--archived .calendar-day.outside-month.selected {
+  background:#666!important;border-color:#a0a0a0!important;color:#fff!important;
+}
+.calendar-page--archived .calendar-day.today:not(.selected) {
+  border-color:#777;
+}
+.calendar-page--archived .calendar-day:hover:not(.blank) {
+  border-color:#bbb;
+}
+.calendar-page--archived .calendar-dot {
+  background:#b3b3b3;
+}
+.calendar-page--archived .calendar-count {
+  color:#c6c6c6;
+}
+.calendar-page--archived .calendar-day.selected .calendar-count {
+  color:#fff;
+}
+.calendar-page--archived .calendar-month-row h2,
+.calendar-page--archived .calendar-event-panel h2,
+.calendar-page--archived .br-event-category-panel h2 {
+  color:#dedede!important;
+}
+.calendar-page--archived .calendar-month-button {
+  border-color:#888!important;color:#dedede!important;
+}
+.calendar-page--archived .calendar-month-button:hover {background:#555!important;}
+.calendar-page--archived .calendar-event-card,
+.calendar-page--archived .v15-festival-card {
+  border-color:#535353!important;background:#222!important;
+}
+.calendar-page--archived .calendar-event-date {color:#cfcfcf!important;}
+.calendar-page--archived .calendar-archive-panel {
+  scrollbar-color:#8b8b8b #171717!important;
+}
+.calendar-page--archived .calendar-filter-scroll,
+.calendar-page--archived .br-event-category-scroll,
+.calendar-page--archived .br-event-control-sidebar {
+  scrollbar-color:#8b8b8b #171717!important;
+}
+.calendar-page--archived .calendar-archive-actions {
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:15px;align-items:center;
+}
+.calendar-page--archived .calendar-archive-actions .btn {
+  width:auto!important;min-height:32px;
+  background:#333!important;border:1px solid #858585!important;color:#f0f0f0!important;
+}
+.calendar-page--archived .calendar-archive-actions .btn:hover {
+  background:#4a4a4a!important;
+}
+.calendar-page--archived .calendar-event-card .br-calendar-actions-pair,
+.calendar-page--archived .calendar-event-card [data-calendar-shortlist] {
+  display:none!important;
+}
+@media(max-width:768px){
+  .calendar-page--archived .calendar-title-block h1 {
+    font-size:clamp(.8rem,3.1vw,1.12rem)!important;
+    letter-spacing:0!important;
+  }
+}

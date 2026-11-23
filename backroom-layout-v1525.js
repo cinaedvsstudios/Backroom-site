@@ -17,7 +17,7 @@
 
     page.classList.add('calendar-page--events');
     const chips = [...strip.querySelectorAll('[data-calendar-filter]')];
-    const quickNames = new Set(['all', 'today', 'week', 'featured']);
+    const quickNames = new Set(['all', 'today', 'week', 'featured', 'archived']);
     const top = document.createElement('div');
     top.className = 'br-event-filter-top';
     const quick = document.createElement('div');
