@@ -172,6 +172,7 @@
     function resetSelectionTimer() { selection.deadline=Date.now()+EDIT_MS; }
     function beginSelection(key, replace=true) {
         stopEmptyJump(); selection.active=true; selection.multi=true; selection.anchor=key; selection.last=key; state.dateFilter='all';
+        if (state.archiveMode) { state.archiveMonthOnly = false; state.archiveLimit = 80; }
         if(replace)state.selectedDates=new Set([key]);
         state.selectedDate=key; resetSelectionTimer();
         clearInterval(selection.timer);
@@ -190,6 +191,7 @@
         render();
     }
     function selectSingle(key) {
+        if (state.archiveMode) {state.archiveMonthOnly = false; state.archiveLimit = 80;}
         stopSelection(); stopEmptyJump(); selection.multi=false; selection.anchor=key; selection.last=key;
         emptyJump.cancelled.clear(); state.dateFilter='all'; state.selectedDates=new Set([key]); state.selectedDate=key;
         const date=parseDate(key);state.month=new Date(date.getFullYear(),date.getMonth(),1);
@@ -1350,9 +1352,55 @@ function ensureSelectedDate() {
         if(selection.active)selectionPanel();else scheduleEmptyJump();
     }
 
-    function activateFilter(value) {
+    async function activateFilter(value) {
         stopSelection(); stopEmptyJump(); emptyJump.cancelled.clear();
-        if(value === 'today' || value === 'week'){selection.multi=false;state.selectedDates=new Set([dateKey(startOfToday())]);state.selectedDate=dateKey(startOfToday());}
+        if (value === 'archived') {
+            if (state.archiveMode) {
+                resetArchiveState();
+                state.categoryFilters = {};
+                state.vibeFilter = '';
+                state.featuredOnly = false;
+                savedScroll.panel = 0;
+                render();
+                return;
+            }
+            state.beforeArchive = {
+                dates: [...state.selectedDates],
+                date: state.selectedDate,
+                month: state.month.getTime()
+            };
+            state.archiveMode = true;
+            state.archiveMonthOnly = false;
+            state.archiveLimit = 80;
+            state.dateFilter = 'all';
+            state.categoryFilters = {};
+            state.vibeFilter = '';
+            state.featuredOnly = false;
+            state.selectedDates = new Set();
+            selection.multi = false;
+            savedScroll.panel = 0;
+            if (!state.archiveLoaded) {
+                // Give immediate feedback while the archive downloads on demand.
+                state.archiveLoading = true;
+                render();
+                state.archiveLoading = false;
+                await loadArchiveEvents();
+            }
+            if (state.archiveMode) {
+                focusArchiveMonth();
+                render();
+            }
+            return;
+        }
+        // Ordinary quick filters always return to the upcoming-events dataset.
+        if (state.archiveMode && ['all','today','week','featured'].includes(value)) {
+            resetArchiveState();
+        }
+        if (value === 'today' || value === 'week') {
+            selection.multi = false;
+            state.selectedDates = new Set([dateKey(startOfToday())]);
+            state.selectedDate = dateKey(startOfToday());
+        }
         if (value === 'all') {
             state.dateFilter = 'all';
             state.vibeFilter = '';
@@ -1367,13 +1415,13 @@ function ensureSelectedDate() {
             state.vibeFilter = '';
             if (!status) {
                 state.categoryFilters[value] = 'include';
-                window.showToast?.(`Showing events/venues only with filter ${value}`);
+                window.showToast?.('Showing events with filter ' + value);
             } else if (status === 'include') {
                 state.categoryFilters[value] = 'exclude';
-                window.showToast?.(`Excluding events/venues with filter ${value}`);
+                window.showToast?.('Excluding events with filter ' + value);
             } else {
                 delete state.categoryFilters[value];
-                window.showToast?.(`${value} filter removed`);
+                window.showToast?.(value + ' filter removed');
             }
         }
         ensureSelectedDate();
@@ -1394,6 +1442,7 @@ function ensureSelectedDate() {
             if(emptyJump.timer)emptyJump.cancelled.add(emptyJump.signature);
             stopEmptyJump();
             state.dateFilter = 'all';
+            if (state.archiveMode) { state.archiveMonthOnly = true; state.selectedDates = new Set(); state.archiveLimit = 80; }
             state.month = new Date(state.month.getFullYear(), state.month.getMonth() - 1, 1);
             ensureSelectedDate();
             if(selection.active)resetSelectionTimer();
@@ -1403,6 +1452,7 @@ function ensureSelectedDate() {
             if(emptyJump.timer)emptyJump.cancelled.add(emptyJump.signature);
             stopEmptyJump();
             state.dateFilter = 'all';
+            if (state.archiveMode) { state.archiveMonthOnly = true; state.selectedDates = new Set(); state.archiveLimit = 80; }
             state.month = new Date(state.month.getFullYear(), state.month.getMonth() + 1, 1);
             ensureSelectedDate();
             if(selection.active)resetSelectionTimer();
@@ -1506,6 +1556,7 @@ function ensureSelectedDate() {
         const targetMode = requestedMode === 'festivals' || isFestivalsRouteHash() ? 'festivals' : 'events';
         if (state.mode !== targetMode) {
             selection.multi=false;
+            if (targetMode === 'festivals' && state.archiveMode) resetArchiveState();
             if (targetMode === 'festivals') {
                 state.eventsSelectedDates = new Set(state.selectedDates);
                 state.selectedDates = new Set();
