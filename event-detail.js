@@ -446,7 +446,7 @@
       if (other.id !== 'event-modal' && other.id !== 'add-to-shortlist-modal') other.classList.add('hidden');
     });
 
-    if (title) title.textContent = event.Event_Name || 'Event';
+    if (title) title.textContent = options.archived ? 'ARCHIVED · ' + (event.Event_Name || 'Event') : (event.Event_Name || 'Event');
     body.innerHTML = renderEventDetail(event, venue);
     updateSaveButton(event);
     updateShortlistButton(event);
@@ -587,7 +587,24 @@
       window.openBackroomEvent(id, { returnHash: getCurrentEventReturnHash() });
     }, true);
 
-    const observer = new MutationObserver(() => decorateCalendarEventCards());
+    // Observe only newly inserted calendar cards. The old observer rescanned
+    // every card for every DOM mutation, including the button insertions it
+    // performed itself; that made month switching noticeably sluggish.
+    let decorateScheduled = false;
+    const observer = new MutationObserver(mutations => {
+      const containsCard = mutations.some(mutation =>
+        Array.from(mutation.addedNodes).some(node =>
+          node.nodeType === 1 && (node.matches?.('.calendar-event-card') ||
+            node.querySelector?.('.calendar-event-card'))
+        )
+      );
+      if (!containsCard || decorateScheduled) return;
+      decorateScheduled = true;
+      requestAnimationFrame(() => {
+        decorateScheduled = false;
+        decorateCalendarEventCards();
+      });
+    });
     observer.observe(document.documentElement, { childList: true, subtree: true });
     decorateCalendarEventCards();
   }
