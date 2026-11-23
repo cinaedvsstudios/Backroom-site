@@ -9,6 +9,7 @@
   const DEFAULT_RETURN_HASH = '#calendar';
   const BACKROOM_ICON_URL = 'https://raw.githubusercontent.com/cinaedvsstudios/Backroom-site/refs/heads/main/backdoorlogo.png';
   let eventReturnHash = DEFAULT_RETURN_HASH;
+  let archivedEventModal = false;
   let originalHandleRouting = null;
 
   const clean = value => String(value ?? '').trim().replace(/\s+/g, ' ');
@@ -432,6 +433,7 @@
       return false;
     }
 
+    archivedEventModal = !!options.archived;
     const venue = findVenueForEvent(event);
     const modal = ensureEventModal();
     const title = document.getElementById('event-modal-title');
@@ -461,6 +463,13 @@
 
   function closeEventModalToPreviousView() {
     document.getElementById('event-modal')?.classList.add('hidden');
+    if (archivedEventModal) {
+      // An archived event was opened from an in-memory historical record,
+      // not from the active-event hash router. Keep the archive view and
+      // calendar position instead of trying to resolve its ID in events.json.
+      archivedEventModal = false;
+      return;
+    }
     const target = eventReturnHash || DEFAULT_RETURN_HASH;
     if (window.location.hash === target) {
       try { handleRouting(); } catch (_) {}
@@ -564,6 +573,16 @@
       event.stopImmediatePropagation();
       const id = clean(button.dataset.backroomOpenEvent);
       if (!id) return;
+      const archivedCard = button.closest('.calendar-event-card[data-backroom-archive-index]');
+      if (archivedCard) {
+        const record = window.BackroomCalendarGetArchivedRecord?.(archivedCard.dataset.backroomArchiveIndex);
+        if (!record) {
+          window.showToast?.('Archived record is no longer available. Refresh the archive and retry.');
+          return;
+        }
+        openEventModal(record, {archived:true, returnHash:'#calendar'});
+        return;
+      }
       window.BackroomCalendarRememberScroll?.();
       window.openBackroomEvent(id, { returnHash: getCurrentEventReturnHash() });
     }, true);
