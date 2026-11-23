@@ -47,12 +47,14 @@
     layout.insertBefore(sidebar, month);
     sidebar.append(categoryPanel, month);
 
-    const cards = [...panel.children].filter(el =>
+    const archiveList = panel.querySelector('.calendar-archive-list');
+    const cardsHost = archiveList || panel;
+    const cards = [...cardsHost.children].filter(el =>
       el.matches('.calendar-event-card, .v15-festival-card'));
     if (cards.length) {
       const grid = document.createElement('div');
       grid.className = 'br-event-card-grid';
-      panel.appendChild(grid);
+      cardsHost.appendChild(grid);
       cards.forEach(card => grid.appendChild(card));
     }
   }
