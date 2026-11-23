@@ -121,3 +121,60 @@
   border-color:#fff26d !important;
   color:#000 !important;
 }
+
+
+/* v1.5.33 — stack Events Save/Follow icons above their labels.
+   Scoped to event cards, not other Follow controls or the event modal. */
+.br-calendar-actions-pair .calendar-action {
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:3px !important;
+  min-height:48px !important;
+  padding:5px 3px !important;
+  line-height:1.1 !important;
+  font-size:.66rem !important;
+  white-space:normal;
+}
+.br-calendar-actions-pair .br-event-save-icon {
+  display:block;
+  font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;
+  font-size:16px;
+  line-height:18px;
+}
+.br-calendar-actions-pair .br-event-save-label,
+.br-calendar-actions-pair .br-follow-toggle > span:last-child {
+  display:block;
+  width:100%;
+  text-align:center;
+  line-height:1.15;
+  white-space:nowrap;
+}
+.br-calendar-actions-pair .br-follow-toggle svg {
+  display:block;
+  width:16px;
+  height:16px;
+  flex:none;
+}
+.br-calendar-actions-pair .br-follow-toggle .br-follow-active-bell {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:18px;
+  height:18px;
+  font-size:17px;
+  line-height:1;
+}
+@media (max-width:540px) {
+  .br-calendar-actions-pair .calendar-action {
+    min-height:46px !important;
+    font-size:.62rem !important;
+    padding:4px 2px !important;
+  }
+  .br-calendar-actions-pair .br-event-save-icon { font-size:15px; }
+  .br-calendar-actions-pair .br-follow-toggle svg {width:15px;height:15px;}
+  .br-calendar-actions-pair .br-follow-toggle .br-follow-active-bell {
+    width:17px;height:17px;font-size:15px;
+  }
+}
