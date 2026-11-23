@@ -1,7 +1,7 @@
 # BACKROOM — GENERAL EVENTS RESEARCH & IMPORT INSTRUCTIONS
 **Version:** 1.0  
 **Created:** 23 November 2026  
-**Scope:** General events on the Backroom website (\`events.json\` and, where relevant, \`festivals.json\`)  
+**Scope:** General events on the Backroom website (`events.json` and, where relevant, `festivals.json`)  
 **Repository:** https://github.com/cinaedvsstudios/Backroom-site
 
 > **Core distinction:** The general events directory tells visitors **what is happening and where they can go**. It is broader than Backroom's **Weekly Picks**, which is a curated promotional product. **A darkroom, men-only admission, or cruising area is NOT required for every general event listing.**
@@ -15,11 +15,11 @@
 | Mixed-gender admission | **Allowed** when relevant to gay male visitors | Review against the stricter separate Weekly Picks editorial rules |
 | Darkroom / sex-play facilities | **Not required** | Normally required and verified at the specific event |
 | Selection | Breadth, relevance, accuracy and useful coverage | Exceptional quality, selectivity and travel appeal |
-| Output | Add/update suggestions for \`events.json\`, festival groups in \`festivals.json\` | Proposed editorial shortlist, artwork and Featured workflow after approval |
+| Output | Add/update suggestions for `events.json`, festival groups in `festivals.json` | Proposed editorial shortlist, artwork and Featured workflow after approval |
 
-**Never use the Weekly Picks exclusion rules as the general events database eligibility test.** Being present in \`events.json\` does not mean an event qualifies for Weekly Picks or should be promoted on Instagram. This file governs general event discovery even when an older generic Phase 3 instruction says to exclude all mixed-gender events.
+**Never use the Weekly Picks exclusion rules as the general events database eligibility test.** Being present in `events.json` does not mean an event qualifies for Weekly Picks or should be promoted on Instagram. This file governs general event discovery even when an older generic Phase 3 instruction says to exclude all mixed-gender events.
 
-The separate \`BACKROOM_WEEKLY_PICKS_INSTRUCTIONS.md\` continues to govern Weekly Picks. Do not silently change its stricter promotional requirements.
+The separate `BACKROOM_WEEKLY_PICKS_INSTRUCTIONS.md` continues to govern Weekly Picks. Do not silently change its stricter promotional requirements.
 
 ## 2. General event eligibility — what to include
 
@@ -58,8 +58,8 @@ Do not make eligibility decisions from one keyword ('mixed', 'queer', 'FLINTA', 
 - Search the requested date window, from beginning to end, in the local calendar of each event.
 - Include major destinations and smaller cities; **do not only check Berlin, London and other capitals.**
 - Use the project's existing zone/city registry and known country assignments. Preserve existing assignments; do not make up new zone IDs.
-- Start with the current \`events.json\` and \`festivals.json\`. Check nearby dates for cross-midnight or multi-day events and aliases.
-- Use \`admin-phase3-sources.json\` as the research source register. It contains directories, city guides, official venue calendars, promoters and local/native-language sources. Prioritise the parts relevant to **events**, but do not claim the entire register was checked unless it actually was.
+- Start with the current `events.json` and `festivals.json`. Check nearby dates for cross-midnight or multi-day events and aliases.
+- Use `admin-phase3-sources.json` as the research source register. It contains directories, city guides, official venue calendars, promoters and local/native-language sources. Prioritise the parts relevant to **events**, but do not claim the entire register was checked unless it actually was.
 - Search local-language event titles and official calendars, ticketing and verified social accounts, not merely English travel directories.
 - Record which sources were checked and distinguish **no qualifying dates found**, **calendar not published that far ahead**, **site inaccessible**, and **not checked**.
 - A narrow first pass is not proof that organisers have announced nothing. If few results appear, conduct a deeper pass across venue calendars and additional cities and explain coverage limitations.
@@ -80,26 +80,26 @@ For each event, aim to verify:
 
 **Recurrence:** A regular Monday, Friday, first-Saturday or monthly pattern is a useful lead, **not proof that each future date has been announced**. Create future dated Live occurrences only with sufficient date-specific evidence or a genuinely published recurrence schedule that clearly covers those dates. Otherwise list the candidate for follow-up, not as a verified event. Never extrapolate a cancelled or changed series without checking.
 
-**Status:** Respect the current production statuses, especially \`Live\`, \`Hold\` and \`Flag\`; maintain cancellation/closed history as appropriate to the existing data. An inaccessible website does not prove an event is cancelled. Do not overwrite a valid existing event because one source failed.
+**Status:** Respect the current production statuses, especially `Live`, `Hold` and `Flag`; maintain cancellation/closed history as appropriate to the existing data. An inaccessible website does not prove an event is cancelled. Do not overwrite a valid existing event because one source failed.
 
 ## 6. Separate individual events, venues and festivals
 
-**\`events.json\`** stores individual dated events and qualifying festival sessions. General Pride events can also have a dated umbrella event record where helpful for discovery.
+**`events.json`** stores individual dated events and qualifying festival sessions. General Pride events can also have a dated umbrella event record where helpful for discovery.
 
-**\`festivals.json\`** stores umbrella festivals and multi-day programmes, with full start/end dates and existing related \`Event_ID\` references. When a multi-day festival has separate parties, list those sessions individually in \`events.json\` as reliable details become available; do not reduce a seven-day festival to one fabricated single-night event.
+**`festivals.json`** stores umbrella festivals and multi-day programmes, with full start/end dates and existing related `Event_ID` references. When a multi-day festival has separate parties, list those sessions individually in `events.json` as reliable details become available; do not reduce a seven-day festival to one fabricated single-night event.
 
-**\`listings.json\`** stores meaningful permanent venues, not every one-off address, touring event or festival. Use an existing, validated \`Venue_ID\` only where the permanent venue actually matches. For a rotating party, Pride, festival or one-time address without a useful permanent venue listing, leave \`Venue_ID\` empty and keep \`Event_Location\`, \`City\` and \`Country\` on the event itself. **Never invent a permanent Venue_ID merely to fill a field.**
+**`listings.json`** stores meaningful permanent venues, not every one-off address, touring event or festival. Use an existing, validated `Venue_ID` only where the permanent venue actually matches. For a rotating party, Pride, festival or one-time address without a useful permanent venue listing, leave `Venue_ID` empty and keep `Event_Location`, `City` and `Country` on the event itself. **Never invent a permanent Venue_ID merely to fill a field.**
 
 An umbrella festival's audience may be broad. Describe separately which individual sessions, if any, offer men-only cruising, sex-play or darkroom access. A festival record does not automatically qualify all its sessions for Weekly Picks.
 
 ## 7. Existing data first: matching, deduplication and identity
 
-Before proposing an import, successfully retrieve the current complete \`events.json\`, \`listings.json\`, and relevant \`festivals.json\`. Do not mistake a failed large JSON fetch for an empty file. Try the GitHub repository API/blob read if a standard fetch returns nothing.
+Before proposing an import, successfully retrieve the current complete `events.json`, `listings.json`, and relevant `festivals.json`. Do not mistake a failed large JSON fetch for an empty file. Try the GitHub repository API/blob read if a standard fetch returns nothing.
 
 Compare at minimum:
-- Exact \`Event_ID\`, \`Event_Date\` and \`Venue_ID\`.
+- Exact `Event_ID`, `Event_Date` and `Venue_ID`.
 - Normalised organiser, name aliases, recurring series, city/location and date.
-- Individual festival sessions against existing umbrella events and related \`Event_IDs\`.
+- Individual festival sessions against existing umbrella events and related `Event_IDs`.
 - Events at the same venue on the same date with different sessions/times; these may be legitimate separate events.
 - Event names that vary by language, venue branding or promotional subtitle.
 
@@ -109,26 +109,26 @@ Do not silently remove historical records or duplicate a mixed-gender event unde
 
 ## 8. Production schema and merge file
 
-Use the **current live \`events.json\` schema**, not a simplified example, as the authoritative structure. Preserve optional and unfamiliar fields. Common event fields include:
+Use the **current live `events.json` schema**, not a simplified example, as the authoritative structure. Preserve optional and unfamiliar fields. Common event fields include:
 
-\`Event_ID\`, \`Venue_ID\`, \`Venue_Name\`, \`Event_Location\`, \`City\`, \`Country\`, \`Event_Name\`, \`Event_Date\`, \`Event_Start_Time\`, \`Event_End_Time\`, \`Status\`, \`Event_Category\`, \`Event_Description\`, \`Dresscode_Info\`, \`Audience_Info\`, \`Price_Info\`, \`Ticket_URL\`, \`Event_URL\`, \`Source_URLs\`, \`Vibe_Tags\`, \`Recurrence_Type\`, \`Recurrence_Day\`, \`Recurrence_Until\`, \`Last_Updated\`, \`Flag_Reason\`.
+`Event_ID`, `Venue_ID`, `Venue_Name`, `Event_Location`, `City`, `Country`, `Event_Name`, `Event_Date`, `Event_Start_Time`, `Event_End_Time`, `Status`, `Event_Category`, `Event_Description`, `Dresscode_Info`, `Audience_Info`, `Price_Info`, `Ticket_URL`, `Event_URL`, `Source_URLs`, `Vibe_Tags`, `Recurrence_Type`, `Recurrence_Day`, `Recurrence_Until`, `Last_Updated`, `Flag_Reason`.
 
 Keep the types and formatting used by production:
-- ISO \`YYYY-MM-DD\` dates and 24-hour \`HH:MM\` local times where known.
+- ISO `YYYY-MM-DD` dates and 24-hour `HH:MM` local times where known.
 - URLs with their complete useful event-specific paths; no invented social handles.
 - Clear original descriptions, written naturally for someone deciding where to go. **Do not copy directory text verbatim and do not tell public readers that text was scraped or extrapolated.**
 - Describe admission limitations, specific gear and age requirements honestly without hype.
 - Do not give unsupported attendance demographics, darkroom claims, prices, popularity or ratings.
-- Only update \`Last_Updated\` when a production record is actually added or changed.
+- Only update `Last_Updated` when a production record is actually added or changed.
 
-For an **Update / Add** import, produce a JSON array with **only new and specifically approved updated events**, not the entire production database. Keep existing records untouched. Empty strings in import fields should never be used to erase nonempty existing values unless explicitly intended under the admin import rules; the deliberate clear marker is \`__CLEAR__\`. Do not use **Replace All** for partial updates. Validate UTF-8 JSON syntax, required fields, every new ID, venue linkage, duplicate names/dates and event/status conditions before exporting.
+For an **Update / Add** import, produce a JSON array with **only new and specifically approved updated events**, not the entire production database. Keep existing records untouched. Empty strings in import fields should never be used to erase nonempty existing values unless explicitly intended under the admin import rules; the deliberate clear marker is `__CLEAR__`. Do not use **Replace All** for partial updates. Validate UTF-8 JSON syntax, required fields, every new ID, venue linkage, duplicate names/dates and event/status conditions before exporting.
 
 ## 9. Research report: distinguish certainty and action
 
 Every requested general-event research run should report:
 1. **Scope** — date range, countries/cities/zones and actual sources checked.
 2. **Confirmed missing events** — genuinely new and dated records after complete database comparison, with verified links and any admission restrictions.
-3. **Existing events needing updates** — matching \`Event_ID\`, old/new value, why it changed and exact evidence.
+3. **Existing events needing updates** — matching `Event_ID`, old/new value, why it changed and exact evidence.
 4. **Unconfirmed leads** — possible upcoming occurrences, incomplete calendars, gender/access uncertainty, tentative locations or recurring series not specifically confirmed.
 5. **Festivals** — new umbrella records and newly published individual sessions, separately.
 6. **Skipped candidates** — short reasons for genuine irrelevance or exclusion, not just "mixed-gender".
@@ -154,9 +154,9 @@ Provide a reviewable merge file when requested. **Do not commit events, venues o
 
 ## 11. Conflict and precedence note for existing Phase 3 admin rules
 
-As at 23 November 2026, \`admin-phase3-instructions.json\` still includes blanket men-only/darkroom and mixed-gender exclusions in its \`EVENT_DISCOVERY\`, \`EVENT_UPDATES\`, \`COMBINED\` and \`COMMON_RULES\` instructions. Those are **too strict for the GENERAL events directory** described here.
+As at 23 November 2026, `admin-phase3-instructions.json` still includes blanket men-only/darkroom and mixed-gender exclusions in its `EVENT_DISCOVERY`, `EVENT_UPDATES`, `COMBINED` and `COMMON_RULES` instructions. Those are **too strict for the GENERAL events directory** described here.
 
-**For general event research, follow this file's general eligibility rules rather than the blanket mixed-gender/darkroom exclusion.** Venue discovery, public cruising-area research and Weekly Picks still have their own separate requirements. The admin panel may need its editable rules updated separately to use this policy automatically; merely saving this Markdown file does **not** itself rewrite \`admin-phase3-instructions.json\`.
+**For general event research, follow this file's general eligibility rules rather than the blanket mixed-gender/darkroom exclusion.** Venue discovery, public cruising-area research and Weekly Picks still have their own separate requirements. The admin panel may need its editable rules updated separately to use this policy automatically; merely saving this Markdown file does **not** itself rewrite `admin-phase3-instructions.json`.
 
 ---
 **End of General Events Research & Import Instructions v1.0.**
