@@ -76,14 +76,68 @@
     // dataset used by festivals, the home screen or ordinary search.
     const visibleEventRows = () => state.archiveMode && state.mode === 'events'
         ? state.archivedEvents : state.events;
-    const archiveDisplayDate = event => {
-        const until = String(event?.Recurrence_Until || '').trim();
-        return isWeekly(event) && parseDate(until) ? until : String(event?.Event_Date || '').trim();
+    // Archive dates are historical occurrences only. Recurrence_Until is an
+    // upper bound, NOT a date to display: it may be in the future (2027+).
+    // Build an index once after loading instead of scanning ~1,750 rows for
+    // every one of the 42 visible calendar days.
+    const archiveIndex = {
+        oneOff: new Map(),
+        weekly: Array.from({length:7},()=>[]),
+        dated: [],
+        cutoff: '',
+        futureExcluded: 0
     };
+    let archiveVisibleRecords = [];
+    const archiveDisplayDate = event => {
+        const first = parseDate(event?.Event_Date);
+        if (!first) return '';
+        const today = startOfToday();
+        const cutoff = new Date(today);
+        cutoff.setDate(cutoff.getDate() - 1);
+        if (first > cutoff) return '';
+        if (!isWeekly(event)) return dateKey(first);
+        const until = parseDate(event?.Recurrence_Until);
+        const end = until && until < cutoff ? until : cutoff;
+        if (first > end) return '';
+        const day = weeklyDay(event);
+        if (day === null) return dateKey(first);
+        const latest = new Date(end);
+        latest.setDate(latest.getDate() - (latest.getDay() - day + 7) % 7);
+        return latest < first ? '' : dateKey(latest);
+    };
+    function indexArchiveEvents() {
+        archiveIndex.oneOff = new Map();
+        archiveIndex.weekly = Array.from({length:7},()=>[]);
+        archiveIndex.dated = [];
+        archiveIndex.cutoff = dateKey(startOfToday());
+        archiveIndex.futureExcluded = 0;
+        for (const event of state.archivedEvents) {
+            const displayDate = archiveDisplayDate(event);
+            if (!displayDate) { archiveIndex.futureExcluded++; continue; }
+            archiveIndex.dated.push({
+                ...event, Display_Date: displayDate,
+                Is_Recurring: isWeekly(event),
+                Recurrence_Label: isWeekly(event) ? recurrenceLabel(event) : ''
+            });
+            const weekday = isWeekly(event) ? weeklyDay(event) : null;
+            if (weekday !== null) archiveIndex.weekly[weekday].push(event);
+            else {
+                const originalDate = String(event.Event_Date || '').trim();
+                if (!archiveIndex.oneOff.has(originalDate)) archiveIndex.oneOff.set(originalDate, []);
+                archiveIndex.oneOff.get(originalDate).push(event);
+            }
+        }
+        archiveIndex.dated.sort((a,b)=>sortEvents(b,a));
+    }
     function focusArchiveMonth() {
-        const dates = state.archivedEvents.map(archiveDisplayDate).filter(value => parseDate(value)).sort();
-        const latest = parseDate(dates[dates.length - 1]);
-        if (latest) state.month = new Date(latest.getFullYear(), latest.getMonth(), 1);
+        const latest = archiveIndex.dated[0]?.Display_Date;
+        const date = parseDate(latest);
+        if (date) state.month = new Date(date.getFullYear(), date.getMonth(), 1);
+        else {
+            const previous = startOfToday();
+            previous.setDate(previous.getDate()-1);
+            state.month = new Date(previous.getFullYear(),previous.getMonth(),1);
+        }
     }
     function resetArchiveState() {
         state.archiveMode = false;
@@ -112,6 +166,7 @@
             if (!Array.isArray(rows) || rows.some(item => !item || typeof item !== 'object' || Array.isArray(item)))
                 throw Error('events_archive.json must contain an array of event records.');
             state.archivedEvents = rows;
+            indexArchiveEvents();
             state.archiveLoaded = true;
         } catch (error) {
             state.archiveError = error.message;
@@ -950,6 +1005,17 @@
     function eventsOnDate(key) {
         const target = parseDate(key);
         if (!target) return [];
+        if (state.archiveMode && state.mode === 'events') {
+            // Historical archives never project ongoing weekly listings into
+            // future dates; only indexed candidates for the selected weekday.
+            if (key >= archiveIndex.cutoff) return [];
+            const candidates = [
+                ...(archiveIndex.oneOff.get(key) || []),
+                ...archiveIndex.weekly[target.getDay()]
+            ];
+            return candidates.filter(isPublic).map(event => occurrenceForDate(event,target))
+                .filter(Boolean).sort(sortEvents);
+        }
         return visibleEventRows()
             .filter(isPublic)
             .map(event => occurrenceForDate(event, target))
@@ -981,11 +1047,7 @@
             if (state.archiveMonthOnly) {
                 return eventsForMonth().sort((a,b) => sortEvents(b,a));
             }
-            return state.archivedEvents.filter(isPublic).map(event => ({
-                ...event, Display_Date: archiveDisplayDate(event),
-                Is_Recurring: isWeekly(event),
-                Recurrence_Label: isWeekly(event) ? recurrenceLabel(event) : ''
-            })).sort((a,b) => sortEvents(b,a));
+            return archiveIndex.dated.filter(isPublic);
         }
         if (state.dateFilter === 'all') {
             const dates = [...state.selectedDates].sort();
