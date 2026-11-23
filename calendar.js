@@ -59,10 +59,67 @@
         categoryFilters: {}, // Include/exclude per tag
         featuredOnly: false,
         events: [],
+        archivedEvents: [],
+        archiveMode: false,
+        archiveLoaded: false,
+        archiveLoading: false,
+        archiveError: '',
+        archiveLimit: 80,
+        archiveMonthOnly: false,
+        beforeArchive: null,
         venues: [],
         loading: false,
         loaded: false
     };
+
+    // Historical events are loaded only when requested. Never replace the live
+    // dataset used by festivals, the home screen or ordinary search.
+    const visibleEventRows = () => state.archiveMode && state.mode === 'events'
+        ? state.archivedEvents : state.events;
+    const archiveDisplayDate = event => {
+        const until = String(event?.Recurrence_Until || '').trim();
+        return isWeekly(event) && parseDate(until) ? until : String(event?.Event_Date || '').trim();
+    };
+    function focusArchiveMonth() {
+        const dates = state.archivedEvents.map(archiveDisplayDate).filter(value => parseDate(value)).sort();
+        const latest = parseDate(dates[dates.length - 1]);
+        if (latest) state.month = new Date(latest.getFullYear(), latest.getMonth(), 1);
+    }
+    function resetArchiveState() {
+        state.archiveMode = false;
+        state.archiveError = '';
+        state.archiveMonthOnly = false;
+        state.archiveLimit = 80;
+        if (state.beforeArchive) {
+            state.selectedDates = new Set(state.beforeArchive.dates);
+            state.selectedDate = state.beforeArchive.date;
+            state.month = new Date(state.beforeArchive.month);
+        }
+        state.beforeArchive = null;
+        selection.multi = state.selectedDates.size > 1;
+        state.dateFilter = 'all';
+    }
+    async function loadArchiveEvents() {
+        if (state.archiveLoaded || state.archiveLoading) return;
+        state.archiveLoading = true;
+        state.archiveError = '';
+        try {
+            const response = await fetch('events_archive.json', {cache:'no-store'});
+            if (!response.ok) throw Error(response.status === 404
+                ? 'The events archive has not been published yet.'
+                : 'Archive could not be loaded (HTTP ' + response.status + ').');
+            const rows = await response.json();
+            if (!Array.isArray(rows) || rows.some(item => !item || typeof item !== 'object' || Array.isArray(item)))
+                throw Error('events_archive.json must contain an array of event records.');
+            state.archivedEvents = rows;
+            state.archiveLoaded = true;
+        } catch (error) {
+            state.archiveError = error.message;
+            console.warn('Historical event archive unavailable:', error);
+        } finally {
+            state.archiveLoading = false;
+        }
+    }
 
     // Selection editing deliberately updates only the grid classes and the event panel.
     const selection = { active:false, multi:false, anchor:'', last:'', deadline:0, timer:null, gesture:null, hold:null, suppressClickUntil:0 };
@@ -220,7 +277,7 @@
     }
     function scheduleEmptyJump() {
         stopEmptyJump();
-        if(!state.loaded||state.loading||document.hidden||!isCalendarRouteHash()||state.mode!=='events'||selection.active||selection.multi||state.selectedDates.size!==1||!['all','today'].includes(state.dateFilter))return;
+        if(!state.loaded||state.loading||state.archiveMode||document.hidden||!isCalendarRouteHash()||state.mode!=='events'||selection.active||selection.multi||state.selectedDates.size!==1||!['all','today'].includes(state.dateFilter))return;
         const matches=eventsForActiveDateFilter().filter(e=>!state.featuredOnly||window.BackroomV15?.isFeaturedEvent(e.Event_ID,e.Display_Date||e.Event_Date));if(matches.length)return;
         const box=document.querySelector('#calendar-container .calendar-empty');if(!box)return;
         const target=nextMatchingDate();
@@ -566,7 +623,7 @@
         };
 
         state.venues.forEach(addRecord);
-        state.events.forEach(addRecord);
+        visibleEventRows().forEach(addRecord);
 
         const countsByCity = new Map();
         [...records.values()].forEach(record => {
@@ -588,7 +645,7 @@
 
     function countryOptions() {
         const venueCountries = state.venues.map(venue => String(venue?.Country || '').trim());
-        const eventCountries = state.events.map(event => String(event?.Country || '').trim());
+        const eventCountries = visibleEventRows().map(event => String(event?.Country || '').trim());
         return uniqueLocationValues([...venueCountries, ...eventCountries]);
     }
 
@@ -891,7 +948,7 @@
     function eventsOnDate(key) {
         const target = parseDate(key);
         if (!target) return [];
-        return state.events
+        return visibleEventRows()
             .filter(isPublic)
             .map(event => occurrenceForDate(event, target))
             .filter(Boolean)
@@ -912,6 +969,22 @@
     }
 
     function eventsForActiveDateFilter() {
+        if (state.archiveMode && state.mode === 'events') {
+            // Show historical records newest-first; selecting a day or paging
+            // the calendar narrows results without mixing in current records.
+            if (state.selectedDates.size) {
+                return [...state.selectedDates].sort().flatMap(eventsOnDate)
+                    .sort((a,b) => sortEvents(b,a));
+            }
+            if (state.archiveMonthOnly) {
+                return eventsForMonth().sort((a,b) => sortEvents(b,a));
+            }
+            return state.archivedEvents.filter(isPublic).map(event => ({
+                ...event, Display_Date: archiveDisplayDate(event),
+                Is_Recurring: isWeekly(event),
+                Recurrence_Label: isWeekly(event) ? recurrenceLabel(event) : ''
+            })).sort((a,b) => sortEvents(b,a));
+        }
         if (state.dateFilter === 'all') {
             const dates = [...state.selectedDates].sort();
             if (!dates.length) {
